@@ -17,6 +17,10 @@
   [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1399)
 
 ## plays
+- on the booking call, say a partner company will come out, so a van or contract under another name doesn't throw the customer
+  > Eric: "we're booked out, we've worked with this partner for years, search them up"; the contractor then contracts and takes payment directly, you get a marketing commission; add a partner disclaimer to the site
+  > a member's customer would not let in a tech whose van carried another name, and the job was lost
+  [r2 2026-09-07](https://www.youtube.com/watch?v=GWtDKaGeMJ4&t=724) [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=656) [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2428)
 - (!) `Vlad` pays his plumbers hourly instead of splitting, and gets 50–55% margins out of it
   // heard as "40 bucks an hour plus a 15% discount", garbled
   > he also hired a canadian assistant to do the quoting, rather than leaving pricing to the tech
