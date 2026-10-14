@@ -5,6 +5,7 @@
 - duration: 01:02:17
 - transcribed by: loom
 - read by: `/call-digest`, 2026-09-22
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -194,6 +195,202 @@ the following day.
 
 - Group members share how they found Eric's content — mostly Instagram, with individual mentions of TikTok and Reddit.
 - The call wraps after about an hour with plans to reconvene the next day.
+
+## claims
+
+### recap of the day's jobs and profit goals 0:00
+
+- Anmar, tested: closed six jobs across two GMB profiles for a projected ~$620, after two more fell through
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=10)
+
+### team check-in begins: Luke's calls and Anmar's ghosted lead 1:13
+
+- Luke, tested: has been getting a high volume of calls lately, including six installation quotes this week with nothing closed yet
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=100)
+
+### Anmar's first-month numbers and ranking plan 2:53
+
+- Anmar, tested: getting multiple calls a day now, with two more GMBs needing only reviews to rank
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=180)
+- Anmar, tested: near the end of his first operational month, already a few thousand dollars in from one ranked plumbing GMB
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=198)
+
+### Facebook Marketplace suspension worries 3:25
+
+- Anmar, heard: guesses his Facebook Marketplace suspension came from review-request messages or high message volume
+  [r5 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=210)
+- Eric, claims: never mention reviews in Marketplace posts — keep that conversation to direct messages only
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=225)
+
+### Luka's booking mishaps and profit numbers 5:10
+
+- Luca, tested: at ~$9.2k profit and ~$12k revenue so far, running out of Austin, Texas
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=325)
+
+### scaling detailing profiles across regions 6:55
+
+- Luca, tested: ran 17 verified detailing GMBs; three rank #1 in large suburbs and get steady calls, others taper to 1-2 a day
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=420)
+- Luca, tested: added about 10 more profiles across different regions on Eric's advice, and got pool-remodeling profiles verified too
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=440)
+
+### getting reviews: energy drink stands 7:28
+
+- Luca, tested: energy-drink review stands near high-traffic spots got him up to 80 reviews from one spot, at a rate approaching 100 an hour
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=455)
+- Luca, tested: got banned from his best stand location (Barton Springs pool, Austin) after a warning that repeat visits risked a Class C misdemeanor
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=495)
+
+### new idea: paying for reviews at the pool 8:31
+
+- Luca, claims: plans to pay pool-entry tickets (~$3) for groups of young people in exchange for one review each, via private browsing on cellular data
+  [r4 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=515)
+- Eric, claims: two reviews per person from the same account gets flagged and deleted; one review per person is fine
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=560)
+- Luca, tested: reviews from energy-drink stands he started about three and a half weeks earlier are still up, having avoided pushing two reviews per person
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=600)
+
+### tipping randoms instead, and showing the Stripe earnings 10:31
+
+- Luca, claims: will pay random people cash for one review each, rather than pushing multiple reviews per person
+  [r4 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=635)
+- Luca, tested: Stripe dashboard shows ~$10.2k, plus more via Venmo and Zelle, as the first month's result across 17 detailing GMBs in one metro area
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=660)
+
+### phone calls vs. online booking intake 11:27
+
+- Luca, tested: turning on a spam-call filter with a "press one to connect" step caused him to miss real calls
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=690)
+- Luca, tested: optimized his site for online booking instead; most of the week's bookings came from the site, only two from the phone
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=710)
+
+### setting up a Book Now button and booking link 12:35
+
+- Luca, tested: built a "book now" page on his site in Lovable, linking to a form (Forms Pre) that captures customer info directly
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=770)
+
+### needing a VA; sourcing detailing subcontractors 14:04
+
+- Luca, tested: his first detailer hire, found on Facebook Marketplace, charged $50/job interior-exterior — dirt cheap, because the guy hadn't set his own price
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=870)
+- Luca, tested: found an ex-Marine detailer on the 5th-10th page of Google search results, negotiated him down from $200 to $110/job interior-exterior, keeping a 65-70% margin (plus paying his gas past 10-12 miles)
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=905)
+- Luca, claims: recommends pulling contractor numbers from Google search results into a spreadsheet and cold-texting the batch
+  [r4 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=940)
+
+### detailers reaching out once ranked; reviews per GMB and confirmation scheduling 15:49
+
+- Luca, tested: once a GMB ranks, detailers have started reaching out to him directly asking for work
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=955)
+- Luca, tested: targeted ~25 reviews per GMB on Eric's guidance, but some profiles with 30 reviews still haven't booked a single call — results depend heavily on location
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=980)
+- Luca, tested: confirms early appointments with a scheduled iMessage sent ahead of time, then relays the confirmation to the detailer, so he can keep sleeping
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1010)
+
+### James's cleaning pricing and the 40%-of-profit cut 17:27
+
+- James, tested: his cleaning site offers tiered pricing (standard clean, deep clean, move-out) with an AI system calculating the final price from add-ons
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1050)
+- Eric, claims: the group's cut is 40% of profit, not revenue — materials pass through at cost, and the cut applies only to labor/profit (e.g. a $1,000 job with $200 materials pays 40% of $800)
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1090)
+
+### review swaps and how Google catches them 19:33
+
+- Anmar, tested: doing non-local review swaps broadly through a VA got all eight of his plumbing profiles suspended, with ~200 reviews removed from each
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1190)
+
+### mall vs. college campus for reviews; James's plumbing check-in 22:29
+
+- Luca, tested: got kicked out of a mall by security while soliciting reviews near the entrance
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1360)
+- James, tested: made ~$1,200 from two plumbing jobs that day, and is now going all-in on plumbing rather than splitting time with cleaning
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1400)
+
+### outsourcing detailing on retainer 24:32
+
+- Eric, claims: offers to help find Luca someone to run his detailing on retainer, the way he did with his own detailing profiles — forwarding calls to a detailer who pays 5-10k/month for the volume
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1480)
+- Luca, tested: day-to-day revenue is inconsistent, $250-$1,200/day
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1510)
+
+### instant GMB verification and rebuilding after a suspension 25:49
+
+- Luca, tested: of his ~27 detailing profiles (physical-address businesses), about 80% verified instantly rather than through the email/video method
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1555)
+- Luca, tested: after cross-swapping reviews broadly, all his plumbing profiles were suspended; he was demotivated for weeks before rebuilding
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1630)
+
+### dropshipping side hustle tangent 27:27
+
+- Luca, tested: still runs a branded Google Ads dropshipping store (~200-plus SKU catalog, ~$80 AOV), funded by his service-business profits
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1670)
+
+### scaling plans: pool building and landscaping 36:35
+
+- Luca, claims: plans to scale detailing toward 30k/month while branching into pool building/remodeling, seeing it as high-ticket ($50k-$100k jobs) with little competition in Austin
+  [r4 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2200)
+
+### plumbing vs. landscaping vs. pool remodeling 38:38
+
+- Eric, claims: pool-remodeling leads can be less liquid, since one job can take months and contractors get booked out far in advance
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2325)
+- Eric, claims: plumbing pays out same-day with less ongoing involvement, while landscaping needs more follow-up but can scale to high revenue
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2370)
+- Luca, heard: a group member, Cole, posted that he's on track for about a quarter-million dollars this month in landscaping revenue
+  [r5 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2400)
+
+### path to 30k a month: aged photos and the HTML verification method 41:10
+
+- Luca, tested: buys HTML-verified accounts from PVA sellers rather than making new ones, spacing out 2-3 new profiles a week to keep accounts "warm"
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2500)
+- Luca, tested: buys batches of real, unused photos (~$10 each) from locals in Austin who no longer run car-detailing businesses, reusing them with changed IP and date metadata — stuck for over a week as of the call
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2550)
+
+### business insurance (COI) for commercial jobs 43:10
+
+- Eric, tested: has never carried general liability insurance personally; has his subcontractor supply their own insurance documentation when a commercial client asks for a COI
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2605)
+- Luke, tested: pays about $100/month for $2M in liability coverage through a provider called "Cooperators"
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2650)
+
+### LLC banking with Novo; setting money aside 45:33
+
+- Karim, tested: already has a US LLC and business bank account set up
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2735)
+- Eric, claims: recommends Novo as a US LLC bank, citing a deal with Stripe for faster payouts and built-in earnings tracking
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2750)
+
+### contractor equipment and finding good detailers 46:29
+
+- Luca, tested: doesn't supply equipment to his detailers; relies on finding already under-booked detailers willing to take consistent work at a lower rate, splitting jobs between one contractor per side of Austin
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2800)
+
+### finding contractors via Nextdoor and Facebook groups 49:26
+
+- Luca, tested: his best contractor hire came through Nextdoor, where local "need help with X" posts surface a list of available contractors
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2970)
+- Luke, claims: one review per person, rather than more, has been sticking well on Facebook Marketplace
+  [r4 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=3040)
+
+### review acquisition: Facebook ads, lead forms, survey exchanges 51:10
+
+- Eric, claims: run Facebook ads at ~$5 per review, routed through a lead form rather than straight to a review link (which gets flagged), with follow-up after submission
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=3110)
+
+### fake review scams and Luca's GMB progress 53:51
+
+- Luca, tested: has 3 of his newer GMBs live and 2 rejected, and is still deciding on an email strategy for the rejected ones
+  [r3 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=3250)
+
+### party and nightlife review solicitation ideas 55:25
+
+- Eric, tested: got about 8 reviews by going up to people at parties and nightlife spots and asking directly in exchange for drinks
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=3340)
+
+### social media account bans (Instagram/YouTube) 59:10
+
+- Eric, claims: fine to post about the drop-servicing business model itself, just not to detail the review-generation methods publicly
+  [r2 2026-07-09](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=3600)
 
 ## transcript
 

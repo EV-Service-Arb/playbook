@@ -5,6 +5,7 @@
 - duration: 01:06:33
 - transcribed by: loom
 - read by: `/call-digest`, 2026-09-22
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -198,6 +199,122 @@ The call closes on signage and review-strategy tips, with the group set to recon
 
 - Eric will post the recording and asks members to post questions in the Skool community instead of
   DMing directly, so answers benefit everyone. Call to reconvene next week.
+
+## claims
+
+### Storage-Unit Verification: Signage, Staging, and Backup Business Cards 2:13
+- Anmar, tested: staged a storage unit with a sign on foam board held off the surface with spacers, a foldable desk, monitor, lamp, vacuum, and tools, filmed walking in from across the street and faking a laptop order — the profile verified the next day
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=200)
+- Anmar, claims: signage is what most people fail on; adding a business card fixes it for service-area profiles, since those don't require a real location
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=280)
+
+### Electrician vs. Plumbing: Regulatory Risk by Niche 6:04
+- Vlad, claims: electrician profiles carry higher regulatory risk in Ontario because the ESA pursues unlicensed advertisers, while plumbing has no equivalent body — switched into plumbing for more stable ground
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=380)
+
+### Brandon's Plumbing Profiles: Live vs. Location-Spoofed Video 8:14
+- Brandon, tested: four plumbing profiles (Niagara Falls, Winnipeg, Sudbury, Moncton, St. Catharines) went up through live video verification
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=500)
+- Brandon, tested: submitted around 40 location-spoofed pre-recorded videos across his profiles; only one passed
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=560)
+- Brandon, claims: live verification is more reliable for reaching a different area than spoofed video; the hardest part is getting through the call without the account getting suspended
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=600)
+
+### Storage-Unit Address and Unit-Number Requirements 10:27
+- Anmar, tested: verified a storage-unit address profile by showing the unit number on camera without including it in the listed address
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=635)
+
+### Swapping a Service-Area Listing to a Physical Address 11:55
+- James, tested: converted three service-area listings to a physical address successfully; two more attempted about a week later both failed
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=720)
+
+### Zach's Landscaping Profiles: Suspensions and Phone-Code Risk 12:51
+- Zach, tested: ran four landscaping profiles without addresses; the two verified by phone code got suspended, and phone-code verification sticks less reliably than video
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=780)
+
+### Appealing a Suspended Profile 14:35
+- Eric, claims: to appeal a suspended profile, fake supporting documents, print them, then photograph the printout so Google can't read the file's edit metadata; some appeals succeed with no evidence attached at all
+  [r2 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=880)
+
+### Landscaping Lead Flow, Markup, and Fulfillment 15:59
+- Zach, claims: landscaping jobs vary too much to estimate easily, unlike concrete/flat work, so he routes leads to an established landscaping company and marks up their estimate; typical markup on landscaping is 15-20%, not the 40% common in other niches
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1050)
+
+### Suspended High-Volume Profiles vs. Search Volume 19:55
+- Zach, tested: his two suspended landscaping profiles had the highest search volume of his four; the two still-active suburb profiles bring in fewer but steadier jobs
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1200)
+- Zach, tested: all four profiles were phone-code verified through old personal Gmail accounts; the two he linked to the same Gmail account both got suspended together
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1230)
+- Zach, heard: a friend who managed around 40 client GMB profiles on one shared Gmail account lost all 40 at once when that account got suspended
+  [r5 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1260)
+
+### Shared Gmail Accounts and Suspension Cascade Risk 21:28
+- Eric, claims: spread linked profiles across separate Gmail accounts so one suspension doesn't cascade to the rest; a Gmail made on the spot is fine for GMB signup, per Google's own GMB instructions — no need to age it first
+  [r2 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1290)
+
+### Live Verification Calls Are Getting Stricter 22:29
+- Chris, tested: live reps now ask for a company van with branding, or a personal vehicle (screenshotting the odometer and plate for reference later), plus a walkthrough showing the street sign and kitchen
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1360)
+
+### Plumbing Is the Hardest Niche to Verify 24:42
+- Brandon, claims: plumbing, locksmith, and garage-door repair are the hardest niches to verify because they're flagged as spammy; landscaping is comparatively easy, a plumbing profile verified by phone code gets suspended, and the US doesn't even offer phone-code verification for plumbing
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1490)
+
+### Street-Sign and Permanence Pushback on Live Calls 26:00
+- Brandon, tested: signage mounted on a garage door passed live verification four times before, but reps have recently started directly calling out non-permanent signage
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1565)
+
+### Anmar's Second Video: Showing Surrounding Businesses 27:17
+- Anmar, tested: after repeated recording failures, filmed entirely from across the street, using a school's concrete address sign and a neighboring U-Haul business for the surrounding-area shots
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1640)
+
+### Spoofing GPS and IP for Verification Videos 28:48
+- Brandon, tested: spoofs both GPS coordinates and IP for pre-recorded verification videos, but doesn't spoof location for live calls since reps don't check it unless they specifically ask for a Google Maps screen-share
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1730)
+- Brandon, claims: a $20/month iOS app spoofs GPS; switching to cellular data spoofs the IP to the carrier's routing city rather than the phone's real location, which can work in your favor — filmed in Ontario while the profile went up in New Brunswick with the IP showing Toronto
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1780)
+
+### Renting an Office for Live Video Verification 32:27
+- Brandon, claims: renting an office over filming from home helps live-call legitimacy, but also raises the bar — a convincing dashboard and clean staging matter more once a real rep is watching live
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=1950)
+
+### Finding Fulfillment Contractors via Facebook Groups 40:45
+- Anmar, tested: finds subcontractors through Facebook's search tab by searching "[trade] in [city]" and reading posts where locals ask for a recommendation — commenters who drop their own phone number are candidate subs, and per-city contractor Facebook groups are a reliable source of subs looking for overflow work
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=2450)
+- Anmar, claims: calling businesses that already have a GMB profile mostly just reaches a gatekeeper rather than a decision-maker
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=2550)
+
+### Review Strategy: Paying Students per Review 46:28
+- Hayden, tested: prints bandit signs near high schools advertising $20-30/hr "hiring," then pays students per review on condition the reviews come from different people — results have stuck reliably across 50+ live detailing profiles
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=2790)
+
+### Timing a Service-Area-to-Address Conversion 51:34
+- James, claims: there's no consistent pattern for how long to let a service-area profile age before converting it to a physical address — he wouldn't wait for reviews to accumulate first; convert within a day of the profile going up instead
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=3100)
+
+### Storage-Unit Door Types and Signage Realism 52:36
+- Anmar, claims: an indoor storage unit, with a hallway and interior doors, reads as more legitimate than an outdoor unit; roll-up garage-style doors are fine and match how service businesses like plumbers actually load their vans
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=3160)
+- Anmar, tested: a $15 acrylic slide-in sign frame from Home Depot, and a $10 poster-board sign cut and printed at FedEx with adhesive spray, both read as more legitimate hovering off the wall than a sign flush against it
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=3230)
+
+### Closing Advice: Don't Be Lazy, Don't Double-Review 57:08
+- Eric, claims: the two most common failure points are sloppy, low-effort signage and attempting to double-review a profile, which gets the review deleted outright
+  [r2 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=3430)
+
+### Spread Reviews Across Fewer Profiles, Not More 58:28
+- Hayden, tested: going too wide on detailing profile count while spreading reviews thin across all of them hurt ranking despite heavy ad spend; concentrating reviews on fewer profiles works better than scaling profile count
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=3510)
+
+### Pixel/GrapheneOS Multi-Profile Verification Method 59:15
+- Hayden, tested: running GrapheneOS on a Google Pixel lets one device host up to 35 user profiles, each appearing to Google as a distinct device for email verification — works for easier niches, not plumbing-tier ones, profiles have stayed up for months with no issues, and driving to different blocks avoids Google flagging repeated verifications from the same spot
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=3560)
+
+### Buying Aged Gmail Accounts, and Vetting Sellers 1:00:33
+- Hayden, tested: buys aged Gmail accounts for about $3 each, which now work roughly 50% of the time for email verification, down from near 100%
+  [r3 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=3640)
+- Hayden, claims: a seller nicknamed "the Pakistani guy" resells already-used Gmail accounts rather than fresh ones — stopped using him
+  [r4 2026-05-30](https://www.loom.com/share/13aaeeeff8ef4abeacd0b7fc522a0bb5?t=3690)
 
 ## transcript
 

@@ -5,6 +5,7 @@
 - duration: 01:11:22
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -106,6 +107,132 @@ Participants discussed lead generation methods (Indeed, Facebook, Craigslist, pa
 - Joseph and others advise showing as much surrounding context as possible during spoofed or pre-recorded verifications and describing what is shown verbally to support the verifier.
 - For pending or stalled verifications, recommended actions include deleting and retrying, re-entering addresses, or contacting support; minor changes often resolve glitches.
 - Final plan: participants to DM each other for follow-ups, test rooted phones/AI videos, and share results; several members sign off to follow up privately or on future calls.
+
+## claims
+
+### Lead sources and initial challenges 0:00
+- Luca, tested: gets roughly one high-ticket call a day from his leads
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=10)
+- Luca, tested: on Indeed in Germany, a free job posting is buried/hidden and ineffective, pushing you toward a paid posting to get visibility
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=55)
+
+### Recruiting reviewers and managing review instructions 1:45
+- Iamgnanu, tested: recruited two Facebook-sourced reviewers, capping each at ~2 reviews/day at first, ramping to 4 then up to 10/day after about a week, to stay under Google's radar
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=150)
+- Eric, claims: hired reviewers need explicit rules — one device, one gmail, one review — and a warning that non-compliant reviews won't be paid for, since they'll try to shortcut otherwise
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=230)
+
+### Problems with classified platforms and paid ads 4:15
+- Iamgnanu, tested: a paid Craigslist post got a lead within 30 seconds, then the account was banned about 60 seconds later; Craigslist then demanded business verification details and went silent for a week
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=260)
+- Iamgnanu, tested: Facebook has repeatedly suspended and reinstated his account; current paid ads pulled about 4 leads but with poor callback pickup
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=300)
+- Anmar, claims: Google's sab rules require the filming location to be inside the declared service area; filming from his backyard works for a target city 45 minutes away as long as his home city is also in the service area list
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=360)
+- Anmar, heard: thinks a sab might verify with filming up to a two-hour drive from a listed service city, but it's an unconfirmed, still-pending a/b test
+  [r5 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=400)
+
+### Pre-rooted phones, location spoofing, and AI/pre-recorded video verification 10:22
+- Eric, claims: a pre-rooted phone (~$200 on eBay, originally rooted for Pokemon Go spoofing) skips the hardest setup step for feeding a pre-recorded or AI video into a verification call — just film the video and plug the phone into a computer
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=630)
+- Eric, claims: a sab's listed address should be the one actually recorded at — there's still a ranking perimeter around that address even though it's a service-area business
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=660)
+- Eric, claims: if the target city is about an hour out, record from home, set the mailing address as home, and add both your home city and the cities leading toward the target as service areas
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=700)
+- Charlie, tested: converting sab profiles to physical-address storefronts worked at roughly a 70% success rate, varying by niche
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=790)
+- Eric, claims: setting a whole-country service area on a home-services profile doesn't go through — Google blocks it for that category
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=950)
+
+### Using storage units, Airbnbs, and home locations for address verifications 18:11
+- Kareem, tested: verified his first physical-address profiles using Airbnbs/friends' houses as the filming location, and they passed
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1110)
+- Eric, claims: a physical-address profile with reviews can succeed even in a small, unpromising-looking city — once you have the address and reviews, growth follows from there regardless of apparent competition or market size
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1200)
+
+### Handling banned profiles and creating new physical-address profiles 20:32
+- Nathaniel, tested: his #1-ranked address-based masonry profile got forced into a sab (address stripped) after submitting business registration for a Google-requested re-verification; ranking dropped to #4 along with call volume, with no reason given
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1240)
+- Eric, claims: the fix for a forced-sab profile with dropped ranking is a second address-based profile in the same city with a more keyword-rich name (brand + trade + city), linking the same website, rather than trying to recover the original
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1340)
+
+### Remote operations, call routing, and business scale tips 24:03
+- Eric, claims: route calls to trusted contractors carrying their own payment terminals, and color-code a shared Google Calendar by city/timezone, to run multi-city operations remotely without hands-on invoicing
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1480)
+- Eric, claims: putting the city name before or after the trade keyword in a profile's business name makes no meaningful ranking difference — it's a branding choice only
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1600)
+
+### Profile setup hygiene: emails, workspaces, and account safety 26:58
+- Eric, claims: native Android location spoofing alone usually fails gmb video verification since Google checks the actual surroundings in the footage (street signs, landmarks); it can pass by luck but fails far more often than it passes
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1660)
+
+### Market selection, niche specialization, and monetization strategies 32:51
+- Gabe Jacobs, claims: ranking success depends more on how many competitors occupy a niche/city than on raw monthly search volume — his own industry gets 60,000 searches/month on SEMrush and he still profits well
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1980)
+- Gabe Jacobs, tested: got as far as buying a Pixel and rooting it with Magisk before stalling on buying the actual camera-injection (`WeCam`) software — every GitHub/YouTube/Telegram seller he found turned out to be a scam, one asking $500
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2080)
+- Gabe Jacobs, claims: the camera-injection verification setup needs a Pixel specifically on Android 13; once a Pixel auto-updates to 15/16 over wifi it can't be downgraded back, so you have to buy a phone already on 13
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2180)
+
+### Progress on verification tools and collaboration offers 37:14
+- Gabe Jacobs, heard: a contact's non-AI pre-recorded verification video (with street signs added) passed on surroundings and location, failing only for not showing authorization to represent the business
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2240)
+
+### Device and scale constraints for managing many profiles 39:54
+- kurd clash, tested: ran ~20 gmb-linked gmail accounts on one phone with no issue, until one logged in via private browsing got flagged and needed new phone verification; accounts kept natively logged into the phone stayed fine
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2400)
+- Eric, claims: hosting gmb gmail accounts has gone fine up to ~100 profiles on one device for people he knows; past ~20 he suggests spreading across devices to stay extra safe
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2410)
+- Art, claims: an aged/purchased gmail account that prompts for a new phone number right after purchase was never actually verified with a real number — flagged from the start — return/refund it rather than use it
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2460)
+- Gooeymoney59, claims: workspace gmail accounts (~$400/month for ~40 of them) carry more authority for gmb setup than regular aged gmail, especially when the account name matches the linked website's domain
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2560)
+- Gooeymoney59, tested: creates the gmb immediately after making a new workspace email, no warm-up period, and it verifies instantly with no code needed
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2600)
+- Gooeymoney59, claims: charged other businesses ~$1,000/profile to set up sab listings for them as a side service, before the recent crackdown made new out-of-area sabs harder
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2660)
+- Gooeymoney59, tested: doing 2-3 live-video verifications a day got him recognized by the same reviewers, who'd call out that they'd verified the same profile the day before from a different location and refuse — the pace broke the method
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2800)
+- Gooeymoney59, heard: fewer than ten people staff the live-video-verification team (mostly based in India), and they're picky about what they want shown
+  [r5 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2850)
+
+### Case studies: wins, contractor sourcing, and revenue examples 48:34
+- Mendel, tested: landed an 8K water-heater/HVAC job by subcontracting an HVAC contractor found on Facebook Marketplace on a 60-40 split (netting ~1-2K), plus a quarterly-maintenance contract at 80-20
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=2920)
+- Mendel, tested: sources all his contractors through Facebook Marketplace by searching the trade directly and messaging people, never needing a directory like Yelp
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3020)
+- Anmar, tested: four-figure jobs increased after his main profile built authority just by staying live a month; a grid-rank auditor shows #1 citywide and #2 in a couple of spots despite only ~3 new reviews that month — attributes the jump to call-flow/activity, not new reviews
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3300)
+
+### Review acquisition and local outreach tactics 56:56
+- Anmar, tested: runs two ranking profiles with 40-42 and 15 reviews respectively, plus other unranked profiles that still get calls purely off keyword-rich names
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3420)
+- Eric, claims: adding a second same-niche profile in a city that already has one top-3 ranked gmb is fine as long as it's placed a meaningfully different distance away (10-15+ miles) — proximity decides which profile surfaces for a given search
+  [r2 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3500)
+
+### Tracking rankings and tools 59:11
+- Anmar, claims: recommends LocalFalcon to grid-map city-wide ranking; BrightLocal and SEMrush do similar things but all cost money
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3560)
+- Gooeymoney59, tested: hit over $1,100 in bookings in a day at ~45% average commission (~$4,500 that day), with an average ticket around $1,500, translating to roughly $300-500/day on average
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3600)
+- Gooeymoney59, claims: built a full AI lead-generation software platform for his car-rental-niche business over about four months, and plans to expand it nationwide
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3640)
+- Gooeymoney59, claims: pick a niche by how many competitors specialize in it within a city, not raw search volume — a narrowly specialized profile (eg water heaters only, for a plumber) can outrank general competitors for that sub-niche since specialization builds more customer trust
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3680)
+- Gooeymoney59, tested: runs two ranked profiles in the same niche/city at different price points (cheaper vs ~10% pricier) with separate VA teams answering, so callers don't realize both numbers lead back to him — he gets the booking either way
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3720)
+- Gooeymoney59, claims: marketing-agency clients come from referrals/inbound once you've proven the system on your own profiles — cold outreach mostly attracts price-sensitive leads wanting cheap work
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3850)
+- Gooeymoney59, tested: landed car-rental-niche agency clients by emailing large rental companies' support/tech contacts to reach the owner directly, then selling the owner on the system
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3900)
+- Joseph, tested: submitted three storage-unit profile verifications the day before, still pending at call time; previously had to stay tethered (laptop plugged into the phone) while filming the spoofed-location video, now has a Pixel to do it untethered
+  [r3 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3960)
+- Gooeymoney59, claims: has gotten about six profiles verified in the past week-and-a-half, split half in-city/half out-of-city, with no particular trouble — believes others' recent verification failures are mostly user error (showing too little context) rather than a platform-wide crackdown
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=3990)
+
+### Verification technique best practices and final troubleshooting tips 1:07:04
+- Gooeymoney59, claims: when spoofing location for verification, show as much surrounding context as possible rather than as little, and narrate out loud what's being shown — showing too little gets denied outright
+  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=4040)
 
 ## transcript
 
