@@ -17,7 +17,7 @@ member: add service-arb in a client ──► browser: sa.evinvest.ltd sign-in
    `sa:playbook:mcp:use` filled in; submit it. Their waiting tab carries on by itself.
 
 Revoking the permission stops new sign-ins at once, but a client already connected keeps working
-for up to 7 days: refreshing its token does not re-check the permission, so it bites when their
+for up to 30 days: refreshing its token does not re-check the permission, so it bites when their
 client next has to sign in again.
 
 ## For members: connecting
@@ -45,6 +45,6 @@ is on the account, so every device of that account has it.
 | "No access to the playbook yet" | you are signed in, but not granted `sa:playbook:mcp:use`. **Request access**, or **Use a different account** |
 | "This sign-in link has expired" | the page sat open over 10 minutes, or was submitted twice. Sign in again |
 | the client reports `access_denied` | **Cancel** was pressed. Sign in again |
-| the client asks you to sign in again | normal: sign-in lasts 7 days. Sign in again |
+| the client asks you to sign in again | normal: sign-in lasts 30 days. Sign in again |
 | "…has used today's … bytes" (429) | the daily reading budget is spent; it resets at 00:00 UTC |
 | an old `sa.valeratrades.com` or `service-arb.valeratrades.com` entry | that address is gone: remove it (`claude mcp remove service-arb`, `codex mcp remove service-arb`, or delete the connector), then step 1 |

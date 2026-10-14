@@ -26,7 +26,7 @@ type S = Axum<Arc<State>>;
 
 const CODE_TTL: i64 = 60;
 const ACCESS_TTL: i64 = 60 * 60;
-const REFRESH_TTL: i64 = 7 * 24 * 60 * 60; // from authorize: rotation does not extend it, so the permission is re-checked weekly
+const REFRESH_TTL: i64 = 30 * 24 * 60 * 60; // from authorize: rotation does not extend it, so the permission is re-checked monthly
 const CONSENT_TTL: i64 = 10 * 60;
 const DAY: i64 = 24 * 60 * 60;
 const CIMD_MAX_BYTES: usize = 64 * 1024;
