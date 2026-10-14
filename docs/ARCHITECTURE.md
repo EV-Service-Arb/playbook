@@ -11,7 +11,7 @@ Sources are captured raw, then distilled by hand or by agent into topic notes.
 Capture and distillation never happen in the same file.
 
 ```
-   loom · youtube · chatgpt · skool · discord
+   loom · fathom · youtube · chatgpt · skool · discord
                      │
                      │  scripts/*.rs, social_networks
                      ▼
