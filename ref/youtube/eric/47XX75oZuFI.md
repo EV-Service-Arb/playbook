@@ -6,6 +6,7 @@
 - duration: 00:10:45
 - pulled by: `scripts/yt-pull.rs`
 - read by: `gpt-5.6-luna` summary and chapters, nothing shown: `gpt-5.6-luna` named no span where something is
+- claims by: `/call-digest`, 2026-10-14
 - cost: $0.0011
 
 ## summary
@@ -31,6 +32,38 @@
 - [00:09:58](https://www.youtube.com/watch?v=47XX75oZuFI&t=598) adopting the mindset
 
 ## shown
+
+## claims
+
+### the core lesson 0:00
+- Eric, tested: made over $1,000,000 in the past year
+  [r2 2026-10-05](https://www.youtube.com/watch?v=47XX75oZuFI&t=0)
+- Eric, tested: grew from a couple thousand dollars a month to $100,000–$150,000 a month over the last 6 months
+  [r2 2026-10-05](https://www.youtube.com/watch?v=47XX75oZuFI&t=0)
+
+### leaving comfortable work 1:06
+- Eric, tested: made $5,000–$10,000 a month detailing cars at 18 years old, for about a year
+  [r2 2026-10-05](https://www.youtube.com/watch?v=47XX75oZuFI&t=66)
+
+### taking the leap 2:11
+- Eric, tested: hit $20,000 a month two months after leaving the car-detailing business
+  [r2 2026-10-05](https://www.youtube.com/watch?v=47XX75oZuFI&t=131)
+
+### failing and risking faster 2:44
+- Eric, tested: bought several mentorship programs in the past year and most were poor quality
+  [r2 2026-10-05](https://www.youtube.com/watch?v=47XX75oZuFI&t=198)
+
+### committing money and effort 3:52
+- Eric, tested: spending hard-earned money on a mentorship was a main reason he succeeded so much in the last year
+  [r2 2026-10-05](https://www.youtube.com/watch?v=47XX75oZuFI&t=232)
+
+### making goals tangible 6:37
+- Eric, tested: writes his goal down and sets it as his phone wallpaper so it's the first thing he sees each day
+  [r2 2026-10-05](https://www.youtube.com/watch?v=47XX75oZuFI&t=397)
+
+### targeting $100k monthly 9:24
+- Eric, tested: set $100,000 a month as his only goal, with nothing less acceptable
+  [r2 2026-10-05](https://www.youtube.com/watch?v=47XX75oZuFI&t=564)
 
 ## description
 

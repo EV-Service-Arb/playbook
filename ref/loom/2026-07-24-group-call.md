@@ -5,6 +5,7 @@
 - duration: 01:04:18
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/call-pull.rs`
 
 ## summary
@@ -118,6 +119,58 @@ Participants discussed service-business models (detailing, junk removal, plumbin
 - Eric advised cold-calling other GMBs, offering a few free leads as proof, then proposing ongoing paid arrangements if leads convert.  
 - Suggested pricing/packaging: test $2k–$3k pitches after demonstrating value with free leads.  
 - Final operational note: continue experimenting with marketplace gift-card recruitment and Google Ads credits, and reconvene next week to share results.
+
+## claims
+
+### Sales and operations challenges in service businesses 2:01
+- Luca, tested: pulling ~80 reviews/day across two reviewers drove ~10 calls/day plus 3-4 auto-bookings, including a $500 job
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=341)
+
+### Junk removal and pricing strategies 7:31
+- Luke, tested: subcontractors wouldn't take percentage pay on junk removal, switched them to a flat $50/job
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=500)
+- Mendel, tested: made four AI videos for GMB verification; ordered a routable Pixel, since mainstream Android models (Samsung included) aren't routable
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=550)
+- Mendel, heard: the contact who demoed the AI-video method used Google Vids (VO), generating 8-second clips extendable by feeding the last frame back in, to build 30-40 second videos
+  [r5 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=625)
+
+### Hiring reviewers via Facebook Marketplace and IRL methods 17:08
+- Luca, tested: a Facebook Marketplace post targeting "$35/hr, UT students, summer side hustle" split-tested against a generic "bag of chips" post and brought in 4 solid reviewers from 5 posts
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=1088)
+- Luca, tested: paid a top reviewer $300 for 100 reviews in one batch, raising his pay above the standard $2.50/review for reliability, at ~85% stick rate
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=1109)
+
+### Review tracking, verification, and quality control 19:09
+- Luca, tested: verifies reviewers with a unique QR code and timestamp issued per reviewer per session, plus a photo of the reviewer at the review location
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=1170)
+
+### Using prompts, ChatGPT and automation to standardize reviews 24:09
+- Luca, tested: preloads ChatGPT prompts spun off real reviews so reviewers screenshot and retype a personalized, SEO-optimized review, at ~95% stick rate
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=1468)
+
+### Service area businesses (SAB) recordings and AI videos for physical listings 40:25
+- Cheyenne, tested: could not root their Android device to spoof location for SAB video verification — their specific phone model isn't rootable
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=2449)
+
+### Profile volume limits, device management and manager access practices 42:27
+- Eric, claims: GMB suspensions start climbing past ~100 profiles on one device, per what everyone he knows running higher counts has told him
+  [r2 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=2575)
+- Eric, claims: recommends capping GMB profiles per Gmail at 2-3, so a flag on one doesn't take down the rest
+  [r2 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=2603)
+- Eric, claims: skips manager access on detailing profiles entirely — adding photos and reviews as a customer covers ~95% of ranking, leaving only description/products (~5%) out of reach
+  [r2 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=2646)
+- Mendel, tested: NextDoor posting brought ~30 messages and zero conversions
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=2858)
+
+### Emerging photo verification and alternate verification paths 49:31
+- Mendel, tested: made his AI verification videos with Google Flow — 1,000 free credits, 15 credits per 10-second clip (~30 free videos), refreshed by recycling new accounts/emails
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=3091)
+
+### Scaling subcontracting, VA hiring and niche expansion 56:19
+- Luca, tested: tiered reviewer pay ($2.50 base, $3 for top performers, $3.50 for higher-ticket niches needing photos) at ~95% stick, except one profile where a reviewer over-posted and ~60% of those got removed — now caps submissions per profile per day
+  [r3 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=3611)
+- Eric, claims: to monetize a ranked GMB, cold-call the underlying business, offer a couple of free leads first, then pitch an ongoing $2-3k/month arrangement if they convert
+  [r2 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=3688)
 
 ## transcript
 
