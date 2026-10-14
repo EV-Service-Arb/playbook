@@ -5,11 +5,38 @@
 - duration: 00:11:04
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 Hey, I hope you're doing well! I put together a rough draft for building out our profiles, focusing on areas you recommended, like Salt Lake City for Water Damage Restoration, which has good search volume and low competition. I suggest adding a specific restoration page to your website to improve conversions and using tracking numbers for our Google business profiles. Please review my recommendations and let me know your thoughts so we can finalize everything and move forward!
+
+## claims
+
+### Service Categories Recommendations 1:52
+- Eric, claims: recommends listing the Salt Lake City profile as Water Damage Restoration Service, since that category has high search volume and low competition there
+  [r2 2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc?t=115)
+- Eric, claims: recommends adding a dedicated `/restoration` page to the client's existing kitchen-and-bathroom-remodel website, since niching a page down to the exact service should improve the profile-to-website conversion rate
+  [r2 2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc?t=205)
+
+### Service Area Business Setup 4:00
+- Eric, claims: recommends bathroom remodeling as the main category (general contractor as secondary) for the Draper profile, since bathroom-remodel searches there outnumber kitchen-remodel searches
+  [r2 2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc?t=248)
+- Eric, claims: recommends setting two of the profiles up as Service Area Businesses rather than address-verified ones, since they're easier and faster to get live, face low competition, and are much less likely to ever get suspended
+  [r2 2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc?t=350)
+- Eric, tested: verifies his own "Plumber Done Right" profiles at storage units and co-working spaces rather than at a real office
+  [r2 2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc?t=400)
+
+### Co-Working and Storage Units 7:43
+- Eric, tested: rents the cheapest storage unit available, uses it for about an hour to film the verification video, then requests a refund claiming he never used the unit, and is given it
+  [r2 2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc?t=520)
+- Eric, tested: uses CallRail (~$50/month, plus ~$2 per number) for tracking numbers on all his profiles, and avoids reusing the same phone number across different Google Business Profiles since that's against the rules
+  [r2 2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc?t=600)
+
+### Final Tips and Recommendations 10:30
+- Eric, claims: CallRail's $50/month plan includes five numbers, then $3/month per extra number; Twilio offers numbers cheaper, at about $1.25 each, but he's stuck with CallRail out of habit
+  [r2 2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc?t=635)
 
 ## transcript
 

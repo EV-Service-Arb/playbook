@@ -5,11 +5,28 @@
 - duration: 00:05:32
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I provide a quick introduction to our money-making business model, focusing on how to effectively use Google Search and Maps for local services, specifically plumbing. I emphasize the importance of having an address listed for better visibility and the challenges that come with it, such as the risk of suspension. Additionally, I highlight the necessity of using aged Gmail accounts with a USA IP for our operations. I will share the contact for my supplier of these accounts in the video description. Please pay attention to these details as we move forward in this process.
+
+## claims
+
+### Introduction to Money Making Model 0:00
+- Eric Velch, tested: runs "Plumber Dunn-Wright and Markham," a plumbing GMB profile listed on a physical address
+  [r1 2025-12-07](https://www.loom.com/share/1f32c7640a514b198adc997ca319238b?t=40)
+- Eric Velch, claims: a properly set-up address listing outranks a service-area one, but risks getting suspended and is harder to verify
+  [r1 2025-12-07](https://www.loom.com/share/1f32c7640a514b198adc997ca319238b?t=100)
+
+### Address Pages vs Service Areas 2:02
+- Eric Velch, claims: the process needs aged Gmail accounts on a USA IP
+  [r1 2025-12-07](https://www.loom.com/share/1f32c7640a514b198adc997ca319238b?t=130)
+- Eric Velch, claims: a physical address on a GMB listing is easier for Google to verify as a real, operating business than a service area is
+  [r1 2025-12-07](https://www.loom.com/share/1f32c7640a514b198adc997ca319238b?t=200)
+- Eric Velch, claims: a nearby GMB profile outranks a farther one on proximity searches regardless of SEO quality, which is why address pages are a strong asset
+  [r1 2025-12-07](https://www.loom.com/share/1f32c7640a514b198adc997ca319238b?t=300)
 
 ## transcript
 

@@ -5,11 +5,32 @@
 - duration: 00:04:28
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I'm here to help you make money, and I'm not going to waste your time with fluff. I've got over 20 successful Google Business Profiles in the plumbing niche, generating leads consistently, and I'm ready to teach you how to do the same. At just 19 years old, I've made over six figures this year alone, and I want to share everything I've learned through trial and error. If you're serious about dominating your market and making a lot of money, pay attention because I'm going to break it all down for you. Let's get started and turn your investment into profit!
+
+## claims
+
+### Google Business Profiles Overview 0:48
+- Eric Velch, tested: owns 20+ Google Business Profiles in the plumbing niche in Toronto, under "Plumber Done Right," with three shown on screen at 200, 267 and 300+ reviews
+  [r1 2025-12-07](https://www.loom.com/share/0be65ecbc0c94cb49a30bb7316a616e5?t=48)
+
+### Lead Generation Insights 1:52
+- Eric Velch, tested: owns more than 20 Google Business Profiles total, several unbranded or under other names (e.g. "Plumber to the Rescue"), each listed on its own address, with one in Brampton at ~200 reviews
+  [r1 2025-12-07](https://www.loom.com/share/0be65ecbc0c94cb49a30bb7316a616e5?t=150)
+- Eric Velch, claims: the method works universally in every niche, having run it in every niche himself
+  [r1 2025-12-07](https://www.loom.com/share/0be65ecbc0c94cb49a30bb7316a616e5?t=185)
+
+### Success in Various Niches 3:12
+- Eric Velch, claims: made $100k in revenue in a single month from car detailing, his first niche
+  [r1 2025-12-07](https://www.loom.com/share/0be65ecbc0c94cb49a30bb7316a616e5?t=193)
+- Eric Velch, claims: made over six figures in profit this year from Google Business Profiles alone, at 19 years old
+  [r1 2025-12-07](https://www.loom.com/share/0be65ecbc0c94cb49a30bb7316a616e5?t=215)
+- Eric Velch, claims: generates 20 leads every day, consistently, in the plumbing niche
+  [r1 2025-12-07](https://www.loom.com/share/0be65ecbc0c94cb49a30bb7316a616e5?t=235)
 
 ## transcript
 

@@ -5,11 +5,48 @@
 - duration: 00:10:27
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I discuss how to avoid getting your Google My Business (GMB) page suspended, highlighting six key factors that influence suspension risk. I emphasize the importance of not keyword stuffing in your business name and description, as well as the need to take edits slowly and carefully. It's crucial to avoid giving owner access to others and to keep multiple GMBs on separate accounts for safety. I also recommend that you wait at least five days before making significant changes or requesting reviews. The main action I urge you to take is to follow these best practices to minimize the chances of suspension.
+
+## claims
+
+### Avoiding Suspensions Overview 0:00
+- Eric, claims: putting a GMB on an address you don't own, or one that doesn't exist, risks suspension with nothing you can do about it afterward
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=35)
+- Eric, claims: naming a business directly "Plumber" next to the city name (e.g. "Done Right Plumber Ajax") is a clear keyword-stuffing flag that risks a report and suspension
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=106)
+- Eric, claims: a local guide account reporting the profile, or suggesting an edit on it, gets it suspended
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=130)
+- Eric, claims: spamming keywords in the business description (e.g. "Plumber near me, Plumber Ajax, drain problem, drain issue, drain clog") is a bad signal that risks suspension; phrasing it the way a customer would search is safer
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=201)
+
+### Edit Best Practices 3:57
+- Eric, claims: changing the business address gets the profile suspended almost instantly, most of the time
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=247)
+- Eric, claims: editing the website, phone number, name, or business location risks suspension or rejection, and editing the category gets it suspended right away; everything else is safe to edit, one change at a time
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=254)
+- Eric, claims: pace edits a few at a time (e.g. a description one day, photos and service areas the next) rather than doing everything at once
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=290)
+- Eric, tested: did all his edits at once on a profile and it never got suspended, though he still recommends the slower pace as general best practice
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=300)
+- Eric, claims: never give anyone owner access to a GMB; grant manager access instead, including when working on someone else's phone for an instant approval
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=332)
+- Eric, tested: runs multiple GMBs on the same account himself with no issue, but still recommends spreading them across separate accounts/emails to be safe
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=427)
+
+### Speed of Edits 7:28
+- Eric, claims: leave a new GMB untouched and free of reviews for the first five days, then ramp reviews up gradually afterward
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=462)
+- Eric, claims: pushing many reviews quickly (e.g. a text blast to a database of 1,000 getting ~50 reviews) doesn't seem to hurt the profile
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=493)
+- Eric, tested: his addresses that stay up and perform well are commercial buildings where a unit number is listed, since Google can't confirm or deny a plumbing office is there; residential addresses are more likely to get reported
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=546)
+- Eric, claims: create new GMBs on a Gmail account with no existing GMB on it, preferring a new or aged account with no live GMBs over reusing one
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=600)
 
 ## transcript
 

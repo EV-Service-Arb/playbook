@@ -5,11 +5,22 @@
 - duration: 00:02:13
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I discuss the importance of varying the name and domain when creating new pages, especially for local businesses like Plumber Done Right. I recommend making small changes, such as adding a comma or the province, to ensure each submission is unique and to avoid issues with verification. I also share my approach of using a core domain and adding city-specific slashes for differentiation. If you're creating similar pages, take these tips to heart to stay safe and effective in your strategy. No specific action was requested, but I encourage you to implement these practices.
+
+## claims
+
+### Introduction to Page Creation 0:00
+- Eric, tested: varies the name slightly on each resubmission of a suspended GBP — a comma, the state/province abbreviation, or a capital letter — rather than resubmitting identically
+  [r2 2025-12-13](https://www.loom.com/share/aca8832433c24193ac67c2fbfc6c5724?t=15)
+- Eric, claims: a competitor ("CDP Plumbing") instant-verifies at the mall every time, reusing the same business name, address, and domain (cdpplumbing.ca) across profiles
+  [r2 2025-12-13](https://www.loom.com/share/aca8832433c24193ac67c2fbfc6c5724?t=76)
+- Eric, tested: runs one core domain (PlumberDoneRight.com) with a per-city subpath (e.g. /Toronto) to differentiate each city's page
+  [r2 2025-12-13](https://www.loom.com/share/aca8832433c24193ac67c2fbfc6c5724?t=107)
 
 ## transcript
 
