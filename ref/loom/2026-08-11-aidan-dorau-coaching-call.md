@@ -5,6 +5,7 @@
 - duration: 00:20:16
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -47,6 +48,34 @@ Aidan has only one Instant Verified service-area profile and several address-bas
 - Aidan explains six recent reviews on the Chicago profile came from known emails (mom, sister, friend) and are currently showing.
 - Eric walks Aidan through adding another Gmail as a manager via Business Profile settings so Aidan can transfer access after Instant Verification.
 - Action items assigned: Aidan will try mom, sister, friend Gmail accounts (and the fourth Gmail) for Instant Verification and report results by end of day; Aidan will submit live support tickets for the three address profiles and wait for responses; if any profile verifies, Aidan will add manager access for handoff.
+
+## claims
+
+### current verification status 0:00
+- Eric, claims: a service-area profile's Instant Verification is useless; add an address to the profile instead
+  [r1 2026-08-11](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=15)
+- Eric, claims: trying an older, real personal Gmail account (a parent's, sibling's, or friend's) for Instant Verification usually gets one of two attempts through
+  [r1 2026-08-11](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=110)
+
+### video verification issues and plan to submit live tickets 3:31
+- Aidan Dorau, tested: of two to three verification videos submitted at the Woodbury and Apple Valley locations, two of three got the green verified checkmark; the one that failed had no frame around the signage, just a loose paper sign, and the location kept tripping him up
+  [r1 2026-08-11](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=215)
+- Eric, claims: submitting two to three verification videos usually gets at least one approved
+  [r1 2026-08-11](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=230)
+
+### live support ticket submission walkthrough 6:37
+- Aidan Dorau, tested: a Chicago profile, in a city where his business does not operate, got Instantly Verified as an address using a particular Gmail account
+  [r1 2026-08-11](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=405)
+- Eric, claims: Google's live-ticket support does not scrutinize the evidence photos submitted
+  [r1 2026-08-11](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=780)
+
+### next steps, profile sale question, and access setup 16:18
+- Eric, claims: a video-verified profile is safer from suspension than an Instant-Verified one
+  [r1 2026-08-11](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=985)
+- Aidan Dorau, tested: six reviews left from his own and family/friends' personal Gmail accounts stuck on the Chicago profile for three to four weeks without removal
+  [r1 2026-08-11](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=1090)
+- Eric, claims: Instant Verification is a somewhat better outcome than falling back to phone-number verification
+  [r1 2026-08-11](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=1200)
 
 ## transcript
 

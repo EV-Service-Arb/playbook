@@ -5,6 +5,7 @@
 - duration: 00:59:32
 - transcribed by: loom
 - read by: `/call-digest`, 2026-09-22
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -125,6 +126,58 @@ This is the group's weekly Thursday call on running local-service lead-gen busin
 ### Wrap-up and sign-off 54:48
 
 - The call closes with well-wishes and confirmation to meet again next Thursday at the same time.
+
+## claims
+
+### Signage trick for verification 1:01
+
+- Kareem, tested: redid 4 same-day GMB verification attempts after switching signage; 2 of 4 verified, one within 29 minutes
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=61)
+- Kareem, tested: pairing one reusable, generically-branded sign (e.g. "The Honest Plumber") with the city only in the GMB listing name, never on the sign itself, consistently gets same-day verification through
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=95)
+- Graham, tested: has 7 GMBs verified reusing generic sign names ("Affordable Plumber", "Reliable Plumber") with an A4 printout of the specific GMB name taped onto the signage; the verification AI does not flag the paper, and it works even though the GMB listing name carries a city the sign doesn't show
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=168)
+
+### Niche picks: paving, roofing, masonry 12:37
+
+- Ryan D, tested: runs lead-gen GMBs in concrete, towing, decks (entering), plumbing (entering), and one landscape-design client who pays a flat $1,000/month, full profit, for leads handed off with no further service
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=790)
+
+### Elliot's fencing lead progress 15:16
+
+- Elliot, tested: 71 leads last month across 5 GMBs; contractors have over $10,000 booked in revenue; roughly $3,000 locked in as his own commission so far, paid out only once a job fully completes
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=916)
+- Elliot, claims: his parents are uneasy about the business and are pushing him to consult a lawyer
+  [r4 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=950)
+
+### Account suspension and reinstatement risk 29:37
+
+- Kareem, tested: reused identical props and signage across 3 same-day verification videos done back-to-back within 4 hours; all three verified, using a printed paper sign in place of a business card, with no penalty from Google for the repeated signage
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=1900)
+
+### Storage unit verification method 32:49
+
+- Kareem, tested: ran 10 storage-unit GMB verifications in a week (3+4+3 split); the 3-in-a-day batch all verified within 2-3 days, but a 4-in-a-day batch all failed when he used cheap paper signage — redone with better signage, 2 of 4 verified same day; reusing the same storage-unit equipment and address across attempts did not hurt approval, only the signage quality mattered
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=1969)
+- Kareem, tested: finds cheap storage units by searching "<city> storage unit deals" (seen as low as $4, up to $26 for a 10x20); declines insurance and submits blank paperwork at signup since proof isn't required for 5-7 days, by which point filming is done; reuses one master lock across every unit, and gets the lock deposit (~$20-21) refunded afterward, or a full/half refund on the unit itself
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2050)
+- Kareem, tested: when a unit's own street address can't be shown on camera, filming a neighboring storage business in frame is accepted as a substitute
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2140)
+
+### Separating profiles across phones and proxies 37:24
+
+- Ryan D, tested: logs into accounts only through phones, one SIM per phone, never a shared computer; keeps at most 3-4 GMBs per Gmail even though some phones have run 200+ accounts without issue; is testing Proxidize + Multilogin (~$1,500-2,000/month setup) for Instagram, not GMB; has had one landscape-design and one fencing profile disabled, and relisted rather than appealing since those were set up and named in a way he no longer would
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2244)
+
+### Suspension stories and fresh-Gmail timing advice 39:03
+
+- James, tested: a Gmail account made solely for one GMB got suspended two days after the GMB itself verified; concludes a GMB should not be started right after the Gmail hosting it is created
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2343)
+
+### Reviews via Reddit and proxy citations 53:09
+
+- Eric, claims: does not think the region a Gmail account was originally created in matters for using it on a GMB
+  [r2 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=3200)
 
 ## transcript
 

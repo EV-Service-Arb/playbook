@@ -5,6 +5,7 @@
 - duration: 01:08:41
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -113,6 +114,98 @@ Participants discussed operational details for verifying and operating Google Bu
 - Several participants experienced multiple profile suspensions; recommended mitigations include creating profiles on separate Gmail accounts and avoiding any linking signals
 - Operational safeguards: do not use the same photos/metadata across profiles, access accounts over hotspot/incognito, and keep profile setups distinct
 - If appeals prompt verification video, consider submitting a verification video but spread out new profile creation and test cautiously
+
+## claims
+
+### account verification approach 0:00
+- Eric, claims: verifying a GMB profile from a different phone and a new Gmail is fine, even while the laptop used to manage it afterward stays the same
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=36)
+- James, tested: closed a $1,400 booking 20 minutes before the call, on a day that brought in $2,300–$3,000 total
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=73)
+- Anwar, tested: closed a $1,400 booking two nights before the call
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=80)
+
+### verification video address and filming guidance 4:52
+- Eric, claims: the address on a GMB listing doesn't have to match what the verification video shows — any real address in the same city works
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=292)
+- Eric, claims: members have verified from Dubai and Germany with no location spoofing, and roughly one in three or four address swaps "sticks"
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=330)
+- Eric, claims: a storage-unit verification video needs signs inside the unit, on top at the unit number, beside the unit, and on the vehicle, filmed starting at the street sign and kept to 3–5 minutes
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=450)
+- Eric, claims: an office verification video reads as credible with a chair, lamp, supplies, a branded wallpaper, and a fake invoice shown in a CRM like Housecall Pro or Clonestats
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=640)
+
+### on-the-ground lead generation setups and pop-up stands 11:47
+- Luke, tested: a pop-up stand with water, energy drinks, and Gatorade at a high-foot-traffic Austin spot (~100 people/hour when open) closed three detailing jobs for $600 in a day
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=707)
+- Anmar, claims: find subcontractors by joining local Facebook trade groups and searching "need [trade] [city]", then messaging people posting for or offering work and offering them an already-booked job for a split
+  [r4 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1000)
+
+### call-tracking and multi-niche phone handling 19:50
+- Luke, tested: running two niches (insulation and junk removal) through one phone number makes a missed call's business untraceable without checking CallRail
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1190)
+- Eric, claims: keep the CallRail dashboard open to see which tracking number was called, and give each number its own call flow/whisper message so the niche is known on pickup
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1230)
+- Luke, tested: contractors turned down both a 60/40 and a 60/30 split on junk-removal leads; switching to a flat $50-per-lead rate instead
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1400)
+
+### Nimbata vs CallRail and call recording 24:39
+- Aaron, tested: couldn't find how to turn on call recording in Nimbata — its layout and features differ a lot from CallRail's
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1479)
+- Eric, claims: Nimbata does support call recording — add the "record" action to the call flow to enable it
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1520)
+- Eric, tested: sends call recordings to his plumbing subcontractor when a customer's issue is too technical for Eric to explain himself
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1600)
+
+### AI receptionist and missed-call automation 27:41
+- Elliot, tested: built an AI receptionist on Retell in one to two days, spending about half of a $10 free-trial credit testing it; it auto-summarizes a finished call and writes the caller's details into his CRM, though it isn't connected to his phone numbers yet
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1661)
+- Eric, claims: benchmark the human booking rate over the last 10–20 leads before switching to an AI receptionist, then run the AI over a same-size sample to compare properly
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1780)
+
+### google search ads strategy and local presence 30:21
+- Julian, tested: has run Google search ads with exact-match keywords, never broad or phrase match, for his own licensed junk-removal-and-demolition business for seven years
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1821)
+- Julian, tested: the GMB location extension tied to his search ads takes 2–3 spots in the map pack at once (organic plus paid); his junk-removal cost-per-click runs about $8 with a ~14% click-through rate, against a typical 5–8%
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=1900)
+
+### yelp verification and review dependency for other platforms 33:45
+- Julian, claims: Bing and Apple Maps pull from Yelp reviews rather than Google reviews for local rankings, so Yelp presence may matter there
+  [r4 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=2025)
+
+### lead fulfillment workflows and contractor arrangements 36:51
+- Eric, heard: Cole has the contractor quote the job on-site, marks it up 15–20% for the customer, collects a 30–50% deposit, and keeps his markup out of that deposit rather than waiting for the job to finish
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=2400)
+
+### early-stage profile monetization and contractor scaling 42:58
+- Keith, tested: made about $800 in under a week of calls with one contractor on a new profile; reviews keep dropping since his usual foot-traffic spot (a mall) is dead, but the profile still ranks
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=2578)
+- Keith, heard: a contact pools money with others in SEO forums to buy aged Gmail accounts for about $1.50 each split three ways, clears cookies before using them, and keeps most reviews sticking — the few that drop are cheap enough to replace
+  [r5 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=2650)
+- Eric, claims: a GMB profile doesn't get suspended for reviews alone — per Google's own support, the worst case is the reviews get wiped; dumping ~100 reviews on a profile in a single day is likely to flag it
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=2850)
+
+### marketplace/facebook methods and review retention 48:39
+- Julian, tested: aged-Gmail reviews all got taken down; switching to energy-drink-incentivized reviews at high-foot-traffic spots (university, boardwalk) had no drop-off
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=2919)
+- Julian, tested: reviews sourced through Eric's Facebook Marketplace method held at only about 50% retention
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=2980)
+- Julian, tested: one service-area GMB profile brought in about $13K revenue and a bit over $3K profit in a month
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=3080)
+- Eric, heard: knows an operator who runs pure rank-and-rent on reviews — sells GMB profiles to contractors for about $2,000/month retainers, forwards all the calls, and nets about $40K/month
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=3200)
+- Eric, claims: expect 60–75% of reviews collected in a profile's first two weeks to stick; the ones that hold past that should stay for several months
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=3270)
+
+### multi-profile review distribution and technical safeguards 54:47
+- Julian, tested: his service-area junk-removal profile ranks consistently (2nd for another member's search) despite having no physical address
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=3287)
+- Peter, tested: put up six car-detailing GMB profiles, plus two already-performing ones; all got suspended for vague guideline violations, with the appeal offering a verification-video option
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=3525)
+- Jira, tested: had six to nine GMB profiles spread across only three Gmail accounts; all of them got suspended
+  [r3 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=3600)
+- Eric, claims: avoid suspensions by keeping one profile per Gmail account, never using home Wi-Fi, accessing each account in incognito, and never reusing the same photos or metadata across profiles
+  [r2 2026-06-19](https://www.loom.com/share/509ccf71fddf4334b481462d4ff0c5ca?t=3650)
 
 ## transcript
 
