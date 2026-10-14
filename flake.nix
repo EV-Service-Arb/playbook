@@ -76,6 +76,19 @@
         };
       in
       {
+        apps.help = {
+          type = "app";
+          program = "${pkgs.writeShellScriptBin "help" ''
+            cat <<'EOF'
+            nix run .#check          call-pull --check, cite-check, build playbook_web
+            nix run .#mcp-sandbox    your Claude Code without service-arb, to onboard as a new member (--keep resumes)
+            nix build .#playbook_web the member MCP server
+            nix develop              rust nightly for scripts/*.rs (cargo -Zscript), sqlite, tailwind
+            scripts/*.rs             call/skool/yt/doc/chatgpt pullers, cite-check, photo-metadata
+            EOF
+          ''}/bin/help";
+        };
+
         packages = containerStd.packages // { inherit playbook_web; };
         containers = containerStd.containers;
 
