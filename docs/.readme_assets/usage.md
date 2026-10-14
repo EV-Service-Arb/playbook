@@ -1,4 +1,4 @@
-Ask Claude Code about service arbitrage as usual; with `service-arb` connected it answers from the playbook on its own, citing the dated source of each claim:
+Ask about service arbitrage as usual; with `service-arb` connected it answers from the playbook on its own, citing the dated source of each claim:
 
 | tool | returns |
 |---|---|
