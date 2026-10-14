@@ -15,7 +15,7 @@ Capture and distillation never happen in the same file.
                      │
                      │  scripts/*.rs, social_networks
                      ▼
-                   ref/                        raw · verbatim · dated
+                   ref/                        raw · verbatim · dated; and its digest
                      │
          ┌───────────┴────────────┐
          │ an agent reads it      │ the human's own notes, re-sourced
@@ -72,11 +72,17 @@ has no capture of**, printed by the puller for `ref/README.md` to be told about 
 # <title>
 
 - source: <https://www.loom.com/share/<id>>        # or fathom.video/share/<id>, drive.google.com/file/d/<id>
-- recorded: · duration: · transcribed by: · read by: · pulled by:
+- recorded: · duration: · transcribed by: · read by: · claims by: · pulled by:
 
 ## summary
 
 <the platform's, verbatim>
+
+## claims
+
+### Location Spoofing Strategy 2:39
+- Eric, claims: a spoofed location passes video verification when the street matches
+  [r2 2026-09-18](https://www.loom.com/share/<id>?t=170)
 
 ## transcript
 
@@ -98,6 +104,10 @@ plain prose, in paragraphs, no stamps in it
 - a digested summary has a `### <topic> <stamp>` per chapter, same names and times; a platform's own
   summary is verbatim and held to nothing
 - speaker turns, where the platform names speakers, are paragraphs opening `**<speaker>**:`
+- `## claims` is the digest's: what each speaker claims, a bullet `<who in full>, <tested|claims|heard>:
+  <claim>` and its citation in `structured/`'s format, under a `### <topic> <stamp>` per chapter that
+  has any. `claims by:` says who wrote them, and is absent until someone has; it ends `— none` when
+  the recording claims nothing. In a video, `## claims` follows `## shown`
 - a recording nobody chaptered gets an untitled header per paragraph instead — the times
   `/call-digest` needs to place chapters. It titles the ones that open a chapter and deletes the rest
 - a recording nobody speaks in is captured all the same: `transcribed by:` ends `— nobody speaks`,
@@ -114,9 +124,10 @@ whose header names the model, the day and what it cost. A youtube capture reads 
 way, into its own `## shown`, and states the models and the cost in its header. Every line of `shown.md` links the second it
 describes and embeds the frame at that second, so the claim can be checked by eye.
 
-The one reading an agent may put in `ref/` is what the source's own platform would have:
-a recording its platform never summarised gets a summary from `/call-digest`, which says so
-in the capture's `read by:` line. Nothing else.
+The one reading an agent may put in `ref/` is the digest: a recording its platform never summarised
+gets a summary from `/call-digest`, which says so in the capture's `read by:` line, and every
+recording gets its `## claims`, said so in `claims by:`. Nothing else. `scripts/cite-check.rs` holds
+the claims to their capture.
 
 **`structured/suggested/`** — an agent's own reading of a source. Unreviewed.
 **`structured/approved/`** — what the human has already vetted.

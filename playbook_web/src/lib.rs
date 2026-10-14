@@ -2,14 +2,20 @@
 //! MCP to the Service-Arb members holding `sa:playbook:mcp:use`, behind the panel. See `README.md`.
 
 mod auth;
-mod corpus;
 mod pages;
 mod tools;
+
+mod baked {
+	include!(concat!(env!("OUT_DIR"), "/corpus.rs"));
+}
 
 use std::{path::PathBuf, sync::{Arc, LazyLock, Mutex}};
 
 use axum::{Router, middleware, routing::get};
+use playbook::Corpus;
 use rmcp::transport::streamable_http_server::{StreamableHttpServerConfig, StreamableHttpService, session::local::LocalSessionManager};
+
+static CORPUS: LazyLock<Corpus> = LazyLock::new(|| Corpus::new(baked::FILES, baked::DECAY_DAYS));
 
 pub struct Config {
 	/// where members reach the server, e.g. `https://<host>/playbook_mcp`; the OAuth issuer, the resource, and the path it is served under
@@ -35,7 +41,7 @@ struct Member {
 }
 
 pub fn app(config: Config) -> Router {
-	LazyLock::force(&corpus::CORPUS); // a malformed capture fails the start, not a member's call
+	LazyLock::force(&CORPUS); // a malformed capture fails the start, not a member's call
 	let db = rusqlite::Connection::open(&config.db).unwrap_or_else(|e| panic!("{}: {e}", config.db.display()));
 	db.pragma_update(None, "journal_mode", "WAL").unwrap();
 	db.busy_timeout(std::time::Duration::from_secs(5)).unwrap();

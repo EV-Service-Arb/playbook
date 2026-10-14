@@ -14,40 +14,32 @@ const INSTRUCTIONS_MAX: usize = 2048; // Claude Code truncates server instructio
 
 fn main() {
 	let root = PathBuf::from(std::env::var("CARGO_MANIFEST_DIR").unwrap()).parent().expect("playbook_web/ sits in the workspace root").to_path_buf();
-	let mut files = Vec::new();
-	for dir in ["skill/service-arb/sections", "structured/approved", "structured/suggested", "ref"] {
+	let (files, decay_days) = playbook::tree(&root);
+	let mut dirs: Vec<&str> = files.iter().map(|(p, _)| p.split('/').next().unwrap()).collect();
+	dirs.dedup();
+	for dir in dirs.into_iter().chain(["scripts/cite-check.rs"]) {
 		println!("cargo:rerun-if-changed={}", root.join(dir).display());
-		walk(&root.join(dir), &mut files);
 	}
 	let skill = root.join("skill/service-arb/SKILL.md");
 	println!("cargo:rerun-if-changed={}", skill.display());
-	files.sort();
 
 	let mut out = String::from("pub static FILES: &[(&str, &str)] = &[\n");
 	let mut sections = Vec::new();
-	for f in &files {
-		let rel = f.strip_prefix(&root).unwrap().to_str().expect("corpus paths are utf-8");
+	for (rel, _) in &files {
 		if let Some(name) = rel.strip_prefix("skill/service-arb/sections/") {
 			sections.push(name.trim_end_matches(".md").to_owned());
 		}
-		writeln!(out, "\t({rel:?}, include_str!({:?})),", f.display().to_string()).unwrap();
+		writeln!(out, "\t({rel:?}, include_str!({:?})),", root.join(rel).display().to_string()).unwrap();
 	}
 	out.push_str("];\n");
 
 	// the image carries no scripts, so the decay the skill links to is inlined
-	let cite_check = root.join("scripts/cite-check.rs");
-	println!("cargo:rerun-if-changed={}", cite_check.display());
-	let cite_check = fs::read_to_string(&cite_check).unwrap();
-	let decay_days = cite_check
-		.lines()
-		.find_map(|l| l.strip_prefix("const DECAY_DAYS: f64 = ")?.strip_suffix(".;"))
-		.expect("cite-check.rs states `const DECAY_DAYS: f64 = <n>.;`");
-	writeln!(out, "const DECAY_DAYS: f64 = {decay_days}.;").unwrap();
+	writeln!(out, "pub const DECAY_DAYS: f64 = {decay_days:?};").unwrap();
 	let skill = fs::read_to_string(&skill).unwrap();
 	let instructions = format!("{}\n\n{}", section(&skill, "# service-arb"), section(&skill, "## Answering"));
 	let decay_link = "[`DECAY_DAYS`](../../scripts/cite-check.rs)";
 	assert!(instructions.contains(decay_link), "SKILL.md's `## Answering` no longer links {decay_link}");
-	let instructions = instructions.replace(decay_link, decay_days);
+	let instructions = instructions.replace(decay_link, &decay_days.to_string());
 	assert!(instructions.len() <= INSTRUCTIONS_MAX, "SKILL.md's hook + `## Answering` is {} chars, over {INSTRUCTIONS_MAX}", instructions.len());
 	writeln!(out, "pub const INSTRUCTIONS: &str = {instructions:?};").unwrap();
 	writeln!(out, "pub const GUIDE_DESCRIPTION: &str = {:?};", format!(
@@ -93,19 +85,4 @@ fn section<'a>(md: &'a str, header: &str) -> &'a str {
 	let start = md.find(&format!("\n{header}\n")).unwrap_or_else(|| panic!("SKILL.md has no `{header}`")) + header.len() + 2;
 	let rest = &md[start..];
 	rest[..rest.find("\n#").unwrap_or(rest.len())].trim()
-}
-
-/// `README.md`s are indices and format rules, not knowledge. `ref/cases/` states no source and no date.
-fn walk(dir: &Path, files: &mut Vec<PathBuf>) {
-	for entry in fs::read_dir(dir).unwrap_or_else(|e| panic!("{}: {e}", dir.display())) {
-		let path = entry.unwrap().path();
-		if path.ends_with("ref/cases") {
-			continue;
-		}
-		if path.is_dir() {
-			walk(&path, files);
-		} else if path.extension().is_some_and(|e| e == "md") && path.file_name().unwrap() != "README.md" {
-			files.push(path);
-		}
-	}
 }

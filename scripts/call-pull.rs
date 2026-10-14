@@ -301,6 +301,10 @@ fn check(name: &str, text: &str) -> Rec {
 	let sections: Vec<&str> = text.lines().filter(|l| l.starts_with("## ")).collect();
 	assert_eq!(sections.last(), Some(&"## transcript"), "{name}: `## transcript` has to be its last section");
 	assert!(!sections.contains(&"## chapters"), "{name}: chapters are `###` headers inside `## transcript`, not a section");
+	let claimed = sections.contains(&"## claims");
+	assert!(!claimed || sections[sections.len() - 2] == "## claims", "{name}: `## claims` sits directly above `## transcript`");
+	let claims_by = text.lines().find_map(|l| l.strip_prefix("- claims by: "));
+	assert_eq!(claimed, claims_by.is_some_and(|by| !by.ends_with("— none")), "{name}: `claims by:` is there exactly when `## claims` is, and ends `— none` when nothing was claimed");
 	let transcript = text.split_once("\n## transcript\n").expect("found as a section above").1;
 
 	let lines: Vec<&str> = transcript.lines().collect();

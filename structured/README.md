@@ -32,6 +32,7 @@ A citation is a line that holds only a link, `[r<base> <date>](url)`:
   `https://github.com/Service-Arb/playbook/issues/<n>#issuecomment-<id>`
 - consecutive citation lines are a run. A run backs the text above it, back to the previous citation
 - every bullet is backed by a run, or by an `// unsourced: <who>` line, before its section ends
+- a claim from a capture's `## claims` is promoted as it stands, citation and all
 
 ## Effective reliability
 Counted by `effective` in `scripts/cite-check.rs`. The number is fractional, so two citations keep their order as both of them age. A run leads with its

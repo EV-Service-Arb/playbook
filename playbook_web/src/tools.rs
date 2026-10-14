@@ -11,9 +11,11 @@ use rmcp::{
 };
 use serde::{Deserialize, Serialize};
 
+use playbook::Found;
+
 use crate::{
-	Member, State,
-	corpus::{CORPUS, Found, GUIDE_DESCRIPTION, INSTRUCTIONS},
+	CORPUS, Member, State,
+	baked::{GUIDE_DESCRIPTION, INSTRUCTIONS},
 	now,
 };
 

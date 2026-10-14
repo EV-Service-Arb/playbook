@@ -1935,6 +1935,8 @@ name = "playbook"
 version = "0.1.0"
 dependencies = [
  "clap",
+ "regex",
+ "regex-syntax",
  "v_utils",
 ]
 
@@ -1947,8 +1949,8 @@ dependencies = [
  "ev_lib_classes",
  "getrandom 0.4.3",
  "insta",
+ "playbook",
  "regex",
- "regex-syntax",
  "reqwest",
  "rmcp",
  "rusqlite",

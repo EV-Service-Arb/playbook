@@ -10,7 +10,8 @@ jiff = "0.2"
 //! `./scripts/cite-check.rs [<root>]` — hold every block under `structured/` to
 //! `structured/README.md`: each citation resolves to a capture in `ref/`, carries that capture's date,
 //! stays inside its duration, and sits in its run by effective reliability; no bullet goes unbacked.
-//! `<root>` defaults to the checkout this runs in.
+//! The `## claims` of every capture in `ref/` too: a topic per chapter it draws on, and one citation
+//! per claim, into the capture itself. `<root>` defaults to the checkout this runs in.
 //!
 //! Prints every failure as `path:line: why` and exits non-zero if there was one.
 
@@ -23,11 +24,13 @@ use jiff::civil::Date;
 
 const ISSUE_COMMENT: &str = "https://github.com/Service-Arb/playbook/issues/";
 const SECTIONS: [&str; 3] = ["## info", "## facts", "## plays"];
+const MODES: [&str; 3] = ["tested", "claims", "heard"];
 const DECAY_DAYS: f64 = 180.;
 const WORST: f64 = 10.;
 
 /// What a capture in `ref/` says about itself.
 struct Capture {
+	path: PathBuf,
 	date: Date,
 	duration: Option<u64>,
 }
@@ -59,14 +62,26 @@ fn main() {
 			errors.push(format!("{shown}:{line}: {why}"));
 		}
 	}
+	let mut digests = 0;
+	for (key, capture) in &captures {
+		let text = std::fs::read_to_string(&capture.path).expect("walked files are readable");
+		if !text.contains("\n## claims\n") {
+			continue;
+		}
+		digests += 1;
+		let shown = capture.path.strip_prefix(&root).expect("walked from root").display().to_string();
+		for (line, why) in claims(&text, key, &captures) {
+			errors.push(format!("{shown}:{line}: {why}"));
+		}
+	}
 	for e in &errors {
 		eprintln!("{e}");
 	}
 	if !errors.is_empty() {
-		eprintln!("{} citation errors across {} blocks", errors.len(), blocks.len());
+		eprintln!("{} citation errors across {} blocks and {digests} captures' claims", errors.len(), blocks.len());
 		std::process::exit(1);
 	}
-	eprintln!("{} blocks hold their citations", blocks.len());
+	eprintln!("{} blocks and {digests} captures' claims hold their citations", blocks.len());
 }
 
 fn check(text: &str, captures: &BTreeMap<String, Capture>, today: Date) -> Vec<(usize, String)> {
@@ -138,6 +153,96 @@ fn check(text: &str, captures: &BTreeMap<String, Capture>, today: Date) -> Vec<(
 	errors
 }
 
+/// A capture's `## claims`: `### <topic> <stamp>` naming its chapters in order, under each a bullet
+/// `<who>, <mode>: <claim>` per claim and its one citation, into this capture.
+fn claims(text: &str, own: &str, captures: &BTreeMap<String, Capture>) -> Vec<(usize, String)> {
+	let mut errors = Vec::new();
+	let chapters = chapters(text);
+	let mut next = 0; // the chapters a topic may still name start here
+	let mut section = "";
+	let mut topic = false;
+	let mut bullet: Option<(usize, usize)> = None; // its line, and the citations under it so far
+	let close = |bullet: &mut Option<(usize, usize)>, errors: &mut Vec<(usize, String)>| {
+		if let Some((line, n)) = bullet.take().filter(|(_, n)| *n != 1) {
+			errors.push((line, format!("a claim carries exactly one citation, and this one {n}")));
+		}
+	};
+	for (i, raw) in text.lines().enumerate() {
+		let line = i + 1;
+		if let Some(s) = raw.strip_prefix("## ") {
+			close(&mut bullet, &mut errors);
+			section = s;
+			continue;
+		}
+		if section != "claims" || raw.trim().is_empty() {
+			continue;
+		}
+		if let Some(header) = raw.strip_prefix("### ") {
+			close(&mut bullet, &mut errors);
+			topic = true;
+			match header.rsplit_once(' ').and_then(|(name, stamp)| Some((stamp_secs(stamp)?, name))) {
+				Some((at, name)) if let Some(i) = chapters[next..].iter().position(|&(t, c)| t == at && c == name) => next += i + 1,
+				Some(_) => errors.push((line, "names no chapter after the topic above it; a topic is a chapter's name and time".into())),
+				None => errors.push((line, format!("`### {header}` is not `### <topic> <stamp>`"))),
+			}
+			continue;
+		}
+		if !topic {
+			errors.push((line, "claims sit under a `### <topic> <stamp>`".into()));
+			topic = true; // reported once
+		}
+		if let Some(claim) = raw.strip_prefix("- ") {
+			close(&mut bullet, &mut errors);
+			bullet = Some((line, 0));
+			let mode = claim.split_once(": ").and_then(|(said, _)| said.rsplit_once(", ")).map(|(_, mode)| mode);
+			if !mode.is_some_and(|m| MODES.contains(&m)) {
+				errors.push((line, format!("a claim opens `<who>, <{}>: `", MODES.join("|"))));
+			}
+			continue;
+		}
+		match (link_only(raw.trim()), &mut bullet) {
+			(Some((label, url)), Some((_, n))) => {
+				*n += 1;
+				if source_key(url).as_deref() != Some(own) {
+					errors.push((line, format!("cites `{url}`, and a claim cites the capture it sits in")));
+				} else if let Err(why) = citation(line, label, url, captures) {
+					errors.push((line, why));
+				}
+			}
+			_ => errors.push((line, "under a topic, only claims and their citations".into())),
+		}
+	}
+	close(&mut bullet, &mut errors);
+	errors
+}
+
+/// `(secs, title)` of a capture's chapters: `### [<stamp>](url) title` in a call's transcript, `- [<stamp>](url) title` in a video's `## chapters`.
+fn chapters(text: &str) -> Vec<(u64, &str)> {
+	let mut section = "";
+	let mut out = Vec::new();
+	for raw in text.lines() {
+		if let Some(s) = raw.strip_prefix("## ") {
+			section = s;
+			continue;
+		}
+		let entry = match section {
+			"transcript" => raw.strip_prefix("### ["),
+			"chapters" => raw.strip_prefix("- ["),
+			_ => None,
+		};
+		if let Some((stamp, rest)) = entry.and_then(|e| e.split_once("](")) {
+			let at = stamp_secs(stamp).unwrap_or_else(|| panic!("chapter `{raw}` has no stamp; call-pull.rs --check or yt-pull.rs wrote it"));
+			out.push((at, rest.split_once(") ").map_or("", |(_, title)| title.trim())));
+		}
+	}
+	out
+}
+
+/// `1:02:27`, `03:34` or `0:00` as seconds.
+fn stamp_secs(stamp: &str) -> Option<u64> {
+	stamp.split(':').try_fold(0, |acc, p| Some(acc * 60 + p.parse::<u64>().ok()?))
+}
+
 /// `[label](url)` and nothing else on the line.
 fn link_only(line: &str) -> Option<(&str, &str)> {
 	let rest = line.strip_prefix('[')?.strip_suffix(')')?;
@@ -176,7 +281,7 @@ fn citation(line: usize, label: &str, url: &str, captures: &BTreeMap<String, Cap
 	if date != capture.date {
 		return Err(format!("dated {date}, but the capture is dated {}", capture.date));
 	}
-	if let Some(t) = param(url, "t") {
+	if let Some(t) = param(url, "t").or_else(|| url.split_once("#t=").map(|(_, t)| t)) {
 		let t: u64 = t.trim_end_matches('s').parse().map_err(|_| format!("`t={t}` is not a second"))?;
 		match capture.duration {
 			Some(d) if t > d => return Err(format!("`t={t}` is past the capture's end at {d}s")),
@@ -215,6 +320,15 @@ fn source_key(url: &str) -> Option<String> {
 	if let Some(id) = after("chatgpt.com/share/") {
 		return Some(format!("chatgpt:{id}"));
 	}
+	if let Some(id) = after("drive.google.com/file/d/") {
+		return Some(format!("drive:{id}"));
+	}
+	if let Some(id) = after("player.vimeo.com/video/") {
+		return Some(format!("vimeo:{id}"));
+	}
+	if let Some(id) = after("vocaroo.com/") {
+		return Some(format!("vocaroo:{id}"));
+	}
 	if let Some(id) = after("youtu.be/") {
 		return Some(format!("youtube:{id}"));
 	}
@@ -252,7 +366,7 @@ fn captures(ref_dir: &Path) -> BTreeMap<String, Capture> {
 			let parts: Vec<u64> = d.split(':').map(|p| p.parse().unwrap_or_else(|e| panic!("{}: duration `{d}`: {e}", path.display()))).collect();
 			parts.iter().fold(0, |acc, p| acc * 60 + p)
 		});
-		if out.insert(key.clone(), Capture { date, duration }).is_some() {
+		if out.insert(key.clone(), Capture { path: path.clone(), date, duration }).is_some() {
 			panic!("{key} is captured twice, second at {}", path.display());
 		}
 	}
