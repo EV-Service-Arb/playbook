@@ -76,17 +76,9 @@
         };
       in
       {
-        apps.help = {
-          type = "app";
-          program = "${pkgs.writeShellScriptBin "help" ''
-            cat <<'EOF'
-            nix run .#check          call-pull --check, cite-check, build playbook_web
-            nix run .#mcp-sandbox    your Claude Code without service-arb, to onboard as a new member (--keep resumes)
-            nix build .#playbook_web the member MCP server
-            nix develop              rust nightly for scripts/*.rs (cargo -Zscript), sqlite, tailwind
-            scripts/*.rs             call/skool/yt/doc/chatgpt pullers, cite-check, photo-metadata
-            EOF
-          ''}/bin/help";
+        apps.help = v_flakes.utils.help {
+          inherit pkgs self system;
+          about = "scripts/*.rs: call/skool/yt/doc/chatgpt pullers, cite-check, photo-metadata (rust nightly from `nix develop`)\n";
         };
 
         packages = containerStd.packages // { inherit playbook_web; };
@@ -94,6 +86,7 @@
 
         apps.check = {
           type = "app";
+          meta.description = "call-pull --check, cite-check, build playbook_web";
           program = "${pkgs.writeShellApplication {
             name = "check";
             runtimeInputs = [ rust pkgs.git ];
@@ -103,6 +96,7 @@
 
         apps.mcp-sandbox = {
           type = "app";
+          meta.description = "your Claude Code without service-arb, to onboard as a new member (--keep resumes)";
           program = "${pkgs.writeShellApplication {
             name = "mcp-sandbox";
             runtimeInputs = [ pkgs.git pkgs.jq pkgs.chromium ]; # claude comes from the caller's PATH
