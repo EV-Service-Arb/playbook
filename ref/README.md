@@ -32,7 +32,7 @@ this list does not.
   - [2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc)
   - [2026-04-03](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR) — Art Khan's call, posted by Eric
 - my own calls:
-  - [2026-10-14](https://fathom.video/share/rsnb2zCYakzpPS3Yt4_dbh8oB4aqMHu-) — with dainfernalobsidian, met on discord
+  - [2026-10-14](https://fathom.video/share/rsnb2zCYakzpPS3Yt4_dbh8oB4aqMHu-) — with Sumit D (dainfernalobsidian), met on discord
 - eric's drive folders, every recording in them:
   - [2025-12-21](https://drive.google.com/drive/folders/1jFd8aorlIyDqMB_OwfuFrzrFG0cPObkp) — example verification videos, and the rest of his resources
   - [2026-09-18](https://drive.google.com/drive/folders/1hsPix3WX9bpFGrFg4a4GWLnSti3fv55X) — recordings of calls being answered
@@ -53,6 +53,7 @@ this list does not.
   - [2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5)
   - [2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab)
   - [2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0)
+  - [2026-10-10](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d)
 - recordings the classroom links to, on hosts that name and date nothing:
   - [2026-09-18](https://player.vimeo.com/video/1079014922) — address video shot in a different location
   - [2026-09-18](https://vocaroo.com/118AEXIqXCDi) — the VA call whose audio the video missed
