@@ -83,3 +83,4 @@ graphify-out/
 **/.tb/
 **/.tb-client
 **/.pg/
+ref/**/recording.*
