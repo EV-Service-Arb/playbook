@@ -10,3 +10,10 @@
   > they run your registration number, so you can't just lie to them
   [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=3963)
   // apparently matters for Thumbtack, but that's american
+
+- if google sees people looking up other businesses after having been on your website/phone, it drops your rankings
+  [r5 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3606)
+  [r5 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3613)
+  > Eric: people calling in, even when you don't answer, still helps the profile's SEO
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2114)
+  // overridden, I agree with Ilya
