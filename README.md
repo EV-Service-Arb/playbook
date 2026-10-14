@@ -4,6 +4,9 @@
 [<img alt="ci warnings" src="https://img.shields.io/github/actions/workflow/status/Service-Arb/playbook/warnings.yml?branch=main&style=for-the-badge&style=flat-square&label=warnings&labelColor=d16002" height="20">](https://github.com/Service-Arb/playbook/actions?query=branch%3Amain) <!--NB: Won't find it if repo is private-->
 
 A knowledge base on service arbitrage — running Google Business Profiles into subcontracted trade work — where every claim traces back to a dated source. Members read it through an MCP server, from Claude Code, Codex, claude.ai or ChatGPT; see Installation.
+
+![prompt: "what I need for live call"](docs/.assets/playbook_live_call_advice.png)
+![actioning it: following a lead from the answer](docs/.assets/playbook_eric_drive_link.png)
 <!-- markdownlint-disable -->
 <details>
 <summary>
