@@ -13,8 +13,10 @@ git lfs ls-files -l | while read -r oid mark path; do
 	[ -z "${changed[$path]:-}" ] || continue # differs from HEAD, so not $oid's content
 	o="$objects/${oid:0:2}/${oid:2:2}/$oid"
 	[ "$path" -ef "$o" ] && continue
-	ln -f "$o" "$path"
-	chmod a-w "$o" # shared inode: an in-place write fails instead of rewriting the object under every checkout
-done
+	printf '%s\0%s\0' "$o" "$path"
+done | perl -0 -e 'chomp(my @a = <STDIN>); while (my ($o, $p) = splice @a, 0, 2) {
+	chmod 0444, $o or die "$o: $!"; # shared inode: an in-place write fails instead of rewriting the object under every checkout
+	unlink $p; link $o, $p or die "$p: $!";
+}' # one process, not two forks per object
 
 git lfs prune >/dev/null
