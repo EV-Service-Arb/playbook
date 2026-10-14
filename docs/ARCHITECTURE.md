@@ -163,18 +163,24 @@ them, in `nix run .#check`, and a hook runs it after any agent edit under `struc
 ## Reliability
 
 Every citation carries a reliability: 0 to 10, lower is better. Who said it and how they came to know
-it sets the base:
+it sets the base. A person on the [people](#people) list takes their own base instead, whatever their role:
 
 | base | source                                                        |
 |------|---------------------------------------------------------------|
 | 0    | tested myself                                                 |
 | 1    | skool course material or in [structured/approved/]            |
-| 2    | Eric said it                                                  |
 | 3    | a gmbpp member tested it                                      |
 | 4    | a gmbpp member claimed it or in [structured/suggested]        |
 | 5    | a gmbpp member heard or thought of it; a cheap group member tested it |
 | 6    | a cheap group member claimed it                               |
 | 7    | a cheap group member heard or thought of it                   |
+
+<a id="people"></a>**people**:
+
+| base | who                                      |
+|------|------------------------------------------|
+| 2    | Eric                                     |
+| 3    | Gabe Jacobs (skool `gabe-jacobs-9502`)   |
 
 Then everything decays with age, up to 10 — a cheap group member having heard of it long ago, which
 is as good as nothing. How the decay is counted lives in `scripts/cite-check.rs`, not here.
