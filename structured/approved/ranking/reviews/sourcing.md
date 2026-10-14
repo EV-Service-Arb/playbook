@@ -49,3 +49,15 @@
 
 - try to trade naked pics with cold traffic on facebook
   [r5 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=6925)
+
+- when asking for reviews, ask for them for my dad and not myself
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2684)
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=124)
+
+- Gabe Jacobs: massive advice on automating checking people coming from ads
+  has a form on a site that checks device fingerprint, geolocation, IP location, tz, etc. Then score them. Lol, actual bookie tactics
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1916)
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1665)
+  > the ads are his $5-a-review posts on Craigslist gigs and Facebook. a vetted person goes onto his message board, and his tool sends them the profile's review link
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1707)
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1961)
