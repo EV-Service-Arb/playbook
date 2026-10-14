@@ -5,11 +5,50 @@
 - duration: 00:15:59
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I dive into the essentials of SEO, focusing on how to optimize your Google My Business profile to attract more customers. I emphasize the importance of authority, reviews, and targeted keywords, particularly using "plumber" and your city name for maximum impact. For example, in Toronto, "plumber Toronto" has a search volume of 2,400 per month, making it crucial to incorporate this into your business name and description. I also highlight the advantages of targeting suburbs with lower competition, where you can rank more easily and generate significant leads. I encourage you to take action by refining your GMB profile and focusing on these strategies to improve your visibility and revenue.
+
+## claims
+
+### Introduction to SEO Basics 0:00
+- Eric, claims: more good reviews raises a Google Business Profile's ranking, since it signals to Google that the business delivers a good service
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=90)
+
+### Building Authority for SEO 2:08
+- Eric, claims: backlinks, credible outside websites writing about the business, give Google a ranking signal the same way authority does
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=130)
+- Eric, tested: review volume and specific keyword targeting matter more for ranking a GMB profile than deep keyword research, based on what has gotten him the best results
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=165)
+- Eric, claims: SEMrush (~$200/month) isn't worth buying for GMB keyword research; the free `Keywords Everywhere` Chrome extension does the same job
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=210)
+- Eric, claims: a profile's title is 60% of its SEO, and should be optimized for the city's most-searched keyword plus the city name
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=330)
+
+### Crafting Business Titles 5:36
+- Eric, tested: SEMrush showed 2,400 monthly Canada searches for "plumber Toronto" and 1,000 for "plumbing Toronto"
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=345)
+- Eric, claims: the most popular keyword pattern in nearly every city is "plumber" plus the city name, so he always names his profiles that way
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=400)
+- Eric, claims: putting "plumber" and the city name in as many places as possible across a GMB profile covers about 90% of its SEO, with no need to dig deeper
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=600)
+- Eric, claims: if a non-competing business elsewhere already ranks well, copying its GMB description and review-reply style, rewritten with the new company name, is a legitimate strategy
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=650)
+
+### Targeting Suburban Areas 11:28
+- Eric, claims: the top three Google Business Profile results for a search capture about 85% of all calls
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=700)
+- Eric, claims: a suburb listing with no plumber keyword, no city name, and under 100 reviews can be outranked easily by a new, properly named and reviewed profile
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=800)
+- Eric, claims: suburbs get neglected despite lower search volume, making them easier, and often very profitable, to rank in than a city's core
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=870)
+
+### Golden Ratio for Competition 15:12
+- Eric, claims: the ideal competitive setup is a service area with at least 400 monthly searches where two of the top three results have fewer than 100 reviews
+  [r1 2025-12-08](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0?t=912)
 
 ## transcript
 

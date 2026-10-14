@@ -5,6 +5,7 @@
 - duration: 00:53:35
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -67,6 +68,82 @@ The meeting focused on resolving issues with setting up a Google My Business pro
 - The participant was reminded to be cautious with profile edits to prevent suspension.
 - It was recommended to create additional profiles to cover more service areas.
 - The participant was encouraged to reach out for further assistance if needed.
+
+## claims
+
+### Google My Business account suspension issues 0:00
+- Zach, tested: submitting EIN and insurance documents got his commercial-cleaning profile approved, then suspended as suspicious once Google asked for and he sent more documents
+  [r3 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=123)
+
+### Starting fresh with a new account 2:32
+- Eric, claims: google expects the address a profile lists to be staffed and operating during the hours set on the profile
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=264)
+- Eric, claims: residential house-cleaning profiles are far more lenient on verification than commercial-cleaning ones
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=289)
+- Eric, claims: code, email and phone verification almost always get suspended for the harder categories, while video verification is much harder to get suspended
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=322)
+
+### Verification through video 5:29
+- Eric, claims: verification videos are reviewed by an AI, so pausing a couple seconds on each required element — street sign, building address, door — is needed for it to register
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=436)
+- Eric, tested: a $10 printed sign stuck to the door passes as signage; it doesn't need to look permanent
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=566)
+- Eric, claims: showing access to the business's domain in the video helps prove ownership and management of it
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=624)
+- Eric, tested: trying the instant-approval flow on different Gmail accounts, including strangers' phones at a mall, succeeds about 1 in 7 attempts
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=755)
+
+### Using aged Gmail accounts for verification 12:45
+- Eric, tested: he manages each GMB profile on its own separate, ideally aged (years-old, with signs of real use like purchased storage) Gmail account
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=793)
+- Eric, heard: a friend of his claims to have gotten a suspended profile reinstated by submitting the original, unedited documents
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=886)
+- Eric, tested: submitting original documents to appeal a suspension has never worked for him; he edits them, then prints and re-photographs the printout so the edit can't be detected
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=909)
+- Eric, claims: a Gmail account that already has a business profile on it will almost never get an instant approval
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=1090)
+- Eric, claims: having the business's domain registered in Google Search Console also helps verification odds
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=1108)
+- Eric, claims: do the GMB signup on a phone over cellular data in private/incognito browsing, which doesn't work over a VPN
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=1173)
+- Eric, claims: aged Gmail accounts can be bought for about $3 each from sellers on Telegram
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=1253)
+
+### Phone number and CRM setup 22:04
+- Eric, claims: CallRail costs $50/month with 5 free numbers included, then $3/month per number after that
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=1374)
+- Eric, claims: GoHighLevel costs about $1.25 per number and bundles in a CRM and website templates, making it the better value over CallRail
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=1384)
+- Eric, tested: listing a profile on an address, rather than as a service-area business, gets better results early on, though it's harder to verify and carries a higher suspension risk
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=1544)
+- Eric, claims: once a profile is live, editing its phone number, website, name, or service category is most likely to get it suspended
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=1850)
+- Eric, claims: when re-listing a business name after a prior suspension, make a minor change — a capital letter, an added comma — so Google doesn't connect the new profile to the old one
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=1946)
+- Eric, claims: more activity on a profile's page, like listing hours when other businesses are closed, boosts its SEO even without taking the calls
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2102)
+
+### Setting business hours and SEO optimization 35:25
+- Eric, claims: set business hours to 7am-11pm when first creating a profile, to avoid tripping a spam flag
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2135)
+- Eric, claims: the business description shouldn't be edited again once set, so do keyword research before writing it rather than changing it later
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2238)
+- Eric, claims: use SEMrush's keyword-overview tool (free trial, or 10 free searches a day) to find description keywords, then feed 4-5 of them into ChatGPT to write the description
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2323)
+- Eric, claims: wait about five days after setup before making any edits, then add one per day — profile info first, then photos, then services
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2708)
+
+### Gathering reviews and maintaining the profile 47:32
+- Eric, tested: paying a 13-18 year old $30/hour to solicit $10-per-review nets about 20 reviews an hour, for roughly $20 net margin
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2931)
+- Zach, tested: another one of his businesses got banned after getting about 10 reviews in a week
+  [r3 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2953)
+- Eric, tested: he's gotten hundreds of reviews on a profile within a week without it ever correlating to a suspension
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2960)
+- Eric, claims: reviews sourced from a local college campus pass as genuine, since they come from new, different accounts and phones with no overlap with the business's own
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2991)
+- Eric, claims: car detailing gets instant approval almost 100% of the time on a fresh Gmail with no prior GMB, while skilled trades like plumbing rarely get instant approval
+  [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=3067)
 
 ## transcript
 

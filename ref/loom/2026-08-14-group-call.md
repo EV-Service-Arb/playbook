@@ -5,6 +5,7 @@
 - duration: 01:00:18
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -102,6 +103,114 @@ Participants discussed tactics for creating and verifying Google Business Profil
 - Eric planned to post next week's call earlier to increase attendance and invited members to reach out if help is needed.
 - Recurring follow-ups: troubleshoot failed verifications (Eric to review videos), implement address tweaks and citations, hire or schedule review-stand staff, and set up calls between Eric and members (Anmar specifically requested a call).
 - Meeting closed with members sharing contact closings and Eric confirming next weekly meeting.
+
+## claims
+
+### Review stands and early results 0:00
+- David, tested: got confronted by someone else running a drinks-for-reviews stand nearby, enough to cut the session short
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=3)
+- David, tested: ran a review stand downtown for about an hour and got ~25 reviews split across five profiles
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=15)
+- Eric, tested: buys 12-year-old US `gmail` accounts from a crypto-only vendor for $3 each and has set up gmbs on them many times with no issues; they stuck
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=140)
+- David, tested: some bought gmail accounts can't get a `callrail` code, only the phone number verifies instantly
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=195)
+- Eric, claims: no gmail account can get a `callrail` code either way; use `gettextverified` for that
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=205)
+
+### Verification alternatives and email/domain requirements 3:33
+- Eric, claims: `callrail` verification should instantly succeed about 75% of the time with a good gmail account
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=220)
+- Eric, claims: getting an email verification code needs the profile to have a website on a domain, with an email tied to that domain (eg `info@amazingautodetailing.com`)
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=260)
+- Eric, claims: the domain+email verification route only matters for detailing profiles; it does nothing for plumbing profiles
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=340)
+
+### Service-area video (SAV) testing insights 5:55
+- Anmar, tested: a/b tested sav setups; only profiles with the target city included in the service area verified, even from 10-20 miles away
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=360)
+- Anmar, tested: sav verification worked remotely up to about 35 miles from the selected city
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=400)
+- Eric, claims: a domain can't be reused across profiles, each one needs its own domain and email
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=460)
+- Eric, claims: `hostinger` sells a `.shop` domain plus a free first-year email for $1
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=470)
+- Zach, claims: subdomains (eg `shop.domain.com`) can generate near-unlimited distinct emails off one domain, though untested for gmb use
+  [r4 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=505)
+
+### Profile performance and business updates 8:34
+- Zach, tested: landscaping profiles have sent $293k and ~$200k+ pool quotes, with ~$150k total revenue and a $22k job closed recently
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=520)
+- Zach, claims: in his area (Utah) no competitor runs a dedicated snow-removal profile, they all list it as a secondary category; thinks even 20-30 reviews would dominate there
+  [r4 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=620)
+- Zach, tested: built rapid service-area websites on `gohighlevel` with a va replicating pages per profile, ~10-20 minutes each
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=720)
+- David, tested: new profile is producing ~2 jobs/day, still slow until reviews are doubled up
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=900)
+- Proudstar, tested: cleaning profile only has 15 reviews and people are hard to get to leave them; appliance repair profile has 30 reviews (17 gathered by a hired person in a day) but no calls yet while still indexing
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=1050)
+
+### Address selection and filming for physical verification 19:04
+- Anmar, tested: has `claude` pick commercial address units, balancing low competition against nearby residential density, then double-checks before using the address
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=1150)
+- Eric, claims: commercial addresses (studios, units in commercial buildings) are safer for verification than houses; he's seen houses get suspended
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=1230)
+- Sam, tested: changed one digit of a real building's address (keeping odd/even parity) to file a second profile at the same filmed location, with no issues so far
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=1300)
+- Eric, claims: filming the same sav video repeatedly at the same spot, without changing locations, is fine
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=1400)
+
+### Live video verification details and signage 23:53
+- Zach, tested: a printed sign passed live video verification even after an on-site person told him to move it mid-filming
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=1440)
+- Anmar, tested: used spacers on a printed sign for a cleaner look and passed live video verification despite not filming anywhere near the actual listed address
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=1560)
+
+### Recruiting contractors and using Indeed safely 31:10
+- Proudstar, tested: got an `indeed` account banned, recovered it through support, and recommends calling or texting candidates off-platform instead of messaging in-app to avoid getting flagged again
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=1950)
+- Proudstar, claims: signing up as an agency on `indeed` avoids the bans personal accounts get for recruiting at scale, though agency accounts must pay to run ads
+  [r4 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2000)
+- Proudstar, tested: when banned from `indeed` before, regained reach through a platinum preferred partner, `applicantpro` (now `isolve talent acquisition`), which still posts to indeed from a banned account
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2100)
+
+### Selling recurring service routes and exit strategy 36:39
+- Joseph, tested: sold a pool-cleaning route through a route broker; listed it and it sold within about 5 days
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2210)
+- Joseph, tested: got paid 60-70% upfront for the route, with the rest split across payments at 30 and 90 days; non-competes apply only to the specific contracts sold
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2280)
+- Joseph, claims: routes with hired contractors doing the work, or with crm systems in place, sell for a higher multiple since the buyer doesn't have to do the labor
+  [r4 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2460)
+- Joseph, heard: some buyers will pay tens of thousands of dollars just for the gmb itself
+  [r5 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2480)
+- Joseph, claims: pest control is a better recurring niche than pool cleaning: lower ticket but far higher search volume, sells for 30-40x monthly billing, and churns less since customers can't visually verify the work
+  [r4 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2560)
+
+### Account management: multi-login, phones, and proxies 44:33
+- Kurd, tested: manages ~70 gmb profiles across ~10 phones (~5 gmails per phone) with no issues over five months; the only problems came from accounts logged in via private browsing, not ones kept logged into the phone
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2680)
+- Eric, claims: spreading accounts across separate phones is fine, and arguably safer than multi-login with a proxy, which works but can be laggy
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2750)
+
+### Operations: scheduling, payments, contractor sourcing 46:33
+- Eric, claims: book contractor jobs through a shared google calendar instead of texts, to avoid lost or miscommunicated jobs
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2800)
+- Artheme Chaykin, tested: sent a client's job to a plumber who turned out to be an industrial plumber rather than the right licensed type, so the plumber couldn't provide the inspection report he'd upsold
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=2950)
+- Eric, claims: `facebook` groups, `nextdoor` and `facebook marketplace` are the best places to find contractors — people posting there are available and eager for work; `indeed` also works if you post a job, but inbound is less reliable than the first three
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=3150)
+- Eric, tested: running his own licensed trade company instead of just subcontracting marketing moved him from ~$5-6k/month to ~$30-40k+/month, at the cost of more work managing contractors
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=3270)
+
+### Pricing guidance and lead generation for cleaning services 54:59
+- Eric, claims: price cleaning jobs by square footage, bathroom count and bedroom count; build the pricing guide with ai or by copying local competitors' published pricing
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=3310)
+
+### Wrap-up and follow-ups 58:47
+- AyoXKam, tested: five savs were all declined after showing a full view of the street and neighboring houses before walking to the business vehicle, even with a correct service area and home mailing address
+  [r3 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=3540)
+- Eric, claims: the mailing address on a gmb profile should be the real home address, not a random one
+  [r2 2026-08-14](https://www.loom.com/share/4bfeea4c00494b5cafc2604256cb41d5?t=3600)
 
 ## transcript
 
