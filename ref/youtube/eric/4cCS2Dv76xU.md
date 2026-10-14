@@ -6,6 +6,7 @@
 - duration: 00:17:10
 - pulled by: `scripts/yt-pull.rs`
 - read by: `gpt-5.6-luna` summary and chapters, nothing shown: `gpt-5.6-luna` named no span where something is
+- claims by: `/call-digest`, 2026-10-14
 - cost: $0.0029
 
 ## summary
@@ -32,6 +33,64 @@
 - [00:14:31](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=871) time required and expected ramp-up
 
 ## shown
+
+## claims
+
+### zach’s marketing background 0:00
+- Zach, claims: clients who ran paid ads but also had a good Google Business Profile, website and follow-up system always did the best
+  [r4 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=33)
+
+### launching a landscaping business 1:35
+- Zach, claims: landscaping is a competitive niche, but the biggest competitors are older operators not running a Google Business Profile, not others doing the same thing
+  [r4 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=95)
+
+### proximity and local demand 2:06
+- Zach, claims: proximity is the biggest Google ranking factor; even in a competitive, saturated market, putting up a profile in a populated area still gets a high chance of work
+  [r4 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=126)
+
+### quotes and closed revenue 2:39
+- Zach, tested: sent out $700,000–$800,000 in quotes and closed $130,000–$150,000 in landscaping revenue over the last 3 months
+  [r3 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=159)
+
+### the simple but difficult process 3:10
+- Zach, tested: profiles get suspended, profiles fail verification, and he has to middleman calls and appointments; he worked out the verification process himself
+  [r3 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=190)
+
+### profiles, reviews, and results 4:16
+- Zach, tested: runs four Google Business Profiles and is building a fifth, with an average ticket of $50,000–$100,000
+  [r3 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=289)
+- Zach, tested: almost all of last month's quotes came from the one profile with about 40 reviews; the rest have fewer than 20
+  [r3 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=289)
+
+### documenting the business journey 6:28
+- Zach, heard: people in his marketing space get a lot of their leads from social media content
+  [r5 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=420)
+- Zach, tested: documents the landscaping work as a no-experience case study on Instagram, to show potential coaching clients the process is achievable
+  [r3 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=452)
+
+### coaching, verification, and community 8:05
+- Zach, claims: Eric is responsive, helps members through profile verification, and is active in the weekly group calls
+  [r4 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=485)
+
+### avoiding suspensions and mindset barriers 9:10
+- Zach, claims: the biggest obstacle for most people is mindset — fear of suspension or not finding contractors stops them before they start
+  [r4 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=582)
+- Zach, tested: accidentally shared one profile with another Gmail that already had a profile, and both got suspended
+  [r3 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=614)
+- Zach, tested: got one of the two profiles unsuspended and verified by loosely following Eric's verification module
+  [r3 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=614)
+
+### turning knowledge into higher-ticket services 11:51
+- Zach, heard: roughly 60% of businesses don't even have a Google Business Profile
+  [r5 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=776)
+- Zach, claims: has been charging too little for his Google Business Profile / SEO service and plans to raise his prices
+  [r4 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=808)
+
+### time required and expected ramp-up 14:31
+- Zach, tested: getting reviews up and completing video verification can be done within about a week
+  [r3 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=871)
+- Zach, tested: after that first hard week, scaling takes about 2–3 hours a day, dropping to a few hours a week after a few months with systems in place
+  [r3 2026-08-30](https://www.youtube.com/watch?v=4cCS2Dv76xU&t=903)
 
 ## description
 
