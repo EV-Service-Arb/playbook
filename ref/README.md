@@ -31,6 +31,8 @@ this list does not.
   - [2026-01-14](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf)
   - [2026-01-18](https://www.loom.com/share/9d32ace40bed4abaa6c6c540d82159dc)
   - [2026-04-03](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR) — Art Khan's call, posted by Eric
+- my own calls:
+  - [2026-10-14](https://fathom.video/share/rsnb2zCYakzpPS3Yt4_dbh8oB4aqMHu-) — with dainfernalobsidian, met on discord
 - eric's drive folders, every recording in them:
   - [2025-12-21](https://drive.google.com/drive/folders/1jFd8aorlIyDqMB_OwfuFrzrFG0cPObkp) — example verification videos, and the rest of his resources
   - [2026-09-18](https://drive.google.com/drive/folders/1hsPix3WX9bpFGrFg4a4GWLnSti3fv55X) — recordings of calls being answered
