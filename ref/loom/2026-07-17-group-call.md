@@ -5,6 +5,7 @@
 - duration: 01:25:52
 - transcribed by: loom
 - read by: `/call-digest`, 2026-09-22
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -203,6 +204,200 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### Subcontractor payment and tracking structure 1:22:07
 
 - Cole's markup formula: mark up the sub's quote by 15-25%, collect half from the client upfront, pay the sub in full at completion, and keep the remaining markup — the same structure scales from small jobs to $120K contracts.
+
+## claims
+
+### Cole joins the call; landscaping subcontracting margins 0:00
+- Cole, tested: landscaping subcontracting company on track for $250-300K revenue this month
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=120)
+- Cole, tested: runs a 15-25% markup on subcontractor job revenue, careful not to over-quote
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=155)
+
+### Deposit structure and team size 3:13
+- Cole, tested: marks up the sub's quote (e.g. 15% on $100K), collects 50% of the marked-up total upfront, pays the sub 50%, keeps the rest at completion
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=205)
+- Cole, tested: runs 4-5 projects a month, each one to two months long, with about 41 subcontracted workers under his company name
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=260)
+
+### Client acquisition system and profile performance 4:42
+- Raymond, tested: had a $3,680 day and is on a $6,500/week profit pace after starting June 1st
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=320)
+- Raymond, tested: has 9 businesses verified but only 3 ranking
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=370)
+
+### GMB verification count and getting reviews 6:27
+- Raymond, tested: tested Facebook Marketplace outreach for reviews, collected over 100 reviews in a week, though many later fell off
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=400)
+
+### Batch filming verification videos 9:14
+- Ryan, tested: films several verification videos back-to-back per outing (e.g. four at once) to save trips
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=580)
+
+### Video verification approval struggles 10:29
+- Ryan, tested: of eight plumbing verification videos submitted, only one got approved, each rejected for a different reason despite replicating the same video every time
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=650)
+
+### What to show in SAB verification videos 11:44
+- Raymond, tested: verification video shows his house address, truck signage on his car, equipment in the garage, and an office with two screens on
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=715)
+- Ryan, tested: verification video is just sitting in the car showing business cards and the trunk equipment
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=790)
+
+### Address vs SAB-to-address ranking 13:58
+- Eric, claims: his data shows address-verified profiles perform better than SAB-to-address conversions, especially for plumbing
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=845)
+- Eric, claims: converting a profile from service-area to address makes it show both the service area and the address, rather than being treated purely as an address listing
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=875)
+
+### Cheyenne's subcontractor management problems 15:16
+- Cheyenne, claims: getting about 2 calls/day across landscaping, concrete, and construction, but struggling to manage subcontractors and getting shorted by them
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=925)
+
+### Contracts to protect against subcontractors 16:09
+- Cole, claims: recommends a signed agreement/contract with every subcontractor before starting work, for paper proof if a job goes wrong
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=985)
+- Cole, tested: drafts contracts with Claude AI and gets them signed through DocuSign
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1040)
+
+### Insurance and incorporation 17:55
+- Cole, claims: subcontractors should carry liability and WCB insurance coverage
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1085)
+- Cole, claims: once working on multi-six-figure projects, incorporating the business (roughly $1-2K/year for liability insurance) protects the owner personally from lawsuits
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1120)
+
+### Per-job vs general contracts 19:06
+- Cole, claims: keeps one general contract on file for smaller jobs (under ~$15-30K), drafts a dedicated contract for six-to-seven-figure jobs
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1160)
+
+### Filtering low-ticket jobs, outsourcing marketing 19:57
+- Cole, tested: still fields low-ticket lawn-mowing calls but turns them down since his crews are booked out months in advance
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1210)
+- Cole, tested: outsourced marketing, paid advertising, and Google Business updates to his own agency to focus on client communication
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1250)
+
+### Choosing a niche: landscaping vs plumbing 21:20
+- Cole, claims: recommends researching local competition and income levels in an area before picking a niche
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1300)
+- Cole, claims: landscaping worked for him because of a high-income service area, but any niche can work if the operator sticks with it
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1340)
+
+### Eric's own niche-selection story 23:25
+- Cole, tested: moved from car detailing into landscaping/construction, after meetings with Eric, once he found plumbing too saturated in Vancouver (top-ranked competitors with 12,000+ reviews)
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1415)
+
+### Onsite estimating and quote process 23:57
+- Cole, tested: no longer runs onsites himself; two estimators collect measurements and write the quotes
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1460)
+- Cole, tested: personally only collects the client's name, email, address, and phone, then hands off to the subcontractor, managing just client communication and payments
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1550)
+
+### Researching niche competition and keywords 26:41
+- Cole, tested: searched keyword volume and competition before committing, found zero landscaping competition in his area, and now ranks first ahead of established companies
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1630)
+
+### Energy drink review-farming method 27:36
+- Cole, tested: buys wholesale Gatorade (~$0.70-0.80/bottle from Costco) and sets up a free-drink table at a local university with a QR code straight to the review page and a cheat-sheet of sample comments, netting about 100 reviews per profile in 2-3 days with none removed
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1700)
+- Cole, tested: the review-collecting location was about 20-30km from the GMB address with no issue
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1800)
+
+### Collecting payments (Stripe, Jobber, CRM fees) 30:48
+- Cole, tested: collects payments by wire transfer, e-transfer, or card through Stripe integrated into his Jobber CRM
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1860)
+- Cole, claims: Jobber charges roughly 2.9% + $0.30 on card payments, which should be passed on to the client via the quote
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1920)
+
+### Chargeback and deposit disputes 32:25
+- Cole, tested: lost about $6K when a client demanded a full deposit refund mid-project, and about $5K on an irrigation dispute, both taken before he had contracts in place
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1990)
+
+### Car detailing chargeback and evidence 34:31
+- Joseph, tested: disputing about $6K in chargebacks from a subbed-out detailing client over six months, relying on documented proof (photos, job confirmations)
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2100)
+
+### Asphalt opportunity and rank-and-rent model 35:49
+- Eric, heard: a student, Ray, runs a rank-and-rent asphalt/paving GMB model, renting each verified profile to a contractor for about $2K/month, for around $50K/month recurring profit
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2170)
+
+### GMBs per city, lead volume, proximity ranking 42:37
+- Eric, claims: 8 GMBs with 100 reviews each in one city would generate more leads than a team could handle
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2580)
+- Eric, claims: Google ranks primarily by proximity, then review count, so a single well-reviewed address profile can rank for its immediate area without needing to dominate the whole city
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2620)
+
+### Finding addresses across a metro area 46:05
+- Eric, claims: storage-unit or co-working locations, indoor or outdoor, spread across neighboring cities give roughly 15-20 profiles per metro area before hitting diminishing returns
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2800)
+
+### SAB video location doesn't need to match listed area 47:45
+- Eric, claims: for service-area-business videos, Google doesn't cross-reference where the video was filmed against the listed service area, so the same video can support profiles listed anywhere in the same city or country; physical-address profiles still require spoofing location
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2880)
+
+### GMBs per Gmail account and review pacing 55:02
+- Eric, claims: recommends keeping to one GMB profile per Gmail account for safety
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3310)
+- Eric, claims: once a profile is live, reviews can start right away without waiting
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3330)
+
+### Review volume targets for a new address profile 56:15
+- Eric, claims: recommends targeting roughly 50-60 reviews to start on a new address-verified plumbing profile
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3390)
+
+### Aged Gmail review stick rate and proxies 56:48
+- Eric, claims: buying aged US Gmail accounts for self-reviews works even from non-local emails if paired with a residential proxy (~$5-6 per 5GB, pay-per-data), limited to one review per account per day, with a 60-70% stick rate
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3450)
+
+### Google's cross-profile tracking and suspension rules 59:47
+- Eric, claims: Google tracks the same reviewer account leaving reviews across multiple GMBs owned by one operator and can suspend all linked profiles; safe rule is one review per Gmail account total, spaced at least two weeks apart, max two reviews per account ever
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3620)
+- Raymond, tested: had six plumbing profiles suspended for cross-tracked reviews, recovered three of them using fake documents
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3660)
+
+### Craigslist and Marketplace for finding help 1:02:54
+- Joseph, tested: posted a brand-ambassador gig at $14/hr plus commission with an attached image, which raised response rate, at an effective cost of about $4-5 per review
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3800)
+- Eric, claims: doing the energy-drink table yourself costs about $0.75/review versus about $4/review when hiring someone
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3860)
+
+### Indeed and Craigslist account bans 1:08:20
+- Joseph, tested: had his Craigslist accounts shut down over suspected fraud; workaround is making a new account and completing the requested business verification
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4115)
+
+### Side jobs and lifestyle tangent 1:08:52
+- Cole, claims: recommends saving money against future chargebacks, since a client can still request one after work is delivered
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4300)
+
+### Evaluating niche competition levels 1:12:45
+- Cole, tested: checked his local plumbing competition and found the top three sitting around 400, 500, and 750+ reviews with one competitor at 1,600, which put him off the niche
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4390)
+- Eric, claims: rule of thumb is to target a niche where the top competitor sits under a few hundred reviews, since proximity ranks above review count for address-verified profiles
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4520)
+
+### Alternate niches and get-rich-quick warning 1:15:52
+- Cole, tested: landed a ~$70K asphalt job that took two days to complete and paid out about a week later
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4570)
+- Eric, claims: warns against chasing same-day-payout niches purely for speed, comparing that mindset to gambling and saying it breeds laziness
+  [r2 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4610)
+
+### Specializing subcontractors by skill 1:17:51
+- Cole, tested: for multi-service trades like landscaping, used to run one subcontractor per specialty (turf, retaining walls, etc.) for higher-quality work, but has since consolidated to one all-around subcontractor who does everything
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4680)
+
+### How Cole built his subcontractor crew 1:18:16
+- Cole, tested: started with five subcontractors sourced from Facebook Marketplace, kept them about a month while building a legitimate brand reputation, then landed a major crew (former BC Place stadium contractors) through inbound outreach
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4710)
+- Cole, claims: stresses meeting subcontractors face-to-face to build trust, and staying the one who gives out the work rather than letting subs run the business
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4800)
+
+### Website investment and hiring page 1:20:47
+- Cole, tested: paid about $5K for a high-converting website built by his marketing agency, featuring a team photo, which converts about 30% more than other websites
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4900)
+
+### Subcontractor payment and tracking structure 1:22:07
+- Cole, tested: marks up the sub's quote by 15-25%, collects half from the client upfront, pays the sub in full at completion, and keeps the remaining markup — the same structure scales from small jobs up to $120K contracts
+  [r3 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4945)
+- Cole, claims: usually doesn't go above 20% markup, preferring to win more contracts at lower margin than lose them by quoting high
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=5100)
 
 ## transcript
 
