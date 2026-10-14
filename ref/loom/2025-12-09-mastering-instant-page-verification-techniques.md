@@ -5,6 +5,7 @@
 - duration: 00:15:26
 - transcribed by: loom
 - read by: `/call-digest`, 2026-09-22
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/call-pull.rs`
 
 ## summary
@@ -52,6 +53,50 @@ faster than video-verified ones.
 - Instant verification succeeds roughly 1 in 7 attempts; the key factors are incognito plus cellular data, aged (3+ year) Gmail accounts, and using real local people's phones.
 - These listings get suspended faster than video-verified ones, often lasting one to two months, but the low time and money cost still makes it worth doing in volume.
 - Suggests using address pages far from your actual location, since no on-site video is required, and falling back to the email code method if instant verification doesn't go through.
+
+## claims
+
+### The System for Instantly Verified Pages 0:00
+- Eric, claims: email code verification needs a website/domain with a search engine presence, and an aged Gmail account with no current GMB tied to it
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=75)
+- Eric, claims: buys a fresh ~$3 Gmail account per verification attempt rather than reusing one, to stay safe
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=115)
+
+### Setting Up a Domain Email for Verification 2:22
+- Eric, claims: uses Hostinger (~$20/month) for hosting because it includes free email addresses on each domain
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=190)
+- Eric, claims: cheap AI-built websites and $1/year `.site` domains are good enough, since verification doesn't check domain quality
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=235)
+
+### Submitting the Listing and Entering the Email Code 5:04
+- Eric, claims: gets a CallRail tracking number but waits to purchase it (~$3 USD each) until after the page verifies, to avoid wasting money on unverified attempts
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=350)
+- Eric, tested: around 1 in 5 email-code attempts succeeds, at about $3 per Gmail account tried ($15 to try 5)
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=495)
+- Eric, claims: verification or suspension usually shows within a couple minutes, though it can take up to five days to process
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=565)
+- Eric, claims: email-code listings on a service-area page basically never get suspended, unlike ones put on an address
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=555)
+
+### Instant Verification: Trust Signals and Other People's Phones 10:20
+- Eric, claims: instant verification is mostly luck, but improves with a high local guide level, purchased Google storage (the rainbow profile ring), and an aged account
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=645)
+- Eric, tested: pays other people, e.g. a friend's younger brother, to run the verification flow on their own phones, since Google allows only one attempt per phone
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=685)
+
+### Demo: Instantly Verified Profiles 12:29
+- Eric, tested: got a plumbing listing and a car-detailing listing both instantly verified using this method
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=760)
+- Eric, tested: service categories like car detailing tend to verify instantly more reliably when the account is aged and clean
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=795)
+
+### Recap: Odds, Requirements, and Downsides 13:32
+- Eric, tested: instant verification succeeds roughly 1 in 7 attempts, with incognito plus cellular data and aged (3+ year) Gmail accounts as the key factors
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=820)
+- Eric, tested: instant- and email-code-verified listings get suspended faster than video-verified ones, often lasting one to two months
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=860)
+- Eric, claims: uses address pages far from the actual location, since no on-site video is required for this method
+  [r1 2025-12-09](https://www.loom.com/share/044f7bdb93d14d329947ed50f9391dd4?t=895)
 
 ## transcript
 

@@ -5,6 +5,7 @@
 - duration: 00:59:43
 - transcribed by: fathom
 - read by: `/call-digest`, 2026-09-22
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/call-pull.rs`
 
 ## summary
@@ -132,6 +133,128 @@ An impromptu group call among service-business owners (plumbing, electrical, ins
 
 - Service areas max out at 20 entries per GMB profile; Art fills a city's zip codes first, then stretches another 10-15 miles if needed.
 - Randall's priority order for service-area signals: zip codes highest, then neighborhoods, then monuments, then cities, then county — neighborhoods rank above cities because they're more hyper-local, though not every neighborhood name is Google-indexable (worth testing each one; in big cities, school districts can work too).
+
+## claims
+
+### Job margin philosophy: splits vs. logical pricing 0:04
+- TruSpark Electric, tested: pricing jobs individually instead of a fixed 60/40 split nets him more than the split would
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=55)
+
+### Service call fees: what to charge 2:38
+- Devin Grandt, heard: plumbers he's talked to say a $60 waivable service fee is too low; they recommend closer to $100
+  [r5 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=162)
+- Art Khan, tested: charges $39 per inspection
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=170)
+- Eric, claims: a plumber complaining about a $60-100 fee has too much work already
+  [r2 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=212)
+- TruSpark Electric, tested: takes a credit-card hold at no charge to confirm seriousness, then charges $150-250 for the diagnostic visit, waived if the customer proceeds with the work
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=280)
+
+### Business registration and taxes 12:10
+- Eric, claims: he registered his business once profit hit about $15K/month, incorporating for roughly $300
+  [r2 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=735)
+
+### Recent wins and losses 14:34
+- Devin Grandt, tested: lost a $1,200 job and took no payment after a contractor worked on the wrong toilets and the customer threatened to report the business
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=880)
+- Devin Grandt, tested: two months into running GMB profiles, started at about one job/day (~$600) before leads and reviews dropped sharply in the past week
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=915)
+
+### Fast review-gathering tactics 15:49
+- Eric, heard: a contact ("Cole") got about 70 Google reviews in 30 minutes by giving students energy drinks on a public college campus for a QR-code review
+  [r2 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=955)
+
+### Profile counts and locations 18:29
+- Devin Grandt, tested: runs 8 service-area GMB profiles ranked #1-2 on his phone but was getting zero calls
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1115)
+- Art Khan, claims: checking rank in the evening can mislead, since competitors may be closed at that time
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1195)
+
+### Live GMB profile audits 20:10
+- Art Khan, claims: an aged, dormant GMB listing can get auto-verified without the usual video-verification step
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1220)
+
+### Best niches to target 23:44
+- Art Khan, claims: fencing, painting, and garage door repair are good niches to target
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1440)
+- Art Khan, claims: junk removal isn't a good primary niche since its average ticket (~$200-300) is too low compared to plumbing or painting
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1530)
+
+### Review threshold to rank 26:44
+- Art Khan, claims: for Luke's Ottawa insulation market (~500-700 searches/month), reaching the top three and about 10 calls/month needs roughly 70 reviews
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1609)
+- Art Khan, claims: buying about 200 backlinks for the profile/website should accompany the reviews
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1670)
+
+### GMB products and service descriptions 27:58
+- Art Khan, claims: filling in the GMB products section is worth doing, even automated overnight with an AI computer-use tool ("Cloud Cowork," ~$20)
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1690)
+
+### On-page vs. off-page SEO approaches 29:40
+- Art Khan, claims: a strong central website that GMB profiles link back to gives a new profile an immediate SEO boost even with zero reviews
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1865)
+
+### Service-area vs. address-based profiles 32:22
+- Devin Grandt, tested: found service-area profiles can outrank address-based ones once the service-area profile has enough reviews
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1945)
+- Art Khan, claims: address-based profiles are proven to outrank service-area ones by default; more reviews can offset that, but not everyone can generate 2x the reviews
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1960)
+
+### Reviews that stick vs. get deleted 33:26
+- Art Khan, claims: reviews stick better from accounts that are non-local (out of state but in-country), have never left a review before, and are at least a year old
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2020)
+
+### Selling calls to publishers 34:19
+- Art Khan, claims: forwarding excess leads to pay-per-call publishers (elocal.com, ServiceDirect.com, Ringba.com) pays about $30-50 per plumbing call and about $100 per water-damage call, deposited directly
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2090)
+
+### Post-construction cleanup niche 37:20
+- Randall Thompson, tested: tried post-construction cleanup and steered away from it because of recurring "you missed a spot" complaints and bad-review risk
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2260)
+
+### Water damage restoration niche 38:46
+- Art Khan, claims: Google is generally less strict on GMB categories with fewer competing listings, to incentivize coverage
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2345)
+- Art Khan, claims: about 90% of water damage work gets paid through insurance rather than directly by the customer
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2430)
+- Art Khan, claims: a typical water-damage subcontracting cut is 20-30%
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2500)
+
+### Cleaning business economics 42:03
+- Randall Thompson, tested: runs about 30-35% profit margin and roughly $30K/month in his cleaning business, after 2+ years in it
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2545)
+
+### Pricing jobs you don't do yourself 44:51
+- Art Khan, claims: for jobs sold but subcontracted out, call three competitors for quotes, then price in the middle
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2700)
+- TruSpark Electric, tested: billed a Sunday-night emergency plumbing job at $2,100, including a $499 after-hours add-on
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2800)
+
+### Lead sources beyond GMB 47:33
+- TruSpark Electric, tested: tried LSA (Local Services Ads) for plumbing and found it not worth the spend, mostly wasted clicks
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2860)
+- Art Khan, claims: LSA is very competitive for plumbing; PPC, Facebook, and Instagram ads are better options
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2900)
+
+### Top ranking factors 48:38
+- Art Khan, claims: ranks what drives GMB ranking as (1) market selection, (2) address vs. no address, (3) listing title, (4) off-page SEO/backlinks, (5) reviews
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2960)
+- Art Khan, tested: has sat at about 150 reviews for over a year without needing more, once roughly 20 reviews ahead of the #2/#3 competitor and holding #1 for 1.5-2 months
+  [r3 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=3040)
+
+### March 2026 Google core update 51:16
+- Randall Thompson, heard: the March 2026 core update prioritizes businesses local to an area over bigger incumbents properly listed in local directories
+  [r5 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=3115)
+
+### Researching competitor backlinks 52:23
+- Art Khan, claims: easy backlinks (Yelp, Yellow Pages, Nextdoor, Reddit) anyone can create; harder ones (CNN, Forbes, major news coverage) generally can't be replicated on demand
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=3215)
+
+### Service area radius and zip-code priority 57:06
+- Art Khan, claims: GMB service areas max out at 20 entries; fill a city's zip codes first, then stretch another 10-15 miles if needed
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=3430)
+- Randall Thompson, claims: his service-area signal priority is zip codes, then neighborhoods, then monuments, then cities, then county
+  [r4 2026-03-31](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=3465)
 
 ## transcript
 

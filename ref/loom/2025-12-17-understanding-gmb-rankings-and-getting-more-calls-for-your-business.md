@@ -5,11 +5,42 @@
 - duration: 00:03:28
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I address the question of how long it takes for a Google My Business (GMB) listing to start receiving calls. I explain that the key factor is relevance to searchers rather than a set timeframe imposed by Google. Having an address page can give you an edge in local rankings, especially for businesses like plumbing, as proximity matters for customer experience. I emphasize the importance of maintaining good SEO practices, such as gathering reviews and optimizing your description, rather than stressing over the type of page you have. There’s no specific action requested, but I encourage you to focus on these strategies to improve your visibility.
+
+## claims
+
+### GMB Call Timing Insights 0:00
+- Eric, claims: google has no fixed waiting period, like three months, before ranking a service-area gmb; relevance to the searcher decides it, not time
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=15)
+- Eric, claims: all google cares about is that the page is relevant to the searcher
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=25)
+- Eric, claims: google ranks the business closer to a walk-in searcher higher, for the best customer experience
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=37)
+
+### Address vs. Service Area 0:48
+- Eric, claims: the same proximity principle applies to plumbing; an address page's only edge over a service-area page is ranking higher for nearby searchers
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=79)
+- Eric, tested: his service-area gmb ranks second across the board searching "plumber vaughn" on google maps, despite not being located in vaughn
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=90)
+- Eric, claims: service-area pages have no limitations on where across the map they can rank, unlike an address page's proximity-only edge
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=110)
+- Eric, claims: an address page can pick up a little extra lead flow from proximity searches without putting in much effort
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=116)
+- Eric, tested: the top three competitors ranking above him for "plumber vaughn" have 35, 109 and 119 reviews
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=136)
+
+### Ranking and Reviews 2:18
+- Eric, claims: filling out the description, getting consistent reviews, and replying to reviews matters more than whether the page is address or service area
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=149)
+- Eric, claims: an address page with no extra effort might pick up an occasional lead from proximity alone, but the money from it is insignificant
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=161)
+- Eric, claims: plenty of service-area-only plumbing businesses do very well, citing "Plumber on Demand" in his city as one
+  [r2 2025-12-17](https://www.loom.com/share/30cdea04146a4486b4f38eb62544a428?t=180)
 
 ## transcript
 
