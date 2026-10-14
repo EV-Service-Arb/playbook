@@ -5,6 +5,7 @@
 - duration: 01:28:58
 - transcribed by: loom
 - read by: `/call-digest`, 2026-09-22
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/call-pull.rs`
 
 ## summary
@@ -232,6 +233,162 @@ A weekly group call in the GMB-arbitrage community, moving freely between plumbi
 ### Closing hype and sign-off 1:27:11
 
 - Closing encouragement to keep spamming cleaning profiles (roughly one per three hours in a 15-minute radius) as the call wraps up.
+
+## claims
+
+### Business check-ins: detailing revenue, August numbers 0:00
+- Devin, tested: plumbing jobs cap out around $100 profit no matter what, so an average cleaning job profits more
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=100)
+
+### GoHighLevel and SMS review blasts 3:05
+- Connor, tested: SMS-blasting his own contact list through GoHighLevel for reviews got about 40 of 100 contacts to leave one
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=210)
+- Connor, tested: the same GoHighLevel automation, fed Claude-written lists, blasts every low-rated landscaper in his county for review exchanges and every dealership for partnership asks
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=255)
+- Devin, heard: CleanWorks is a flat monthly-rate alternative to GoHighLevel's per-cleaner-seat pricing for booking/CRM
+  [r5 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=340)
+
+### Devin's numbers, and why cleaning beats plumbing 6:30
+- Devin, tested: about $4k/month profit after a slow first six months in the group
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=398)
+- Devin, tested: a cleaning profile verifies live-video instantly right after a first video submission fails, no support ticket needed
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=430)
+- Devin, tested: cleaning beats car detailing — less competition, every profile instant-verified, half the customers recurring bi-weekly/monthly
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=460)
+- Devin, tested: his cleaning leads have come from Facebook Marketplace, not Nextdoor
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=560)
+
+### Auto-verifying profiles with aged Gmail accounts 9:50
+- Devin, tested: a personal Gmail he's had for four years auto-verifies cleaning profiles at close to 100%
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=600)
+- Devin, claims: a freshly bought Gmail needs to be warmed up — used for a few days to a week — before it will auto-approve
+  [r4 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=625)
+
+### Pricing, contractor splits, and Aiden's first job 10:46
+- Devin, tested: prices per square foot/bedroom/bathroom, e.g. ~$300 for a 3-bed/3-bath/2000sqft job; uses Claude to research competitor pricing in the area
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=650)
+- Devin, tested: a 65-35 cleaner split is the best target to aim for; flat-rate pricing beats hourly since jobs can run long
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=670)
+- Aiden, tested: booked his first cleaning job off a cold call-in with zero reviews on the profile
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=720)
+
+### Storefront photo and AI-video verification getting flagged 15:09
+- Rishi, tested: an AI-generated (ChatGPT) storefront photo didn't pass verification; routing a real, non-AI phone video also got flagged with "please don't send pre-recorded content"
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=920)
+
+### Craigslist posts: radius, bans, and the "brand ambassador" framing 16:46
+- Devin, tested: Craigslist's own one-mile post radius display is misleading — it doesn't limit the actual search area; a searcher's circle covers the whole city
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1030)
+- Devin, tested: framing a review-recruiting post as a "brand ambassador role" (commission-based, no profile link, no mention of reviews) avoids Facebook/Craigslist bans; without that framing it reads as a scam
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1090)
+
+### Recruiting review-leavers without it looking illegal 19:03
+- Devin, tested: response rate for recruiting paid review-leavers runs about 1 in 5 serious
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1150)
+- Rishi, tested: out of a few dozen cold calls recruiting review-leavers, only 2 committed
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1180)
+
+### Trust, QR codes, and reporting fake reviews 20:56
+- Devin, tested: sends his QR code/profile only after a reviewer is fully committed; uncommitted people mostly just ghost rather than leave a bad review
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1260)
+- Rishi, tested: withheld his QR code from a hesitant Facebook recruit, afraid an uncommitted person might leave a bad-faith review
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1290)
+- Devin, tested: 3-4 Level-5+ local guide accounts (plus some normal accounts) reporting a fake/negative review is usually enough to get it taken down
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1320)
+
+### Eric reviews a verification video, then the plumber-recruiting grind 22:09
+- Eric, claims: approved a member's verification video as good, since the plumbing sign/name was visible and it was filmed from outside
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1345)
+- Eric, claims: if a verification submission gets rejected, do the live video instead — it's easy
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1400)
+- Muhammad, tested: Facebook has stopped being productive for finding subcontractor plumbers; tried Google Maps and calling lower-review plumbers, found none willing to go above a 40-60 split
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1430)
+
+### Commission-split negotiation: 35% is the real ceiling 24:20
+- Eric, claims: a 40% plumber commission split is achievable, just harder to find
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1530)
+
+### Indeed, market research, and ranking strategy 25:38
+- Eric, claims: Indeed, with a free trial, beats cold outreach for finding plumbers willing to do a 40-60 split, since applicants come to you instead of you begging them
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1545)
+- Connor, tested: attributes his ~$15k/month result mainly to market research — picking dense sub-areas within a county and pushing 30-40 reviews per profile across several spots rather than spreading thin
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1600)
+
+### Checking rank with LocalFalcon 28:04
+- Connor, claims: LocalFalcon simulates search rank from a specific map location for a given keyword; free credits come with a first profile
+  [r4 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=1700)
+
+### Review-appeal method, recapped and explained 35:50
+- Muhammad, heard: appealing reviews that get deleted through Google's contact-support form, with a screenshot of the review attached, gets a good share of them restored
+  [r5 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=2155)
+- Muhammad, heard: screen-record the whole review list before any deletions happen, scrolling down slowly, so a later deletion can be matched against the recording and screenshotted for the appeal
+  [r5 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=2255)
+
+### Reporting and removing a bad review 37:43
+- Eric, claims: reporting a bad review, helped by a couple of local-guide accounts, has a good chance of getting it deleted; a support ticket claiming the review is fake can also get it removed; don't reply to it unless it survives, and even then don't confirm the claim
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=2280)
+
+### Devin's cleaning-page layout and photo mix 39:17
+- Devin, tested: leads his profile photos with people actually cleaning rather than just staged "shiny counter" shots, to avoid looking like stock, plus a self-serve square-footage estimate tool and a booking link since many customers won't call
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=2375)
+
+### Juggling too many niches vs. focusing on one keyword 40:37
+- Eric, claims: building an entire profile around one keyword (e.g. water heaters, ceramic coatings) ranks it over general competitors citywide — cites a "Water Heater Only" business in San Diego dominating its LocalFalcon report
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=2470)
+
+### Glenn's landscaping photos and geotagging worries 43:19
+- Glenn, heard: worries that geotagging screenshotted stock photos for a landscaping profile could get flagged by Google, and that his area's distinct architecture limits which stock photos he can use
+  [r5 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=2620)
+
+### Live roleplay: recruiting and vetting a licensed plumber 44:45
+- Aiden, tested: asks recruited plumbers for both a driver's license and a plumbing license before sending jobs, for identification and liability — the group confirms it's a practice unique to him
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=2700)
+
+### Product listings, SEO, and vanishing GMB photos 49:33
+- Eric, claims: product-category listings barely move ranking — it's roughly 90% keywords, business name and reviews — but still cheap enough (about 10 minutes) to be worth posting
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=2980)
+
+### Review-collection methods and hiring help 51:24
+- Eric, claims: a profile with 190+ reviews in a hyper-competitive area nets only about a job a day — roughly $6k/month profit
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=3120)
+
+### Coaching the recruiting pitch; licensing and insurance questions 52:48
+- Eric, claims: feedback on Aiden's pitch — ask a plumber's next availability first rather than assuming a fixed job time
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=3172)
+- Eric, claims: in car detailing, contracts typically ask about being bonded/insured rather than asking for a license
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=3245)
+
+### AdsPower: spoofed reviews, proxies, and one-per-Gmail 54:13
+- Devin, tested: used AdsPower, a proxy/browser tool, to run spoofed Gmail sessions and post one review per Gmail account; the same tooling's AI-video verification workaround stopped working over the past two weeks, now flagging even a real, non-AI video unless the phone is physically routed
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=3270)
+- Rishi, tested: tried posting reviews via AdsPower-spoofed Gmail sessions with proxies; after about a week the reviews are still up
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=3400)
+
+### Tony introduces his businesses and a scaling plan 57:25
+- Tony, tested: runs wedding videography (~$5k average ticket, mostly profit since he does the work himself) and tech support; his one existing videography profile gets him about 5 gigs a year
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=3460)
+
+### Payment processors: Square freeze, then Eric leaves 1:00:10
+- Eric, tested: his Square account got frozen, with funds held, after taking too much volume in one day; Stripe does the same
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=3615)
+
+### How many reviews a day is safe 1:02:56
+- Eric, claims: review volume alone isn't the risk factor — 40-50+ a day is fine as long as the accounts are real local people
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=3800)
+
+### Plumbing commission benchmarks: aim for $250+/job 1:10:13
+- Eric, claims: for plumbing, aim for average revenue above $600 and $250+ average profit per job; short of that, switch areas, find a contractor who upsells, target higher-ticket keywords, or switch niches
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=4220)
+
+### Scraping a plumber database and needing a VA 1:12:48
+- Rishi, tested: scraped Quebec's official licensed-plumber database and SMS-blasted recruiting offers directly to everyone on it
+  [r3 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=4380)
+
+### Collecting cleaning payments and sharing phone numbers 1:22:55
+- Devin, claims: for cleaning, send the customer a Square or Stripe payment link about 30 minutes before the job ends, and have the cleaner confirm the customer paid before leaving
+  [r4 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=4980)
+- Eric, claims: 2-3 GMB profiles per Gmail account is fine, and using the same phone number across a few profiles is workable too
+  [r2 2026-09-04](https://www.loom.com/share/f48dd474eecf4f5090515a8c360ff59c?t=5020)
 
 ## transcript
 

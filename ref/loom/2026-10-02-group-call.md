@@ -5,6 +5,7 @@
 - duration: 01:44:27
 - transcribed by: loom
 - read by: `/call-digest`, 2026-10-09
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/call-pull.rs`
 
 ## summary
@@ -278,6 +279,201 @@ weekend and reconvene next week.
 ### Sharing the Setter and Wrap-Up 1:42:30
 
 - Members agree to split-test the setter; Finn is in Detroit/Dearborn. The call ends.
+
+## claims
+
+### Seasonality: Plumbing vs. Cleaning 4:35
+
+- Eric, claims: plumbing does better in winter than cleaning, and three plumbing profiles done properly already bring consistent call volume, so switching niches makes no sense once you have that many up
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=355)
+
+### Deleted Reviews and the Ten-Review Ceiling 6:15
+
+- Eric, claims: once a profile only has ten reviews there's no point listing more profiles — reviews are the bottleneck, not profile count
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=390)
+
+### 50-100 Reviews in a Day on a Fresh Profile 7:58
+
+- Eric, claims: getting 50-100 reviews in a day on a fresh profile is fine as long as the reviewers are real, distinct, local people
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=485)
+
+### Scaling Past Personal Gmails 8:56
+
+- Eric, claims: a brand-new gmail is fine for video-verifying and managing many profiles, but a brand-new gmail never gets instant verification
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=545)
+
+### Alex's Facebook Marketplace Review Job Ad 9:52
+
+- Alex, tested: posted a job ad on facebook marketplace, written by `ChatGPT` from screenshots of other ads, aimed at teenagers, retirees and stay-at-home parents, and is split-testing versions
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=650)
+
+### Don't Switch Niches Before One Pays 12:01
+
+- Eric, claims: switching niches before the first one has made money is a false illusion — forty reviews is about an hour and a half of asking people at a mall
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=725)
+
+### Picking an Address: Just Avoid Residential 20:38
+
+- Eric, claims: for a location-based profile the address barely matters, as long as it isn't residential
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=1240)
+
+### Products and a Filled-Out Profile 21:14
+
+- Eric, claims: filling out products, services and keywords on a profile takes 15-20 minutes, is a one-time task that helps ranking, but reviews remain the real work
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=1290)
+
+### A Phone Menu Against Spam Calls 22:20
+
+- Eric, claims: a press-1/press-2 phone menu stops robocalls entirely, though a human scammer cold-calling still gets through; he gets about 30 spam calls a day himself
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=1345)
+- Tay, tested: set up a press-1 phone menu through `CallRail` but still gets some spam calls through it, unsure why — maybe human scammers rather than robocalls
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=1380)
+
+### Sam: Two Jobs and Flaky Reviewers 23:48
+
+- Sam, tested: fulfilled two jobs last week through a plumber he shares with another member, and has six more profiles going up, all verified by live video
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=1440)
+- Sam, tested: paid reviewers keep flaking — they stop responding, or only do a few before stopping
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=1460)
+
+### Adding HVAC and Electrical to Plumbing 31:27
+
+- Eric, claims: HVAC has similar search volume to plumbing, is only a little harder to find people for, and gets good high-ticket jobs; he hasn't tried electrical himself but knows someone in the group doing well with it
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=1900)
+- Ryan, claims: his New York plumbing market is big enough to add HVAC and electrical profiles on top of plumbing, rather than just expanding plumbing into more cities
+  [r4 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=1950)
+- Eric, claims: a profile ranks across about ten miles, so a metro area can fit five or six profiles; adding HVAC and electrical at a location already being filmed is worth it, and plumbing alone in a market like New York could make $50-100k a month
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2020)
+
+### Juan: Bought Gmails Need Warming 34:34
+
+- Juan, tested: bookings stopped after a hurricane hit his area; before the hurricane he was getting about four bookings a week
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2090)
+- Eric, claims: bought gmail accounts need warming before they instantly verify, since they start out inactive; two weeks of warming is enough for easy niches like cleaning or detailing, and a freshly made gmail warmed the same way works just as well
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2150)
+
+### Live Calls Need No Presence at the Location 36:39
+
+- Eric, claims: a service-area profile within about an hour or two's drive of the chosen area usually gets approved; for a live video call you don't need to be at the location at all — even calling in from Europe works
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2210)
+
+### Paying Review Hustlers: Scams and Bonuses 37:36
+
+- Eric, claims: don't put many conditions on paid reviewers since they're already hard to find; paying a per-review rate plus a milestone bonus (eg $3/review plus $50 per 50) costs about the same as a flat higher rate but pushes harder
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2290)
+- Eric, claims: dallas doesn't get cold enough to slow detailing demand through winter
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2360)
+
+### A Remodeler Who Won't Close 41:13
+
+- Eric, claims: remodeling jobs are generally harder to close than other trades; get status updates from a flaky contractor and only drop him if he's clearly not doing his job, not just because the deal is slow
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2500)
+
+### W-9s and 1099s 45:11
+
+- Kit, claims: has an employee/contractor who keeps asking him for a w-9, since he's been sending them money and they want to avoid being taxed on it
+  [r4 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2715)
+- Eric, claims: has no experience dealing with 1099s or w-9s himself, since he focuses entirely on lead gen
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2720)
+
+### Mohammed's Verification Videos 48:21
+
+- Mohammed, tested: one verification video passed and one where he only showed a sign did not; a live video call request he submitted finally went through, and he plans to do the call the next day
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=2920)
+
+### Naming an HVAC Profile by Keyword Volume 50:17
+
+- Eric, claims: checked oklahoma search volumes live — hvac 9.6k/month, air conditioning 3k, ac repair 1.9k — and recommends naming an hvac profile just "hvac" since it has the highest volume and competitors use all the variants anyway; repeat the same check for each nearby city
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=3030)
+
+### An Address on a Lot Under Construction 52:51
+
+- Eric, claims: an address on a lot with no building yet, where construction has just started, is fine to use
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=3175)
+
+### How Far to Zoom When Picking a Spot 53:26
+
+- Eric, claims: when picking a search area, split it into roughly four points and search each separately rather than overthinking the radius; a profile ranks across about ten miles, and density matters — in a city like new york it can vary block by block
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=3220)
+
+### Managing a Client Detailer's GMB 55:48
+
+- Eric, claims: to manage a client's gmb, just follow modules one through three and have the owner collect reviews from past customers; putting profiles on well-known roads doesn't make a difference
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=3360)
+
+### For Live Calls, Skip the Service Area 58:30
+
+- Eric, claims: for a live video call, don't set up the service area first — set the profile up on the address, record the video, fail it on purpose, then go through to the live call
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=3515)
+
+### Week-to-Week Call Swings 58:58
+
+- Eric, claims: week-to-week call fluctuation, weather included, is normal; building more profiles smooths it out, aim for one to two reviews a week per profile, and adding photos twice a week doesn't hurt
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=3545)
+
+### Pay-Per-Call Networks Before a Contractor Is Found 1:02:00
+
+- Alex Zubarev, tested: has monetized his ranked calls through a national pay-per-call network for a year while looking for a reliable contractor, getting $20-60 per call depending on niche and zip code; offers to introduce others to `MarketCall`
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=3730)
+- Alex Zubarev, tested: has about 80 sites ranked but only one gmb set up so far, since he just joined the community
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=3900)
+
+### Analysis Paralysis From the UK 1:05:38
+
+- Alex Zubarev, claims: focus on one task at a time, in parallel across profiles, rather than finishing one profile's whole setup-rank-sell cycle before starting the next; otherwise pay someone in the US to execute
+  [r4 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=3945)
+
+### Building the Website With AI 1:09:40
+
+- Alex Zubarev, tested: built his gmb's website with an ai builder the day before, using a prompt built from screenshots of the top ten competitor sites analyzed by `ChatGPT`
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=4190)
+
+### Finn's Housecleaning in Detroit 1:12:54
+
+- Finn, tested: ranked #1 for housecleaning in the Detroit area within two weeks, with cashflow already coming in; jobs average $175, search volume is about 960/month, and housecleaning runs through the winter
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=4380)
+
+### Checking Rank From Another Location 1:23:49
+
+- Eric, claims: check your gmb's rank from another location by using a different phone in incognito mode
+  [r2 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=5035)
+
+### Larry: Plumbing Verification in France 1:24:33
+
+- Larry, tested: found france is not easier for plumbing verification than the US, despite having heard otherwise; has cracked location video verification and has six profiles prepped
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=5080)
+
+### A Bot That Spams Support for Live Calls 1:26:49
+
+- Larry, tested: built a bot that repeatedly requests live verification from support until it gets through, and plans to share it once it's decoupled from his own account
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=5215)
+
+### Walker: Detailing Search Terms 1:27:46
+
+- Walker, tested: has four detailing profiles doing 2-3 jobs a week and made $1,000 profit his first month; ranks 4th-9th for "mobile car detailing" and outside the top three for plain "car detailing"
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=5270)
+
+### The Missing-Place Method With Local Guide Accounts 1:29:38
+
+- Walker, claims: bought about 100 `Local Guide` accounts and is preparing to use them for the missing-place method — suggesting his businesses as missing locations on google maps — figuring some suspensions among that many accounts are tolerable
+  [r4 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=5385)
+- Walker, tested: also runs five profiles in asphalt
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=5400)
+
+### A Setter Per Profile; Canada and Australia Verify Easier 1:34:10
+
+- Finn, claims: pays a setter about $2.50 per gmb profile set up with a physical address; Canada and Australia verify much easier than the US
+  [r4 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=5660)
+
+### Finn's $5k First Month 1:36:49
+
+- Finn, tested: made about $5k revenue in his first month of housecleaning; the niche instant-verifies on an address and ranks fast
+  [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=5815)
+
+### Water Filtration and Detailing in the UK 1:37:19
+
+- Henry, claims: car detailing doesn't translate as well to the UK as to the US, since the UK relies more on public transport while Americans drive more
+  [r4 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=5845)
 
 ## transcript
 

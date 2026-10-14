@@ -5,6 +5,7 @@
 - duration: 01:46:23
 - transcribed by: loom
 - read by: `/call-digest`, 2026-10-14
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/call-pull.rs`
 
 ## summary
@@ -245,6 +246,228 @@ verifications. Grisha is to have another profile and 40 reviews on each by next 
 ### Wrap-up 1:45:09
 
 - A member asks Grisha to check his setup before his next live call; Grisha points him to Eric.
+
+## claims
+
+### James starts, family members building his profiles 0:25
+- James, tested: has nine profiles live and hired family members to build out the rest, verify them, add websites and start ranking
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=58)
+
+### Henry's campus reviews with drinks 1:29
+- Henry, tested: buys pop, Gatorade and energy drinks and walks around campuses asking students for a review for "his dad's plumbing business"
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=104)
+- Henry, tested: only a couple of his reviews have been deleted, which he puts down to not taking many in one day and the reviewers being local
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=154)
+
+### Phil's cleaning profiles won't verify 3:14
+- Phil, tested: runs 8–9 detailing and about 6 landscaping pages; on a new phone, two detailing pages went up fine, but his cleaning profile keeps failing video verification even on a two-year-old gmail with no website added
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=224)
+
+### A fresh number and gmail per profile, the website after it's up 4:39
+- Eric, claims: the first problem was using the same phone number across every profile
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=287)
+- Eric, claims: he always skips the website until the profile is up, and adds it only after
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=294)
+- Eric, claims: the real cause was the gmail not being good enough; a friend's phone, number and gmail would get a cleaning profile through
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=304)
+
+### How many profiles per gmail 5:41
+- Eric, claims: a gmail usually instantly verifies one profile, maybe two; spread them out, about three per gmail
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=375)
+
+### Ilya's bought gmails keep locking him out 6:34
+- Ilya, tested: in remote cleaning for about 13 years, has about 20 GMB profiles across four gmails he owns, five profiles per gmail as owner
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=404)
+- Ilya, tested: his bought gmails (OctoBrowser, private mobile proxies, AccountsMarket) lock him out on the second login, asking to verify the original phone number after he swapped in a rented TextVerified one
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=454)
+
+### Make a new gmail, and test the proxy against the gmails 8:46
+- Eric, claims: better to just make a new gmail with a TextVerified number than fix a locked-out bought one
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=536)
+- Eric, claims: split a batch — some through the current proxy setup, one or two on a normal browser — to tell whether the gmails or the proxy are at fault
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=566)
+
+### Warming a bought gmail before changing its password 11:02
+- Eric, claims: changes password, 2FA, recovery email and phone all in one sitting, and suspects it's Ilya's proxies causing the lockouts
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=682)
+
+### Hundreds of profiles without being linked: a Workspace per owner 13:16
+- Gabe Jacobs, tested: owns 50–60 GMB profiles, each on its own email inside a free Google Workspace, every email verified with TextVerified, with no suspension he didn't cause in over a year
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=811)
+- Gabe Jacobs, claims: keeps to lower-risk niches; locksmith and plumbing are high-risk
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=906)
+
+### Spoofed Android phones as separate islands 16:10
+- Gabe Jacobs, heard: knows someone who spoofs a ~$100 Android, puts 10 emails and 10 GMB profiles on it, then never uses that phone again
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=980)
+
+### Aged gmails only instant-verify once warmed 23:01
+- Eric, claims: has only seen aged gmails instantly verify once they've been warmed up; prefers using real people's accounts, paying them via Facebook Marketplace
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1391)
+
+### Cleaning's season, and hiring people who stop 24:15
+- Ilya, tested: cleaning peaks from April or May to September with about double the lead flow; the holiday season is among its worst times
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1465)
+- Ilya, tested: his best verification method has been a Facebook post offering a $25 Amazon gift card
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1495)
+- Ilya, tested: the two people he hired through friends, one for verifications and one for reviews, both stopped after five or six
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1510)
+- Eric, claims: recruiting is sales — you have to talk to enough people every day, and once it's making money a CSR can do the phone screening
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1545)
+
+### Gabe's paid reviews: posts, a vetting form, an AI that messages back 26:35
+- Gabe Jacobs, tested: pays $5 a review through Craigslist and Facebook posts, vetting each applicant with a form/AI that checks their IP, geolocation and device before approving and sending the review link
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1605)
+- Gabe Jacobs, tested: about half of applicants are not real people
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1650)
+- Gabe Jacobs, tested: a Craigslist account that gets suspended can just be recreated; wording the post right keeps it from being taken down
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1735)
+
+### Paying per review is worth it in a big city 30:10
+- Gabe Jacobs, tested: pays $7 per Craigslist gig plus $5 per review; spending $500 for 100 reviews on one profile pays for itself, since that profile brings in more than $500
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1815)
+- Gabe Jacobs, claims: the city needs more than 300,000 people; a New York City profile can get about 50 people a day
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1835)
+
+### How Gabe's form scores a submitter 30:47
+- Gabe Jacobs, tested: a New York City Craigslist post brings in about 30 real people
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1852)
+- Gabe Jacobs, tested: spent about $1,000 building his vetting system with AI
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1887)
+- Gabe Jacobs, tested: his form scores device fingerprint, geolocation, IP location and the phone's timezone, all of which must match the profile's city, then links to the profile to auto-send the review link; built in Lovable
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1937)
+
+### Wording the post, and reaching Gabe 32:54
+- Gabe Jacobs, tested: had 5–6 profiles suspended before finding a wording for the post that stuck, which he now reuses exactly
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1989)
+
+### Gabe verifies by video; a live video makes a profile solid 34:09
+- Gabe Jacobs, tested: always verifies his profiles by video rather than instant or phone verification, calling it the strongest method, then runs citations and matches his websites to everything after
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2059)
+- Gabe Jacobs, heard: a Google agent on a live video call told him a profile is "100% solid" unless he later changes the business information or runs citations that don't match
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2119)
+
+### Documents, DBAs and how hard a suspension goes 35:52
+- Gabe Jacobs, tested: shows only a printed business card and invoice for verification, no DBA, and stays in niches easier to get up after plumbing and locksmith clients didn't work out
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2167)
+- Gabe Jacobs, claims: a soft suspension only needs re-verifying through the automated system; a hard one requires real business documents and is much harder to beat
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2207)
+- Gabe Jacobs, claims: does mostly a recorded video review rather than live, using live only when a profile won't go up otherwise
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2242)
+
+### One website across many profiles 38:11
+- Gabe Jacobs, tested: runs all of his profiles off two main websites, with every lead funnelling into his CRM
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2296)
+
+### Niches that verify easily and convert 38:35
+- Eric, claims: HVAC has started instantly verifying, seemingly out of nowhere
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2320)
+- Gabe Jacobs, claims: prefers niches with plenty of searches but few existing profiles, like garage epoxy, dog grooming and poop scooping; marketing/planning agencies are already oversaturated
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2405)
+
+### Henry's campus method: a cooler, groups, and his dad's business 42:37
+- Henry, tested: goes to the same university for two weeks, camping out with a cooler of Gatorade, soda and energy drinks, and approaches groups of five to ten rather than individuals or pairs
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2572)
+- Henry, tested: hands out two different QR codes split across a group when he can get away with it, otherwise just one
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2677)
+- Henry, claims: telling people it's for his dad's business makes people kinder and less likely to write something negative
+  [r4 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2717)
+
+### Walking up to groups with nothing to hand out 46:32
+- Austin, tested: walks up to groups of five or six with nothing to give, compliments something they're wearing, and asks them to help a "young entrepreneur"
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2882)
+- Austin, claims: framing the ask around empathy — a grandma's or dad's business rather than your own — works better than asking for yourself
+  [r4 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2922)
+
+### Getting gmails from real people 50:53
+- Eric, claims: best to use real people's gmails — your own, friends', family's, or strangers paid on Facebook Marketplace; if you can convince someone to leave a review, you can convince them to create a profile for you too
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3068)
+
+### A review-getter reusing one gmail across profiles 51:58
+- Eric, claims: when a review-getter reuses the same gmail across several profiles, Google deletes the duplicate reviews but leaves the profiles themselves fine
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3178)
+
+### Booking a lead on the spot 58:30
+- Eric, claims: telling a caller "let me check the schedule and get back to you" loses leads; better to get the main contractor's availability each morning and book straight in
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3525)
+
+### Tracking a plumber's follow-up quotes 1:00:39
+- Eric, claims: log everything — a CRM or just Google Sheets is easiest — with a timeline for when an answer is expected, and follow up by then
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3679)
+
+### Liability follows whoever handles the money 1:05:12
+- Eric, claims: liability follows whoever handles the money; if the plumber takes payment and pays a commission there's zero liability since you're just selling the lead, but if the money runs through your account you're the general contractor in the US and carry the liability
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3927)
+
+### Several gmails in one browser 1:06:13
+- Eric, claims: separate browsers for separate gmail/GMB sets only start to matter past about 40 profiles
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3988)
+- Eric, claims: HVAC can get instant approval without video, just needs a good US gmail
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4018)
+
+### After Eric leaves: Henry's unpaid plumber and liability 1:07:26
+- Henry, tested: of his two plumbers, one works smoothly and the other has not paid him despite having gotten jobs from him, leaving Henry with no leverage
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4086)
+- Yael, claims: in the US, handling the money makes you liable for taxes and means you need insurance, since you're the one who gets sued if the plumber injures someone or makes a mistake; many states go after you even if the plumber is technically a contractor, since labor lawsuits target whoever controls the bank account
+  [r4 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4146)
+
+### Henry's check-in calls and text automations 1:12:30
+- Henry, tested: every call tells the customer that if it's not someone from his own team, one of two local partner plumbers will come instead; all his calls are recorded
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4370)
+- Henry, tested: his text message to the customer beforehand names the plumber (e.g. "Jamie") and gives their number
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4405)
+- Henry, tested: just added an automation that, five hours after a job, asks the customer for the total amount paid and total cost, with a VA to spot-check it
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4440)
+
+### Grisha checks a plumber by calling the customer 1:14:36
+- Grisha, tested: follows up with the plumber first, and calls the customer directly if the plumber's answer seems suspicious; on one $2,000 mainline job the plumber went quiet for a week, and both plumber and customer confirmed it hadn't moved forward
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4496)
+
+### Valera's tooling: review drop-offs, inbox alerts, a support bot 1:19:18
+- Valera, tested: built tooling that screenshots a review when it drops off, to support a reinstatement statement
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4798)
+- Valera, tested: built inbox monitoring over IMAP across every account's email that flags important messages, such as Google's "reply within four days or we delete the account" notices
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4848)
+- Valera, tested: built a bot that messages Google support over chat, trying to get the conversation escalated to a live call
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=4888)
+
+### Ranking accounts up to local guide 1:24:40
+- Valera, claims: reviews, longer review text and photos (even irrelevant ones) all earn local-guide points, but automating any of it also raises suspicion, so a real VA ranking an account by hand works better than automation
+  [r4 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=5110)
+
+### Valera's playbook bot: sources ranked by trust and age 1:27:08
+- Valera, tested: built an MCP bot that ranks every claim by who said it, decays that trust over time, and checks three data layers in order — approved, unapproved/suggested, raw unstructured — only going to the next if the previous has no answer, and links to the people who know a given topic
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=5288)
+- Valera, claims: the top trust tier is reserved for people making $50k+ a month, like Eric; everyone else sits in lower tiers that decay by who said something and how, similar to the course's own tiers
+  [r4 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=5508)
+
+### Filing a location's documents automatically 1:34:13
+- Valera, tested: has code that auto-generates all of a location's required verification documents and submits the request end-to-end, by driving the user's own logged-in Chrome session in debug mode
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=5673)
+
+### Grisha: six profiles, 30 to 50 reviews each 1:38:23
+- Grisha, tested: has six GMB profiles with roughly 30 to 50 reviews each, sourced locally from a university and a flea market
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=5918)
+
+### Live video only needs the IP changed 1:39:48
+- Grisha, tested: on a Google Meet live video call the verifier can't read the GPS, so only the browser's location and IP need to be spoofed, not the device's actual location
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=5995)
+
+### What live video checks: the sign's edge, matching invoices 1:40:12
+- Grisha, tested: on his first live video he was caught claiming a sign was nailed up when asked to show the other side of the door, which had no nail head; the next time he taped on a cut-off nail head to match
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=6027)
+- Grisha, tested: the verifier asked him to turn the camera to the edge of the invoice frame to check how it was fastened; his first attempt had a visible gap from tape, so he fixed it the next time
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=6067)
+
+### Speaking Hindi to the agent doesn't help 1:41:40
+- Grisha, tested: speaking a few phrases of Hindi and Urdu to the verification agent pleases them but changes nothing about the verification outcome
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=6110)
+- Grisha, tested: invoices need to match exactly — the address and a recent date — since on a live video the agent actually checks it, unlike an AI/instant video where any invoice can be made to look official
+  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=6145)
+
+### Proving the location: an office and a branded vehicle 1:42:57
+- Grisha, claims: do the video from an office, and if asked to prove you're there, show a branded company vehicle with equipment in the trunk, keeping the camera low on the way out to it
+  [r4 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=6192)
 
 ## transcript
 
