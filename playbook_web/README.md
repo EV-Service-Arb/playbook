@@ -33,13 +33,13 @@ client ──/register (DCR) or a CIMD url──► GET /authorize
    assertion: missing or refused ──► 401 page · without sa:playbook:mcp:use ──► panel /access/?need=…&continue=<this url>
    ok ──► consent page: client, account (switch), redirect, form with a nonce (10 min, single use, bound to sub + this request)
 browser ──POST /authorize, nonce──► assertion again, nonce spent for the same sub ──► code ──► redirect_uri
-client ──/token (PKCE S256)──► access token (1h) + refresh token (rotated on use, 7d from /authorize)
+client ──/token (PKCE S256)──► access token (1h) + refresh token (rotated on use, 30d from /authorize)
 client ──<base>, Bearer──► guard: token live · under today's byte budget (else 429)
 ```
 
 A code is only ever issued by the POST. Who the member is (concierge's `sub`) and the permission
 are decided at `/authorize`; a refresh does not re-check them, and rotating keeps the deadline its
-`/authorize` set, so revoking `sa:playbook:mcp:use` takes up to 7 days to bite. Tokens and nonces
+`/authorize` set, so revoking `sa:playbook:mcp:use` takes up to 30 days to bite. Tokens and nonces
 are opaque; only their sha256 is stored.
 
 The browser's pages are `src/pages.rs`, on `ev_lib_classes`' tables; `build.rs` runs `tailwindcss`
