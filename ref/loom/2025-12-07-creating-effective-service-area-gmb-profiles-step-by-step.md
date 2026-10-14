@@ -5,11 +5,42 @@
 - duration: 00:11:55
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I'm walking you through the step-by-step process of setting up a Google My Business (GMB) profile specifically for service areas. I emphasize that creating service area pages is a safer option compared to address pages, with a success rate of around 70%. I also detail how to verify your business using a video, showcasing your location and equipment to ensure legitimacy. The goal is to help you quickly establish multiple service area profiles in a single day. I encourage you to follow along and implement these strategies to enhance your business visibility.
+
+## claims
+
+### Introduction to GMB Profiles 0:00
+- Eric Velch, claims: service area profiles almost never get suspended, unlike address profiles which carry suspension risk and have to be reinstated
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=35)
+- Eric Velch, claims: service area profiles rank just as well as address profiles, but take a bit more work to get ranking
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=75)
+
+### Verification Methods Explained 1:52
+- Eric Velch, tested: sees about a 70% success rate recording service-area video verifications all on the same mailing address, enough to stack 10-20 profiles in a single day on separate Gmail accounts
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=170)
+
+### Business Video Verification Steps 4:00
+- Eric Velch, claims: business video is the most consistent and reliable of the three verification methods, ahead of phone code and email code
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=241)
+- Eric Velch, heard: the cardstock sign taped to the vehicle should be branded with the exact same name as the GMB listing
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=400)
+- Eric Velch, tested: usually doesn't match the sign's name exactly to the GMB name, and it still verifies
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=406)
+- Eric Velch, claims: the video verification checks that the house numbers shown match the number in the mailing address submitted
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=440)
+
+### Finalizing the Video Submission 10:24
+- Eric Velch, claims: the verification video should run about 2-3 minutes, depending on distance from the street sign to the vehicle and location
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=635)
+- Eric Velch, tested: used to set GMB hours to 24 hours and it worked almost every time
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=662)
+- Eric Velch, claims: 24-hour operating hours can get flagged by Google as spammy, so now sets hours to 7am-11pm instead
+  [r1 2025-12-07](https://www.loom.com/share/fc804298836c4ba282d8002dee239c58?t=667)
 
 ## transcript
 

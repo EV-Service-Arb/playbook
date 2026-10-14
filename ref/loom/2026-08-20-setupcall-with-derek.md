@@ -5,6 +5,7 @@
 - duration: 00:06:50
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -48,6 +49,42 @@ Eric explains a process for creating short verification videos from home to veri
 - Use the same phone number across profiles or create profiles without a phone number.
 - Split-test approaches after verification: leave some profiles to age, run citations on others, and try address submissions on a subset to observe which get approved.
 - After addressing unsuccessful attempts, proceed to create live video content as a next step.
+
+## claims
+
+### how to record verification videos 0:00
+- Eric, claims: verification videos can all be recorded from home and reused across multiple profiles by swapping the signage shown
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=5)
+- Eric, claims: a verification video should show, in sequence, the local street sign, company signage on the car, a business card, and the company dashboard, before starting the car and showing tools
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=20)
+- Eric, claims: the tools shown for verification don't need to be anything special
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=50)
+- Eric, claims: the street sign shown doesn't need to correlate with the address used as the profile's mailing address
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=70)
+
+### mailing address vs. recording location 1:21
+- Eric, claims: use the home address as the mailing address and set the service area to the area you live in
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=90)
+- Eric, claims: the service area should include the home area and every area in between it and wherever the profile should appear — e.g. Queens plus Brooklyn and Manhattan to reach Manhattan
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=140)
+
+### address addition and approval strategy 3:14
+- Eric, claims: most address additions get rejected — it's a volume game
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=200)
+- Eric, claims: waiting a week after the profile is listed before adding the address improves approval odds
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=215)
+- Eric, claims: adding the address to the website, submitting it to Google Search Console, and buying cheap Fiverr citations, then waiting a week before adding the address, improves approval odds
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=230)
+- Eric, tested: some accounts got the address approved three-for-three immediately, others needed four rejected attempts before one approved
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=260)
+- Eric, claims: about 20 verification videos can be recorded in 1.5 hours by swapping the printed sign per city, e.g. five each for Queens, Brooklyn and Manhattan
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=300)
+- Eric, claims: up to three profiles can be created per account with slight name variations; delete a profile once it fails verification and retry
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=340)
+- Eric, claims: profiles can share the same phone number across them, or be created with no phone number at all
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=360)
+- Eric, claims: after verification, split-test by leaving some profiles to age, running citations on others, and adding the address on the rest right away, to see which approach gets approved
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=385)
 
 ## transcript
 

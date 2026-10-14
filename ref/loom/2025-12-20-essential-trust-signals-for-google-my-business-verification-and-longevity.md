@@ -5,11 +5,64 @@
 - duration: 00:15:54
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I dive into trust signals for Google My Business (GMB) that can help you get verified and avoid suspensions. I emphasize the importance of using aged accounts with activity, like reviews and purchases, to establish credibility with Google. I also discuss the significance of having your website registered in Google Search Console and ensuring that your GMB information matches your website content. Additionally, I touch on the role of backlinks and citations in enhancing your business's legitimacy. Make sure to implement these strategies to improve your chances of verification and stability for your GMB.
+
+## claims
+
+### Introduction to Trust Signals 0:00
+- Eric, claims: an aged google account with activity (purchased storage, left reviews, a high local guide level) shows google a real trusted account, giving a gmb made on it a better chance of instant or email-code verification
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=90)
+- Eric, claims: without these trust signals, a page is harder to verify, and if it does verify, more likely to get suspended
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=135)
+
+### Account Age and Activity 2:31
+- Eric, tested: gmbs owned or managed by a single gmail account have a higher chance of getting suspended, but it varies by category — detailing and cleaning rarely get suspended, his hvac page got suspended within two or three months
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=169)
+- Eric, claims: not every region allows instant or email-code verification for the plumbing niche, so he never relies on those methods for plumbing
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=236)
+
+### Verification Methods Overview 4:32
+- Eric, claims: trust signals aren't essential for verification, just best practice, worth doing if it's going to have a return on his time
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=286)
+- Eric, claims: housecleaning and even plumbing gmbs can use instant and email-code verification in canada, but us plumbing gmbs are much harder to verify this way, and he's unsure it's even possible there
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=306)
+- Eric, tested: registering his website's domain in google search console verified it in about two minutes, demoed live
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=361)
+
+### Website Content Consistency 6:49
+- Eric, claims: the gmb's phone number and the website's phone number should match, and the domain/title should match the gmb name, feeding google more information to verify the business is legitimate
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=424)
+- Eric, claims: high-quality backlinks and citations (facebook, yellow pages, mapquest) linking to the site make it look more reputable; bulk directory submissions cost roughly $1/backlink
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=467)
+- Eric, tested: a plumbing gmb (Plumber Oshua) ranked second for its area with a one-day-old, poorly built website and zero backlinks, so backlinks don't meaningfully drive gmb ranking
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=540)
+- Eric, claims: he doesn't go out of his way for backlinks — only builds them once a page is confirmed up, and only for a landing page shared across multiple gmb locations
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=570)
+- Eric, claims: for gmb ranking, importance goes reviews and title first, then description, then products, with backlinks and citations mattering least
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=599)
+- Eric, claims: listings verified by phone or email code are more likely to get banned, especially without trust signals set up, so he sets them up on every page once it's live
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=643)
+
+### Avoiding Risky Edits 11:41
+- Eric, tested: he's dropped building backlinks — his current method for email-code verification is just matching website content plus registering the domain in google search console
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=721)
+- Eric, claims: pumping out reviews and getting more gmbs up is always the highest-leverage activity, more so than trust-signal work
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=747)
+- Eric, claims: avoid risky edits on a live gmb — don't edit the website, the name, or the phone number, and don't batch many edits at once
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=777)
+- Eric, claims: logging into a gmb's manager account from a different country, or handing out manager access from many different accounts, looks sketchy to google
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=797)
+- Eric, tested: a gmb listed on a house address gets suspended quickly once google cracks down on that pattern; residential apartment buildings are bad too, and large commercial buildings with multiple units and floors, where a single storefront isn't visible on maps, do better
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=828)
+- Eric, tested: of roughly 50 gmbs he's put up, many got suspended regardless of whether they shared an address with other gmbs, so he's unsure multiple gmbs on one address is actually worse
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=891)
+- Eric, claims: when resubmitting a gmb that failed before, change every identifying detail rather than keeping the name consistent, since the exact prior combination seems to get flagged — no public confirmation of this, just his own experience
+  [r1 2025-12-20](https://www.loom.com/share/aa27220453994fcb8edb32b4d024817a?t=929)
 
 ## transcript
 

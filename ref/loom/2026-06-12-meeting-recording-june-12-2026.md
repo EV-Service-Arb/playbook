@@ -5,6 +5,7 @@
 - duration: 00:54:11
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -148,6 +149,62 @@ Participants discussed local lead-generation operations focused on service niche
 - Prioritize lower-barrier high-ticket niches (decks/fences, asphalt) and test listings in targeted cities with modest review counts.
 - Acquire reviews slowly for aged accounts; if buying, start with small batches to validate seller quality.
 - Implement CallRail IVR, negotiate contractor splits/retainers conservatively, and use Claude/Gemini for content and ranking guidance.
+
+## claims
+
+### Profile performance and current lead volume 3:06
+- James, tested: profiles are getting 1–3 leads a day now off ~10k total search volume, down from before
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=190)
+- James, tested: cleaning jobs pay cleaners $25/hr and keep at least 70% of a $400 booking
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=270)
+- James, claims: cleaning is most lucrative in higher-income, denser areas — median income over $100k
+  [r4 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=290)
+
+### VA scheduling, work shifts and tools 5:44
+- Elliot, tested: decks & fences leads run 2–3 a day, but closing is entirely up to the contractor
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=355)
+- Elliot, tested: runs a 15% commission with one contractor, negotiating 15–20% with another
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=575)
+
+### Pricing splits, markups and contract structure 9:38
+- Elliot, tested: a regular fence installation averages ~$4k; decks run $10k–$40k
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=585)
+- Elliot, tested: built service/location landing pages in Claude for fence-contractor clients before starting his own lead business, recommends it
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=685)
+
+### Payments, payment processors and VA logistics 14:23
+- Eric, tested: ran VAs 12-hour shifts (8am–8pm) for detailing, and had plumbing VAs take calls later in the day rather than early since he's free by evening
+  [r2 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=900)
+- Eric, claims: not worth running 24/7 VA coverage just to catch a rare late-night call
+  [r2 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=915)
+- Derek, tested: skipped Housecall Pro and GoHighLevel, tracks jobs (phone, address, status, price, pending/follow-up) in Google Sheets instead
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=985)
+
+### Review acquisition strategies and recruiting reviewers 18:29
+- Elliot, tested: joined ten Facebook groups in his metro city to recruit reviewers, got zero responses; found one kid willing to do it but inconsistent
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=1150)
+
+### Branding dispute and domain sale anecdote 30:00
+- Eric, tested: bulk reviews from real people (50–100 in an hour or two) all stuck; aged-email accounts needed about two a day to stick
+  [r2 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=1860)
+- Eric, tested: separates aged accounts by using mobile data and incognito browsing instead of proxies
+  [r2 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=1900)
+- Eric, tested: caps each aged account at one or two reviews total, spread about a week apart
+  [r2 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=1920)
+
+### Niche selection and low-barrier high-ticket opportunities 33:22
+- James, tested: tried sourcing reviewers over Facebook for a listing in a city he isn't physically in (Denver); hasn't been working well
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=2130)
+
+### Deposit strategy, scams and contract enforcement limits 40:08
+- Anwar, tested: lost $50k when a contractor/real-estate partner disappeared despite three notarized contracts
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=2500)
+- Anwar, tested: didn't pursue court — would have cost $10k–$15k, and the man couldn't be found anyway
+  [r3 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=2515)
+
+### Handling negative reviews and lead volume monitoring 48:54
+- James, claims: CallRail has a menu setting requiring callers to press 1 or 0 to connect, filtering bot calls without adding friction for real callers
+  [r4 2026-06-12](https://www.loom.com/share/c1c8b4ffd7d74343ab7b13e52c0a278b?t=3150)
 
 ## transcript
 

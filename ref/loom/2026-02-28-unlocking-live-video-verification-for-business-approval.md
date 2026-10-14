@@ -5,11 +5,42 @@
 - duration: 00:04:40
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I’m sharing a super effective tool for getting your business video approved through live video verification if it gets rejected. First, you’ll need to submit a help ticket via the Google Business Support Form to request a live agent. I recommend doing this earlier in the day for better chances of a lenient agent. Be prepared with your business documents and signage, as they might ask for those during the verification. If you follow these steps, you’ll have a much smoother experience getting your profile verified.
+
+## claims
+
+### Introduction to Live Verification 0:00
+- Eric, claims: doing a live video verification after a rejected business video almost always gets it approved
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=9)
+- Eric, claims: request a live verification agent by submitting a help ticket through the Google Business Support Form
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=65)
+
+### Requesting Live Verification 1:07
+- Eric, claims: once the ticket is approved, the profile's verification options add a "live video verification" choice that queues you to a live agent
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=75)
+- Eric, heard: agents taken before 1pm eastern tend to be more lenient, while agents later in the day are stricter
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=100)
+
+### Location Spoofing Strategy 2:39
+- Eric, claims: spoofing your location (screen-sharing google maps with directions to the fake address) gets past the agent's location check
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=160)
+- Eric, claims: agents sometimes skip asking for the location screen-share but still check the device's location settings directly, so spoofing it matters even then
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=176)
+- Eric, claims: after one live verification you know what to expect on the next, and can skip preparing whatever wasn't actually checked
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=200)
+
+### Preparing for Future Verifications 3:35
+- Eric, claims: agents ask for an invoice, a business card, or a dashboard screenshot, and a faked version of any of these passes since they aren't inspected closely
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=220)
+- Eric, claims: agents may ask you to tug on your signage to check it isn't a flimsy printout, but being brief with it is enough to pass
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=245)
+- Eric, claims: the same live verification process works just as leniently for service-area businesses as for address businesses
+  [r1 2026-02-28](https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=270)
 
 ## transcript
 

@@ -96,8 +96,8 @@ Every recording. Directly above `## transcript`; in a video, directly below `## 
     the chapter's second
   - the base is `docs/ARCHITECTURE.md`'s `## Reliability`, from the speaker's group and the mode. A
     person on its people list takes their own base. A recording a skool lesson links is course
-    material: `r1`. Otherwise the group is the registry's: a capture `ref/README.md` lists under
-    the gmbpp group's calls or Eric's is a gmbpp member's unless the speaker says otherwise, and
+    material: `r1`. Otherwise, on a recording `ref/README.md` lists among the group calls, Eric's
+    answers or the coaching calls, anyone but Eric is a gmbpp member unless they say otherwise.
     `skill/service-arb/sections/experts.md` names who is who
   - a speaker in no rated group gets no claims
 - what the recording says, at its second. Not what follows from it, not what you know besides. A

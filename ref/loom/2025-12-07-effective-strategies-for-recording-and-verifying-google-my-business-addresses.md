@@ -5,11 +5,68 @@
 - duration: 00:16:55
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
 
 In this video, I walk you through the process of recording a Google My Business (GMB) address for verification, even if you don't own the location. I recommend using co-working spaces, storage units, or warehouses, highlighting that co-working spaces typically cost around $50 an hour. I emphasize the importance of showing permanent signage and the actual address during the recording to avoid suspension, which can happen randomly. I also mention that using incognito mode and cellular data is crucial when creating these listings. If you have any questions or need clarification, feel free to reach out!
+
+## claims
+
+### Introduction to GMB Recording 0:00
+- Eric Velch, tested: got video-verified on a house once, but doesn't recommend it
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=5)
+- Eric Velch, tested: had a GMB up on a house that stayed unsuspended for a long time, until he changed the business name, after which it got suspended
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=20)
+- Eric Velch, claims: co-working spaces, storage units/warehouses, and any commercial building work for recording a verification video
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=45)
+- Eric Velch, claims: co-working meeting rooms typically rent for $30-60 an hour, and an hour is enough to record
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=75)
+- Eric Velch, claims: print permanent signage and tape it to the front door of the rented space
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=130)
+- Eric Velch, tested: verified an HVAC GMB on "30 Powerhouse Street" recorded in a rented co-working room, which stayed up
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=180)
+- Eric Velch, tested: glued on a broken lock, then filmed himself inserting the key and unlocking the door on entry
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=230)
+- Eric Velch, claims: bringing a laptop open to dashboards (Square, GoHighLevel) and business cards, and connecting to the TV over HDMI to show branding, adds credibility
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=260)
+
+### Recording in Storage Facilities 6:56
+- Eric Velch, claims: sneaking into back areas like malls to record is harder to get away with if you're older
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=420)
+- Eric Velch, tested: told co-working space staff he was filming a TikTok marketing video, and they never minded
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=448)
+- Eric Velch, claims: storage units (e.g. Storage Mart) have become his preferred place to record recently
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=475)
+- Eric Velch, claims: the cheapest storage units run about $70-80 CAD a week; cancel right after recording to avoid the monthly billing
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=505)
+- Eric Velch, claims: just show the street sign and the unit opening with its given lock; no equipment is needed inside
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=535)
+- Eric Velch, tested: requesting a refund right after renting a storage unit gets about half the money back, bringing a verification down to roughly $20
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=595)
+
+### Avoiding Suspension Tips 10:40
+- Eric Velch, claims: Google never explains suspensions, and they often seem random
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=645)
+- Eric Velch, claims: early suspensions, within the first month, usually happened to GMBs recorded in sketchier spots like malls
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=670)
+- Eric Velch, claims: GMBs that stay up longest tend to be in large commercial buildings that already host another GMB, which makes the address look more legitimate
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=700)
+- Eric Velch, claims: storage-mart addresses show no photo/Street View on Google Maps, which might be why those pages rarely get suspended
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=735)
+- Eric Velch, tested: storage-mart GMBs have been suspended only about 1 in 20 times
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=765)
+- Eric Velch, claims: spending 1-2 hours a day recording can get around 30 address pages up in a month, with about 10 staying live, each capable of roughly 2 leads a day
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=800)
+- Eric Velch, claims: 10 live address pages can realistically add $20,000-50,000 a month in revenue
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=850)
+
+### Cross-Referencing Addresses 15:28
+- Eric Velch, heard: recording the verification video citing one address, then listing the GMB under a completely different, far-away address, may still pass verification — unconfirmed himself
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=935)
+- Eric Velch, claims: create every GMB listing in private/incognito browsing mode, on cellular data
+  [r1 2025-12-07](https://www.loom.com/share/9a2d3dc6b2c34d07a5fe4c667a01c0a3?t=995)
 
 ## transcript
 
