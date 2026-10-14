@@ -142,7 +142,7 @@ fn main() {
 		return;
 	}
 	if args.first().is_some_and(|a| a == "--recording") {
-		// every reader of a recording comes through here, so whether it was committed or is fetched now is decided once
+		// every reader of a recording comes through here, so whether it is kept or fetched now is decided once
 		for arg in &args[1..] {
 			let path = std::fs::canonicalize(arg).unwrap_or_else(|e| panic!("{arg}: {e}"));
 			let ((platform, id), _) = have

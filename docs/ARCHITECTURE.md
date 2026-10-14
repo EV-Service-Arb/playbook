@@ -254,8 +254,8 @@ else keeps it.
 | frames `call-watch.rs` read a line off — small, and ours alone | recordings: the host keeps them |
 | photos and documents we made or were sent, with no other home | anything a puller can fetch again |
 
-A recording is committed only by the human, by hand (`git add -f`, past the gitignore) — say, when
-its host is about to drop it. An agent never commits one.
+A recording is never committed: every checkout, worktrees included, copies each tracked object out
+of `.git/lfs`, so a gigabyte call costs every new worktree that gigabyte.
 
 On disk an object is one read-only inode, hardlinked into `.git/lfs` and every checkout by
 `scripts/lfs-link.sh`, which the dev shell hooks onto checkout, merge and commit. Anything that

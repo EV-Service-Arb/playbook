@@ -16,6 +16,7 @@
           pname = "playbook";
           enable = true;
           lfs = true;
+          gitignore.extra = "ref/**/recording.*";
           jobs.errors.augment = [{ name = "flake-app"; args.app = "check"; }];
           containerRelease = { registry = "ghcr.io/ev-service-arb"; lfs = false; }; # the image takes only markdown; the media is 17G
         };
