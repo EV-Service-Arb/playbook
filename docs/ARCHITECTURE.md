@@ -80,9 +80,9 @@ has no capture of**, printed by the puller for `ref/README.md` to be told about 
 
 ## claims
 
-### Location Spoofing Strategy 2:39
-- Eric, claims: a spoofed location passes video verification when the street matches
-  [r2 2026-09-18](https://www.loom.com/share/<id>?t=170)
+### Service call fees: what to charge 2:38
+- Art Khan, tested: charges $39 per inspection
+  [r3 2026-03-31](https://fathom.video/share/<id>?t=170)
 
 ## transcript
 
