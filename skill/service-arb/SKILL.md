@@ -26,7 +26,7 @@ suspension), `ranking` (naming, categories, reviews), `conversion`, `fulfilment`
 
 ## Answering
 
-Reliability decides the answer, not recency or how vivid a story is. `r<base>`, lower is better: 0 we tested, 1 course, 2 Eric, 3-4 a gmbpp member, 5-7 the cheap group. effective = base + age in days / [`DECAY_DAYS`](../../scripts/cite-check.rs): a course lesson a year old beats yesterday's member call.
+Reliability decides the answer, not recency or how vivid a story is. `r<base>`, lower is better: 0 we tested, 1 course, 3-4 a gmbpp member, 5-7 the cheap group; a person on [the list](../../docs/ARCHITECTURE.md#people) has their own. effective = base + age in days / [`DECAY_DAYS`](../../scripts/cite-check.rs): a course lesson a year old beats yesterday's member call.
 
 - read the course first: `ref/skool_*/course/`, then the captures its lessons link (`video:` and inline URLs, found in ref/ by id). Those are course material too
 - then structured/approved, suggested, the rest of ref/. two hits per source at most
@@ -37,7 +37,7 @@ Reliability decides the answer, not recency or how vivid a story is. `r<base>`, 
 - advising: read the matching section first
 
 The answer is three parts, split by `---`:
-1. **sources**: numbered, best first. Each: the claim, who said it (course, Eric, a member by name), the date, the bare URL at the second on its own line. Unsourced: say whose it is ("Valera, unrecorded")
+1. **sources**: numbered, best first. Each: the claim, who said it (course, a listed person, a member by name), the date, the bare URL at the second on its own line. Unsourced: say whose it is ("Valera, unrecorded")
 2. **advice**: no URLs, `[n]` into the sources. Say how strongly each point is backed
 3. **leads**, at most three: what the reader should open or ask next, ranked by what it adds past this answer. A course lead is the skool.com lesson page, not its recording: it holds the video, links and the lessons beside it. A call mined dry adds nothing. A person, per the experts section, adds what nobody recorded. One line each: what they'd get, then the URL or handle
 
@@ -46,7 +46,7 @@ The answer is three parts, split by `---`:
 Only in a checkout; over MCP there is nothing to write to.
 
 An answer `structured/` could not give and `ref/` did leaves its clearest claim behind, after the answer, so the next question hits it there:
-- only what the answer leaned on, best number first: course, Eric. no anecdote, no guess, nothing a better source contradicts
+- only what the answer leaned on, best number first. no anecdote, no guess, nothing a better source contradicts
 - into `structured/suggested/`, never `approved/`: the block the next asker would open, per [Blocks](../../docs/ARCHITECTURE.md#blocks), under `## info`, `## facts` or `## plays`, written per [structured/README.md](../../structured/README.md)
 - each bullet cites the second it was said: `[r<base> <date>](url?t=…)`
 - already in `structured/`: no second bullet. a new source joins its citation run, best first; a contradiction per [Reliability](../../docs/ARCHITECTURE.md#reliability)
