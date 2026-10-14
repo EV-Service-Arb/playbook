@@ -5,6 +5,7 @@
 - duration: 02:28:30
 - transcribed by: loom
 - read by: `/call-digest`, 2026-09-22
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/call-pull.rs`
 
 ## summary
@@ -453,6 +454,324 @@ member's profile that lost most of its reviews after posting them too fast.
 
 - A "Reddit method" is mentioned as having a "90% stick rate" but not explained before the call
   ends; Luca shares his Instagram before signing off.
+
+## claims
+
+### Devin's Update: Profiles Up, Chasing Reviews 3:22
+- Devin, tested: people he hires to chase down reviews keep ghosting him
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=215)
+
+### Devin's Full Timeline: From Suspension to Restart 4:37
+- Devin, tested: five profiles with 150 reviews each, sourced business-to-business by a VA, got cross-tracked across all of them and suspended together
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=282)
+- Devin, claims: service-based GMB listings never rank or get good calls, especially in big cities — low-competition areas are fine
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=295)
+- Devin, tested: hiring people off Craigslist for the on-the-ground job worked, but they kept leaving after a day
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=310)
+
+### Switching Service-Area Listings to an Address: Aging and Device Limits 6:36
+- Devin, tested: his first two attempts to switch a service-area listing to an address, years ago, both got declined — recently the restriction seems to have lifted
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=402)
+- Eric, tested: a service-area listing needs to be aged at least a month to raise the odds of switching it to an address, and only about two switches per location/device before the success rate drops sharply (to ~90%, then ~80%) — found testing ~20 GMBs with James
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=432)
+- Devin, tested: got 11 straight service-area-to-address switches through on GMBs aged ~2 months, in a bad area, across plumbing, water damage restoration and concrete niches — all worked; water damage is hard regardless of niche
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=488)
+
+### Melo's Update: Plumbing vs. Detailing Lead Volume 9:54
+- Melo, tested: 3 plumbing and 12 detailing profiles — detailing has outperformed plumbing so far
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=600)
+
+### Google Now Checking Video Location for Service-Area Verifications 10:24
+- Eric, claims: Google started checking the actual recording location of service-area verification videos a few days before this call — spoofing location alone no longer works, confirming the video itself is what's analyzed
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=650)
+- Eric, claims: results look inconsistent — visually identical submissions pass for some people and fail for others
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=672)
+- Eric, claims: service-area verification processing time has stretched from a few hours to up to about two days recently
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=730)
+
+### Location Permissions and Browser Settings While Recording 14:03
+- Eric, claims: the recent wave of plumbing-profile rejections isn't about iPhone vs. Android — it traces to an update Google made about a week before this call
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=855)
+- Eric, claims: browser location-permission prompts (allow/deny while recording) don't affect verification once the device's location setting is already configured
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=880)
+
+### Ryan's Update: From Deck and Fence to Plumbing 14:59
+- Ryan, tested: shifted focus to plumbing; last verification was three weeks ago — of 12 listings, two had ~50 and ~41 reviews but lost several this week (one dropped to 31), and none are producing leads as expected
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=910)
+- Ryan, tested: his NYC-boroughs plumbing profiles sit in a ~25,000/month `SEMrush`-volume but highly competitive market, pulling roughly one to two leads every two days
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=930)
+
+### Is It Worth Pushing More Reviews? Cost-Benefit by Ranking Position 17:22
+- Eric, claims: pushing more reviews is worth it when you're a small review-count gap from the profiles ranking above you, not when the gap is huge — get a profile to the low end of what's rankable first, then reassess
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1070)
+
+### Live Ranking Check: Brooklyn Plumber Co Heat Map 18:47
+- Ryan, tested: "Brooklyn Plumber Co" ranks 2nd for "Plumber Brooklyn"; a heat-map check shows top-3 ranking roughly 2-2.5 miles out in every direction, a good residential spread, similar to before a batch of reviews got deleted
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1150)
+
+### Verifying US Profiles From Overseas 20:33
+- Ryan, tested: verifies some US profiles by converting service-area to address, others by renting an office and filming the verification video there
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1240)
+
+### Planning the Next Round of SAV Verification Tests 21:19
+- Eric, heard: speculates a simple fake street sign, even a printed makeshift one, might be enough to pass service-area verification without location spoofing
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1290)
+- Eric, claims: `D-Tongue` profiles are easy to verify by phone number
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1300)
+
+### Recap: The Three SAV Verification Tests Being Run 22:29
+- Eric, claims: three service-area verification tests are underway — set the service area to the whole country; record at the true mailing address but list the service area elsewhere; or record and list the service area where you are but use an address outside it
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1352)
+- Eric, tested: spoofing the video's recorded location alone was tried and failed, confirming the video itself is what's analyzed
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1420)
+- Eric, claims: for accounts with a local-guide profile, adding a missing place is a solid way to get new GMB profiles up
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1460)
+
+### Pitching Reviewers on Indeed: What to Tell Them 24:48
+- Eric, claims: when recruiting reviewers from Indeed, tell them straightforwardly what the job is and how much it pays — some will decline, that's fine
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1510)
+
+### Snacks vs. No Snacks: A Reviewer Incentive A/B Test 26:15
+- Devin, tested: giving reviewers full-size Skittles ($1 each) got 50 reviews with no complaints; giving cheap Starbursts the next day got far fewer reviews plus two one-star reviews and reports
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1590)
+
+### Lucas's Hands-Off Method: Just Hiring People to Ask 28:16
+- Devin, heard: Luca does no reviewer outreach himself — just hires people to ask — and has sourced around 400 reviews that way
+  [r5 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1700)
+
+### Home Depot Workers: A $3-a-Review Method 28:49
+- Kareem, tested: pays Home Depot day-laborers $3 each for a review (most already have Gmail accounts) — pushed one plumbing profile to ~30 reviews in a day
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1740)
+
+### Spam Calls Bypassing CallRail Screening 29:42
+- Melo, tested: gets a steady stream of silent spam calls despite `CallRail`'s say-your-name / press-a-number screening
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1790)
+
+### Address Verification Requires Storefront Signage, Not Just a Car 30:45
+- Eric, claims: address-based (non-service-area) verification specifically requires showing storefront signage in the video — a car alone isn't accepted the way it can be for service-area verification
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1870)
+
+### The New Zealand Guy's Verification Method: Random Building and Papers 32:00
+- Eric, heard: a New Zealand landscaping operator instant-verified ~5 profiles and makes ~$15K/month by sticking printed papers on a random building's exterior as fake signage, never going inside
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1930)
+
+### Feeding a Pre-Recorded Video Into the Camera (Pixel Method) 34:49
+- Eric, heard: a method called "feeding to the camera" surfaced in another Skool group — piping a pre-recorded or AI-stitched video into the phone's live camera feed instead of recording; reportedly only works on Google Pixel (7 and up): root it, install `GrapheneOS`, connect it to a laptop or cloud server, and use one of several paid apps to feed the video in, which then loops as if live, including for photos
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2095)
+
+### What GrapheneOS Actually Does 37:56
+- Eric, heard: per forum research (untested by him), a stock phone can theoretically host 62-65 GMB profiles, dropping to 30-34 after rooting and installing `GrapheneOS`
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2285)
+
+### Card Detailing Email Verification via a Hostinger Domain 39:15
+- Eric, heard: per Hayden (Orange County, California), buying a domain and using its free `Hostinger` email for GMB's email-code verification worked ~99% of the time for card-detailing profiles
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2360)
+
+### Clarifying What Root Access and Graphene Enable 40:45
+- Eric, claims: rooting alone, on any Android phone, is what enables feeding a pre-recorded video to the camera via a developer setting — `GrapheneOS` isn't required for that; its role is isolating up to 30-34 separate device-like profiles
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2450)
+
+### Why Video Verification Works, and a Member's Low-Ranking New Profile 42:29
+- Eric, claims: video verification exists to substitute for the trust signals (years-old backlinks, aged directory listings) an established business would otherwise have
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2560)
+
+### G's Grind: Door-to-Door Reviews From a Remote Connecticut Town 44:36
+- G, tested: spent two days on foot and by bus (parks, gas stations, fast food, Home Depot, Walmart, Cumberland Farms) asking strangers directly for reviews — day one got ~7-8 reviews, day two got only 2 after an ambulance interrupted one stop, rain, a dead phone, ~$34 in Uber fares and ~4-5 hours
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2690)
+
+### Question About Jeremiah's Call Volume and EA Automation 48:25
+- Eric, claims: Jeremiah, doing ~10 videos/month for three months in an HVAC-type niche at ~$10K/month, isn't automating with a VA/EA yet because call volume (~5 leads/day) doesn't justify it
+  [r2 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2910)
+
+### Luca's Detailing Volume: Flagged Accounts and Contractor Pay 49:50
+- Luca, tested: made 8 new detailing profiles and pushed reviews aggressively — about half (4 of 8) got flagged, with reviewer names showing as generic "Google user"
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3000)
+- Luca, tested: slowed to 1-2 reviews/profile/day with photo uploads — most profiles now sit around 15-20 reviews
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3020)
+- Luca, tested: despite a rough scheduling day, consistently does $1,500-2K/day in detailing revenue using cheap, reliable subcontractors
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3040)
+- Luca, tested: has reviewers write a one-sentence caption matching the uploaded photo rather than nothing — has seen a lot more search traffic on his newer profiles since
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3140)
+
+### Recruiting Review-Getters via Facebook 'Hiring' Posts 53:01
+- Luca, tested: is testing Facebook posts hiring for detailer subcontracting as a channel separate from his review-recruitment posts, to find more subcontractors
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3190)
+
+### How Many Reviews Before Leads Show Up? It Depends on Everything 54:00
+- Devin, claims: no fixed review threshold before leads show up — depends on SEO, area and competition; with no traction after a month despite decent reviews, better to verify service-area listings far from your own area and switch to address later
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3250)
+- Devin, tested: switches profiles via new Gmails rather than device-switching, and got 10 service-area-to-address switches through while a peer (James) using the same method got none — puts it down to luck with his specific phone/Gmail combo
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3300)
+
+### Buying Phone Numbers From PVAX Store 56:01
+- Devin, claims: sources Gmail-paired numbers from `PVAX Store` on Telegram, and recommends buying only 4-5 at a time since someone got scammed buying in bulk — `PVAX Store` doesn't require crypto, unlike most alternatives
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3365)
+- Luca, tested: bought Gmail batches from the same seller — 20 first (some not US-IP), then 13 replacements, then 50, with the third batch fully clean US-IP
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3410)
+
+### Luca's Process: Handing Profile Creation Off to a Trusted Guy 57:17
+- Luca, tested: now delegates profile creation entirely — gave a trusted contact 10 profiles' worth of Gmail signups to create, rather than doing mall outreach himself; none of his profiles made this way have been suspended
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3450)
+
+### Reviews-Per-Profile Target and Google's Suspension Escalation Steps 58:05
+- Luca, heard: SEO contacts who run straight service businesses with ads recommend waiting 2-3 days between review batches and uploading photo-only reviews at first
+  [r5 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3495)
+- Luca, claims: Google's suspension pattern is staged — first it silently removes suspicious reviews (showing as "Google user" or not posting), then flags the account, and only suspends after sustained heavy fake-review volume, roughly ~40 fake reviews/day as a rough threshold
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3520)
+
+### Luca's Profile Count: 26 Detailing Profiles, Expanding to Another City 59:36
+- Luca, tested: currently runs 26 detailing profiles (double-checked after assuming a higher number), making more, and plans to expand into another Texas city
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3580)
+
+### Wrap-Up Round: Aged Domains and Review Deletion Risk 1:00:00
+- Luca, claims: Gmail account age (1 year vs. 3 years) doesn't matter for review reliability — cheaper ($3) accounts work as well as pricier ones
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3610)
+- Luca, claims: spammy/deleted reviews on a profile make it harder for later genuine reviews to stick, so slow, steady pacing is better
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3640)
+
+### Rules for In-Person Reviews to Stick: One Per Phone, Different Wi-Fi 1:01:27
+- Luca, claims: for in-person reviews to stick, don't put two different profiles' reviews on the same person's phone, and don't have everyone review on the same Wi-Fi
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3690)
+- Luca, claims: even following those rules, a good share of in-person reviews still get dropped — Google's review-AI enforcement has gotten stricter generally, correlating with a Google terms-of-service update around April 30
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3710)
+
+### NFC Review Cards and Google Tracking Reviewer Proximity 1:02:45
+- Luca, tested: reviews from roommates or people physically near the profile owner's device get removed fast, while a review from a stranger sourced via his sister's Snapchat post (physically distant) stuck
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3790)
+- Luca, heard: suspects turning off location settings before getting a review from someone nearby might avoid the proximity-based removal, but hasn't tested it
+  [r5 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3830)
+- Luca, claims: spacing reviewers out across different physical areas and times, rather than clustering them, improves the stick rate
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3850)
+
+### Buying Aged Facebook Accounts for Marketplace Posting 1:06:06
+- Luca, heard: workaround for repeated suspensions is to buy old Facebook accounts (~$5-10 each, e.g. via `OGU`) to split-test multiple listings instead of risking one primary account
+  [r5 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3975)
+- Luca, tested: did $12K in revenue (~$8,900 profit) in one week from detailing
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4010)
+
+### Luca's $12K Week: Upselling and Getting Creative Beyond the Playbook 1:07:00
+- Luca, claims: members need to get creative in how they run the business itself rather than just replicate Eric's lead-gen method exactly
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4030)
+
+### Setting Up Detailing Profiles: Instant Verification, No Gmail Juggling 1:07:47
+- Luca, tested: detailing profiles verify near-instantly regardless of city, unlike plumbing which needs repeated Gmail/device rotation per new location; phone-code verification was done entirely with borrowed people's phone numbers, no automation
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4075)
+
+### Recruiting a 'Money-Hungry' Friend to Approach People in Person 1:08:16
+- Luca, claims: the fix for feeling too intimidating to approach strangers is to recruit a money-motivated friend to do the in-person asking, who recruits further people they know, keeping it within ~30-50 miles
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4110)
+
+### Will Reviews From a Different City Stick? Austin vs. Houston 1:09:11
+- Luca, claims: reviews sourced from a city 60+ miles from the profile's location tend not to stick — his own profile ~60 miles out is already showing this
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4160)
+
+### Targeting College Students for Review Recruitment Posts 1:09:41
+- Luca, claims: Facebook "listings" (not job posts, which some accounts can't create) targeted at teens/college students work well for recruiting review-getters — description text barely matters, but the photo does; a generic Amazon gift-card image gets few clicks
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4190)
+
+### Handling Phone Verification When Using Someone Else's Device 1:11:37
+- Luca, claims: if a phone-verification code lands on someone else's device, add your own email and choose "verify later" — it often still comes through as instant; friends', family's, or a girlfriend's family's devices all work for one-time verifications
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4300)
+
+### Volume Game: Posting Widely for Reviewer Recruitment 1:12:29
+- Luca, claims: recruiting review-getters is a volume game — post broadly and repeatedly, since most posts get seen but ignored
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4350)
+
+### Paying Reviewers $2.50-3/Review, With Incentives for Volume 1:13:23
+- Luca, claims: typical pay for reviewers is $2.50-3/review, with occasional bonuses ($5/profile-day, an Uber, or lunch) to keep a reliable reviewer motivated
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4405)
+
+### Using a Proxy or a Different City for a New GMB Setup 1:14:17
+- Luca, heard: unsure whether a proxy is needed for a new GMB profile in a different city/state — believes, untested, it will instantly verify regardless
+  [r5 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4460)
+
+### Upselling to Ceramic Coating and High-Ticket Detailing Jobs 1:15:24
+- Luca, claims: beyond base detailing, ceramic coating ($1,000-3,000, roughly annual jobs) is a higher-margin upsell
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4530)
+- Luca, tested: pays his detailer as little as $65 to fulfill a $220 job
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4545)
+
+### Optimizing for AI Chat Search Instead of Just Google 1:17:20
+- Luca, claims: plans to test optimizing for AI chat search (people asking chatbots things like "what are the best plumbers in Chicago") alongside standard GMB SEO, citing meaningful monthly search volume there
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4645)
+
+### Mendel's Struggle Finding a Review Guy on Nextdoor and Facebook 1:19:11
+- Mendel, tested: no luck finding a reliable reviewer via Facebook Marketplace or Nextdoor — his Nextdoor account got suspended after being mass-reported
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4760)
+
+### Every Business Has an Unfair Advantage 1:20:55
+- Luca, claims: floats combining paid ads with organic SEO across multiple profiles to dominate a city-sized market (Austin, ~2.5M people)
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4900)
+
+### Posting Detailer-Hiring Ads to Recruit Contractors With Their Own Rigs 1:22:11
+- Luca, tested: posting a simple "hiring mobile car detailers" listing (rather than targeting Hispanic-community groups specifically) pulled in five contractors who already had their own equipment
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4940)
+
+### Upsell Math: Pricing a $455 Detailing Job and Paying the Detailer 1:23:19
+- Luca, tested: priced one job at $275 base exterior + $150 polish upsell + ~$30 tip/tax = ~$455 billed, paid the contractor $150, netting ~$300 on the job
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5010)
+
+### Finding a Reliable, Cheap Detailer Through Personal Connections 1:24:08
+- Luca, tested: found a trusted detailer through a personal connection (a high-school acquaintance who quit an electrician job) — made a major difference in reliability
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5050)
+- Luca, claims: separately has an AC-repair lead with a $20,000 installment quote pending
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5090)
+
+### Handling Price Objections From Immigrant Clients 1:25:04
+- Luca, claims: price pushback is a buying signal, not a rejection — stay firm rather than discounting, especially on high-ticket jobs, to avoid looking "scarce"
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5115)
+
+### Sales Tonality: Why Confidence Beats Scripted Objection-Handling 1:27:36
+- Luca, claims: confidence and tonality on the call matter more than scripted responses to price objections
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5260)
+- Luca, tested: gets roughly 6-10 calls a day, closing an estimated 30-40% of them
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5400)
+- Luca, tested: roughly 80% of his bookings come through the website rather than the phone, so missed calls aren't a major concern
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5430)
+
+### Website Booking Flow: Keep It Simple, Built in Lovable 1:30:41
+- Luca, tested: builds booking websites in `Lovable`, optionally connected to `Supabase` or `Google Sheets` — keeps the booking flow as simple as possible rather than visually elaborate
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5450)
+
+### Luca's Business History: From $42K/Month Agency to Rebuilding 1:31:59
+- Luca, tested: has run businesses since 2019, previously hit $42K/month before a Google algorithm change and an LSA-based team collapse ended it
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5525)
+- Luca, claims: most home-service businesses under-invest in the technical/CRM side in favor of just running ads — attributes his own traction partly to a CRM background from prior agency work
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5600)
+- Luca, tested: before this business, was carrying a ~$10K credit card bill and overdue rent
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5650)
+
+### VA Automation and Project Blue iMessage Numbers 1:34:28
+- Luca, claims: `Project Blue` is an alternative to A2P-registered numbers (he was denied for a competing A2P service) — an iMessage-based number at ~$2.50/month, supporting FaceTime audio and `CallRail`-equivalent functionality
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5670)
+
+### Distinguishing Profiles by Caller ID With Multiple Google Voice Numbers 1:35:05
+- Luca, claims: using separate Google Voice numbers per profile lets the caller ID on an incoming call identify which business profile it's coming from
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5710)
+- Luca, claims: `Pushover` ($5 flat, not per-use) can send a missed-call push notification
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5730)
+
+### Revenue-Share Deals: Running Profiles for Other Businesses 1:36:20
+- Luca, tested: has been offered 50/50 revenue-share deals by existing businesses (e.g. a house cleaning company) to set up and run their GMB profiles, with the business owner covering costs
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5790)
+- Luca, tested: separately, a detailer paid him $2,000 just to set up and optimize two profiles
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5810)
+
+### Final Q&A: Pacing Reviews on Fresh Profiles 1:37:13
+- Luca, claims: for profiles made within the last few days, wait another 4-7 days before adding more reviews
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5840)
+- Luca, claims: Google can flag an account as fake from a mismatch between claimed bookings and zero call/click analytics on the profile, and has been getting stricter about this
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5900)
+- Luca, tested: on his own most-cautious profile, waited 12 full days, optimizing one thing per day
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5935)
+
+### Cautionary Tale: A Profile That Lost 33 of 48 Reviews 1:39:20
+- Luca, tested: a profile that had 48 reviews is now down to 15 (and headed to ~12) after reviews were spammed with near-identical wording; a review showing as anonymous "Google user" means either the reviewer's account was removed/banned or the review was about to be taken down
+  [r3 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5975)
+
+### Spacing Out Paid Reviews Without Getting Them Deleted 1:41:26
+- Luca, claims: to keep paid reviewers' reviews from being deleted, require proof (a screenshot of the posted review) before paying, and use it as leverage against reviewers who don't follow spacing instructions
+  [r4 2026-07-31](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=6100)
 
 ## transcript
 

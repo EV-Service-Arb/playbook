@@ -5,6 +5,7 @@
 - duration: 01:38:54
 - transcribed by: loom
 - read by: loom
+- claims by: `/call-digest`, 2026-10-14
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary
@@ -130,6 +131,144 @@ Participants discussed Google Business Profile verification methods (live video,
 - Henry reiterated doing A2P on Twilio to avoid repeated setup; Artheme lost ATPs when stopping a provider and advised Twilio persistence.
 - Grisha plans to finalize automation software once volume grows and may offer the package to community members; participants agreed screenshots or transcriptions would help.
 - Next steps for attendees: prioritize generating leads and GBPs, then implement dispatch automation, Twilio A2P setup, and process/payment safeguards once consistent volume exists.
+
+## claims
+
+### Review loss and appeals 0:00
+- Aidan, tested: a paid-review campaign got a chunk of his reviews deleted, dropping one profile from 22 down to 14, then 13, then 1; he filed an appeal with Google
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=40)
+- Henry, tested: has a UK profile verified on a physical address with A-plus status, but is struggling to get any US profiles to convert
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=130)
+- Henry, claims: UK plumbing jobs go for about 70 quid (~$100), well under US rates
+  [r4 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=160)
+- Eric Velch, claims: submitting a verification ticket on a profile that failed service-address or physical-address conversion often makes the live-video option appear right away
+  [r2 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=185)
+
+### Live video verification tactics 3:20
+- Sam, tested: stages the live verification inside his home office, taping a framed picture to the office door as the permanent signage
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=230)
+- Sam, tested: had Claude mock up a dashboard and invoice and printed a logo photo; tells the verifier customers book appointments in the office, shows the garage as the area customers can't visit, and says employees are out on a job while showing his own car
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=255)
+- Sam, tested: before the live video starts, the chat only asks him to confirm he's at the location by typing yes — never asks for street signs or any other proof
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=335)
+- Sam, tested: did four plumbing-profile live verifications in two days, done in the morning or afternoon to draw agents with Indian names rather than American ones
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=400)
+- Sam, tested: exits and restarts the live-video request repeatedly until an agent with an Indian name comes up, screenshotting each agent's name to track and skip repeats
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=420)
+- Sam, tested: verifies the profile first as a service address with no address shown, switches the address after approval, and if the switch fails, submits a ticket and does the live video from home
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=575)
+
+### On-the-ground review collection: table stands and campus methods 10:56
+- Eric Velch, claims: reviews count toward ranking even with no written content, though a one-sentence review with a keyword is ideal, not required
+  [r2 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=700)
+- Brian Armstrong, heard: someone got about 70 reviews in an hour running a spin-the-wheel promo, one in ten slots winning $10
+  [r5 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=1000)
+- Brian Armstrong, tested: a campus table-stand session (big "FREE" sign, snacks/drinks offer, timed right after classes let out along a busy walkway) got him to 41 reviews, far better than standing directly in front of the GBP's own address the day before
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=1587)
+- Brian Armstrong, tested: abandoned online review outreach entirely after those reviews trickled away over time; in-person response is far better, especially since online he wasn't even checking whether the person he messaged was in the right city
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=1739)
+
+### Hiring and compensation models for reviewers 31:48
+- John Osayi, tested: paying $25 for the first hour plus $1 per review that lands keeps people going out more than a flat $3-per-review rate did
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=1984)
+- John Osayi, tested: got over 100 reviews across five profiles in two weeks this way, taking one profile from 0 to 61 and another from roughly 190 up to 211
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2015)
+- John Osayi, tested: a vague Craigslist ad ("simple job, $30 to $50 an hour") draws 20 to 30 responses, though most people flake after a try or two
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2076)
+- John Osayi, tested: telling reviewers they don't have to talk to anyone — just hold the sign and QR code, wave, and smile — gets more people willing to go out; pays via PayPal, tallying at day's end only what stuck
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2168)
+
+### Account security, Gmail/workspace management, and verification stability 37:24
+- Charlie, tested: GBPs set up on purchased Gmail accounts got locked out, needing an appeal, after logging into them all from one IP and then verifying with his own cell number
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2260)
+- Artheme Chaykin, tested: taking over a purchased Gmail account, he adds a secondary TutaMail email, verifies it, changes the phone number, turns on two-factor authentication, and removes every previous device and number — skipping that cost him access about a dozen times before he figured it out
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2330)
+- Grisha G, heard: keeping Gmail logins on one dedicated device with a real data plan, away from personal devices, should let him approve new logins from that device instead of getting flagged for logging in from too many devices
+  [r5 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2420)
+- Gabe Jacobs, tested: runs his Gmail accounts through Google Workspace's free Cloud Identity Free tier under his business domain rather than paying $8/month, which makes each account look like a real business and keeps every email under one controlling account
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2550)
+- Gabe Jacobs, tested: if a Gmail or Workspace account is suspended, transferring the business profile to a healthy Gmail and appealing works — it's usually a "soft" suspension, approved again within a day, after which the profile can be re-verified; Google treats each profile as its own entity rather than suspending every profile on one account at once
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2640)
+
+### Dating-app methods for review acquisition 45:00
+- Eric Velch, tested: his "Erica" Hinge profile — verified with a real face, created as male then switched to female — got 20 likes and a rose within about an hour
+  [r2 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2716)
+- Eric Velch, claims: what matters for a review not getting deleted is that it's a real local account with no spammy signs like duplicate reviews; mixing collection methods is riskier only because a mistake on one method makes the whole profile more sensitive to deletions afterward
+  [r2 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2749)
+- Tony, tested: verified a service-area-business profile instantly on an old personal Gmail account that had the paid "circle" badge from a Google One subscription
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2782)
+- Eric Velch, claims: once a Gmail account instantly verifies one profile, a second profile on it is unlikely to instantly verify — try personal, friends', and family's aged accounts for instant verification before doing video verification
+  [r2 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2815)
+- Eric Velch, claims: Square gives instant payouts with no account warm-up period and supports a tipping option that Stripe doesn't, which can bring in extra pure-profit tips of 20%+
+  [r2 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=2947)
+- Eric Velch, claims: unmatching the person on the dating app after the review stops them finding the old messages if they get upset and try to post a bad review; telling them to use incognito keeps nothing saved on their side either
+  [r2 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=3013)
+
+### Phone verification, Twilio and call forwarding setup 53:14
+- Henry, tested: one Twilio A2P verification lets him create unlimited numbers that can all text, at about $0.89/month per number, instead of re-doing A2P for every number
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=3210)
+- Henry, tested: connecting Twilio at the GoHighLevel agency level lets every sub-account port in numbers and forward calls, and Twilio can run the IVR for them too
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=3280)
+
+### Payment processor options and risk management 55:12
+- Gabe Jacobs, tested: uses Solo Payments over Stripe or Square because, though Solo can still freeze funds and verify, it works with higher-risk merchants and charges about 3% or less
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=3360)
+- Gabe Jacobs, claims: getting pre-approved by a high-risk-friendly processor before scaling avoids the 120-day hold that can hit an account mid-stream once revenue is already coming in
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=3420)
+
+### Google Business Profile re-verification and fake document tactics 58:25
+- Eric Velch, tested: for a fake re-verification document, matching the local utility provider, editing the numbers in Canva, then printing and photographing the printout (instead of submitting the digital file) strips the metadata that would otherwise flag it as edited
+  [r2 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=3550)
+- Snack Attack, tested: got into trouble on one listing after submitting a re-verification document whose metadata hadn't been scrubbed
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=3620)
+
+### Live verification with Google Business Support (how-to) 1:01:38
+- Gabe Jacobs, tested: on Google's Business Support page, scroll to the bottom, click "contact us," pick the business profile, type "Business Eligibility," and request a phone call or chat — doing this during regular business hours gets a much better shot at reaching a live agent
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=3800)
+- Gabe Jacobs, tested: telling the support agent the video upload is glitching gets escalated to the verification team, which then enables the live-video option on that profile, usually within a couple of days, sometimes instantly
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=3900)
+- Gabe Jacobs, tested: if live video isn't offered, first getting a service-address verification to actually pass and then switching the address unlocks instant live verification on the next try; trying a different Google account also works if an account has already gone down that path once before
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=4050)
+
+### A2P, Twilio, CallRail, GHL and call/analytics setup 1:08:48
+- Henry, tested: Twilio's A2P verification carries across every sub-account once done on the main account, while CallRail numbers can't be used for GBP verification at all and cost more per number than Twilio
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=4160)
+- Henry, claims: connecting Twilio and GoHighLevel through Claude can automate buying a number, setting up its IVR, and wiring it into the right sub-account just by describing what's needed
+  [r4 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=4230)
+
+### Designing dispatch/automation software for plumbing operations 1:11:32
+- Grisha G, tested: built a plumbing dispatch platform (Hostinger + GitHub + Vercel) where a VA enters job details and the system auto-texts his networked plumbers ranked by proximity via Twilio; the first to reply "yes" gets a link to create the invoice and payment link through Stripe, and a forfeited job gets re-broadcast, eventually to a different company for a smaller commission if nobody takes it
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=4350)
+- Grisha G, tested: keeps portal logins open as long as possible so plumbers don't have to re-authenticate every time they want to create an invoice
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=4500)
+- Eric Velch, claims: building dispatch software is premature before volume justifies it — focus on maximizing leads and jobs first, and only automate once one VA can no longer keep up manually
+  [r2 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=4600)
+
+### Scheduling approach, emergency pricing, and plumber network management 1:18:02
+- Grisha G, tested: giving a vague arrival window ("between 4 and 6") rather than an exact time cuts no-show pressure, but jobs scheduled more than a day or two out need a reminder beforehand since plumbers tend to be disorganized
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=4700)
+- Artheme Chaykin, tested: a $500 minimum emergency fee for late-night calls usually gets the caller to agree to next-day scheduling instead once they hear the price
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=4750)
+- Artheme Chaykin, tested: never tells a caller he can't come — instead cold-calls through his whole plumber list, including new ones, until someone takes the job
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=4850)
+- Artheme Chaykin, tested: switching one aged profile from a service-area listing to a physical-address listing, with Eric's help, roughly quadrupled its call volume; that one profile alone now brings in 60-80% of his calls
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=5100)
+- Artheme Chaykin, claims: hasn't gotten any calls from his own website and doesn't think on-site SEO moves the needle much — naming, location, and reviews are the big three
+  [r4 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=5300)
+- Artheme Chaykin, tested: finds plumbers by scraping his local trade-license board's public member list and cold-calling them, and by photographing and calling numbers on trade trucks he spots while driving — truck owners are often not running their own GBP or website yet
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=5400)
+- Artheme Chaykin, tested: taking payments directly, or even just presenting yourself as the plumbing company without taking payment, puts you on the hook if the job goes wrong — a subcontracted plumber of his turned out licensed for industrial, not commercial, work, and local lawyers confirmed a suing client goes after whoever received the payment
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=5550)
+
+### Scaling focus: lead volume, ATP persistence and next steps 1:34:11
+- Artheme Chaykin, claims: without a website, a bare GBP with no distinct brand name is very hard for anyone to come after legally — the licensing exposure is tied mainly to the website, not the listing
+  [r4 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=5680)
+- Henry, claims: doing A2P on Twilio rather than GoHighLevel means it only has to be done once, since GHL's A2P doesn't carry over if the account is cancelled
+  [r4 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=5700)
+- Artheme Chaykin, tested: lost all his A2P registrations when he stopped his GHL provider, despite being told they would be preserved
+  [r3 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=5750)
+- Grisha G, claims: plans to finish his dispatch-automation software once lead volume grows, then offer it as a package to the rest of the community
+  [r4 2026-09-11](https://www.loom.com/share/1eae977e2bc84cbd8b80a3b38506fe9f?t=5850)
 
 ## transcript
 
