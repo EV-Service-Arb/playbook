@@ -4,6 +4,7 @@ use std::{
 };
 
 use clap::{Parser, Subcommand, ValueEnum};
+use playbook::{Corpus, Found};
 use v_utils::io::{ConfirmResult, confirmation};
 
 const PLATFORMS: [&str; 5] = ["ref/loom", "ref/fathom", "ref/drive", "ref/vimeo", "ref/vocaroo"];
@@ -36,6 +37,29 @@ enum Cmd {
 		#[arg(long)]
 		every: Option<f64>,
 	},
+	/// The member server's `search`, over this checkout
+	Search {
+		/// a regex, case-insensitive. Alternate synonyms and likely mis-transcriptions with `|`
+		pattern: String,
+		/// a path prefix to search under, e.g. `ref/loom` or `structured/approved/profile`
+		#[arg(long)]
+		scope: Option<String>,
+		/// search what recordings showed on screen instead of what was said
+		#[arg(long)]
+		screen: bool,
+	},
+	/// The member server's `read`: one chapter or section, whole
+	Read {
+		/// a path as `search` returned it
+		path: String,
+		/// part of the header line of the chapter or section to read
+		header: String,
+		/// a line number inside the chapter, when the header text repeats in the file
+		#[arg(long)]
+		line: Option<usize>,
+	},
+	/// The member server's `guide`: how to decide, for one area
+	Guide { section: String },
 }
 
 #[derive(Clone, Copy, ValueEnum)]
@@ -56,7 +80,27 @@ struct Capture {
 }
 
 fn main() {
-	let Cmd::ReTranscribe { what, paths, execute, legacy, every } = Cli::parse().command;
+	let corpus = || {
+		let (files, decay_days) = playbook::tree(&repo_root());
+		let files: Vec<(&'static str, &'static str)> = files.into_iter().map(|(p, t)| (&*p.leak(), &*t.leak())).collect();
+		Corpus::new(&files, decay_days)
+	};
+	let found = match Cli::parse().command {
+		Cmd::ReTranscribe { what, paths, execute, legacy, every } => return re_transcribe(what, paths, execute, legacy, every),
+		Cmd::Search { pattern, scope, screen } => corpus().search(&pattern, scope.as_deref(), screen),
+		Cmd::Read { path, header, line } => corpus().read(&path, &header, line),
+		Cmd::Guide { section } => corpus().guide(&section),
+	};
+	match found {
+		Ok(Found { text, .. }) => print!("{text}"),
+		Err(e) => {
+			eprintln!("{e}");
+			std::process::exit(1);
+		}
+	}
+}
+
+fn re_transcribe(what: What, paths: Vec<PathBuf>, execute: bool, legacy: bool, every: Option<f64>) {
 	let pick: Vec<String> = match (what, legacy, every) {
 		(What::Picture, true, _) => vec!["--legacy".into()],
 		(What::Picture, false, every) => every.into_iter().flat_map(|e| ["--every".to_string(), e.to_string()]).collect(),

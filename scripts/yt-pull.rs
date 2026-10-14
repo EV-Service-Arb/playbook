@@ -27,6 +27,9 @@ tokio = { version = "1", features = ["full"] }
 //! chapters, a summary and the description. Chapters are youtube's where it has them and
 //! the model's reading of the transcript where it does not.
 //!
+//! The model also lists the claims the video makes, each at its second, rated per docs/ARCHITECTURE.md's
+//! `## Reliability` by the group it names for the speaker.
+//!
 //! Enrichment that cannot be produced aborts the video and writes nothing. The md file existing is
 //! what makes the next run skip it, so a half-written one would never be repaired.
 
@@ -44,6 +47,9 @@ const INDEX: &str = "ref/youtube/README.md";
 const BLOCK: f64 = 30.;
 const SUMMARY: &str = "SUMMARY";
 const SECTIONS: &str = "SECTIONS";
+const SPEAKERS: &str = "SPEAKERS";
+const CLAIMS: &str = "CLAIMS";
+const MARKS: [&str; 4] = [SUMMARY, SECTIONS, SPEAKERS, CLAIMS];
 
 struct Index {
 	checked: String,
@@ -273,6 +279,7 @@ async fn video(id: &str, tmp: &Path, shots: &Path, pick: Pick) -> Option<String>
 		Some(chapters) => chapters.into_iter().map(|Chapter { at, title }| (at, title)).collect(),
 		None => derived(&answer.text, id, video.duration),
 	};
+	let claims = claims(&answer.text, id, video.duration);
 
 	// a video from an earlier run would be picked up as this one's
 	if tmp.exists() {
@@ -308,6 +315,7 @@ async fn video(id: &str, tmp: &Path, shots: &Path, pick: Pick) -> Option<String>
 		 - duration: {}\n\
 		 - pulled by: `scripts/yt-pull.rs`\n\
 		 - read by: `{}` summary and chapters, {shown_by}\n\
+		 - claims by: `{}`, {}{}\n\
 		 - cost: ${:.4}\n\
 		 \n\
 		 ## summary\n\
@@ -317,6 +325,9 @@ async fn video(id: &str, tmp: &Path, shots: &Path, pick: Pick) -> Option<String>
 		video.uploaded,
 		hms(video.duration),
 		answer.model,
+		answer.model,
+		jiff::Zoned::now().date(),
+		if claims.is_empty() { " — none" } else { "" },
 		(answer.cost_cents + watched.cost_cents) as f64 / 100.,
 	);
 	for line in marked(&answer.text, SUMMARY, id) {
@@ -336,6 +347,28 @@ async fn video(id: &str, tmp: &Path, shots: &Path, pick: Pick) -> Option<String>
 			out.push_str(&format!("  > {}\n", text.replace('\n', " / ")));
 		}
 		out.push_str(&format!("  ![]({id}/{secs}.jpg)\n"));
+	}
+
+	if !claims.is_empty() {
+		out.push_str("\n## claims\n");
+		let uploaded = &video.uploaded.to_string()[..10];
+		for (i, (at, heading)) in sections.iter().enumerate() {
+			let until = sections.get(i + 1).map_or(f64::INFINITY, |(next, _)| *next);
+			let under: Vec<&(u64, u8, String)> = claims.iter().filter(|(secs, ..)| (*at..until).contains(&(*secs as f64))).collect();
+			if under.is_empty() {
+				continue;
+			}
+			let at = *at as u64;
+			let stamp = match at >= 3600 {
+				true => format!("{}:{:02}:{:02}", at / 3600, at % 3600 / 60, at % 60),
+				false => format!("{}:{:02}", at / 60, at % 60),
+			};
+			out.push_str(&format!("\n### {heading} {stamp}\n"));
+			for (secs, base, claim) in under {
+				out.push_str(&format!("- {claim}\n  [r{base} {uploaded}]({WATCH}{id}&t={secs})\n"));
+			}
+		}
+		assert!(claims.iter().all(|(secs, ..)| *secs as f64 >= sections[0].0), "the model placed a claim of {id} before its first chapter: {claims:?}");
 	}
 
 	if let Some(description) = &video.description {
@@ -407,6 +440,20 @@ fn prompt(title: &str, blocks: &[(f64, String)], want_sections: bool) -> String 
 			 section where the speaker turns to a new thing.\n"
 		));
 	}
+	ask.push_str(&format!(
+		"\n{SPEAKERS}\n\
+		 One line per person who speaks, `<who>: <group>`, who being their name in full as the video gives \
+		 it. Group is `eric` for Eric Velch, whose channel this is; `gmbpp` for a member of his GMB Passive \
+		 Profits group, and anyone else he hosts; `cheap` for a member of the 20k mo drop servicing \
+		 blueprint group.\n\
+		 \n{CLAIMS}\n\
+		 One line per claim the video makes about running Google Business Profiles into trade work, \
+		 `<seconds> <who>, <mode>: <claim>`. Seconds are the whole-number offset where it is said, who \
+		 a name from {SPEAKERS}, mode `tested` for what they ran themselves and saw the result of, \
+		 `claims` for what they assert, `heard` for what they were told or are guessing. The claim is \
+		 one terse lowercase line with its numbers, in the speaker's terms. Only what is said, at the \
+		 second it is said. `none` alone if the video claims nothing.\n"
+	));
 	ask.push_str("\n--- transcript ---\n");
 	for (at, words) in blocks {
 		ask.push_str(&format!("{} {words}\n", *at as u64));
@@ -423,7 +470,7 @@ fn marked<'a>(answer: &'a str, mark: &str, id: &str) -> Vec<&'a str> {
 		.unwrap_or_else(|| panic!("the model was asked for a `{mark}` block on {id}, and answered:\n{answer}"));
 	let block: Vec<&str> = lines
 		.map(str::trim)
-		.take_while(|l| !matches!(*l, SUMMARY | SECTIONS))
+		.take_while(|l| !MARKS.contains(l))
 		.filter(|l| !l.is_empty())
 		.collect();
 	assert!(!block.is_empty(), "the `{mark}` block on {id} is empty:\n{answer}");
@@ -442,4 +489,37 @@ fn derived(answer: &str, id: &str, duration: f64) -> Vec<(f64, String)> {
 		.collect();
 	assert!(sections.windows(2).all(|w| w[0].0 < w[1].0), "the model's sections for {id} do not run in order: {sections:?}");
 	sections
+}
+
+/// `(secs, base, "<who>, <mode>: <claim>")`, the base per docs/ARCHITECTURE.md#reliability.
+fn claims(answer: &str, id: &str, duration: f64) -> Vec<(u64, u8, String)> {
+	let speakers: BTreeMap<&str, &str> = marked(answer, SPEAKERS, id)
+		.iter()
+		.map(|l| l.rsplit_once(": ").unwrap_or_else(|| panic!("a `{SPEAKERS}` line on {id} is `<who>: <group>`, and reads {l:?}")))
+		.collect();
+	let lines = marked(answer, CLAIMS, id);
+	if lines == ["none"] {
+		return Vec::new();
+	}
+	lines
+		.iter()
+		.map(|line| {
+			let bad = format!("a `{CLAIMS}` line on {id} is `<seconds> <who>, <mode>: <claim>`, and reads {line:?}");
+			let (at, claim) = line.split_once(' ').unwrap_or_else(|| panic!("{bad}"));
+			let at: u64 = at.parse().unwrap_or_else(|e| panic!("{bad}: {e}"));
+			assert!((at as f64) < duration, "the model placed a claim of {id} at {at}s, past its {duration}s");
+			let (who, mode) = claim.split_once(": ").and_then(|(said, _)| said.rsplit_once(", ")).unwrap_or_else(|| panic!("{bad}"));
+			let group = speakers.get(who).unwrap_or_else(|| panic!("a claim on {id} is by {who:?}, whom `{SPEAKERS}` does not list: {speakers:?}"));
+			let base = match (*group, mode) {
+				("eric", "tested" | "claims" | "heard") => 2,
+				("gmbpp", "tested") => 3,
+				("gmbpp", "claims") => 4,
+				("gmbpp", "heard") | ("cheap", "tested") => 5,
+				("cheap", "claims") => 6,
+				("cheap", "heard") => 7,
+				_ => panic!("a claim on {id} is by a speaker of group {group:?} in mode {mode:?}, which docs/ARCHITECTURE.md#reliability rates nothing"),
+			};
+			(at, base, claim.to_string())
+		})
+		.collect()
 }

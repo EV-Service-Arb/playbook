@@ -1,9 +1,10 @@
-use std::{cmp::Reverse, fmt::Write, sync::LazyLock};
+//! The playbook's search, read and guide, over `skill/`, `structured/` and `ref/`: baked into the
+//! member server, and read off the checkout by the `playbook` binary, so both rank the same way.
+
+use std::{cmp::Reverse, fmt::Write, fs, path::Path, sync::LazyLock};
 
 use regex::{Regex, RegexBuilder};
 use regex_syntax::ast::{Ast, parse::Parser};
-
-include!(concat!(env!("OUT_DIR"), "/corpus.rs"));
 
 const PER_SOURCE: usize = 2;
 const CHUNK: usize = 2_000; // chars of blocks a capture's chunk packs, so a long chapter is not one bag of words
@@ -44,6 +45,8 @@ struct Doc {
 	chunk: Vec<usize>,
 	/// per line, whether it reads what a recording showed rather than what was said
 	screen: Vec<bool>,
+	/// per line, the `## ` section it sits in
+	section: Vec<&'static str>,
 	/// a capture's own date; structured notes date each claim instead
 	date: Option<&'static str>,
 	source: Option<&'static str>,
@@ -51,6 +54,8 @@ struct Doc {
 
 pub struct Corpus {
 	docs: Vec<Doc>,
+	sections: Vec<(&'static str, &'static str)>,
+	decay_days: f64,
 }
 
 pub struct Found {
@@ -58,11 +63,49 @@ pub struct Found {
 	pub ids: Vec<String>,
 }
 
-pub static CORPUS: LazyLock<Corpus> = LazyLock::new(Corpus::load);
+/// `(path, text)` of every file the corpus reads under `root`, and cite-check.rs's `DECAY_DAYS`.
+pub fn tree(root: &Path) -> (Vec<(String, String)>, f64) {
+	// `README.md`s are indices and format rules, not knowledge. `ref/cases/` states no source and no date
+	fn walk(dir: &Path, files: &mut Vec<std::path::PathBuf>) {
+		for entry in fs::read_dir(dir).unwrap_or_else(|e| panic!("{}: {e}", dir.display())) {
+			let path = entry.unwrap().path();
+			if path.ends_with("ref/cases") {
+				continue;
+			}
+			if path.is_dir() {
+				walk(&path, files);
+			} else if path.extension().is_some_and(|e| e == "md") && path.file_name().unwrap() != "README.md" {
+				files.push(path);
+			}
+		}
+	}
+	let mut paths = Vec::new();
+	for dir in ["skill/service-arb/sections", "structured/approved", "structured/suggested", "ref"] {
+		walk(&root.join(dir), &mut paths);
+	}
+	paths.sort();
+	let files = paths
+		.into_iter()
+		.map(|p| {
+			let text = fs::read_to_string(&p).unwrap_or_else(|e| panic!("{}: {e}", p.display()));
+			(p.strip_prefix(root).unwrap().to_str().expect("corpus paths are utf-8").to_owned(), text)
+		})
+		.collect();
+	let cite_check = fs::read_to_string(root.join("scripts/cite-check.rs")).expect("the checkout holds scripts/cite-check.rs");
+	let decay_days = cite_check
+		.lines()
+		.find_map(|l| l.strip_prefix("const DECAY_DAYS: f64 = ")?.strip_suffix(".;"))
+		.expect("cite-check.rs states `const DECAY_DAYS: f64 = <n>.;`")
+		.parse()
+		.expect("an integer, per the pattern above");
+	(files, decay_days)
+}
 
 impl Corpus {
-	fn load() -> Self {
-		let mut docs: Vec<Doc> = FILES
+	/// `files` as `tree` reads them
+	pub fn new(files: &[(&'static str, &'static str)], decay_days: f64) -> Self {
+		let sections = files.iter().filter_map(|&(p, t)| Some((p.strip_prefix("skill/service-arb/sections/")?.strip_suffix(".md")?, t))).collect();
+		let mut docs: Vec<Doc> = files
 			.iter()
 			.filter(|(p, _)| !p.starts_with("skill/"))
 			.map(|&(path, text)| {
@@ -74,7 +117,7 @@ impl Corpus {
 					p if p.starts_with("ref/youtube/") => Kind::Video,
 					p if p.starts_with("ref/") && lines.contains(&"## transcript") => Kind::Call,
 					p if p.starts_with("ref/") => Kind::Text,
-					p => unreachable!("build.rs bakes only structured/ and ref/ besides skill/: {p}"),
+					p => unreachable!("`tree` reads only structured/ and ref/ besides skill/: {p}"),
 				};
 				let mut current = None;
 				let chapter = lines
@@ -87,16 +130,17 @@ impl Corpus {
 						current
 					})
 					.collect();
-				let mut screen = path.ends_with("/shown.md");
-				let screen = lines
+				let mut current = "";
+				let section: Vec<&str> = lines
 					.iter()
 					.map(|l| {
 						if l.starts_with("# ") || l.starts_with("## ") {
-							screen = path.ends_with("/shown.md") || *l == "## shown";
+							current = l;
 						}
-						screen
+						current
 					})
 					.collect();
+				let screen = section.iter().map(|s| path.ends_with("/shown.md") || *s == "## shown").collect();
 				let chunk = match kind {
 					Kind::Approved | Kind::Suggested => {
 						let mut current = 0;
@@ -109,15 +153,26 @@ impl Corpus {
 							})
 							.collect()
 					}
-					_ => chunks(&lines),
+					_ => {
+						// a claim of the digest is a chunk to itself, like a note's bullet
+						let mut chunk = chunks(&lines);
+						let mut current = 0;
+						for i in (0..lines.len()).filter(|&i| section[i] == "## claims") {
+							if lines[i].starts_with('#') || lines[i].starts_with("- ") {
+								current = i;
+							}
+							chunk[i] = current;
+						}
+						chunk
+					}
 				};
 				let meta = |key: &str| lines.iter().find_map(|l| l.strip_prefix(key));
 				let date = ["- recorded: ", "- uploaded: ", "- updated: ", "- pulled: "].iter().find_map(|k| meta(k)).map(|d| &d[..10]);
 				let source = meta("- source: ").map(|s| s.trim_matches(['<', '>']));
-				Doc { path, kind, lines, chapter, chunk, screen, date, source }
+				Doc { path, kind, lines, chapter, chunk, screen, section, date, source }
 			})
 			.collect();
-		let lessons: Vec<&str> = FILES.iter().filter(|(p, _)| p.starts_with("ref/skool_") && p.contains("/course/")).map(|(_, t)| *t).collect();
+		let lessons: Vec<&str> = files.iter().filter(|(p, _)| p.starts_with("ref/skool_") && p.contains("/course/")).map(|(_, t)| *t).collect();
 		for d in docs.iter_mut().filter(|d| matches!(d.kind, Kind::Call | Kind::Video | Kind::Text)) {
 			let within = d.lines.iter().find_map(|l| l.strip_prefix("- within: <")?.split_once('>')).map(|(u, _)| u);
 			let linked = |url: &str| {
@@ -144,7 +199,7 @@ impl Corpus {
 				assert!(channel == "eric", "ref/youtube/{channel}: no base reliability for the channel; give it a row in docs/ARCHITECTURE.md#reliability and arms in `Doc::reliability` and `Doc::effective`");
 			}
 		}
-		Self { docs }
+		Self { docs, sections, decay_days }
 	}
 
 	pub fn search(&self, pattern: &str, scope: Option<&str>, screen: bool) -> Result<Found, String> {
@@ -180,6 +235,7 @@ impl Corpus {
 		struct File<'a> {
 			doc: &'a Doc,
 			hits: Vec<Hit>,
+			score: f64,
 			effective: f64,
 		}
 		let mut files: Vec<File> = Vec::new();
@@ -203,7 +259,7 @@ impl Corpus {
 				hit.branches.iter_mut().zip(on_line).for_each(|(h, l)| *h |= l);
 			}
 			if !hits.is_empty() {
-				files.push(File { doc, hits, effective: 0. });
+				files.push(File { doc, hits, score: 0., effective: 0. });
 			}
 		}
 		if in_scope.len() >= 5 && files.len() as f64 > in_scope.len() as f64 * BROAD {
@@ -224,20 +280,21 @@ impl Corpus {
 				(1. + (n - df + 0.5) / (df + 0.5)).ln()
 			})
 			.collect();
-		let today = crate::now() / 86_400;
+		let today = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs() as i64 / 86_400;
 		for f in &mut files {
 			for h in &mut f.hits {
 				h.score = h.branches.iter().zip(&idf).filter(|(b, _)| **b).map(|(_, idf)| idf).sum();
 			}
-			// between equals, the words as said over a digest of them: the quote and its second come from the transcript
+			f.score = f.hits.iter().map(|h| h.score).fold(0., f64::max);
+			// the digest's claims, then its summary, before the words as said: a claim carries its own second
 			let doc = f.doc;
-			f.hits.sort_by(|a, b| b.score.total_cmp(&a.score).then(doc.said(b.start).cmp(&doc.said(a.start))));
+			f.hits.sort_by(|a, b| doc.digested(a.start).cmp(&doc.digested(b.start)).then(b.score.total_cmp(&a.score)));
 			f.hits.truncate(PER_SOURCE);
-			f.effective = f.doc.effective(f.hits[0].start, today);
+			f.effective = f.doc.effective(f.hits[0].start, today, self.decay_days);
 		}
 		files.sort_by(|a, b| {
 			a.doc.kind.cmp(&b.doc.kind)
-				.then(b.hits[0].score.total_cmp(&a.hits[0].score))
+				.then(b.score.total_cmp(&a.score))
 				.then(a.effective.total_cmp(&b.effective))
 				.then(b.doc.date.cmp(&a.doc.date))
 		});
@@ -349,12 +406,11 @@ impl Corpus {
 	}
 
 	pub fn guide(&self, section: &str) -> Result<Found, String> {
-		let path = format!("skill/service-arb/sections/{section}.md");
-		FILES
+		self.sections
 			.iter()
-			.find(|(p, _)| *p == path)
+			.find(|(s, _)| *s == section)
 			.map(|(_, text)| Found { text: text.to_string(), ids: vec![section.to_owned()] })
-			.ok_or_else(|| format!("no section `{section}`. {GUIDE_DESCRIPTION}"))
+			.ok_or_else(|| format!("no section `{section}`. Sections: {}.", self.sections.iter().map(|(s, _)| *s).collect::<Vec<_>>().join(", ")))
 	}
 }
 
@@ -376,8 +432,14 @@ impl Doc {
 		self.lines.iter().enumerate().filter(|(_, l)| l.starts_with('#')).map(|(i, l)| format!("line {}: {l}", i + 1)).collect::<Vec<_>>().join("\n")
 	}
 
-	fn said(&self, line: usize) -> bool {
-		self.lines[..=line].iter().rev().find(|l| l.starts_with("# ") || l.starts_with("## ")) == Some(&"## transcript")
+	/// how far from the digest `line` sits: its claims, its summary, the rest, then the transcript
+	fn digested(&self, line: usize) -> u8 {
+		match self.section[line] {
+			"## claims" => 0,
+			"## summary" => 1,
+			"## transcript" => 3,
+			_ => 2,
+		}
 	}
 
 	fn header(&self, line: usize) -> &str {
@@ -389,6 +451,7 @@ impl Doc {
 		let date = || self.date.expect("asserted on load");
 		match self.kind {
 			Kind::Approved | Kind::Suggested => self.citation(line).map_or("unsourced".into(), |(r, d)| format!("r{r} {d}")),
+			_ if let Some((r, d)) = self.claim(line) => format!("r{r} {d}"),
 			_ if self.screen[line] => format!("a reading of the screen · {}", date()),
 			Kind::Course => format!("r1 course · {}", date()),
 			Kind::Video => format!("r2 Eric · {}", date()),
@@ -401,18 +464,25 @@ impl Doc {
 		(line..self.chapter_end(line)).find_map(|i| CITATION.captures(self.lines[i])).map(|c| (c[1].parse().unwrap(), c.get(2).unwrap().as_str()))
 	}
 
+	/// the citation of the digest's claim at `line`
+	fn claim(&self, line: usize) -> Option<(u8, &'static str)> {
+		let bullet = self.section[line] == "## claims" && self.lines[line].starts_with("- ");
+		bullet.then(|| self.citation(line).unwrap_or_else(|| panic!("{}:{}: a claim with no citation; run cite-check.rs", self.path, line + 1)))
+	}
+
 	/// docs/ARCHITECTURE.md#reliability: base plus age, lower is better; a call is held at its best speaker's base
-	fn effective(&self, line: usize, today: i64) -> f64 {
+	fn effective(&self, line: usize, today: i64, decay_days: f64) -> f64 {
 		let (base, date) = match self.kind {
 			Kind::Approved | Kind::Suggested => match self.citation(line) {
 				Some((r, d)) => (r as f64, d),
 				None => return WORST,
 			},
+			_ if let Some((r, d)) = self.claim(line) => (r as f64, d),
 			Kind::Course => (1., self.date.unwrap()),
 			Kind::Video | Kind::Call => (2., self.date.unwrap()),
 			Kind::Text => return WORST,
 		};
-		(base + (today - days(date)) as f64 / DECAY_DAYS).min(WORST)
+		(base + (today - days(date)) as f64 / decay_days).min(WORST)
 	}
 }
 
