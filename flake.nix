@@ -81,6 +81,8 @@
           about = "scripts/*.rs: call/skool/yt/doc/chatgpt pullers, cite-check, photo-metadata (rust nightly from `nix develop`)\n";
         };
 
+        apps.publish = v_flakes.utils.publish pkgs;
+
         packages = containerStd.packages // { inherit playbook_web; };
         containers = containerStd.containers;
 
