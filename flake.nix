@@ -50,7 +50,7 @@
           };
           cargoLock = {
             lockFile = ./Cargo.lock;
-            outputHashes."sa_auth-0.1.0" = "sha256-hxDAZwZNpOA3C5OqY5rcuStGTKG9gsCDMdpipWQNQu8=";
+            allowBuiltinFetchGit = true;
           };
           cargoBuildFlags = [ "-p" "playbook_web" ];
           cargoTestFlags = [ "-p" "playbook_web" ];
