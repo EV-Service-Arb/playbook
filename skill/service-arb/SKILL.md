@@ -26,13 +26,13 @@ suspension), `ranking` (naming, categories, reviews), `conversion`, `fulfilment`
 
 ## Answering
 
-Reliability decides the answer, not recency or how vivid a story is. `r<base>`, lower is better: 0 we tested, 1 course, 3-4 a gmbpp member, 5-7 the cheap group; a person on [the list](../../docs/ARCHITECTURE.md#people) has their own. effective = base + age in days / [`DECAY_DAYS`](../../scripts/cite-check.rs): a course lesson a year old beats yesterday's member call.
+Reliability decides the answer, not recency or how vivid a story is. `r<base>`, lower is better: 0 we tested, 1 course, 3-4 a gmbpp member, 5-7 the cheap group; a person on [the list](../../docs/ARCHITECTURE.md#people) has their own. effective = base + age in days / [`DECAY_DAYS`](../../scripts/cite-check.rs).
 
 - read the course first: `ref/skool_*/course/`, then the captures its lessons link (`video:` and inline URLs, found in ref/ by id). Those are course material too
 - then structured/approved, suggested, the rest of ref/. two hits per source at most
 - last pass: nothing dated after your newest citation says otherwise
 - build from the best effective number down. What only r3+ says never becomes a checklist item or a "don't": it goes after the advice as a caveat, with who and when. Sources disagree: the better number leads
-- attribute each claim to who said it, as often as they said it, from the transcript
+- attribute each claim to who said it, from the transcript
 - corpus silent: say so, name the nearest thing it covers
 - advising: read the matching section first
 
@@ -76,4 +76,4 @@ Only in a checkout; the remote server has none of these.
 - [call-digest](../../.claude/skills/call-digest/SKILL.md): a capture whose `read by:` says `nothing yet`
 - `../verif_tools`, only if it exists: `prepare-verif` builds the paper pack for an address, `submit-live` fills Google's live-verification form in your Chrome
 - `../accounting`, only if it exists: `accountant`, for what was spent and is owed
-- `scripts/photo-metadata.rs <dir> --city <city>`: the EXIF of a directory of photos, and synthetic per-city sidecars
+- `scripts/photo-metadata.rs <dir> --city <city>`: gen metadata for photos
