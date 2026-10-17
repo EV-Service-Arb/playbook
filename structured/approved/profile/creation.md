@@ -6,3 +6,6 @@
 - do NOT connect site until the profile verifies
   Eric just said not to
   [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=285)
+
+- for ownership a new email is fine
+  [r2 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=3402)
