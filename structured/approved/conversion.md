@@ -21,3 +21,11 @@
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2192)
 
   // this is also the guy with review tables
+
+## facts
+- a few people had their phone / CallRail spam-prevention setup fully blocking calls
+  one missed ~10 plumbing calls in a week to it
+  [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=2614)
+  [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=2619)
+  > the other suspect is the iPhone's silence-unknown-callers filter
+  [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=2593)

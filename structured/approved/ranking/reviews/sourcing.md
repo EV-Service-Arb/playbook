@@ -54,6 +54,11 @@
   [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2684)
   [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=124)
 
+- collecting reviews for a plumber brother, positioning it as a surprise, a-la he's the best on the team and deserves his own business
+  The Little Volcano walked a college campus with it; there is no brother
+  [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1863)
+  [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1891)
+
 - Gabe Jacobs: massive advice on automating checking people coming from ads
   has a form on a site that checks device fingerprint, geolocation, IP location, tz, etc. Then score them. Lol, actual bookie tactics
   [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1916)
