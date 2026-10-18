@@ -48,7 +48,7 @@ ref/
 ├── drive/<date>-<title>-<id>.md  # the same, for recordings in a shared drive folder
 ├── vimeo/ · vocaroo/             # the same, for hosts the registry line names and dates
 ├── <platform>/<capture>/         # beside a call capture: what its recording shows
-│   ├── recording.<ext>           # as the host serves it, 720p where there is a choice — gitignored; see LFS
+│   ├── recording.<ext>           # as the host serves it, 720p where there is a choice — gitignored, bar what LFS keeps
 │   ├── shown.md                  # what is on screen that the speech does not say, by `call-watch.rs`
 │   └── frames/<secs>.jpg         # the frame each line of `shown.md` was read off — LFS
 ├── docs/<title>.md               # google docs, exported as markdown
@@ -253,7 +253,7 @@ else keeps it.
 |---|---|
 | frames `call-watch.rs` read a line off — small, and ours alone | recordings on a host that keeps them |
 | photos and documents we made or were sent, with no other home | anything a puller can fetch again |
-| recordings on a host likely to lose them, while the free tier covers it | |
+| recordings on a host likely to lose them | |
 
 A host's rating is how sure we are it still serves a recording a year on, 1 least:
 
@@ -266,9 +266,10 @@ A host's rating is how sure we are it still serves a recording a year on, 1 leas
 | vimeo | 4 | the owner deletes; links are otherwise stable |
 | youtube | 5 | taken down or made private, rarely |
 
-Recordings fill what the free tier leaves after frames, lowest rating first, course material first
-within a rating; past it, none goes in. Every checkout, worktrees included, copies each tracked
-object out of `.git/lfs`, so a gigabyte call kept costs every new worktree that gigabyte.
+A recording goes in when its host rates ≤ 2, or ≤ 3 for course material (a recording a lesson in
+`ref/skool_*/course/` links), committed with `git add -f` past the gitignore. Every clone downloads
+every object, and every checkout, worktrees included, copies each out of `.git/lfs`, so the free
+tier is a budget per clone, not a quota to fill.
 
 Example, as of 2026-10-09 on the org's Free plan: 10 GiB-month of storage and 10 GiB of downloads
 included, then $0.07/GiB-month and $0.0875/GiB; one object at most 2 GiB. ~23 GiB stored, nearly
