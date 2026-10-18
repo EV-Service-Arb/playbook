@@ -251,11 +251,24 @@ else keeps it.
 
 | goes in LFS | stays out |
 |---|---|
-| frames `call-watch.rs` read a line off — small, and ours alone | recordings: the host keeps them |
+| frames `call-watch.rs` read a line off — small, and ours alone | recordings on a host that keeps them |
 | photos and documents we made or were sent, with no other home | anything a puller can fetch again |
+| recordings on a host likely to lose them, while the free tier covers it | |
 
-A recording is never committed: every checkout, worktrees included, copies each tracked object out
-of `.git/lfs`, so a gigabyte call costs every new worktree that gigabyte.
+A host's rating is how sure we are it still serves a recording a year on, 1 least:
+
+| host | rating | what loses a recording |
+|---|---|---|
+| vocaroo | 1 | expires a recording left unplayed |
+| drive | 2 | the owner unshares or deletes, with no notice |
+| fathom | 2 | a share link is revoked per call, by whoever recorded it |
+| loom | 3 | the owner deletes, or the plan's video cap pushes old ones out |
+| vimeo | 4 | the owner deletes; links are otherwise stable |
+| youtube | 5 | taken down or made private, rarely |
+
+Recordings fill what the free tier leaves after frames, lowest rating first, course material first
+within a rating; past it, none goes in. Every checkout, worktrees included, copies each tracked
+object out of `.git/lfs`, so a gigabyte call kept costs every new worktree that gigabyte.
 
 Example, as of 2026-10-09 on the org's Free plan: 10 GiB-month of storage and 10 GiB of downloads
 included, then $0.07/GiB-month and $0.0875/GiB; one object at most 2 GiB. ~23 GiB stored, nearly
