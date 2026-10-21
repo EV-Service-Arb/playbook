@@ -17,7 +17,7 @@
 - facebook marketplace listing, $25 for a "small job", walk them through it — takes them two minutes, and a happy one brings friends and family for four or five more
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1913)
 - Eric says to send yourself access as manager, never owner — it comes up a lot for them, "because we do a lot on other people's phones with instant approvals"
-  [r1 2026-08-29](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=237)
+  [r1 2025-12-15](https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=237)
 - reason: google is less bitchy about one admin across many accounts than one owner
   // unsourced: Valera
 - their owner email gets every notification from the profile; they untick it under `Business Profile -> Settings -> Notifications -> emails`
