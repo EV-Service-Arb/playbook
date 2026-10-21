@@ -18,11 +18,6 @@
   [r5 2026-09-18](https://chatgpt.com/share/6aacb045-ac9c-83eb-a97d-8624c616a763)
 
 ## plays
-- (!) the mall method: walk up to strangers and ask them to create the GMB on their own account, then add you as owner — `Ryan` got 100+ detailing profiles this way
-  > only works for categories that verify instantly. ~30/hr of profiles, per two people who have run it
-  [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1967)
-- facebook marketplace listing, $25 for a "small job", walk them through it — takes them two minutes, and a happy one brings friends and family for four or five more
-  [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1913)
 - TODO: buy an expired domain whose GMB is still listed against it, and see whether that hands you the aged profile
   > heard off instagram, nobody in the call has tried it. you don't get to choose the niche you inherit
   [r5 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4373)
