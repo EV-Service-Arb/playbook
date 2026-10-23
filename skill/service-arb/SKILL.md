@@ -22,7 +22,7 @@ the second someone said it, and the date. Never fill a gap from general knowledg
 | [sections/](sections/) | how to decide, per area | before advising, not just quoting |
 
 The topics under `structured/` are `market` (niches, cities), `profile` (creation, verification,
-suspension), `ranking` (naming, categories, reviews), `conversion`, `fulfilment` and `infra`.
+suspension), `ranking` (naming, categories, site, reviews), `conversion`, `fulfilment` and `infra`.
 
 ## Answering
 
@@ -63,7 +63,7 @@ Loaded on demand, one decision area each. Lines ending `// inferred` are drafted
 | [verification](sections/verification.md) | video, live, instant |
 | [suspension](sections/suspension.md) | what links profiles, what to do once one goes down |
 | [reviews](sections/reviews.md) | rate, sourcing, deletion |
-| [ranking](sections/ranking.md) | name, categories, what to measure |
+| [ranking](sections/ranking.md) | name, categories, site, what to measure |
 | [conversion](sections/conversion.md) | calls, VA, site |
 | [fulfilment](sections/fulfilment.md) | contractors, splits, getting paid |
 | [infra](sections/infra.md) | gmails, devices, proxies, numbers, cards |
