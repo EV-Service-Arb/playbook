@@ -1,3 +1,5 @@
+%YAML 1.1
+---
 env:
   CARGO_INCREMENTAL: '0'
   CARGO_NET_RETRY: '10'
@@ -12,32 +14,16 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v5
     - name: Lean cache setup
-      run: 'mkdir -p /tmp/nix-lean-cache
-
-        chmod 0777 /tmp/nix-lean-cache
-
-        printf ''#!/bin/sh\nexport PATH=/nix/var/nix/profiles/default/bin:$PATH\nnix
-        copy --to "file:///tmp/nix-lean-cache?compression=zstd&parallel-compression=true"
-        $OUT_PATHS || true\n'' > /tmp/nix-lean-pbh.sh
-
-        chmod 0755 /tmp/nix-lean-pbh.sh
-
-        '
+      run: "mkdir -p /tmp/nix-lean-cache\nchmod 0777 /tmp/nix-lean-cache\nprintf '#!/bin/sh\\
+        nexport PATH=/nix/var/nix/profiles/default/bin:$PATH\\nnix copy --to \"file:///tmp/nix-lean-cache?compression=zstd&parallel-compression=true\"\
+        \ $OUT_PATHS || true\\n' > /tmp/nix-lean-pbh.sh\nchmod 0755 /tmp/nix-lean-pbh.sh\n"
       shell: bash
     - name: Install Nix
       uses: DeterminateSystems/nix-installer-action@main
       with:
-        extra-conf: 'lazy-trees = true
-
-          post-build-hook = /tmp/nix-lean-pbh.sh
-
-          extra-substituters = file:///tmp/nix-lean-cache
-
-          extra-trusted-substituters = file:///tmp/nix-lean-cache
-
-          require-sigs = false
-
-          '
+        extra-conf: "lazy-trees = true\npost-build-hook = /tmp/nix-lean-pbh.sh\nextra-substituters
+          = file:///tmp/nix-lean-cache\nextra-trusted-substituters = file:///tmp/nix-lean-cache\n\
+          require-sigs = false\n"
     - name: Lean nix cache (built-only paths)
       uses: actions/cache@v5
       with:
@@ -50,7 +36,6 @@ jobs:
     uses: valeratrades/.github/.github/workflows/pre_ci.yml@main
 name: Errors
 'on':
-  pull_request: {}
   push: {}
   workflow_dispatch: {}
 permissions:
