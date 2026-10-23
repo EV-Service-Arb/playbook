@@ -58,3 +58,8 @@ Loaded on demand, one decision area each. Lines ending `// inferred` are drafted
 | [infra](sections/infra.md) | gmails, devices, proxies, numbers, cards |
 | [experts](sections/experts.md) | who to refer someone to, and when not to |
 
+## In a checkout
+
+`structured/` contradicting itself, or a source contradicting it, gets [resolved](../ingest/resolve.md)
+once the answer is out.
+

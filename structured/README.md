@@ -35,8 +35,8 @@ A citation is a line that holds only a link, `[r<base> <date>](url)`:
 
 ## Effective reliability
 Counted by `effective` in `scripts/cite-check.rs`. The number is fractional, so two citations keep their order as both of them age. A run leads with its
-best effective reliability, and a tie goes to the newer one. When claims contradict, the better
-effective number leads. The other stays beneath it, demoted, with its date still on it.
+best effective reliability, and a tie goes to the newer one. Claims that contradict are
+[resolved](../skills/ingest/resolve.md) into one.
 
 ## Style
 Observed from how the notes get written by hand. Follow it when persisting anything.
@@ -48,6 +48,7 @@ Observed from how the notes get written by hand. Follow it when persisting anyth
 - `//` parenthetical, thinking out loud, the second-order observation
 - `reason:` why, under the claim it explains
 - `TODO:` something to go test
+- `resolved:` links the record of how a contradiction was settled, `secondary/resolved/<date>-<slug>.md`
 - `(!)` marks the surprising bit — the part that actually changes how we'd act
 - attribute by name, in full: `Ilya says…`, `Eric recommends…`, `Sam Hart says…`
   > who said it is half the information. an unattributed claim is weaker than a named one

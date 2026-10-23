@@ -128,7 +128,7 @@ Promotion is the human moving a bullet from one to the other. An agent may place
 and re-sourced — never its own inference.
 
 **`secondary/`** — conclusions that follow from the notes rather than from a source:
-plans, comparisons, decisions.
+plans, comparisons, decisions, how a contradiction was resolved.
 
 ## Blocks
 
@@ -190,9 +190,9 @@ Then everything decays with age, up to 10 — a cheap group member having heard 
 is as good as nothing. How the decay is counted lives in `scripts/cite-check.rs`, not here.
 
 A claim backed by several sources cites its best one first; the rest sit under it as secondary.
-Contradictions resolve the same way: the better effective reliability leads, and the other stays
-beneath it, demoted, with its date still on it. Nothing is deleted for being wrong. Between two
-sources of equal base, this is newest-wins.
+Between two sources of equal base, this is newest-wins. Sources may contradict each other; `structured/`
+may not. A contradiction is resolved into one claim, weighed by more than the number, and the record of
+it goes to `secondary/resolved/`.
 
 ## Pullers
 

@@ -10,7 +10,7 @@ Claims go to `structured/suggested/`, in [the block format](../../structured/REA
 - a claim goes to the block the next asker would open, per the note in
   [Overview](../../docs/ARCHITECTURE.md#overview), not where the source happened to say it
 - a claim already present joins its citation run. It never becomes a second bullet
-- a contradiction demotes, per [Reliability](../../docs/ARCHITECTURE.md#reliability). Nothing is deleted
+- a contradiction is [resolved](../ingest/resolve.md). Nothing is deleted
 - a new block goes into [Blocks](../../docs/ARCHITECTURE.md#blocks)' tree and the topic list in
   [the member skill](../service-arb/SKILL.md)
 - loom names no speakers. Who said it comes from what is said: names, roles, who answers whom

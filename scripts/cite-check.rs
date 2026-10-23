@@ -9,7 +9,8 @@ jiff = "0.2"
 
 //! `./scripts/cite-check.rs [<root>]` — hold every block under `structured/` to
 //! `structured/README.md`: each citation resolves to a capture in `ref/`, carries that capture's date,
-//! stays inside its duration, and sits in its run by effective reliability; no bullet goes unbacked.
+//! stays inside its duration, and sits in its run by effective reliability; no bullet goes unbacked;
+//! a `resolved:` line links a record that exists.
 //! `<root>` defaults to the checkout this runs in.
 //!
 //! Prints every failure as `path:line: why` and exits non-zero if there was one.
@@ -55,7 +56,7 @@ fn main() {
 	for path in &blocks {
 		let shown = path.strip_prefix(&root).expect("walked from root").display().to_string();
 		let text = std::fs::read_to_string(path).expect("walked files are readable");
-		for (line, why) in check(&text, &captures, today) {
+		for (line, why) in check(&text, path.parent().expect("a block sits in a dir"), &captures, today) {
 			errors.push(format!("{shown}:{line}: {why}"));
 		}
 	}
@@ -69,7 +70,7 @@ fn main() {
 	eprintln!("{} blocks hold their citations", blocks.len());
 }
 
-fn check(text: &str, captures: &BTreeMap<String, Capture>, today: Date) -> Vec<(usize, String)> {
+fn check(text: &str, dir: &Path, captures: &BTreeMap<String, Capture>, today: Date) -> Vec<(usize, String)> {
 	let mut errors = Vec::new();
 	let mut section = None;
 	let mut unbacked: Option<usize> = None;
@@ -103,6 +104,12 @@ fn check(text: &str, captures: &BTreeMap<String, Capture>, today: Date) -> Vec<(
 		if !cited {
 			sorted(&run, today, &mut errors);
 			run.clear();
+		}
+		if let Some(link) = trimmed.strip_prefix("resolved: ") {
+			match link_only(link) {
+				Some((_, url)) if url.contains("secondary/resolved/") && dir.join(url).is_file() => (),
+				_ => errors.push((line, "`resolved:` links its record in `secondary/resolved/`, which must exist".into())),
+			}
 		}
 		if cited || trimmed.starts_with("// unsourced:") {
 			if trimmed == "// unsourced:" {
