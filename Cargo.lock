@@ -1934,7 +1934,12 @@ checksum = "f6b464fbc74e149a392436b17d523f769e057cb6877f6a5c4618bc6f11800548"
 name = "playbook"
 version = "0.1.0"
 dependencies = [
+ "base64 0.22.1",
  "clap",
+ "rusqlite",
+ "serde",
+ "serde_json",
+ "sha2",
  "v_utils",
 ]
 

@@ -6,6 +6,8 @@ use std::{
 use clap::{Parser, Subcommand, ValueEnum};
 use v_utils::io::{ConfirmResult, confirmation};
 
+mod eval;
+
 const PLATFORMS: [&str; 5] = ["ref/loom", "ref/fathom", "ref/drive", "ref/vimeo", "ref/vocaroo"];
 /// Past this, `--execute` asks before spending.
 const CONFIRM_USD: f64 = 1.;
@@ -36,6 +38,18 @@ enum Cmd {
 		#[arg(long)]
 		every: Option<f64>,
 	},
+	/// Answer playbook/eval.json through a member's client on this tree, uncommitted edits included, and
+	/// on the last release; exits 1 when a case scores lower here.
+	Eval {
+		/// the old side's system rev, the last release where unset
+		#[arg(long)]
+		against: Option<String>,
+		/// the rev both sides take `structured/{approved,suggested}` and `ref/` from, this tree's where unset
+		#[arg(long)]
+		info: Option<String>,
+		/// cases to run, all where none
+		ids: Vec<String>,
+	},
 }
 
 #[derive(Clone, Copy, ValueEnum)]
@@ -56,7 +70,16 @@ struct Capture {
 }
 
 fn main() {
-	let Cmd::ReTranscribe { what, paths, execute, legacy, every } = Cli::parse().command;
+	match Cli::parse().command {
+		Cmd::ReTranscribe { what, paths, execute, legacy, every } => re_transcribe(what, paths, execute, legacy, every),
+		Cmd::Eval { against, info, ids } =>
+			if eval::run(&repo_root(), against, info, ids) {
+				std::process::exit(1);
+			},
+	}
+}
+
+fn re_transcribe(what: What, paths: Vec<PathBuf>, execute: bool, legacy: bool, every: Option<f64>) {
 	let pick: Vec<String> = match (what, legacy, every) {
 		(What::Picture, true, _) => vec!["--legacy".into()],
 		(What::Picture, false, every) => every.into_iter().flat_map(|e| ["--every".to_string(), e.to_string()]).collect(),

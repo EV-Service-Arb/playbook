@@ -7,7 +7,6 @@ use rmcp::{
 	service::RunningService,
 	transport::{StreamableHttpClientTransport, streamable_http_client::StreamableHttpClientTransportConfig},
 };
-use serde::Deserialize;
 use serde_json::{Value, json};
 use sha2::{Digest, Sha256};
 
@@ -17,60 +16,6 @@ const BASE: &str = "/playbook_mcp";
 const PUBLIC_URL: &str = "https://sa.evinvest.ltd/playbook_mcp";
 const PANEL: &str = "k1:BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=";
 const STRANGER: &str = "k1:CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg=";
-
-#[derive(Deserialize)]
-struct Golden {
-	questions: Vec<Question>,
-}
-
-#[derive(Deserialize)]
-struct Question {
-	id: String,
-	answerable: bool,
-	essential: Vec<Evidence>,
-	calls: Vec<Call>,
-}
-
-#[derive(Deserialize)]
-struct Evidence {
-	path: String,
-	quote: String,
-}
-
-#[derive(Deserialize)]
-struct Call {
-	tool: String,
-	args: Value,
-}
-
-/// Every answerable question's essential quotes come back within three calls; an unanswerable one
-/// finds nothing in `structured/`.
-#[tokio::test]
-async fn golden() {
-	let golden: Golden = serde_json::from_str(include_str!("golden.json")).unwrap();
-	serve("golden", i64::MAX, async |url| {
-		let client = connect(&url, TOKEN).await;
-		let mut failures = Vec::new();
-		for q in &golden.questions {
-			assert!(q.calls.len() <= 3, "{}: at most three calls", q.id);
-			let mut seen = String::new();
-			for c in &q.calls {
-				let (text, error) = call(&client, &c.tool, c.args.clone()).await;
-				assert!(!error, "{} {}: {text}", q.id, c.tool);
-				seen.push_str(&text);
-			}
-			let noted = seen.lines().any(|l| l.starts_with("structured/"));
-			let seen = squash(&seen);
-			match q.answerable {
-				true => failures.extend(q.essential.iter().filter(|e| !seen.contains(&squash(&e.quote))).map(|e| format!("{}: {} — {}", q.id, e.path, e.quote))),
-				false if noted => failures.push(format!("{}: expected nothing from structured/, got {seen}", q.id)),
-				false => {}
-			}
-		}
-		assert!(failures.is_empty(), "missing evidence:\n{}", failures.join("\n"));
-	})
-	.await;
-}
 
 #[tokio::test]
 async fn read_returns_one_chapter() {
@@ -372,8 +317,3 @@ async fn call(client: &RunningService<RoleClient, ()>, tool: &str, args: Value) 
 	(text, res.is_error == Some(true))
 }
 
-/// the text as a reader sees it: without the line-number gutter, whitespace collapsed
-fn squash(s: &str) -> String {
-	let text = s.lines().map(|l| l.split_once(" | ").filter(|(n, _)| n.trim().parse::<usize>().is_ok()).map_or(l, |(_, t)| t));
-	text.flat_map(str::split_whitespace).collect::<Vec<_>>().join(" ").to_lowercase()
-}

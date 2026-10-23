@@ -1,0 +1,181 @@
+[
+ {
+  "id": "A1",
+  "question": "How many GBPs can I safely park under one Google account before it gets too risky?",
+  "expect": [
+   "mentions Eric's cap of 3–5 profiles per gmail, at most",
+   "says a banned gmail takes every profile verified on it with it",
+   "says winning the gmail's appeal does not bring those profiles back"
+  ]
+ },
+ {
+  "id": "A2",
+  "question": "Can I reuse the same company name and one website across my plumbing listings in different cities, or does that link them for a ban?",
+  "expect": [
+   "says matching brand names across listings is fine",
+   "says the shared website is what could link them",
+   "suggests duplicating the site onto a new domain per listing, with the name swapped"
+  ]
+ },
+ {
+  "id": "A3",
+  "question": "What is the Google rep going to want to see when I do the live video verification call?",
+  "expect": [
+   "says the rep wants to see permanent signage outside",
+   "lists what else the rep may ask for: an invoice, a business card, a dashboard such as Stripe",
+   "says the rep may ask you to tug the sign, so it must be mounted firmly",
+   "says none of it is checked closely",
+   "warns that a logo printed and hung in a picture frame gets rejected"
+  ]
+ },
+ {
+  "id": "A4",
+  "question": "What does an offshore call-answering assistant cost, and how many calls should they turn into booked jobs?",
+  "expect": [
+   "gives a Filipino VA's rate of $3/hr on a 3-day trial and $4/hr after",
+   "puts a full-time VA at $1,500/mo at most, and a part-time one under $1k",
+   "says a VA should convert about 50% of calls to booked jobs"
+  ]
+ },
+ {
+  "id": "B1",
+  "question": "What are the realistic odds of getting a listing verified instantly, and what makes an account more likely to pass?",
+  "expect": [
+   "puts the odds at about one account in seven",
+   "says a rainbow circle around the account's profile picture is a good sign"
+  ]
+ },
+ {
+  "id": "B2",
+  "question": "I just got a listing through — how long should I leave it alone before editing it or pushing reviews?",
+  "expect": [
+   "says to leave the listing untouched for its first five days",
+   "says to get no reviews on it for the first five days, counted from when it is publicly visible"
+  ]
+ },
+ {
+  "id": "B3",
+  "question": "Rather than splitting every job, can I just lease a ranked listing to a contractor for a flat monthly fee? What does that go for?",
+  "expect": [
+   "says yes, members rent verified profiles to contractors",
+   "puts the rent at about $2K a month per profile",
+   "says the contractor then takes all the calls"
+  ]
+ },
+ {
+  "id": "B4",
+  "question": "What's the cheapest physical place to film an address verification video, and how well does it work?",
+  "expect": [
+   "names a storage unit, refunded after the video",
+   "gives a near-100% success rate for storage units",
+   "says co-working spaces did somewhat worse"
+  ]
+ },
+ {
+  "id": "C1",
+  "question": "For faking GPS on a rooted Android, which root manager do people install to get the app store for location spoofers?",
+  "expect": [
+   "names Magisk",
+   "says its module store is the app-store-like interface the spoofers come from"
+  ]
+ },
+ {
+  "id": "C2",
+  "question": "What does Eric use for keyword search-volume research — does he actually pay for SEMrush?",
+  "expect": [
+   "says Eric uses SEMrush",
+   "says he does not pay: he takes a free trial on a new account each time",
+   "says the paid plan is about $200 a month, which he does not recommend"
+  ]
+ },
+ {
+  "id": "C3",
+  "question": "Has anyone had Claude's computer-use agent fill out the products and services on a Business Profile?",
+  "expect": [
+   "mentions Claude Cowork being suggested to take control of the computer overnight for it"
+  ]
+ },
+ {
+  "id": "D1",
+  "question": "On a plumbing job, what cut should I keep versus the plumber?",
+  "expect": [
+   "says 60/40 in your favour is the normal ask",
+   "says plumbers accept it off a cold call to their own business profile",
+   "says the contractor's qualification matters as much as the split percentage"
+  ]
+ },
+ {
+  "id": "D2",
+  "question": "I'm getting calls I can't service — can I sell them, who buys them, and what do they pay?",
+  "expect": [
+   "says off-niche calls sell to an affiliate network at $5–10 a call through a tracking number",
+   "names pay-per-call buyers such as eLocal, ServiceDirect or Ringba",
+   "gives about $30–50 a plumbing call and about $100 a water-damage call"
+  ]
+ },
+ {
+  "id": "D3",
+  "question": "If I open a service-area listing and later convert it to an address, how long should it age first, and how many conversions can one phone handle?",
+  "expect": [
+   "says the listing should be aged at least a month first",
+   "says about two switches per location or device before the verification rate drops",
+   "says that when the conversion is by live video, there is no point waiting weeks: do it right away"
+  ]
+ },
+ {
+  "id": "E1",
+  "question": "Should I set up my listings as service-area (no address shown) or with a physical address?",
+  "expect": [
+   "says service-area listings are the safer option, at around 70% success",
+   "gives the opposing view that a service-area listing is useless and adding an address is worth trying"
+  ]
+ },
+ {
+  "id": "E2",
+  "question": "How many reviews can I push onto a new listing per day without them getting wiped?",
+  "expect": [
+   "says one review a day per profile, at most",
+   "says a reviewing gmail account should leave reviews two weeks apart, and two in total at most"
+  ]
+ },
+ {
+  "id": "E3",
+  "question": "Should I list my business as open 24/7?",
+  "expect": [
+   "says Google can flag 24-hour hours as spammy",
+   "suggests 7am to 11pm instead, at least when the profile is new",
+   "notes that the course's own follow-along sets the profile to open 24 hours"
+  ]
+ },
+ {
+  "id": "F1",
+  "question": "Do my German profiles' websites need an Impressum page for Google to accept them?",
+  "expect": [
+   "says the playbook has nothing on this",
+   "invents no answer"
+  ]
+ },
+ {
+  "id": "F2",
+  "question": "When buying or selling a ranked GBP, what escrow service do people use to transfer it safely?",
+  "expect": [
+   "says the playbook has nothing on this",
+   "invents no answer"
+  ]
+ },
+ {
+  "id": "F2s",
+  "question": "Has anyone shown the escrow paperwork from selling a service business?",
+  "expect": [
+   "says Eric's video shows escrow instructions, with $100,350 in closing funds"
+  ]
+ },
+ {
+  "id": "F3",
+  "question": "Does adding LocalBusiness schema markup to the website help my map-pack ranking?",
+  "expect": [
+   "says the playbook has nothing on this",
+   "invents no answer"
+  ]
+ }
+]

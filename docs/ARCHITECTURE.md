@@ -227,7 +227,9 @@ drives the scripts rather than duplicating them. `cargo r -- re-transcribe <audi
 lists every call capture under the paths with the estimated cost of redoing it; `picture` is
 estimated at the `--legacy` rate either way, as the default's cost is known only after the pick. It runs only with
 `--execute`, and asks first when the total is past $1. Audio is redone only for a whisper transcript
-that has no digest yet, since a re-pull drops the digest.
+that has no digest yet, since a re-pull drops the digest. `cargo r -- eval` answers `playbook/eval.json`
+through a member's client, on this tree and on the last release, and judges each answer against the
+case's expectations.
 
 A platform that needs a session, or one
 [`social_networks`](https://github.com/valeratrades/social_networks) already knows, is read

@@ -10,6 +10,7 @@
       system:
       let
         pkgs = import v_flakes.default_nixpkgs { inherit system; };
+        inherit (import v_flakes.default_nixpkgs { inherit system; config.allowUnfree = true; }) claude-code;
         rust = v_flakes.rs.default_nightly system; # scripts/ are `cargo -Zscript`
         github = v_flakes.github {
           inherit pkgs;
@@ -95,6 +96,16 @@
             runtimeInputs = [ rust pkgs.git ];
             text = "./scripts/call-pull.rs --check && ./scripts/cite-check.rs && nix build .#playbook_web --no-link";
           }}/bin/check";
+        };
+
+        apps.eval = {
+          type = "app";
+          meta.description = "answer playbook/eval.json on this tree and on the last release; exits 1 when a case scores lower";
+          program = "${pkgs.writeShellApplication {
+            name = "eval";
+            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.cmake pkgs.tailwindcss_4 pkgs.git claude-code ];
+            text = ''cargo r -p playbook -- eval "$@"'';
+          }}/bin/eval";
         };
 
         apps.mcp-sandbox = {
