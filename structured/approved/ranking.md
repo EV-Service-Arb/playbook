@@ -18,6 +18,25 @@
   [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2114)
   // overridden, I agree with Ilya
 
+- from guys experiencing drop-offs in leads, it looks like google updated their ranking system
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=440)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=768)
+  think they started putting more value on stuff like last advice and interactions with profiles, probably age too
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1133)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=741)
+  it also looks like it's more difficult to rank profiles as n1 from just reviews now
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=877)
+  need to make it look like amazing client interactions with them all the time
+  // unsourced: Valera
+  James McBride also says there are hacks to increase this: engage with the profile, products and everything else it lets you add
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=961)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=991)
+  TODO: compile ranking of all the relevant things we can be doing to improve [#35](https://github.com/EV-Service-Arb/playbook/issues/35)
+  TODO: check if image reviews and video reviews would get it higher [#36](https://github.com/EV-Service-Arb/playbook/issues/36)
+
 ## plays
 - (!) have someone drive by the location and run google maps "directions" to it — huge boost, per `James McBride`
-  // unsourced: Valera
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=691)
+  > only real people physically nearby: google knows the phone's location from cell towers, so spoofing and bots don't work
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=691)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=741)

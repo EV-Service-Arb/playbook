@@ -22,3 +22,12 @@
 
 - apparently showing wrong street signs is fine
   [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=4490)
+
+- Eric: a guy is showing a street sign how it would look on the correct location — AI-generated, laid out with Google Earth, on his computer screen — then shows an invoice next to it like it was real, and smoothly gets over to the invoice so the AI reviewing doesn't notice it was opened on a pc
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2151)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2180)
+  tested by one person, gets approved
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2113)
+  > location spoofed as well
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2251)
+  Q: does he start from outside, or does the entire vid from inside the house

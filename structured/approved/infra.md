@@ -26,3 +26,8 @@
   [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=2840)
   [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=2855)
   // probably can automate mass checks. Do if it's actually a pain-point though, need to know how the emails come in
+
+- James McBride vibe-coded his own Jobber: calendar, payments, invoices, estimates, and his admins, subcontractors and VAs in one app
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1053)
+  will white-label it and share it with the group
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1083)

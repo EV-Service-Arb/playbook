@@ -59,6 +59,12 @@
   [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1863)
   [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1891)
 
+- Muhammad has 150+ reviews on his profiles, + to authorities on getting reviews
+  // unsourced: Valera
+  joins the calls as `Abdullah`
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1869)
+  Q: does he get them local or remote?
+
 - Gabe Jacobs: massive advice on automating checking people coming from ads
   has a form on a site that checks device fingerprint, geolocation, IP location, tz, etc. Then score them. Lol, actual bookie tactics
   [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1916)

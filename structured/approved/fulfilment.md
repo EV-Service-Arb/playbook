@@ -7,7 +7,7 @@
   So better split not always better, - qualification level is equally important as the split percentage.
   [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1117)
 
-- John Osayl will be doing calculator for prices, - within my circle of expertise
+- John Osayi will be doing calculator for prices, - within my circle of expertise
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1399)
 
 - Eric very quickly transitioned to taking payments himself
@@ -35,6 +35,12 @@
 - %profit is great, just require receipts for their expenses
   [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=5861)
   And since it's profit, I think 40% of it also makes sense, 30/70% is for like Masters-level certification or sth
+
+- Kit Volcano is troubled by doing math calculating %profit, to the point of wanting to switch to %gross
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3515)
+  A: Eric: you'll make less on 10% of gross; at ~50% margins, 40% of profit is ~20% of gross
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3515)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3546)
 
 ## plays
 - came up: finding plumbers for hourly rates

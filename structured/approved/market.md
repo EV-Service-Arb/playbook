@@ -18,3 +18,8 @@
 
 - another confirmation on HVAC being good niche
   [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=3112)
+
+- John Osayi does appliance repair, ovens among it; Thanksgiving is his best week, as last-minute oven repairs can charge a lot
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=514)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3957)
+  // could be nice to add the niche

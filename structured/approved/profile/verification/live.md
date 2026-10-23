@@ -12,6 +12,11 @@
   > should submit multiple tickets for lives
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3473)
 
+- PP has recovered some pretty bad situations on his live calls: gave the dumbest answers over and over, and got through when the reviewers just got tired. Full conviction and a smile, then outlast them
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5179)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5472)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5564)
+
 - on live ask them if glass sign would be ok; and then make them think it's glass cause of reflection
   [r3 2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=63)
   TODO: get a better sign frame, without visible tentacles [#26](https://github.com/Service-Arb/playbook/issues/26)
