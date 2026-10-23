@@ -12,8 +12,8 @@ tokio = { version = "1", features = ["full"] }
 
 //! `./scripts/yt-pull.rs sync` — list every video of every channel `ref/README.md` links, in
 //! `ref/youtube/README.md`, under a header per person: the link text names their directory.
-//! `./scripts/yt-pull.rs transcribe [--legacy | --every <secs>]` — capture every video that list has
-//! unticked, into `ref/youtube/<who>/<id>.md`, ticking it as it goes. Frames are read only where the
+//! `./scripts/yt-pull.rs transcribe [--legacy | --every <secs>] [<video url>...]` — capture the given videos, or
+//! every video that list has unticked, into `ref/youtube/<who>/<id>.md`, ticking it as it goes. Frames are read only where the
 //! captions say something is shown; `--legacy` reads them wherever the picture changes.
 //!
 //! Youtube is read by `social_networks_adapters`, linked; this only decides how a capture is filed.
@@ -68,12 +68,16 @@ async fn main() {
 	let root = repo_root();
 	match std::env::args().skip(1).collect::<Vec<_>>().as_slice() {
 		[cmd] if cmd == "sync" => sync(&root).await,
-		[cmd, pick @ ..] if cmd == "transcribe" => transcribe(&root, picked(pick)).await,
+		[cmd, rest @ ..] if cmd == "transcribe" => {
+			let (urls, flags): (Vec<String>, Vec<String>) = rest.iter().cloned().partition(|a| a.contains("watch?v="));
+			let only = urls.iter().map(|u| u.split_once("watch?v=").expect("partitioned on it").1.split('&').next().expect("split yields at least one").to_string()).collect();
+			transcribe(&root, picked(&flags), only).await
+		}
 		_ => panic!("usage: {USAGE}"),
 	}
 }
 
-const USAGE: &str = "yt-pull.rs <sync | transcribe [--legacy | --every <secs>]>";
+const USAGE: &str = "yt-pull.rs <sync | transcribe [--legacy | --every <secs>] [<video url>...]>";
 
 fn picked(args: &[String]) -> Pick {
 	match args {
@@ -109,8 +113,11 @@ async fn sync(root: &Path) {
 	write(root, &Index { checked: jiff::Zoned::now().date().to_string(), sections });
 }
 
-async fn transcribe(root: &Path, pick: Pick) {
+async fn transcribe(root: &Path, pick: Pick, only: Vec<String>) {
 	let index = parse(root);
+	for id in &only {
+		assert!(index.sections.iter().any(|s| s.entries.iter().any(|e| &e.id == id)), "{id} is in no channel `sync` listed — the index is the registry");
+	}
 	let tmp = std::env::temp_dir().join("yt-pull");
 	let mut mute = Vec::new();
 	for section in &index.sections {
@@ -118,7 +125,7 @@ async fn transcribe(root: &Path, pick: Pick) {
 		std::fs::create_dir_all(&dir).expect("ref/youtube is ours to create under");
 		for Entry { id, .. } in &section.entries {
 			let out = dir.join(format!("{id}.md"));
-			if out.exists() {
+			if out.exists() || !(only.is_empty() || only.contains(id)) {
 				continue;
 			}
 			eprintln!("pulling {}/{id}", section.who);

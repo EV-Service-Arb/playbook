@@ -180,7 +180,9 @@ it sets the base. A person on the [people](#people) list takes their own base in
 | base | who                                      |
 |------|------------------------------------------|
 | 2    | Eric                                     |
+| 2    | Zach Peterson (youtube `@zachpeters0n`)  |
 | 3    | Gabe Jacobs (skool `gabe-jacobs-9502`)   |
+| 3    | Marcus Milan (youtube `@marcusmilxn`)    |
 
 Then everything decays with age, up to 10 — a cheap group member having heard of it long ago, which
 is as good as nothing. How the decay is counted lives in `scripts/cite-check.rs`, not here.
@@ -198,7 +200,7 @@ arguments reads `ref/README.md` for links of its platform and fetches the ones m
 from disk. So adding a source is pasting its link into `ref/README.md` and re-running.
 `yt-pull.rs` alone goes through an index: `sync` lists every video of the channels
 `ref/README.md` links into `ref/youtube/README.md`, and `transcribe` captures what that
-list has unticked.
+list has unticked, or only the listed videos it is given.
 
 `ref/README.md` is the only registry. A capture quotes its own source URL and a
 transcript quotes every link that was said out loud, so a puller that scanned the tree

@@ -3,7 +3,7 @@
 - checked: 2026-10-23
 - written by: `scripts/yt-pull.rs sync`, which lists every video; `transcribe` ticks each it captures
 
-- spent: $0.71 over 36 captures, as their `cost:` lines state
+- spent: $0.74 over 38 captures, as their `cost:` lines state
 
 A directory per person, named by the text of their channel's link in `../README.md`. In it,
 `<id>.md` is a video's capture — summary, chapters, what is shown, description, then the captions
@@ -272,7 +272,7 @@ every unticked line.
 - [ ] [2026-08-26](https://www.youtube.com/watch?v=vHGQRqEbShc) How to find contractors
 - [ ] [2026-07-26](https://www.youtube.com/watch?v=I9Cbcw5XWeo) 20k/mo in 45 seconds. Comment GBP for full guide #onlinebusiness
 - [ ] [2026-07-26](https://www.youtube.com/watch?v=uPdkEaymb-k) Comment GBP for free guide #onlinebusiness
-- [ ] [2026-07-24](https://www.youtube.com/watch?v=5Taappne53c) Your GBP location is stopping you from $20k/mo
+- [x] [2026-07-24](https://www.youtube.com/watch?v=5Taappne53c) [Your GBP location is stopping you from $20k/mo](marcus/5Taappne53c.md)
 - [ ] [2026-07-18](https://www.youtube.com/watch?v=b7xTT8bXqhY) Stack reviews and rank your Google business profile organically
 - [ ] [2026-07-15](https://www.youtube.com/watch?v=TuLgNQDnOqM) Comment “GBP” I’ll send you the guide
 - [ ] [2026-07-04](https://www.youtube.com/watch?v=UQIMQJkzu6E) How to rank a google listing top 3
@@ -295,7 +295,7 @@ every unticked line.
 - [ ] [2026-10-10](https://www.youtube.com/watch?v=LCPo7Jd9ygI) rank your service business higher on Google for more leads #localseotips #contractormarketing
 - [ ] [2026-10-10](https://www.youtube.com/watch?v=tafzJTTwz4E) 1 SEO system to do $50k months with home service and trades businesses
 - [ ] [2026-10-08](https://www.youtube.com/watch?v=--KuQLuPQWk) easy strategy to make more money for your service business from Google SEO
-- [ ] [2026-10-06](https://www.youtube.com/watch?v=1ok0Rwr8MwE) why your SEO is not working - 5 things to fix if you are a local service business
+- [x] [2026-10-06](https://www.youtube.com/watch?v=1ok0Rwr8MwE) [why your SEO is not working - 5 things to fix if you are a local service business](zach/1ok0Rwr8MwE.md)
 - [ ] [2026-10-06](https://www.youtube.com/watch?v=I08VO0ip2SU) rank your service business higher on Google for more leads with simple local citations
 - [ ] [2026-10-06](https://www.youtube.com/watch?v=IqgffLaN5kE) rank higher on Google fast for more leads with easy strategy
 - [ ] [2026-10-03](https://www.youtube.com/watch?v=_2Se003Qg3Y) Working with WEUP

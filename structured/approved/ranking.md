@@ -1,8 +1,8 @@
 ## info
 - Zach Peterson does backlinks and citations
-  [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1318)
+  [r2 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1318)
   > he says it only matters when you're already top 3 in a competitive area, and an actual business
-  [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1386)
+  [r2 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1386)
 
 - BBB-verified - apparently could help ranking (Thumbtack leads)
   [r5 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=3934)
