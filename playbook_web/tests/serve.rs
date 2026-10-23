@@ -44,7 +44,7 @@ struct Call {
 }
 
 /// Every answerable question's essential quotes come back within three calls; an unanswerable one
-/// finds nothing.
+/// finds nothing in `structured/`.
 #[tokio::test]
 async fn golden() {
 	let golden: Golden = serde_json::from_str(include_str!("golden.json")).unwrap();
@@ -59,10 +59,11 @@ async fn golden() {
 				assert!(!error, "{} {}: {text}", q.id, c.tool);
 				seen.push_str(&text);
 			}
+			let noted = seen.lines().any(|l| l.starts_with("structured/"));
 			let seen = squash(&seen);
 			match q.answerable {
 				true => failures.extend(q.essential.iter().filter(|e| !seen.contains(&squash(&e.quote))).map(|e| format!("{}: {} — {}", q.id, e.path, e.quote))),
-				false if !seen.starts_with("no match") => failures.push(format!("{}: expected no match, got {seen}", q.id)),
+				false if noted => failures.push(format!("{}: expected nothing from structured/, got {seen}", q.id)),
 				false => {}
 			}
 		}

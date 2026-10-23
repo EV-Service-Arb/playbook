@@ -1,6 +1,6 @@
 {
- "built": "2026-09-24",
- "corpus_commit": "ded067c",
+ "built": "2026-10-23",
+ "corpus_commit": "69eb61a",
  "questions": [
   {
    "id": "A1",
@@ -55,7 +55,11 @@
    "essential": [
     {
      "path": "structured/suggested/profile/verification/live.md",
-     "quote": "the reviewer asks for: permanent signage outside, signage inside, signage on the vehicles, and the door being unlocked"
+     "quote": "the live agent may ask for an invoice, a business card, a dashboard (Stripe or similar) and signage, and may ask you to tug the sign, so mount it firmly. none of it is checked closely"
+    },
+    {
+     "path": "structured/approved/profile/verification/live.md",
+     "quote": "guy told him he wants to see outside and permanent signage outside"
     },
     {
      "path": "structured/suggested/profile/verification/live.md",

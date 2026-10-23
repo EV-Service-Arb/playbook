@@ -26,7 +26,7 @@ suspension), `ranking` (naming, categories, site, reviews), `conversion`, `fulfi
 
 ## Answering
 
-Reliability decides the answer, not recency or how vivid a story is. `r<base>`, lower is better: 0 we tested, 1 course, 3-4 a gmbpp member, 5-7 the cheap group; a person on [the list](../../docs/ARCHITECTURE.md#people) has their own. effective = base + age in days / [`DECAY_DAYS`](../../scripts/cite-check.rs).
+Reliability decides the answer, not recency or how vivid a story is. `r<base>`, lower is better: 0 we tested, 1 course, 2 Eric, 3-4 a gmbpp member, 5-7 the cheap group; other named people may carry their own, as cited. effective = base + age in days / [`DECAY_DAYS`](../../scripts/cite-check.rs).
 
 - read the course first: `ref/skool_*/course/`, then the captures its lessons link (`video:` and inline URLs, found in ref/ by id). Those are course material too
 - then structured/approved, suggested, the rest of ref/. two hits per source at most
@@ -39,7 +39,7 @@ Reliability decides the answer, not recency or how vivid a story is. `r<base>`, 
 The answer is three parts, split by `---`:
 1. **sources**: numbered, best first. Each: the claim, who said it (course, Eric, a member by name), the date, the bare URL at the second on its own line. Unsourced: say whose it is ("Valera, unrecorded")
 2. **advice**: no URLs, `[n]` into the sources. Say how strongly each point is backed
-3. **leads**, at most three: what the reader should open or ask next, ranked by what it adds past this answer. A course lead is the skool.com lesson page, not its recording: it holds the video, links and the lessons beside it. A call mined dry adds nothing. A person, per the experts section, adds what nobody recorded. One line each: what they'd get, then the URL or handle
+3. **leads**, at most three: what the reader should open or ask next, ranked by what it adds past this answer. A course lead is the skool.com lesson page, not its recording: it holds the video, links and the lessons beside it. A call mined dry adds nothing. A person, per the experts section, adds what nobody recorded. One line each: what they'd get, then the URL or handle (Eric doesn't need to be linked)
 
 ## Sections
 

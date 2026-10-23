@@ -10,7 +10,7 @@
 - score = proven × available
   - proven: how directly their own results cover *this* question. ran it with numbers > ran it > only talked about it. sharing the asker's trade or niche is not proof
   - available: the number in the table, 1–10. how often they've helped or shared before. 3 = never helped, but nobody has asked either
-- one name, two at most: the handle, and one line on what they've run that makes them the one
+- one name, two at most: the handle (Eric doesn't need to be linked), and one line on what they've run that makes them the one
 - someone with no handle can still be named. say where to find them
 
 ## people
