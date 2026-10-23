@@ -13,7 +13,7 @@ Capture and distillation never happen in the same file.
 ```
    loom · fathom · youtube · chatgpt · skool · discord
                      │
-                     │  scripts/*.rs, social_networks
+                     │  playbook pull, social_networks
                      ▼
                    ref/                        raw · verbatim · dated
                      │
@@ -49,12 +49,12 @@ ref/
 ├── vimeo/ · vocaroo/             # the same, for hosts the registry line names and dates
 ├── <platform>/<capture>/         # beside a call capture: what its recording shows
 │   ├── recording.<ext>           # as the host serves it, 720p where there is a choice — gitignored, bar what LFS keeps
-│   ├── shown.md                  # what is on screen that the speech does not say, by `call-watch.rs`
+│   ├── shown.md                  # what is on screen that the speech does not say, by `playbook watch`
 │   └── frames/<secs>.jpg         # the frame each line of `shown.md` was read off — LFS
 ├── docs/<title>.md               # google docs, exported as markdown
 ├── research/<id>.md              # chatgpt shares, one `## user` / `## assistant` section per turn
 ├── youtube/                      # channel videos
-│   ├── README.md                 # every video each channel lists, dated, ticked once captured — `yt-pull.rs sync`
+│   ├── README.md                 # every video each channel lists, dated, ticked once captured — `playbook pull yt sync`
 │   └── <who>/<id>.md             # a video: summary, chapters, what is shown, captions — and `<id>/<secs>.jpg` the frames its `## shown` lines were read off
 └── skool_<group>/                # a classroom, via `social_networks` — `gmbpp`, and the `cheap` group
     ├── README.md                 # what upstream holds, and the day it was last compared to this
@@ -102,14 +102,14 @@ plain prose, in paragraphs, no stamps in it
   `/ingest call-digest` needs to place chapters. It titles the ones that open a chapter and deletes the rest
 - a recording nobody speaks in is captured all the same: `transcribed by:` ends `— nobody speaks`,
   and only then is `## transcript` empty
-- a recording is read through `call-pull.rs --recording <capture.md>`, which hands back the one
+- a recording is read through `playbook recording <capture.md>`, which hands back the one
   beside the capture, fetching it from its host first when there is none
 
-`scripts/call-pull.rs` checks every capture on disk against this on each run, and `--check` runs only
+`playbook pull call` checks every capture on disk against this on each run, and `playbook check calls` runs only
 that; a hook runs it after any agent edit under a call capture's platform dir.
 
 Machine transcriptions of a recording belong in `ref/` too, each naming what produced it: whisper's
-of its audio, in `transcribed by:`, and `scripts/call-watch.rs`'s of its picture, in `shown.md`,
+of its audio, in `transcribed by:`, and `playbook watch`'s of its picture, in `shown.md`,
 whose header names the model, the day and what it cost. A youtube capture reads its picture the same
 way, into its own `## shown`, and states the models and the cost in its header. Every line of `shown.md` links the second it
 describes and embeds the frame at that second, so the claim can be checked by eye.
@@ -159,7 +159,7 @@ beneath it, and the link text is the base reliability and the date:
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3026)
 ```
 
-The rest of the format and the style are in `structured/README.md`. `scripts/cite-check.rs` enforces
+The rest of the format and the style are in `structured/README.md`. `playbook check cites` enforces
 them, in `nix run .#check`, and a hook runs it after any agent edit under `structured/`.
 
 ## Reliability
@@ -187,7 +187,7 @@ it sets the base. A person on the [people](#people) list takes their own base in
 | 3    | Marcus Milan (youtube `@marcusmilxn`)    |
 
 Then everything decays with age, up to 10 — a cheap group member having heard of it long ago, which
-is as good as nothing. How the decay is counted lives in `scripts/cite-check.rs`, not here.
+is as good as nothing. How the decay is counted lives in `playbook/src/cite_check.rs`, not here.
 
 A claim backed by several sources cites its best one first; the rest sit under it as secondary.
 Between two sources of equal base, this is newest-wins. Sources may contradict each other; `structured/`
@@ -196,38 +196,40 @@ it goes to `secondary/resolved/`.
 
 ## Pullers
 
-`scripts/*.rs` are cargo scripts (`#!/usr/bin/env -S cargo -Zscript`), run from
-anywhere inside the checkout. Each one takes source URLs as arguments, or with no
-arguments reads `ref/README.md` for links of its platform and fetches the ones missing
-from disk. So adding a source is pasting its link into `ref/README.md` and re-running.
-`yt-pull.rs` alone goes through an index: `sync` lists every video of the channels
-`ref/README.md` links into `ref/youtube/README.md`, and `transcribe` captures what that
-list has unticked, or only the listed videos it is given.
+Every tool here is a subcommand of the `playbook` crate at the root of the cargo workspace, so each
+dependency is pinned once for all of them. `playbook <cmd>` is `cargo r -p playbook -- <cmd>`, run
+from anywhere inside the checkout. Each `pull <platform>` takes source URLs as arguments, or with
+none reads `ref/README.md` for links of its platform and fetches the ones missing from disk. So
+adding a source is pasting its link into `ref/README.md` and re-running. `pull yt` alone goes
+through an index: `sync` lists every video of the channels `ref/README.md` links into
+`ref/youtube/README.md`, and `transcribe` captures what that list has unticked, or only the listed
+videos it is given.
 
 `ref/README.md` is the only registry. A capture quotes its own source URL and a
 transcript quotes every link that was said out loud, so a puller that scanned the tree
 would feed on its own output. A puller that *finds* a link — one lesson pointing at
 another platform's recording — prints it rather than following it, and the registry
 grows by hand. The one exception is the group's calls feed: what it posts is the list's own
-material, so `skool-pull.rs` writes each recording into the registry itself.
+material, so `pull skool` writes each recording into the registry itself.
 
 ```
-scripts/
-├── call-pull.rs       # loom / fathom share page, drive folder → summary, chapters, and the platform's transcript, or whisper's where there is none; `--recording`: the one way to a recording, kept or fetched
-├── call-watch.rs      # not a puller: a recording, through `ask_llm`'s `Client::watch`, frames only where the speech says something is shown (`--legacy`: wherever the picture changes) → `shown.md`
-├── doc-pull.rs        # google doc → its markdown export
-├── chatgpt-pull.rs    # headless chromium → the DOM's turns
-├── yt-pull.rs         # sync: channels → the dated list of their videos; transcribe: captions in citable blocks, summary and chapters through `ask_llm`, the video through `Client::watch`, frames only where the captions say something is shown (`--legacy`: wherever the picture changes) → `## shown`, description
-├── skool-pull.rs      # skool's classroom → the course tree, module by module and lesson by lesson; the calls feed → the registry's group calls
-└── cite-check.rs      # not a puller: holds every citation in structured/ to its capture in ref/
+playbook/src/
+├── call.rs            # pull call: loom / fathom share page, drive folder → summary, chapters, and the platform's transcript, or whisper's where there is none; `recording`: the one way to a recording, kept or fetched; `check calls`
+├── watch.rs           # watch, not a puller: a recording, through `ask_llm`'s `Client::watch`, frames only where the speech says something is shown (`--legacy`: wherever the picture changes) → `shown.md`
+├── doc.rs             # pull doc: google doc → its markdown export
+├── chatgpt.rs         # pull chatgpt: headless chromium → the DOM's turns
+├── yt.rs              # pull yt sync: channels → the dated list of their videos; pull yt transcribe: captions in citable blocks, summary and chapters through `ask_llm`, the video through `Client::watch`, frames only where the captions say something is shown (`--legacy`: wherever the picture changes) → `## shown`, description
+├── skool.rs           # pull skool: skool's classroom → the course tree, module by module and lesson by lesson; the calls feed → the registry's group calls
+├── cite_check.rs      # check cites, not a puller: holds every citation in structured/ to its capture in ref/
+├── photo_metadata.rs  # photo-metadata: exif of our own photos, and synthetic sidecars
+└── eval.rs            # eval
 ```
 
-What spends money goes through the `playbook` crate at the root of the cargo workspace, which
-drives the scripts rather than duplicating them. `cargo r -- re-transcribe <audio|picture> <path>...`
+`playbook re-transcribe <audio|picture> <path>...`
 lists every call capture under the paths with the estimated cost of redoing it; `picture` is
 estimated at the `--legacy` rate either way, as the default's cost is known only after the pick. It runs only with
 `--execute`, and asks first when the total is past $1. Audio is redone only for a whisper transcript
-that has no digest yet, since a re-pull drops the digest. `cargo r -- eval` answers `playbook/eval.json`
+that has no digest yet, since a re-pull drops the digest. `playbook eval` answers `playbook/eval.json`
 through a member's client, on this tree and on the last release, and judges each answer against the
 case's expectations.
 
@@ -261,7 +263,7 @@ else keeps it.
 
 | goes in LFS | stays out |
 |---|---|
-| frames `call-watch.rs` read a line off — small, and ours alone | recordings on a host that keeps them |
+| frames `playbook watch` read a line off — small, and ours alone | recordings on a host that keeps them |
 | photos and documents we made or were sent, with no other home | anything a puller can fetch again |
 | recordings on a host likely to lose them | |
 

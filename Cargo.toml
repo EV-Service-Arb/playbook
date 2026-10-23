@@ -6,12 +6,15 @@ resolver = "3"
 edition = "2024"
 
 [workspace.dependencies]
+ask_llm = { version = "^3.10.2", default-features = false }
 axum = { version = "0.8.9", features = ["form", "query"] }
 base64 = "0.22"
 clap = { version = "^4.6.7", features = ["derive"] }
 ev_lib_classes = "0.14.0"
 getrandom = "0.4.3"
 insta = "1"
+jiff = "0.2"
+libsql-rusqlite = "0.9.30" # `playbook` links libsql through social_networks_adapters, and a second bundled sqlite clashes with it
 regex = "1.13.1"
 regex-syntax = "0.8.11"
 reqwest = { version = "0.13.5", default-features = false, features = ["rustls", "json", "form"] }
@@ -21,6 +24,8 @@ rusqlite = { version = "0.40.2", features = ["bundled"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sha2 = "0.10"
+social_networks_adapters = { git = "https://github.com/valeratrades/social_networks", rev = "4d66c85e2630d8b377ed6fa4224e092208aec903", features = ["youtube-reads"] } # past 0.5 it is not on crates.io; the first rev on ask_llm 3.10
 tailwind_fuse = "0.3"
 tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "signal"] }
-v_utils = { version = "^2.18.0", features = ["cli"] }
+ureq = "3"
+v_utils = { version = "^2.23.0", features = ["cli", "xdg"] }

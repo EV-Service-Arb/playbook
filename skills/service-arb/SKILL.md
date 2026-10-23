@@ -26,7 +26,7 @@ suspension), `ranking` (naming, categories, site, reviews), `conversion`, `fulfi
 
 ## Answering
 
-Reliability decides the answer, not recency or how vivid a story is. `r<base>`, lower is better: 0 we tested, 1 course, 2 Eric, 3-4 a gmbpp member, 5-7 the cheap group; other named people may carry their own, as cited. effective = base + age in days / [`DECAY_DAYS`](../../scripts/cite-check.rs).
+Reliability decides the answer, not recency or how vivid a story is. `r<base>`, lower is better: 0 we tested, 1 course, 2 Eric, 3-4 a gmbpp member, 5-7 the cheap group; other named people may carry their own, as cited. effective = base + age in days / [`DECAY_DAYS`](../../playbook/src/cite_check.rs).
 
 - read the course first: `ref/skool_*/course/`, then the captures its lessons link (`video:` and inline URLs, found in ref/ by id). Those are course material too
 - then structured/approved, suggested, the rest of ref/. two hits per source at most

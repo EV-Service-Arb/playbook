@@ -1,6 +1,6 @@
 ---
 name: ingest
-description: Bring something new into the playbook from a checkout — a source URL or channel to register and pull, a call capture whose `read by:` says `nothing yet`, the owner's notes or chats, a new person, a todo or a fact about how our own team runs, or a contradiction in structured/ to resolve. Use when handed any of these, when call-pull.rs says a recording was left unread, or as `/ingest call-digest <path>`.
+description: Bring something new into the playbook from a checkout — a source URL or channel to register and pull, a call capture whose `read by:` says `nothing yet`, the owner's notes or chats, a new person, a todo or a fact about how our own team runs, or a contradiction in structured/ to resolve. Use when handed any of these, when `playbook pull call` says a recording was left unread, or as `/ingest call-digest <path>`.
 argument-hint: "[pull|call-digest|notes|people|internal|resolve] [<path or url>...]"
 ---
 

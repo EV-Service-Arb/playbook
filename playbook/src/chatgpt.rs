@@ -1,15 +1,4 @@
-#!/usr/bin/env -S cargo -Zscript -q
----cargo
-[package]
-edition = "2024"
-
-[dependencies]
-jiff = "0.2"
----
-
-//! `./scripts/chatgpt-pull.rs [<share-url-or-id>...]` — write `ref/research/<id>.md` for every
-//! chatgpt share we do not have yet. With no arguments it takes the links already written down
-//! in `ref/README.md`.
+//! `ref/research/<id>.md` for every chatgpt share we do not have yet.
 //!
 //! The share page ships its conversation as an interned react-flight blob and the `/backend-api`
 //! route is behind cloudflare, so the page is rendered in headless chromium and the turns are read
@@ -21,7 +10,7 @@ jiff = "0.2"
 
 use std::{
 	collections::BTreeSet,
-	path::{Path, PathBuf},
+	path::Path,
 	process::Command,
 };
 
@@ -29,15 +18,13 @@ const SHARE: &str = "https://chatgpt.com/share/";
 const ROLE: &str = "data-message-author-role=\"";
 const DISCLAIMER: &str = "data-testid=\"thread-disclaimer\"";
 
-fn main() {
-	let root = repo_root();
+pub fn pull(root: &Path, urls: &[String]) {
 	let out_dir = root.join("ref/research");
 	std::fs::create_dir_all(&out_dir).expect("ref/research is ours to create");
 
-	let args: Vec<String> = std::env::args().skip(1).collect();
-	let wanted: BTreeSet<String> = match args.is_empty() {
+	let wanted: BTreeSet<String> = match urls.is_empty() {
 		true => links_in(&root.join("ref/README.md")),
-		false => args.iter().map(|a| id_of(a)).collect(),
+		false => urls.iter().map(|a| id_of(a)).collect(),
 	};
 	if wanted.is_empty() {
 		eprintln!("no chatgpt share links in ref/README.md and none given — nothing to pull");
@@ -57,17 +44,6 @@ fn main() {
 	}
 }
 
-fn repo_root() -> PathBuf {
-	let mut dir = std::env::current_dir().expect("a process has a cwd");
-	loop {
-		if dir.join(".git").exists() {
-			return dir;
-		}
-		if !dir.pop() {
-			panic!("run this from inside the playbook checkout");
-		}
-	}
-}
 
 fn id_of(arg: &str) -> String {
 	let tail = arg.rsplit('/').next().expect("rsplit yields at least once");
@@ -123,7 +99,7 @@ fn document(id: &str, dom: &str) -> String {
 		 \n\
 		 - source: <{SHARE}{id}>\n\
 		 - pulled: {today} (chatgpt states no date of its own — re-pull to re-date)\n\
-		 - pulled by: `scripts/chatgpt-pull.rs`\n\
+		 - pulled by: `playbook pull chatgpt`\n\
 		 \n"
 	);
 	//LOOP: one pass over the turns, which the DOM lists in order

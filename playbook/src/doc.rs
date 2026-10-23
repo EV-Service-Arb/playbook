@@ -1,14 +1,4 @@
-#!/usr/bin/env -S cargo -Zscript -q
----cargo
-[package]
-edition = "2024"
-
-[dependencies]
-ureq = "3"
----
-
-//! `./scripts/doc-pull.rs [<doc-url>...]` — write `ref/docs/<title>.md` for every google doc we do
-//! not have yet. With no arguments it takes the links already written down in `ref/README.md`.
+//! `ref/docs/<title>.md` for every google doc we do not have yet.
 //!
 //! A doc shared by link exports itself as markdown to anyone, so this is one request per doc. A doc
 //! is edited in place and publishes no date of its own, so the capture carries the day it was pulled;
@@ -22,15 +12,13 @@ use std::{
 
 const DOC: &str = "https://docs.google.com/document/d/";
 
-fn main() {
-	let root = repo_root();
+pub fn pull(root: &Path, urls: &[String]) {
 	let out_dir = root.join("ref/docs");
 	std::fs::create_dir_all(&out_dir).expect("ref/docs is ours to create");
 
-	let args: Vec<String> = std::env::args().skip(1).collect();
-	let wanted: Vec<String> = match args.is_empty() {
+	let wanted: Vec<String> = match urls.is_empty() {
 		true => links_in(&root.join("ref/README.md")),
-		false => args.iter().map(|a| id_of(a)).collect(),
+		false => urls.iter().map(|a| id_of(a)).collect(),
 	};
 	let have = captured(&out_dir);
 	for id in &wanted {
@@ -46,7 +34,7 @@ fn main() {
 		let body = get(&format!("{DOC}{id}/export?format=md"));
 		let today = String::from_utf8(Command::new("date").arg("+%F").output().expect("date runs").stdout).expect("date prints ascii");
 		let doc = format!(
-			"# {title}\n\n- source: <{DOC}{id}>\n- pulled: {} — a doc publishes no date, and is edited in place\n- pulled by: `scripts/doc-pull.rs`\n\n---\n\n{}\n",
+			"# {title}\n\n- source: <{DOC}{id}>\n- pulled: {} — a doc publishes no date, and is edited in place\n- pulled by: `playbook pull doc`\n\n---\n\n{}\n",
 			today.trim(),
 			body.trim()
 		);
@@ -57,17 +45,6 @@ fn main() {
 	}
 }
 
-fn repo_root() -> PathBuf {
-	let mut dir = std::env::current_dir().expect("a process has a cwd");
-	loop {
-		if dir.join(".git").exists() {
-			return dir;
-		}
-		if !dir.pop() {
-			panic!("run this from inside the playbook checkout");
-		}
-	}
-}
 
 fn id_of(arg: &str) -> String {
 	let tail = arg.strip_prefix(DOC).unwrap_or_else(|| panic!("`{arg}` is not a google doc link"));
@@ -83,7 +60,7 @@ fn captured(dir: &Path) -> BTreeMap<String, PathBuf> {
 		let source = text
 			.lines()
 			.find_map(|l| l.strip_prefix("- source: <"))
-			.unwrap_or_else(|| panic!("{} states no source — it was not written by this script", path.display()));
+			.unwrap_or_else(|| panic!("{} states no source — it was not written by `playbook pull doc`", path.display()));
 		found.insert(id_of(source.trim_end_matches('>')), path);
 	}
 	found

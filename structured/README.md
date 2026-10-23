@@ -1,6 +1,6 @@
 # Blocks
 
-`scripts/cite-check.rs` holds every block here to this file. It runs in `nix run .#check`, and a hook
+`playbook check cites` holds every block here to this file. It runs in `nix run .#check`, and a hook
 runs it after any agent edit under `structured/`.
 
 ## Sections
@@ -34,7 +34,7 @@ A citation is a line that holds only a link, `[r<base> <date>](url)`:
 - every bullet is backed by a run, or by an `// unsourced: <who>` line, before its section ends
 
 ## Effective reliability
-Counted by `effective` in `scripts/cite-check.rs`. The number is fractional, so two citations keep their order as both of them age. A run leads with its
+Counted by `effective` in `playbook/src/cite_check.rs`. The number is fractional, so two citations keep their order as both of them age. A run leads with its
 best effective reliability, and a tie goes to the newer one. Claims that contradict are
 [resolved](../skills/ingest/resolve.md) into one.
 

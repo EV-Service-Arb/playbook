@@ -11,7 +11,7 @@
       let
         pkgs = import v_flakes.default_nixpkgs { inherit system; };
         inherit (import v_flakes.default_nixpkgs { inherit system; config.allowUnfree = true; }) claude-code;
-        rust = v_flakes.rs.default_nightly system; # scripts/ are `cargo -Zscript`
+        rust = v_flakes.rs.default_nightly system;
         github = v_flakes.github {
           inherit pkgs;
           pname = "playbook";
@@ -41,12 +41,11 @@
             fileset = pkgs.lib.fileset.unions [
               ./Cargo.toml
               ./Cargo.lock
-              ./playbook # a workspace member, so cargo reads its manifest
+              ./playbook # a workspace member, so cargo reads its manifest; build.rs inlines cite_check.rs's DECAY_DAYS
               ./playbook_web
               ./skills/service-arb
               ./structured/approved
               ./structured/suggested
-              ./scripts/cite-check.rs # build.rs inlines its DECAY_DAYS
               (pkgs.lib.fileset.fileFilter (f: f.hasExt "md") ./ref)
             ];
           };
@@ -80,7 +79,7 @@
       {
         apps.help = v_flakes.utils.help {
           inherit pkgs self system;
-          about = "scripts/*.rs: call/skool/yt/doc/chatgpt pullers, cite-check, photo-metadata (rust nightly from `nix develop`)\n";
+          about = "`cargo r -p playbook -- help`: call/skool/yt/doc/chatgpt pullers, checks, photo-metadata, eval\n";
         };
 
         apps.publish = v_flakes.utils.publish pkgs;
@@ -90,11 +89,11 @@
 
         apps.check = {
           type = "app";
-          meta.description = "call-pull --check, cite-check, build playbook_web";
+          meta.description = "check calls, check cites, build playbook_web";
           program = "${pkgs.writeShellApplication {
             name = "check";
             runtimeInputs = [ rust pkgs.git ];
-            text = "./scripts/call-pull.rs --check && ./scripts/cite-check.rs && nix build .#playbook_web --no-link";
+            text = "cargo r -q -p playbook -- check calls && cargo r -q -p playbook -- check cites && nix build .#playbook_web --no-link";
           }}/bin/check";
         };
 

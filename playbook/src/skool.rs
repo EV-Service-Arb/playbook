@@ -1,21 +1,5 @@
-#!/usr/bin/env -S cargo -Zscript -q
----cargo
-[package]
-edition = "2024"
 
-[dependencies]
-clap = { version = "4", features = ["derive"] }
-glass_pumpkin = "=2.0.0-rc0" # social_networks' lock; rc1 breaks grammers-crypto, which asks for `2.0.0-rc0`
-jiff = "0.2"
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
-social_networks_adapters = "=0.3.23"
-tokio = { version = "1", features = ["full"] }
-v_utils = { version = "=2.17.6", features = ["xdg", "cli"] }
-v_utils_macros = "=2.12.5" # social_networks' lock; later ones call into a v_utils newer than 2.17.6
----
-
-//! `./scripts/skool-pull.rs` — mirror each group's classroom under `ref/skool_<group>/course/`, one
+//! Mirrors each group's classroom under `ref/skool_<group>/course/`, one
 //! directory per module and one file per lesson, both numbered in the order skool serves them.
 //!
 //! Skool is read by `social_networks_adapters`, linked; this only decides how a capture is filed.
@@ -23,7 +7,7 @@ v_utils_macros = "=2.12.5" # social_networks' lock; later ones call into a v_uti
 //! Credentials are `social_networks`' own: `~/.config/social_networks`'s `[skool]` section, reading
 //! `$DEFAULT_MAIL` / `$DEFAULT_PASSWORD`, with a browser-minted cookie cached between runs.
 //!
-//! The group's *conversations* are not this script's — `recon posts skool:<slug>` already writes
+//! The group's *conversations* are not this module's — `recon posts skool:<slug>` already writes
 //! those to the rolodex's `venues/` tree.
 //!
 //! A capture is identified by the id it states and not by where it sits, so a lesson
@@ -46,7 +30,7 @@ use std::{
 
 use social_networks_adapters::{
 	reach::{VenueRef, VenueSource},
-	skool::{Course, Skool, SkoolCredentials, Video},
+	skool::{Course, Skool, SkoolConfig, Video},
 };
 use v_utils::macros::{MyConfigPrimitives, Settings};
 
@@ -59,20 +43,18 @@ const GROUPS: &[(&str, &str)] = &[("gmp-passive-profits-5347", "ref/skool_gmbpp"
 struct Config {
 	#[settings(skip)]
 	#[serde(default)]
-	skool: Option<SkoolCredentials>,
+	skool: Option<SkoolConfig>,
 }
 
-#[tokio::main]
-async fn main() {
-	let root = repo_root();
+pub async fn pull(root: &Path) {
 	let config = Config::try_build(SettingsFlags::default()).unwrap_or_else(|e| panic!("reading ~/.config/social_networks: {e}"));
 	let creds = config.skool.expect("a skool classroom is only readable by a member, so this needs a `[skool]` section in ~/.config/social_networks");
-	let mut skool = Skool::try_new(Some(creds)).unwrap_or_else(|e| panic!("{e:?}"));
+	let mut skool = Skool::try_new(Some(creds)).await.unwrap_or_else(|e| panic!("{e:?}"));
 	register_calls(&mut skool, &root.join("ref/README.md")).await;
 	let mut links: BTreeSet<String> = BTreeSet::new();
 	for (group, out_root) in GROUPS {
 		let courses = skool.classroom(&VenueRef::new(VenueSource::Skool, *group)).await.unwrap_or_else(|e| panic!("reading {group}'s classroom: {e:?}"));
-		links.extend(pull(&root, group, out_root, &courses));
+		links.extend(classroom(root, group, out_root, &courses));
 	}
 
 	let registry = std::fs::read_to_string(root.join("ref/README.md")).expect("ref/README.md is the registry");
@@ -144,7 +126,7 @@ async fn register_calls(skool: &mut Skool, registry_path: &Path) {
 }
 
 /// One group's classroom into `out`, returning every link it says out loud.
-fn pull(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BTreeSet<String> {
+fn classroom(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BTreeSet<String> {
 	let out_dir = root.join(out_root).join("course");
 	std::fs::create_dir_all(&out_dir).expect("the course dir is ours to create");
 
@@ -156,7 +138,7 @@ fn pull(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BTreeSe
 		 \n\
 		 - source: <https://www.skool.com/{group}/classroom>\n\
 		 - checked: {today}\n\
-		 - written by: `scripts/skool-pull.rs`, every run\n\
+		 - written by: `playbook pull skool`, every run\n\
 		 \n\
 		 A lesson skool has touched since we captured it is marked `stale` — delete its file and run\n\
 		 this again to re-pull it.\n"
@@ -180,7 +162,7 @@ fn pull(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BTreeSe
 				 - source: <{}>\n\
 				 - id: {}\n\
 				 - updated: {}\n\
-				 - pulled by: `scripts/skool-pull.rs`\n\
+				 - pulled by: `playbook pull skool`\n\
 				 \n\
 				 {}\n",
 				course.title,
@@ -211,7 +193,7 @@ fn pull(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BTreeSe
 				 - module: {}\n\
 				 - updated: {}\n\
 				 - video: {}\n\
-				 - pulled by: `scripts/skool-pull.rs`\n\
+				 - pulled by: `playbook pull skool`\n\
 				 \n\
 				 {}\n{}",
 				lesson.title,
@@ -284,7 +266,7 @@ fn captured(dir: &Path) -> BTreeMap<String, PathBuf> {
 	//LOOP: bounded by the number of files in a finite tree
 	for entry in walk(dir) {
 		let text = std::fs::read_to_string(&entry).unwrap_or_else(|e| panic!("reading {}: {e}", entry.display()));
-		let id = line(&text, "- id: ").unwrap_or_else(|| panic!("{} states no id — it was not written by this script", entry.display()));
+		let id = line(&text, "- id: ").unwrap_or_else(|| panic!("{} states no id — it was not written by `playbook pull skool`", entry.display()));
 		if let Some(clash) = found.insert(id.to_string(), entry.clone()) {
 			panic!("{} and {} both claim {id}", clash.display(), entry.display());
 		}
@@ -324,7 +306,7 @@ fn line<'a>(text: &'a str, key: &str) -> Option<&'a str> {
 fn captured_at(path: &Path) -> String {
 	let text = std::fs::read_to_string(path).unwrap_or_else(|e| panic!("reading {}: {e}", path.display()));
 	line(&text, "- updated: ")
-		.unwrap_or_else(|| panic!("{} states no updated date — it was not written by this script", path.display()))
+		.unwrap_or_else(|| panic!("{} states no updated date — it was not written by `playbook pull skool`", path.display()))
 		.to_string()
 }
 
@@ -370,14 +352,3 @@ fn urls_in(text: &str) -> Vec<String> {
 	found
 }
 
-fn repo_root() -> PathBuf {
-	let mut dir = std::env::current_dir().expect("a process has a cwd");
-	loop {
-		if dir.join(".git").exists() {
-			return dir;
-		}
-		if !dir.pop() {
-			panic!("run this from inside the playbook checkout");
-		}
-	}
-}

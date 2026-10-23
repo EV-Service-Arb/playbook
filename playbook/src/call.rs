@@ -1,29 +1,10 @@
-#!/usr/bin/env -S cargo -Zscript -q
----cargo
-[package]
-edition = "2024"
-
-[dependencies]
-serde_json = "1"
-ureq = "3"
----
-
-//! `./scripts/call-pull.rs [<share-url>...]` — write `ref/<platform>/<date>-<title>.md` for every
-//! loom or fathom recording we do not have yet. With no arguments it takes the links already written
-//! down in `ref/README.md`, so adding a recording to the playbook is pasting its link there.
-//! `./scripts/call-pull.rs --check` only holds every capture on disk to the shape, and fails loudly on
-//! the first that breaks it.
-//!
-//! The shape is `docs/ARCHITECTURE.md`'s "Call captures"; this script is its only enforcement.
+//! Call captures: `ref/<platform>/<date>-<title>.md`, held to `docs/ARCHITECTURE.md`'s "Call
+//! captures", of which this is the only enforcement.
 //!
 //! Both platforms' share pages are server-rendered and public, so nothing here needs an account. A
 //! loom page carries a *signed* URL for its transcript CDN; the signature expires, which is why it is
-//! read out of the page on every run rather than kept.
-//!
-//! `./scripts/call-pull.rs --recording <capture.md>...` prints the path of each capture's recording:
-//! the one at `<capture>/recording.<ext>` if there is one, else fetched there from its host first.
-//! Every reader of a recording goes through it. A recording its platform never transcribed is
-//! transcribed here with whisper, from that same file.
+//! read out of the page on every run rather than kept. A recording its platform never transcribed is
+//! transcribed here with whisper, from the file `recordings` hands back.
 
 use std::{
 	collections::BTreeMap,
@@ -132,32 +113,30 @@ struct Listed {
 
 const DRIVE_FOLDERS: [&str; 2] = ["https://drive.google.com/drive/folders/", "https://drive.google.com/drive/u/0/folders/"];
 
-fn main() {
-	let root = repo_root();
-	let args: Vec<String> = std::env::args().skip(1).collect();
-	let have = captured(&root);
-	if args.iter().any(|a| a == "--check") {
-		assert_eq!(args.len(), 1, "--check takes nothing else");
-		eprintln!("{} call captures hold their shape", have.len());
-		return;
-	}
-	if args.first().is_some_and(|a| a == "--recording") {
-		// every reader of a recording comes through here, so whether it is kept or fetched now is decided once
-		for arg in &args[1..] {
-			let path = std::fs::canonicalize(arg).unwrap_or_else(|e| panic!("{arg}: {e}"));
+/// Each capture's recording: the one kept beside it, or fetched there from its host first. Every
+/// reader of a recording comes through here, so whether it is kept or fetched now is decided once.
+pub fn recordings(root: &Path, captures: &[PathBuf]) -> Vec<PathBuf> {
+	let have = captured(root);
+	captures
+		.iter()
+		.map(|arg| {
+			let path = std::fs::canonicalize(arg).unwrap_or_else(|e| panic!("{}: {e}", arg.display()));
 			let ((platform, id), _) = have
 				.iter()
 				.find(|(_, p)| std::fs::canonicalize(p).is_ok_and(|p| p == path))
-				.unwrap_or_else(|| panic!("{arg} is not a call capture"));
+				.unwrap_or_else(|| panic!("{} is not a call capture", arg.display()));
 			let kept = path.with_extension("");
-			let media = recording_in(&kept).unwrap_or_else(|| fetch(&format!("{}{id}", platform.share()), &kept));
-			println!("{}", media.display());
-		}
-		return;
-	}
-	let wanted: BTreeMap<Rec, Option<Listed>> = match args.is_empty() {
+			recording_in(&kept).unwrap_or_else(|| fetch(&format!("{}{id}", platform.share()), &kept))
+		})
+		.collect()
+}
+
+/// Writes a capture for every recording we do not have yet, of `urls`, or of the registry's links where none.
+pub fn pull(root: &Path, urls: &[String]) {
+	let have = captured(root);
+	let wanted: BTreeMap<Rec, Option<Listed>> = match urls.is_empty() {
 		true => links_in(&root.join("ref/README.md")),
-		false => args.iter().map(|a| (rec_of(a), None)).collect(),
+		false => urls.iter().map(|a| (rec_of(a), None)).collect(),
 	};
 	if wanted.is_empty() {
 		eprintln!("no recording links in ref/README.md and none given — nothing to pull");
@@ -216,23 +195,13 @@ fn main() {
 	}
 }
 
-/// The script is only ever run from a checkout, and every path it touches is relative to the root
-/// of one — so finding it is the first thing, and failing to is not something to guess past.
-fn repo_root() -> PathBuf {
-	let mut dir = std::env::current_dir().expect("a process has a cwd");
-	loop {
-		if dir.join(".git").exists() {
-			return dir;
-		}
-		if !dir.pop() {
-			panic!("run this from inside the playbook checkout");
-		}
-	}
-}
-
 /// Every capture already on disk, by the recording it states, each held to the shape on the way. A
 /// file is named after the recording rather than after its id, so what is on disk is a question for
 /// the files and not for their names.
+pub fn all(root: &Path) -> Vec<PathBuf> {
+	captured(root).into_values().collect()
+}
+
 fn captured(root: &Path) -> BTreeMap<Rec, PathBuf> {
 	let mut found = BTreeMap::new();
 	for platform in Platform::ALL {
@@ -290,7 +259,7 @@ fn check(name: &str, text: &str) -> Rec {
 	let field = |key: &str| {
 		text.lines()
 			.find_map(|l| l.strip_prefix(&format!("- {key}: ")))
-			.unwrap_or_else(|| panic!("{name} states no `{key}:` — it was not written by this script"))
+			.unwrap_or_else(|| panic!("{name} states no `{key}:` — it was not written by `playbook pull call`"))
 	};
 	let (platform, id) = rec_of(field("source").trim_start_matches('<').trim_end_matches('>'));
 	let duration = secs(field("duration"));
@@ -765,7 +734,7 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 		 - transcribed by: {}\n\
 		 - read by: {}\n\
 		 {}\
-		 - pulled by: `scripts/call-pull.rs`\n\
+		 - pulled by: `playbook pull call`\n\
 		 \n",
 		r.title,
 		r.recorded,
