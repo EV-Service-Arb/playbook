@@ -19,5 +19,5 @@
   [r4 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5767)
 
 ## when it goes wrong
-- keep few profiles on one gmail: one ban takes them all // inferred
+- profiles per gmail: one ban takes them all. 2–3 as owner or on a tainted account; up to 5–6 as manager, with clean opsec, on a high-trust org email
 - a burnt proxy is worse than none // inferred

@@ -1,7 +1,16 @@
 ## info
-- (!) 3–5 profiles per gmail, at most — Eric
+- (!) 2–6* profiles per managing gmail
+  > up to 5–6 when we are added as manager, opsec is clean, and the managing email is high-trust and on an org (workspace)
+  > 2–3 at most when we sit on the profiles as owner, or the account is already tainted
   reason: one banned gmail takes every profile on it at once
+  resolved: [2026-10-23](../../secondary/resolved/2026-10-23-profiles-per-gmail.md)
+  [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=194)
+  [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=341)
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2643)
+  [r2 2026-07-24](https://www.loom.com/share/fc2ebac87db2407ab54bf7aef15b7ea2?t=2547)
+  [r3 2026-07-03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2244)
+  [r4 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=796)
+  [r4 2026-07-17](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3302)
 - buy gmails off real people: facebook marketplace and groups, craigslist — pay them, facebook gift cards work — Eric
   [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3409)
 - `Quo` ~$15/mo for the number the VA works out of — calls route `CallRail` → `Quo`, and they log in from their own computer to answer and text

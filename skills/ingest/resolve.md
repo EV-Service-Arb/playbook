@@ -12,5 +12,7 @@ Sources may disagree; `structured/` may not. Run when it contradicts itself, or 
 - the record, `secondary/resolved/<date>-<slug>.md`: every source weighed, linked, and a short why for
   the conclusion
 - the conflicting bullets become one, with a `resolved:` line linking the record
-- when `approved/` is involved, the record goes to `tmp/resolved/` and the conclusion to the owner.
-  Apply it only once they confirm
+- the conflict and its conclusion, or where the weighing got stuck, go to the owner either way. They
+  may know what no source says
+- when `approved/` is involved, the record goes to `tmp/resolved/`, and it is applied only once the
+  owner confirms
