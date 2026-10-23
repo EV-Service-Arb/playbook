@@ -17,3 +17,7 @@
   > Eric: people calling in, even when you don't answer, still helps the profile's SEO
   [r2 2026-01-10](https://www.loom.com/share/c115aafcfb8d45758f67546f05a73bdf?t=2114)
   // overridden, I agree with Ilya
+
+## plays
+- (!) have someone drive by the location and run google maps "directions" to it — huge boost, per `James McBride`
+  // unsourced: Valera
