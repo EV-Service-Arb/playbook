@@ -209,7 +209,7 @@ fn main() {
 	}
 
 	if !undigested.is_empty() {
-		eprintln!("\nnobody has read these yet — run `/call-digest` over each:");
+		eprintln!("\nnobody has read these yet — run `/ingest call-digest` over each:");
 		for out in &undigested {
 			eprintln!("  {}", out.display());
 		}
@@ -737,7 +737,7 @@ fn paragraphs(phrases: &[(f64, String)], turns: bool) -> Vec<(f64, String)> {
 	out
 }
 
-/// The capture, its filename, and whether it needs `/call-digest`.
+/// The capture, its filename, and whether it needs `/ingest call-digest`.
 fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bool) {
 	let share = platform.share();
 	// loom chapters a long call's first hour or so and stops; a reading that stops short is no reading.
@@ -746,7 +746,7 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 		let spoken = r.phrases.last().expect("chapters come with a transcript").0;
 		c.last().is_none_or(|(t, _)| (*t as f64) < spoken - TAIL_SECS)
 	}) {
-		eprintln!("  {}'s chapters stop short of the end — leaving its reading to `/call-digest`", platform.name());
+		eprintln!("  {}'s chapters stop short of the end — leaving its reading to `/ingest call-digest`", platform.name());
 		r.summary = None;
 		r.chapters = None;
 	}
@@ -774,7 +774,7 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 		match (r.phrases.is_empty(), missing.is_empty()) {
 			(true, _) => "nobody — nothing is said".to_string(),
 			(false, true) => platform.name().to_string(),
-			(false, false) => format!("nothing yet — {} wrote no {}, and `/call-digest` writes them here", platform.name(), missing.join(" and no ")),
+			(false, false) => format!("nothing yet — {} wrote no {}, and `/ingest call-digest` writes them here", platform.name(), missing.join(" and no ")),
 		},
 		r.within.as_ref().map_or(String::new(), |w| format!("- within: {w}\n")),
 	);
@@ -808,7 +808,7 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 			assert!(next.peek().is_none(), "{id}: chaptered past the last phrase of its transcript");
 		}
 		// no chapters to hang the text on, so every paragraph gets its own untitled anchor — the
-		// times `/call-digest` needs to place chapters, and deletes once it has
+		// times `/ingest call-digest` needs to place chapters, and deletes once it has
 		None => {
 			let mut last = None;
 			for (ts, text) in paragraphs(&r.phrases, r.turns) {

@@ -1,6 +1,6 @@
 # playbook_web
 
-The playbook for members: a remote MCP server that answers from `skill/service-arb/`, `structured/`
+The playbook for members: a remote MCP server that answers from `skill/service-arb/`, `structured/{approved,suggested}/`
 and `ref/**/*.md`, in slices, to the Service-Arb members holding `sa:playbook:mcp:use`. `build.rs` bakes that text
 into the binary, so the server reads nothing from disk per request and nothing else of the repo
 reaches the image. `ref/cases/` states no source and no date, so it stays out.

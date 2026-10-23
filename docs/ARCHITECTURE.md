@@ -99,7 +99,7 @@ plain prose, in paragraphs, no stamps in it
   summary is verbatim and held to nothing
 - speaker turns, where the platform names speakers, are paragraphs opening `**<speaker>**:`
 - a recording nobody chaptered gets an untitled header per paragraph instead — the times
-  `/call-digest` needs to place chapters. It titles the ones that open a chapter and deletes the rest
+  `/ingest call-digest` needs to place chapters. It titles the ones that open a chapter and deletes the rest
 - a recording nobody speaks in is captured all the same: `transcribed by:` ends `— nobody speaks`,
   and only then is `## transcript` empty
 - a recording is read through `call-pull.rs --recording <capture.md>`, which hands back the one
@@ -115,11 +115,13 @@ way, into its own `## shown`, and states the models and the cost in its header. 
 describes and embeds the frame at that second, so the claim can be checked by eye.
 
 The one reading an agent may put in `ref/` is what the source's own platform would have:
-a recording its platform never summarised gets a summary from `/call-digest`, which says so
+a recording its platform never summarised gets a summary from `/ingest call-digest`, which says so
 in the capture's `read by:` line. Nothing else.
 
 **`structured/suggested/`** — an agent's own reading of a source. Unreviewed.
 **`structured/approved/`** — what the human has already vetted.
+**`structured/internal/`** — what we know about our own team and its operations. Read in a checkout,
+never baked into the member image.
 
 Promotion is the human moving a bullet from one to the other. An agent may place into
 `approved/` only material the human already wrote — their own call notes, transcribed
@@ -238,8 +240,9 @@ rolodex's `venues/` tree; nothing here duplicates that.
 ## Answering
 
 ```
+.claude/skills/            ingest · distill · ops: upkeep, in a checkout only
 skill/service-arb/         SKILL.md routes a question to the sources; sections/*.md say how to decide, per area
-  └─ baked into playbook_web/ with structured/ and ref/**/*.md — every agent, the owner's included, gets slices over MCP
+  └─ baked into playbook_web/ with structured/{approved,suggested}/ and ref/**/*.md — every agent, the owner's included, gets slices over MCP
 playbook_web/              the member surface over MCP: search · read · guide, behind the Service-Arb panel (`sa:playbook:mcp:use`), every call logged
 ```
 
@@ -281,10 +284,11 @@ history, and an hour of call is ~300–400 MB.
 ## Invariants
 
 - Nothing enters `structured/` that did not enter `ref/` first — bar `r0`, which enters as the
-  comment that closed its test's issue.
+  comment that closed its test's issue, and the owner's own words, which enter `// unsourced: Valera`
+  and are re-sourced once a capture holds them.
 - Every claim carries a link to its source and the date it was said.
-- `ref/` is written by pullers, never by hand — bar what `/call-digest` fills in, which says so.
+- `ref/` is written by pullers, never by hand — bar what `/ingest call-digest` fills in, which says so.
 - An agent's own reading goes to `suggested/`, never straight to `approved/`.
 - A puller writes a new capture, moves one, or does nothing; it never edits what one says.
-- The member image carries `skill/`, `structured/` and `ref/**/*.md` only: no scripts, no docs, no
+- The member image carries `skill/`, `structured/approved/`, `structured/suggested/` and `ref/**/*.md` only: no scripts, no docs, no
   history, no media.

@@ -41,17 +41,6 @@ The answer is three parts, split by `---`:
 2. **advice**: no URLs, `[n]` into the sources. Say how strongly each point is backed
 3. **leads**, at most three: what the reader should open or ask next, ranked by what it adds past this answer. A course lead is the skool.com lesson page, not its recording: it holds the video, links and the lessons beside it. A call mined dry adds nothing. A person, per the experts section, adds what nobody recorded. One line each: what they'd get, then the URL or handle
 
-## Writing back
-
-Only in a checkout; over MCP there is nothing to write to.
-
-An answer `structured/` could not give and `ref/` did leaves its clearest claim behind, after the answer, so the next question hits it there:
-- only what the answer leaned on, best number first: course, Eric. no anecdote, no guess, nothing a better source contradicts
-- into `structured/suggested/`, never `approved/`: the block the next asker would open, per [Blocks](../../docs/ARCHITECTURE.md#blocks), under `## info`, `## facts` or `## plays`, written per [structured/README.md](../../structured/README.md)
-- each bullet cites the second it was said: `[r<base> <date>](url?t=…)`
-- already in `structured/`: no second bullet. a new source joins its citation run, best first; a contradiction per [Reliability](../../docs/ARCHITECTURE.md#reliability)
-- `scripts/cite-check.rs` passes before you stop
-
 ## Sections
 
 Loaded on demand, one decision area each. Lines ending `// inferred` are drafted, not yet vetted.
@@ -69,11 +58,3 @@ Loaded on demand, one decision area each. Lines ending `// inferred` are drafted
 | [infra](sections/infra.md) | gmails, devices, proxies, numbers, cards |
 | [experts](sections/experts.md) | who to refer someone to, and when not to |
 
-## Tools
-
-Only in a checkout; the remote server has none of these.
-
-- [call-digest](../../.claude/skills/call-digest/SKILL.md): a capture whose `read by:` says `nothing yet`
-- `../verif_tools`, only if it exists: `prepare-verif` builds the paper pack for an address, `submit-live` fills Google's live-verification form in your Chrome
-- `../accounting`, only if it exists: `accountant`, for what was spent and is owed
-- `scripts/photo-metadata.rs <dir> --city <city>`: gen metadata for photos
