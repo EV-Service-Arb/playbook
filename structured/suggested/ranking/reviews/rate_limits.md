@@ -2,6 +2,9 @@
 - (!) one review a day per profile, at most — Eric, repeatedly
   reason: above that they get deleted *and* the profile becomes more sensitive for everything else
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3026)
+  > `Glenn` put 53 on a new profile inside a week and one has dropped so far — only a week in
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4503)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6544)
 - at one a day from aged gmails ~80% stick indefinitely — Eric
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1824)
 - too many fake reviews also gets *real* customers' reviews flagged
@@ -11,6 +14,8 @@
 - a profile is not suspended over reviews, the reviews just drop — Eric
   > one exception reported: 300 reviews in a single day did get a suspension
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2356)
+  > a member says ~60 on a new profile got it suspended
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=167)
 - no suspension risk from too many *local* reviews at any rate
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3082)
 - older profiles are less susceptible to review deletion — Eric

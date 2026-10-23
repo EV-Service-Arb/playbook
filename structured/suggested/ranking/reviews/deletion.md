@@ -15,10 +15,18 @@
   [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2381)
 - google runs periodic sweeps across all GMBs, unrelated to any one profile — `Ilya` lost 10–15% in one wave a month ago
   [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5634)
+- a profile 200 km from the member's own address lost 45 reviews; reinstatement requests won back 14, and a single taken-down one came back in 8 days — `PP`
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4770)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4795)
+- reviews from suspect accounts tend to drop once you reply to them — a member has stopped replying to those
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6199)
 
 ## plays
 - so screenshot every review as it lands; the screenshot is what you submit to get it reinstated — `Ilya`, has a VA do it
   [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5655)
+  > a member pastes each review, the reviewer's name and the link to their google profile into one chatgpt thread, which also drafts his replies — the link is the evidence
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6578)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6620)
 - scraping your own reviews: use a headless browser (`Playwright`, `Puppeteer`), not an API — `Valera`
   > `Playwright` alone gets caught on scroll behaviour
   > the goal is a monthly diff of every review ever left, so deletions can be caught and appealed

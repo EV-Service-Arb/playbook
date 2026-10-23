@@ -6,6 +6,16 @@
   [r4 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6540)
 - *quebec*: advertising a trade legally requires an NEQ, so the sites are technically illegal — one member has had 3–4 close calls and won't front the payments himself, capping his margin
   [r4 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=874)
+- master one niche before adding another — Eric, to a member already clearing $300–400 a plumbing call: a second niche means another contractor, another call script, and a VA trained on both
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1390)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1473)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1773)
+- calls dip the week before and after holidays — halloween, easter — and rise around others: thanksgiving is big for *appliance repair*, ovens break last-minute and people pay anything — John Osayi, 7 years in the trade
+  > so keep more profiles than you need, as a buffer
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=514)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3957)
+  > `Kit Volcano`: *HVAC* goes quiet in mild weather — windows open, nothing breaking
+  [r4 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1943)
 
 - city size: at least 30k people, 50k–300k best — Marcus Milan
   [r3 2026-07-24](https://www.youtube.com/watch?v=5Taappne53c&t=0)
@@ -31,3 +41,8 @@
 - (!) google local service ads are no longer worth buying — `Ilya`
   > then: $20/call, 50% signed, 1 in 4 went recurring. now: $60–70/call, 1 in 10 recurring. this is why he is moving back to organic GMBs
   [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5075)
+- *plumbing*, canada: 11 profiles in one city, under 30 days old with 50–70 reviews each and `Hostinger` AI sites → 6–8 calls a day, ~90% converted, ~$10k profit the first month — `Dante`
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1907)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2319)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2390)
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2432)

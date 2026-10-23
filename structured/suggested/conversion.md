@@ -9,6 +9,8 @@
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=939)
 - a VA should convert ~50% of calls to booked jobs — Eric, *plumbing*
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1875)
+  > `Dante` converts ~90%, on 6–8 *plumbing* calls a day
+  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2319)
 - CRM: google sheets + google calendar. Eric tried `GoHighLevel` and found it made the process more complicated for everyone
   > he has VA templates, a phone script and VA call recordings, and hands them out on request
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=622)

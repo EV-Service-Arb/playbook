@@ -2,15 +2,28 @@
 - (!) 3–5 profiles per gmail, at most — Eric
   reason: one banned gmail takes every profile on it at once
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2643)
+- buy gmails off real people: facebook marketplace and groups, craigslist — pay them, facebook gift cards work — Eric
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3409)
 - `Quo` ~$15/mo for the number the VA works out of — calls route `CallRail` → `Quo`, and they log in from their own computer to answer and text
   // heard as "Quo"; Eric says it and `OpenPhone` are the same thing
   reason: a filipino VA can't text a US customer off a filipino area code
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=574)
 - `Hushed` also works for this — `David`
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2192)
+- (!) new numbers draw spam and sales calls every few minutes — filter in `CallRail` from day one: settings → block numbers → filter callers by category; block robocallers, telemarketers and toll-free, *challenge* the rest — Eric
+  > challenge plays a message and the caller presses a key to connect. it may cost a lead or two, worth it while the VA keeps up
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3064)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3120)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3158)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3197)
 - `TextVerified` for SMS verifications generally
   > google voice numbers are rejected as VOIP — facebook marketplace now asks for phone verification on some posts
   [r4 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6173)
+- location spoofers work, if you use a solid one — Eric links one in the course's video modules
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2251)
+  > a member recommends `3uTools`, free // heard as "Three Tools"
+  [r4 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2251)
+  [r4 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2281)
 - (!) mock-location apps are visibly spoofed — they all go through the android mock API, so the phone has to be rooted first — `Valera`
   [r4 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=254)
 - `Octobrowser` — free, ~100 profiles, makes a phone look like a different device; runs on iphone or android

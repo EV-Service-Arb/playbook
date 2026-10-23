@@ -26,3 +26,9 @@
 - (!) while you are set up at the location anyway, create three profiles and record three videos
   reason: the identical video passes on one submission and fails on another, so buy yourself two more draws
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1573)
+- (!) an address video without being there: AI-generate the street signs as they'd look at that corner, matched to google earth, show the image on a computer screen in the video, flash an invoice, and spoof the phone's location — Eric, passing on one member's method that gets approved
+  reason: the reviewer cross-references the scenery against the address
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2113)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2151)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2180)
+  [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2207)
