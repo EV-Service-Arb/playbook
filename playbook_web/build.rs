@@ -15,11 +15,11 @@ const INSTRUCTIONS_MAX: usize = 2048; // Claude Code truncates server instructio
 fn main() {
 	let root = PathBuf::from(std::env::var("CARGO_MANIFEST_DIR").unwrap()).parent().expect("playbook_web/ sits in the workspace root").to_path_buf();
 	let mut files = Vec::new();
-	for dir in ["skill/service-arb/sections", "structured/approved", "structured/suggested", "ref"] {
+	for dir in ["skills/service-arb/sections", "structured/approved", "structured/suggested", "ref"] {
 		println!("cargo:rerun-if-changed={}", root.join(dir).display());
 		walk(&root.join(dir), &mut files);
 	}
-	let skill = root.join("skill/service-arb/SKILL.md");
+	let skill = root.join("skills/service-arb/SKILL.md");
 	println!("cargo:rerun-if-changed={}", skill.display());
 	files.sort();
 
@@ -27,7 +27,7 @@ fn main() {
 	let mut sections = Vec::new();
 	for f in &files {
 		let rel = f.strip_prefix(&root).unwrap().to_str().expect("corpus paths are utf-8");
-		if let Some(name) = rel.strip_prefix("skill/service-arb/sections/") {
+		if let Some(name) = rel.strip_prefix("skills/service-arb/sections/") {
 			sections.push(name.trim_end_matches(".md").to_owned());
 		}
 		writeln!(out, "\t({rel:?}, include_str!({:?})),", f.display().to_string()).unwrap();

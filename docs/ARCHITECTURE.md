@@ -240,8 +240,9 @@ rolodex's `venues/` tree; nothing here duplicates that.
 ## Answering
 
 ```
-.claude/skills/            ingest · distill · ops: upkeep, in a checkout only
-skill/service-arb/         SKILL.md routes a question to the sources; sections/*.md say how to decide, per area
+skills/                    every agent skill; .claude/skills links here
+├─ ingest · distill · ops   upkeep, run from a checkout
+└─ service-arb/            SKILL.md routes a question to the sources; sections/*.md say how to decide, per area
   └─ baked into playbook_web/ with structured/{approved,suggested}/ and ref/**/*.md — every agent, the owner's included, gets slices over MCP
 playbook_web/              the member surface over MCP: search · read · guide, behind the Service-Arb panel (`sa:playbook:mcp:use`), every call logged
 ```
@@ -290,5 +291,5 @@ history, and an hour of call is ~300–400 MB.
 - `ref/` is written by pullers, never by hand — bar what `/ingest call-digest` fills in, which says so.
 - An agent's own reading goes to `suggested/`, never straight to `approved/`.
 - A puller writes a new capture, moves one, or does nothing; it never edits what one says.
-- The member image carries `skill/`, `structured/approved/`, `structured/suggested/` and `ref/**/*.md` only: no scripts, no docs, no
+- The member image carries `skills/service-arb/`, `structured/approved/`, `structured/suggested/` and `ref/**/*.md` only: no scripts, no docs, no
   history, no media.

@@ -2,7 +2,7 @@
 
 Write the summary and chapters a capture's platform never wrote, in loom's shape, so that its
 `read by:` line is the only thing telling a reader who read it. The shape is
-[Call captures](../../../docs/ARCHITECTURE.md#call-captures); before reading the recording itself, [recordings.md](recordings.md).
+[Call captures](../../docs/ARCHITECTURE.md#call-captures); before reading the recording itself, [recordings.md](recordings.md).
 
 ## Target
 

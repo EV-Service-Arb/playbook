@@ -6,8 +6,9 @@ on:
   push:
     branches: [main]
     paths:
-      - "skill/**"
-      - "structured/**"
+      - "skills/service-arb/**"
+      - "structured/approved/**"
+      - "structured/suggested/**"
       - "ref/**/*.md"
       - "playbook_web/**"
       - "Cargo.lock"

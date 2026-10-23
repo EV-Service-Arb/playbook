@@ -1,6 +1,6 @@
 # playbook_web
 
-The playbook for members: a remote MCP server that answers from `skill/service-arb/`, `structured/{approved,suggested}/`
+The playbook for members: a remote MCP server that answers from `skills/service-arb/`, `structured/{approved,suggested}/`
 and `ref/**/*.md`, in slices, to the Service-Arb members holding `sa:playbook:mcp:use`. `build.rs` bakes that text
 into the binary, so the server reads nothing from disk per request and nothing else of the repo
 reaches the image. `ref/cases/` states no source and no date, so it stays out.
@@ -15,7 +15,7 @@ claude mcp add --transport http service-arb https://sa.evinvest.ltd/playbook_mcp
 |---|---|
 | `search(pattern, scope?, screen?)` | case-insensitive regex hits, each with path:line, header, date, reliability and source URL, two per file. Each kind (notes, course, calls, videos, texts) has its own slots and slots it leaves empty go to the others. Within a kind, chunks rank by which alternatives of the pattern they hold, rare ones weighing more (BM25's idf, each term present or not). The files past the slots are listed by path:line. `screen` searches what recordings showed instead of what was said. A pattern hitting 40% of the files in scope is refused |
 | `read(path, header, line?)` | one `###` chapter of a capture or one `##` section of a note, never a whole file |
-| `guide(section)` | one `skill/service-arb/sections/<section>.md` |
+| `guide(section)` | one `skills/service-arb/sections/<section>.md` |
 
 The server's `instructions` are `SKILL.md`'s hook and `## Answering`, held to 2,048 characters at
 build time. The rules that matter most are repeated in `search`'s description.

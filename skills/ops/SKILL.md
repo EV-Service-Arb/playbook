@@ -9,6 +9,6 @@ The tools sit beside the checkout. Use one only if it exists.
 
 - `../verif_tools`: `prepare-verif` builds the paper pack for an address, `submit-live` fills Google's
   live-verification form in your Chrome
-- `../accounting`: its [accountant](../../../../accounting/.claude/skills/accountant/SKILL.md) skill, for
+- `../accounting`: its [accountant](../../../accounting/.claude/skills/accountant/SKILL.md) skill, for
   what was spent and is owed
 - `scripts/photo-metadata.rs <dir> --city <city>`: metadata for photos

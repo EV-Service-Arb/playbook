@@ -31,7 +31,7 @@
         combined = v_flakes.utils.combine { inherit rust; modules = [ github readme ]; };
 
         port = "59082";
-        # the member surface; build.rs bakes in skill/, structured/ and ref/**/*.md, and nothing else of the tree reaches the image
+        # the member surface; build.rs bakes in skills/service-arb/, structured/{approved,suggested}/ and ref/**/*.md, and nothing else of the tree reaches the image
         playbook_web = (pkgs.makeRustPlatform { rustc = rust; cargo = rust; }).buildRustPackage {
           pname = "playbook_web";
           version = "0.1.0";
@@ -42,8 +42,9 @@
               ./Cargo.lock
               ./playbook # a workspace member, so cargo reads its manifest
               ./playbook_web
-              ./skill
-              ./structured
+              ./skills/service-arb
+              ./structured/approved
+              ./structured/suggested
               ./scripts/cite-check.rs # build.rs inlines its DECAY_DAYS
               (pkgs.lib.fileset.fileFilter (f: f.hasExt "md") ./ref)
             ];

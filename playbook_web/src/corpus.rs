@@ -64,7 +64,7 @@ impl Corpus {
 	fn load() -> Self {
 		let mut docs: Vec<Doc> = FILES
 			.iter()
-			.filter(|(p, _)| !p.starts_with("skill/"))
+			.filter(|(p, _)| !p.starts_with("skills/"))
 			.map(|&(path, text)| {
 				let lines: Vec<&str> = text.lines().collect();
 				let kind = match path {
@@ -74,7 +74,7 @@ impl Corpus {
 					p if p.starts_with("ref/youtube/") => Kind::Video,
 					p if p.starts_with("ref/") && lines.contains(&"## transcript") => Kind::Call,
 					p if p.starts_with("ref/") => Kind::Text,
-					p => unreachable!("build.rs bakes only structured/ and ref/ besides skill/: {p}"),
+					p => unreachable!("build.rs bakes only structured/ and ref/ besides skills/: {p}"),
 				};
 				let mut current = None;
 				let chapter = lines
@@ -349,7 +349,7 @@ impl Corpus {
 	}
 
 	pub fn guide(&self, section: &str) -> Result<Found, String> {
-		let path = format!("skill/service-arb/sections/{section}.md");
+		let path = format!("skills/service-arb/sections/{section}.md");
 		FILES
 			.iter()
 			.find(|(p, _)| *p == path)

@@ -5,14 +5,14 @@ description: Turn what a capture in ref/ says into claims in structured/suggeste
 
 # distill
 
-Claims go to `structured/suggested/`, in [the block format](../../../structured/README.md).
+Claims go to `structured/suggested/`, in [the block format](../../structured/README.md).
 
 - a claim goes to the block the next asker would open, per the note in
-  [Overview](../../../docs/ARCHITECTURE.md#overview), not where the source happened to say it
+  [Overview](../../docs/ARCHITECTURE.md#overview), not where the source happened to say it
 - a claim already present joins its citation run. It never becomes a second bullet
-- a contradiction demotes, per [Reliability](../../../docs/ARCHITECTURE.md#reliability). Nothing is deleted
-- a new block goes into [Blocks](../../../docs/ARCHITECTURE.md#blocks)' tree and the topic list in
-  [the member skill](../../../skill/service-arb/SKILL.md)
+- a contradiction demotes, per [Reliability](../../docs/ARCHITECTURE.md#reliability). Nothing is deleted
+- a new block goes into [Blocks](../../docs/ARCHITECTURE.md#blocks)' tree and the topic list in
+  [the member skill](../service-arb/SKILL.md)
 - loom names no speakers. Who said it comes from what is said: names, roles, who answers whom
 - a digested summary is our reading, not the source. Cite the transcript
 - a second inside a chapter is the untitled header above the claim in the capture's last commit before
