@@ -4,7 +4,7 @@ will fetch, so adding a source is pasting it below and re-running the puller —
 disk is left alone. `skool-pull.rs` reads this file back to say which links the classroom names and
 this list does not.
 
-- youtube, each channel's videos under `youtube/<link text>/`: [eric](https://www.youtube.com/@ericvelch), [marcus](https://www.youtube.com/@marcusmilxn)
+- youtube, each channel's videos under `youtube/<link text>/`: [eric](https://www.youtube.com/@ericvelch), [marcus](https://www.youtube.com/@marcusmilxn), [zach](https://www.youtube.com/@zachpeters0n)
 - [course](https://www.skool.com/gmp-passive-profits-5347/classroom)
 - [convos](https://www.skool.com/gmp-passive-profits-5347)
 - [calls](https://www.skool.com/gmp-passive-profits-5347?c=bea7ab0d976f43dd953abd67d8987d0e&s=newest-cm&fl=)
