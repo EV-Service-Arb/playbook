@@ -3,7 +3,8 @@
   "id": "A1",
   "question": "How many GBPs can I safely park under one Google account before it gets too risky?",
   "expect": [
-   "mentions Eric's cap of 3-5 profiles per gmail, at most",
+   "says 2–3 profiles at most when we are the owner or the gmail is already tainted",
+   "says up to 5–6 when we are a manager, with clean opsec, on a high-trust org email",
    "says a banned gmail takes every profile verified on it with it",
    "says winning the gmail's appeal does not bring those profiles back"
   ]
