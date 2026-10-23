@@ -231,6 +231,8 @@ that has no digest yet, since a re-pull drops the digest. `cargo r -- eval` answ
 through a member's client, on this tree and on the last release, and judges each answer against the
 case's expectations.
 
+> each expectation is stated as succinctly as possible, to capture the intention rather than the wording
+
 A platform that needs a session, or one
 [`social_networks`](https://github.com/valeratrades/social_networks) already knows, is read
 by linking `social_networks_adapters`. It knows how to read a platform; the puller here
