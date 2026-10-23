@@ -4,8 +4,10 @@
 use std::{
 	io::{Read as _, Write as _},
 	net::{TcpListener, TcpStream},
+	num::NonZeroUsize,
 	path::{Path, PathBuf},
 	process::{Child, Command, Stdio},
+	sync::atomic::{AtomicUsize, Ordering},
 	time::{Duration, Instant, SystemTime, UNIX_EPOCH},
 };
 
@@ -60,7 +62,7 @@ impl Drop for Server {
 }
 
 /// Whether any case scored lower on this tree than on the old side.
-pub fn run(root: &Path, against: Option<String>, info: Option<String>, ids: Vec<String>) -> bool {
+pub fn run(root: &Path, against: Option<String>, info: Option<String>, jobs: NonZeroUsize, ids: Vec<String>) -> bool {
 	assert!(std::env::var_os("CLAUDE_CODE_OAUTH_TOKEN").is_some(), "CLAUDE_CODE_OAUTH_TOKEN is unset; `claude setup-token` makes one");
 	let cases: Vec<Case> = serde_json::from_str(&std::fs::read_to_string(root.join("playbook/eval.json")).expect("playbook/eval.json is in the tree")).expect("playbook/eval.json is a list of cases");
 	for id in &ids {
@@ -88,13 +90,29 @@ pub fn run(root: &Path, against: Option<String>, info: Option<String>, ids: Vec<
 	let bins: Vec<PathBuf> = sides.iter().map(|s| build(root, s)).collect();
 	let servers: Vec<Server> = sides.iter().zip(&bins).map(|(s, bin)| serve(bin, s.name, &cases, &out)).collect();
 
-	let answered: Vec<Vec<Answered>> = std::thread::scope(|scope| {
-		let handles: Vec<Vec<_>> = cases
-			.iter()
-			.map(|c| sides.iter().zip(&servers).map(|(side, server)| scope.spawn(|| ask(c, side, server, &out))).collect())
+	let todo: Vec<(usize, usize)> = (0..cases.len()).flat_map(|c| (0..sides.len()).map(move |s| (c, s))).collect();
+	let next = AtomicUsize::new(0);
+	let mut answered: Vec<Vec<Option<Answered>>> = cases.iter().map(|_| sides.iter().map(|_| None).collect()).collect();
+	std::thread::scope(|scope| {
+		let workers: Vec<_> = (0..jobs.get().min(todo.len()))
+			.map(|_| {
+				scope.spawn(|| {
+					let mut done = Vec::new();
+					//LOOP: bounded by `todo`, each index handed out once
+					while let Some(&(c, s)) = todo.get(next.fetch_add(1, Ordering::Relaxed)) {
+						done.push((c, s, ask(&cases[c], &sides[s], &servers[s], &out)));
+					}
+					done
+				})
+			})
 			.collect();
-		handles.into_iter().map(|h| h.into_iter().map(|h| h.join().unwrap_or_else(|e| std::panic::resume_unwind(e))).collect()).collect()
+		for w in workers {
+			for (c, s, a) in w.join().unwrap_or_else(|e| std::panic::resume_unwind(e)) {
+				answered[c][s] = Some(a);
+			}
+		}
 	});
+	let answered: Vec<Vec<Answered>> = answered.into_iter().map(|a| a.into_iter().map(|a| a.expect("every (case, side) is in `todo`")).collect()).collect();
 	drop(servers);
 
 	let width = cases.iter().fold("case".len(), |w, c| w.max(c.id.len()));

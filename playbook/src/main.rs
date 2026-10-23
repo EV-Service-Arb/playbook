@@ -47,6 +47,9 @@ enum Cmd {
 		/// the rev both sides take `structured/{approved,suggested}` and `ref/` from, this tree's where unset
 		#[arg(long)]
 		info: Option<String>,
+		/// answers in flight at once; each is a `claude` process of ~240 MB
+		#[arg(long, default_value = "8")]
+		jobs: std::num::NonZeroUsize,
 		/// cases to run, all where none
 		ids: Vec<String>,
 	},
@@ -72,8 +75,8 @@ struct Capture {
 fn main() {
 	match Cli::parse().command {
 		Cmd::ReTranscribe { what, paths, execute, legacy, every } => re_transcribe(what, paths, execute, legacy, every),
-		Cmd::Eval { against, info, ids } =>
-			if eval::run(&repo_root(), against, info, ids) {
+		Cmd::Eval { against, info, jobs, ids } =>
+			if eval::run(&repo_root(), against, info, jobs, ids) {
 				std::process::exit(1);
 			},
 	}
