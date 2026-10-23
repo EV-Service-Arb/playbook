@@ -3,15 +3,23 @@ use std::{
 	process::Command,
 };
 
-use clap::{Parser, Subcommand, ValueEnum};
+use ask_llm::Pick;
+use clap::{Parser, Subcommand};
 use v_utils::io::{ConfirmResult, confirmation};
 
+mod call;
+mod chatgpt;
+mod cite_check;
+mod doc;
 mod eval;
+mod photo_metadata;
+mod skool;
+mod watch;
+mod yt;
 
-const PLATFORMS: [&str; 5] = ["ref/loom", "ref/fathom", "ref/drive", "ref/vimeo", "ref/vocaroo"];
 /// Past this, `--execute` asks before spending.
 const CONFIRM_USD: f64 = 1.;
-/// ¢ per minute of recording, by the `ask_llm` `Footage` `scripts/call-watch.rs` reads it as.
+/// ¢ per minute of recording, by the `ask_llm` `Footage` `watch` reads it as.
 const SCREEN_CENTS_PER_MIN: f64 = 0.1;
 const PHONE_CENTS_PER_MIN: f64 = 0.6;
 
@@ -23,20 +31,35 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Cmd {
+	/// Capture each source we have no capture of yet into `ref/`: the given links, or where none, every one `ref/README.md` links.
+	Pull {
+		#[command(subcommand)]
+		source: Source,
+	},
+	/// Hold the tree to its shape; exits non-zero where it breaks.
+	Check {
+		#[command(subcommand)]
+		what: Check,
+	},
+	/// Print the path of each capture's recording, fetched beside the capture first where none is kept.
+	Recording {
+		#[arg(required = true)]
+		captures: Vec<PathBuf>,
+	},
+	/// Write `<capture>/shown.md`, what the recording shows that its speech does not, for each capture nobody has
+	/// watched yet; every one under `ref/` where none are given.
+	Watch {
+		#[command(flatten)]
+		frames: Frames,
+		captures: Vec<PathBuf>,
+	},
+	/// Report the metadata of every photo under a directory, as JSON.
+	PhotoMetadata(photo_metadata::Options),
 	/// Redo a machine transcription of every call capture under the paths. Prints each with what it
 	/// would cost; only `--execute` runs it.
 	ReTranscribe {
+		#[command(subcommand)]
 		what: What,
-		#[arg(required = true)]
-		paths: Vec<PathBuf>,
-		#[arg(long)]
-		execute: bool,
-		/// `picture`: frames wherever the picture changes, not only where the speech says something is shown
-		#[arg(long, conflicts_with = "every")]
-		legacy: bool,
-		/// `picture`: least seconds between frames, call-watch.rs's own where unset
-		#[arg(long)]
-		every: Option<f64>,
 	},
 	/// Answer playbook/eval.json through a member's client on this tree, uncommitted edits included, and
 	/// on the last release; exits 1 when a case scores lower here.
@@ -55,12 +78,82 @@ enum Cmd {
 	},
 }
 
-#[derive(Clone, Copy, ValueEnum)]
+#[derive(Subcommand)]
+enum Source {
+	/// loom and fathom share pages; drive folders, vimeo and vocaroo through what the registry says of them
+	Call { urls: Vec<String> },
+	/// google docs, as their markdown export
+	Doc { urls: Vec<String> },
+	/// chatgpt shares, by link or id
+	Chatgpt { urls: Vec<String> },
+	/// every group's classroom, and the calls feed into the registry
+	Skool,
+	/// youtube channels, through the index `ref/youtube/README.md`
+	Yt {
+		#[command(subcommand)]
+		step: Yt,
+	},
+}
+
+#[derive(Subcommand)]
+enum Yt {
+	/// List every video of the channels `ref/README.md` links, in `ref/youtube/README.md`.
+	Sync,
+	/// Capture the given videos, or every one that list has unticked.
+	Transcribe {
+		#[command(flatten)]
+		frames: Frames,
+		urls: Vec<String>,
+	},
+}
+
+#[derive(Subcommand)]
+enum Check {
+	/// every call capture, against `docs/ARCHITECTURE.md`'s "Call captures"
+	Calls,
+	/// every citation in `structured/`, against its capture in `ref/`
+	Cites,
+}
+
+#[derive(Subcommand)]
 enum What {
 	/// whisper's transcript, re-pulled from the kept recording
-	Audio,
-	/// `shown.md`, re-watched through `scripts/call-watch.rs`
-	Picture,
+	Audio(Targets),
+	/// `shown.md`, re-watched
+	Picture {
+		#[command(flatten)]
+		frames: Frames,
+		#[command(flatten)]
+		targets: Targets,
+	},
+}
+
+#[derive(clap::Args)]
+struct Targets {
+	#[arg(required = true)]
+	paths: Vec<PathBuf>,
+	#[arg(long)]
+	execute: bool,
+}
+
+/// Which frames of a recording are read.
+#[derive(clap::Args)]
+struct Frames {
+	/// wherever the picture changes, not only where the speech says something is shown
+	#[arg(long, conflicts_with = "every")]
+	legacy: bool,
+	/// least seconds between frames
+	#[arg(long, default_value = "0.5")]
+	every: f64,
+}
+
+impl From<Frames> for Pick {
+	fn from(f: Frames) -> Self {
+		match f.legacy {
+			true => Pick::Changes,
+			false => Pick::Likely { every: f.every },
+		}
+	}
 }
 
 /// The fields of a capture this reads.
@@ -73,30 +166,59 @@ struct Capture {
 }
 
 fn main() {
+	let root = repo_root();
+	let rt = || tokio::runtime::Runtime::new().expect("a runtime builds");
 	match Cli::parse().command {
-		Cmd::ReTranscribe { what, paths, execute, legacy, every } => re_transcribe(what, paths, execute, legacy, every),
+		Cmd::Pull { source } => match source {
+			Source::Call { urls } => call::pull(&root, &urls),
+			Source::Doc { urls } => doc::pull(&root, &urls),
+			Source::Chatgpt { urls } => chatgpt::pull(&root, &urls),
+			Source::Skool => rt().block_on(skool::pull(&root)),
+			Source::Yt { step: Yt::Sync } => rt().block_on(yt::sync(&root)),
+			Source::Yt { step: Yt::Transcribe { frames, urls } } => rt().block_on(yt::transcribe(&root, frames.into(), &urls)),
+		},
+		Cmd::Check { what: Check::Calls } => eprintln!("{} call captures hold their shape", call::all(&root).len()),
+		Cmd::Check { what: Check::Cites } => cite_check::run(&root),
+		Cmd::Recording { captures } =>
+			for media in call::recordings(&root, &captures) {
+				println!("{}", media.display());
+			},
+		Cmd::Watch { frames, captures } => watch::run(&root, frames.into(), &captures),
+		Cmd::PhotoMetadata(options) => photo_metadata::run(options),
+		Cmd::ReTranscribe { what } => re_transcribe(&root, what),
 		Cmd::Eval { against, info, jobs, ids } =>
-			if eval::run(&repo_root(), against, info, jobs, ids) {
+			if eval::run(&root, against, info, jobs, ids) {
 				std::process::exit(1);
 			},
 	}
 }
 
-fn re_transcribe(what: What, paths: Vec<PathBuf>, execute: bool, legacy: bool, every: Option<f64>) {
-	let pick: Vec<String> = match (what, legacy, every) {
-		(What::Picture, true, _) => vec!["--legacy".into()],
-		(What::Picture, false, every) => every.into_iter().flat_map(|e| ["--every".to_string(), e.to_string()]).collect(),
-		(What::Audio, false, None) => Vec::new(),
-		(What::Audio, ..) => panic!("--legacy and --every pick frames, and audio has none"),
+fn re_transcribe(root: &Path, what: What) {
+	let (pick, Targets { paths, execute }) = match what {
+		What::Audio(targets) => (None, targets),
+		What::Picture { frames, targets } => (Some(Pick::from(frames)), targets),
 	};
-	let root = repo_root();
-	let captures: Vec<Capture> = paths.iter().flat_map(|p| captures_under(&root, p)).map(|p| read(&p)).collect();
+	let all = call::all(root);
+	let captures: Vec<Capture> = paths
+		.iter()
+		.flat_map(|p| {
+			let p = std::fs::canonicalize(p).unwrap_or_else(|e| panic!("{}: {e}", p.display()));
+			let under: Vec<&PathBuf> = all.iter().filter(|c| c.starts_with(&p)).collect();
+			assert!(!under.is_empty(), "{} holds no call capture", p.display());
+			under
+		})
+		.map(|p| read(p))
+		.collect();
+	let media: Vec<Option<PathBuf>> = match pick {
+		Some(_) => call::recordings(root, &captures.iter().map(|c| c.path.clone()).collect::<Vec<_>>()).into_iter().map(Some).collect(),
+		None => captures.iter().map(|_| None).collect(),
+	};
 
 	let mut todo = Vec::new();
 	let mut usd = 0.;
-	for c in &captures {
-		let rel = c.path.strip_prefix(&root).expect("captures are found under the root").display();
-		match plan(&root, what, legacy, c) {
+	for (c, media) in captures.iter().zip(&media) {
+		let rel = c.path.strip_prefix(root).expect("captures are found under the root").display();
+		match plan(c, pick.zip(media.as_deref())) {
 			Ok((cost, why)) => {
 				println!("{:>8} {rel} — {why}", format!("${cost:.3}"));
 				usd += cost;
@@ -112,8 +234,8 @@ fn re_transcribe(what: What, paths: Vec<PathBuf>, execute: bool, legacy: bool, e
 	if usd > CONFIRM_USD && !matches!(confirmation(&format!("spend ~${usd:.2}?")).flush_blocking(), ConfirmResult::Yes) {
 		return;
 	}
-	match what {
-		What::Picture => {
+	match pick {
+		Some(pick) => {
 			for c in &todo {
 				let kept = c.path.with_extension("");
 				if kept.join("shown.md").exists() {
@@ -123,10 +245,10 @@ fn re_transcribe(what: What, paths: Vec<PathBuf>, execute: bool, legacy: bool, e
 					std::fs::remove_dir_all(kept.join("frames")).expect("the capture's dir is ours");
 				}
 			}
-			run(Command::new(root.join("scripts/call-watch.rs")).args(&pick).args(todo.iter().map(|c| &c.path)));
+			watch::run(root, pick, &todo.iter().map(|c| c.path.clone()).collect::<Vec<_>>());
 		}
-		What::Audio => {
-			// the kept recording waits where call-pull.rs stages a fetch, which it then finds already there
+		None => {
+			// the kept recording waits where `call::pull` stages a fetch, which it then finds already there
 			for c in &todo {
 				let id = c.source.trim_end_matches('/').rsplit('/').next().expect("rsplit yields at least once");
 				let staged = root.join("tmp/call-pull").join(id);
@@ -136,15 +258,16 @@ fn re_transcribe(what: What, paths: Vec<PathBuf>, execute: bool, legacy: bool, e
 				std::fs::remove_file(&c.path).expect("the capture was just read");
 			}
 			// a drive, vimeo or vocaroo recording is named by the registry, so only a registry run can pull it
-			run(Command::new(root.join("scripts/call-pull.rs")).current_dir(&root));
+			call::pull(root, &[]);
 		}
 	}
 }
 
-/// `Ok((usd, what it is))` for a capture this would redo, `Err(why not)` for one it leaves.
-fn plan(root: &Path, what: What, legacy: bool, c: &Capture) -> Result<(f64, String), String> {
-	match what {
-		What::Audio => {
+/// `Ok((usd, what it is))` for a capture this would redo, `Err(why not)` for one it leaves. `picture`
+/// is how a picture is picked, and its recording.
+fn plan(c: &Capture, picture: Option<(Pick, &Path)>) -> Result<(f64, String), String> {
+	match picture {
+		None => {
 			if !c.transcribed_by.starts_with("whisper") {
 				return Err(format!("transcribed by {}, which a re-pull fetches again rather than transcribes", c.transcribed_by));
 			}
@@ -153,13 +276,10 @@ fn plan(root: &Path, what: What, legacy: bool, c: &Capture) -> Result<(f64, Stri
 			}
 			Ok((0., format!("{:.0} min through local whisper", c.minutes)))
 		}
-		What::Picture => {
-			let out = Command::new(root.join("scripts/call-pull.rs")).arg("--recording").arg(&c.path).current_dir(root).output().expect("call-pull.rs runs");
-			assert!(out.status.success(), "call-pull.rs --recording failed: {}", String::from_utf8_lossy(&out.stderr));
-			let media = PathBuf::from(String::from_utf8(out.stdout).expect("paths here are utf-8").trim_end());
+		Some((pick, media)) => {
 			let video = Command::new("ffprobe")
 				.args(["-v", "error", "-select_streams", "v", "-show_entries", "stream=index", "-of", "csv=p=0"])
-				.arg(&media)
+				.arg(media)
 				.output()
 				.expect("ffprobe runs");
 			assert!(video.status.success(), "ffprobe could not read {}", media.display());
@@ -171,7 +291,10 @@ fn plan(root: &Path, what: What, legacy: bool, c: &Capture) -> Result<(f64, Stri
 				false => ("screen", SCREEN_CENTS_PER_MIN),
 			};
 			// the pick decides what is read, so its cost is known only once it ran
-			let at = if legacy { "" } else { "the legacy rate, " };
+			let at = match pick {
+				Pick::Changes => "",
+				Pick::Likely { .. } => "the legacy rate, ",
+			};
 			Ok((c.minutes * rate / 100., format!("{:.1} min of {kind} at {at}{rate}¢/min", c.minutes)))
 		}
 	}
@@ -189,31 +312,12 @@ fn repo_root() -> PathBuf {
 	}
 }
 
-/// Every call capture at or under `path`: the `.md` files sitting directly in a platform dir.
-fn captures_under(root: &Path, path: &Path) -> Vec<PathBuf> {
-	let path = std::fs::canonicalize(path).unwrap_or_else(|e| panic!("{}: {e}", path.display()));
-	let is_capture = |p: &Path| p.extension().is_some_and(|e| e == "md") && PLATFORMS.iter().any(|d| p.parent() == Some(&root.join(d)));
-	let mut out = Vec::new();
-	let mut stack = vec![path.clone()];
-	//LOOP: bounded by the entries of a finite tree
-	while let Some(p) = stack.pop() {
-		match p.is_dir() {
-			true => stack.extend(std::fs::read_dir(&p).unwrap_or_else(|e| panic!("reading {}: {e}", p.display())).map(|e| e.expect("a directory entry is readable").path())),
-			false if is_capture(&p) => out.push(p),
-			false => (),
-		}
-	}
-	assert!(!out.is_empty(), "{} holds no call capture", path.display());
-	out.sort();
-	out
-}
-
 fn read(path: &Path) -> Capture {
 	let text = std::fs::read_to_string(path).unwrap_or_else(|e| panic!("reading {}: {e}", path.display()));
 	let field = |key: &str| {
 		text.lines()
 			.find_map(|l| l.strip_prefix(&format!("- {key}: ")))
-			.unwrap_or_else(|| panic!("{} states no `{key}:` — run call-pull.rs --check", path.display()))
+			.unwrap_or_else(|| panic!("{} states no `{key}:` — run `playbook check calls`", path.display()))
 			.to_string()
 	};
 	let secs = field("duration").split(':').fold(0u64, |acc, p| acc * 60 + p.parse::<u64>().unwrap_or_else(|e| panic!("{}: duration: {e}", path.display())));
@@ -224,9 +328,4 @@ fn read(path: &Path) -> Capture {
 		transcribed_by: field("transcribed by"),
 		read_by: field("read by"),
 	}
-}
-
-fn run(cmd: &mut Command) {
-	let status = cmd.status().unwrap_or_else(|e| panic!("running {cmd:?}: {e}"));
-	assert!(status.success(), "{cmd:?} failed: {status}");
 }

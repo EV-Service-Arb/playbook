@@ -1,7 +1,7 @@
 ## Sources
-Every source the playbook knows about. A link under a platform a puller reads is one `scripts/*.rs`
+Every source the playbook knows about. A link under a platform a puller reads is one `playbook pull`
 will fetch, so adding a source is pasting it below and re-running the puller — anything already on
-disk is left alone. `skool-pull.rs` reads this file back to say which links the classroom names and
+disk is left alone. `playbook pull skool` reads this file back to say which links the classroom names and
 this list does not.
 
 - youtube, each channel's videos under `youtube/<link text>/`: [eric](https://www.youtube.com/@ericvelch), [marcus](https://www.youtube.com/@marcusmilxn), [zach](https://www.youtube.com/@zachpeters0n)
@@ -11,7 +11,7 @@ this list does not.
 - [cheap group course](https://www.skool.com/20kmodropservicingblueprint/classroom)
 - discord groups: Service Arb, DropHub, Lockedin GMB
 - personal DMs: (all people marked as `ServiceArb` in rolodex)
-- course recordings, as `skool-pull.rs` finds them in the classroom — the lesson's own video, and
+- course recordings, as `playbook pull skool` finds them in the classroom — the lesson's own video, and
   whatever the lesson wrote underneath it:
   - [2026-09-18](https://www.loom.com/share/1f32c7640a514b198adc997ca319238b)
   - [2026-09-18](https://www.loom.com/share/b497e683ff08477fba2f382082b9aca0)
@@ -65,9 +65,9 @@ this list does not.
   - [2026-09-18](https://chatgpt.com/share/6aacb045-ac9c-83eb-a97d-8624c616a763)
 
 ### What pulling has cost
-- what the recordings show, as `scripts/call-watch.rs` read it: 43 recordings, $7.96 in all
+- what the recordings show, as `playbook watch` read it: 43 recordings, $7.96 in all
 
 ### No puller reaches these
-Said in the classroom, listed so `skool-pull.rs` stops asking.
+Said in the classroom, listed so `playbook pull skool` stops asking.
 
 - tools named rather than sourced: [getghostme](http://getghostme.com), [textverified](http://textverified.com), `accsrush.com`

@@ -11,4 +11,4 @@ The tools sit beside the checkout. Use one only if it exists.
   live-verification form in your Chrome
 - `../accounting`: its [accountant](../../../accounting/.claude/skills/accountant/SKILL.md) skill, for
   what was spent and is owed
-- `scripts/photo-metadata.rs <dir> --city <city>`: metadata for photos
+- `cargo r -p playbook -- photo-metadata <dir> --city <city>`: metadata for photos

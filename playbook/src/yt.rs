@@ -1,20 +1,7 @@
-#!/usr/bin/env -S cargo -Zscript -q
----cargo
-[package]
-edition = "2024"
 
-[dependencies]
-ask_llm = { version = "3.7", default-features = false }
-jiff = "0.2"
-social_networks_adapters = { git = "https://github.com/valeratrades/social_networks", tag = "v0.6.7", features = ["youtube-reads"] } # past 0.5 it is not on crates.io
-tokio = { version = "1", features = ["full"] }
----
-
-//! `./scripts/yt-pull.rs sync` — list every video of every channel `ref/README.md` links, in
-//! `ref/youtube/README.md`, under a header per person: the link text names their directory.
-//! `./scripts/yt-pull.rs transcribe [--legacy | --every <secs>] [<video url>...]` — capture the given videos, or
-//! every video that list has unticked, into `ref/youtube/<who>/<id>.md`, ticking it as it goes. Frames are read only where the
-//! captions say something is shown; `--legacy` reads them wherever the picture changes.
+//! `sync` lists every video of every channel `ref/README.md` links, in `ref/youtube/README.md`, under
+//! a header per person: the link text names their directory. `transcribe` captures videos that list
+//! has into `ref/youtube/<who>/<id>.md`, ticking each as it goes.
 //!
 //! Youtube is read by `social_networks_adapters`, linked; this only decides how a capture is filed.
 //!
@@ -32,7 +19,7 @@ tokio = { version = "1", features = ["full"] }
 
 use std::{
 	collections::{BTreeMap, BTreeSet},
-	path::{Path, PathBuf},
+	path::Path,
 };
 
 use ask_llm::{Client, Footage, Model, Pick, Said, Shown, Watch};
@@ -63,34 +50,7 @@ struct Entry {
 	title: String,
 }
 
-#[tokio::main]
-async fn main() {
-	let root = repo_root();
-	match std::env::args().skip(1).collect::<Vec<_>>().as_slice() {
-		[cmd] if cmd == "sync" => sync(&root).await,
-		[cmd, rest @ ..] if cmd == "transcribe" => {
-			let (urls, flags): (Vec<String>, Vec<String>) = rest.iter().cloned().partition(|a| a.contains("watch?v="));
-			let only = urls.iter().map(|u| u.split_once("watch?v=").expect("partitioned on it").1.split('&').next().expect("split yields at least one").to_string()).collect();
-			transcribe(&root, picked(&flags), only).await
-		}
-		_ => panic!("usage: {USAGE}"),
-	}
-}
-
-const USAGE: &str = "yt-pull.rs <sync | transcribe [--legacy | --every <secs>] [<video url>...]>";
-
-fn picked(args: &[String]) -> Pick {
-	match args {
-		[] => Pick::Likely { every: 0.5 },
-		[mode] if mode == "--legacy" => Pick::Changes,
-		[flag, secs] if flag == "--every" => Pick::Likely {
-			every: secs.parse().unwrap_or_else(|e| panic!("--every `{secs}`: {e}")),
-		},
-		_ => panic!("usage: {USAGE}"),
-	}
-}
-
-async fn sync(root: &Path) {
+pub async fn sync(root: &Path) {
 	let channels = channels_in(&root.join("ref/README.md"));
 	assert!(!channels.is_empty(), "no youtube channel linked in ref/README.md — nothing to sync");
 	// youtube's flat listing dates nothing, so a video's date is asked for once and read back from here after
@@ -113,7 +73,11 @@ async fn sync(root: &Path) {
 	write(root, &Index { checked: jiff::Zoned::now().date().to_string(), sections });
 }
 
-async fn transcribe(root: &Path, pick: Pick, only: Vec<String>) {
+pub async fn transcribe(root: &Path, pick: Pick, urls: &[String]) {
+	let only: Vec<&str> = urls
+		.iter()
+		.map(|u| u.split_once("watch?v=").unwrap_or_else(|| panic!("`{u}` is not a youtube watch link")).1.split('&').next().expect("split yields at least one"))
+		.collect();
 	let index = parse(root);
 	for id in &only {
 		assert!(index.sections.iter().any(|s| s.entries.iter().any(|e| &e.id == id)), "{id} is in no channel `sync` listed — the index is the registry");
@@ -125,7 +89,7 @@ async fn transcribe(root: &Path, pick: Pick, only: Vec<String>) {
 		std::fs::create_dir_all(&dir).expect("ref/youtube is ours to create under");
 		for Entry { id, .. } in &section.entries {
 			let out = dir.join(format!("{id}.md"));
-			if out.exists() || !(only.is_empty() || only.contains(id)) {
+			if out.exists() || !(only.is_empty() || only.contains(&id.as_str())) {
 				continue;
 			}
 			eprintln!("pulling {}/{id}", section.who);
@@ -146,17 +110,6 @@ async fn transcribe(root: &Path, pick: Pick, only: Vec<String>) {
 	}
 }
 
-fn repo_root() -> PathBuf {
-	let mut dir = std::env::current_dir().expect("a process has a cwd");
-	loop {
-		if dir.join(".git").exists() {
-			return dir;
-		}
-		if !dir.pop() {
-			panic!("run this from inside the playbook checkout");
-		}
-	}
-}
 
 /// `[<who>](<channel>)` for every youtube link in the registry. The registry is `ref/README.md` and
 /// nothing else — a capture quotes its own source URL, and a transcript quotes every link that was
@@ -206,7 +159,7 @@ fn write(root: &Path, index: &Index) {
 		"# YouTube, as the channels serve it\n\
 		 \n\
 		 - checked: {}\n\
-		 - written by: `scripts/yt-pull.rs sync`, which lists every video; `transcribe` ticks each it captures\n\
+		 - written by: `playbook pull yt sync`, which lists every video; `transcribe` ticks each it captures\n\
 		 \n\
 		 - spent: ${:.2} over {} captures, as their `cost:` lines state\n\
 		 \n\
@@ -215,7 +168,7 @@ fn write(root: &Path, index: &Index) {
 		 in citable blocks — and `<id>/<secs>.jpg` the frames its `## shown` lines were read off.\n\
 		 \n\
 		 A line per video, newest first: the day youtube says it was uploaded, linked to the video, then\n\
-		 its title — linked to the capture once there is one. `scripts/yt-pull.rs transcribe` captures\n\
+		 its title — linked to the capture once there is one. `playbook pull yt transcribe` captures\n\
 		 every unticked line.\n",
 		index.checked,
 		spent.0,
@@ -235,7 +188,7 @@ fn write(root: &Path, index: &Index) {
 
 fn parse(root: &Path) -> Index {
 	let path = root.join(INDEX);
-	let text = std::fs::read_to_string(&path).unwrap_or_else(|e| panic!("reading {}: {e} — run `yt-pull.rs sync` first", path.display()));
+	let text = std::fs::read_to_string(&path).unwrap_or_else(|e| panic!("reading {}: {e} — run `playbook pull yt sync` first", path.display()));
 	let mut checked = None;
 	let mut sections: Vec<Section> = Vec::new();
 	for line in text.lines() {
@@ -313,7 +266,7 @@ async fn video(id: &str, tmp: &Path, shots: &Path, pick: Pick) -> Option<String>
 		 - channel: {}\n\
 		 - uploaded: {}\n\
 		 - duration: {}\n\
-		 - pulled by: `scripts/yt-pull.rs`\n\
+		 - pulled by: `playbook pull yt transcribe`\n\
 		 - read by: `{}` summary and chapters, {shown_by}\n\
 		 - cost: ${:.4}\n\
 		 \n\

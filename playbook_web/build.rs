@@ -34,18 +34,18 @@ fn main() {
 	}
 	out.push_str("];\n");
 
-	// the image carries no scripts, so the decay the skill links to is inlined
-	let cite_check = root.join("scripts/cite-check.rs");
+	// the image carries no code, so the decay the skill links to is inlined
+	let cite_check = root.join("playbook/src/cite_check.rs");
 	println!("cargo:rerun-if-changed={}", cite_check.display());
 	let cite_check = fs::read_to_string(&cite_check).unwrap();
 	let decay_days = cite_check
 		.lines()
 		.find_map(|l| l.strip_prefix("const DECAY_DAYS: f64 = ")?.strip_suffix(".;"))
-		.expect("cite-check.rs states `const DECAY_DAYS: f64 = <n>.;`");
+		.expect("cite_check.rs states `const DECAY_DAYS: f64 = <n>.;`");
 	writeln!(out, "const DECAY_DAYS: f64 = {decay_days}.;").unwrap();
 	let skill = fs::read_to_string(&skill).unwrap();
 	let instructions = format!("{}\n\n{}", section(&skill, "# service-arb"), section(&skill, "## Answering"));
-	let decay_link = "[`DECAY_DAYS`](../../scripts/cite-check.rs)";
+	let decay_link = "[`DECAY_DAYS`](../../playbook/src/cite_check.rs)";
 	assert!(instructions.contains(decay_link), "SKILL.md's `## Answering` no longer links {decay_link}");
 	let instructions = instructions.replace(decay_link, decay_days);
 	assert!(instructions.len() <= INSTRUCTIONS_MAX, "SKILL.md's hook + `## Answering` is {} chars, over {INSTRUCTIONS_MAX}", instructions.len());

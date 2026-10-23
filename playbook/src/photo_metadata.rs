@@ -1,17 +1,7 @@
-#!/usr/bin/env -S cargo -Zscript -q
----cargo
-[package]
-edition = "2024"
-
-[dependencies]
-serde_json = "1"
-sha2 = "0.10"
----
 
 use sha2::{Digest, Sha256};
 use serde_json::{json, Value};
 use std::{
-    env,
     ffi::OsStr,
     fs::{self, File},
     io::Read,
@@ -21,25 +11,25 @@ use std::{
 
 const EXTENSIONS: &[&str] = &["jpg", "jpeg", "tif", "tiff", "png", "webp", "heic", "heif"];
 
-struct Options {
+#[derive(clap::Args)]
+pub struct Options {
     directory: PathBuf,
+    #[arg(long)]
     city: String,
+    #[arg(long)]
     seed: Option<u64>,
+    /// synthetic fixtures, reproducible from the seed
+    #[arg(long, requires_all = ["seed", "reference_unix"])]
     write_sidecars: bool,
+    #[arg(long)]
     reference_unix: Option<i64>,
 }
 
-fn main() {
-    let options = parse_args();
+pub fn run(options: Options) {
+    assert!(options.directory.is_dir(), "{} is not a directory", options.directory.display());
     let files = image_files(&options.directory);
     if files.is_empty() {
         panic!("{} contains no supported images", options.directory.display());
-    }
-    if options.write_sidecars && options.seed.is_none() {
-        panic!("--seed is required with --write-sidecars so synthetic fixtures are reproducible");
-    }
-    if options.write_sidecars && options.reference_unix.is_none() {
-        panic!("--reference-unix is required with --write-sidecars");
     }
     if Command::new("exiftool").arg("-ver").output().is_err() {
         panic!("exiftool is required but was not found on PATH");
@@ -50,8 +40,8 @@ fn main() {
         let hash = sha256(path);
         let metadata = exiftool(path);
         let sidecar = if options.write_sidecars {
-            let seed = options.seed.expect("validated above");
-            let reference = options.reference_unix.expect("validated above");
+            let seed = options.seed.expect("clap requires it with --write-sidecars");
+            let reference = options.reference_unix.expect("clap requires it with --write-sidecars");
             let generated = synthetic_fixture(&options.city, seed, reference, index as u64);
             let sidecar_path = sidecar_path(path);
             let rendered = serde_json::to_string_pretty(&generated).expect("synthetic JSON is serializable");
@@ -78,38 +68,6 @@ fn main() {
     println!("{}", serde_json::to_string_pretty(&report).expect("report is serializable"));
 }
 
-fn parse_args() -> Options {
-    let mut args = env::args().skip(1);
-    let directory = PathBuf::from(args.next().unwrap_or_else(|| usage("missing directory")));
-    let mut city = None;
-    let mut seed = None;
-    let mut write_sidecars = false;
-    let mut reference_unix = None;
-    while let Some(arg) = args.next() {
-        match arg.as_str() {
-            "--city" => city = Some(args.next().unwrap_or_else(|| usage("--city needs a value"))),
-            "--seed" => seed = Some(parse::<u64>(&args.next().unwrap_or_else(|| usage("--seed needs a value")), "--seed")),
-            "--reference-unix" => reference_unix = Some(parse::<i64>(&args.next().unwrap_or_else(|| usage("--reference-unix needs a value")), "--reference-unix")),
-            "--write-sidecars" => write_sidecars = true,
-            "--help" | "-h" => usage(""),
-            other => usage(&format!("unknown argument {other}")),
-        }
-    }
-    let city = city.unwrap_or_else(|| usage("--city is required"));
-    let metadata = fs::metadata(&directory).unwrap_or_else(|error| panic!("reading {}: {error}", directory.display()));
-    assert!(metadata.is_dir(), "{} is not a directory", directory.display());
-    Options { directory, city, seed, write_sidecars, reference_unix }
-}
-
-fn usage(error: &str) -> ! {
-    if !error.is_empty() { eprintln!("error: {error}"); }
-    eprintln!("usage: photo-metadata.rs <directory> --city <city> [--seed <u64> --reference-unix <unix-seconds> --write-sidecars]");
-    std::process::exit(2);
-}
-
-fn parse<T: std::str::FromStr>(value: &str, flag: &str) -> T where T::Err: std::fmt::Display {
-    value.parse().unwrap_or_else(|error| panic!("{flag} must be valid: {error}"))
-}
 
 fn image_files(root: &Path) -> Vec<PathBuf> {
     let mut files = Vec::new();

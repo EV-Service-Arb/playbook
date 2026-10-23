@@ -1,18 +1,7 @@
-#!/usr/bin/env -S cargo -Zscript -q
----cargo
-[package]
-edition = "2024"
-
-[dependencies]
-ask_llm = { version = "3.7", default-features = false }
-tokio = { version = "1", features = ["rt"] }
----
-
-//! `./scripts/call-watch.rs [--legacy | --every <secs>] [<capture.md>...]` — write `<capture>/shown.md` for every call capture
-//! whose recording has a picture and nobody has watched yet: what is on screen that the speech does
-//! not say, each line at the frame it was read off, and that frame kept beside it. With no arguments
-//! it takes every capture under `ref/`. A screen's frames are read only where the speech says
-//! something is shown, timed line by line by local whisper; `--legacy` reads them wherever the picture changes.
+//! Writes `<capture>/shown.md` for every call capture whose recording has a picture and nobody has
+//! watched yet: what is on screen that the speech does not say, each line at the frame it was read
+//! off, and that frame kept beside it. A screen's frames are read where the pick says; by default only
+//! where the speech says something is shown, timed line by line by local whisper.
 //!
 //! The reading is `ask_llm`'s `Client::watch`; this decides which recordings, and how `shown.md` reads.
 
@@ -25,9 +14,8 @@ use std::{
 use ask_llm::{Client, Footage, Model, Pick, Said, Shown, Watch};
 
 const WORKERS: usize = 4;
-const PLATFORMS: [&str; 5] = ["ref/loom", "ref/fathom", "ref/drive", "ref/vimeo", "ref/vocaroo"];
 /// The line of `ref/README.md` this rewrites with what watching has cost so far.
-const TOTALS: &str = "- what the recordings show, as `scripts/call-watch.rs` read it:";
+const TOTALS: &str = "- what the recordings show, as `playbook watch` read it:";
 
 /// A capture, as much of it as watching needs.
 struct Capture {
@@ -38,37 +26,15 @@ struct Capture {
 	chapters: Vec<(u64, String, String)>,
 }
 
-fn main() {
-	let root = repo_root();
-	let args: Vec<String> = std::env::args().skip(1).collect();
-	let (pick, args) = match args.as_slice() {
-		[mode, rest @ ..] if mode == "--legacy" => (Pick::Changes, rest),
-		[flag, secs, rest @ ..] if flag == "--every" => (
-			Pick::Likely {
-				every: secs.parse().unwrap_or_else(|e| panic!("--every `{secs}`: {e}")),
-			},
-			rest,
-		),
-		rest => (Pick::Likely { every: 0.5 }, rest),
-	};
-	let args: Vec<PathBuf> = args.iter().map(PathBuf::from).collect();
-	let captures: Vec<PathBuf> = match args.is_empty() {
-		true => PLATFORMS
-			.iter()
-			.map(|d| root.join(d))
-			.filter(|d| d.exists())
-			.flat_map(|d| std::fs::read_dir(&d).unwrap_or_else(|e| panic!("reading {}: {e}", d.display())))
-			.map(|e| e.expect("a directory entry is readable").path())
-			.filter(|p| p.extension().is_some_and(|e| e == "md"))
-			.collect(),
-		false => args.into_iter().map(|a| std::fs::canonicalize(&a).unwrap_or_else(|e| panic!("{}: {e}", a.display()))).collect(),
+/// Every capture under `ref/` where `captures` is empty.
+pub fn run(root: &Path, pick: Pick, captures: &[PathBuf]) {
+	let captures: Vec<PathBuf> = match captures.is_empty() {
+		true => crate::call::all(root),
+		false => captures.iter().map(|a| std::fs::canonicalize(a).unwrap_or_else(|e| panic!("{}: {e}", a.display()))).collect(),
 	};
 	let todo: Vec<PathBuf> = captures.into_iter().filter(|c| !c.with_extension("").join("shown.md").exists()).collect();
 	eprintln!("{} recordings to watch", todo.len());
-	let out = Command::new(root.join("scripts/call-pull.rs")).arg("--recording").args(&todo).current_dir(&root).output().expect("call-pull.rs runs");
-	assert!(out.status.success(), "call-pull.rs --recording failed: {}", String::from_utf8_lossy(&out.stderr));
-	let media: Vec<PathBuf> = String::from_utf8(out.stdout).expect("paths here are utf-8").lines().map(PathBuf::from).collect();
-	assert_eq!(media.len(), todo.len(), "call-pull.rs --recording prints one path per capture");
+	let media = crate::call::recordings(root, &todo);
 
 	let queue = Mutex::new(todo.into_iter().zip(media));
 	let spent = Mutex::new(0f64);
@@ -88,19 +54,7 @@ fn main() {
 			});
 		}
 	});
-	totals(&root);
-}
-
-fn repo_root() -> PathBuf {
-	let mut dir = std::env::current_dir().expect("a process has a cwd");
-	loop {
-		if dir.join(".git").exists() {
-			return dir;
-		}
-		if !dir.pop() {
-			panic!("run this from inside the playbook checkout");
-		}
-	}
+	totals(root);
 }
 
 /// Watch one recording into its `shown.md`, returning what it cost; `None` for one with no picture.
@@ -149,7 +103,7 @@ async fn watch(path: &Path, media: &Path, pick: Pick) -> Option<f64> {
 	let mut out = format!(
 		"# shown: {}\n\n\
 		 - capture: [{name}](../{name})\n\
-		 - watched by: {watched_by} · `scripts/call-watch.rs`\n\
+		 - watched by: {watched_by} · `playbook watch`\n\
 		 - watched: {}\n\
 		 - cost: ${cost:.4}\n",
 		capture.title,
@@ -176,7 +130,7 @@ fn read(path: &Path) -> Capture {
 	for line in transcript.lines() {
 		match line.strip_prefix("### [") {
 			Some(_) => {
-				let link = line.split_once("](").expect("call-pull.rs holds headers to `### [stamp](link)`").1;
+				let link = line.split_once("](").expect("`call` holds headers to `### [stamp](link)`").1;
 				let t = link.split(')').next().expect("split yields at least once").rsplit_once("t=").expect("a header links a second").1;
 				let title = link.split_once(") ").map_or("", |(_, title)| title);
 				chapters.push((t.parse().unwrap_or_else(|e| panic!("{}: `{line}`: {e}", path.display())), title.to_string(), String::new()));
@@ -188,7 +142,7 @@ fn read(path: &Path) -> Capture {
 				},
 		}
 	}
-	assert!(chapters.windows(2).all(|w| w[0].0 < w[1].0), "{}: chapters out of order — run call-pull.rs --check", path.display());
+	assert!(chapters.windows(2).all(|w| w[0].0 < w[1].0), "{}: chapters out of order — run `playbook check calls`", path.display());
 	let summary = text
 		.split_once("\n## summary\n")
 		.map(|(_, rest)| rest.split("\n## ").next().expect("split yields at least once").trim().to_string())
@@ -196,7 +150,7 @@ fn read(path: &Path) -> Capture {
 	Capture { title: title.to_string(), source: field("source").trim_matches(['<', '>']).to_string(), summary, chapters }
 }
 
-/// `MM:SS` under an hour, `H:MM:SS` past it, as call-pull.rs writes a chapter's start.
+/// `MM:SS` under an hour, `H:MM:SS` past it, as `call` writes a chapter's start.
 fn stamp(secs: u64) -> String {
 	match secs / 3600 {
 		0 => format!("{:02}:{:02}", secs / 60, secs % 60),
@@ -207,18 +161,15 @@ fn stamp(secs: u64) -> String {
 /// What every `shown.md` on disk cost, summed into `ref/README.md`'s line for it.
 fn totals(root: &Path) {
 	let (mut n, mut usd) = (0, 0f64);
-	for dir in PLATFORMS.iter().map(|d| root.join(d)).filter(|d| d.exists()) {
-		//LOOP: bounded by the files of a finite directory
-		for entry in std::fs::read_dir(&dir).expect("listed above") {
-			let shown = entry.expect("a directory entry is readable").path().join("shown.md");
-			if !shown.exists() {
-				continue;
-			}
-			let text = std::fs::read_to_string(&shown).unwrap_or_else(|e| panic!("reading {}: {e}", shown.display()));
-			let cost = text.lines().find_map(|l| l.strip_prefix("- cost: $")).unwrap_or_else(|| panic!("{} states no cost", shown.display()));
-			usd += cost.trim().parse::<f64>().unwrap_or_else(|e| panic!("{}: `{cost}`: {e}", shown.display()));
-			n += 1;
+	for capture in crate::call::all(root) {
+		let shown = capture.with_extension("").join("shown.md");
+		if !shown.exists() {
+			continue;
 		}
+		let text = std::fs::read_to_string(&shown).unwrap_or_else(|e| panic!("reading {}: {e}", shown.display()));
+		let cost = text.lines().find_map(|l| l.strip_prefix("- cost: $")).unwrap_or_else(|| panic!("{} states no cost", shown.display()));
+		usd += cost.trim().parse::<f64>().unwrap_or_else(|e| panic!("{}: `{cost}`: {e}", shown.display()));
+		n += 1;
 	}
 	let readme = root.join("ref/README.md");
 	let text = std::fs::read_to_string(&readme).expect("ref/README.md is the registry");

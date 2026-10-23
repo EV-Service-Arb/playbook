@@ -1,17 +1,7 @@
-#!/usr/bin/env -S cargo -Zscript -q
----cargo
-[package]
-edition = "2024"
 
-[dependencies]
-jiff = "0.2"
----
-
-//! `./scripts/cite-check.rs [<root>]` — hold every block under `structured/` to
-//! `structured/README.md`: each citation resolves to a capture in `ref/`, carries that capture's date,
-//! stays inside its duration, and sits in its run by effective reliability; no bullet goes unbacked;
-//! a `resolved:` line links a record that exists.
-//! `<root>` defaults to the checkout this runs in.
+//! Holds every block under `structured/` to `structured/README.md`: each citation resolves to a
+//! capture in `ref/`, carries that capture's date, stays inside its duration, and sits in its run by
+//! effective reliability; no bullet goes unbacked; a `resolved:` line links a record that exists.
 //!
 //! Prints every failure as `path:line: why` and exits non-zero if there was one.
 
@@ -39,11 +29,7 @@ struct Citation {
 	date: Date,
 }
 
-fn main() {
-	let root = match std::env::args().nth(1) {
-		Some(dir) => PathBuf::from(dir),
-		None => repo_root(),
-	};
+pub fn run(root: &Path) {
 	let today = jiff::Zoned::now().date();
 	let captures = captures(&root.join("ref"));
 
@@ -278,14 +264,3 @@ fn md_files(dir: &Path, out: &mut Vec<PathBuf>) {
 	out.sort();
 }
 
-fn repo_root() -> PathBuf {
-	let mut dir = std::env::current_dir().expect("a process has a cwd");
-	loop {
-		if dir.join(".git").exists() {
-			return dir;
-		}
-		if !dir.pop() {
-			panic!("run this from inside the playbook checkout");
-		}
-	}
-}
