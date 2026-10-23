@@ -55,6 +55,7 @@ this list does not.
   - [2026-10-02](https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0)
   - [2026-10-10](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d)
   - [2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9)
+  - [2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24)
 - recordings the classroom links to, on hosts that name and date nothing:
   - [2026-09-18](https://player.vimeo.com/video/1079014922) — address video shot in a different location
   - [2026-09-18](https://vocaroo.com/118AEXIqXCDi) — the VA call whose audio the video missed
