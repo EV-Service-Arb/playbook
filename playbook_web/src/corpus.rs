@@ -11,6 +11,7 @@ const MIN_MATCH: usize = 2; // a lone letter is noise, not relevance
 const BROAD: f64 = 0.4; // a pattern hitting this share of the files in scope is an enumeration
 const OVERFLOW: usize = 5; // files per kind listed past its slots, for the agent to `read`
 const WORST: f64 = 10.;
+const CHANNELS: &[(&str, u8, &str)] = &[("eric", 2, "Eric"), ("zach", 2, "Zach Peterson"), ("marcus", 3, "Marcus Milan")]; // docs/ARCHITECTURE.md#people, by `ref/youtube/<dir>`
 const LINE_CAP: usize = 700;
 const STRUCTURED_LINES: usize = 12;
 const REF_BLOCKS: usize = 2; // paragraphs or bullets shown per chunk
@@ -140,8 +141,7 @@ impl Corpus {
 			let date = d.date.unwrap_or_else(|| panic!("{} states no date", d.path));
 			assert!(date.as_bytes()[4] == b'-' && date.as_bytes()[7] == b'-', "{}: `{date}` is not a date", d.path);
 			if d.kind == Kind::Video {
-				let channel = d.path.split('/').nth(2).unwrap();
-				assert!(channel == "eric", "ref/youtube/{channel}: no base reliability for the channel; give it a row in docs/ARCHITECTURE.md#reliability and arms in `Doc::reliability` and `Doc::effective`");
+				d.channel();
 			}
 		}
 		Self { docs }
@@ -391,10 +391,22 @@ impl Doc {
 			Kind::Approved | Kind::Suggested => self.citation(line).map_or("unsourced".into(), |(r, d)| format!("r{r} {d}")),
 			_ if self.screen[line] => format!("a reading of the screen · {}", date()),
 			Kind::Course => format!("r1 course · {}", date()),
-			Kind::Video => format!("r2 Eric · {}", date()),
+			Kind::Video => {
+				let (base, who) = self.channel();
+				format!("r{base} {who} · {}", date())
+			}
 			Kind::Call => format!("r2–7 by who speaks · {}", date()),
 			Kind::Text => format!("unrated · {}", date()),
 		}
+	}
+
+	fn channel(&self) -> (u8, &'static str) {
+		let dir = self.path.split('/').nth(2).expect("a video sits at ref/youtube/<channel>/");
+		CHANNELS
+			.iter()
+			.find(|(d, ..)| *d == dir)
+			.map(|&(_, base, who)| (base, who))
+			.unwrap_or_else(|| panic!("ref/youtube/{dir}: no base reliability for the channel; give it a row in docs/ARCHITECTURE.md#people and in `CHANNELS`"))
 	}
 
 	fn citation(&self, line: usize) -> Option<(u8, &'static str)> {
@@ -409,7 +421,8 @@ impl Doc {
 				None => return WORST,
 			},
 			Kind::Course => (1., self.date.unwrap()),
-			Kind::Video | Kind::Call => (2., self.date.unwrap()),
+			Kind::Video => (self.channel().0 as f64, self.date.unwrap()),
+			Kind::Call => (2., self.date.unwrap()),
 			Kind::Text => return WORST,
 		};
 		(base + (today - days(date)) as f64 / DECAY_DAYS).min(WORST)
