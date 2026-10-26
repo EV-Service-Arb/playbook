@@ -34,13 +34,18 @@ client ──/register (DCR) or a CIMD url──► GET /authorize
    ok ──► consent page: client, account (switch), redirect, form with a nonce (10 min, single use, bound to sub + this request)
 browser ──POST /authorize, nonce──► assertion again, nonce spent for the same sub ──► code ──► redirect_uri
 client ──/token (PKCE S256)──► access token (1h) + refresh token (rotated on use, 30d from /authorize)
+client ──/token refresh──► concierge's word on the member, as the projection holds it:
+   not heard from concierge in 5 min, or an event of theirs parked ──► 503, the refresh token kept
+   not a member · suspended · without sa:playbook:mcp:use ──► 400 invalid_grant, every token of theirs deleted
 client ──<base>, Bearer──► guard: token live · under today's byte budget (else 429)
 ```
 
 A code is only ever issued by the POST. Who the member is (concierge's `sub`) and the permission
-are decided at `/authorize`; a refresh does not re-check them, and rotating keeps the deadline its
-`/authorize` set, so revoking `sa:playbook:mcp:use` takes up to 30 days to bite. Tokens and nonces
-are opaque; only their sha256 is stored.
+are decided at `/authorize` by the panel's assertion, and again at every refresh by concierge's own
+streams: the server pulls scope `sa`'s `ScopeEvents` and `UserEvents` as the panel's relying party
+(`evconcierge_projection`, every 10s) into `members`. Revoking `sa:playbook:mcp:use` or suspending the
+account bites within the access token's hour; rotating still keeps the deadline its `/authorize`
+set. Tokens and nonces are opaque; only their sha256 is stored.
 
 The browser's pages are `src/pages.rs`, on `ev_lib_classes`' tables; `build.rs` runs `tailwindcss`
 over them into `<base>/assets/connect.<hash>.css`. Asking for access is the panel's `/access`.
@@ -52,9 +57,12 @@ over them into `<base>/assets/connect.<hash>.css`. Asking for access is the pane
 | `PORT` | set by the image |
 | `PUBLIC_URL` | where members reach it, `https://sa.evinvest.ltd/playbook_mcp`: the MCP endpoint, the issuer and the resource. Its path is `<base>`: `/authorize`, `/token` and `/register` sit under it, the metadata at `/.well-known/oauth-{protected-resource,authorization-server}<base>` (RFC 9728, 8414), `/health` at the root |
 | `PANEL_ASSERTION_KEYS` | the panel's assertion keys, `<kid>:<base64 Ed25519 public key>`, comma-separated while one rotates |
+| `CONCIERGE_GRPC_ADDR` | concierge's gRPC, `http://concierge.ev-banking.svc.cluster.local:55670` |
+| `CONCIERGE_CLIENT_SECRET` | the client secret of concierge's relying party `sa`: the value concierge hashes as `RP_CLIENT_SECRET_SA`, which the panel holds too |
 
 Missing any fails the start. The database is `mcp.db` in the working directory, `/data` in
-the image.
+the image. `members` and the engine's `concierge_projection_*` are rebuilt from concierge by emptying
+them together, never one side alone (the projection crate's README, Rebuilding).
 
 ## Reading the log
 

@@ -1,6 +1,12 @@
 //! Drives the server over streamable HTTP with a member's token, the way a member's client does.
 
+use std::sync::{
+	Arc, Mutex,
+	atomic::{AtomicBool, AtomicI64, Ordering},
+};
+
 use base64::{Engine, engine::general_purpose::URL_SAFE_NO_PAD};
+use evconcierge_projection::{EventSource, Member, Page, Pulled, ScopeEvent, ScopeEventBody, SourceError, UserEvent, UserEventKind};
 use rmcp::{
 	RoleClient, ServiceExt,
 	model::CallToolRequestParams,
@@ -9,6 +15,7 @@ use rmcp::{
 };
 use serde_json::{Value, json};
 use sha2::{Digest, Sha256};
+use tokio::sync::watch;
 
 const MEMBER: &str = "member@example.com";
 const TOKEN: &str = "test-token";
@@ -19,7 +26,7 @@ const STRANGER: &str = "k1:CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg=";
 
 #[tokio::test]
 async fn read_returns_one_chapter() {
-	serve("read", i64::MAX, async |url| {
+	serve("read", i64::MAX, Concierge::default(), async |url| {
 		let client = connect(&url, TOKEN).await;
 		for (path, header) in [("ref/loom/2026-09-18-group-call.md", "[03:34]"), ("structured/suggested/infra.md", "## facts")] {
 			let (text, error) = call(&client, "read", json!({ "path": path, "header": header })).await;
@@ -34,7 +41,7 @@ async fn read_returns_one_chapter() {
 /// The call that crosses the budget is answered; the request after it is refused until midnight UTC.
 #[tokio::test]
 async fn quota_overrun_is_429() {
-	serve("quota", 1, async |url| {
+	serve("quota", 1, Concierge::default(), async |url| {
 		let client = connect(&url, TOKEN).await;
 		call(&client, "guide", json!({ "section": "reviews" })).await;
 		let res = reqwest::Client::new()
@@ -55,7 +62,7 @@ async fn quota_overrun_is_429() {
 /// The panel forwards to the in-cluster address, so the Host it sends is that one, not `PUBLIC_URL`'s.
 #[tokio::test]
 async fn any_host_is_served() {
-	serve("host", i64::MAX, async |url| {
+	serve("host", i64::MAX, Concierge::default(), async |url| {
 		let res = reqwest::Client::new()
 			.post(format!("{url}{BASE}"))
 			.bearer_auth(TOKEN)
@@ -74,7 +81,7 @@ async fn any_host_is_served() {
 /// metadata of RFC 9728 and RFC 8414.
 #[tokio::test]
 async fn no_token_leads_to_the_authorization_server() {
-	serve("unauthorized", i64::MAX, async |url| {
+	serve("unauthorized", i64::MAX, Concierge::default(), async |url| {
 		let http = reqwest::Client::new();
 		let res = http.post(format!("{url}{BASE}")).json(&json!({})).send().await.unwrap();
 		assert_eq!(res.status(), 401);
@@ -96,8 +103,7 @@ async fn no_token_leads_to_the_authorization_server() {
 /// to ask for it, carrying the way back.
 #[tokio::test]
 async fn authorize_takes_the_panels_word_for_who_is_asking() {
-	serve("assertion", i64::MAX, async |url| {
-		let http = reqwest::Client::new();
+	serve("assertion", i64::MAX, Concierge::default(), async |url| {
 		let (client_id, _) = register(&url, "Claude Code").await;
 		let authorize = authorize_url(&url, &client_id);
 		let http = reqwest::Client::builder().redirect(reqwest::redirect::Policy::none()).build().unwrap();
@@ -127,7 +133,7 @@ async fn authorize_takes_the_panels_word_for_who_is_asking() {
 /// redirect, whoever is signed in, and nothing is issued.
 #[tokio::test]
 async fn cancel_tells_the_client_access_denied() {
-	serve("deny", i64::MAX, async |url| {
+	serve("deny", i64::MAX, Concierge::default(), async |url| {
 		let http = reqwest::Client::builder().redirect(reqwest::redirect::Policy::none()).build().unwrap();
 		let (client_id, _) = register(&url, "Claude Code").await;
 		let mut deny = authorize_url(&url, &client_id);
@@ -151,7 +157,7 @@ async fn cancel_tells_the_client_access_denied() {
 /// the reason in small print; the JSON endpoints stay JSON.
 #[tokio::test]
 async fn browser_errors_are_pages() {
-	serve("errors", i64::MAX, async |url| {
+	serve("errors", i64::MAX, Concierge::default(), async |url| {
 		let http = reqwest::Client::new();
 		let (client_id, _) = register(&url, "Claude Code").await;
 		let mut unknown = authorize_url(&url, &client_id);
@@ -175,7 +181,7 @@ async fn browser_errors_are_pages() {
 /// listens on (RFC 8252 §7.3), as Claude Code's client metadata does.
 #[tokio::test]
 async fn a_code_is_issued_only_on_consent() {
-	serve("consent", i64::MAX, async |url| {
+	serve("consent", i64::MAX, Concierge::default(), async |url| {
 		let http = reqwest::Client::builder().redirect(reqwest::redirect::Policy::none()).build().unwrap();
 		let (client_id, verifier) = register(&url, "<b>Claude</b> & co").await;
 		let res = http.get(authorize_url(&url, &client_id)).header(sa_auth::HEADER, assertion(PANEL, "u1", "GET", true)).send().await.unwrap();
@@ -222,6 +228,214 @@ async fn a_code_is_issued_only_on_consent() {
 		assert!(!error, "{text}");
 	})
 	.await;
+}
+
+/// A refresh asks concierge's word, not `/authorize`'s: once the permission is gone or the account
+/// suspended, it is refused and every token of the member stops working.
+#[tokio::test]
+async fn a_refresh_is_refused_once_concierge_withdraws_access() {
+	let concierge = Concierge::default();
+	for sub in ["u1", "u2"] {
+		concierge.join(sub);
+		concierge.grant(sub, &[sa_auth::Mcp::Use.as_str()]);
+	}
+	serve("withdraw", i64::MAX, concierge.clone(), async |url| {
+		let withdrawals: [(&str, Withdraw); 2] = [("u1", |c, sub| c.grant(sub, &[])), ("u2", Concierge::suspend)];
+		for (sub, withdraw) in withdrawals {
+			concierge.synced().await;
+			let (client_id, tokens) = sign_in(&url, sub).await;
+			let res = refresh(&url, &client_id, &tokens).await;
+			assert_eq!(res.status(), 200, "{sub}");
+			let tokens: Value = res.json().await.unwrap();
+
+			withdraw(&concierge, sub);
+			concierge.synced().await;
+			let res = refresh(&url, &client_id, &tokens).await;
+			assert_eq!(res.status(), 400, "{sub}");
+			assert_eq!(res.json::<Value>().await.unwrap()["error"], "invalid_grant", "{sub}");
+			assert_eq!(ping(&url, tokens["access_token"].as_str().unwrap()).await, 401, "{sub}");
+		}
+	})
+	.await;
+}
+
+/// While concierge cannot be heard from, a refresh is turned away without spending the token, which
+/// works again once the projection catches up.
+#[tokio::test]
+async fn a_refresh_waits_while_concierge_is_unreachable() {
+	let concierge = Concierge::default();
+	concierge.join("u1");
+	concierge.grant("u1", &[sa_auth::Mcp::Use.as_str()]);
+	concierge.0.down.store(true, Ordering::SeqCst);
+	serve("unreachable", i64::MAX, concierge.clone(), async |url| {
+		let (client_id, tokens) = sign_in(&url, "u1").await;
+		let res = refresh(&url, &client_id, &tokens).await;
+		assert_eq!(res.status(), 503);
+		assert_eq!(res.json::<Value>().await.unwrap()["error"], "temporarily_unavailable");
+
+		concierge.0.down.store(false, Ordering::SeqCst);
+		concierge.synced().await;
+		assert_eq!(refresh(&url, &client_id, &tokens).await.status(), 200);
+	})
+	.await;
+}
+
+/// The consent flow end to end for `sub`: a fresh client, and the token response it ends with.
+async fn sign_in(url: &str, sub: &str) -> (String, Value) {
+	let http = reqwest::Client::builder().redirect(reqwest::redirect::Policy::none()).build().unwrap();
+	let (client_id, verifier) = register(url, "Claude Code").await;
+	let page = http.get(authorize_url(url, &client_id)).header(sa_auth::HEADER, assertion(PANEL, sub, "GET", true)).send().await.unwrap().text().await.unwrap();
+	let nonce = page.split(r#"name="nonce" value=""#).nth(1).unwrap().split('"').next().unwrap();
+	let res = http.post(format!("{url}{BASE}/authorize")).header(sa_auth::HEADER, assertion(PANEL, sub, "POST", true)).form(&[("nonce", nonce)]).send().await.unwrap();
+	let back = reqwest::Url::parse(res.headers()["location"].to_str().unwrap()).unwrap();
+	let code = back.query_pairs().find(|(k, _)| k == "code").unwrap().1.into_owned();
+	let tokens = http
+		.post(format!("{url}{BASE}/token"))
+		.form(&[("grant_type", "authorization_code"), ("client_id", &client_id), ("code", &code), ("code_verifier", &verifier), ("redirect_uri", "http://localhost:64461/callback")])
+		.send()
+		.await
+		.unwrap()
+		.json()
+		.await
+		.unwrap();
+	(client_id, tokens)
+}
+
+async fn refresh(url: &str, client_id: &str, tokens: &Value) -> reqwest::Response {
+	reqwest::Client::new()
+		.post(format!("{url}{BASE}/token"))
+		.form(&[("grant_type", "refresh_token"), ("client_id", client_id), ("refresh_token", tokens["refresh_token"].as_str().unwrap())])
+		.send()
+		.await
+		.unwrap()
+}
+
+/// the MCP endpoint's status for a ping with `token`
+async fn ping(url: &str, token: &str) -> u16 {
+	reqwest::Client::new()
+		.post(format!("{url}{BASE}"))
+		.bearer_auth(token)
+		.header("accept", "application/json, text/event-stream")
+		.json(&json!({ "jsonrpc": "2.0", "id": 1, "method": "ping" }))
+		.send()
+		.await
+		.unwrap()
+		.status()
+		.as_u16()
+}
+
+type Withdraw = fn(&Concierge, &str);
+
+/// concierge's two streams as the projection pulls them, scope `sa` only, written by the test.
+#[derive(Clone, Default)]
+struct Concierge(Arc<Streams>);
+
+struct Streams {
+	scope: Mutex<Vec<ScopeEvent>>,
+	users: Mutex<Vec<UserEvent>>,
+	down: AtomicBool,
+	users_after: AtomicI64,
+	/// on every scope pull, which starts a cycle: its `after`, and the last lifecycle pull's
+	pulled: watch::Sender<(i64, i64)>,
+}
+
+impl Default for Streams {
+	fn default() -> Self {
+		Self { scope: Mutex::default(), users: Mutex::default(), down: AtomicBool::default(), users_after: AtomicI64::new(-1), pulled: watch::Sender::new((-1, -1)) }
+	}
+}
+
+impl Concierge {
+	fn join(&self, sub: &str) {
+		let member = Member {
+			email: MEMBER.into(),
+			email_verified: true,
+			username: sub.into(),
+			preferred_name: "M".into(),
+			status: "active".into(),
+			kyc_level: 0,
+			token_version: 1,
+			lifecycle_sequence: 1,
+		};
+		self.push_scope(sub, ScopeEventBody::MemberJoined { user_id: sub.into(), auth_subject: subject(sub), member });
+	}
+
+	fn grant(&self, sub: &str, permissions: &[&str]) {
+		self.push_scope(sub, ScopeEventBody::GrantsChanged { user_id: sub.into(), auth_subject: subject(sub), permissions: permissions.iter().map(|p| (*p).to_owned()).collect() });
+	}
+
+	fn suspend(&self, sub: &str) {
+		let mut users = self.0.users.lock().unwrap();
+		let sequence = 2 + users.iter().filter(|e| e.user_id == sub).count() as u64; // past MEMBER_JOINED's lifecycle_sequence
+		let event_id = format!("user-{}", users.len());
+		users.push(UserEvent {
+			event_id,
+			kind: UserEventKind::Suspended,
+			user_id: sub.into(),
+			auth_subject: subject(sub),
+			sequence,
+			occurred_at: 0,
+			kyc_level: 0,
+			email: MEMBER.into(),
+			email_verified: true,
+			token_version: 1,
+			role: "investor".into(),
+		});
+	}
+
+	fn push_scope(&self, sub: &str, body: ScopeEventBody) {
+		let mut scope = self.0.scope.lock().unwrap();
+		let sequence = 1 + scope.iter().filter(|e| e.key_user() == Some(sub)).count() as u64;
+		let position = scope.len() as i64 + 1;
+		scope.push(ScopeEvent { event_id: format!("scope-{position}"), position, scope: "sa".into(), occurred_at: 0, sequence, body });
+	}
+
+	/// Until a cycle that pulled everything written so far has finished: the pulls of the cycle
+	/// after it start past all of it.
+	async fn synced(&self) {
+		let (scope, users) = (self.0.scope.lock().unwrap().len() as i64, self.0.users.lock().unwrap().len() as i64);
+		self.0.pulled.subscribe().wait_for(|&(s, u)| s >= scope && u >= users).await.unwrap();
+	}
+}
+
+trait KeyUser {
+	fn key_user(&self) -> Option<&str>;
+}
+
+impl KeyUser for ScopeEvent {
+	fn key_user(&self) -> Option<&str> {
+		match &self.body {
+			ScopeEventBody::MemberJoined { user_id, .. } | ScopeEventBody::GrantsChanged { user_id, .. } => Some(user_id),
+			ScopeEventBody::ScopeChanged(_) => None,
+		}
+	}
+}
+
+fn subject(sub: &str) -> String {
+	format!("google:{sub}")
+}
+
+#[async_trait::async_trait]
+impl EventSource for Concierge {
+	async fn pull_user_events(&self, after: i64, limit: u32) -> Result<Page<Pulled<UserEvent>>, SourceError> {
+		if self.0.down.load(Ordering::SeqCst) {
+			return Err(SourceError::Unavailable("down".into()));
+		}
+		let users = self.0.users.lock().unwrap();
+		let events: Vec<_> = users.iter().skip(after as usize).take(limit as usize).cloned().map(Pulled::Known).collect();
+		self.0.users_after.store(after, Ordering::SeqCst);
+		Ok(Page { next_position: after + events.len() as i64, events })
+	}
+
+	async fn pull_scope_events(&self, after: i64, limit: u32) -> Result<Page<Pulled<ScopeEvent>>, SourceError> {
+		if self.0.down.load(Ordering::SeqCst) {
+			return Err(SourceError::Unavailable("down".into()));
+		}
+		let scope = self.0.scope.lock().unwrap();
+		let events: Vec<_> = scope.iter().skip(after as usize).take(limit as usize).cloned().map(Pulled::Known).collect();
+		self.0.pulled.send_replace((after, self.0.users_after.load(Ordering::SeqCst)));
+		Ok(Page { next_position: after + events.len() as i64, events })
+	}
 }
 
 /// the page with what changes per run or per stylesheet held still
@@ -273,9 +487,9 @@ fn assertion(key: &str, sub: &str, method: &str, may_use: bool) -> String {
 	})
 }
 
-/// Runs `body` against a fresh server, served under `BASE`, that knows one member, holding the access
-/// token `TOKEN`. `body` gets the origin.
-async fn serve(name: &str, daily_bytes: i64, body: impl AsyncFnOnce(String) -> ()) {
+/// Runs `body` against a fresh server, served under `BASE` and projecting `concierge`, that knows one
+/// member, holding the access token `TOKEN`. `body` gets the origin.
+async fn serve(name: &str, daily_bytes: i64, concierge: Concierge, body: impl AsyncFnOnce(String) -> ()) {
 	let dir = std::env::temp_dir().join(format!("playbook_web-test-{}", std::process::id()));
 	std::fs::create_dir_all(&dir).unwrap();
 	let db = dir.join(format!("{name}.db"));
@@ -284,12 +498,14 @@ async fn serve(name: &str, daily_bytes: i64, body: impl AsyncFnOnce(String) -> (
 	}
 	let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
 	let url = format!("http://127.0.0.1:{}", listener.local_addr().unwrap().port());
-	let app = playbook_web::app(playbook_web::Config {
+	let config = playbook_web::Config {
 		public_url: PUBLIC_URL.into(),
 		panel_keys: PANEL.parse::<sa_auth::Signer>().unwrap().public().parse().unwrap(),
 		db: db.clone(),
 		daily_bytes,
-	});
+		sync_every: std::time::Duration::from_millis(5),
+	};
+	let (app, sync) = playbook_web::app(config, concierge).await;
 	rusqlite::Connection::open(&db)
 		.unwrap()
 		.execute(
@@ -299,6 +515,7 @@ async fn serve(name: &str, daily_bytes: i64, body: impl AsyncFnOnce(String) -> (
 		.unwrap();
 	tokio::select! {
 		r = async { axum::serve(listener, app).await } => panic!("the server stopped: {r:?}"),
+		() = sync => panic!("the projection stopped"),
 		() = body(url) => {}
 	}
 }
