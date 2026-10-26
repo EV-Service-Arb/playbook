@@ -55,12 +55,14 @@ over them into `<base>/assets/connect.<hash>.css`. Asking for access is the pane
 | env | |
 |---|---|
 | `PORT` | set by the image |
+| `APP_ENV` | set by the image, `production`: Sentry's environment |
 | `PUBLIC_URL` | where members reach it, `https://sa.evinvest.ltd/playbook_mcp`: the MCP endpoint, the issuer and the resource. Its path is `<base>`: `/authorize`, `/token` and `/register` sit under it, the metadata at `/.well-known/oauth-{protected-resource,authorization-server}<base>` (RFC 9728, 8414), `/health` at the root |
 | `PANEL_ASSERTION_KEYS` | the panel's assertion keys, `<kid>:<base64 Ed25519 public key>`, comma-separated while one rotates |
 | `CONCIERGE_GRPC_ADDR` | concierge's gRPC, `http://concierge.ev-banking.svc.cluster.local:55670` |
 | `CONCIERGE_CLIENT_SECRET` | the client secret of concierge's relying party `sa`: the value concierge hashes as `RP_CLIENT_SECRET_SA`, which the panel holds too |
 
-Missing any fails the start. The database is `mcp.db` in the working directory, `/data` in
+Missing any fails the start. `SENTRY_DSN` is optional: with it, `error`s go to Sentry. Logs are
+`info` and up on stdout, `RUST_LOG` overrides. The database is `mcp.db` in the working directory, `/data` in
 the image. `members` and the engine's `concierge_projection_*` are rebuilt from concierge by emptying
 them together, never one side alone (the projection crate's README, Rebuilding).
 

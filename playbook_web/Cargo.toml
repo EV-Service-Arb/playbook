@@ -9,6 +9,7 @@ async-trait.workspace = true
 axum.workspace = true
 base64.workspace = true
 evconcierge_projection.workspace = true
+ev_lib.workspace = true
 ev_lib_classes.workspace = true
 getrandom.workspace = true
 regex.workspace = true
@@ -23,6 +24,8 @@ sha2.workspace = true
 sqlx.workspace = true
 tailwind_fuse.workspace = true
 tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
 
 [build-dependencies]
 ev_lib_classes.workspace = true

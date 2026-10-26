@@ -19,12 +19,12 @@ pub(crate) async fn run(state: Arc<State>, pool: SqlitePool, concierge: impl Eve
 	let every = state.config.sync_every;
 	let projection = Projection::new(SqliteProjectionStore::new(pool), Members(state.clone()), concierge, ProjectionConfig::default());
 	if let Err(e) = projection.replay_parked().await {
-		eprintln!("concierge projection: replaying parked events: {e}");
+		tracing::error!("concierge projection: replaying parked events: {e}");
 	}
 	loop {
 		match projection.cycle(&mut Cycle::default()).await {
 			Ok(()) => state.synced.store(now(), Ordering::SeqCst),
-			Err(e) => eprintln!("concierge projection: {e}"),
+			Err(e) => tracing::error!("concierge projection: {e}"),
 		}
 		tokio::time::sleep(every).await;
 	}

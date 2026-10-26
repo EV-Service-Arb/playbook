@@ -72,7 +72,7 @@
             criticality = "normal";
             entrypoint = [ "${playbook_web}/bin/playbook_web" ];
             workingDir = "/data";
-            imageEnv = [ "HOME=/data" "PORT=${port}" ];
+            imageEnv = [ "HOME=/data" "PORT=${port}" "APP_ENV=production" ];
           };
         };
       in

@@ -12,6 +12,7 @@ axum = { version = "0.8.9", features = ["form", "query"] }
 base64 = "0.22"
 evconcierge_projection = { version = "0.5.0", features = ["sqlite"] }
 clap = { version = "^4.6.7", features = ["derive"] }
+ev_lib = { version = "0.25.0", default-features = false, features = ["error_monitoring"] }
 ev_lib_classes = "0.14.0"
 getrandom = "0.4.3"
 insta = "1"
@@ -30,5 +31,7 @@ sqlx = { version = "0.9", default-features = false, features = ["sqlite", "runti
 social_networks_adapters = { git = "https://github.com/valeratrades/social_networks", rev = "4d66c85e2630d8b377ed6fa4224e092208aec903", features = ["youtube-reads"] } # past 0.5 it is not on crates.io; the first rev on ask_llm 3.10
 tailwind_fuse = "0.3"
 tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "signal", "time"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 ureq = "3"
 v_utils = { version = "^2.23.0", features = ["cli", "xdg"] }
