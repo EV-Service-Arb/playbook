@@ -55,7 +55,8 @@
           };
           cargoBuildFlags = [ "-p" "playbook_web" ];
           cargoTestFlags = [ "-p" "playbook_web" ];
-          nativeBuildInputs = [ pkgs.cmake pkgs.tailwindcss_4 ]; # aws-lc, under reqwest's rustls; the connect pages' stylesheet
+          nativeBuildInputs = [ pkgs.cmake pkgs.tailwindcss_4 pkgs.pkg-config ]; # aws-lc, under reqwest's rustls; the connect pages' stylesheet
+          buildInputs = pkgs.lib.optionals pkgs.stdenv.isLinux [ pkgs.openssl ]; # ev_lib's sentry turns on reqwest's native-tls
           # std's panic locations name its source inside the toolchain, which would pull all of it into the image
           RUSTFLAGS = "--remap-path-prefix=${rust}=/rust";
           disallowedReferences = [ rust ];
