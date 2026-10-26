@@ -15,7 +15,7 @@ async fn main() {
 		use tracing_subscriber::{EnvFilter, fmt, prelude::*};
 		tracing_subscriber::registry()
 			.with(EnvFilter::try_from_default_env().unwrap_or_else(|_| EnvFilter::new("info")))
-			.with(fmt::layer())
+			.with(fmt::layer().with_ansi(std::io::IsTerminal::is_terminal(&std::io::stdout())))
 			.with(ev_lib::error_monitoring::tracing_layer()) // errors become Sentry events; below that, breadcrumbs
 			.init();
 	}
