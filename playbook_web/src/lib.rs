@@ -4,9 +4,12 @@
 mod auth;
 mod corpus;
 mod pages;
+mod sync;
 mod tools;
 
-use std::{path::PathBuf, sync::{Arc, LazyLock, Mutex}};
+pub use sync::SA;
+
+use std::{path::PathBuf, sync::{Arc, LazyLock, Mutex, atomic::AtomicI64}};
 
 use axum::{Router, middleware, routing::get};
 use rmcp::transport::streamable_http_server::{StreamableHttpServerConfig, StreamableHttpService, session::local::LocalSessionManager};
@@ -18,6 +21,8 @@ pub struct Config {
 	pub panel_keys: sa_auth::Keys,
 	pub db: PathBuf,
 	pub daily_bytes: i64,
+	/// the wait between two pulls of concierge's streams
+	pub sync_every: std::time::Duration,
 }
 
 struct State {
@@ -25,6 +30,7 @@ struct State {
 	resource_metadata: String, // RFC 9728's path-inserted location
 	db: Mutex<rusqlite::Connection>, // ponytail: one lock for every query; a pool if calls ever queue on it
 	http: reqwest::Client,
+	synced: AtomicI64, // unix seconds of the last projection cycle that reached concierge's head; 0 before the first
 }
 
 /// the member the guard admitted, carried on the request into the tools
@@ -34,7 +40,9 @@ struct Member {
 	email: String,
 }
 
-pub fn app(config: Config) -> Router {
+/// The server, and the projection of concierge's scope `sa` it refreshes tokens by: run both, the
+/// second never returns.
+pub async fn app(config: Config, concierge: impl evconcierge_projection::EventSource + 'static) -> (Router, impl Future<Output = ()>) {
 	LazyLock::force(&corpus::CORPUS); // a malformed capture fails the start, not a member's call
 	let db = rusqlite::Connection::open(&config.db).unwrap_or_else(|e| panic!("{}: {e}", config.db.display()));
 	db.pragma_update(None, "journal_mode", "WAL").unwrap();
@@ -55,11 +63,16 @@ pub fn app(config: Config) -> Router {
 	let url = reqwest::Url::parse(&config.public_url).expect("PUBLIC_URL is a url");
 	let base = url.path().to_owned();
 	assert!(base.len() > 1, "PUBLIC_URL names the path the server is served under: {}", config.public_url);
+	let pool = sqlx::sqlite::SqlitePoolOptions::new()
+		.max_connections(1) // the engine is sequential
+		.connect_lazy_with(sqlx::sqlite::SqliteConnectOptions::new().filename(&config.db).busy_timeout(std::time::Duration::from_secs(5)));
+	evconcierge_projection::sqlite::migrate(&pool).await.unwrap_or_else(|e| panic!("{}: {e}", config.db.display()));
 	let state = Arc::new(State {
 		resource_metadata: format!("{}/.well-known/oauth-protected-resource{base}", url.origin().ascii_serialization()),
 		config,
 		db: Mutex::new(db),
 		http: reqwest::Client::builder().timeout(std::time::Duration::from_secs(10)).build().unwrap(),
+		synced: AtomicI64::new(0),
 	});
 
 	let mcp = {
@@ -70,13 +83,14 @@ pub fn app(config: Config) -> Router {
 			StreamableHttpServerConfig::default().disable_allowed_hosts(), // the panel forwards with the in-cluster Host; every request needs a bearer token, which DNS rebinding cannot carry
 		)
 	};
-	Router::new()
+	let router = Router::new()
 		.route_service(&base, mcp)
 		.layer(middleware::from_fn_with_state(state.clone(), auth::guard))
 		.merge(auth::routes(&base))
 		.route(&format!("{base}/assets/{}", pages::CSS_FILE), get(pages::stylesheet))
 		.route("/health", get(|| async { "ok" }))
-		.with_state(state)
+		.with_state(state.clone());
+	(router, sync::run(state, pool, concierge))
 }
 
 fn now() -> i64 {

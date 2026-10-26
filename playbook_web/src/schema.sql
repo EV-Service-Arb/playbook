@@ -43,4 +43,12 @@ CREATE TABLE IF NOT EXISTS calls (
 	error INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS calls_by_sub ON calls (sub, at);
+-- concierge's word on the members of scope `sa` (`sync.rs`), beside the engine's `concierge_projection_*`;
+-- rebuilding truncates both together
+CREATE TABLE IF NOT EXISTS members (
+	auth_subject TEXT PRIMARY KEY,
+	user_id TEXT NOT NULL UNIQUE, -- concierge's user id: the assertion's `sub`, so `tokens.sub`
+	status TEXT NOT NULL, -- `active`, or `disabled` once suspended
+	permissions TEXT NOT NULL -- json array: the member's whole concrete set in `sa:`
+);
 PRAGMA user_version = 1;

@@ -1,7 +1,7 @@
 //! OAuth 2.1 authorization server for the MCP clients. Who the member is comes from the
 //! panel's assertion on `/authorize` ([`sa_auth`]). The flow and the tables are in `README.md`.
 
-use std::sync::Arc;
+use std::sync::{Arc, atomic::Ordering};
 
 use axum::{
 	Form, Json, Router,
@@ -20,13 +20,15 @@ use sha2::{Digest, Sha256};
 use crate::{
 	Member, State, now,
 	pages::{self, Trouble},
+	sync,
 };
 
 type S = Axum<Arc<State>>;
 
 const CODE_TTL: i64 = 60;
 const ACCESS_TTL: i64 = 60 * 60;
-const REFRESH_TTL: i64 = 30 * 24 * 60 * 60; // from authorize: rotation does not extend it, so the permission is re-checked monthly
+const REFRESH_TTL: i64 = 30 * 24 * 60 * 60; // from authorize: rotation does not extend it
+const SYNC_STALE_AFTER: i64 = 5 * 60; // a refresh never rests on concierge's word older than this
 const CONSENT_TTL: i64 = 10 * 60;
 const DAY: i64 = 24 * 60 * 60;
 const CIMD_MAX_BYTES: usize = 64 * 1024;
@@ -367,16 +369,45 @@ async fn token(Axum(state): S, Form(f): Form<TokenForm>) -> Response {
 			let db = state.db.lock().unwrap();
 			let row: Option<(String, String, i64)> = db
 				.query_row(
-					"DELETE FROM tokens WHERE hash = ?1 AND kind = 'refresh' AND client_id = ?2 AND expires > ?3 RETURNING sub, email, expires",
+					"SELECT sub, email, expires FROM tokens WHERE hash = ?1 AND kind = 'refresh' AND client_id = ?2 AND expires > ?3",
 					(hash(refresh), &f.client_id, now()),
 					|r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)),
 				)
 				.optional()
 				.unwrap();
-			match row {
-				Some(row) => row,
-				None => return oauth_error("invalid_grant", "the refresh token is spent, expired, or not this client's"),
+			let Some((sub, email, chain_ends)) = row else {
+				return oauth_error("invalid_grant", "the refresh token is spent, expired, or not this client's");
+			};
+			let unavailable = |why: &str| {
+				let body = json!({ "error": "temporarily_unavailable", "error_description": why });
+				(StatusCode::SERVICE_UNAVAILABLE, [(header::RETRY_AFTER, "60")], Json(body)).into_response()
+			};
+			if now() - state.synced.load(Ordering::SeqCst) > SYNC_STALE_AFTER {
+				return unavailable("concierge has not been heard from lately; the refresh token is kept");
 			}
+			let member: Option<(String, String, bool)> = db
+				.query_row(
+					// an event parked under the member's keys may be the one that withdraws access
+					"SELECT status, permissions, EXISTS (SELECT 1 FROM concierge_projection_parked WHERE key IN ('user:' || auth_subject, ?2 || auth_subject))
+					 FROM members WHERE user_id = ?1",
+					(&sub, format!("scope:{}:user:", sync::SA)),
+					|r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)),
+				)
+				.optional()
+				.unwrap();
+			let may_use = match member {
+				Some((_, _, true)) => return unavailable("concierge's word on this member is held back; the refresh token is kept"),
+				Some((status, permissions, false)) => {
+					status == "active" && serde_json::from_str::<sa_auth::PermissionSet>(&permissions).expect("written by sync.rs").may(sa_auth::Mcp::Use)
+				}
+				None => false,
+			};
+			if !may_use {
+				db.execute("DELETE FROM tokens WHERE sub = ?1", [&sub]).unwrap();
+				return oauth_error("invalid_grant", &format!("{email} no longer holds {}, or is suspended", sa_auth::Mcp::Use.as_str()));
+			}
+			db.execute("DELETE FROM tokens WHERE hash = ?1", [hash(refresh)]).unwrap();
+			(sub, email, chain_ends)
 		}
 		_ => return oauth_error("unsupported_grant_type", "authorization_code or refresh_token"),
 	};
