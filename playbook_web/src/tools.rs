@@ -48,11 +48,6 @@ pub struct GuideArgs {
 	section: String,
 }
 
-#[derive(Deserialize, Serialize, schemars::JsonSchema)]
-pub struct AskArgs {
-	question: String,
-}
-
 #[derive(Clone)]
 pub struct Playbook {
 	state: Arc<State>,
@@ -107,14 +102,15 @@ impl Playbook {
 	}
 }
 
-/// a member's explicit way in, for clients that hide the tools until they decide to look
+/// a member's explicit way in, for clients that hide the tools until they decide to look. No argument: Claude Code
+/// passes a prompt only the first word typed after it
 #[prompt_router]
 impl Playbook {
-	#[prompt(description = "Answer a question out of the service-arb playbook, never from general knowledge")]
-	async fn ask(&self, Parameters(args): Parameters<AskArgs>) -> Vec<PromptMessage> {
+	#[prompt(description = "Answer this conversation's questions out of the service-arb playbook, never from general knowledge")]
+	async fn ask(&self) -> Vec<PromptMessage> {
 		vec![PromptMessage::new_text(
 			Role::User,
-			format!("Answer out of the service-arb playbook, through its `guide`, `search` and `read` tools, never from general knowledge.\n\n{ANSWERING}\n\n---\n\n{}", args.question),
+			format!("Answer my questions in this conversation out of the service-arb playbook, through its `guide`, `search` and `read` tools, never from general knowledge.\n\n{ANSWERING}"),
 		)]
 	}
 }

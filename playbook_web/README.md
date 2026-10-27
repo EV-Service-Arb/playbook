@@ -19,7 +19,7 @@ claude mcp add --transport http service-arb https://sa.evinvest.ltd/playbook_mcp
 
 | prompt | |
 |---|---|
-| `ask(question)` | the question under `## Answering`: the member's explicit way in. Claude Code lists it as `/mcp__service-arb__ask` |
+| `ask` | `## Answering`, for the rest of the conversation: the member's explicit way in. Claude Code lists it as `/mcp__service-arb__ask`, and passes a prompt only the first word typed after it, so it takes none |
 
 The server's `instructions` are `SKILL.md`'s `description`, which says when in the words members ask
 with, and its `## Answering`, held to 2,048 characters at build time. claude.ai shows the model a

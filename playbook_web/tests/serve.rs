@@ -46,13 +46,9 @@ async fn the_server_says_when_and_how_to_answer() {
 		let client = connect(&url, TOKEN).await;
 		let instructions = client.peer_info().unwrap().instructions.clone().unwrap();
 		assert!(instructions.contains("GBP") && instructions.contains("**sources**"), "{instructions}");
-		let question = "how many reviews a day?";
-		let res = client
-			.get_prompt(GetPromptRequestParams::new("ask").with_arguments(json!({ "question": question }).as_object().unwrap().clone()))
-			.await
-			.unwrap();
+		let res = client.get_prompt(GetPromptRequestParams::new("ask")).await.unwrap();
 		let text = res.messages.iter().map(|m| m.content.as_text().unwrap().text.as_str()).collect::<String>();
-		assert!(text.ends_with(question) && text.contains("**sources**") && !text.contains("DECAY_DAYS"), "{text}");
+		assert!(text.contains("**sources**") && !text.contains("DECAY_DAYS"), "{text}");
 	})
 	.await;
 }
