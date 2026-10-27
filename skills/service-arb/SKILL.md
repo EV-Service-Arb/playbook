@@ -1,6 +1,6 @@
 ---
 name: service-arb
-description: Answer a service-arbitrage question out of the playbook — Google Business Profiles (GBP/GMB), verification (video, live, instant), suspension, reviews, naming, categories, niches, VAs, contractors, splits, gmails, proxies, phones. Use for "do we have…", "what do they say about…", a message someone sent that needs a reply, or any question whose answer lives in structured/ or ref/.
+description: Answer a service-arbitrage question out of the playbook — Google Business Profiles (GBP/GMB), verification (video, live, instant), suspension, reviews, naming, categories, niches, VAs, contractors, splits, gmails, proxies, phones. Use for "do we have…", "what do they say about…", a message that needs a reply, or anything else the playbook covers.
 ---
 
 # service-arb

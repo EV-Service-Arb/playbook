@@ -9,7 +9,7 @@ use base64::{Engine, engine::general_purpose::URL_SAFE_NO_PAD};
 use evconcierge_projection::{EventSource, Member, Page, Pulled, ScopeEvent, ScopeEventBody, SourceError, UserEvent, UserEventKind};
 use rmcp::{
 	RoleClient, ServiceExt,
-	model::CallToolRequestParams,
+	model::{CallToolRequestParams, GetPromptRequestParams},
 	service::RunningService,
 	transport::{StreamableHttpClientTransport, streamable_http_client::StreamableHttpClientTransportConfig},
 };
@@ -34,6 +34,25 @@ async fn read_returns_one_chapter() {
 			let headers = text.lines().filter(|l| l.split_once(" | ").is_some_and(|(_, l)| l.starts_with('#'))).count();
 			assert_eq!(headers, 1, "{text}");
 		}
+	})
+	.await;
+}
+
+/// Where tools stay hidden until the model decides to look (claude.ai), the instructions are what it decides
+/// on, and `ask` is the member's explicit way in; both carry the answering rules, the decay inlined.
+#[tokio::test]
+async fn the_server_says_when_and_how_to_answer() {
+	serve("prompt", i64::MAX, Concierge::default(), async |url| {
+		let client = connect(&url, TOKEN).await;
+		let instructions = client.peer_info().unwrap().instructions.clone().unwrap();
+		assert!(instructions.contains("GBP") && instructions.contains("**sources**"), "{instructions}");
+		let question = "how many reviews a day?";
+		let res = client
+			.get_prompt(GetPromptRequestParams::new("ask").with_arguments(json!({ "question": question }).as_object().unwrap().clone()))
+			.await
+			.unwrap();
+		let text = res.messages.iter().map(|m| m.content.as_text().unwrap().text.as_str()).collect::<String>();
+		assert!(text.ends_with(question) && text.contains("**sources**") && !text.contains("DECAY_DAYS"), "{text}");
 	})
 	.await;
 }

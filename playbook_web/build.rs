@@ -44,12 +44,15 @@ fn main() {
 		.expect("cite_check.rs states `const DECAY_DAYS: f64 = <n>.;`");
 	writeln!(out, "const DECAY_DAYS: f64 = {decay_days}.;").unwrap();
 	let skill = fs::read_to_string(&skill).unwrap();
-	let instructions = format!("{}\n\n{}", section(&skill, "# service-arb"), section(&skill, "## Answering"));
+	let description = skill.lines().find_map(|l| l.strip_prefix("description: ")).expect("SKILL.md's frontmatter has a `description:`");
 	let decay_link = "[`DECAY_DAYS`](../../playbook/src/cite_check.rs)";
-	assert!(instructions.contains(decay_link), "SKILL.md's `## Answering` no longer links {decay_link}");
-	let instructions = instructions.replace(decay_link, decay_days);
-	assert!(instructions.len() <= INSTRUCTIONS_MAX, "SKILL.md's hook + `## Answering` is {} chars, over {INSTRUCTIONS_MAX}", instructions.len());
+	let answering = section(&skill, "## Answering");
+	assert!(answering.contains(decay_link), "SKILL.md's `## Answering` no longer links {decay_link}");
+	let answering = answering.replace(decay_link, decay_days);
+	let instructions = format!("{description}\n\n{answering}"); // the description is the when, in the words a member asks with
+	assert!(instructions.len() <= INSTRUCTIONS_MAX, "SKILL.md's description + `## Answering` is {} chars, over {INSTRUCTIONS_MAX}", instructions.len());
 	writeln!(out, "pub const INSTRUCTIONS: &str = {instructions:?};").unwrap();
+	writeln!(out, "pub const ANSWERING: &str = {answering:?};").unwrap();
 	writeln!(out, "pub const GUIDE_DESCRIPTION: &str = {:?};", format!(
 		"How to decide, for one area: what matters, how to choose, what to do when it goes wrong. Read the matching one before advising rather than quoting. Sections: {}.",
 		sections.join(", ")
