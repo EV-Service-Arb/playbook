@@ -74,6 +74,11 @@ gets it.
 
     <img src="./docs/.readme_assets/assets/chatgpt_custom_mcp.png" width="50.0%" />
 
+3.  In a chat: **+** → **Service Arb**. To keep it off the web, say so:
+    “answer only from service-arb”.
+
+    <img src="./docs/.readme_assets/assets/chatgpt_chat_plus.png" width="60.0%" />
+
 Sign in again: **Connect** on the plugin.
 
 
