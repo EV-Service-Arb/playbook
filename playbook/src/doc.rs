@@ -30,7 +30,10 @@ pub fn pull(root: &Path, urls: &[String]) {
 		let page = get(&format!("{DOC}{id}/edit"));
 		let at = page.find("<title>").expect("a doc page has a title") + "<title>".len();
 		let title = page[at..].split('<').next().expect("split yields at least once");
-		let title = title.trim_end().strip_suffix(" - Google\u{a0}Docs").unwrap_or_else(|| panic!("{id}: `{title}` is not a doc's title — is it shared by link?"));
+		let title = title
+			.trim_end()
+			.strip_suffix(" - Google\u{a0}Docs")
+			.unwrap_or_else(|| panic!("{id}: `{title}` is not a doc's title — is it shared by link?"));
 		let body = get(&format!("{DOC}{id}/export?format=md"));
 		let today = String::from_utf8(Command::new("date").arg("+%F").output().expect("date runs").stdout).expect("date prints ascii");
 		let doc = format!(
@@ -44,7 +47,6 @@ pub fn pull(root: &Path, urls: &[String]) {
 		println!("{}", out.display());
 	}
 }
-
 
 fn id_of(arg: &str) -> String {
 	let tail = arg.strip_prefix(DOC).unwrap_or_else(|| panic!("`{arg}` is not a google doc link"));
@@ -71,7 +73,15 @@ fn links_in(readme: &Path) -> Vec<String> {
 	let text = std::fs::read_to_string(readme).unwrap_or_else(|e| panic!("reading {}: {e}", readme.display()));
 	let mut found: Vec<String> = text
 		.match_indices(DOC)
-		.map(|(at, _)| id_of(text[at..].split_whitespace().next().expect("split yields at least once").trim_end_matches([')', ']', ',', '.', '"', '`', '>'])))
+		.map(|(at, _)| {
+			id_of(
+				text[at..]
+					.split_whitespace()
+					.next()
+					.expect("split yields at least once")
+					.trim_end_matches([')', ']', ',', '.', '"', '`', '>']),
+			)
+		})
 		.collect();
 	found.sort();
 	found.dedup();

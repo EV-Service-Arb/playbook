@@ -4,7 +4,7 @@
   };
   outputs = { self, v_flakes }:
     let
-      inherit (v_flakes) flake-utils;
+      inherit (v_flakes) flake-utils pre-commit-hooks;
     in
     flake-utils.lib.eachDefaultSystem (
       system:
@@ -12,8 +12,14 @@
         pkgs = import v_flakes.default_nixpkgs { inherit system; };
         inherit (import v_flakes.default_nixpkgs { inherit system; config.allowUnfree = true; }) claude-code;
         rust = v_flakes.rs.default_nightly system;
+        pre-commit-check = pre-commit-hooks.lib.${system}.run (v_flakes.files.preCommit { inherit pkgs; });
+        rs = v_flakes.rs {
+          inherit pkgs rust;
+          build.enable = false; # playbook_web's build.rs bakes the corpus; the root is a virtual workspace
+          style.modules.join_split_impls = false; # it folds rmcp's `#[prompt_router]` impl into the `#[tool_router]` one
+        };
         github = v_flakes.github {
-          inherit pkgs;
+          inherit pkgs rs;
           pname = "playbook";
           enable = true;
           lfs = true;
@@ -29,11 +35,12 @@
           rootDir = ./.;
           badges = [ "ci" ];
         };
-        combined = v_flakes.utils.combine { inherit rust; modules = [ github readme ]; };
+        combined = v_flakes.utils.combine { inherit rust; modules = [ rs github readme ]; };
 
         port = "59082";
         # the member surface; build.rs bakes in skills/service-arb/, structured/{approved,suggested}/ and ref/**/*.md, and nothing else of the tree reaches the image
-        playbook_web = (pkgs.makeRustPlatform { rustc = rust; cargo = rust; }).buildRustPackage {
+        build_rust = v_flakes.rs.build_nightly system;
+        playbook_web = (pkgs.makeRustPlatform { rustc = build_rust; cargo = build_rust; }).buildRustPackage {
           pname = "playbook_web";
           version = "0.1.0";
           src = pkgs.lib.fileset.toSource {
@@ -58,8 +65,8 @@
           nativeBuildInputs = [ pkgs.cmake pkgs.tailwindcss_4 pkgs.pkg-config ]; # aws-lc, under reqwest's rustls; the connect pages' stylesheet
           buildInputs = pkgs.lib.optionals pkgs.stdenv.isLinux [ pkgs.openssl ]; # ev_lib's sentry turns on reqwest's native-tls
           # std's panic locations name its source inside the toolchain, which would pull all of it into the image
-          RUSTFLAGS = "--remap-path-prefix=${rust}=/rust";
-          disallowedReferences = [ rust ];
+          RUSTFLAGS = "--remap-path-prefix=${build_rust}=/rust";
+          disallowedReferences = [ build_rust ];
           SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # the tests build an HTTP client; the image sets its own
         };
         containerStd = v_flakes.container.implement {
@@ -119,8 +126,10 @@
         };
 
         devShells.default = pkgs.mkShell {
-          shellHook = combined.shellHook;
-          packages = [ rust pkgs.sqlite pkgs.tailwindcss_4 pkgs.cargo-insta ] ++ combined.enabledPackages;
+          shellHook = pre-commit-check.shellHook + combined.shellHook + ''
+            cp -f ${v_flakes.files.treefmt { inherit pkgs; }} ./.treefmt.toml
+          '';
+          packages = [ rust pkgs.sqlite pkgs.tailwindcss_4 pkgs.cargo-insta ] ++ pre-commit-check.enabledPackages ++ combined.enabledPackages;
           env.PORT = port;
         };
       }

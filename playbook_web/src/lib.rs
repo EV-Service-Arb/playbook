@@ -1,3 +1,4 @@
+#![feature(default_field_values)]
 //! The member surface: the playbook's `skills/service-arb/`, `structured/{approved,suggested}/` and `ref/` text, served as slices over
 //! MCP to the Service-Arb members holding `sa:playbook:mcp:use`, behind the panel. See `README.md`.
 
@@ -7,12 +8,14 @@ mod pages;
 mod sync;
 mod tools;
 
-pub use sync::SA;
-
-use std::{path::PathBuf, sync::{Arc, LazyLock, Mutex, atomic::AtomicI64}};
+use std::{
+	path::PathBuf,
+	sync::{Arc, LazyLock, Mutex, atomic::AtomicI64},
+};
 
 use axum::{Router, middleware, routing::get};
 use rmcp::transport::streamable_http_server::{StreamableHttpServerConfig, StreamableHttpService, session::local::LocalSessionManager};
+pub use sync::SA;
 
 pub struct Config {
 	/// where members reach the server, e.g. `https://<host>/playbook_mcp`; the OAuth issuer, the resource, and the path it is served under
@@ -23,21 +26,6 @@ pub struct Config {
 	pub daily_bytes: i64,
 	/// the wait between two pulls of concierge's streams
 	pub sync_every: std::time::Duration,
-}
-
-struct State {
-	config: Config,
-	resource_metadata: String, // RFC 9728's path-inserted location
-	db: Mutex<rusqlite::Connection>, // ponytail: one lock for every query; a pool if calls ever queue on it
-	http: reqwest::Client,
-	synced: AtomicI64, // unix seconds of the last projection cycle that reached concierge's head; 0 before the first
-}
-
-/// the member the guard admitted, carried on the request into the tools
-#[derive(Clone)]
-struct Member {
-	sub: String,
-	email: String,
 }
 
 /// The server, and the projection of concierge's scope `sa` it refreshes tokens by: run both, the
@@ -91,6 +79,21 @@ pub async fn app(config: Config, concierge: impl evconcierge_projection::EventSo
 		.route("/health", get(|| async { "ok" }))
 		.with_state(state.clone());
 	(router, sync::run(state, pool, concierge))
+}
+
+struct State {
+	config: Config,
+	resource_metadata: String,       // RFC 9728's path-inserted location
+	db: Mutex<rusqlite::Connection>, // ponytail: one lock for every query; a pool if calls ever queue on it
+	http: reqwest::Client,
+	synced: AtomicI64, // unix seconds of the last projection cycle that reached concierge's head; 0 before the first
+}
+
+/// the member the guard admitted, carried on the request into the tools
+#[derive(Clone)]
+struct Member {
+	sub: String,
+	email: String,
 }
 
 fn now() -> i64 {

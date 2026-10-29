@@ -24,6 +24,12 @@ const PUBLIC_URL: &str = "https://sa.evinvest.ltd/playbook_mcp";
 const PANEL: &str = "k1:BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=";
 const STRANGER: &str = "k1:CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg=";
 
+type Withdraw = fn(&Concierge, &str);
+
+trait KeyUser {
+	fn key_user(&self) -> Option<&str>;
+}
+
 #[tokio::test]
 async fn read_returns_one_chapter() {
 	serve("read", i64::MAX, Concierge::default(), async |url| {
@@ -83,7 +89,9 @@ async fn any_host_is_served() {
 			.bearer_auth(TOKEN)
 			.header("host", "playbook-web.personal:59082")
 			.header("accept", "application/json, text/event-stream")
-			.json(&json!({ "jsonrpc": "2.0", "id": 1, "method": "initialize", "params": { "protocolVersion": "2025-06-18", "capabilities": {}, "clientInfo": { "name": "t", "version": "0" } } }))
+			.json(
+				&json!({ "jsonrpc": "2.0", "id": 1, "method": "initialize", "params": { "protocolVersion": "2025-06-18", "capabilities": {}, "clientInfo": { "name": "t", "version": "0" } } }),
+			)
 			.send()
 			.await
 			.unwrap();
@@ -101,11 +109,21 @@ async fn no_token_leads_to_the_authorization_server() {
 		let res = http.post(format!("{url}{BASE}")).json(&json!({})).send().await.unwrap();
 		assert_eq!(res.status(), 401);
 		let challenge = res.headers()["www-authenticate"].to_str().unwrap();
-		assert_eq!(challenge, format!("Bearer resource_metadata=\"https://sa.evinvest.ltd/.well-known/oauth-protected-resource{BASE}\""));
+		assert_eq!(
+			challenge,
+			format!("Bearer resource_metadata=\"https://sa.evinvest.ltd/.well-known/oauth-protected-resource{BASE}\"")
+		);
 		let resource: Value = http.get(format!("{url}/.well-known/oauth-protected-resource{BASE}")).send().await.unwrap().json().await.unwrap();
 		assert_eq!(resource["resource"], PUBLIC_URL);
 		assert_eq!(resource["authorization_servers"], json!([PUBLIC_URL]));
-		let server: Value = http.get(format!("{url}/.well-known/oauth-authorization-server{BASE}")).send().await.unwrap().json().await.unwrap();
+		let server: Value = http
+			.get(format!("{url}/.well-known/oauth-authorization-server{BASE}"))
+			.send()
+			.await
+			.unwrap()
+			.json()
+			.await
+			.unwrap();
 		assert_eq!(server["issuer"], PUBLIC_URL);
 		assert_eq!(server["authorization_endpoint"], format!("{PUBLIC_URL}/authorize"));
 		assert_eq!(server["token_endpoint"], format!("{PUBLIC_URL}/token"));
@@ -126,7 +144,12 @@ async fn authorize_takes_the_panels_word_for_who_is_asking() {
 			let req = http.get(authorize.clone());
 			async move { if let Some(a) = assertion { req.header(sa_auth::HEADER, a) } else { req }.send().await.unwrap() }
 		};
-		for bad in [None, Some("not.a.jws".into()), Some(assertion(STRANGER, "u1", "GET", true)), Some(assertion(PANEL, "u1", "POST", true))] {
+		for bad in [
+			None,
+			Some("not.a.jws".into()),
+			Some(assertion(STRANGER, "u1", "GET", true)),
+			Some(assertion(PANEL, "u1", "POST", true)),
+		] {
 			let res = get(bad).await;
 			assert_eq!(res.status(), 401);
 			assert_eq!(res.headers()["content-type"], "text/html; charset=utf-8");
@@ -160,7 +183,10 @@ async fn cancel_tells_the_client_access_denied() {
 			assert_eq!(res.headers()["location"], "http://localhost:64461/callback?error=access_denied&state=s1");
 		}
 		let mut stranger = deny.clone();
-		stranger.query_pairs_mut().clear().extend_pairs(deny.query_pairs().map(|(k, v)| (k.clone(), if k == "redirect_uri" { "https://evil.example/cb".into() } else { v })));
+		stranger.query_pairs_mut().clear().extend_pairs(
+			deny.query_pairs()
+				.map(|(k, v)| (k.clone(), if k == "redirect_uri" { "https://evil.example/cb".into() } else { v })),
+		);
 		let res = http.get(stranger).send().await.unwrap();
 		assert_eq!(res.status(), 400);
 		assert!(res.headers().get("location").is_none());
@@ -182,9 +208,59 @@ async fn browser_errors_are_pages() {
 			assert_eq!(res.headers()["content-type"], "text/html; charset=utf-8");
 			res.text().await.unwrap()
 		};
-		insta::assert_snapshot!("missing_params", redact(&page(http.get(unknown).send().await.unwrap()).await));
+		insta::assert_snapshot!(redact(&page(http.get(unknown).send().await.unwrap()).await), @r#"
+		<!doctype html>
+		<html lang="en">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>This sign-in link doesn’t work · Service-Arb</title>
+		<link rel="stylesheet" href="https://sa.evinvest.ltd/playbook_mcp/assets/connect.[hash].css">
+		<body class="bg-background text-ink font-sans antialiased">
+		<main class="flex min-h-dvh flex-col items-center justify-center gap-6 p-4 text-sm">
+		<div class="bg-card text-ink flex flex-col gap-6 rounded-xl border border-border py-6 shadow-sm w-[440px] max-w-full items-center px-8 pt-8 pb-7">
+		<div class="flex items-center"><span class="bg-brand flex size-12 items-center justify-center rounded-xl border border-border font-serif text-[22px] font-semibold">SA</span></div>
+		<div class="flex w-full flex-col items-center gap-1.5 text-center">
+			<h1 class="text-xl font-semibold">This sign-in link doesn’t work</h1>
+			<p class="text-ink-soft text-[13px]">It isn’t one Claude Code would open, or it was changed on the way.</p>
+		</div>
+		<ol class="flex w-full flex-col gap-3.5">
+			<li class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">1</span><div class="flex flex-col gap-0.5"><span class="font-medium">Go back to Claude Code</span><span class="text-ink-soft text-[13px]">Type <code>/mcp</code>, pick service-arb.</span></div></li>
+			<li class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">2</span><div class="flex flex-col gap-0.5"><span class="font-medium">Choose Authenticate</span><span class="text-ink-soft text-[13px]">A fresh page opens here.</span></div></li>
+		</ol>
+		<p class="text-ink-soft text-center text-xs">Details: Failed to deserialize query string: missing field `response_type`</p>
+		</div>
+		<p class="text-ink-soft text-xs">Service-Arb · EV Invest</p>
+		</main>
+		</body>
+		</html>
+		"#);
 		let spent = http.post(format!("{url}{BASE}/authorize")).header(sa_auth::HEADER, assertion(PANEL, "u1", "POST", true)).form(&[("nonce", "made-up")]).send();
-		insta::assert_snapshot!("spent_nonce", redact(&page(spent.await.unwrap()).await));
+		insta::assert_snapshot!(redact(&page(spent.await.unwrap()).await), @r#"
+		<!doctype html>
+		<html lang="en">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>This sign-in link has expired · Service-Arb</title>
+		<link rel="stylesheet" href="https://sa.evinvest.ltd/playbook_mcp/assets/connect.[hash].css">
+		<body class="bg-background text-ink font-sans antialiased">
+		<main class="flex min-h-dvh flex-col items-center justify-center gap-6 p-4 text-sm">
+		<div class="bg-card text-ink flex flex-col gap-6 rounded-xl border border-border py-6 shadow-sm w-[440px] max-w-full items-center px-8 pt-8 pb-7">
+		<div class="flex items-center"><span class="bg-brand flex size-12 items-center justify-center rounded-xl border border-border font-serif text-[22px] font-semibold">SA</span></div>
+		<div class="flex w-full flex-col items-center gap-1.5 text-center">
+			<h1 class="text-xl font-semibold">This sign-in link has expired</h1>
+			<p class="text-ink-soft text-[13px]">Links from Claude Code last 10 minutes and work once.</p>
+		</div>
+		<ol class="flex w-full flex-col gap-3.5">
+			<li class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">1</span><div class="flex flex-col gap-0.5"><span class="font-medium">Go back to Claude Code</span><span class="text-ink-soft text-[13px]">Type <code>/mcp</code>, pick service-arb.</span></div></li>
+			<li class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">2</span><div class="flex flex-col gap-0.5"><span class="font-medium">Choose Authenticate</span><span class="text-ink-soft text-[13px]">A fresh page opens here.</span></div></li>
+		</ol>
+		<p class="text-ink-soft text-center text-xs">Details: the consent form is spent, expired, or someone else&#39;s</p>
+		</div>
+		<p class="text-ink-soft text-xs">Service-Arb · EV Invest</p>
+		</main>
+		</body>
+		</html>
+		"#);
 		let res = http.post(format!("{url}{BASE}/token")).form(&[("grant_type", "nope"), ("client_id", "x")]).send().await.unwrap();
 		assert_eq!(res.headers()["content-type"], "application/json");
 	})
@@ -203,7 +279,52 @@ async fn a_code_is_issued_only_on_consent() {
 		assert_eq!(res.status(), 200);
 		assert!(res.headers().get("location").is_none());
 		let page = res.text().await.unwrap();
-		insta::assert_snapshot!("consent", redact(&page));
+		insta::assert_snapshot!(redact(&page), @r#"
+		<!doctype html>
+		<html lang="en">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Connect &lt;b&gt;Claude&lt;/b&gt; &amp; co · Service-Arb</title>
+		<link rel="stylesheet" href="https://sa.evinvest.ltd/playbook_mcp/assets/connect.[hash].css">
+		<body class="bg-background text-ink font-sans antialiased">
+		<main class="flex min-h-dvh flex-col items-center justify-center gap-6 p-4 text-sm">
+		<div class="bg-card text-ink flex flex-col gap-6 rounded-xl border border-border py-6 shadow-sm w-[440px] max-w-full items-center px-8 pt-8 pb-7">
+		<div class="flex items-center gap-3"><span class="bg-muted flex size-12 items-center justify-center rounded-xl text-[22px] font-semibold">B</span><span class="text-ink-soft text-xs" aria-hidden="true">• • •</span><span class="bg-brand flex size-12 items-center justify-center rounded-xl border border-border font-serif text-[22px] font-semibold">SA</span></div>
+		<div class="flex w-full flex-col items-center gap-1.5 text-center">
+			<h1 class="text-xl font-semibold">&lt;b&gt;Claude&lt;/b&gt; &amp; co wants to access the Service-Arb playbook</h1>
+			<p class="text-ink-soft text-[13px]">sa.evinvest.ltd</p>
+		</div>
+		<div class="group/item flex items-center border border-transparent text-sm rounded-md transition-colors [a]:hover:bg-hover/50 [a]:transition-colors duration-100 flex-wrap outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] border-border py-3 px-4 gap-2.5 w-full bg-secondary">
+			<span class="relative flex size-8 shrink-0 overflow-hidden rounded-full"><span class="bg-muted flex size-full items-center justify-center rounded-full text-[13px] font-semibold">M</span></span>
+			<div class="flex min-w-0 flex-1 flex-col">
+				<span class="text-ink-soft text-xs">Signed in as</span>
+				<span class="truncate font-medium">member@example.com</span>
+			</div>
+			<a class="text-primary-ink text-[13px] font-medium hover:underline" href="https://sa.evinvest.ltd/auth/login?prompt=select_account&amp;return_to=%2Fplaybook_mcp%2Fauthorize%3Fresponse_type%3Dcode%26client_id%3D[client]%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A64461%252Fcallback%26code_challenge%3DAhBy5AnaikEmb5ju_8w77MAjuufyCuYfpqXJ0nYyDKI%26code_challenge_method%3DS256%26state%3Ds1">Switch account</a>
+		</div>
+		<div class="flex w-full flex-col gap-3">
+			<p class="text-ink-mid text-[13px] font-medium">This will allow &lt;b&gt;Claude&lt;/b&gt; &amp; co to:</p>
+			<div class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-7 shrink-0 items-center justify-center rounded-lg" aria-hidden="true">⌕</span><div class="flex flex-col gap-0.5"><span class="font-medium">Search and read the playbook</span><span class="text-ink-soft text-[13px]">Guides, call notes and reference material, as you.</span></div></div>
+			<div class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-7 shrink-0 items-center justify-center rounded-lg" aria-hidden="true">◷</span><div class="flex flex-col gap-0.5"><span class="font-medium">Use your daily allowance</span><span class="text-ink-soft text-[13px]">Every lookup is logged under your account and counts toward your daily budget.</span></div></div>
+			<p class="text-ink-soft text-[13px]">&lt;b&gt;Claude&lt;/b&gt; &amp; co cannot change anything in the playbook or the panel.</p>
+		</div>
+		<hr class="w-full border-border">
+		<div class="text-ink-soft flex w-full flex-col gap-1 rounded-lg bg-secondary px-3 py-2.5">
+			<p class="text-xs">You’ll be returned to</p>
+			<p class="text-[13px] break-all">http://<b class="text-ink font-medium">localhost:64461</b>/callback</p>
+			<p class="text-xs">That’s an app on this computer. Allow only if you just ran <code>/mcp</code> → Authenticate in Claude Code.</p>
+		</div>
+		<form class="grid w-full grid-cols-2 gap-3" method="post" action="https://sa.evinvest.ltd/playbook_mcp/authorize">
+			<input type="hidden" name="nonce" value="[nonce]">
+			<a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[var(--control-radius)] text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-accent-error/20 aria-invalid:border-accent-error border border-input bg-transparent shadow-xs hover:bg-hover hover:text-ink h-10 px-6 has-[>svg]:px-4 w-full" href="/playbook_mcp/authorize?response_type=code&amp;client_id=[client]&amp;redirect_uri=http%3A%2F%2Flocalhost%3A64461%2Fcallback&amp;code_challenge=AhBy5AnaikEmb5ju_8w77MAjuufyCuYfpqXJ0nYyDKI&amp;code_challenge_method=S256&amp;state=s1&amp;decision=deny">Cancel</a>
+			<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[var(--control-radius)] text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-accent-error/20 aria-invalid:border-accent-error bg-primary text-on-primary hover:bg-primary/90 focus-visible:ring-0 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring h-10 px-6 has-[>svg]:px-4 w-full">Allow access</button>
+		</form>
+		</div>
+		<p class="text-ink-soft text-xs">Service-Arb · EV Invest</p>
+		</main>
+		</body>
+		</html>
+		"#);
 		let nonce = page.split(r#"name="nonce" value=""#).nth(1).unwrap().split('"').next().unwrap().to_owned();
 		let css = page.split(r#"rel="stylesheet" href=""#).nth(1).unwrap().split('"').next().unwrap();
 		let res = http.get(format!("{url}{}", css.strip_prefix("https://sa.evinvest.ltd").unwrap())).send().await.unwrap();
@@ -299,14 +420,34 @@ async fn a_refresh_waits_while_concierge_is_unreachable() {
 async fn sign_in(url: &str, sub: &str) -> (String, Value) {
 	let http = reqwest::Client::builder().redirect(reqwest::redirect::Policy::none()).build().unwrap();
 	let (client_id, verifier) = register(url, "Claude Code").await;
-	let page = http.get(authorize_url(url, &client_id)).header(sa_auth::HEADER, assertion(PANEL, sub, "GET", true)).send().await.unwrap().text().await.unwrap();
+	let page = http
+		.get(authorize_url(url, &client_id))
+		.header(sa_auth::HEADER, assertion(PANEL, sub, "GET", true))
+		.send()
+		.await
+		.unwrap()
+		.text()
+		.await
+		.unwrap();
 	let nonce = page.split(r#"name="nonce" value=""#).nth(1).unwrap().split('"').next().unwrap();
-	let res = http.post(format!("{url}{BASE}/authorize")).header(sa_auth::HEADER, assertion(PANEL, sub, "POST", true)).form(&[("nonce", nonce)]).send().await.unwrap();
+	let res = http
+		.post(format!("{url}{BASE}/authorize"))
+		.header(sa_auth::HEADER, assertion(PANEL, sub, "POST", true))
+		.form(&[("nonce", nonce)])
+		.send()
+		.await
+		.unwrap();
 	let back = reqwest::Url::parse(res.headers()["location"].to_str().unwrap()).unwrap();
 	let code = back.query_pairs().find(|(k, _)| k == "code").unwrap().1.into_owned();
 	let tokens = http
 		.post(format!("{url}{BASE}/token"))
-		.form(&[("grant_type", "authorization_code"), ("client_id", &client_id), ("code", &code), ("code_verifier", &verifier), ("redirect_uri", "http://localhost:64461/callback")])
+		.form(&[
+			("grant_type", "authorization_code"),
+			("client_id", &client_id),
+			("code", &code),
+			("code_verifier", &verifier),
+			("redirect_uri", "http://localhost:64461/callback"),
+		])
 		.send()
 		.await
 		.unwrap()
@@ -319,7 +460,11 @@ async fn sign_in(url: &str, sub: &str) -> (String, Value) {
 async fn refresh(url: &str, client_id: &str, tokens: &Value) -> reqwest::Response {
 	reqwest::Client::new()
 		.post(format!("{url}{BASE}/token"))
-		.form(&[("grant_type", "refresh_token"), ("client_id", client_id), ("refresh_token", tokens["refresh_token"].as_str().unwrap())])
+		.form(&[
+			("grant_type", "refresh_token"),
+			("client_id", client_id),
+			("refresh_token", tokens["refresh_token"].as_str().unwrap()),
+		])
 		.send()
 		.await
 		.unwrap()
@@ -339,27 +484,9 @@ async fn ping(url: &str, token: &str) -> u16 {
 		.as_u16()
 }
 
-type Withdraw = fn(&Concierge, &str);
-
 /// concierge's two streams as the projection pulls them, scope `sa` only, written by the test.
 #[derive(Clone, Default)]
 struct Concierge(Arc<Streams>);
-
-struct Streams {
-	scope: Mutex<Vec<ScopeEvent>>,
-	users: Mutex<Vec<UserEvent>>,
-	down: AtomicBool,
-	users_after: AtomicI64,
-	/// on every scope pull, which starts a cycle: its `after`, and the last lifecycle pull's
-	pulled: watch::Sender<(i64, i64)>,
-}
-
-impl Default for Streams {
-	fn default() -> Self {
-		Self { scope: Mutex::default(), users: Mutex::default(), down: AtomicBool::default(), users_after: AtomicI64::new(-1), pulled: watch::Sender::new((-1, -1)) }
-	}
-}
-
 impl Concierge {
 	fn join(&self, sub: &str) {
 		let member = Member {
@@ -372,11 +499,25 @@ impl Concierge {
 			token_version: 1,
 			lifecycle_sequence: 1,
 		};
-		self.push_scope(sub, ScopeEventBody::MemberJoined { user_id: sub.into(), auth_subject: subject(sub), member });
+		self.push_scope(
+			sub,
+			ScopeEventBody::MemberJoined {
+				user_id: sub.into(),
+				auth_subject: subject(sub),
+				member,
+			},
+		);
 	}
 
 	fn grant(&self, sub: &str, permissions: &[&str]) {
-		self.push_scope(sub, ScopeEventBody::GrantsChanged { user_id: sub.into(), auth_subject: subject(sub), permissions: permissions.iter().map(|p| (*p).to_owned()).collect() });
+		self.push_scope(
+			sub,
+			ScopeEventBody::GrantsChanged {
+				user_id: sub.into(),
+				auth_subject: subject(sub),
+				permissions: permissions.iter().map(|p| (*p).to_owned()).collect(),
+			},
+		);
 	}
 
 	fn suspend(&self, sub: &str) {
@@ -402,7 +543,14 @@ impl Concierge {
 		let mut scope = self.0.scope.lock().unwrap();
 		let sequence = 1 + scope.iter().filter(|e| e.key_user() == Some(sub)).count() as u64;
 		let position = scope.len() as i64 + 1;
-		scope.push(ScopeEvent { event_id: format!("scope-{position}"), position, scope: "sa".into(), occurred_at: 0, sequence, body });
+		scope.push(ScopeEvent {
+			event_id: format!("scope-{position}"),
+			position,
+			scope: "sa".into(),
+			occurred_at: 0,
+			sequence,
+			body,
+		});
 	}
 
 	/// Until a cycle that pulled everything written so far has finished: the pulls of the cycle
@@ -413,8 +561,25 @@ impl Concierge {
 	}
 }
 
-trait KeyUser {
-	fn key_user(&self) -> Option<&str>;
+struct Streams {
+	scope: Mutex<Vec<ScopeEvent>>,
+	users: Mutex<Vec<UserEvent>>,
+	down: AtomicBool,
+	users_after: AtomicI64,
+	/// on every scope pull, which starts a cycle: its `after`, and the last lifecycle pull's
+	pulled: watch::Sender<(i64, i64)>,
+}
+
+impl Default for Streams {
+	fn default() -> Self {
+		Self {
+			scope: Mutex::default(),
+			users: Mutex::default(),
+			down: AtomicBool::default(),
+			users_after: AtomicI64::new(-1),
+			pulled: watch::Sender::new((-1, -1)),
+		}
+	}
 }
 
 impl KeyUser for ScopeEvent {
@@ -439,7 +604,10 @@ impl EventSource for Concierge {
 		let users = self.0.users.lock().unwrap();
 		let events: Vec<_> = users.iter().skip(after as usize).take(limit as usize).cloned().map(Pulled::Known).collect();
 		self.0.users_after.store(after, Ordering::SeqCst);
-		Ok(Page { next_position: after + events.len() as i64, events })
+		Ok(Page {
+			next_position: after + events.len() as i64,
+			events,
+		})
 	}
 
 	async fn pull_scope_events(&self, after: i64, limit: u32) -> Result<Page<Pulled<ScopeEvent>>, SourceError> {
@@ -449,7 +617,10 @@ impl EventSource for Concierge {
 		let scope = self.0.scope.lock().unwrap();
 		let events: Vec<_> = scope.iter().skip(after as usize).take(limit as usize).cloned().map(Pulled::Known).collect();
 		self.0.pulled.send_replace((after, self.0.users_after.load(Ordering::SeqCst)));
-		Ok(Page { next_position: after + events.len() as i64, events })
+		Ok(Page {
+			next_position: after + events.len() as i64,
+			events,
+		})
 	}
 }
 
@@ -475,14 +646,17 @@ async fn register(url: &str, name: &str) -> (String, String) {
 }
 
 fn authorize_url(url: &str, client_id: &str) -> reqwest::Url {
-	reqwest::Url::parse_with_params(&format!("{url}{BASE}/authorize"), [
-		("response_type", "code"),
-		("client_id", client_id),
-		("redirect_uri", "http://localhost:64461/callback"),
-		("code_challenge", &URL_SAFE_NO_PAD.encode(Sha256::digest("a-verifier-long-enough-to-be-one-0123456789"))),
-		("code_challenge_method", "S256"),
-		("state", "s1"),
-	])
+	reqwest::Url::parse_with_params(
+		&format!("{url}{BASE}/authorize"),
+		[
+			("response_type", "code"),
+			("client_id", client_id),
+			("redirect_uri", "http://localhost:64461/callback"),
+			("code_challenge", &URL_SAFE_NO_PAD.encode(Sha256::digest("a-verifier-long-enough-to-be-one-0123456789"))),
+			("code_challenge_method", "S256"),
+			("state", "s1"),
+		],
+	)
 	.unwrap()
 }
 
@@ -548,4 +722,3 @@ async fn call(client: &RunningService<RoleClient, ()>, tool: &str, args: Value) 
 	let text = res.content.iter().map(|c| c.as_text().unwrap().text.as_str()).collect::<Vec<_>>().join("\n");
 	(text, res.is_error == Some(true))
 }
-

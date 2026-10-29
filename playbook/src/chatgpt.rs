@@ -8,11 +8,7 @@
 //! A chatgpt share states no date anywhere, so the pull date is the only age this can carry, and
 //! the raw file is the thing to re-pull when that age starts to matter.
 
-use std::{
-	collections::BTreeSet,
-	path::Path,
-	process::Command,
-};
+use std::{collections::BTreeSet, path::Path, process::Command};
 
 const SHARE: &str = "https://chatgpt.com/share/";
 const ROLE: &str = "data-message-author-role=\"";
@@ -43,7 +39,6 @@ pub fn pull(root: &Path, urls: &[String]) {
 		println!("{}", out.display());
 	}
 }
-
 
 fn id_of(arg: &str) -> String {
 	let tail = arg.rsplit('/').next().expect("rsplit yields at least once");
@@ -136,7 +131,12 @@ fn text_of(html: &str) -> String {
 			break;
 		};
 		let tag = &tail[1..close];
-		let name = tag.trim_start_matches('/').split([' ', '>', '/']).next().expect("split yields at least once").to_ascii_lowercase();
+		let name = tag
+			.trim_start_matches('/')
+			.split([' ', '>', '/'])
+			.next()
+			.expect("split yields at least once")
+			.to_ascii_lowercase();
 		if (name == "script" || name == "style") && !tag.starts_with('/') {
 			let end = format!("</{name}>");
 			// an unclosed script is the end of anything readable, so there is nothing after it to keep

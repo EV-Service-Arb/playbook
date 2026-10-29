@@ -20,7 +20,103 @@ const TAIL_SECS: f64 = 600.;
 /// A paragraph is closed at the first sentence end past this many words.
 const PARAGRAPH_WORDS: usize = 80;
 
-#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord)]
+const DRIVE_FOLDERS: [&str; 2] = ["https://drive.google.com/drive/folders/", "https://drive.google.com/drive/u/0/folders/"];
+
+/// A recording, as `(platform, id)` — the id being whatever follows the platform's share prefix.
+type Rec = (Platform, String);
+
+/// Each capture's recording: the one kept beside it, or fetched there from its host first. Every
+/// reader of a recording comes through here, so whether it is kept or fetched now is decided once.
+pub fn recordings(root: &Path, captures: &[PathBuf]) -> Vec<PathBuf> {
+	let have = captured(root);
+	captures
+		.iter()
+		.map(|arg| {
+			let path = std::fs::canonicalize(arg).unwrap_or_else(|e| panic!("{}: {e}", arg.display()));
+			let ((platform, id), _) = have
+				.iter()
+				.find(|(_, p)| std::fs::canonicalize(p).is_ok_and(|p| p == path))
+				.unwrap_or_else(|| panic!("{} is not a call capture", arg.display()));
+			let kept = path.with_extension("");
+			recording_in(&kept).unwrap_or_else(|| fetch(&format!("{}{id}", platform.share()), &kept))
+		})
+		.collect()
+}
+
+/// Writes a capture for every recording we do not have yet, of `urls`, or of the registry's links where none.
+pub fn pull(root: &Path, urls: &[String]) {
+	let have = captured(root);
+	let wanted: BTreeMap<Rec, Option<Listed>> = match urls.is_empty() {
+		true => links_in(&root.join("ref/README.md")),
+		false => urls.iter().map(|a| (rec_of(a), None)).collect(),
+	};
+	if wanted.is_empty() {
+		eprintln!("no recording links in ref/README.md and none given — nothing to pull");
+		return;
+	}
+
+	let mut undigested = Vec::new();
+	for (rec, listed) in &wanted {
+		let (platform, id) = rec;
+		let url = format!("{}{id}", platform.share());
+		if let Some(had) = have.get(rec) {
+			eprintln!("have {id} — {}", had.display());
+			continue;
+		}
+		eprintln!("pulling {} {id}", platform.name());
+		// named only once the recording is read, so it waits outside the tree till then
+		let staged = root.join("tmp/call-pull").join(id);
+		let media = fetch(&url, &staged);
+		let mut recording = match platform {
+			Platform::Loom => loom(id, &get(&url)),
+			Platform::Fathom => fathom(&get(&url)),
+			Platform::Drive | Platform::Vimeo | Platform::Vocaroo => {
+				let listed = listed
+					.as_ref()
+					.unwrap_or_else(|| panic!("{id}: a {} recording is pulled through what ref/README.md says of it", platform.name()));
+				heard(*platform, listed, &media)
+			}
+		};
+		if recording.phrases.is_empty() && matches!(platform, Platform::Loom | Platform::Fathom) {
+			eprintln!("  {} transcribed nothing", platform.name());
+			recording.transcribed_by = format!("whisper-cpp `{}` — {} transcribed nothing", model_name(), platform.name());
+			recording.phrases = whisper_phrases(&media).0;
+			assert!(!recording.phrases.is_empty(), "{id}: whisper heard nothing either");
+			recording.turns = false;
+			// the platform's reading, if any, is of a transcript it never produced
+			recording.summary = None;
+			recording.chapters = None;
+		}
+		let (name, doc, digested) = render(*platform, id, recording);
+		check(&name, &doc);
+		let dir = root.join(platform.dir());
+		std::fs::create_dir_all(&dir).unwrap_or_else(|e| panic!("creating {}: {e}", dir.display()));
+		let out = dir.join(&name);
+		assert!(!out.exists(), "{} is taken, and not by {id} — two recordings share a day and a title", out.display());
+		std::fs::rename(&staged, out.with_extension("")).unwrap_or_else(|e| panic!("moving {} beside {}: {e}", staged.display(), out.display()));
+		std::fs::write(&out, doc).unwrap_or_else(|e| panic!("writing {}: {e}", out.display()));
+		println!("{}", out.display());
+		if !digested {
+			undigested.push(out);
+		}
+	}
+
+	if !undigested.is_empty() {
+		eprintln!("\nnobody has read these yet — run `/ingest call-digest` over each:");
+		for out in &undigested {
+			eprintln!("  {}", out.display());
+		}
+	}
+}
+
+/// Every capture already on disk, by the recording it states, each held to the shape on the way. A
+/// file is named after the recording rather than after its id, so what is on disk is a question for
+/// the files and not for their names.
+pub fn all(root: &Path) -> Vec<PathBuf> {
+	captured(root).into_values().collect()
+}
+
+#[derive(Clone, Copy, Debug, Eq, Ord, PartialEq, PartialOrd)]
 enum Platform {
 	Loom,
 	Fathom,
@@ -74,9 +170,6 @@ impl Platform {
 	}
 }
 
-/// A recording, as `(platform, id)` — the id being whatever follows the platform's share prefix.
-type Rec = (Platform, String);
-
 fn rec_of(url: &str) -> Rec {
 	let platform = Platform::ALL
 		.into_iter()
@@ -109,97 +202,6 @@ struct Listed {
 	/// a date, then what kind of date it is
 	recorded: String,
 	within: Option<String>,
-}
-
-const DRIVE_FOLDERS: [&str; 2] = ["https://drive.google.com/drive/folders/", "https://drive.google.com/drive/u/0/folders/"];
-
-/// Each capture's recording: the one kept beside it, or fetched there from its host first. Every
-/// reader of a recording comes through here, so whether it is kept or fetched now is decided once.
-pub fn recordings(root: &Path, captures: &[PathBuf]) -> Vec<PathBuf> {
-	let have = captured(root);
-	captures
-		.iter()
-		.map(|arg| {
-			let path = std::fs::canonicalize(arg).unwrap_or_else(|e| panic!("{}: {e}", arg.display()));
-			let ((platform, id), _) = have
-				.iter()
-				.find(|(_, p)| std::fs::canonicalize(p).is_ok_and(|p| p == path))
-				.unwrap_or_else(|| panic!("{} is not a call capture", arg.display()));
-			let kept = path.with_extension("");
-			recording_in(&kept).unwrap_or_else(|| fetch(&format!("{}{id}", platform.share()), &kept))
-		})
-		.collect()
-}
-
-/// Writes a capture for every recording we do not have yet, of `urls`, or of the registry's links where none.
-pub fn pull(root: &Path, urls: &[String]) {
-	let have = captured(root);
-	let wanted: BTreeMap<Rec, Option<Listed>> = match urls.is_empty() {
-		true => links_in(&root.join("ref/README.md")),
-		false => urls.iter().map(|a| (rec_of(a), None)).collect(),
-	};
-	if wanted.is_empty() {
-		eprintln!("no recording links in ref/README.md and none given — nothing to pull");
-		return;
-	}
-
-	let mut undigested = Vec::new();
-	for (rec, listed) in &wanted {
-		let (platform, id) = rec;
-		let url = format!("{}{id}", platform.share());
-		if let Some(had) = have.get(rec) {
-			eprintln!("have {id} — {}", had.display());
-			continue;
-		}
-		eprintln!("pulling {} {id}", platform.name());
-		// named only once the recording is read, so it waits outside the tree till then
-		let staged = root.join("tmp/call-pull").join(id);
-		let media = fetch(&url, &staged);
-		let mut recording = match platform {
-			Platform::Loom => loom(id, &get(&url)),
-			Platform::Fathom => fathom(&get(&url)),
-			Platform::Drive | Platform::Vimeo | Platform::Vocaroo => {
-				let listed = listed.as_ref().unwrap_or_else(|| panic!("{id}: a {} recording is pulled through what ref/README.md says of it", platform.name()));
-				heard(*platform, listed, &media)
-			}
-		};
-		if recording.phrases.is_empty() && matches!(platform, Platform::Loom | Platform::Fathom) {
-			eprintln!("  {} transcribed nothing", platform.name());
-			recording.transcribed_by = format!("whisper-cpp `{}` — {} transcribed nothing", model_name(), platform.name());
-			recording.phrases = whisper_phrases(&media).0;
-			assert!(!recording.phrases.is_empty(), "{id}: whisper heard nothing either");
-			recording.turns = false;
-			// the platform's reading, if any, is of a transcript it never produced
-			recording.summary = None;
-			recording.chapters = None;
-		}
-		let (name, doc, digested) = render(*platform, id, recording);
-		check(&name, &doc);
-		let dir = root.join(platform.dir());
-		std::fs::create_dir_all(&dir).unwrap_or_else(|e| panic!("creating {}: {e}", dir.display()));
-		let out = dir.join(&name);
-		assert!(!out.exists(), "{} is taken, and not by {id} — two recordings share a day and a title", out.display());
-		std::fs::rename(&staged, out.with_extension("")).unwrap_or_else(|e| panic!("moving {} beside {}: {e}", staged.display(), out.display()));
-		std::fs::write(&out, doc).unwrap_or_else(|e| panic!("writing {}: {e}", out.display()));
-		println!("{}", out.display());
-		if !digested {
-			undigested.push(out);
-		}
-	}
-
-	if !undigested.is_empty() {
-		eprintln!("\nnobody has read these yet — run `/ingest call-digest` over each:");
-		for out in &undigested {
-			eprintln!("  {}", out.display());
-		}
-	}
-}
-
-/// Every capture already on disk, by the recording it states, each held to the shape on the way. A
-/// file is named after the recording rather than after its id, so what is on disk is a question for
-/// the files and not for their names.
-pub fn all(root: &Path) -> Vec<PathBuf> {
-	captured(root).into_values().collect()
 }
 
 fn captured(root: &Path) -> BTreeMap<Rec, PathBuf> {
@@ -239,7 +241,13 @@ fn verbatim(root: &Path, path: &Path, text: &str) {
 		return; // a fresh pull is the platform's text by construction; a re-pull may differ from the last one
 	}
 	let rel = path.strip_prefix(root).expect("captures live under the root");
-	let out = Command::new("git").arg("-C").arg(root).arg("show").arg(format!("HEAD:{}", rel.display())).output().expect("git runs");
+	let out = Command::new("git")
+		.arg("-C")
+		.arg(root)
+		.arg("show")
+		.arg(format!("HEAD:{}", rel.display()))
+		.output()
+		.expect("git runs");
 	if !out.status.success() {
 		return; // not committed yet, so nothing to hold it to
 	}
@@ -251,7 +259,14 @@ fn verbatim(root: &Path, path: &Path, text: &str) {
 	if let Some((i, (a, b))) = now.iter().zip(&then).enumerate().find(|(_, (a, b))| a != b) {
 		panic!("{}: paragraph {} of the transcript is not what was committed —\n  now: {a}\n  was: {b}", path.display(), i + 1);
 	}
-	assert_eq!(now.len(), then.len(), "{}: the transcript has {} paragraphs, and {} were committed", path.display(), now.len(), then.len());
+	assert_eq!(
+		now.len(),
+		then.len(),
+		"{}: the transcript has {} paragraphs, and {} were committed",
+		path.display(),
+		now.len(),
+		then.len()
+	);
 }
 
 /// Hold a capture to `docs/ARCHITECTURE.md`'s "Call captures", returning the recording it states.
@@ -289,7 +304,9 @@ fn check(name: &str, text: &str) -> Rec {
 			continue;
 		};
 		first = false;
-		let (stamp, rest) = header.split_once(&link).unwrap_or_else(|| panic!("{name}: `{line}` is not `### [MM:SS]({}{id}?t=<secs>) <title>`", platform.share()));
+		let (stamp, rest) = header
+			.split_once(&link)
+			.unwrap_or_else(|| panic!("{name}: `{line}` is not `### [MM:SS]({}{id}?t=<secs>) <title>`", platform.share()));
 		let (t, title) = rest.split_once(')').unwrap_or_else(|| panic!("{name}: `{line}` never closes its link"));
 		let t: u64 = t.parse().unwrap_or_else(|e| panic!("{name}: `{line}` links to a second that is not one: {e}"));
 		assert_eq!(secs(stamp), t, "{name}: `{line}` says one time and links to another");
@@ -323,7 +340,13 @@ fn check(name: &str, text: &str) -> Rec {
 /// pullers feed on their own output.
 fn links_in(readme: &Path) -> BTreeMap<Rec, Option<Listed>> {
 	let text = std::fs::read_to_string(readme).unwrap_or_else(|e| panic!("reading {}: {e}", readme.display()));
-	let link_at = |at: usize| text[at..].split_whitespace().next().expect("split yields at least once").trim_end_matches([')', ']', ',', '.', '"', '`', '>']);
+	let link_at = |at: usize| {
+		text[at..]
+			.split_whitespace()
+			.next()
+			.expect("split yields at least once")
+			.trim_end_matches([')', ']', ',', '.', '"', '`', '>'])
+	};
 	let mut found = BTreeMap::new();
 	for platform in Platform::ALL {
 		//LOOP: bounded by the number of occurrences in a finite file
@@ -355,14 +378,22 @@ fn registered(text: &str, at: usize, (platform, id): &Rec) -> Listed {
 	let shape = || panic!("register {} links as `- [<date>](<url>) — <what it is>`, not `{line}`", platform.name());
 	let date = line.split_once("- [").unwrap_or_else(shape).1.split(']').next().expect("split yields at least once");
 	let title = line.split_once(") — ").unwrap_or_else(shape).1.trim();
-	let json = Command::new("yt-dlp").args(["-q", "--no-warnings", "-J"]).arg(format!("{}{id}", platform.share())).output().expect("yt-dlp runs");
+	let json = Command::new("yt-dlp")
+		.args(["-q", "--no-warnings", "-J"])
+		.arg(format!("{}{id}", platform.share()))
+		.output()
+		.expect("yt-dlp runs");
 	assert!(json.status.success(), "yt-dlp could not read {id}: {}", String::from_utf8_lossy(&json.stderr));
 	let meta: serde_json::Value = serde_json::from_slice(&json.stdout).expect("yt-dlp -J prints json");
 	let recorded = match meta["upload_date"].as_str() {
 		Some(d) => format!("{}-{}-{} — uploaded, as {} has it", &d[..4], &d[4..6], &d[6..], platform.name()),
 		None => format!("{date} — first seen, as the registry has it; {} states no date", platform.name()),
 	};
-	Listed { title: title.to_string(), recorded, within: None }
+	Listed {
+		title: title.to_string(),
+		recorded,
+		within: None,
+	}
 }
 
 /// A shared folder's recordings, read off the embeddable view drive serves without a session. What
@@ -383,13 +414,20 @@ fn drive_folder(folder: &str) -> Vec<(String, Listed)> {
 			eprintln!("not a recording, not pulled — {folder_title} / {title} ({mime}): https://drive.google.com/file/d/{id}");
 			continue;
 		}
-		out.push((id, Listed {
-			title,
-			recorded: format!("{} — last modified on drive, which records no other date", drive_date(&modified)),
-			within: Some(format!("<{url}> — {folder_title}")),
-		}));
+		out.push((
+			id,
+			Listed {
+				title,
+				recorded: format!("{} — last modified on drive, which records no other date", drive_date(&modified)),
+				within: Some(format!("<{url}> — {folder_title}")),
+			},
+		));
 	}
-	assert_eq!(page.matches("flip-entry-title").count(), page.matches("class=\"flip-entry\" id=").count(), "{folder}: drive listed entries this did not read");
+	assert_eq!(
+		page.matches("flip-entry-title").count(),
+		page.matches("class=\"flip-entry\" id=").count(),
+		"{folder}: drive listed entries this did not read"
+	);
 	out
 }
 
@@ -603,7 +641,13 @@ fn whisper_phrases(media: &Path) -> (Vec<(f64, String)>, f64) {
 	let model = PathBuf::from(std::env::var("HOME").expect("a user session has HOME")).join(WHISPER_MODEL);
 	assert!(model.exists(), "{} is missing — whisper needs a model to transcribe {}", model.display(), media.display());
 	let probe = |args: &[&str]| {
-		let out = Command::new("ffprobe").args(["-v", "error"]).args(args).args(["-of", "csv=p=0"]).arg(media).output().expect("ffprobe runs");
+		let out = Command::new("ffprobe")
+			.args(["-v", "error"])
+			.args(args)
+			.args(["-of", "csv=p=0"])
+			.arg(media)
+			.output()
+			.expect("ffprobe runs");
 		assert!(out.status.success(), "ffprobe could not read {}: {}", media.display(), String::from_utf8_lossy(&out.stderr));
 		String::from_utf8(out.stdout).expect("ffprobe prints ascii").trim().to_string()
 	};
@@ -619,9 +663,19 @@ fn whisper_phrases(media: &Path) -> (Vec<(f64, String)>, f64) {
 		let status = cmd.status().unwrap_or_else(|e| panic!("running {cmd:?}: {e}"));
 		assert!(status.success(), "{cmd:?} failed: {status}");
 	};
-	run(Command::new("ffmpeg").args(["-v", "error", "-y", "-i"]).arg(media).args(["-vn", "-ar", "16000", "-ac", "1"]).arg(&wav));
+	run(Command::new("ffmpeg")
+		.args(["-v", "error", "-y", "-i"])
+		.arg(media)
+		.args(["-vn", "-ar", "16000", "-ac", "1"])
+		.arg(&wav));
 	eprintln!("  transcribing {} with whisper — minutes per hour of audio", media.display());
-	run(Command::new("whisper-cli").arg("-m").arg(&model).arg("-f").arg(&wav).args(["-np", "-sns", "-oj", "-of"]).arg(&base));
+	run(Command::new("whisper-cli")
+		.arg("-m")
+		.arg(&model)
+		.arg("-f")
+		.arg(&wav)
+		.args(["-np", "-sns", "-oj", "-of"])
+		.arg(&base));
 	let json = std::fs::read_to_string(base.with_extension("json")).expect("whisper-cli -oj writes <of>.json");
 	let parsed: serde_json::Value = serde_json::from_str(&json).expect("whisper-cli writes json");
 	let segments = parsed["transcription"].as_array().expect("whisper json carries `transcription`");
@@ -665,7 +719,9 @@ fn stamp(secs: u64) -> String {
 
 /// `M:SS`, `MM:SS`, `H:MM:SS` or `HH:MM:SS`.
 fn secs(stamp: &str) -> u64 {
-	stamp.split(':').fold(0, |acc, part| acc * 60 + part.parse::<u64>().unwrap_or_else(|e| panic!("`{stamp}` is not a time: {e}")))
+	stamp
+		.split(':')
+		.fold(0, |acc, part| acc * 60 + part.parse::<u64>().unwrap_or_else(|e| panic!("`{stamp}` is not a time: {e}")))
 }
 
 /// A filename that says what the recording is. The id stays in the file, so this one is free to
@@ -743,7 +799,11 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 		match (r.phrases.is_empty(), missing.is_empty()) {
 			(true, _) => "nobody — nothing is said".to_string(),
 			(false, true) => platform.name().to_string(),
-			(false, false) => format!("nothing yet — {} wrote no {}, and `/ingest call-digest` writes them here", platform.name(), missing.join(" and no ")),
+			(false, false) => format!(
+				"nothing yet — {} wrote no {}, and `/ingest call-digest` writes them here",
+				platform.name(),
+				missing.join(" and no ")
+			),
 		},
 		r.within.as_ref().map_or(String::new(), |w| format!("- within: {w}\n")),
 	);

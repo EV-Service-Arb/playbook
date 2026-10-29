@@ -42,7 +42,13 @@ impl Handler for Members {
 			UserEventKind::Reinstated => "active",
 			UserEventKind::Created | UserEventKind::KycChanged | UserEventKind::SessionsRevoked | UserEventKind::RoleChanged | UserEventKind::PermissionsChanged => return Ok(()),
 		};
-		let updated = self.0.db.lock().unwrap().execute("UPDATE members SET status = ?1 WHERE auth_subject = ?2", (status, &event.auth_subject)).unwrap();
+		let updated = self
+			.0
+			.db
+			.lock()
+			.unwrap()
+			.execute("UPDATE members SET status = ?1 WHERE auth_subject = ?2", (status, &event.auth_subject))
+			.unwrap();
 		assert_eq!(updated, 1, "{}: a lifecycle event the engine should have parked until MEMBER_JOINED", event.auth_subject);
 		Ok(())
 	}
@@ -63,7 +69,12 @@ impl Handler for Members {
 				.unwrap();
 			}
 			ScopeEventBody::GrantsChanged { auth_subject, permissions, .. } => {
-				let updated = db.execute("UPDATE members SET permissions = ?1 WHERE auth_subject = ?2", (serde_json::to_string(permissions).unwrap(), auth_subject)).unwrap();
+				let updated = db
+					.execute(
+						"UPDATE members SET permissions = ?1 WHERE auth_subject = ?2",
+						(serde_json::to_string(permissions).unwrap(), auth_subject),
+					)
+					.unwrap();
 				assert_eq!(updated, 1, "{auth_subject}: GRANTS_CHANGED before its MEMBER_JOINED, which is sequence 1 of the same key");
 			}
 			ScopeEventBody::ScopeChanged(_) => {}

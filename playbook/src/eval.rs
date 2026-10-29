@@ -23,6 +23,95 @@ const PANEL_ASSERTION_KEYS: &str = "eval:WGZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZ
 const INFO: [&str; 3] = ["structured/approved", "structured/suggested", "ref"];
 const OUT: &str = "/tmp/playbook-eval";
 
+/// Whether any case scored lower on this tree than on the old side.
+pub fn run(root: &Path, against: Option<String>, info: Option<String>, jobs: NonZeroUsize, ids: Vec<String>) -> bool {
+	assert!(
+		std::env::var_os("CLAUDE_CODE_OAUTH_TOKEN").is_some(),
+		"CLAUDE_CODE_OAUTH_TOKEN is unset; `claude setup-token` makes one"
+	);
+	let cases: Vec<Case> =
+		serde_json::from_str(&std::fs::read_to_string(root.join("playbook/eval.json")).expect("playbook/eval.json is in the tree")).expect("playbook/eval.json is a list of cases");
+	for id in &ids {
+		assert!(cases.iter().any(|c| &c.id == id), "playbook/eval.json has no case {id}");
+	}
+	let cases: Vec<Case> = cases.into_iter().filter(|c| ids.is_empty() || ids.contains(&c.id)).collect();
+
+	// shortcut: untracked files are not in `stash create`, so a new file is evaluated only once committed
+	let new = match git(root, &["stash", "create"]) {
+		stash if stash.is_empty() => git(root, &["rev-parse", "HEAD"]),
+		stash => stash,
+	};
+	let old = against.unwrap_or_else(|| git(root, &["describe", "--tags", "--abbrev=0", "--match", "v*", "--exclude", "*-*", &format!("{new}^")]));
+	let info = info.unwrap_or_else(|| new.clone());
+	let sides = [
+		Side {
+			name: "new",
+			system: new,
+			info: info.clone(),
+		},
+		Side { name: "old", system: old, info },
+	];
+	for s in &sides {
+		println!("{}: system {}, info {}", s.name, s.system, s.info);
+	}
+
+	let out = PathBuf::from(OUT).join(SystemTime::now().duration_since(UNIX_EPOCH).expect("the clock is past 1970").as_secs().to_string());
+	std::fs::create_dir_all(&out).unwrap_or_else(|e| panic!("{}: {e}", out.display()));
+	let bins: Vec<PathBuf> = sides.iter().map(|s| build(root, s)).collect();
+	let servers: Vec<Server> = sides.iter().zip(&bins).map(|(s, bin)| serve(bin, s.name, &cases, &out)).collect();
+
+	let todo: Vec<(usize, usize)> = (0..cases.len()).flat_map(|c| (0..sides.len()).map(move |s| (c, s))).collect();
+	let next = AtomicUsize::new(0);
+	let mut answered: Vec<Vec<Option<Answered>>> = cases.iter().map(|_| sides.iter().map(|_| None).collect()).collect();
+	std::thread::scope(|scope| {
+		let workers: Vec<_> = (0..jobs.get().min(todo.len()))
+			.map(|_| {
+				scope.spawn(|| {
+					let mut done = Vec::new();
+					//LOOP: bounded by `todo`, each index handed out once
+					while let Some(&(c, s)) = todo.get(next.fetch_add(1, Ordering::Relaxed)) {
+						done.push((c, s, ask(&cases[c], &sides[s], &servers[s], &out)));
+					}
+					done
+				})
+			})
+			.collect();
+		for w in workers {
+			for (c, s, a) in w.join().unwrap_or_else(|e| std::panic::resume_unwind(e)) {
+				answered[c][s] = Some(a);
+			}
+		}
+	});
+	let answered: Vec<Vec<Answered>> = answered
+		.into_iter()
+		.map(|a| a.into_iter().map(|a| a.expect("every (case, side) is in `todo`")).collect())
+		.collect();
+	drop(servers);
+
+	let width = cases.iter().fold("case".len(), |w, c| w.max(c.id.len()));
+	println!("\n{:width$}  new  old", "case");
+	let mut regressed = false;
+	for (c, a) in cases.iter().zip(&answered) {
+		let [new, old] = [&a[0], &a[1]].map(|a| a.verdicts.iter().filter(|v| v.met).count());
+		let total = c.expect.len();
+		let mark = match new < old {
+			true => {
+				regressed = true;
+				format!("  ✗ {} {}", out.join(&c.id).join("new.md").display(), out.join(&c.id).join("old.md").display())
+			}
+			false => String::new(),
+		};
+		println!("{:width$}  {new}/{total}  {old}/{total}{mark}", c.id);
+		for (i, e) in c.expect.iter().enumerate() {
+			if !a[0].verdicts[i].met && !a[1].verdicts[i].met {
+				println!("{:width$}    missed on both: {e}", "");
+			}
+		}
+	}
+	println!("\n${:.2}, answers in {}", answered.iter().flatten().map(|a| a.usd).sum::<f64>(), out.display());
+	regressed
+}
+
 #[derive(Deserialize)]
 struct Case {
 	id: String,
@@ -59,84 +148,6 @@ impl Drop for Server {
 			eprintln!("killing the server at {}: {e}", self.url);
 		}
 	}
-}
-
-/// Whether any case scored lower on this tree than on the old side.
-pub fn run(root: &Path, against: Option<String>, info: Option<String>, jobs: NonZeroUsize, ids: Vec<String>) -> bool {
-	assert!(std::env::var_os("CLAUDE_CODE_OAUTH_TOKEN").is_some(), "CLAUDE_CODE_OAUTH_TOKEN is unset; `claude setup-token` makes one");
-	let cases: Vec<Case> = serde_json::from_str(&std::fs::read_to_string(root.join("playbook/eval.json")).expect("playbook/eval.json is in the tree")).expect("playbook/eval.json is a list of cases");
-	for id in &ids {
-		assert!(cases.iter().any(|c| &c.id == id), "playbook/eval.json has no case {id}");
-	}
-	let cases: Vec<Case> = cases.into_iter().filter(|c| ids.is_empty() || ids.contains(&c.id)).collect();
-
-	// shortcut: untracked files are not in `stash create`, so a new file is evaluated only once committed
-	let new = match git(root, &["stash", "create"]) {
-		stash if stash.is_empty() => git(root, &["rev-parse", "HEAD"]),
-		stash => stash,
-	};
-	let old = against.unwrap_or_else(|| git(root, &["describe", "--tags", "--abbrev=0", "--match", "v*", "--exclude", "*-*", &format!("{new}^")]));
-	let info = info.unwrap_or_else(|| new.clone());
-	let sides = [
-		Side { name: "new", system: new, info: info.clone() },
-		Side { name: "old", system: old, info },
-	];
-	for s in &sides {
-		println!("{}: system {}, info {}", s.name, s.system, s.info);
-	}
-
-	let out = PathBuf::from(OUT).join(SystemTime::now().duration_since(UNIX_EPOCH).expect("the clock is past 1970").as_secs().to_string());
-	std::fs::create_dir_all(&out).unwrap_or_else(|e| panic!("{}: {e}", out.display()));
-	let bins: Vec<PathBuf> = sides.iter().map(|s| build(root, s)).collect();
-	let servers: Vec<Server> = sides.iter().zip(&bins).map(|(s, bin)| serve(bin, s.name, &cases, &out)).collect();
-
-	let todo: Vec<(usize, usize)> = (0..cases.len()).flat_map(|c| (0..sides.len()).map(move |s| (c, s))).collect();
-	let next = AtomicUsize::new(0);
-	let mut answered: Vec<Vec<Option<Answered>>> = cases.iter().map(|_| sides.iter().map(|_| None).collect()).collect();
-	std::thread::scope(|scope| {
-		let workers: Vec<_> = (0..jobs.get().min(todo.len()))
-			.map(|_| {
-				scope.spawn(|| {
-					let mut done = Vec::new();
-					//LOOP: bounded by `todo`, each index handed out once
-					while let Some(&(c, s)) = todo.get(next.fetch_add(1, Ordering::Relaxed)) {
-						done.push((c, s, ask(&cases[c], &sides[s], &servers[s], &out)));
-					}
-					done
-				})
-			})
-			.collect();
-		for w in workers {
-			for (c, s, a) in w.join().unwrap_or_else(|e| std::panic::resume_unwind(e)) {
-				answered[c][s] = Some(a);
-			}
-		}
-	});
-	let answered: Vec<Vec<Answered>> = answered.into_iter().map(|a| a.into_iter().map(|a| a.expect("every (case, side) is in `todo`")).collect()).collect();
-	drop(servers);
-
-	let width = cases.iter().fold("case".len(), |w, c| w.max(c.id.len()));
-	println!("\n{:width$}  new  old", "case");
-	let mut regressed = false;
-	for (c, a) in cases.iter().zip(&answered) {
-		let [new, old] = [&a[0], &a[1]].map(|a| a.verdicts.iter().filter(|v| v.met).count());
-		let total = c.expect.len();
-		let mark = match new < old {
-			true => {
-				regressed = true;
-				format!("  ✗ {} {}", out.join(&c.id).join("new.md").display(), out.join(&c.id).join("old.md").display())
-			}
-			false => String::new(),
-		};
-		println!("{:width$}  {new}/{total}  {old}/{total}{mark}", c.id);
-		for (i, e) in c.expect.iter().enumerate() {
-			if !a[0].verdicts[i].met && !a[1].verdicts[i].met {
-				println!("{:width$}    missed on both: {e}", "");
-			}
-		}
-	}
-	println!("\n${:.2}, answers in {}", answered.iter().flatten().map(|a| a.usd).sum::<f64>(), out.display());
-	regressed
 }
 
 /// `target/eval/<side>/`: the system rev's tree with the info rev's corpus in it, built. Returns the binary.
@@ -177,7 +188,12 @@ fn extract(root: &Path, rev: &str, dir: &Path, paths: &[&str]) {
 		.stdout(Stdio::piped())
 		.spawn()
 		.expect("git runs");
-	let tar = Command::new("tar").arg("-x").current_dir(dir).stdin(archive.stdout.take().expect("piped")).status().expect("tar runs");
+	let tar = Command::new("tar")
+		.arg("-x")
+		.current_dir(dir)
+		.stdin(archive.stdout.take().expect("piped"))
+		.status()
+		.expect("tar runs");
 	assert!(archive.wait().expect("git was spawned").success() && tar.success(), "extracting {rev} into {}", dir.display());
 }
 
@@ -238,17 +254,22 @@ fn token(c: &Case) -> String {
 fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 	let cfg = |role: &str| out.join(".claude").join(format!("{}-{}-{role}", c.id, side.name));
 	let mcp = json!({ "mcpServers": { "service-arb": { "type": "http", "url": server.url, "headers": { "Authorization": format!("Bearer {}", token(c)) } } } });
-	let answer = claude(&cfg("answer"), out, &c.question, &[
-		"--model",
-		ANSWER_MODEL,
-		"--strict-mcp-config",
-		"--mcp-config",
-		&mcp.to_string(),
-		"--tools",
-		"",
-		"--allowedTools",
-		"mcp__service-arb",
-	]);
+	let answer = claude(
+		&cfg("answer"),
+		out,
+		&c.question,
+		&[
+			"--model",
+			ANSWER_MODEL,
+			"--strict-mcp-config",
+			"--mcp-config",
+			&mcp.to_string(),
+			"--tools",
+			"",
+			"--allowedTools",
+			"mcp__service-arb",
+		],
+	);
 	let text = answer["result"].as_str().expect("a result is a string");
 
 	let expectations: String = c.expect.iter().map(|e| format!("- {e}\n")).collect();
@@ -263,10 +284,21 @@ fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 	});
 	let judged = claude(&cfg("judge"), out, &prompt, &["--model", JUDGE_MODEL, "--tools", "", "--json-schema", &schema.to_string()]);
 	let verdicts: Vec<Verdict> = serde_json::from_value(judged["structured_output"]["verdicts"].clone()).expect("the schema holds the judge to this shape");
-	assert_eq!(verdicts.len(), c.expect.len(), "{} {}: the judge returned a verdict count unlike the expectations'", c.id, side.name);
+	assert_eq!(
+		verdicts.len(),
+		c.expect.len(),
+		"{} {}: the judge returned a verdict count unlike the expectations'",
+		c.id,
+		side.name
+	);
 
 	let met = verdicts.iter().filter(|v| v.met).count();
-	let lines: String = c.expect.iter().zip(&verdicts).map(|(e, v)| format!("- {} {e} — {}\n", if v.met { "✓" } else { "✗" }, v.why)).collect();
+	let lines: String = c
+		.expect
+		.iter()
+		.zip(&verdicts)
+		.map(|(e, v)| format!("- {} {e} — {}\n", if v.met { "✓" } else { "✗" }, v.why))
+		.collect();
 	let md = format!(
 		"# {} ({}): {}\n\n- system: {} · info: {}\n- score: {met}/{}\n\n## expectations\n\n{lines}\n## answer\n\n{text}\n",
 		c.id,
@@ -281,7 +313,10 @@ fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 	std::fs::write(dir.join(format!("{}.md", side.name)), md).expect("the run dir was just made");
 
 	let usd = |v: &Value| v["total_cost_usd"].as_f64().expect("claude reports its cost");
-	Answered { usd: usd(&answer) + usd(&judged), verdicts }
+	Answered {
+		usd: usd(&answer) + usd(&judged),
+		verdicts,
+	}
 }
 
 /// `claude -p` with nothing of this machine's setup: no CLAUDE.md, skills, hooks, plugins or MCP

@@ -6,14 +6,14 @@ resolver = "3"
 edition = "2024"
 
 [workspace.dependencies]
-async-trait = "0.1"
 ask_llm = { version = "^3.10.2", default-features = false }
+async-trait = "0.1"
 axum = { version = "0.8.9", features = ["form", "query"] }
 base64 = "0.22"
-evconcierge_projection = { version = "0.5.0", features = ["sqlite"] }
 clap = { version = "^4.6.7", features = ["derive"] }
 ev_lib = { version = "0.25.0", default-features = false, features = ["error_monitoring"] }
 ev_lib_classes = "0.14.0"
+evconcierge_projection = { version = "0.5.0", features = ["sqlite"] }
 getrandom = "0.4.3"
 insta = "1"
 jiff = "0.2"
@@ -22,16 +22,22 @@ regex = "1.13.1"
 regex-syntax = "0.8.11"
 reqwest = { version = "0.13.5", default-features = false, features = ["rustls", "json", "form"] }
 rmcp = { version = "3.4.1", features = ["server", "macros", "transport-streamable-http-server"] }
-sa_auth = { git = "https://github.com/Service-Arb/panel", rev = "08ef71573c1c3eddaece8f5327cb3e76cbe7b761" }
 rusqlite = { version = "0.39", features = ["bundled"] } # shortcut: held below 0.40 because sqlx-sqlite 0.9 (evconcierge_projection's store) needs libsqlite3-sys <0.38 and both link sqlite3; bump once sqlx-sqlite admits 0.38
+sa_auth = { git = "https://github.com/Service-Arb/panel", rev = "08ef71573c1c3eddaece8f5327cb3e76cbe7b761" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sha2 = "0.10"
-sqlx = { version = "0.9", default-features = false, features = ["sqlite", "runtime-tokio"] }
 social_networks_adapters = { git = "https://github.com/valeratrades/social_networks", rev = "4d66c85e2630d8b377ed6fa4224e092208aec903", features = ["youtube-reads"] } # past 0.5 it is not on crates.io; the first rev on ask_llm 3.10
+sqlx = { version = "0.9", default-features = false, features = ["sqlite", "runtime-tokio"] }
 tailwind_fuse = "0.3"
 tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "signal", "time"] }
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 ureq = "3"
 v_utils = { version = "^2.23.0", features = ["cli", "xdg"] }
+
+[workspace.lints.cargo]
+non_kebab_case_bins = "allow"
+
+[workspace.lints.rust]
+unused_features = "allow"

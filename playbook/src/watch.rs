@@ -17,15 +17,6 @@ const WORKERS: usize = 4;
 /// The line of `ref/README.md` this rewrites with what watching has cost so far.
 const TOTALS: &str = "- what the recordings show, as `playbook watch` read it:";
 
-/// A capture, as much of it as watching needs.
-struct Capture {
-	title: String,
-	source: String,
-	summary: Option<String>,
-	/// `(start secs, header's title, text under it)`
-	chapters: Vec<(u64, String, String)>,
-}
-
 /// Every capture under `ref/` where `captures` is empty.
 pub fn run(root: &Path, pick: Pick, captures: &[PathBuf]) {
 	let captures: Vec<PathBuf> = match captures.is_empty() {
@@ -44,7 +35,9 @@ pub fn run(root: &Path, pick: Pick, captures: &[PathBuf]) {
 				let rt = tokio::runtime::Builder::new_current_thread().enable_all().build().expect("a current-thread runtime builds");
 				//LOOP: bounded by the queue, which only drains
 				loop {
-					let Some((path, media)) = queue.lock().expect("no worker panics holding it").next() else { break };
+					let Some((path, media)) = queue.lock().expect("no worker panics holding it").next() else {
+						break;
+					};
 					if let Some(cost) = rt.block_on(watch(&path, &media, pick)) {
 						let mut spent = spent.lock().expect("no worker panics holding it");
 						*spent += cost;
@@ -55,6 +48,15 @@ pub fn run(root: &Path, pick: Pick, captures: &[PathBuf]) {
 		}
 	});
 	totals(root);
+}
+
+/// A capture, as much of it as watching needs.
+struct Capture {
+	title: String,
+	source: String,
+	summary: Option<String>,
+	/// `(start secs, header's title, text under it)`
+	chapters: Vec<(u64, String, String)>,
 }
 
 /// Watch one recording into its `shown.md`, returning what it cost; `None` for one with no picture.
@@ -72,7 +74,16 @@ async fn watch(path: &Path, media: &Path, pick: Pick) -> Option<f64> {
 	let spec = Watch {
 		title: capture.title.clone(),
 		speech: match pick {
-			Pick::Changes => Some(capture.chapters.iter().map(|(secs, title, text)| Said { secs: *secs as f64, text: format!("{title}\n{text}") }).collect()),
+			Pick::Changes => Some(
+				capture
+					.chapters
+					.iter()
+					.map(|(secs, title, text)| Said {
+						secs: *secs as f64,
+						text: format!("{title}\n{text}"),
+					})
+					.collect(),
+			),
 			Pick::Likely { .. } => None, // the pick places a span by each line's second, and a capture stamps only its chapters, so whisper times them
 		},
 		footage,
@@ -80,7 +91,11 @@ async fn watch(path: &Path, media: &Path, pick: Pick) -> Option<f64> {
 		about: capture.summary.clone(),
 		frames: kept.join("frames"),
 	};
-	let watched = Client::default().model(Model::Video).watch(media, spec).await.unwrap_or_else(|e| panic!("{}: {e:?}", path.display()));
+	let watched = Client::default()
+		.model(Model::Video)
+		.watch(media, spec)
+		.await
+		.unwrap_or_else(|e| panic!("{}: {e:?}", path.display()));
 	let watched_by = match (&watched.model, pick, &watched.picked_by) {
 		(None, _, None) => {
 			eprintln!("audio only, nothing shown — {}", path.display());
@@ -122,8 +137,16 @@ async fn watch(path: &Path, media: &Path, pick: Pick) -> Option<f64> {
 
 fn read(path: &Path) -> Capture {
 	let text = std::fs::read_to_string(path).unwrap_or_else(|e| panic!("reading {}: {e}", path.display()));
-	let field = |key: &str| text.lines().find_map(|l| l.strip_prefix(&format!("- {key}: "))).unwrap_or_else(|| panic!("{} states no `{key}:`", path.display()));
-	let title = text.lines().next().and_then(|l| l.strip_prefix("# ")).unwrap_or_else(|| panic!("{} opens with no title", path.display()));
+	let field = |key: &str| {
+		text.lines()
+			.find_map(|l| l.strip_prefix(&format!("- {key}: ")))
+			.unwrap_or_else(|| panic!("{} states no `{key}:`", path.display()))
+	};
+	let title = text
+		.lines()
+		.next()
+		.and_then(|l| l.strip_prefix("# "))
+		.unwrap_or_else(|| panic!("{} opens with no title", path.display()));
 	let transcript = text.split_once("\n## transcript\n").unwrap_or_else(|| panic!("{} has no `## transcript`", path.display())).1;
 	let mut chapters: Vec<(u64, String, String)> = Vec::new();
 	//LOOP: bounded by the lines of a finite file
@@ -142,12 +165,21 @@ fn read(path: &Path) -> Capture {
 				},
 		}
 	}
-	assert!(chapters.windows(2).all(|w| w[0].0 < w[1].0), "{}: chapters out of order — run `playbook check calls`", path.display());
+	assert!(
+		chapters.windows(2).all(|w| w[0].0 < w[1].0),
+		"{}: chapters out of order — run `playbook check calls`",
+		path.display()
+	);
 	let summary = text
 		.split_once("\n## summary\n")
 		.map(|(_, rest)| rest.split("\n## ").next().expect("split yields at least once").trim().to_string())
 		.filter(|s| !s.is_empty());
-	Capture { title: title.to_string(), source: field("source").trim_matches(['<', '>']).to_string(), summary, chapters }
+	Capture {
+		title: title.to_string(),
+		source: field("source").trim_matches(['<', '>']).to_string(),
+		summary,
+		chapters,
+	}
 }
 
 /// `MM:SS` under an hour, `H:MM:SS` past it, as `call` writes a chapter's start.
@@ -167,13 +199,19 @@ fn totals(root: &Path) {
 			continue;
 		}
 		let text = std::fs::read_to_string(&shown).unwrap_or_else(|e| panic!("reading {}: {e}", shown.display()));
-		let cost = text.lines().find_map(|l| l.strip_prefix("- cost: $")).unwrap_or_else(|| panic!("{} states no cost", shown.display()));
+		let cost = text
+			.lines()
+			.find_map(|l| l.strip_prefix("- cost: $"))
+			.unwrap_or_else(|| panic!("{} states no cost", shown.display()));
 		usd += cost.trim().parse::<f64>().unwrap_or_else(|e| panic!("{}: `{cost}`: {e}", shown.display()));
 		n += 1;
 	}
 	let readme = root.join("ref/README.md");
 	let text = std::fs::read_to_string(&readme).expect("ref/README.md is the registry");
-	let line = text.lines().find(|l| l.starts_with(TOTALS)).unwrap_or_else(|| panic!("ref/README.md has no `{TOTALS}` line to keep the totals on"));
+	let line = text
+		.lines()
+		.find(|l| l.starts_with(TOTALS))
+		.unwrap_or_else(|| panic!("ref/README.md has no `{TOTALS}` line to keep the totals on"));
 	let now = format!("{TOTALS} {n} recordings, ${usd:.2} in all");
 	std::fs::write(&readme, text.replace(line, &now)).expect("ref/README.md is writable");
 	eprintln!("{now}");

@@ -149,10 +149,15 @@ fn page(status: StatusCode, title: &str, base: &str, body: &str) -> Response {
 /// The client's mark beside Service-Arb's; Service-Arb's alone where the client is not known.
 fn marks(client: Option<(&str, Option<&str>)>) -> String {
 	let sa = r#"<span class="bg-brand flex size-12 items-center justify-center rounded-xl border border-border font-serif text-[22px] font-semibold">SA</span>"#;
-	let Some((name, logo)) = client else { return format!(r#"<div class="flex items-center">{sa}</div>"#) };
+	let Some((name, logo)) = client else {
+		return format!(r#"<div class="flex items-center">{sa}</div>"#);
+	};
 	let mark = match logo {
 		Some(src) => format!(r#"<img class="size-12 rounded-xl object-cover" src="{}" alt="">"#, escape(src)),
-		None => format!(r#"<span class="bg-muted flex size-12 items-center justify-center rounded-xl text-[22px] font-semibold">{}</span>"#, escape(&initial(name))),
+		None => format!(
+			r#"<span class="bg-muted flex size-12 items-center justify-center rounded-xl text-[22px] font-semibold">{}</span>"#,
+			escape(&initial(name))
+		),
 	};
 	format!(r#"<div class="flex items-center gap-3">{mark}<span class="text-ink-soft text-xs" aria-hidden="true">• • •</span>{sa}</div>"#)
 }

@@ -58,7 +58,11 @@ pub struct Playbook {
 #[tool_router]
 impl Playbook {
 	pub fn new(state: Arc<State>) -> Self {
-		Self { state, tool_router: Self::tool_router(), prompt_router: Self::prompt_router() }
+		Self {
+			state,
+			tool_router: Self::tool_router(),
+			prompt_router: Self::prompt_router(),
+		}
 	}
 
 	#[tool(description = SEARCH_DESCRIPTION, annotations(read_only_hint = true, open_world_hint = false))]

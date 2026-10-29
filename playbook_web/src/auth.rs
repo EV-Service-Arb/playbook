@@ -23,15 +23,15 @@ use crate::{
 	sync,
 };
 
-type S = Axum<Arc<State>>;
-
 const CODE_TTL: i64 = 60;
+
 const ACCESS_TTL: i64 = 60 * 60;
 const REFRESH_TTL: i64 = 30 * 24 * 60 * 60; // from authorize: rotation does not extend it
 const SYNC_STALE_AFTER: i64 = 5 * 60; // a refresh never rests on concierge's word older than this
 const CONSENT_TTL: i64 = 10 * 60;
 const DAY: i64 = 24 * 60 * 60;
 const CIMD_MAX_BYTES: usize = 64 * 1024;
+type S = Axum<Arc<State>>;
 
 /// `base` is `PUBLIC_URL`'s path; the metadata sits where RFC 8414 and 9728 insert it
 pub(crate) fn routes(base: &str) -> Router<Arc<State>> {
@@ -71,7 +71,12 @@ pub(crate) async fn guard(Axum(state): S, mut req: Request, next: Next) -> Respo
 		.unwrap();
 	if spent >= state.config.daily_bytes {
 		let retry = (today + DAY - now()).to_string();
-		return (StatusCode::TOO_MANY_REQUESTS, [(header::RETRY_AFTER, retry)], format!("{email} has used today's {} bytes; the budget resets at 00:00 UTC", state.config.daily_bytes)).into_response();
+		return (
+			StatusCode::TOO_MANY_REQUESTS,
+			[(header::RETRY_AFTER, retry)],
+			format!("{email} has used today's {} bytes; the budget resets at 00:00 UTC", state.config.daily_bytes),
+		)
+			.into_response();
 	}
 	req.extensions_mut().insert(Member { sub, email });
 	next.run(req).await
@@ -246,7 +251,12 @@ async fn consent(Axum(state): S, method: Method, uri: Uri, headers: HeaderMap, F
 		Err(r) => return r,
 	};
 	if !member.permissions.may(sa_auth::Mcp::Use) {
-		return pages::trouble(StatusCode::FORBIDDEN, Trouble::NoAccess, &state.config.public_url, &format!("{} lacks {}", member.email, sa_auth::Mcp::Use.as_str()));
+		return pages::trouble(
+			StatusCode::FORBIDDEN,
+			Trouble::NoAccess,
+			&state.config.public_url,
+			&format!("{} lacks {}", member.email, sa_auth::Mcp::Use.as_str()),
+		);
 	}
 	let db = state.db.lock().unwrap();
 	let pending: Option<(String, String, String, Option<String>)> = db
@@ -258,7 +268,12 @@ async fn consent(Axum(state): S, method: Method, uri: Uri, headers: HeaderMap, F
 		.optional()
 		.unwrap();
 	let Some((client_id, redirect_uri, challenge, oauth_state)) = pending else {
-		return pages::trouble(StatusCode::BAD_REQUEST, Trouble::Expired, &state.config.public_url, "the consent form is spent, expired, or someone else's");
+		return pages::trouble(
+			StatusCode::BAD_REQUEST,
+			Trouble::Expired,
+			&state.config.public_url,
+			"the consent form is spent, expired, or someone else's",
+		);
 	};
 	let code = random();
 	db.execute(
@@ -351,21 +366,24 @@ async fn token(Axum(state): S, Form(f): Form<TokenForm>) -> Response {
 			};
 			let db = state.db.lock().unwrap();
 			let row: Option<(String, String, String, String, String)> = db
-				.query_row("SELECT client_id, redirect_uri, challenge, sub, email FROM codes WHERE hash = ?1 AND expires > ?2", (hash(code), now()), |r| {
-					Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?, r.get(4)?))
-				})
+				.query_row(
+					"SELECT client_id, redirect_uri, challenge, sub, email FROM codes WHERE hash = ?1 AND expires > ?2",
+					(hash(code), now()),
+					|r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?, r.get(4)?)),
+				)
 				.optional()
 				.unwrap();
 			db.execute("DELETE FROM codes WHERE hash = ?1 OR expires <= ?2", (hash(code), now())).unwrap();
 			match row {
-				Some((client, redirect, challenge, sub, email))
-					if client == f.client_id && &redirect == redirect_uri && URL_SAFE_NO_PAD.encode(Sha256::digest(verifier)) == challenge =>
+				Some((client, redirect, challenge, sub, email)) if client == f.client_id && &redirect == redirect_uri && URL_SAFE_NO_PAD.encode(Sha256::digest(verifier)) == challenge =>
 					(sub, email, now() + REFRESH_TTL),
 				_ => return oauth_error("invalid_grant", "the code is spent, expired, or not this client's"),
 			}
 		}
 		"refresh_token" => {
-			let Some(refresh) = &f.refresh_token else { return oauth_error("invalid_request", "refresh_token") };
+			let Some(refresh) = &f.refresh_token else {
+				return oauth_error("invalid_request", "refresh_token");
+			};
 			let db = state.db.lock().unwrap();
 			let row: Option<(String, String, i64)> = db
 				.query_row(
@@ -397,9 +415,7 @@ async fn token(Axum(state): S, Form(f): Form<TokenForm>) -> Response {
 				.unwrap();
 			let may_use = match member {
 				Some((_, _, true)) => return unavailable("concierge's word on this member is held back; the refresh token is kept"),
-				Some((status, permissions, false)) => {
-					status == "active" && serde_json::from_str::<sa_auth::PermissionSet>(&permissions).expect("written by sync.rs").may(sa_auth::Mcp::Use)
-				}
+				Some((status, permissions, false)) => status == "active" && serde_json::from_str::<sa_auth::PermissionSet>(&permissions).expect("written by sync.rs").may(sa_auth::Mcp::Use),
 				None => false,
 			};
 			if !may_use {
@@ -416,7 +432,8 @@ async fn token(Axum(state): S, Form(f): Form<TokenForm>) -> Response {
 		let db = state.db.lock().unwrap();
 		db.execute("DELETE FROM tokens WHERE expires <= ?1", [now()]).unwrap();
 		let insert = "INSERT INTO tokens (hash, kind, sub, email, client_id, expires) VALUES (?1, ?2, ?3, ?4, ?5, ?6)";
-		db.execute(insert, (hash(&access), "access", &sub, &email, &f.client_id, (now() + ACCESS_TTL).min(chain_ends))).unwrap();
+		db.execute(insert, (hash(&access), "access", &sub, &email, &f.client_id, (now() + ACCESS_TTL).min(chain_ends)))
+			.unwrap();
 		db.execute(insert, (hash(&refresh), "refresh", &sub, &email, &f.client_id, chain_ends)).unwrap();
 	}
 	let body = json!({ "access_token": access, "token_type": "Bearer", "expires_in": ACCESS_TTL.min(chain_ends - now()), "refresh_token": refresh });

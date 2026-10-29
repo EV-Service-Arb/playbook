@@ -1,3 +1,4 @@
+#![feature(default_field_values)]
 use std::{
 	path::{Path, PathBuf},
 	process::Command,
@@ -156,15 +157,6 @@ impl From<Frames> for Pick {
 	}
 }
 
-/// The fields of a capture this reads.
-struct Capture {
-	path: PathBuf,
-	source: String,
-	minutes: f64,
-	transcribed_by: String,
-	read_by: String,
-}
-
 fn main() {
 	let root = repo_root();
 	let rt = || tokio::runtime::Runtime::new().expect("a runtime builds");
@@ -175,7 +167,9 @@ fn main() {
 			Source::Chatgpt { urls } => chatgpt::pull(&root, &urls),
 			Source::Skool => rt().block_on(skool::pull(&root)),
 			Source::Yt { step: Yt::Sync } => rt().block_on(yt::sync(&root)),
-			Source::Yt { step: Yt::Transcribe { frames, urls } } => rt().block_on(yt::transcribe(&root, frames.into(), &urls)),
+			Source::Yt {
+				step: Yt::Transcribe { frames, urls },
+			} => rt().block_on(yt::transcribe(&root, frames.into(), &urls)),
 		},
 		Cmd::Check { what: Check::Calls } => eprintln!("{} call captures hold their shape", call::all(&root).len()),
 		Cmd::Check { what: Check::Cites } => cite_check::run(&root),
@@ -191,6 +185,15 @@ fn main() {
 				std::process::exit(1);
 			},
 	}
+}
+
+/// The fields of a capture this reads.
+struct Capture {
+	path: PathBuf,
+	source: String,
+	minutes: f64,
+	transcribed_by: String,
+	read_by: String,
 }
 
 fn re_transcribe(root: &Path, what: What) {
@@ -210,7 +213,10 @@ fn re_transcribe(root: &Path, what: What) {
 		.map(|p| read(p))
 		.collect();
 	let media: Vec<Option<PathBuf>> = match pick {
-		Some(_) => call::recordings(root, &captures.iter().map(|c| c.path.clone()).collect::<Vec<_>>()).into_iter().map(Some).collect(),
+		Some(_) => call::recordings(root, &captures.iter().map(|c| c.path.clone()).collect::<Vec<_>>())
+			.into_iter()
+			.map(Some)
+			.collect(),
 		None => captures.iter().map(|_| None).collect(),
 	};
 
@@ -320,7 +326,9 @@ fn read(path: &Path) -> Capture {
 			.unwrap_or_else(|| panic!("{} states no `{key}:` — run `playbook check calls`", path.display()))
 			.to_string()
 	};
-	let secs = field("duration").split(':').fold(0u64, |acc, p| acc * 60 + p.parse::<u64>().unwrap_or_else(|e| panic!("{}: duration: {e}", path.display())));
+	let secs = field("duration")
+		.split(':')
+		.fold(0u64, |acc, p| acc * 60 + p.parse::<u64>().unwrap_or_else(|e| panic!("{}: duration: {e}", path.display())));
 	Capture {
 		path: path.to_path_buf(),
 		source: field("source").trim_matches(['<', '>']).to_string(),

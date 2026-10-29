@@ -1,4 +1,3 @@
-
 //! Holds every block under `structured/` to `structured/README.md`: each citation resolves to a
 //! capture in `ref/`, carries that capture's date, stays inside its duration, and sits in its run by
 //! effective reliability; no bullet goes unbacked; a `resolved:` line links a record that exists.
@@ -16,18 +15,6 @@ const ISSUE_COMMENT: &str = "https://github.com/Service-Arb/playbook/issues/";
 const SECTIONS: [&str; 3] = ["## info", "## facts", "## plays"];
 const DECAY_DAYS: f64 = 180.;
 const WORST: f64 = 10.;
-
-/// What a capture in `ref/` says about itself.
-struct Capture {
-	date: Date,
-	duration: Option<u64>,
-}
-
-struct Citation {
-	line: usize,
-	base: u8,
-	date: Date,
-}
 
 pub fn run(root: &Path) {
 	let today = jiff::Zoned::now().date();
@@ -54,6 +41,18 @@ pub fn run(root: &Path) {
 		std::process::exit(1);
 	}
 	eprintln!("{} blocks hold their citations", blocks.len());
+}
+
+/// What a capture in `ref/` says about itself.
+struct Capture {
+	date: Date,
+	duration: Option<u64>,
+}
+
+struct Citation {
+	line: usize,
+	base: u8,
+	date: Date,
 }
 
 fn check(text: &str, dir: &Path, captures: &BTreeMap<String, Capture>, today: Date) -> Vec<(usize, String)> {
@@ -198,7 +197,10 @@ fn sorted(run: &[Citation], today: Date, errors: &mut Vec<(usize, String)>) {
 
 /// The identity a url shares with the `source:` of its capture.
 fn source_key(url: &str) -> Option<String> {
-	let after = |prefix: &str| url.split_once(prefix).map(|(_, rest)| rest.split(['?', '#', '&', '/']).next().expect("split yields one").to_string());
+	let after = |prefix: &str| {
+		url.split_once(prefix)
+			.map(|(_, rest)| rest.split(['?', '#', '&', '/']).next().expect("split yields one").to_string())
+	};
 	if let Some(id) = after("loom.com/share/") {
 		return Some(format!("loom:{id}"));
 	}
@@ -263,4 +265,3 @@ fn md_files(dir: &Path, out: &mut Vec<PathBuf>) {
 	}
 	out.sort();
 }
-

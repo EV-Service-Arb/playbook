@@ -1,4 +1,3 @@
-
 //! `sync` lists every video of every channel `ref/README.md` links, in `ref/youtube/README.md`, under
 //! a header per person: the link text names their directory. `transcribe` captures videos that list
 //! has into `ref/youtube/<who>/<id>.md`, ticking each as it goes.
@@ -32,24 +31,6 @@ const BLOCK: f64 = 30.;
 const SUMMARY: &str = "SUMMARY";
 const SECTIONS: &str = "SECTIONS";
 
-struct Index {
-	checked: String,
-	sections: Vec<Section>,
-}
-
-struct Section {
-	who: String,
-	channel: String,
-	entries: Vec<Entry>,
-}
-
-#[derive(Clone)]
-struct Entry {
-	id: String,
-	uploaded: Date,
-	title: String,
-}
-
 pub async fn sync(root: &Path) {
 	let channels = channels_in(&root.join("ref/README.md"));
 	assert!(!channels.is_empty(), "no youtube channel linked in ref/README.md — nothing to sync");
@@ -66,21 +47,41 @@ pub async fn sync(root: &Path) {
 		eprintln!("{who}: {} video(s), {} not dated yet", ids.len(), unknown.len());
 		let mut entries: Vec<Entry> = ids.iter().filter_map(|id| known.get(id).cloned()).collect();
 		let listed = youtube::listing(&unknown).await.unwrap_or_else(|e| panic!("dating {unknown:?}: {e:?}"));
-		entries.extend(listed.into_iter().map(|l| Entry { id: l.id, uploaded: l.uploaded, title: l.title }));
+		entries.extend(listed.into_iter().map(|l| Entry {
+			id: l.id,
+			uploaded: l.uploaded,
+			title: l.title,
+		}));
 		entries.sort_by(|a, b| b.uploaded.cmp(&a.uploaded).then(a.id.cmp(&b.id)));
 		sections.push(Section { who, channel, entries });
 	}
-	write(root, &Index { checked: jiff::Zoned::now().date().to_string(), sections });
+	write(
+		root,
+		&Index {
+			checked: jiff::Zoned::now().date().to_string(),
+			sections,
+		},
+	);
 }
 
 pub async fn transcribe(root: &Path, pick: Pick, urls: &[String]) {
 	let only: Vec<&str> = urls
 		.iter()
-		.map(|u| u.split_once("watch?v=").unwrap_or_else(|| panic!("`{u}` is not a youtube watch link")).1.split('&').next().expect("split yields at least one"))
+		.map(|u| {
+			u.split_once("watch?v=")
+				.unwrap_or_else(|| panic!("`{u}` is not a youtube watch link"))
+				.1
+				.split('&')
+				.next()
+				.expect("split yields at least one")
+		})
 		.collect();
 	let index = parse(root);
 	for id in &only {
-		assert!(index.sections.iter().any(|s| s.entries.iter().any(|e| &e.id == id)), "{id} is in no channel `sync` listed — the index is the registry");
+		assert!(
+			index.sections.iter().any(|s| s.entries.iter().any(|e| &e.id == id)),
+			"{id} is in no channel `sync` listed — the index is the registry"
+		);
 	}
 	let tmp = std::env::temp_dir().join("yt-pull");
 	let mut mute = Vec::new();
@@ -110,6 +111,23 @@ pub async fn transcribe(root: &Path, pick: Pick, urls: &[String]) {
 	}
 }
 
+struct Index {
+	checked: String,
+	sections: Vec<Section>,
+}
+
+struct Section {
+	who: String,
+	channel: String,
+	entries: Vec<Entry>,
+}
+
+#[derive(Clone)]
+struct Entry {
+	id: String,
+	uploaded: Date,
+	title: String,
+}
 
 /// `[<who>](<channel>)` for every youtube link in the registry. The registry is `ref/README.md` and
 /// nothing else — a capture quotes its own source URL, and a transcript quotes every link that was
@@ -151,7 +169,10 @@ fn write(root: &Path, index: &Index) {
 		.filter(|p| p.exists())
 		.map(|p| {
 			let text = std::fs::read_to_string(&p).unwrap_or_else(|e| panic!("reading {}: {e}", p.display()));
-			let cost = text.lines().find_map(|l| l.strip_prefix("- cost: $")).unwrap_or_else(|| panic!("{} states no cost — delete it to re-pull", p.display()));
+			let cost = text
+				.lines()
+				.find_map(|l| l.strip_prefix("- cost: $"))
+				.unwrap_or_else(|| panic!("{} states no cost — delete it to re-pull", p.display()));
 			cost.trim().parse::<f64>().unwrap_or_else(|e| panic!("{}: `{cost}`: {e}", p.display()))
 		})
 		.fold((0f64, 0usize), |(usd, n), c| (usd + c, n + 1));
@@ -170,9 +191,7 @@ fn write(root: &Path, index: &Index) {
 		 A line per video, newest first: the day youtube says it was uploaded, linked to the video, then\n\
 		 its title — linked to the capture once there is one. `playbook pull yt transcribe` captures\n\
 		 every unticked line.\n",
-		index.checked,
-		spent.0,
-		spent.1,
+		index.checked, spent.0, spent.1,
 	);
 	for Section { who, channel, entries } in &index.sections {
 		out.push_str(&format!("\n## {who} — <{channel}>\n\n"));
@@ -195,8 +214,14 @@ fn parse(root: &Path) -> Index {
 		if let Some(day) = line.strip_prefix("- checked: ") {
 			checked = Some(day.to_string());
 		} else if let Some(header) = line.strip_prefix("## ") {
-			let (who, channel) = header.split_once(" — ").unwrap_or_else(|| panic!("{INDEX}: a header is `<who> — <channel>`, and reads {header:?}"));
-			sections.push(Section { who: who.to_string(), channel: channel.trim_matches(['<', '>']).to_string(), entries: Vec::new() });
+			let (who, channel) = header
+				.split_once(" — ")
+				.unwrap_or_else(|| panic!("{INDEX}: a header is `<who> — <channel>`, and reads {header:?}"));
+			sections.push(Section {
+				who: who.to_string(),
+				channel: channel.trim_matches(['<', '>']).to_string(),
+				entries: Vec::new(),
+			});
 		} else if let Some(rest) = line.strip_prefix("- [x] [").or_else(|| line.strip_prefix("- [ ] [")) {
 			let section = sections.last_mut().unwrap_or_else(|| panic!("{INDEX}: {line:?} sits under no channel's header"));
 			let bad = format!("{INDEX}: a video's line is `- [ ] [<uploaded>]({WATCH}<id>) <title>`, and reads {line:?}");
@@ -204,14 +229,24 @@ fn parse(root: &Path) -> Index {
 			let (url, title) = rest.split_once(") ").unwrap_or_else(|| panic!("{bad}"));
 			let id = url.strip_prefix(WATCH).unwrap_or_else(|| panic!("{bad}")).to_string();
 			let title = match line.starts_with("- [x]") {
-				true => title.strip_prefix('[').and_then(|t| t.strip_suffix(&format!("]({}/{id}.md)", section.who))).unwrap_or_else(|| panic!("{bad}")),
+				true => title
+					.strip_prefix('[')
+					.and_then(|t| t.strip_suffix(&format!("]({}/{id}.md)", section.who)))
+					.unwrap_or_else(|| panic!("{bad}")),
 				false => title,
 			};
 			let uploaded = uploaded.parse().unwrap_or_else(|e| panic!("{bad}: {e}"));
-			section.entries.push(Entry { id, uploaded, title: title.to_string() });
+			section.entries.push(Entry {
+				id,
+				uploaded,
+				title: title.to_string(),
+			});
 		}
 	}
-	Index { checked: checked.unwrap_or_else(|| panic!("{INDEX} states no `checked:` day")), sections }
+	Index {
+		checked: checked.unwrap_or_else(|| panic!("{INDEX} states no `checked:` day")),
+		sections,
+	}
 }
 
 fn hms(secs: f64) -> String {
@@ -255,7 +290,10 @@ async fn video(id: &str, tmp: &Path, shots: &Path, pick: Pick) -> Option<String>
 		(None, _, None) => panic!("{id} downloaded with no picture"),
 		(None, Pick::Likely { .. }, Some(by)) => format!("nothing shown: `{by}` named no span where something is"),
 		(Some(model), Pick::Changes, None) => format!("`{model}` what is shown, over {} frames, as `ask_llm`'s `Footage::Screen` picks them", watched.frames_read),
-		(Some(model), Pick::Likely { every }, Some(by)) => format!("`{model}` what is shown, over {} frames, `{by}` picking where, `Pick::Likely` every {every}s", watched.frames_read),
+		(Some(model), Pick::Likely { every }, Some(by)) => format!(
+			"`{model}` what is shown, over {} frames, `{by}` picking where, `Pick::Likely` every {every}s",
+			watched.frames_read
+		),
 		_ => unreachable!("`picked_by` is set by `Pick::Likely` alone"),
 	};
 
@@ -381,11 +419,7 @@ fn marked<'a>(answer: &'a str, mark: &str, id: &str) -> Vec<&'a str> {
 	lines
 		.next()
 		.unwrap_or_else(|| panic!("the model was asked for a `{mark}` block on {id}, and answered:\n{answer}"));
-	let block: Vec<&str> = lines
-		.map(str::trim)
-		.take_while(|l| !matches!(*l, SUMMARY | SECTIONS))
-		.filter(|l| !l.is_empty())
-		.collect();
+	let block: Vec<&str> = lines.map(str::trim).take_while(|l| !matches!(*l, SUMMARY | SECTIONS)).filter(|l| !l.is_empty()).collect();
 	assert!(!block.is_empty(), "the `{mark}` block on {id} is empty:\n{answer}");
 	block
 }
@@ -394,8 +428,12 @@ fn derived(answer: &str, id: &str, duration: f64) -> Vec<(f64, String)> {
 	let sections: Vec<(f64, String)> = marked(answer, SECTIONS, id)
 		.iter()
 		.map(|line| {
-			let (at, heading) = line.split_once(' ').unwrap_or_else(|| panic!("a `{SECTIONS}` line on {id} is `<seconds> <heading>`, and reads {line:?}"));
-			let at: f64 = at.parse().unwrap_or_else(|e| panic!("a `{SECTIONS}` line on {id} opens with a whole number of seconds, and reads {line:?}: {e}"));
+			let (at, heading) = line
+				.split_once(' ')
+				.unwrap_or_else(|| panic!("a `{SECTIONS}` line on {id} is `<seconds> <heading>`, and reads {line:?}"));
+			let at: f64 = at
+				.parse()
+				.unwrap_or_else(|e| panic!("a `{SECTIONS}` line on {id} opens with a whole number of seconds, and reads {line:?}: {e}"));
 			assert!(at < duration, "the model placed a section of {id} at {at}s, past its {duration}s");
 			(at, heading.trim().to_string())
 		})

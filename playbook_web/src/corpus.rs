@@ -19,48 +19,17 @@ const BLOCK_LINES: usize = 8;
 const CHAPTER_CAP: usize = 24_000;
 
 /// how many files of which kinds one search shows: reliability decides across kinds, relevance within one
-const SLOTS: [(&[Kind], usize); 5] = [(&[Kind::Approved, Kind::Suggested], 6), (&[Kind::Course], 2), (&[Kind::Call], 3), (&[Kind::Video], 2), (&[Kind::Text], 1)];
-
-static CITATION: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"^\s*\[r(\d) (\d{4}-\d{2}-\d{2})\]\([^)]+\)\s*$").unwrap());
-
-#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
-enum Kind {
-	Approved,
-	Suggested,
-	/// a lesson, or a capture a lesson links
-	Course,
-	/// a recording of speech other than a video
-	Call,
-	Video,
-	Text,
-}
-
-struct Doc {
-	path: &'static str,
-	kind: Kind,
-	lines: Vec<&'static str>,
-	/// per line, the index of the header it sits under
-	chapter: Vec<Option<usize>>,
-	/// per line, where the chunk `search` scores starts: a bullet of a note, blocks of a capture's chapter
-	chunk: Vec<usize>,
-	/// per line, whether it reads what a recording showed rather than what was said
-	screen: Vec<bool>,
-	/// a capture's own date; structured notes date each claim instead
-	date: Option<&'static str>,
-	source: Option<&'static str>,
-}
+const SLOTS: [(&[Kind], usize); 5] = [
+	(&[Kind::Approved, Kind::Suggested], 6),
+	(&[Kind::Course], 2),
+	(&[Kind::Call], 3),
+	(&[Kind::Video], 2),
+	(&[Kind::Text], 1),
+];
 
 pub struct Corpus {
 	docs: Vec<Doc>,
 }
-
-pub struct Found {
-	pub text: String,
-	pub ids: Vec<String>,
-}
-
-pub static CORPUS: LazyLock<Corpus> = LazyLock::new(Corpus::load);
-
 impl Corpus {
 	fn load() -> Self {
 		let mut docs: Vec<Doc> = FILES
@@ -115,7 +84,16 @@ impl Corpus {
 				let meta = |key: &str| lines.iter().find_map(|l| l.strip_prefix(key));
 				let date = ["- recorded: ", "- uploaded: ", "- updated: ", "- pulled: "].iter().find_map(|k| meta(k)).map(|d| &d[..10]);
 				let source = meta("- source: ").map(|s| s.trim_matches(['<', '>']));
-				Doc { path, kind, lines, chapter, chunk, screen, date, source }
+				Doc {
+					path,
+					kind,
+					lines,
+					chapter,
+					chunk,
+					screen,
+					date,
+					source,
+				}
 			})
 			.collect();
 		let lessons: Vec<&str> = FILES.iter().filter(|(p, _)| p.starts_with("ref/skool_") && p.contains("/course/")).map(|(_, t)| *t).collect();
@@ -162,7 +140,11 @@ impl Corpus {
 		if !(scope.is_empty() || scope.starts_with("structured") || scope.starts_with("ref")) {
 			return Err("scope is a path prefix under `structured/` or `ref/`".into());
 		}
-		let in_scope: Vec<&Doc> = self.docs.iter().filter(|d| d.path.starts_with(scope) && (0..d.lines.len()).any(|i| d.screen[i] == screen)).collect();
+		let in_scope: Vec<&Doc> = self
+			.docs
+			.iter()
+			.filter(|d| d.path.starts_with(scope) && (0..d.lines.len()).any(|i| d.screen[i] == screen))
+			.collect();
 		if in_scope.is_empty() {
 			return Err(match screen {
 				true => format!("nothing under `{scope}` reads a screen"),
@@ -195,7 +177,12 @@ impl Corpus {
 				let hit = match hits.iter().position(|h| h.start == doc.chunk[i]) {
 					Some(h) => &mut hits[h],
 					None => {
-						hits.push(Hit { start: doc.chunk[i], lines: vec![], branches: vec![false; branches.len()], score: 0. });
+						hits.push(Hit {
+							start: doc.chunk[i],
+							lines: vec![],
+							branches: vec![false; branches.len()],
+							score: 0.,
+						});
 						hits.last_mut().unwrap()
 					}
 				};
@@ -236,13 +223,18 @@ impl Corpus {
 			f.effective = f.doc.effective(f.hits[0].start, today);
 		}
 		files.sort_by(|a, b| {
-			a.doc.kind.cmp(&b.doc.kind)
+			a.doc
+				.kind
+				.cmp(&b.doc.kind)
 				.then(b.hits[0].score.total_cmp(&a.hits[0].score))
 				.then(a.effective.total_cmp(&b.effective))
 				.then(b.doc.date.cmp(&a.doc.date))
 		});
 
-		let mut groups: Vec<(Vec<&File>, usize)> = SLOTS.iter().map(|(kinds, slots)| (files.iter().filter(|f| kinds.contains(&f.doc.kind)).collect(), *slots)).collect();
+		let mut groups: Vec<(Vec<&File>, usize)> = SLOTS
+			.iter()
+			.map(|(kinds, slots)| (files.iter().filter(|f| kinds.contains(&f.doc.kind)).collect(), *slots))
+			.collect();
 		// slots a ref kind leaves empty go to the others, the more reliable kind first
 		let mut spare: usize = groups[1..].iter().map(|(of_kind, slots)| slots.saturating_sub(of_kind.len())).sum();
 		for (of_kind, slots) in &mut groups[1..] {
@@ -322,7 +314,9 @@ impl Corpus {
 			}
 			None => {
 				let want = header.to_lowercase();
-				let found: Vec<usize> = (0..doc.lines.len()).filter(|&i| doc.lines[i].starts_with('#') && doc.lines[i].to_lowercase().contains(&want)).collect();
+				let found: Vec<usize> = (0..doc.lines.len())
+					.filter(|&i| doc.lines[i].starts_with('#') && doc.lines[i].to_lowercase().contains(&want))
+					.collect();
 				match found[..] {
 					[one] => one,
 					[] => return Err(format!("no header in {path} holds `{header}`. Its headers:\n{}", doc.headers())),
@@ -345,7 +339,10 @@ impl Corpus {
 				break;
 			}
 		}
-		Ok(Found { text, ids: vec![format!("{path}:{}", start + 1)] })
+		Ok(Found {
+			text,
+			ids: vec![format!("{path}:{}", start + 1)],
+		})
 	}
 
 	pub fn guide(&self, section: &str) -> Result<Found, String> {
@@ -353,11 +350,49 @@ impl Corpus {
 		FILES
 			.iter()
 			.find(|(p, _)| *p == path)
-			.map(|(_, text)| Found { text: text.to_string(), ids: vec![section.to_owned()] })
+			.map(|(_, text)| Found {
+				text: text.to_string(),
+				ids: vec![section.to_owned()],
+			})
 			.ok_or_else(|| format!("no section `{section}`. {GUIDE_DESCRIPTION}"))
 	}
 }
 
+pub struct Found {
+	pub text: String,
+	pub ids: Vec<String>,
+}
+
+pub static CORPUS: LazyLock<Corpus> = LazyLock::new(Corpus::load);
+
+static CITATION: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"^\s*\[r(\d) (\d{4}-\d{2}-\d{2})\]\([^)]+\)\s*$").unwrap());
+
+#[derive(Clone, Copy, Eq, Ord, PartialEq, PartialOrd)]
+enum Kind {
+	Approved,
+	Suggested,
+	/// a lesson, or a capture a lesson links
+	Course,
+	/// a recording of speech other than a video
+	Call,
+	Video,
+	Text,
+}
+
+struct Doc {
+	path: &'static str,
+	kind: Kind,
+	lines: Vec<&'static str>,
+	/// per line, the index of the header it sits under
+	chapter: Vec<Option<usize>>,
+	/// per line, where the chunk `search` scores starts: a bullet of a note, blocks of a capture's chapter
+	chunk: Vec<usize>,
+	/// per line, whether it reads what a recording showed rather than what was said
+	screen: Vec<bool>,
+	/// a capture's own date; structured notes date each claim instead
+	date: Option<&'static str>,
+	source: Option<&'static str>,
+}
 impl Doc {
 	/// the line after the last one of the chapter holding `line`
 	fn chapter_end(&self, line: usize) -> usize {
@@ -368,12 +403,20 @@ impl Doc {
 	fn block(&self, line: usize, end: usize) -> (usize, usize) {
 		let opens = |i: usize| self.lines[i].starts_with("- ") || self.lines[i - 1].trim().is_empty() || self.lines[i - 1].starts_with('#');
 		let from = (1..=line).rev().find(|&i| opens(i)).unwrap_or(0);
-		let to = (line + 1..end).find(|&i| self.lines[i].trim().is_empty() || self.lines[i].starts_with("- ") || self.lines[i].starts_with('#')).unwrap_or(end);
+		let to = (line + 1..end)
+			.find(|&i| self.lines[i].trim().is_empty() || self.lines[i].starts_with("- ") || self.lines[i].starts_with('#'))
+			.unwrap_or(end);
 		(from, to.min(from + BLOCK_LINES).max(line + 1))
 	}
 
 	fn headers(&self) -> String {
-		self.lines.iter().enumerate().filter(|(_, l)| l.starts_with('#')).map(|(i, l)| format!("line {}: {l}", i + 1)).collect::<Vec<_>>().join("\n")
+		self.lines
+			.iter()
+			.enumerate()
+			.filter(|(_, l)| l.starts_with('#'))
+			.map(|(i, l)| format!("line {}: {l}", i + 1))
+			.collect::<Vec<_>>()
+			.join("\n")
 	}
 
 	fn said(&self, line: usize) -> bool {
@@ -410,7 +453,9 @@ impl Doc {
 	}
 
 	fn citation(&self, line: usize) -> Option<(u8, &'static str)> {
-		(line..self.chapter_end(line)).find_map(|i| CITATION.captures(self.lines[i])).map(|c| (c[1].parse().unwrap(), c.get(2).unwrap().as_str()))
+		(line..self.chapter_end(line))
+			.find_map(|i| CITATION.captures(self.lines[i]))
+			.map(|c| (c[1].parse().unwrap(), c.get(2).unwrap().as_str()))
 	}
 
 	/// docs/ARCHITECTURE.md#reliability: base plus age, lower is better; a call is held at its best speaker's base
@@ -432,7 +477,8 @@ impl Doc {
 /// Packs a capture's blocks (paragraphs, bullets) into chunks of at most `CHUNK` chars; a header always
 /// opens one, and a block over `CHUNK` stands alone.
 fn chunks(lines: &[&str]) -> Vec<usize> {
-	let opens = |i: usize| i == 0 || !lines[i].trim().is_empty() && (lines[i].starts_with('#') || lines[i].starts_with("- ") || lines[i - 1].trim().is_empty() || lines[i - 1].starts_with('#'));
+	let opens =
+		|i: usize| i == 0 || !lines[i].trim().is_empty() && (lines[i].starts_with('#') || lines[i].starts_with("- ") || lines[i - 1].trim().is_empty() || lines[i - 1].starts_with('#'));
 	let blocks: Vec<usize> = (0..lines.len()).filter(|&i| opens(i)).chain([lines.len()]).collect();
 	let mut chunk = vec![0; lines.len()];
 	let (mut start, mut len, mut count) = (0, 0, 0);

@@ -1,4 +1,3 @@
-
 //! Mirrors each group's classroom under `ref/skool_<group>/course/`, one
 //! directory per module and one file per lesson, both numbered in the order skool serves them.
 //!
@@ -37,23 +36,19 @@ use v_utils::macros::{MyConfigPrimitives, Settings};
 // each group, and the directory it was given by hand
 const GROUPS: &[(&str, &str)] = &[("gmp-passive-profits-5347", "ref/skool_gmbpp"), ("20kmodropservicingblueprint", "ref/skool_cheap")];
 
-/// The `[skool]` section of `~/.config/social_networks`, read as `recon` reads it.
-#[derive(Clone, Debug, Default, MyConfigPrimitives, Settings)]
-#[settings(config_name = "social_networks")]
-struct Config {
-	#[settings(skip)]
-	#[serde(default)]
-	skool: Option<SkoolConfig>,
-}
-
 pub async fn pull(root: &Path) {
 	let config = Config::try_build(SettingsFlags::default()).unwrap_or_else(|e| panic!("reading ~/.config/social_networks: {e}"));
-	let creds = config.skool.expect("a skool classroom is only readable by a member, so this needs a `[skool]` section in ~/.config/social_networks");
+	let creds = config
+		.skool
+		.expect("a skool classroom is only readable by a member, so this needs a `[skool]` section in ~/.config/social_networks");
 	let mut skool = Skool::try_new(Some(creds)).await.unwrap_or_else(|e| panic!("{e:?}"));
 	register_calls(&mut skool, &root.join("ref/README.md")).await;
 	let mut links: BTreeSet<String> = BTreeSet::new();
 	for (group, out_root) in GROUPS {
-		let courses = skool.classroom(&VenueRef::new(VenueSource::Skool, *group)).await.unwrap_or_else(|e| panic!("reading {group}'s classroom: {e:?}"));
+		let courses = skool
+			.classroom(&VenueRef::new(VenueSource::Skool, *group))
+			.await
+			.unwrap_or_else(|e| panic!("reading {group}'s classroom: {e:?}"));
 		links.extend(classroom(root, group, out_root, &courses));
 	}
 
@@ -66,6 +61,15 @@ pub async fn pull(root: &Path) {
 			eprintln!("  {link}");
 		}
 	}
+}
+
+/// The `[skool]` section of `~/.config/social_networks`, read as `recon` reads it.
+#[derive(Clone, Debug, Default, MyConfigPrimitives, Settings)]
+#[settings(config_name = "social_networks")]
+struct Config {
+	#[settings(skip)]
+	#[serde(default)]
+	skool: Option<SkoolConfig>,
 }
 
 /// Every recording posted to the feed `ref/README.md` links as `[calls]`, dated by its post, written
@@ -96,7 +100,10 @@ async fn register_calls(skool: &mut Skool, registry_path: &Path) {
 	let mut added = Vec::new();
 	// the feed is newest first, and the list oldest first
 	for post in posts.iter().rev() {
-		let at: jiff::Timestamp = post["createdAt"].as_str().and_then(|s| s.parse().ok()).unwrap_or_else(|| panic!("a post without a readable `createdAt`: {post}"));
+		let at: jiff::Timestamp = post["createdAt"]
+			.as_str()
+			.and_then(|s| s.parse().ok())
+			.unwrap_or_else(|| panic!("a post without a readable `createdAt`: {post}"));
 		// a post that embeds no video lacks the key — a question asked in the feed
 		let Some(videos) = post.pointer("/metadata/videoLinksData") else { continue };
 		// skool stores the list JSON-encoded, as a string
@@ -351,4 +358,3 @@ fn urls_in(text: &str) -> Vec<String> {
 	}
 	found
 }
-
