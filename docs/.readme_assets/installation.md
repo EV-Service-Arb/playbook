@@ -41,5 +41,6 @@ client next has to sign in again.
 | the client asks you to sign in again | normal: sign-in lasts 30 days. Sign in again |
 | "…has used today's … bytes" (429) | the daily reading budget is spent; it resets at 00:00 UTC |
 | the playbook's tools listed twice, under `service-arb` and under `playbook` | a server added by hand before the plugin is still there: `claude mcp remove service-arb`, `codex mcp remove service-arb`, or delete the `Service Arb` connector |
+| Claude Code lists both `service-arb@ev-service-arb` and `service-arb@synced` | installed in Claude Code and on claude.ai both: `claude plugin uninstall service-arb@ev-service-arb` |
 | an old `sa.valeratrades.com` or `service-arb.valeratrades.com` entry | that address is gone: remove it as in the row above, then step 1 |
 | answers that ignore the playbook's sources | the skill is not installed or not on: in ChatGPT without Skills, see its section |

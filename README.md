@@ -56,6 +56,7 @@ client next has to sign in again.
 | the client asks you to sign in again | normal: sign-in lasts 30 days. Sign in again |
 | "…has used today's … bytes" (429) | the daily reading budget is spent; it resets at 00:00 UTC |
 | the playbook's tools listed twice, under `service-arb` and under `playbook` | a server added by hand before the plugin is still there: `claude mcp remove service-arb`, `codex mcp remove service-arb`, or delete the `Service Arb` connector |
+| Claude Code lists both `service-arb@ev-service-arb` and `service-arb@synced` | installed in Claude Code and on claude.ai both: `claude plugin uninstall service-arb@ev-service-arb` |
 | an old `sa.valeratrades.com` or `service-arb.valeratrades.com` entry | that address is gone: remove it as in the row above, then step 1 |
 | answers that ignore the playbook's sources | the skill is not installed or not on: in ChatGPT without Skills, see its section |
 <!-- markdownlint-disable -->
@@ -107,13 +108,16 @@ Sign in again: **Connect** on the plugin.
 The plugin is on the account: every device signed in to it, browser,
 desktop and mobile, gets it, and so does Claude Code.
 
-1.  **Customize** → **Plugins** → **Add marketplace**:
-    `EV-Service-Arb/playbook`. Install `service-arb` from it.
+1.  **Customize** → **Plugins** → **Add** → **Add marketplace** → **Add
+    from a repository**: `EV-Service-Arb/playbook`.
 
-2.  On the plugin’s **Connectors** tab, **Connect** `playbook`, and sign
+2.  **Customize** → **Plugins** → **Discover** → `service-arb` →
+    **Add**.
+
+3.  On the plugin’s **Connectors** tab, **Connect** `playbook`, and sign
     in.
 
-3.  A `Service Arb` custom connector added before the plugin goes:
+4.  A `Service Arb` custom connector added before the plugin goes:
     bottom left, your name → **Settings** → **Connectors**, and remove
     it.
 
@@ -133,16 +137,22 @@ Sign in again: **Connect** on the plugin’s connector.
 Connects one device: run it on each.
 
 ``` sh
-claude plugin marketplace add EV-Service-Arb/playbook
+claude plugin marketplace add EV-Service-Arb/playbook --sparse .claude-plugin plugin
 claude plugin install service-arb@ev-service-arb
 claude mcp remove service-arb  # only if you added the server by hand before
 ```
 
-Then in Claude Code: `/mcp` → `plugin:service-arb:playbook` →
+`--sparse` fetches the plugin alone, not the whole knowledge base. Then
+in Claude Code: `/mcp` → `plugin:service-arb:playbook` →
 **Authenticate**. Sign in again the same way.
 
+Installed on claude.ai already: Claude Code has it as
+`service-arb@synced`, so skip the install, or it runs twice.
+
 Updates: `/plugin` → **Marketplaces** → `ev-service-arb` → **Enable
-auto-update**. Without it the skill stays as installed.
+auto-update**. Without it,
+`claude plugin marketplace update ev-service-arb`; the skill otherwise
+stays as installed.
 
 
 </details>
@@ -157,13 +167,16 @@ Connects one device: run it on each. Needs a Codex with `codex plugin`:
 `codex update`.
 
 ``` sh
-codex plugin marketplace add EV-Service-Arb/playbook
+codex plugin marketplace add EV-Service-Arb/playbook --sparse .claude-plugin --sparse plugin
 codex plugin add service-arb@ev-service-arb
+codex mcp login playbook
 codex mcp remove service-arb  # only if you added the server by hand before
 ```
 
-Then start a new session, and sign in when it asks. Updates:
-`codex plugin marketplace upgrade`.
+`--sparse` fetches the plugin alone: without it Codex downloads the
+whole knowledge base, gigabytes. Start a new session afterwards. Sign in
+again: `codex mcp login playbook`. Updates:
+`codex plugin marketplace upgrade ev-service-arb`.
 
 
 </details>

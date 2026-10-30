@@ -1,6 +1,7 @@
 The plugin is on the account: every device signed in to it, browser, desktop and mobile, gets it, and so does Claude Code.
 
-+ *Customize* → *Plugins* → *Add marketplace*: `EV-Service-Arb/playbook`. Install `service-arb` from it.
++ *Customize* → *Plugins* → *Add* → *Add marketplace* → *Add from a repository*: `EV-Service-Arb/playbook`.
++ *Customize* → *Plugins* → *Discover* → `service-arb` → *Add*.
 + On the plugin's *Connectors* tab, *Connect* `playbook`, and sign in.
 + A `Service Arb` custom connector added before the plugin goes: bottom left, your name → *Settings* → *Connectors*, and remove it.
 
