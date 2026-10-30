@@ -100,7 +100,7 @@
           meta.description = "check calls, check cites, build playbook_web";
           program = "${pkgs.writeShellApplication {
             name = "check";
-            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.git ];
+            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git ]; # .cargo/config.toml links with mold
             text = "cargo r -q -p playbook -- check calls && cargo r -q -p playbook -- check cites && nix build .#playbook_web --no-link";
           }}/bin/check";
         };
