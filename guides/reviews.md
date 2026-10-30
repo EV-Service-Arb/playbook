@@ -1,4 +1,4 @@
-# reviews
+# reviews: rate, sourcing, deletion
 
 ## what matters
 - review volume does not suspend a profile, up to 300 a day at least; what it risks is review gating, new reviews silently not showing

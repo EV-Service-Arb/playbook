@@ -246,15 +246,29 @@ rolodex's `venues/` tree; nothing here duplicates that.
 ## Answering
 
 ```
-skills/                    every agent skill; .claude/skills links here
-├─ ingest · distill · ops   upkeep, run from a checkout
-└─ service-arb/            SKILL.md routes a question to the sources; sections/*.md say how to decide, per area
-  └─ baked into playbook_web/ with structured/{approved,suggested}/ and ref/**/*.md — every agent, the owner's included, gets slices over MCP
-playbook_web/              the member surface over MCP: search · read · guide, behind the Service-Arb panel (`sa:playbook:mcp:use`), every call logged
+.claude-plugin/marketplace.json   the one marketplace: Claude Code, claude.ai and Codex all read it
+plugin/                           the procedure: what a member installs, the owner as well
+├─ skills/service-arb/SKILL.md    how to answer, in the terms of the three tools
+└─ .mcp.json · mcp.json           where the data is: the `playbook` server, for Claude and for Codex
+guides/<area>.md                  how to decide, per area: data, served by `guide`
+playbook_web/                     the data: search · read · guide over MCP, behind the Service-Arb panel (`sa:playbook:mcp:use`), every call logged
+  └─ bakes in guides/, structured/{approved,suggested}/ and ref/**/*.md
+skills/                           ingest · distill · ops: upkeep, run from a checkout; .claude/skills links here
 ```
 
+The skill holds the procedure; the server holds everything that changes with the corpus: the guides,
+their list, the reliability tables, the scopes. A skill copy is a snapshot until its client updates
+it, so nothing that moves with the corpus is written into it. The server does every deterministic
+step (ranking, reliability arithmetic, course linkage); the skill keeps the judgement: the words to
+search, who speaks in a call, anecdote against rule, the write-up. Tool descriptions say what a tool
+returns, never how to answer.
+
+The checkout has no `service-arb` skill of its own: the owner installs the plugin as a member does,
+and tries unreleased skill text with `claude --plugin-dir plugin` or `playbook eval`.
+
 Members use the knowledge on their own tokens and never get the repo. What the server does, and how,
-is in `playbook_web/README.md`.
+is in `playbook_web/README.md`. The marketplace needs this repo public; were it to go private,
+`plugin/` moves to a public repo of its own.
 
 ## LFS
 
@@ -297,5 +311,5 @@ history, and an hour of call is ~300–400 MB.
 - `ref/` is written by pullers, never by hand — bar what `/ingest call-digest` fills in, which says so.
 - An agent's own reading goes to `suggested/`, never straight to `approved/`.
 - A puller writes a new capture, moves one, or does nothing; it never edits what one says.
-- The member image carries `skills/service-arb/`, `structured/approved/`, `structured/suggested/` and `ref/**/*.md` only: no scripts, no docs, no
+- The member image carries `guides/`, `structured/approved/`, `structured/suggested/` and `ref/**/*.md` only: no scripts, no docs, no
   history, no media.

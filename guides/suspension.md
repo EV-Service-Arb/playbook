@@ -1,4 +1,4 @@
-# suspension
+# suspension: what links profiles, what to do once one goes down
 
 ## what matters
 - what links profiles is the website, not the brand name. one name across cities is fine, a shared site is the risk

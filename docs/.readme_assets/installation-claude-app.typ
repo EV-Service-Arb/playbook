@@ -1,14 +1,9 @@
-The connector is on the account: every device signed in to it, browser, desktop and mobile, gets it.
+The plugin is on the account: every device signed in to it, browser, desktop and mobile, gets it, and so does Claude Code.
 
-+ Bottom left, your name → *Settings*
-
-  #image("assets/claude_settings.png", width: 35%)
-+ *Connectors* → *Add* → *Add custom connector*
++ *Customize* → *Plugins* → *Add marketplace*: `EV-Service-Arb/playbook`. Install `service-arb` from it.
++ On the plugin's *Connectors* tab, *Connect* `playbook`, and sign in.
++ A `Service Arb` custom connector added before the plugin goes: bottom left, your name → *Settings* → *Connectors*, and remove it.
 
   #image("assets/claude_connectors.png", width: 70%)
-+ Name: `Service Arb`, or your own. URL: `https://sa.evinvest.ltd/playbook_mcp`. Then *Continue*, and sign in.
 
-  #image("assets/claude_custom_connector.png", width: 50%)
-+ In a chat, turn it on from the tools menu.
-
-Sign in again: *Connect* on the connector.
+Sign in again: *Connect* on the plugin's connector.

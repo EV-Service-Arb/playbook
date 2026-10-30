@@ -11,7 +11,7 @@ const MIN_MATCH: usize = 2; // a lone letter is noise, not relevance
 const BROAD: f64 = 0.4; // a pattern hitting this share of the files in scope is an enumeration
 const OVERFLOW: usize = 5; // files per kind listed past its slots, for the agent to `read`
 const WORST: f64 = 10.;
-const CHANNELS: &[(&str, u8, &str)] = &[("eric", 2, "Eric"), ("zach", 2, "Zach Peterson"), ("marcus", 3, "Marcus Milan")]; // docs/ARCHITECTURE.md#people, by `ref/youtube/<dir>`
+const CHANNELS: &[(&str, &str)] = &[("eric", "Eric"), ("zach", "Zach Peterson"), ("marcus", "Marcus Milan")]; // `ref/youtube/<dir>` to its row in docs/ARCHITECTURE.md#people
 const LINE_CAP: usize = 700;
 const STRUCTURED_LINES: usize = 12;
 const REF_BLOCKS: usize = 2; // paragraphs or bullets shown per chunk
@@ -34,7 +34,7 @@ impl Corpus {
 	fn load() -> Self {
 		let mut docs: Vec<Doc> = FILES
 			.iter()
-			.filter(|(p, _)| !p.starts_with("skills/"))
+			.filter(|(p, _)| !p.starts_with("guides/"))
 			.map(|&(path, text)| {
 				let lines: Vec<&str> = text.lines().collect();
 				let kind = match path {
@@ -44,7 +44,7 @@ impl Corpus {
 					p if p.starts_with("ref/youtube/") => Kind::Video,
 					p if p.starts_with("ref/") && lines.contains(&"## transcript") => Kind::Call,
 					p if p.starts_with("ref/") => Kind::Text,
-					p => unreachable!("build.rs bakes only structured/ and ref/ besides skills/: {p}"),
+					p => unreachable!("build.rs bakes only structured/ and ref/ besides guides/: {p}"),
 				};
 				let mut current = None;
 				let chapter = lines
@@ -193,12 +193,43 @@ impl Corpus {
 				files.push(File { doc, hits, effective: 0. });
 			}
 		}
-		if in_scope.len() >= 5 && files.len() as f64 > in_scope.len() as f64 * BROAD {
-			return Err(format!("the pattern hits {} of the {} files in scope. Narrow it.", files.len(), in_scope.len()));
+		let broad = |hit: usize, of: usize| of >= 5 && hit as f64 > of as f64 * BROAD;
+		if broad(files.len(), in_scope.len()) {
+			// the directories a level below the scope; below `structured/` and `ref/` from the top, as those two narrow nothing
+			let depth = scope.split('/').filter(|s| !s.is_empty()).count().max(1);
+			let sub = |path: &'static str| path.match_indices('/').nth(depth).map(|(i, _)| &path[..i]);
+			let mut subs: Vec<(&str, usize, usize)> = Vec::new(); // sub-scope, files hit, files in it
+			for d in &in_scope {
+				if let Some(sub) = sub(d.path) {
+					match subs.iter_mut().find(|s| s.0 == sub) {
+						Some(s) => s.2 += 1,
+						None => subs.push((sub, 0, 1)),
+					}
+				}
+			}
+			for f in &files {
+				if let Some(sub) = sub(f.doc.path) {
+					subs.iter_mut().find(|s| s.0 == sub).expect("a hit is in scope").1 += 1;
+				}
+			}
+			subs.retain(|s| s.1 > 0);
+			subs.sort_by_key(|s| Reverse(s.1));
+			let mut text = format!("the pattern hits {} of the {} files in scope. Narrow it", files.len(), in_scope.len());
+			match subs.is_empty() {
+				true => text.push('.'),
+				false => {
+					text.push_str(", or pass one of these as `scope`:");
+					for (sub, hit, of) in subs {
+						let also = if broad(hit, of) { ", too broad as well" } else { "" };
+						text.push_str(&format!("\n- {sub}: {hit} of {of}{also}"));
+					}
+				}
+			}
+			return Err(text);
 		}
 		if files.is_empty() {
 			return Ok(Found {
-				text: "no match. If rephrasing finds nothing either, the corpus does not cover this: say so.".into(),
+				text: "no match.".into(),
 				ids: vec![],
 			});
 		}
@@ -279,7 +310,7 @@ impl Corpus {
 					}
 				};
 				let at = blocks[0].0;
-				writeln!(text, "{}:{} · {} · {}", doc.path, at + 1, doc.header(first), doc.reliability(first)).unwrap();
+				writeln!(text, "{}:{} · {} · {}", doc.path, at + 1, doc.header(first), doc.reliability(first, today)).unwrap();
 				if let Some(source) = doc.source {
 					writeln!(text, "source: {source}").unwrap();
 				}
@@ -293,10 +324,10 @@ impl Corpus {
 			}
 		}
 		if !overflow.is_empty() {
-			writeln!(text, "also matched, best first within each kind; `read` what the answer needs:").unwrap();
+			writeln!(text, "also matched, best first within each kind:").unwrap();
 			for f in overflow {
 				let first = f.hits[0].lines[0].0;
-				writeln!(text, "{}:{} · {} · {}", f.doc.path, first + 1, f.doc.header(first), f.doc.reliability(first)).unwrap();
+				writeln!(text, "{}:{} · {} · {}", f.doc.path, first + 1, f.doc.header(first), f.doc.reliability(first, today)).unwrap();
 			}
 		}
 		if dropped > 0 {
@@ -328,7 +359,7 @@ impl Corpus {
 			}
 		};
 		let end = doc.chapter_end(start);
-		let mut text = format!("{path}:{} · {}\n", start + 1, doc.reliability(start));
+		let mut text = format!("{path}:{} · {}\n", start + 1, doc.reliability(start, crate::now() / 86_400));
 		if let Some(source) = doc.source {
 			writeln!(text, "source: {source}").unwrap();
 		}
@@ -345,16 +376,16 @@ impl Corpus {
 		})
 	}
 
-	pub fn guide(&self, section: &str) -> Result<Found, String> {
-		let path = format!("skills/service-arb/sections/{section}.md");
+	pub fn guide(&self, area: &str) -> Result<Found, String> {
+		let path = format!("guides/{area}.md");
 		FILES
 			.iter()
 			.find(|(p, _)| *p == path)
 			.map(|(_, text)| Found {
 				text: text.to_string(),
-				ids: vec![section.to_owned()],
+				ids: vec![area.to_owned()],
 			})
-			.ok_or_else(|| format!("no section `{section}`. {GUIDE_DESCRIPTION}"))
+			.ok_or_else(|| format!("no guide `{area}`. {GUIDE_DESCRIPTION}"))
 	}
 }
 
@@ -427,29 +458,37 @@ impl Doc {
 		self.chapter[line].map_or("", |c| self.lines[c])
 	}
 
-	/// what a claim at `line` is worth, and when it was said
-	fn reliability(&self, line: usize) -> String {
+	/// who said a claim at `line`, their base, when, and what `effective` makes of it
+	fn reliability(&self, line: usize, today: i64) -> String {
 		let date = || self.date.expect("asserted on load");
+		let effective = || self.effective(line, today);
 		match self.kind {
-			Kind::Approved | Kind::Suggested => self.citation(line).map_or("unsourced".into(), |(r, d)| format!("r{r} {d}")),
+			Kind::Approved | Kind::Suggested => self
+				.citation(line)
+				.map_or("note · unsourced".into(), |(r, d)| format!("note · r{r} · {d} · effective {:.1}", effective())),
 			_ if self.screen[line] => format!("a reading of the screen · {}", date()),
-			Kind::Course => format!("r1 course · {}", date()),
+			Kind::Course => format!("course · r1 · {} · effective {:.1}", date(), effective()),
 			Kind::Video => {
 				let (base, who) = self.channel();
-				format!("r{base} {who} · {}", date())
+				format!("{who}'s video · r{base} · {} · effective {:.1}", date(), effective())
 			}
-			Kind::Call => format!("r2–7 by who speaks · {}", date()),
-			Kind::Text => format!("unrated · {}", date()),
+			Kind::Call => format!("call · the speaker's base · {} · effective: that base + {:.1}", date(), age(date(), today)),
+			Kind::Text => format!("text · unrated · {}", date()),
 		}
 	}
 
 	fn channel(&self) -> (u8, &'static str) {
 		let dir = self.path.split('/').nth(2).expect("a video sits at ref/youtube/<channel>/");
-		CHANNELS
+		let who = CHANNELS
 			.iter()
-			.find(|(d, ..)| *d == dir)
-			.map(|&(_, base, who)| (base, who))
-			.unwrap_or_else(|| panic!("ref/youtube/{dir}: no base reliability for the channel; give it a row in docs/ARCHITECTURE.md#people and in `CHANNELS`"))
+			.find(|(d, _)| *d == dir)
+			.map(|&(_, who)| who)
+			.unwrap_or_else(|| panic!("ref/youtube/{dir}: no person for the channel; give it a row in docs/ARCHITECTURE.md#people and in `CHANNELS`"));
+		let &(_, base) = PEOPLE
+			.iter()
+			.find(|(p, _)| p.starts_with(who))
+			.unwrap_or_else(|| panic!("`CHANNELS`' {who} has no row in docs/ARCHITECTURE.md#people"));
+		(base, who)
 	}
 
 	fn citation(&self, line: usize) -> Option<(u8, &'static str)> {
@@ -470,8 +509,13 @@ impl Doc {
 			Kind::Call => (2., self.date.unwrap()),
 			Kind::Text => return WORST,
 		};
-		(base + (today - days(date)) as f64 / DECAY_DAYS).min(WORST)
+		(base + age(date, today)).min(WORST)
 	}
+}
+
+/// what being said on `date` adds to a base by `today`
+fn age(date: &str, today: i64) -> f64 {
+	(today - days(date)) as f64 / DECAY_DAYS
 }
 
 /// Packs a capture's blocks (paragraphs, bullets) into chunks of at most `CHUNK` chars; a header always

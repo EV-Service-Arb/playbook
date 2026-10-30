@@ -1,4 +1,4 @@
-# profile-creation
+# profile-creation: getting a listing to exist
 
 ## what matters
 - who owns the listing. aged gmails can be suspended themselves, so an account with a real person behind it is the safer owner
@@ -8,7 +8,7 @@
 
 ## how to decide
 - create through your own claimed profile when you need the owner-only fields; a suggested edit is for getting a place onto the map at all // inferred
-- a listing created, a listing verified: they are separate steps, and verification is where they fail. plan for [verification](verification.md) before building more // inferred
+- a listing created, a listing verified: they are separate steps, and verification is where they fail. plan for verification, its own guide, before building more // inferred
 
 ## when it goes wrong
-- nothing in approved/ yet. ask search for "missing place" and "mall method" in suggested/ // inferred
+- nothing vetted yet: `search` `missing place|mall method` with scope `structured/suggested` // inferred

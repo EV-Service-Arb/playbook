@@ -1,7 +1,9 @@
-Connects one device: run it on each.
+Connects one device: run it on each. Needs a Codex with `codex plugin`: `codex update`.
 
 ```sh
-codex mcp add service-arb --url https://sa.evinvest.ltd/playbook_mcp
+codex plugin marketplace add EV-Service-Arb/playbook
+codex plugin add service-arb@ev-service-arb
+codex mcp remove service-arb  # only if you added the server by hand before
 ```
 
-Sign in again: `codex mcp login service-arb`.
+Then start a new session, and sign in when it asks. Updates: `codex plugin marketplace upgrade`.

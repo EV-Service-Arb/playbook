@@ -1,4 +1,4 @@
-# infra
+# infra: gmails, devices, proxies, numbers, cards
 
 ## what matters
 - gmails: `accsmarket` sells them with their cookies

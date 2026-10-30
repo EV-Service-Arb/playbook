@@ -1,5 +1,5 @@
 #![feature(default_field_values)]
-//! The member surface: the playbook's `skills/service-arb/`, `structured/{approved,suggested}/` and `ref/` text, served as slices over
+//! The member surface: the playbook's `guides/`, `structured/{approved,suggested}/` and `ref/` text, served as slices over
 //! MCP to the Service-Arb members holding `sa:playbook:mcp:use`, behind the panel. See `README.md`.
 
 mod auth;

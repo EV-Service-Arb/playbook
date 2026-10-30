@@ -1,5 +1,6 @@
 //! Answers `playbook/eval.json` the way a member's client does, on this tree and on the last
-//! release, and has an agent judge each answer against the case's expectations.
+//! release, and has an agent judge each answer against the case's expectations. Each side answers
+//! with the `plugin/` its rev ships; a rev with none shipped the server alone.
 
 use std::{
 	io::{Read as _, Write as _},
@@ -89,6 +90,23 @@ pub fn run(root: &Path, against: Option<String>, info: Option<String>, jobs: Non
 	drop(servers);
 
 	let width = cases.iter().fold("case".len(), |w, c| w.max(c.id.len()));
+	println!("\n{:width$}  side  skill  turns  tokens in/out  answer $  calls", "case");
+	for (c, a) in cases.iter().zip(&answered) {
+		for (s, a) in sides.iter().zip(a) {
+			let calls: Vec<String> = a.calls.iter().map(|(tool, n)| format!("{tool} {n}")).collect();
+			println!(
+				"{:width$}  {:4}  {:5}  {:5}  {:>6}k/{:<5}  {:8.2}  {}",
+				c.id,
+				s.name,
+				if a.skill { "✓" } else { "✗" },
+				a.turns,
+				a.tokens_in / 1000,
+				format!("{}k", a.tokens_out / 1000),
+				a.answer_usd,
+				calls.join(" · ")
+			);
+		}
+	}
 	println!("\n{:width$}  new  old", "case");
 	let mut regressed = false;
 	for (c, a) in cases.iter().zip(&answered) {
@@ -134,11 +152,20 @@ struct Side {
 struct Answered {
 	verdicts: Vec<Verdict>,
 	usd: f64,
+	answer_usd: f64,
+	skill: bool,
+	turns: u64,
+	/// every tool the answer called, by name past its server prefix, and how often
+	calls: Vec<(String, usize)>,
+	tokens_in: u64,
+	tokens_out: u64,
 }
 
 struct Server {
 	child: Child,
 	url: String,
+	/// what the side's rev ships members, `None` before it shipped one
+	plugin: Option<PathBuf>,
 }
 
 impl Drop for Server {
@@ -212,7 +239,8 @@ fn serve(bin: &Path, side: &str, cases: &[Case], out: &Path) -> Server {
 		.stderr(log)
 		.spawn()
 		.expect("the server was just built");
-	let mut server = Server { child, url };
+	let plugin = Some(dir.join("plugin")).filter(|p| p.exists());
+	let mut server = Server { child, url, plugin };
 
 	// /health is routed only once `app()` has made the schema
 	let start = Instant::now();
@@ -253,24 +281,57 @@ fn token(c: &Case) -> String {
 
 fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 	let cfg = |role: &str| out.join(".claude").join(format!("{}-{}-{role}", c.id, side.name));
-	let mcp = json!({ "mcpServers": { "service-arb": { "type": "http", "url": server.url, "headers": { "Authorization": format!("Bearer {}", token(c)) } } } });
-	let answer = claude(
-		&cfg("answer"),
-		out,
-		&c.question,
-		&[
-			"--model",
-			ANSWER_MODEL,
-			"--strict-mcp-config",
-			"--mcp-config",
-			&mcp.to_string(),
-			"--tools",
-			"",
-			"--allowedTools",
-			"mcp__service-arb",
-		],
-	);
+	let authorization = format!("Bearer {}", token(c));
+	let args: Vec<String> = match &server.plugin {
+		Some(plugin) => {
+			// the plugin as shipped, but for where its server is and whose token it carries
+			let copy = cfg("plugin");
+			let status = Command::new("cp").arg("-rT").arg(plugin).arg(&copy).status().expect("cp runs");
+			assert!(status.success(), "copying {} to {}", plugin.display(), copy.display());
+			let read = |p: &Path| -> Value {
+				serde_json::from_str(&std::fs::read_to_string(p).unwrap_or_else(|e| panic!("{}: {e}", p.display()))).unwrap_or_else(|e| panic!("{}: {e}", p.display()))
+			};
+			let name = read(&copy.join(".claude-plugin/plugin.json"))["name"].as_str().expect("a plugin names itself").to_owned();
+			let mut mcp = read(&copy.join(".mcp.json"));
+			let servers = mcp["mcpServers"].as_object_mut().expect("the plugin's .mcp.json holds `mcpServers`");
+			assert_eq!(servers.len(), 1, "the {} side's plugin connects one server", side.name);
+			let (key, entry) = servers.iter_mut().next().expect("asserted one");
+			entry["url"] = json!(server.url);
+			entry["headers"] = json!({ "Authorization": authorization });
+			let tools = format!("mcp__plugin_{name}_{key}");
+			std::fs::write(copy.join(".mcp.json"), mcp.to_string()).expect("the copy was just made");
+			// a member's client has the Skill tool; nothing else of Claude Code's would answer from the playbook
+			[
+				"--plugin-dir",
+				copy.to_str().expect("utf-8 paths"),
+				"--tools",
+				"Skill",
+				"--allowedTools",
+				&format!("Skill,{tools}"),
+			]
+			.map(String::from)
+			.into()
+		}
+		None => {
+			let mcp = json!({ "mcpServers": { "service-arb": { "type": "http", "url": server.url, "headers": { "Authorization": authorization } } } });
+			["--strict-mcp-config", "--mcp-config", &mcp.to_string(), "--tools", "", "--allowedTools", "mcp__service-arb"]
+				.map(String::from)
+				.into()
+		}
+	};
+	let args: Vec<&str> = ["--model", ANSWER_MODEL].into_iter().chain(args.iter().map(String::as_str)).collect();
+	let (answer, called) = claude(&cfg("answer"), out, &c.question, &args);
 	let text = answer["result"].as_str().expect("a result is a string");
+	let mut calls: Vec<(String, usize)> = Vec::new();
+	for tool in &called {
+		let tool = tool.rsplit("__").next().expect("rsplit yields at least one part").to_owned();
+		match calls.iter_mut().find(|(t, _)| *t == tool) {
+			Some((_, n)) => *n += 1,
+			None => calls.push((tool, 1)),
+		}
+	}
+	let usage = |k: &str| answer["usage"][k].as_u64().unwrap_or_else(|| panic!("claude reports `usage.{k}`"));
+	let skill = calls.iter().any(|(t, _)| t == "Skill");
 
 	let expectations: String = c.expect.iter().map(|e| format!("- {e}\n")).collect();
 	let prompt = format!(
@@ -282,7 +343,7 @@ fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 		"properties": { "verdicts": { "type": "array", "items": { "type": "object", "properties": { "met": { "type": "boolean" }, "why": { "type": "string" } }, "required": ["met", "why"] } } },
 		"required": ["verdicts"],
 	});
-	let judged = claude(&cfg("judge"), out, &prompt, &["--model", JUDGE_MODEL, "--tools", "", "--json-schema", &schema.to_string()]);
+	let (judged, _) = claude(&cfg("judge"), out, &prompt, &["--model", JUDGE_MODEL, "--tools", "", "--json-schema", &schema.to_string()]);
 	let verdicts: Vec<Verdict> = serde_json::from_value(judged["structured_output"]["verdicts"].clone()).expect("the schema holds the judge to this shape");
 	assert_eq!(
 		verdicts.len(),
@@ -300,13 +361,16 @@ fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 		.map(|(e, v)| format!("- {} {e} — {}\n", if v.met { "✓" } else { "✗" }, v.why))
 		.collect();
 	let md = format!(
-		"# {} ({}): {}\n\n- system: {} · info: {}\n- score: {met}/{}\n\n## expectations\n\n{lines}\n## answer\n\n{text}\n",
+		"# {} ({}): {}\n\n- system: {} · info: {}\n- score: {met}/{}\n- skill: {} · turns: {} · calls: {}\n\n## expectations\n\n{lines}\n## answer\n\n{text}\n",
 		c.id,
 		side.name,
 		c.question,
 		side.system,
 		side.info,
-		c.expect.len()
+		c.expect.len(),
+		skill,
+		answer["num_turns"],
+		called.join(" "),
 	);
 	let dir = out.join(&c.id);
 	std::fs::create_dir_all(&dir).expect("the run dir was just made");
@@ -315,23 +379,30 @@ fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 	let usd = |v: &Value| v["total_cost_usd"].as_f64().expect("claude reports its cost");
 	Answered {
 		usd: usd(&answer) + usd(&judged),
+		answer_usd: usd(&answer),
+		skill,
+		turns: answer["num_turns"].as_u64().expect("claude reports its turns"),
+		tokens_in: usage("input_tokens") + usage("cache_creation_input_tokens") + usage("cache_read_input_tokens"),
+		tokens_out: usage("output_tokens"),
+		calls,
 		verdicts,
 	}
 }
 
 /// `claude -p` with nothing of this machine's setup: no CLAUDE.md, skills, hooks, plugins or MCP
-/// servers but what `args` name, so the skill reaches it only as the server's instructions.
-fn claude(cfg: &Path, cwd: &Path, prompt: &str, args: &[&str]) -> Value {
+/// servers but what `args` name. Returns its result, and the name of every tool it called.
+fn claude(cfg: &Path, cwd: &Path, prompt: &str, args: &[&str]) -> (Value, Vec<String>) {
 	std::fs::create_dir_all(cfg).expect("the run dir was just made");
 	let env = |k: &str| std::env::var_os(k).unwrap_or_else(|| panic!("{k} is unset"));
 	let mut child = Command::new("claude")
-		.args(["-p", "--output-format", "json", "--no-session-persistence"])
+		.args(["-p", "--output-format", "stream-json", "--verbose", "--no-session-persistence"])
 		.args(args)
 		.env_clear()
 		.env("PATH", env("PATH"))
 		.env("HOME", env("HOME"))
 		.env("CLAUDE_CODE_OAUTH_TOKEN", env("CLAUDE_CODE_OAUTH_TOKEN"))
 		.env("CLAUDE_CONFIG_DIR", cfg)
+		.env("ENABLE_CLAUDEAI_MCP_SERVERS", "false") // the account's own connectors, which a member's are not
 		.current_dir(cwd)
 		.stdin(Stdio::piped())
 		.stdout(Stdio::piped())
@@ -340,9 +411,23 @@ fn claude(cfg: &Path, cwd: &Path, prompt: &str, args: &[&str]) -> Value {
 		.expect("claude is on PATH");
 	child.stdin.take().expect("piped").write_all(prompt.as_bytes()).expect("claude reads its prompt");
 	let res = child.wait_with_output().expect("claude was spawned");
-	let v: Value = serde_json::from_slice(&res.stdout).unwrap_or_else(|e| panic!("claude printed no json ({e}): {}", String::from_utf8_lossy(&res.stderr)));
-	assert!(v["is_error"] == false, "claude failed: {}", v["result"]);
-	v
+	let events: Vec<Value> = String::from_utf8_lossy(&res.stdout)
+		.lines()
+		.map(|l| serde_json::from_str(l).unwrap_or_else(|e| panic!("claude printed a line that is no json ({e}): {l}\n{}", String::from_utf8_lossy(&res.stderr))))
+		.collect();
+	let tools = events
+		.iter()
+		.filter(|e| e["type"] == "assistant")
+		.flat_map(|e| e["message"]["content"].as_array().expect("an assistant message has content"))
+		.filter(|b| b["type"] == "tool_use")
+		.map(|b| b["name"].as_str().expect("a tool_use names its tool").to_owned())
+		.collect();
+	let result = events
+		.into_iter()
+		.rfind(|e| e["type"] == "result")
+		.unwrap_or_else(|| panic!("claude ended with no result: {}", String::from_utf8_lossy(&res.stderr)));
+	assert!(result["is_error"] == false, "claude failed: {}", result["result"]);
+	(result, tools)
 }
 
 fn git(root: &Path, args: &[&str]) -> String {
