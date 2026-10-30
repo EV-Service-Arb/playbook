@@ -1,4 +1,4 @@
-# verification
+# verification: video, live, instant
 
 ## what matters
 - the course's own videos are the baseline for what to show: signage, the vehicle, a business card. a member's failure story qualifies them, it does not replace them // inferred

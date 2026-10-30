@@ -9,7 +9,7 @@ use base64::{Engine, engine::general_purpose::URL_SAFE_NO_PAD};
 use evconcierge_projection::{EventSource, Member, Page, Pulled, ScopeEvent, ScopeEventBody, SourceError, UserEvent, UserEventKind};
 use rmcp::{
 	RoleClient, ServiceExt,
-	model::{CallToolRequestParams, GetPromptRequestParams},
+	model::CallToolRequestParams,
 	service::RunningService,
 	transport::{StreamableHttpClientTransport, streamable_http_client::StreamableHttpClientTransportConfig},
 };
@@ -44,17 +44,33 @@ async fn read_returns_one_chapter() {
 	.await;
 }
 
-/// Where tools stay hidden until the model decides to look (claude.ai), the instructions are what it decides
-/// on, and `ask` is the member's explicit way in; both carry the answering rules, the decay inlined.
+/// The procedure is the `service-arb` skill's: the server names it, and says only what each tool returns. What
+/// changes with the corpus rides on the tools: the reliability table, the guides, every hit's effective number,
+/// and where a broad pattern could narrow to.
 #[tokio::test]
-async fn the_server_says_when_and_how_to_answer() {
-	serve("prompt", i64::MAX, Concierge::default(), async |url| {
+async fn the_server_carries_data_and_the_skill_the_procedure() {
+	serve("contract", i64::MAX, Concierge::default(), async |url| {
 		let client = connect(&url, TOKEN).await;
-		let instructions = client.peer_info().unwrap().instructions.clone().unwrap();
-		assert!(instructions.contains("GBP") && instructions.contains("**sources**"), "{instructions}");
-		let res = client.get_prompt(GetPromptRequestParams::new("ask")).await.unwrap();
-		let text = res.messages.iter().map(|m| m.content.as_text().unwrap().text.as_str()).collect::<String>();
-		assert!(text.contains("**sources**") && !text.contains("DECAY_DAYS"), "{text}");
+		let info = client.peer_info().unwrap();
+		let instructions = info.instructions.clone().unwrap();
+		assert!(instructions.contains("`service-arb` skill") && instructions.len() <= 512, "{instructions}");
+		assert!(!instructions.contains("**sources**") && !instructions.contains("effective"), "{instructions}");
+		assert!(info.capabilities.prompts.is_none());
+
+		let tools = client.list_all_tools().await.unwrap();
+		let description = |name: &str| tools.iter().find(|t| t.name == name).unwrap().description.clone().unwrap();
+		let search = description("search");
+		assert!(search.contains("tested myself") && search.contains("Eric"), "{search}");
+		let guide = description("guide");
+		assert!(guide.contains("verification: video") && guide.contains("experts: "), "{guide}");
+
+		let (text, error) = call(&client, "search", json!({ "pattern": "Magisk" })).await;
+		assert!(!error, "{text}");
+		let label = text.lines().next().unwrap();
+		assert!(label.contains("effective "), "{label}");
+
+		let (text, error) = call(&client, "search", json!({ "pattern": "the" })).await;
+		assert!(error && text.lines().filter(|l| l.starts_with("- ref/") || l.starts_with("- structured/")).count() >= 2, "{text}");
 	})
 	.await;
 }
@@ -64,7 +80,7 @@ async fn the_server_says_when_and_how_to_answer() {
 async fn quota_overrun_is_429() {
 	serve("quota", 1, Concierge::default(), async |url| {
 		let client = connect(&url, TOKEN).await;
-		call(&client, "guide", json!({ "section": "reviews" })).await;
+		call(&client, "guide", json!({ "area": "reviews" })).await;
 		let res = reqwest::Client::new()
 			.post(format!("{url}{BASE}"))
 			.bearer_auth(TOKEN)
@@ -360,7 +376,7 @@ async fn a_code_is_issued_only_on_consent() {
 			.await
 			.unwrap();
 		let client = connect(&url, tokens["access_token"].as_str().unwrap()).await;
-		let (text, error) = call(&client, "guide", json!({ "section": "reviews" })).await;
+		let (text, error) = call(&client, "guide", json!({ "area": "reviews" })).await;
 		assert!(!error, "{text}");
 	})
 	.await;

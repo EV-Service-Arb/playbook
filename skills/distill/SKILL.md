@@ -11,8 +11,7 @@ Claims go to `structured/suggested/`, in [the block format](../../structured/REA
   [Overview](../../docs/ARCHITECTURE.md#overview), not where the source happened to say it
 - a claim already present joins its citation run. It never becomes a second bullet
 - a contradiction is [resolved](../ingest/resolve.md). Nothing is deleted
-- a new block goes into [Blocks](../../docs/ARCHITECTURE.md#blocks)' tree and the topic list in
-  [the member skill](../service-arb/SKILL.md)
+- a new block goes into [Blocks](../../docs/ARCHITECTURE.md#blocks)' tree
 - loom names no speakers. Who said it comes from what is said: names, roles, who answers whom
 - a digested summary is our reading, not the source. Cite the transcript
 - a second inside a chapter is the untitled header above the claim in the capture's last commit before

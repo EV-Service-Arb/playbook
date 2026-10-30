@@ -1,0 +1,28 @@
+# ChatGPT takes a skill only as an uploaded zip, its folder named after the skill. One release keeps
+# the latest, so the install docs link a URL that never moves.
+name: Skill zip
+on:
+  push:
+    branches: [main]
+    paths:
+      - "plugin/**"
+concurrency:
+  group: skill-zip
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  zip:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish service-arb.zip
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          (cd plugin/skills && zip -r "$RUNNER_TEMP/service-arb.zip" service-arb)
+          tag=service-arb-skill
+          gh release view "$tag" >/dev/null 2>&1 || gh release create "$tag" --title "service-arb skill" --notes "The service-arb skill, for clients that take a skill as an upload. Rebuilt on every change to plugin/." --latest=false
+          gh release upload "$tag" "$RUNNER_TEMP/service-arb.zip" --clobber

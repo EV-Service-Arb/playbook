@@ -1,4 +1,4 @@
-# fulfilment
+# fulfilment: contractors, splits, getting paid
 
 ## what matters
 - *plumbing*: the contractor's qualification counts as much as the split. a master plumber can be worth a 40/60 split in his favour

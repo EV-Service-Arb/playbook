@@ -1,4 +1,4 @@
-# experts
+# experts: who to refer someone to, and when not to
 
 ## when
 - a person is a lead when asking them gets what the corpus does not hold: they ran it themselves, and the corpus has only the slice of it they said out loud
@@ -14,7 +14,6 @@
 - someone with no handle can still be named. say where to find them
 
 ## people
-Source: the rolodex, `ServiceArb` tag. When someone helps or shares, raise their number. When they ignore an ask, lower it.
 
 | who | reach | proven at | available |
 |---|---|---|---|

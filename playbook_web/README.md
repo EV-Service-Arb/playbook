@@ -1,30 +1,29 @@
 # playbook_web
 
-The playbook for members: a remote MCP server that answers from `skills/service-arb/`, `structured/{approved,suggested}/`
+The playbook's data for members: a remote MCP server that answers from `guides/`, `structured/{approved,suggested}/`
 and `ref/**/*.md`, in slices, to the Service-Arb members holding `sa:playbook:mcp:use`. `build.rs` bakes that text
 into the binary, so the server reads nothing from disk per request and nothing else of the repo
 reaches the image. `ref/cases/` states no source and no date, so it stays out.
 
-```
-claude mcp add --transport http service-arb https://sa.evinvest.ltd/playbook_mcp
-```
+Its tools are the instruments of the `service-arb` skill, which `plugin/` ships with this server's address
+(`docs/ARCHITECTURE.md#answering`).
 
 ## Tools
 
 | tool | returns |
 |---|---|
-| `search(pattern, scope?, screen?)` | case-insensitive regex hits, each with path:line, header, date, reliability and source URL, two per file. Each kind (notes, course, calls, videos, texts) has its own slots and slots it leaves empty go to the others. Within a kind, chunks rank by which alternatives of the pattern they hold, rare ones weighing more (BM25's idf, each term present or not). The files past the slots are listed by path:line. `screen` searches what recordings showed instead of what was said. A pattern hitting 40% of the files in scope is refused |
+| `search(pattern, scope?, screen?)` | case-insensitive regex hits, each with path:line, header, label and source URL, two per file. Each kind (notes, course, calls, videos, texts) has its own slots and slots it leaves empty go to the others. Within a kind, chunks rank by which alternatives of the pattern they hold, rare ones weighing more (BM25's idf, each term present or not). The files past the slots are listed by path:line. `screen` searches what recordings showed instead of what was said. A pattern hitting 40% of the files in scope is refused, naming the directories below the scope it hits and how much of each |
 | `read(path, header, line?)` | one `###` chapter of a capture or one `##` section of a note, never a whole file |
-| `guide(section)` | one `skills/service-arb/sections/<section>.md` |
+| `guide(area)` | one `guides/<area>.md` |
 
-| prompt | |
-|---|---|
-| `ask` | `## Answering`, for the rest of the conversation: the member's explicit way in. Claude Code lists it as `/mcp__service-arb__ask`, and passes a prompt only the first word typed after it, so it takes none |
+A label is who said it, their base, the date and the effective reliability, all from the same
+`Doc::effective` that ranks. A call's base is its speaker's, so its label gives the date and the age
+term instead. `search`'s description carries the base tables, which `build.rs` reads out of
+`docs/ARCHITECTURE.md#reliability`; `guide`'s lists each guide by its opening line,
+`# <area>: <what it covers>`.
 
-The server's `instructions` are `SKILL.md`'s `description`, which says when in the words members ask
-with, and its `## Answering`, held to 2,048 characters at build time. claude.ai shows the model a
-connector's tool names alone and never its instructions, so the rules that matter most are repeated
-in `search`'s description, and in full in `ask`.
+The `instructions` are one sentence naming the skill: Codex and ChatGPT read only their first 512
+characters, and claude.ai none. The server has no prompts.
 
 ## Sign-in
 
@@ -80,5 +79,5 @@ kubectl -n personal exec deploy/playbook-web -- sqlite3 /data/mcp.db \
 ```
 
 `calls`: `at` (unix seconds), `sub` (concierge's user id), `email`, `tool`, `args` (json), `ids` (the `path:line` of each hit
-returned, or the section), `bytes` (what the member got back), `error`. The full schema is
+returned, or the guide), `bytes` (what the member got back), `error`. The full schema is
 `src/schema.sql`; `calls_va_sso` is the log from before concierge, by email.

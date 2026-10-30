@@ -1,10 +1,11 @@
-The playbook is a remote MCP server at `https://sa.evinvest.ltd/playbook_mcp`, behind the
-Service-Arb panel. Any member granted `sa:playbook:mcp:use` can connect it to Claude Code, Codex,
-claude.ai or ChatGPT. Nothing is installed locally, and there is no key to copy between devices: each device
-signs in through the panel in the browser.
+The playbook is the `service-arb` plugin: a skill that says how to answer, and the `playbook`
+server it answers from, a remote MCP server at `https://sa.evinvest.ltd/playbook_mcp` behind the
+Service-Arb panel. Any member granted `sa:playbook:mcp:use` can install it in Claude Code, Codex,
+claude.ai or ChatGPT. There is no key to copy between devices: each one signs in through the panel
+in the browser.
 
 ```
-member: add service-arb in a client ──► browser: sa.evinvest.ltd sign-in
+member: install service-arb in a client ──► browser: sa.evinvest.ltd sign-in
    no access yet ──► "Request access" ──► owner: Telegram ping → "Grant access" ──► the tab continues
    access ──► "Allow access" ──► back in the client, connected
 ```
@@ -22,7 +23,9 @@ client next has to sign in again.
 
 ## For members: connecting
 
-1. Add the server in your client: open its section below. Each one opens the sign-in in the browser.
+1. Install the plugin in your client: open its section below. Each one opens the sign-in in the browser.
+   A `service-arb` server you added by hand before the plugin goes: two copies of the same tools get
+   in each other's way.
 2. The browser opens `sa.evinvest.ltd`. Sign in with Google if asked (any account; the first sign-in
    creates it). Without access yet, press **Request access** and keep the tab open: it moves on by
    itself once the owner grants it. Then press **Allow access** on the page naming your client.
@@ -37,4 +40,7 @@ client next has to sign in again.
 | the client reports `access_denied` | **Cancel** was pressed. Sign in again |
 | the client asks you to sign in again | normal: sign-in lasts 30 days. Sign in again |
 | "…has used today's … bytes" (429) | the daily reading budget is spent; it resets at 00:00 UTC |
-| an old `sa.valeratrades.com` or `service-arb.valeratrades.com` entry | that address is gone: remove it (`claude mcp remove service-arb`, `codex mcp remove service-arb`, or delete the connector), then step 1 |
+| the playbook's tools listed twice, under `service-arb` and under `playbook` | a server added by hand before the plugin is still there: `claude mcp remove service-arb`, `codex mcp remove service-arb`, or delete the `Service Arb` connector |
+| Claude Code lists both `service-arb@ev-service-arb` and `service-arb@synced` | installed in Claude Code and on claude.ai both: `claude plugin uninstall service-arb@ev-service-arb` |
+| an old `sa.valeratrades.com` or `service-arb.valeratrades.com` entry | that address is gone: remove it as in the row above, then step 1 |
+| answers that ignore the playbook's sources | the skill is not installed or not on: in ChatGPT without Skills, see its section |

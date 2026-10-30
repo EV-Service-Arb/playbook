@@ -16,7 +16,6 @@
         rs = v_flakes.rs {
           inherit pkgs rust;
           build.enable = false; # playbook_web's build.rs bakes the corpus; the root is a virtual workspace
-          style.modules.join_split_impls = false; # it folds rmcp's `#[prompt_router]` impl into the `#[tool_router]` one
         };
         github = v_flakes.github {
           inherit pkgs rs;
@@ -38,7 +37,7 @@
         combined = v_flakes.utils.combine { inherit rust; modules = [ rs github readme ]; };
 
         port = "59082";
-        # the member surface; build.rs bakes in skills/service-arb/, structured/{approved,suggested}/ and ref/**/*.md, and nothing else of the tree reaches the image
+        # the member surface; build.rs bakes in guides/, structured/{approved,suggested}/ and ref/**/*.md, and nothing else of the tree reaches the image
         build_rust = v_flakes.rs.build_nightly system;
         playbook_web = (pkgs.makeRustPlatform { rustc = build_rust; cargo = build_rust; }).buildRustPackage {
           pname = "playbook_web";
@@ -50,7 +49,8 @@
               ./Cargo.lock
               ./playbook # a workspace member, so cargo reads its manifest; build.rs inlines cite_check.rs's DECAY_DAYS
               ./playbook_web
-              ./skills/service-arb
+              ./docs/ARCHITECTURE.md # build.rs inlines its reliability tables into `search`'s description
+              ./guides
               ./structured/approved
               ./structured/suggested
               (pkgs.lib.fileset.fileFilter (f: f.hasExt "md") ./ref)
@@ -117,7 +117,7 @@
 
         apps.mcp-sandbox = {
           type = "app";
-          meta.description = "your Claude Code without service-arb, to onboard as a new member (--keep resumes)";
+          meta.description = "your Claude Code without the service-arb plugin, to onboard as a new member (--keep resumes)";
           program = "${pkgs.writeShellApplication {
             name = "mcp-sandbox";
             runtimeInputs = [ pkgs.git pkgs.jq pkgs.chromium ]; # claude comes from the caller's PATH

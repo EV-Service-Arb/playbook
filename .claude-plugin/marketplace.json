@@ -1,0 +1,11 @@
+{
+  "name": "ev-service-arb",
+  "owner": { "name": "EV-Service-Arb" },
+  "plugins": [
+    {
+      "name": "service-arb",
+      "source": "./plugin",
+      "description": "Answers service-arbitrage questions out of the Service-Arb playbook, citing the dated source of each claim"
+    }
+  ]
+}

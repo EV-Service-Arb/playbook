@@ -3,12 +3,9 @@ use std::sync::Arc;
 use axum::http::request::Parts;
 use rmcp::{
 	ErrorData as McpError, RoleServer, ServerHandler,
-	handler::server::{
-		router::{prompt::PromptRouter, tool::ToolRouter},
-		wrapper::Parameters,
-	},
+	handler::server::{router::tool::ToolRouter, wrapper::Parameters},
 	model::*,
-	prompt, prompt_handler, prompt_router, schemars,
+	schemars,
 	service::RequestContext,
 	tool, tool_handler, tool_router,
 };
@@ -16,16 +13,16 @@ use serde::{Deserialize, Serialize};
 
 use crate::{
 	Member, State,
-	corpus::{ANSWERING, CORPUS, Found, GUIDE_DESCRIPTION, INSTRUCTIONS},
+	corpus::{CORPUS, Found, GUIDE_DESCRIPTION, SEARCH_DESCRIPTION},
 	now,
 };
 
-/// claude.ai drops a connector's `instructions`, so the rules that matter most ride here too
-const SEARCH_DESCRIPTION: &str = "Case-insensitive regex over the service-arb playbook. Each kind of source has its own slots, so none crowds out another: structured/approved and structured/suggested notes, the course (lessons and the recordings they link), calls, Eric's videos, texts. Within a kind, a passage holding the rarer of your alternatives ranks first. Each hit gives path:line, its header, the date and reliability, the source URL and the lines around it; the files past the slots follow as path:line, for `read`. Search the words a speaker would say, alternated: `review(s)? (a|per) day|reviews? daily`. The course outranks any call. A member's failure story is an anecdote, not a rule. Newest wins only between equal sources. When nothing answers, say the corpus does not cover it.";
+/// Codex and ChatGPT read the first 512 characters; claude.ai none
+const INSTRUCTIONS: &str = "The service-arb playbook: dated, sourced knowledge on running Google Business Profiles into subcontracted trade work, used through the `service-arb` skill, which https://github.com/EV-Service-Arb/playbook installs.";
 
 #[derive(Deserialize, Serialize, schemars::JsonSchema)]
 pub struct SearchArgs {
-	/// a regex, case-insensitive. Alternate synonyms and likely mis-transcriptions with `|`
+	/// a regex, case-insensitive; each `|` alternative is scored on its own
 	pattern: String,
 	/// a path prefix to search under, e.g. `ref/loom` or `structured/approved/profile`
 	scope: Option<String>,
@@ -45,14 +42,14 @@ pub struct ReadArgs {
 
 #[derive(Deserialize, Serialize, schemars::JsonSchema)]
 pub struct GuideArgs {
-	section: String,
+	/// one of the guides listed
+	area: String,
 }
 
 #[derive(Clone)]
 pub struct Playbook {
 	state: Arc<State>,
 	tool_router: ToolRouter<Self>,
-	prompt_router: PromptRouter<Self>,
 }
 
 #[tool_router]
@@ -61,7 +58,6 @@ impl Playbook {
 		Self {
 			state,
 			tool_router: Self::tool_router(),
-			prompt_router: Self::prompt_router(),
 		}
 	}
 
@@ -80,7 +76,7 @@ impl Playbook {
 
 	#[tool(description = GUIDE_DESCRIPTION, annotations(read_only_hint = true, open_world_hint = false))]
 	async fn guide(&self, Parameters(args): Parameters<GuideArgs>, ctx: RequestContext<RoleServer>) -> Result<CallToolResult, McpError> {
-		Ok(self.answer(&ctx, "guide", &args, CORPUS.guide(&args.section)))
+		Ok(self.answer(&ctx, "guide", &args, CORPUS.guide(&args.area)))
 	}
 
 	fn answer(&self, ctx: &RequestContext<RoleServer>, tool: &str, args: &impl Serialize, found: Result<Found, String>) -> CallToolResult {
@@ -106,24 +102,10 @@ impl Playbook {
 	}
 }
 
-/// a member's explicit way in, for clients that hide the tools until they decide to look. No argument: Claude Code
-/// passes a prompt only the first word typed after it
-#[prompt_router]
-impl Playbook {
-	#[prompt(description = "Answer this conversation's questions out of the service-arb playbook, never from general knowledge")]
-	async fn ask(&self) -> Vec<PromptMessage> {
-		vec![PromptMessage::new_text(
-			Role::User,
-			format!("Answer my questions in this conversation out of the service-arb playbook, through its `guide`, `search` and `read` tools, never from general knowledge.\n\n{ANSWERING}"),
-		)]
-	}
-}
-
 #[tool_handler(router = self.tool_router)]
-#[prompt_handler(router = self.prompt_router)]
 impl ServerHandler for Playbook {
 	fn get_info(&self) -> ServerConfig {
-		ServerConfig::new(ServerCapabilities::builder().enable_tools().enable_prompts().build())
+		ServerConfig::new(ServerCapabilities::builder().enable_tools().build())
 			.with_server_info(Implementation::from_build_env())
 			.with_protocol_version(ProtocolVersion::V_2026_07_28)
 			.with_instructions(INSTRUCTIONS)

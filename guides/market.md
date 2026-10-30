@@ -1,4 +1,4 @@
-# market
+# market: which trade, which city, whether to enter
 
 ## what matters
 - search volume: at least 700 monthly searches in the area you position for
@@ -16,4 +16,4 @@
 - pick the city by the two numbers above, and only then the trade inside it // inferred
 
 ## when it goes wrong
-- a niche that won't fulfil still makes calls. sell them rather than drop them, see [conversion](conversion.md) // inferred
+- a niche that won't fulfil still makes calls. sell them rather than drop them, see the `conversion` guide // inferred

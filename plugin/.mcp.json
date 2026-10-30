@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "playbook": {
+      "type": "http",
+      "url": "https://sa.evinvest.ltd/playbook_mcp",
+      "alwaysLoad": true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "service-arb",
+  "description": "Answers service-arbitrage questions out of the Service-Arb playbook, citing the dated source of each claim",
+  "author": { "name": "EV-Service-Arb" },
+  "homepage": "https://github.com/EV-Service-Arb/playbook",
+  "repository": "https://github.com/EV-Service-Arb/playbook"
+}

@@ -1,4 +1,4 @@
-//! Bakes the corpus and the connect pages' stylesheet into the binary: the server reads nothing from
+//! Bakes the corpus, the guides and the connect pages' stylesheet into the binary: the server reads nothing from
 //! disk per request, and the image carries only what is listed here (docs/ARCHITECTURE.md, Invariants).
 
 use std::{
@@ -10,31 +10,46 @@ use std::{
 
 use sha2::{Digest, Sha256};
 
-const INSTRUCTIONS_MAX: usize = 2048; // Claude Code truncates server instructions past this
-
 fn main() {
-	let root = PathBuf::from(std::env::var("CARGO_MANIFEST_DIR").unwrap()).parent().expect("playbook_web/ sits in the workspace root").to_path_buf();
+	let root = PathBuf::from(std::env::var("CARGO_MANIFEST_DIR").unwrap())
+		.parent()
+		.expect("playbook_web/ sits in the workspace root")
+		.to_path_buf();
 	let mut files = Vec::new();
-	for dir in ["skills/service-arb/sections", "structured/approved", "structured/suggested", "ref"] {
+	for dir in ["guides", "structured/approved", "structured/suggested", "ref"] {
 		println!("cargo:rerun-if-changed={}", root.join(dir).display());
 		walk(&root.join(dir), &mut files);
 	}
-	let skill = root.join("skills/service-arb/SKILL.md");
-	println!("cargo:rerun-if-changed={}", skill.display());
 	files.sort();
 
 	let mut out = String::from("pub static FILES: &[(&str, &str)] = &[\n");
-	let mut sections = Vec::new();
+	let mut guides = Vec::new();
 	for f in &files {
 		let rel = f.strip_prefix(&root).unwrap().to_str().expect("corpus paths are utf-8");
-		if let Some(name) = rel.strip_prefix("skills/service-arb/sections/") {
-			sections.push(name.trim_end_matches(".md").to_owned());
+		if let Some(name) = rel.strip_prefix("guides/") {
+			let name = name.trim_end_matches(".md");
+			let text = fs::read_to_string(f).unwrap();
+			let covers = text
+				.lines()
+				.next()
+				.and_then(|l| l.strip_prefix(&format!("# {name}: ")))
+				.unwrap_or_else(|| panic!("{rel} opens `# {name}: <what it covers>`"));
+			guides.push(format!("- {name}: {covers}"));
 		}
 		writeln!(out, "\t({rel:?}, include_str!({:?})),", f.display().to_string()).unwrap();
 	}
 	out.push_str("];\n");
+	writeln!(
+		out,
+		"pub const GUIDE_DESCRIPTION: &str = {:?};",
+		format!(
+			"One guide, whole: how to decide in one area, as what matters, how to decide, and what to do when it goes wrong. Lines ending `// inferred` are drafted, not yet vetted. The guides:\n{}",
+			guides.join("\n")
+		)
+	)
+	.unwrap();
 
-	// the image carries no code, so the decay the skill links to is inlined
+	// the image carries no code and no docs, so what the ranking and its labels take from them is inlined
 	let cite_check = root.join("playbook/src/cite_check.rs");
 	println!("cargo:rerun-if-changed={}", cite_check.display());
 	let cite_check = fs::read_to_string(&cite_check).unwrap();
@@ -43,19 +58,33 @@ fn main() {
 		.find_map(|l| l.strip_prefix("const DECAY_DAYS: f64 = ")?.strip_suffix(".;"))
 		.expect("cite_check.rs states `const DECAY_DAYS: f64 = <n>.;`");
 	writeln!(out, "const DECAY_DAYS: f64 = {decay_days}.;").unwrap();
-	let skill = fs::read_to_string(&skill).unwrap();
-	let description = skill.lines().find_map(|l| l.strip_prefix("description: ")).expect("SKILL.md's frontmatter has a `description:`");
-	let decay_link = "[`DECAY_DAYS`](../../playbook/src/cite_check.rs)";
-	let answering = section(&skill, "## Answering");
-	assert!(answering.contains(decay_link), "SKILL.md's `## Answering` no longer links {decay_link}");
-	let answering = answering.replace(decay_link, decay_days);
-	let instructions = format!("{description}\n\n{answering}"); // the description is the when, in the words a member asks with
-	assert!(instructions.len() <= INSTRUCTIONS_MAX, "SKILL.md's description + `## Answering` is {} chars, over {INSTRUCTIONS_MAX}", instructions.len());
-	writeln!(out, "pub const INSTRUCTIONS: &str = {instructions:?};").unwrap();
-	writeln!(out, "pub const ANSWERING: &str = {answering:?};").unwrap();
-	writeln!(out, "pub const GUIDE_DESCRIPTION: &str = {:?};", format!(
-		"How to decide, for one area: what matters, how to choose, what to do when it goes wrong. Read the matching one before advising rather than quoting. Sections: {}.",
-		sections.join(", ")
+	let architecture = root.join("docs/ARCHITECTURE.md");
+	println!("cargo:rerun-if-changed={}", architecture.display());
+	let architecture = fs::read_to_string(&architecture).unwrap();
+	let reliability = architecture.split_once("\n## Reliability\n").expect("docs/ARCHITECTURE.md has `## Reliability`").1;
+	let reliability = &reliability[..reliability.find("\n## ").unwrap_or(reliability.len())];
+	let (mut roles, mut people, mut in_people) = (Vec::new(), Vec::new(), false);
+	for l in reliability.lines() {
+		in_people |= l.contains("id=\"people\"");
+		let cells: Vec<&str> = l.split('|').map(str::trim).collect();
+		let [_, base, who, _] = cells[..] else { continue };
+		let Ok(base) = base.parse::<u8>() else { continue }; // the header and its rule
+		let who = who.replace(['[', ']'], "");
+		match in_people {
+			false => roles.push(format!("{base} {who}")),
+			true => people.push((who, base)),
+		}
+	}
+	assert!(
+		!roles.is_empty() && !people.is_empty(),
+		"docs/ARCHITECTURE.md#reliability holds the role table, then the people table"
+	);
+	writeln!(out, "const PEOPLE: &[(&str, u8)] = &{people:?};").unwrap();
+	let people: Vec<String> = people.iter().map(|(who, base)| format!("{base} {who}")).collect();
+	writeln!(out, "pub const SEARCH_DESCRIPTION: &str = {:?};", format!(
+		"Case-insensitive regex over the service-arb playbook. Each kind of source has its own slots, so none crowds out another: structured/approved and structured/suggested notes, the course (lessons and the recordings they link), calls, videos, texts. Within a kind, a passage holding the rarer of the pattern's alternatives ranks first. Each hit gives path:line, its header, its label, the source URL and the lines around it; the files past the slots follow as path:line, for `read`. A pattern hitting most of the scope is refused, with the sub-scopes it hits.\n\nA label is who said it, their base reliability, the date, and the effective reliability: base plus age, lower is better, 10 at most and as good as nothing. A call's base is its speaker's, so its label gives the age term to add to it instead.\n\nBase by role: {}.\nBase by person, whatever their role: {}.",
+		roles.join(" · "),
+		people.join(" · ")
 	))
 	.unwrap();
 
@@ -70,7 +99,10 @@ fn stylesheet(pages: &Path, out: &Path) {
 	println!("cargo:rerun-if-changed={}", pages.display());
 	fs::write(out.join("uikit-classes.txt"), ev_lib_classes::CLASS_INVENTORY).unwrap();
 	fs::write(out.join("tokens.css"), ev_lib_classes::TOKENS_CSS).unwrap();
-	let entry = format!("@import \"tailwindcss\";\n@import \"./tokens.css\";\n@source \"./uikit-classes.txt\";\n@source {:?};\n", pages.display().to_string());
+	let entry = format!(
+		"@import \"tailwindcss\";\n@import \"./tokens.css\";\n@source \"./uikit-classes.txt\";\n@source {:?};\n",
+		pages.display().to_string()
+	);
 	fs::write(out.join("entry.css"), entry).unwrap();
 	let css = out.join("connect.css");
 	let status = Command::new("tailwindcss")
@@ -86,16 +118,12 @@ fn stylesheet(pages: &Path, out: &Path) {
 	let hash: String = hash[..8].iter().map(|b| format!("{b:02x}")).collect();
 	fs::write(
 		out.join("stylesheet.rs"),
-		format!("pub(crate) const CSS: &str = include_str!({:?});\npub(crate) const CSS_FILE: &str = \"connect.{hash}.css\";\n", css.display().to_string()),
+		format!(
+			"pub(crate) const CSS: &str = include_str!({:?});\npub(crate) const CSS_FILE: &str = \"connect.{hash}.css\";\n",
+			css.display().to_string()
+		),
 	)
 	.unwrap();
-}
-
-/// The text under `header`, up to the next header.
-fn section<'a>(md: &'a str, header: &str) -> &'a str {
-	let start = md.find(&format!("\n{header}\n")).unwrap_or_else(|| panic!("SKILL.md has no `{header}`")) + header.len() + 2;
-	let rest = &md[start..];
-	rest[..rest.find("\n#").unwrap_or(rest.len())].trim()
 }
 
 /// `README.md`s are indices and format rules, not knowledge. `ref/cases/` states no source and no date.
