@@ -167,11 +167,16 @@ enum Decision {
 }
 
 /// The panel's assertion on this request.
-fn member(state: &State, headers: &HeaderMap, method: &Method, uri: &Uri) -> Result<sa_auth::Assertion, Response> {
+fn member(state: &State, headers: &HeaderMap, method: &Method, uri: &Uri) -> Result<sa_auth::User, Response> {
 	let refused = |reason: &str| pages::trouble(StatusCode::UNAUTHORIZED, Trouble::Unverified, &state.config.public_url, reason);
 	let token = headers.get(sa_auth::HEADER).ok_or_else(|| refused("no assertion from the panel"))?;
 	let token = token.to_str().map_err(|_| refused("the panel's assertion is not ascii"))?;
-	sa_auth::verify(&state.config.panel_keys, token, sa_auth::Service::Playbook, method.as_str(), uri.path(), now()).map_err(|e| refused(&format!("the panel's assertion is refused: {e}")))
+	let assertion = sa_auth::verify(&state.config.panel_keys, token, sa_auth::Service::Playbook, method.as_str(), uri.path(), None, now())
+		.map_err(|e| refused(&format!("the panel's assertion is refused: {e}")))?;
+	match assertion.principal {
+		sa_auth::Principal::User(user) => Ok(user),
+		sa_auth::Principal::Source(_) | sa_auth::Principal::Conductor => Err(refused("the panel's assertion names no member")),
+	}
 }
 
 /// Asks the member to confirm; the code is issued by the form's POST, never here. The client is

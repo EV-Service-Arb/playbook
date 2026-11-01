@@ -23,7 +23,7 @@ regex-syntax = "0.8.11"
 reqwest = { version = "0.13.5", default-features = false, features = ["rustls", "json", "form"] }
 rmcp = { version = "3.4.1", features = ["server", "macros", "transport-streamable-http-server"] }
 rusqlite = { version = "0.39", features = ["bundled"] } # shortcut: held below 0.40 because sqlx-sqlite 0.9 (evconcierge_projection's store) needs libsqlite3-sys <0.38 and both link sqlite3; bump once sqlx-sqlite admits 0.38
-sa_auth = { git = "https://github.com/Service-Arb/panel", rev = "08ef71573c1c3eddaece8f5327cb3e76cbe7b761" }
+sa_auth = { path = "/home/v/s/ev/_sa/panel/.claude/worktrees/sa-auth-principal/crates/sa_auth" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 sha2 = "0.10"

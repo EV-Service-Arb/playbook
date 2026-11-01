@@ -681,11 +681,13 @@ fn assertion(key: &str, sub: &str, method: &str, may_use: bool) -> String {
 	let signer: sa_auth::Signer = key.parse().unwrap();
 	signer.sign(&sa_auth::Assertion {
 		aud: sa_auth::Service::Playbook,
-		sub: sub.into(),
-		email: MEMBER.into(),
-		email_verified: true,
-		name: "M".into(),
-		permissions: may_use.then(|| sa_auth::Mcp::Use.as_str()).into_iter().collect(),
+		principal: sa_auth::Principal::User(sa_auth::User {
+			sub: sub.into(),
+			email: MEMBER.into(),
+			email_verified: true,
+			name: "M".into(),
+			permissions: may_use.then(|| sa_auth::Mcp::Use.as_str()).into_iter().collect(),
+		}),
 		method: method.into(),
 		path: format!("{BASE}/authorize"),
 		exp: i64::try_from(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs()).unwrap() + sa_auth::TTL,
