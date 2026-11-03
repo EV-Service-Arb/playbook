@@ -4,6 +4,8 @@
   };
   outputs = { self, v_flakes }:
     let
+      # the first of this repository's ten in SA_PORT_RANGE: site_conductor's docs/port_range.md
+      SA_PORTS = 52830;
       inherit (v_flakes) flake-utils pre-commit-hooks;
     in
     flake-utils.lib.eachDefaultSystem (
@@ -130,7 +132,7 @@
             cp -f ${v_flakes.files.treefmt { inherit pkgs; }} ./.treefmt.toml
           '';
           packages = [ rust pkgs.sqlite pkgs.tailwindcss_4 pkgs.cargo-insta ] ++ pre-commit-check.enabledPackages ++ combined.enabledPackages;
-          env.PORT = port;
+          env.PORT = toString SA_PORTS;
         };
       }
     );
