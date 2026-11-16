@@ -5,33 +5,6 @@
 - uploaded: 2026-09-04
 - duration: 00:13:24
 - pulled by: `scripts/yt-pull.rs`
-- read by: `gpt-5.6-luna` summary and chapters, nothing shown: `gpt-5.6-luna` named no span where something is
-- cost: $0.0025
-
-## summary
-
-- The process targets 5–10 daily inbound leads and closes roughly 60–70%, using organic Google Business Profiles; the business reached $30,000 per month in two months and takes 40% of completed jobs.
-- Respond immediately to calls, forms, and messages; use a real-person VA once volume can support it, and contact form leads again by phone before texting.
-- Advance every call toward an inspection or booked job, typically charging a $50–$60 inspection fee, aiming for same-day service and a two-to-five-minute call.
-- Handle “I’ll call you back” by uncovering pricing concerns, explaining transparent inspection pricing, then confirm bookings and follow up persistently through calls and casual texts.
-- Emphasize human customer service, convenience, and high-demand, low-competition service areas; affluent customers may pay $50 more for reliability and respectful communication.
-
-## chapters
-
-- [00:00:00](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=0) lead volume and niche factors
-- [00:01:04](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=64) speed to lead
-- [00:01:38](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=98) organic google business strategy
-- [00:03:17](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=197) advancing the booking
-- [00:04:22](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=262) inspection fees and alternatives
-- [00:04:54](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=294) same-day booking process
-- [00:05:25](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=325) handling the call-back objection
-- [00:06:30](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=390) uncovering pricing concerns
-- [00:08:09](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=489) follow-ups and confirmations
-- [00:09:43](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=583) quotes, price matching, and tone
-- [00:10:49](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=649) human service and target markets
-- [00:11:54](https://www.youtube.com/watch?v=LILe5Fxvcbk&t=714) choosing service areas and scaling the model
-
-## shown
 
 ## description
 

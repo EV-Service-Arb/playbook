@@ -21,7 +21,7 @@ const ANSWER_MODEL: &str = "claude-sonnet-5-5";
 const JUDGE_MODEL: &str = "claude-sonnet-5-5";
 const PANEL_ASSERTION_KEYS: &str = "eval:WGZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmY="; // the Ed25519 base point; nobody signs in here
 /// What a side takes from its info rev; the rest of its tree is the system rev's.
-const INFO: [&str; 3] = ["knowledge/structured/approved", "knowledge/structured/suggested", "knowledge/references"];
+const INFO: &str = "knowledge";
 const OUT: &str = "/tmp/playbook-eval";
 
 /// Whether any case scored lower on this tree than on the old side.
@@ -185,10 +185,10 @@ fn build(root: &Path, side: &Side) -> PathBuf {
 	}
 	std::fs::create_dir_all(&dir).expect("target/ is writable");
 	extract(root, &side.system, &dir, &[]);
-	for d in INFO {
-		std::fs::remove_dir_all(dir.join(d)).unwrap_or_else(|e| panic!("{} has no {d}: {e}", side.system));
+	if side.info != side.system {
+		std::fs::remove_dir_all(dir.join(INFO)).unwrap_or_else(|e| panic!("{} has no {INFO}: {e}", side.system));
+		extract(root, &side.info, &dir, &[INFO]);
 	}
-	extract(root, &side.info, &dir, &INFO);
 
 	// shared, so the two sides build their dependencies once
 	let target = root.join("target/eval/cargo");

@@ -5,27 +5,6 @@
 - uploaded: 2026-10-01
 - duration: 00:13:52
 - pulled by: `scripts/yt-pull.rs`
-- read by: `gpt-5.6-luna` summary and chapters, nothing shown: `gpt-5.6-luna` named no span where something is
-- cost: $0.0020
-
-## summary
-
-- Keith, a 20-year-old college senior, describes starting his first business with $13 in his account, taking out a loan of a few thousand dollars, and joining Eric’s program in April.
-- After roughly two slow months, he reached $8,000, then $16,000, and $18,000 per month; his biggest day produced about $8,700 in revenue and $3,000 in profit with a plumber receiving 35%.
-- He operates 12 Google Business Profiles, with three main profiles generating nearly all leads and revenue; those profiles have about 90, 60, and 50 reviews, while the other profiles have roughly four to 10 each.
-- The business is largely automated: his primary plumber answers calls, allowing Keith to focus on college, though he says complacency is limiting further scaling and he wants to reach at least $50,000 per month by year-end.
-- His advice is to stop overthinking, follow the proven steps—including getting reviews—believe in yourself, accept failure, and take action; he says Eric’s organized, step-by-step course, meetings, and community accelerated his progress.
-
-## chapters
-
-- [00:00:00](https://www.youtube.com/watch?v=G_zkG_bofII&t=0) Introduction and background
-- [00:02:14](https://www.youtube.com/watch?v=G_zkG_bofII&t=134) Overcoming the slow start
-- [00:03:51](https://www.youtube.com/watch?v=G_zkG_bofII&t=231) Business structure and growth
-- [00:05:29](https://www.youtube.com/watch?v=G_zkG_bofII&t=329) Managing business in college
-- [00:07:23](https://www.youtube.com/watch?v=G_zkG_bofII&t=443) Personal and lifestyle shifts
-- [00:09:20](https://www.youtube.com/watch?v=G_zkG_bofII&t=560) Future goals and advice
-
-## shown
 
 ## description
 

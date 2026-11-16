@@ -1,9 +1,11 @@
 # playbook_web
 
-The playbook's data for members: a remote MCP server that answers from `guides/`, `knowledge/structured/{approved,suggested}/`
-and `knowledge/references/**/*.md`, in slices, to the Service-Arb members holding `sa:playbook:mcp:use`. `build.rs` bakes that text
-into the binary, so the server reads nothing from disk per request and nothing else of the repo
-reaches the image. `knowledge/references/cases/` states no source and no date, so it stays out.
+The playbook's data for members: a remote MCP server that answers from `knowledge/README.md`,
+`knowledge/structured/` and `knowledge/references/**/*.md`, in slices, to the Service-Arb members holding
+`sa:playbook:mcp:use`. `build.rs` runs `corpus::compile` over that text and bakes it and what it resolved
+into the binary, so the server reads nothing from disk per request, nothing else of the repo reaches the
+image, and nothing is served that fails a check. `knowledge/references/cases/` states no source and no
+date, so it stays out.
 
 Its tools are the instruments of the `service-arb` skill, which `plugin/` ships with this server's address
 (`docs/ARCHITECTURE.md#answering`).
@@ -12,15 +14,14 @@ Its tools are the instruments of the `service-arb` skill, which `plugin/` ships 
 
 | tool | returns |
 |---|---|
-| `search(pattern, scope?, screen?)` | case-insensitive regex hits, each with path:line, header, label and source URL, two per file. Each kind (notes, course, calls, videos, texts) has its own slots and slots it leaves empty go to the others. Within a kind, chunks rank by which alternatives of the pattern they hold, rare ones weighing more (BM25's idf, each term present or not). The files past the slots are listed by path:line. `screen` searches what recordings showed instead of what was said. A pattern hitting 40% of the files in scope is refused, naming the directories below the scope it hits and how much of each |
-| `read(path, header, line?)` | one `###` chapter of a capture or one `##` section of a note, never a whole file |
-| `guide(area)` | one `guides/<area>.md` |
+| `search(pattern, scope?, screen?)` | case-insensitive regex hits, each with path:line, header, label and source URL, two per file. Each kind (manual, course, calls, videos, texts) has its own slots and slots it leaves empty go to the others. Within a kind, chunks rank by which alternatives of the pattern they hold, rare ones weighing more (BM25's idf, each term present or not). The files past the slots are listed by path:line. `screen` searches what recordings showed instead of what was said. A pattern hitting 40% of the files in scope is refused, naming the directories below the scope it hits and how much of each |
+| `read(path, header, line?)` | one `###` chapter of a capture or a digest, or one `##` section of a page, never a whole file |
+| `guide(area)` | one page of the manual, or `people` |
 
-A label is who said it, their base, the date and the effective reliability, all from the same
-`Doc::effective` that ranks. A call's base is its speaker's, so its label gives the date and the age
-term instead. `search`'s description carries the base tables, which `build.rs` reads out of
-`docs/ARCHITECTURE.md#reliability`; `guide`'s lists each guide by its opening line,
-`# <area>: <what it covers>`.
+A label is who backs the line, how they know, when the information is from and what that is worth
+today: `Cited::label`, over what `corpus::compile` resolved, with `corpus::gamma` applied at the moment
+of the call (`docs/spec/trust.md`). Wherever a citation line is printed, it is printed as that label. A
+line nothing attributes says `unscored`. `guide`'s description lists each page by its topic line.
 
 The `instructions` are one sentence naming the skill: Codex and ChatGPT read only their first 512
 characters, and claude.ai none. The server has no prompts.

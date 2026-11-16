@@ -6,11 +6,10 @@ on:
   push:
     branches: [main]
     paths:
-      - "guides/**"
-      - "docs/ARCHITECTURE.md"
-      - "knowledge/structured/approved/**"
-      - "knowledge/structured/suggested/**"
+      - "knowledge/README.md"
+      - "knowledge/structured/**"
       - "knowledge/references/**/*.md"
+      - "corpus/**"
       - "playbook_web/**"
       - "Cargo.lock"
 concurrency:

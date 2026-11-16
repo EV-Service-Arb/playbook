@@ -193,9 +193,9 @@ The skill's instruments, the `playbook` server's tools:
 
 | tool | returns |
 |---|---|
-| `search(pattern, scope?, screen?)` | matching passages: approved notes first, then suggested, the course, then calls, videos and texts, each kind in its own slots, each labelled with who said it and how reliable it is |
-| `read(path, header, line?)` | one chapter of a capture or one section of a note |
-| `guide(area)` | how to decide in one area (`reviews`, `verification`, …) |
+| `search(pattern, scope?, screen?)` | matching passages: the manual first, then the course, then calls, videos and texts, each kind in its own slots, each labelled with who backs it and what that is worth today |
+| `read(path, header, line?)` | one chapter of a capture or one section of a manual page |
+| `guide(area)` | one page of the manual (`reviews`, `profile/verification`, …), or `people` |
 
 
 

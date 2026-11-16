@@ -91,6 +91,15 @@ async fn watch(path: &Path, media: &Path, pick: Pick) -> Option<f64> {
 		about: capture.summary.clone(),
 		frames: kept.join("frames"),
 	};
+	shown(path, &capture.source, media, spec, "playbook watch").await
+}
+
+/// `spec` read off `media` into `<capture>/shown.md`, its frames in `<capture>/frames/`. What it cost;
+/// `None` for a recording with no picture.
+pub(crate) async fn shown(path: &Path, source: &str, media: &Path, spec: Watch, writer: &str) -> Option<f64> {
+	let kept = path.with_extension("");
+	assert_eq!(spec.frames, kept.join("frames"), "`shown.md` links its frames as `frames/<secs>.jpg`");
+	let (title, footage, pick) = (spec.title.clone(), spec.footage, spec.pick);
 	let watched = Client::default()
 		.model(Model::Video)
 		.watch(media, spec)
@@ -108,29 +117,30 @@ async fn watch(path: &Path, media: &Path, pick: Pick) -> Option<f64> {
 	};
 	let cost = watched.cost_cents as f64 / 100.;
 
-	let seek = match capture.source.contains("vimeo.com") {
-		true => "#t=",
-		false => "?t=",
+	let seek = match () {
+		_ if source.contains("youtube.com/watch") => "&t=",
+		_ if source.contains("vimeo.com") => "#t=",
+		_ => "?t=",
 	};
 	let today = String::from_utf8(Command::new("date").arg("+%F").output().expect("date runs").stdout).expect("date prints ascii");
 	// not `source:`, which would make this a second capture of the recording
 	let name = path.file_name().expect("a capture has a name").to_string_lossy();
 	let mut out = format!(
-		"# shown: {}\n\n\
+		"# shown: {title}\n\n\
 		 - capture: [{name}](../{name})\n\
-		 - watched by: {watched_by} · `playbook watch`\n\
+		 - watched by: {watched_by} · `{writer}`\n\
 		 - watched: {}\n\
 		 - cost: ${cost:.4}\n",
-		capture.title,
 		today.trim(),
 	);
 	for Shown { secs, shown, on_screen_text, .. } in &watched.shown {
-		out.push_str(&format!("\n- [{}]({}{seek}{secs}) {}\n", stamp(*secs), capture.source, shown.replace('\n', " ")));
+		out.push_str(&format!("\n- [{}]({source}{seek}{secs}) {}\n", stamp(*secs), shown.replace('\n', " ")));
 		if let Some(text) = on_screen_text {
 			out.push_str(&format!("  > {}\n", text.replace('\n', " / ")));
 		}
 		out.push_str(&format!("  ![](frames/{secs}.jpg)\n"));
 	}
+	std::fs::create_dir_all(&kept).expect("the capture's dir is ours to create");
 	std::fs::write(kept.join("shown.md"), out).expect("the capture's dir is writable");
 	Some(cost)
 }
@@ -165,11 +175,7 @@ fn read(path: &Path) -> Capture {
 				},
 		}
 	}
-	assert!(
-		chapters.windows(2).all(|w| w[0].0 < w[1].0),
-		"{}: chapters out of order — run `playbook check calls`",
-		path.display()
-	);
+	assert!(chapters.windows(2).all(|w| w[0].0 < w[1].0), "{}: chapters out of order — run `playbook check`", path.display());
 	let summary = text
 		.split_once("\n## summary\n")
 		.map(|(_, rest)| rest.split("\n## ").next().expect("split yields at least once").trim().to_string())

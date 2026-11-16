@@ -39,7 +39,7 @@
         combined = v_flakes.utils.combine { inherit rust; modules = [ rs github readme ]; };
 
         port = "59082";
-        # the member surface; build.rs bakes in guides/, knowledge/structured/{approved,suggested}/ and knowledge/references/**/*.md, and nothing else of the tree reaches the image
+        # the member surface; build.rs compiles knowledge/ and bakes in its README.md, structured/ and references/**/*.md, and nothing else of the tree reaches the image
         build_rust = v_flakes.rs.build_nightly system;
         playbook_web = (pkgs.makeRustPlatform { rustc = build_rust; cargo = build_rust; }).buildRustPackage {
           pname = "playbook_web";
@@ -49,12 +49,11 @@
             fileset = pkgs.lib.fileset.unions [
               ./Cargo.toml
               ./Cargo.lock
-              ./playbook # a workspace member, so cargo reads its manifest; build.rs inlines cite_check.rs's DECAY_DAYS
+              ./corpus
+              ./playbook # a workspace member, so cargo reads its manifest
               ./playbook_web
-              ./docs/ARCHITECTURE.md # build.rs inlines its reliability tables into `search`'s description
-              ./guides
-              ./knowledge/structured/approved
-              ./knowledge/structured/suggested
+              ./knowledge/README.md
+              ./knowledge/structured
               (pkgs.lib.fileset.fileFilter (f: f.hasExt "md") ./knowledge/references)
             ];
           };
@@ -70,6 +69,7 @@
           RUSTFLAGS = "--remap-path-prefix=${build_rust}=/rust";
           disallowedReferences = [ build_rust ];
           SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # the tests build an HTTP client; the image sets its own
+          PLAYBOOK_RELEASE = "1"; # build.rs refuses a recording no `content.md` reads
         };
         containerStd = v_flakes.container.implement {
           inherit pkgs;
@@ -99,11 +99,11 @@
 
         apps.check = {
           type = "app";
-          meta.description = "check calls, check cites, build playbook_web";
+          meta.description = "check knowledge/, build playbook_web as a release";
           program = "${pkgs.writeShellApplication {
             name = "check";
             runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git ]; # .cargo/config.toml links with mold
-            text = "cargo r -q -p playbook -- check calls && cargo r -q -p playbook -- check cites && nix build .#playbook_web --no-link";
+            text = "cargo r -q -p playbook -- check && nix build .#playbook_web --no-link";
           }}/bin/check";
         };
 

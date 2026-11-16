@@ -5,37 +5,6 @@
 - uploaded: 2026-10-04
 - duration: 00:19:48
 - pulled by: `scripts/yt-pull.rs`
-- read by: `gpt-5.6-luna` summary and chapters, `gpt-5.6-luna` what is shown, over 3 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s
-- cost: $0.0039
-
-## summary
-
-- John Osayi describes rebuilding his appliance-repair business after scaling to six vans and employees led to $500,000 in debt and bankruptcy.
-- After applying Eric’s Google My Business arbitrage system for 2.5 months, he reports increasing service requests to 10–20 per day and revenue from $6,500 to $17,500 in September, approaching $20,000 per month without paid ads.
-- His process involves creating and ranking multiple Google Business Profiles—eight were ranked, with five more being developed—and fulfilling the resulting leads himself before hiring technicians.
-- He plans to use the same model for a remote cleaning business, targeting $30,000 in November, $50,000 per month within two months, and $100,000 per month by March 2027 with three or four workers.
-- The program is presented as a simple lead-flow-and-fulfillment model supported through phone and group-chat coaching, with Eric offering to help clients scale a drop-servicing business to $20,000 per month.
-
-## chapters
-
-- [00:00:00](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=0) Business struggle and recovery
-- [00:02:17](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=137) Investment and program value
-- [00:03:36](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=216) Operational simplicity and growth
-- [00:07:56](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=476) Current financial results
-- [00:09:46](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=586) Past ventures and pivot strategy
-- [00:12:56](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=776) Future goals and scaling
-- [00:15:58](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=958) Advice for aspiring entrepreneurs
-- [00:18:43](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=1123) Closing thoughts and verification
-
-## shown
-
-- [00:19:18](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=1158) A shared browser screen displays a Workiz Payments report with a list of successful payment records and a total amount of $17,359.00; a macOS screen-sharing control panel overlays the report.
-  > Payments report; $17,359.00 Total amount; $0.00 Total tips; Successful; Export; Last month Sep 1st, 2026 – Sep 30th, 2026; Stop Sharing
-  ![](p6TQlv7A8Qk/1158.jpg)
-
-- [00:19:47](https://www.youtube.com/watch?v=p6TQlv7A8Qk&t=1187) The shared-screen area shows a large magenta participant tile with the letter O, while the call layout remains visible on the right.
-  > O
-  ![](p6TQlv7A8Qk/1187.jpg)
 
 ## description
 

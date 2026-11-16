@@ -5,27 +5,6 @@
 - uploaded: 2026-09-07
 - duration: 00:14:52
 - pulled by: `scripts/yt-pull.rs`
-- read by: `gpt-5.6-luna` summary and chapters, nothing shown: `gpt-5.6-luna` named no span where something is
-- cost: $0.0020
-
-## summary
-
-- The creator says he made $130,000–$133,000 in monthly profit at age 20 by relying on personal judgment, creativity, and customer value rather than conventional business advice or AI-generated strategies.
-- His remote plumbing model uses Google Business Profiles, virtual assistants to answer calls, local contractor partners to perform jobs, and a 40% share of revenue; a $1,000 job yields him $400.
-- He also earns from YouTube by coaching contractors and aspiring online entrepreneurs, personally handling sales calls and fulfillment instead of hiring closers or delegating one-on-one coaching.
-- He attributes his growth from a few thousand dollars monthly to $130,000 monthly profit to betting on himself, dropping out of college, investing tens of thousands in education, working 12–16-hour days, and adding his personality to a repeatable blueprint.
-- His main advice is to use proven principles but think independently, create content from real business problems rather than Claude or ChatGPT, and differentiate in saturated markets through authentic personal involvement.
-
-## chapters
-
-- [00:00:00](https://www.youtube.com/watch?v=1Cd_BV9YTOM&t=0) Success through intuition
-- [00:01:48](https://www.youtube.com/watch?v=1Cd_BV9YTOM&t=108) Differentiating your business
-- [00:04:26](https://www.youtube.com/watch?v=1Cd_BV9YTOM&t=266) The role of YouTube and coaching
-- [00:07:17](https://www.youtube.com/watch?v=1Cd_BV9YTOM&t=437) Avoiding over-delegation
-- [00:10:04](https://www.youtube.com/watch?v=1Cd_BV9YTOM&t=604) Betting on yourself
-- [00:13:40](https://www.youtube.com/watch?v=1Cd_BV9YTOM&t=820) Final thoughts and call to action
-
-## shown
 
 ## description
 

@@ -7,29 +7,24 @@
 //! Auto-captions arrive a few words per cue, so cues are gathered into blocks of at least `BLOCK` seconds. A block is both a
 //! readable paragraph and a `&t=` anchor that lands where the words are.
 //!
-//! Half of what these videos say is said on screen — a dashboard, a search result, a review count —
-//! and captions carry none of it, so a capture also holds what the picture shows, read by `ask_llm`'s
-//! `Client::watch` with the captions as its speech, each line beside the frame it was read off. Then
-//! chapters, a summary and the description. Chapters are youtube's where it has them and
-//! the model's reading of the transcript where it does not.
+//! Half of what these videos say is said on screen, and captions carry none of it, so the picture is
+//! read into `<id>/shown.md` the way `playbook watch` reads a call's, with the captions as its speech.
 //!
-//! Enrichment that cannot be produced aborts the video and writes nothing. The md file existing is
-//! what makes the next run skip it, so a half-written one would never be repaired.
+//! A video whose picture cannot be read writes no capture. The md file existing is what makes the
+//! next run skip it, so a half-written one would never be repaired.
 
 use std::{
 	collections::{BTreeMap, BTreeSet},
 	path::Path,
 };
 
-use ask_llm::{Client, Footage, Model, Pick, Said, Shown, Watch};
+use ask_llm::{Footage, Pick, Said, Watch};
 use jiff::civil::Date;
-use social_networks_adapters::youtube::{self, Chapter, Cue};
+use social_networks_adapters::youtube::{self, Cue};
 
 const WATCH: &str = "https://www.youtube.com/watch?v=";
 const INDEX: &str = "knowledge/references/youtube/README.md";
 const BLOCK: f64 = 30.;
-const SUMMARY: &str = "SUMMARY";
-const SECTIONS: &str = "SECTIONS";
 
 pub async fn sync(root: &Path) {
 	let channels = channels_in(&root.join("knowledge/references/README.md"));
@@ -96,7 +91,7 @@ pub async fn transcribe(root: &Path, pick: Pick, urls: &[String]) {
 			eprintln!("pulling {}/{id}", section.who);
 			// a video youtube never captioned is a real absence, not a broken run — the rest of the
 			// channel is still worth having, so it is named at the end rather than aborting here
-			match video(id, &tmp, &dir.join(id), pick).await {
+			match video(id, &tmp, &out, pick).await {
 				Some(doc) => {
 					std::fs::write(&out, doc).expect("knowledge/references/youtube is ours to write");
 					write(root, &index);
@@ -169,14 +164,11 @@ fn write(root: &Path, index: &Index) {
 	let spent = index
 		.sections
 		.iter()
-		.flat_map(|s| s.entries.iter().map(move |e| root.join("knowledge/references/youtube").join(&s.who).join(format!("{}.md", e.id))))
+		.flat_map(|s| s.entries.iter().map(move |e| root.join("knowledge/references/youtube").join(&s.who).join(&e.id).join("shown.md")))
 		.filter(|p| p.exists())
 		.map(|p| {
 			let text = std::fs::read_to_string(&p).unwrap_or_else(|e| panic!("reading {}: {e}", p.display()));
-			let cost = text
-				.lines()
-				.find_map(|l| l.strip_prefix("- cost: $"))
-				.unwrap_or_else(|| panic!("{} states no cost — delete it to re-pull", p.display()));
+			let cost = text.lines().find_map(|l| l.strip_prefix("- cost: $")).unwrap_or_else(|| panic!("{} states no cost", p.display()));
 			cost.trim().parse::<f64>().unwrap_or_else(|e| panic!("{}: `{cost}`: {e}", p.display()))
 		})
 		.fold((0f64, 0usize), |(usd, n), c| (usd + c, n + 1));
@@ -186,11 +178,11 @@ fn write(root: &Path, index: &Index) {
 		 - checked: {}\n\
 		 - written by: `playbook pull yt sync`, which lists every video; `transcribe` ticks each it captures\n\
 		 \n\
-		 - spent: ${:.2} over {} captures, as their `cost:` lines state\n\
+		 - spent: ${:.2} over {} watched, as their `shown.md` `cost:` lines state\n\
 		 \n\
 		 A directory per person, named by the text of their channel's link in `../README.md`. In it,\n\
-		 `<id>.md` is a video's capture — summary, chapters, what is shown, description, then the captions\n\
-		 in citable blocks — and `<id>/<secs>.jpg` the frames its `## shown` lines were read off.\n\
+		 `<id>.md` is a video's capture — its description, then the captions in citable blocks — and\n\
+		 `<id>/` its readings: `shown.md` what is shown, off the frames in `frames/`, and `content.md`.\n\
 		 \n\
 		 A line per video, newest first: the day youtube says it was uploaded, linked to the video, then\n\
 		 its title — linked to the capture once there is one. `playbook pull yt transcribe` captures\n\
@@ -258,20 +250,10 @@ fn hms(secs: f64) -> String {
 	format!("{:02}:{:02}:{:02}", s / 3600, (s % 3600) / 60, s % 60)
 }
 
-async fn video(id: &str, tmp: &Path, shots: &Path, pick: Pick) -> Option<String> {
+async fn video(id: &str, tmp: &Path, out: &Path, pick: Pick) -> Option<String> {
 	let video = youtube::video(id).await.unwrap_or_else(|e| panic!("reading {id}: {e:?}"));
 	let blocks = blocks(&video.captions?);
 	assert!(!blocks.is_empty(), "{id} has a caption track that carries no words");
-
-	let answer = Client::default()
-		.model(Model::Fast)
-		.ask(prompt(&video.title, &blocks, video.chapters.is_none()))
-		.await
-		.unwrap_or_else(|e| panic!("summarising {id}: {e:?}"));
-	let sections: Vec<(f64, String)> = match video.chapters {
-		Some(chapters) => chapters.into_iter().map(|Chapter { at, title }| (at, title)).collect(),
-		None => derived(&answer.text, id, video.duration),
-	};
 
 	// a video from an earlier run would be picked up as this one's
 	if tmp.exists() {
@@ -286,20 +268,12 @@ async fn video(id: &str, tmp: &Path, shots: &Path, pick: Pick) -> Option<String>
 		footage: Footage::Screen,
 		pick,
 		about: video.description.clone(),
-		frames: shots.to_path_buf(),
+		frames: out.with_extension("").join("frames"),
 	};
-	let watched = Client::default().model(Model::Video).watch(&media, spec).await.unwrap_or_else(|e| panic!("watching {id}: {e:?}"));
+	crate::watch::shown(out, &format!("{WATCH}{id}"), &media, spec, "playbook pull yt transcribe")
+		.await
+		.unwrap_or_else(|| panic!("{id} downloaded with no picture"));
 	std::fs::remove_dir_all(tmp).unwrap_or_else(|e| panic!("removing {}: {e}", tmp.display()));
-	let shown_by = match (&watched.model, pick, &watched.picked_by) {
-		(None, _, None) => panic!("{id} downloaded with no picture"),
-		(None, Pick::Likely { .. }, Some(by)) => format!("nothing shown: `{by}` named no span where something is"),
-		(Some(model), Pick::Changes, None) => format!("`{model}` what is shown, over {} frames, as `ask_llm`'s `Footage::Screen` picks them", watched.frames_read),
-		(Some(model), Pick::Likely { every }, Some(by)) => format!(
-			"`{model}` what is shown, over {} frames, `{by}` picking where, `Pick::Likely` every {every}s",
-			watched.frames_read
-		),
-		_ => unreachable!("`picked_by` is set by `Pick::Likely` alone"),
-	};
 
 	let mut out = format!(
 		"# {}\n\
@@ -308,38 +282,12 @@ async fn video(id: &str, tmp: &Path, shots: &Path, pick: Pick) -> Option<String>
 		 - channel: {}\n\
 		 - uploaded: {}\n\
 		 - duration: {}\n\
-		 - pulled by: `playbook pull yt transcribe`\n\
-		 - read by: `{}` summary and chapters, {shown_by}\n\
-		 - cost: ${:.4}\n\
-		 \n\
-		 ## summary\n\
-		 \n",
+		 - pulled by: `playbook pull yt transcribe`\n",
 		video.title,
 		video.channel,
 		video.uploaded,
 		hms(video.duration),
-		answer.model,
-		(answer.cost_cents + watched.cost_cents) as f64 / 100.,
 	);
-	for line in marked(&answer.text, SUMMARY, id) {
-		out.push_str(line);
-		out.push('\n');
-	}
-
-	out.push_str("\n## chapters\n\n");
-	for (at, heading) in &sections {
-		out.push_str(&format!("- [{}]({WATCH}{id}&t={}) {heading}\n", hms(*at), *at as u64));
-	}
-
-	out.push_str("\n## shown\n");
-	for Shown { secs, shown, on_screen_text, .. } in &watched.shown {
-		out.push_str(&format!("\n- [{}]({WATCH}{id}&t={secs}) {}\n", hms(*secs as f64), shown.replace('\n', " ")));
-		if let Some(text) = on_screen_text {
-			out.push_str(&format!("  > {}\n", text.replace('\n', " / ")));
-		}
-		out.push_str(&format!("  ![]({id}/{secs}.jpg)\n"));
-	}
-
 	if let Some(description) = &video.description {
 		out.push_str(&format!("\n## description\n\n```\n{}\n```\n", description.trim()));
 		let links = urls_in(description);
@@ -388,60 +336,4 @@ fn blocks(cues: &[Cue]) -> Vec<(f64, String)> {
 		out.push((start.expect("words are only pushed after a block starts"), words));
 	}
 	out
-}
-
-fn prompt(title: &str, blocks: &[(f64, String)], want_sections: bool) -> String {
-	let mut ask = format!(
-		"Below is the transcript of a youtube video titled {title:?}, one paragraph per {} seconds, \
-		 each stamped with the second it starts at.\n\n\
-		 Answer with the block(s) below and nothing else — no preamble, no closing line, no code fences. \
-		 Open every block with its own name alone on a line, even when only one is asked for.\n\n\
-		 {SUMMARY}\n\
-		 Three to five lines, each opening with `- `, saying what this video actually covers. Name the \
-		 tools, the numbers and the steps it gives. Write about the subject, not about the video.\n",
-		BLOCK as u64
-	);
-	if want_sections {
-		ask.push_str(&format!(
-			"\n{SECTIONS}\n\
-			 One line per section, `<seconds> <heading>`, seconds being a whole-number offset into the \
-			 video and heading a handful of lowercase words. Six to twelve sections, in order. Open a \
-			 section where the speaker turns to a new thing.\n"
-		));
-	}
-	ask.push_str("\n--- transcript ---\n");
-	for (at, words) in blocks {
-		ask.push_str(&format!("{} {words}\n", *at as u64));
-	}
-	ask
-}
-
-/// The lines of one named block of the answer. A missing block is the model having answered some
-/// other shape, and everything below it would be built out of the wrong text.
-fn marked<'a>(answer: &'a str, mark: &str, id: &str) -> Vec<&'a str> {
-	let mut lines = answer.lines().skip_while(|l| l.trim() != mark);
-	lines
-		.next()
-		.unwrap_or_else(|| panic!("the model was asked for a `{mark}` block on {id}, and answered:\n{answer}"));
-	let block: Vec<&str> = lines.map(str::trim).take_while(|l| !matches!(*l, SUMMARY | SECTIONS)).filter(|l| !l.is_empty()).collect();
-	assert!(!block.is_empty(), "the `{mark}` block on {id} is empty:\n{answer}");
-	block
-}
-
-fn derived(answer: &str, id: &str, duration: f64) -> Vec<(f64, String)> {
-	let sections: Vec<(f64, String)> = marked(answer, SECTIONS, id)
-		.iter()
-		.map(|line| {
-			let (at, heading) = line
-				.split_once(' ')
-				.unwrap_or_else(|| panic!("a `{SECTIONS}` line on {id} is `<seconds> <heading>`, and reads {line:?}"));
-			let at: f64 = at
-				.parse()
-				.unwrap_or_else(|e| panic!("a `{SECTIONS}` line on {id} opens with a whole number of seconds, and reads {line:?}: {e}"));
-			assert!(at < duration, "the model placed a section of {id} at {at}s, past its {duration}s");
-			(at, heading.trim().to_string())
-		})
-		.collect();
-	assert!(sections.windows(2).all(|w| w[0].0 < w[1].0), "the model's sections for {id} do not run in order: {sections:?}");
-	sections
 }

@@ -36,7 +36,7 @@ async fn read_returns_one_chapter() {
 		let client = connect(&url, TOKEN).await;
 		for (path, header) in [
 			("knowledge/references/loom/2026-09-18-group-call.md", "[03:34]"),
-			("knowledge/structured/suggested/infra.md", "## facts"),
+			("knowledge/structured/contractors/splits.md", "## the split"),
 		] {
 			let (text, error) = call(&client, "read", json!({ "path": path, "header": header })).await;
 			assert!(!error, "{text}");
@@ -48,8 +48,8 @@ async fn read_returns_one_chapter() {
 }
 
 /// The procedure is the `service-arb` skill's: the server names it, and says only what each tool returns. What
-/// changes with the corpus rides on the tools: the reliability table, the guides, every hit's effective number,
-/// and where a broad pattern could narrow to.
+/// changes with the corpus rides on the tools: the pages, the people, what every hit is worth today, and where a
+/// broad pattern could narrow to.
 #[tokio::test]
 async fn the_server_carries_data_and_the_skill_the_procedure() {
 	serve("contract", i64::MAX, Concierge::default(), async |url| {
@@ -64,12 +64,16 @@ async fn the_server_carries_data_and_the_skill_the_procedure() {
 
 		let tools = client.list_all_tools().await.unwrap();
 		let description = |name: &str| tools.iter().find(|t| t.name == name).unwrap().description.clone().unwrap();
-		let search = description("search");
-		assert!(search.contains("tested myself"), "{search}");
-		assert!(search.contains("Eric"), "{search}");
 		let guide = description("guide");
-		assert!(guide.contains("verification: video"), "{guide}");
-		assert!(guide.contains("experts: "), "{guide}");
+		assert!(guide.contains("- contractors/splits: splits"), "{guide}");
+		let (people, error) = call(&client, "guide", json!({ "area": "people" })).await;
+		assert!(!error && people.contains("| Eric |"), "{people}");
+
+		// r[verify trust.arithmetic]
+		let (page, error) = call(&client, "guide", json!({ "area": "contractors/splits" })).await;
+		assert!(!error, "{page}");
+		assert!(page.contains(" · effective 0."), "{page}");
+		assert!(!page.contains("<!--"), "a citation is served as what it is worth, never as what that is computed from:\n{page}");
 
 		let (text, error) = call(&client, "search", json!({ "pattern": "Magisk" })).await;
 		assert!(!error, "{text}");

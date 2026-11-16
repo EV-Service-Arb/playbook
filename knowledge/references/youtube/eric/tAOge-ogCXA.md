@@ -5,30 +5,6 @@
 - uploaded: 2026-09-27
 - duration: 00:17:06
 - pulled by: `scripts/yt-pull.rs`
-- read by: `gpt-5.6-luna` summary and chapters, nothing shown: `gpt-5.6-luna` named no span where something is
-- cost: $0.0024
-
-## summary
-
-- Noah generated over $10,000 in closed jobs within a week by creating and ranking Google Business Profiles in a high-ticket, low-competition estate-sale and house-liquidation niche.
-- The process involved setting up 10 Google Business Profiles, collecting about 70 reviews, targeting “niche + city” searches, and using one-on-one guidance to correct the initial setup; his listings reached the top five positions.
-- The service handles estate sales, online liquidation, junk removal, and cleaning after deaths, moves, or downsizing; one example produced about $10,000 from a roughly $25,000 commission plus $1,500 in additional services.
-- Jobs can range from about $3,000 to $30,000, with a typical ticket around $7,000–$8,000; Noah expects roughly 75% margins doing fulfillment himself versus the niche’s usual 30%–40%.
-- His scaling plan is to complete the first five jobs, hire three workers and a branch manager per area, assign about 10 Google Business Profiles to each branch, copy the system into nearby markets, and target a $10 million annual run rate.
-
-## chapters
-
-- [00:00:00](https://www.youtube.com/watch?v=tAOge-ogCXA&t=0) Introduction and results
-- [00:00:53](https://www.youtube.com/watch?v=tAOge-ogCXA&t=53) Solving the Google profile
-- [00:02:20](https://www.youtube.com/watch?v=tAOge-ogCXA&t=140) Strategy for success
-- [00:04:22](https://www.youtube.com/watch?v=tAOge-ogCXA&t=262) Operational model
-- [00:05:54](https://www.youtube.com/watch?v=tAOge-ogCXA&t=354) The estate liquidation niche
-- [00:07:41](https://www.youtube.com/watch?v=tAOge-ogCXA&t=461) Job execution and variety
-- [00:10:39](https://www.youtube.com/watch?v=tAOge-ogCXA&t=639) Scaling plans and goals
-- [00:12:14](https://www.youtube.com/watch?v=tAOge-ogCXA&t=734) Advice and program value
-- [00:16:30](https://www.youtube.com/watch?v=tAOge-ogCXA&t=990) Final call to action
-
-## shown
 
 ## description
 

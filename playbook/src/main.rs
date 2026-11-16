@@ -159,22 +159,20 @@ fn main() {
 				step: Yt::Transcribe { frames, urls },
 			} => rt().block_on(yt::transcribe(&root, frames.into(), &urls)),
 		},
-		Cmd::Check => {
-			let calls = call::all(&root).len();
-			match corpus::compile(&root) {
-				Ok(index) => {
-					for path in &index.pending {
-						eprintln!("{path}: no `content.md` reads it yet");
-					}
-					eprintln!("{calls} call captures, {} pages and digests hold their shape", index.claims.len());
+		Cmd::Check => match corpus::compile(&root) {
+			Ok(index) => {
+				let calls = call::all(&root).len();
+				for path in &index.pending {
+					eprintln!("{path}: no `content.md` reads it yet");
 				}
-				Err(errors) => {
-					errors.iter().for_each(|e| eprintln!("{e}"));
-					eprintln!("{} errors under knowledge/", errors.len());
-					std::process::exit(1);
-				}
+				eprintln!("{calls} call captures, {} pages and digests hold their shape", index.claims.len());
 			}
-		}
+			Err(errors) => {
+				errors.iter().for_each(|e| eprintln!("{e}"));
+				eprintln!("{} errors under knowledge/", errors.len());
+				std::process::exit(1);
+			}
+		},
 		Cmd::Recording { captures } =>
 			for media in call::recordings(&root, &captures) {
 				println!("{}", media.display());
@@ -195,7 +193,6 @@ struct Capture {
 	source: String,
 	minutes: f64,
 	transcribed_by: String,
-	read_by: String,
 }
 
 fn re_transcribe(root: &Path, what: What) {
@@ -279,8 +276,8 @@ fn plan(c: &Capture, picture: Option<(Pick, &Path)>) -> Result<(f64, String), St
 			if !c.transcribed_by.starts_with("whisper") {
 				return Err(format!("transcribed by {}, which a re-pull fetches again rather than transcribes", c.transcribed_by));
 			}
-			if c.read_by.starts_with("`/") {
-				return Err("digested, and a re-pull drops the digest".into());
+			if c.path.with_extension("").join("content.md").exists() {
+				return Err("digested, and a re-pull moves the stamps its `content.md` cites".into());
 			}
 			Ok((0., format!("{:.0} min through local whisper", c.minutes)))
 		}
@@ -325,7 +322,7 @@ fn read(path: &Path) -> Capture {
 	let field = |key: &str| {
 		text.lines()
 			.find_map(|l| l.strip_prefix(&format!("- {key}: ")))
-			.unwrap_or_else(|| panic!("{} states no `{key}:` — run `playbook check calls`", path.display()))
+			.unwrap_or_else(|| panic!("{} states no `{key}:` — run `playbook check`", path.display()))
 			.to_string()
 	};
 	let secs = field("duration")
@@ -336,6 +333,5 @@ fn read(path: &Path) -> Capture {
 		source: field("source").trim_matches(['<', '>']).to_string(),
 		minutes: secs as f64 / 60.,
 		transcribed_by: field("transcribed by"),
-		read_by: field("read by"),
 	}
 }

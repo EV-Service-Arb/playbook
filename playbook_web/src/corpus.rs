@@ -78,16 +78,7 @@ impl Corpus {
 						current
 					})
 					.collect();
-				let mut screen = path.ends_with("/shown.md");
-				let screen = lines
-					.iter()
-					.map(|l| {
-						if l.starts_with("# ") || l.starts_with("## ") {
-							screen = path.ends_with("/shown.md") || *l == "## shown";
-						}
-						screen
-					})
-					.collect();
+				let screen = path.ends_with("/shown.md");
 				let chunk = match kind == Kind::Manual || path.ends_with("/content.md") {
 					true => {
 						let mut current = 0;
@@ -154,11 +145,7 @@ impl Corpus {
 		if !(scope.is_empty() || scope.starts_with("knowledge")) {
 			return Err("scope is a path prefix under `knowledge/structured/` or `knowledge/references/`".into());
 		}
-		let in_scope: Vec<&Doc> = self
-			.docs
-			.iter()
-			.filter(|d| d.path.starts_with(scope) && (0..d.lines.len()).any(|i| d.screen[i] == screen))
-			.collect();
+		let in_scope: Vec<&Doc> = self.docs.iter().filter(|d| d.path.starts_with(scope) && d.screen == screen).collect();
 		if in_scope.is_empty() {
 			return Err(match screen {
 				true => format!("nothing under `{scope}` reads a screen"),
@@ -181,9 +168,9 @@ impl Corpus {
 		let mut files: Vec<File> = Vec::new();
 		let mut candidates = 0;
 		for &doc in &in_scope {
-			candidates += (0..doc.lines.len()).filter(|&i| doc.chunk[i] == i && doc.screen[i] == screen).count();
+			candidates += (0..doc.lines.len()).filter(|&i| doc.chunk[i] == i).count();
 			let mut hits: Vec<Hit> = Vec::new();
-			for (i, line) in doc.lines.iter().enumerate().filter(|&(i, _)| doc.screen[i] == screen) {
+			for (i, line) in doc.lines.iter().enumerate() {
 				if !re.find_iter(line).any(|m| m.len() >= MIN_MATCH) {
 					continue;
 				}
@@ -274,10 +261,7 @@ impl Corpus {
 				.then(b.doc.date.cmp(&a.doc.date))
 		});
 
-		let mut groups: Vec<(Vec<&File>, usize)> = SLOTS
-			.iter()
-			.map(|(kind, slots)| (files.iter().filter(|f| f.doc.kind == *kind).collect(), *slots))
-			.collect();
+		let mut groups: Vec<(Vec<&File>, usize)> = SLOTS.iter().map(|(kind, slots)| (files.iter().filter(|f| f.doc.kind == *kind).collect(), *slots)).collect();
 		// slots a ref kind leaves empty go to the others, the more trusted kind first
 		let mut spare: usize = groups[1..].iter().map(|(of_kind, slots)| slots.saturating_sub(of_kind.len())).sum();
 		for (of_kind, slots) in &mut groups[1..] {
@@ -429,8 +413,8 @@ struct Doc {
 	chapter: Vec<Option<usize>>,
 	/// per line, where the chunk `search` scores starts: a bullet of a note, blocks of a capture's chapter
 	chunk: Vec<usize>,
-	/// per line, whether it reads what a recording showed rather than what was said
-	screen: Vec<bool>,
+	/// whether it reads what a recording showed rather than what was said
+	screen: bool,
 	/// a capture's own date; the manual dates each claim instead
 	date: Option<&'static str>,
 	source: Option<&'static str>,
@@ -480,7 +464,7 @@ impl Doc {
 		let by_worth = |a: &&Cited, b: &&Cited| a.effective(today).total_cmp(&b.effective(today));
 		match self.claim(line) {
 			Some(c) => c.backing.iter().max_by(by_worth),
-			None => self.speaker.filter(|_| !self.screen[line] && !self.path.ends_with("/content.md")),
+			None => self.speaker.filter(|_| !self.screen && !self.path.ends_with("/content.md")),
 		}
 	}
 
@@ -496,7 +480,7 @@ impl Doc {
 			(Some(cited), Some(claim)) => format!("{}{}", cited.label(today), if claim.vetted { "" } else { " · unvetted" }),
 			(Some(cited), None) => cited.label(today),
 			(None, _) if self.kind == Kind::Manual => "unscored: a heading".into(),
-			(None, _) if self.screen[line] => format!("a reading of the screen · {} · unscored", date()),
+			(None, _) if self.screen => format!("a reading of the screen · {} · unscored", date()),
 			(None, _) => match self.digest {
 				Some(digest) => format!("as said · {} · unscored: who speaks, and what it is worth, is in {digest}", date()),
 				None => format!("as said · {} · unscored", date()),
@@ -510,7 +494,11 @@ impl Doc {
 		match cited {
 			Some(c) => {
 				let indent = &self.lines[i][..self.lines[i].len() - self.lines[i].trim_start().len()];
-				let at = self.lines[i].trim_end_matches("-->").rsplit(' ').next().filter(|t| t.starts_with("http") || t.starts_with('?') || t.starts_with('#'));
+				let at = self.lines[i]
+					.trim_end_matches("-->")
+					.rsplit(' ')
+					.next()
+					.filter(|t| t.starts_with("http") || t.starts_with('?') || t.starts_with('#'));
 				format!("{indent}[{}{}]", c.label(today), at.map(|a| format!(" · {a}")).unwrap_or_default())
 			}
 			None => self.lines[i].to_owned(),

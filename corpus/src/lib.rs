@@ -114,7 +114,10 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 			.find_map(|f| field(f))
 			.unwrap_or_else(|| panic!("{path} states a source but no date"));
 		let day = stamp.get(..10).and_then(days).unwrap_or_else(|| panic!("{path}: `{stamp}` does not open on a date"));
-		let duration = field("duration").map(|d| d.split(':').fold(0, |acc, p| acc * 60 + p.parse::<u64>().unwrap_or_else(|e| panic!("{path}: duration `{d}`: {e}"))));
+		let duration = field("duration").map(|d| {
+			d.split(':')
+				.fold(0, |acc, p| acc * 60 + p.parse::<u64>().unwrap_or_else(|e| panic!("{path}: duration `{d}`: {e}")))
+		});
 		let within = field("within").and_then(|w| w.strip_prefix('<')?.split_once('>')).map(|(u, _)| u);
 		let taught = [Some(source), within].into_iter().flatten().any(|u| {
 			let u = u.split('?').next().expect("split yields one");
@@ -122,6 +125,7 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 		});
 		let who = match path.strip_prefix("knowledge/references/youtube/").and_then(|p| p.split_once('/')) {
 			_ if lesson(path) || taught => Some("course".to_owned()),
+			_ if path.starts_with("knowledge/references/research/") => Some("chatgpt".to_owned()),
 			Some((channel, _)) => Some(
 				tables
 					.channel(channel)
@@ -131,7 +135,7 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 			None => None,
 		};
 		let speaker = who.map(|who| Backing {
-			trust: tables.source(&who).expect("a channel's row and `course` are rows") * tables.grade["says"],
+			trust: tables.source(&who).unwrap_or_else(|| panic!("knowledge/README.md#people has no row `{who}`")) * tables.grade["says"],
 			who,
 			how: "says",
 			day,
@@ -139,13 +143,20 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 		if let Some(first) = by_source.insert(key.clone(), path.clone()) {
 			panic!("{key} is captured twice: {first} and {path}");
 		}
-		captures.insert(path.clone(), Capture {
-			day,
-			speaker,
-			source: source.to_owned(),
-			duration,
-			stamps: seconds(text).collect(),
-		});
+		captures.insert(
+			path.clone(),
+			Capture {
+				day,
+				speaker,
+				source: source.to_owned(),
+				duration,
+				stamps: {
+					let shown = format!("{}/shown.md", path.strip_suffix(".md").expect("walked for .md"));
+					let shown = texts.iter().find(|(p, _)| *p == shown).map_or("", |(_, t)| t.as_str());
+					seconds(text).chain(seconds(shown)).collect()
+				},
+			},
+		);
 	}
 
 	let ctx = Ctx {
@@ -213,7 +224,10 @@ impl Ctx<'_> {
 		}
 		for (i, l) in lines.iter().enumerate() {
 			if let Some(link) = l.trim().strip_prefix("resolved: ")
-				&& !link.rsplit_once("](").and_then(|(_, u)| u.strip_suffix(')')).is_some_and(|u| u.contains("log/resolved/") && dir.join(u).is_file())
+				&& !link
+					.rsplit_once("](")
+					.and_then(|(_, u)| u.strip_suffix(')'))
+					.is_some_and(|u| u.contains("log/resolved/") && dir.join(u).is_file())
 			{
 				errors.push((i + 1, "`resolved:` links its record in `knowledge/log/resolved/`, which must exist".into()));
 			}
@@ -285,6 +299,7 @@ impl Ctx<'_> {
 		let mut done: Vec<(usize, Claim)> = Vec::new();
 		let mut stack: Vec<Open> = Vec::new();
 		let mut fenced = false;
+		let mut refused = BTreeSet::new(); // bullets whose citation is already reported
 		let close = |stack: &mut Vec<Open>, done: &mut Vec<(usize, Claim)>, to: usize, at: usize| {
 			while stack.last().is_some_and(|o| o.indent >= to) {
 				let mut o = stack.pop().expect("checked");
@@ -319,20 +334,19 @@ impl Ctx<'_> {
 				continue;
 			}
 			close(&mut stack, &mut done, indent, i);
-			if trimmed.starts_with("[r") && trimmed.ends_with(')') && trimmed.contains("](http") {
-				errors.push((i + 1, "a citation is `<!--<date> <who> <how> <url>-->`, per knowledge/README.md#citation".into()));
-				continue;
-			}
 			let Some(cite) = Cite::parse(trimmed, given.is_some()) else { continue };
 			match cite.and_then(|c| self.resolve(c, given)) {
-				Err(why) => errors.push((i + 1, why)),
+				Err(why) => {
+					errors.push((i + 1, why));
+					refused.extend(stack.iter().map(|o| o.claim.lines.start));
+				}
 				Ok(_) if stack.is_empty() => errors.push((i + 1, "a citation sits under the bullet it backs".into())),
 				Ok(b) => stack.iter_mut().for_each(|o| o.claim.backing.push((i, b.clone()))),
 			}
 		}
 		close(&mut stack, &mut done, 0, within.end);
 		for (indent, claim) in &done {
-			if *indent == 0 && claim.backing.is_empty() {
+			if *indent == 0 && claim.backing.is_empty() && !refused.contains(&claim.lines.start) {
 				errors.push((claim.lines.start + 1, "nothing beneath this bullet cites a source".into()));
 			}
 		}
@@ -422,7 +436,12 @@ impl<'a> Cite<'a> {
 		let Some(how) = tokens.pop().filter(|h| HOWS.contains(h)) else {
 			return Some(Err(format!("a citation says how its speaker knows, one of {HOWS:?}, before its url")));
 		};
-		Some(Ok(Self { date, who: tokens.join(" "), how, at }))
+		Some(Ok(Self {
+			date,
+			who: tokens.join(" "),
+			how,
+			at,
+		}))
 	}
 }
 
@@ -456,9 +475,11 @@ impl Tables {
 					grade.insert(cells[1].to_owned(), g);
 				}
 				["who", "trust"] => {
-					let trust = cells[1].parse().ok().or_else(|| people.iter().find(|p| p.0 == cells[1]).map(|p| p.1)).unwrap_or_else(|| {
-						panic!("knowledge/README.md#people: `{}` trusts `{}`, which is neither a number nor a row above it", cells[0], cells[1])
-					});
+					let trust = cells[1]
+						.parse()
+						.ok()
+						.or_else(|| people.iter().find(|p| p.0 == cells[1]).map(|p| p.1))
+						.unwrap_or_else(|| panic!("knowledge/README.md#people: `{}` trusts `{}`, which is neither a number nor a row above it", cells[0], cells[1]));
 					assert!((0. ..=1.).contains(&trust), "knowledge/README.md#people: `{}` is trusted {trust}, outside [0, 1]", cells[0]);
 					people.push((cells[0].to_owned(), trust, cells[2].to_owned()));
 				}
@@ -514,10 +535,12 @@ fn source_key(url: &str) -> Option<String> {
 
 /// Every second a text links: the `<n>` of each `?t=<n>`, `&t=<n>` and `#t=<n>`.
 fn seconds(text: &str) -> impl Iterator<Item = u64> + '_ {
-	text.match_indices("t=").filter(|(i, _)| *i > 0 && matches!(text.as_bytes()[i - 1], b'?' | b'&' | b'#')).filter_map(|(i, _)| {
-		let digits = &text[i + 2..];
-		digits[..digits.find(|c: char| !c.is_ascii_digit()).unwrap_or(digits.len())].parse().ok()
-	})
+	text.match_indices("t=")
+		.filter(|(i, _)| *i > 0 && matches!(text.as_bytes()[i - 1], b'?' | b'&' | b'#'))
+		.filter_map(|(i, _)| {
+			let digits = &text[i + 2..];
+			digits[..digits.find(|c: char| !c.is_ascii_digit()).unwrap_or(digits.len())].parse().ok()
+		})
 }
 
 fn walk(dir: &Path, out: &mut Vec<PathBuf>) {

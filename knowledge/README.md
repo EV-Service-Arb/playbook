@@ -22,7 +22,8 @@ One line, an html comment, under the text it backs:
 ```
 
 - the date the information is from: the capture's, or earlier where the speaker dates it
-- who: a row of [people](#people). Left out where the source fixes it: a course lesson, a channel's video
+- who: a row of [people](#people). Left out where the source fixes it: a course lesson, a channel's video,
+  a chatgpt share. `agent`: one of ours inferred it, from nothing it could cite
 - how they know: `ran` it and report the result, `says` so, `heard` it from someone
 - the url of the capture, at the second it was said. No url: it was never recorded
 - `us ran` cites the comment that closed the test's issue
@@ -48,6 +49,8 @@ date only where it is earlier than the capture's.
 | course | 0.9 | | | |
 | gmbpp member | 0.6 | | | |
 | cheap member | 0.4 | | | |
+| chatgpt | 0.45 | | | |
+| agent | 0.25 | | | |
 | Valera | us | | | |
 | Eric | 0.8 | youtube `eric` | | |
 | Zach Peterson | 0.8 | youtube `zach` | | |
@@ -81,6 +84,42 @@ date only where it is earlier than the capture's.
 | Donovan | gmbpp member | | | |
 | Bradley | gmbpp member | | | |
 | Abdullah | gmbpp member | | | |
+| PP | gmbpp member | | | |
+| Erwin | gmbpp member | | | |
+| jd | gmbpp member | | | |
+| Kareem | gmbpp member | | | |
+| Connor | gmbpp member | | | |
+| Aiden | gmbpp member | | | |
+| Tony | gmbpp member | | | |
+| Anmar | gmbpp member | | | |
+| Luca | gmbpp member | | | |
+| Karim | gmbpp member | | | |
+| Cole | gmbpp member | | | |
+| Greg | gmbpp member | | | |
+| Walker | gmbpp member | | | |
+| Chris | gmbpp member | | | |
+| TruSpark Electric | gmbpp member | | | |
+| Art Khan | gmbpp member | | | |
+| Randall | gmbpp member | | | |
+| Anthony | gmbpp member | | | |
+| Cheyenne | gmbpp member | | | |
+| Joseph | gmbpp member | | | |
+| Raymond | gmbpp member | | | |
+| Paul | gmbpp member | | | |
+| Finn | gmbpp member | | | |
+| Larry | gmbpp member | | | |
+| JS | gmbpp member | | | |
+| Prabh | gmbpp member | | | |
+| Melo | gmbpp member | | | |
+| Mendel | gmbpp member | | | |
+| Phil | gmbpp member | | | |
+| Brandon | gmbpp member | | | |
+| Hayden | gmbpp member | | | |
+| Sumit | gmbpp member | | | |
+| Joey | gmbpp member | | | |
+| Keith | gmbpp member | | | |
+| Noah | gmbpp member | | | |
+| Zach | gmbpp member | | | |
 
 `available` is 1–10, how often they have helped or shared; 3 is never asked. youtube `<x>` is the
 channel captured under `references/youtube/<x>/`. A speaker nobody could
@@ -143,6 +182,8 @@ the path it would have outside it.
 
 - every bullet has a citation somewhere beneath it, bar those under `## open`
 - `(?)` opens a bullet nobody has vetted. Vetting is the owner deleting it
+- the lead and `## open` carry no `(?)`: the lead is rewritten whenever the page under it changes, and an
+  open question claims nothing
 - one claim, one bullet. A new source for it joins the evidence
 
 ## Style
@@ -155,4 +196,5 @@ the path it would have outside it.
 - `(!)` the part that changes how we would act
 - evidence names its speaker in full: `Sam Hart: four passed in two days`
 - backticks for handles, services and tools
-- `*niche*:` opens a bullet scoped to one trade, where it is not under `market/niches/`
+- `*niche*:` opens evidence from one trade under a claim that holds for all. A claim that holds for one
+  trade only lives under `market/niches/<trade>/`

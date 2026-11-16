@@ -3,11 +3,11 @@
 - checked: 2026-11-16
 - written by: `playbook pull yt sync`, which lists every video; `transcribe` ticks each it captures
 
-- spent: $0.79 over 41 captures, as their `cost:` lines state
+- spent: $0.79 over 40 watched, as their `shown.md` `cost:` lines state
 
 A directory per person, named by the text of their channel's link in `../README.md`. In it,
-`<id>.md` is a video's capture — summary, chapters, what is shown, description, then the captions
-in citable blocks — and `<id>/<secs>.jpg` the frames its `## shown` lines were read off.
+`<id>.md` is a video's capture — its description, then the captions in citable blocks — and
+`<id>/` its readings: `shown.md` what is shown, off the frames in `frames/`, and `content.md`.
 
 A line per video, newest first: the day youtube says it was uploaded, linked to the video, then
 its title — linked to the capture once there is one. `playbook pull yt transcribe` captures

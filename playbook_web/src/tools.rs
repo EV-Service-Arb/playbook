@@ -63,7 +63,8 @@ impl Playbook {
 
 	#[tool(
 		description = "Case-insensitive regex over the service-arb playbook. Each kind of source has its own slots, so none crowds out another: the manual (knowledge/structured), the course (lessons and the recordings they link), calls, videos, texts. Within a kind, a passage holding the rarer of the pattern's alternatives ranks first. Each hit gives path:line, its header, its label, the source URL and the lines around it; the files past the slots follow as path:line, for `read`. A pattern hitting most of the scope is refused, with the sub-scopes it hits.\n\nA label is who backs the passage, how they know (ran it, says so, heard it), when the information is from, and `effective`: what that is worth today, 0 to 1, higher is better. `unvetted`: nobody of ours has checked the claim. `unscored`: nothing says who speaks.",
-		annotations(read_only_hint = true, open_world_hint = false))]
+		annotations(read_only_hint = true, open_world_hint = false)
+	)]
 	async fn search(&self, Parameters(args): Parameters<SearchArgs>, ctx: RequestContext<RoleServer>) -> Result<CallToolResult, McpError> {
 		Ok(self.answer(&ctx, "search", &args, CORPUS.search(&args.pattern, args.scope.as_deref(), args.screen.unwrap_or(false))))
 	}
