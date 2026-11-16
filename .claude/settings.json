@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "case \"$(jq -r .tool_input.file_path)\" in */knowledge/references/loom/*|*/knowledge/references/fathom/*|*/knowledge/references/drive/*|*/knowledge/references/vimeo/*|*/knowledge/references/vocaroo/*) cd \"$CLAUDE_PROJECT_DIR\" && cargo run -q -p playbook -- check calls >&2 2>&1 || exit 2;; */knowledge/structured/*) cd \"$CLAUDE_PROJECT_DIR\" && cargo run -q -p playbook -- check cites >&2 2>&1 || exit 2;; esac"
+            "command": "case \"$(jq -r .tool_input.file_path)\" in */knowledge/*) cd \"$CLAUDE_PROJECT_DIR\" && cargo run -q -p playbook -- check >&2 2>&1 || exit 2;; esac"
           }
         ]
       }

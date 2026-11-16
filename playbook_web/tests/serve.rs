@@ -67,7 +67,8 @@ async fn the_server_carries_data_and_the_skill_the_procedure() {
 		let guide = description("guide");
 		assert!(guide.contains("- contractors/splits: splits"), "{guide}");
 		let (people, error) = call(&client, "guide", json!({ "area": "people" })).await;
-		assert!(!error && people.contains("| Eric |"), "{people}");
+		assert!(!error, "{people}");
+		assert!(people.contains("| Eric |"), "{people}");
 
 		// r[verify trust.arithmetic]
 		let (page, error) = call(&client, "guide", json!({ "area": "contractors/splits" })).await;
