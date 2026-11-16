@@ -21,21 +21,21 @@ and stop.
   ranked and capped; take them in that order
 - refused as too broad: pass one of the scopes the refusal names, or narrow the words
 - `read` a chapter when a hit carries the answer and its lines cut off what was said around it
-- advising rather than quoting: `guide` the area first. Its description lists the guides
+- advising rather than quoting: `guide` the page first. Its description lists the pages
 - nothing after a rephrasing or two: the corpus is silent on it
 
 ## Weighing
 
-Every hit's label prints who said it, their base, the date and the effective number: lower is better.
-Effective decides the answer, not recency or how vivid a story is. A call's label prints only its age term:
-work out who is speaking in the passage, take their base from the tables in `search`'s description, and add
-the two.
+Every hit's label says who backs it, how they know, when, and `effective`: what that is worth today.
+Higher is better. Effective decides the answer, not recency or how vivid a story is.
 
-- build from the best effective number down. Sources disagree: the better effective number leads
-- what only base r3 or worse backs never becomes a checklist item or a "don't": it goes after the advice as a
-  caveat, with who and when
+- build from the highest effective down. Sources disagree: the higher one leads
+- `unscored` is the words as said, with nobody named: a quote for a claim something scored makes, never
+  a weight of its own. Its label names the digest that says who spoke
+- `unvetted`, or backed only by someone who `heard` it, never becomes a checklist item or a "don't": it
+  goes after the advice as a caveat, with who and when
 - last pass: nothing dated after your newest citation says otherwise
-- attribute each claim to who said it, from the passage itself
+- attribute each claim to who said it, from the label
 
 ## The answer
 
@@ -45,7 +45,7 @@ Three parts, split by `---`:
 2. **advice**: no URLs, `[n]` into the sources. Say how strongly each point is backed
 3. **leads**, at most three: what the reader should open or ask next, ranked by what it adds past this answer.
    A course lead is the skool.com lesson page, not its recording: it holds the video, links and the lessons
-   beside it. A call mined dry adds nothing. A person, per the `experts` guide, adds what nobody recorded. One
+   beside it. A call mined dry adds nothing. A person, per [experts.md](experts.md), adds what nobody recorded. One
    line each: what they'd get, then the URL or handle (Eric doesn't need to be linked)
 
 The corpus silent: say so, and name the nearest thing it does cover.

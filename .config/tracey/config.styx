@@ -1,0 +1,17 @@
+specs (
+    {
+        name playbook
+        include (docs/spec/**/*.md)
+        impls (
+            {
+                name rust
+                include (**/*.rs)
+                exclude (**/target/**)
+            }
+            {
+                name skills
+                include (skills/**/*.md plugin/**/*.md knowledge/README.md)
+            }
+        )
+    }
+)

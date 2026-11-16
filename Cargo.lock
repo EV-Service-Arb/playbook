@@ -1256,6 +1256,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7f8f80099a98041a3d1622845c271458a2d73e688351bf3cb999266764b81d48"
 
 [[package]]
+name = "corpus"
+version = "0.1.0"
+
+[[package]]
 name = "countme"
 version = "3.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4853,6 +4857,7 @@ dependencies = [
  "ask_llm",
  "base64 0.22.1",
  "clap",
+ "corpus",
  "jiff",
  "libsql-rusqlite",
  "serde",
@@ -4871,6 +4876,7 @@ dependencies = [
  "async-trait",
  "axum 0.8.9",
  "base64 0.22.1",
+ "corpus",
  "ev_lib",
  "ev_lib_classes",
  "evconcierge_projection",

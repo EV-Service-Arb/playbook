@@ -13,7 +13,7 @@ use serde::{Deserialize, Serialize};
 
 use crate::{
 	Member, State,
-	corpus::{CORPUS, Found, GUIDE_DESCRIPTION, SEARCH_DESCRIPTION},
+	corpus::{CORPUS, Found, GUIDE_DESCRIPTION},
 	now,
 };
 
@@ -24,7 +24,7 @@ const INSTRUCTIONS: &str = "The service-arb playbook: dated, sourced knowledge o
 pub struct SearchArgs {
 	/// a regex, case-insensitive; each `|` alternative is scored on its own
 	pattern: String,
-	/// a path prefix to search under, e.g. `knowledge/references/loom` or `knowledge/structured/approved/profile`
+	/// a path prefix to search under, e.g. `knowledge/references/loom` or `knowledge/structured/profile`
 	scope: Option<String>,
 	/// search what recordings showed on screen instead of what was said
 	screen: Option<bool>,
@@ -34,7 +34,7 @@ pub struct SearchArgs {
 pub struct ReadArgs {
 	/// a path as `search` returned it
 	path: String,
-	/// part of the header line of the chapter or section to read, e.g. `Selling calls` or `## facts`
+	/// part of the header line of the chapter or section to read, e.g. `Selling calls`
 	header: String,
 	/// a line number inside the chapter, when the header text repeats in the file
 	line: Option<usize>,
@@ -42,7 +42,7 @@ pub struct ReadArgs {
 
 #[derive(Deserialize, Serialize, schemars::JsonSchema)]
 pub struct GuideArgs {
-	/// one of the guides listed
+	/// one of the pages listed, or `people`
 	area: String,
 }
 
@@ -61,13 +61,15 @@ impl Playbook {
 		}
 	}
 
-	#[tool(description = SEARCH_DESCRIPTION, annotations(read_only_hint = true, open_world_hint = false))]
+	#[tool(
+		description = "Case-insensitive regex over the service-arb playbook. Each kind of source has its own slots, so none crowds out another: the manual (knowledge/structured), the course (lessons and the recordings they link), calls, videos, texts. Within a kind, a passage holding the rarer of the pattern's alternatives ranks first. Each hit gives path:line, its header, its label, the source URL and the lines around it; the files past the slots follow as path:line, for `read`. A pattern hitting most of the scope is refused, with the sub-scopes it hits.\n\nA label is who backs the passage, how they know (ran it, says so, heard it), when the information is from, and `effective`: what that is worth today, 0 to 1, higher is better. `unvetted`: nobody of ours has checked the claim. `unscored`: nothing says who speaks.",
+		annotations(read_only_hint = true, open_world_hint = false))]
 	async fn search(&self, Parameters(args): Parameters<SearchArgs>, ctx: RequestContext<RoleServer>) -> Result<CallToolResult, McpError> {
 		Ok(self.answer(&ctx, "search", &args, CORPUS.search(&args.pattern, args.scope.as_deref(), args.screen.unwrap_or(false))))
 	}
 
 	#[tool(
-		description = "One chapter of a capture (a `###` under `## transcript` or `## summary`) or one section of a note, whole, with every line numbered. Never a whole file.",
+		description = "One chapter of a capture or a digest (a `###`), or one section of a manual page, whole, with every line numbered. Never a whole file.",
 		annotations(read_only_hint = true, open_world_hint = false)
 	)]
 	async fn read(&self, Parameters(args): Parameters<ReadArgs>, ctx: RequestContext<RoleServer>) -> Result<CallToolResult, McpError> {

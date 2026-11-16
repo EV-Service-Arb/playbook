@@ -3,7 +3,7 @@
 Sources may disagree; `knowledge/structured/` may not. Run when it contradicts itself, or a source contradicts it.
 
 - gather every mention first, across `knowledge/structured/` and `knowledge/references/`
-- then weigh: reliability and age, what each speaker meant, how sure they sounded, what they were doing
+- then weigh: trust and age, what each speaker meant, how sure they sounded, what they were doing
   when it worked or failed. The rest of what we know on the topic counts, and so does common industry
   knowledge where the practice overlaps
 - the conclusion is our opinion. Where the evidence is not conclusive, make it less precise rather than
@@ -14,5 +14,5 @@ Sources may disagree; `knowledge/structured/` may not. Run when it contradicts i
 - the conflicting bullets become one, with a `resolved:` line linking the record
 - the conflict and its conclusion, or where the weighing got stuck, go to the owner either way. They
   may know what no source says
-- when `approved/` is involved, the record goes to `tmp/resolved/`, and it is applied only once the
+- when a bullet without `(?)` is involved, the record goes to `tmp/resolved/`, and it is applied only once the
   owner confirms

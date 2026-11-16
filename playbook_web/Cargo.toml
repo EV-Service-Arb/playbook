@@ -8,6 +8,7 @@ publish = false
 async-trait.workspace = true
 axum.workspace = true
 base64.workspace = true
+corpus.workspace = true
 ev_lib.workspace = true
 ev_lib_classes.workspace = true
 evconcierge_projection.workspace = true
@@ -28,6 +29,7 @@ tracing.workspace = true
 tracing-subscriber.workspace = true
 
 [build-dependencies]
+corpus.workspace = true
 ev_lib_classes.workspace = true
 sha2.workspace = true
 

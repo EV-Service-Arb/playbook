@@ -10,7 +10,6 @@ use v_utils::io::{ConfirmResult, confirmation};
 
 mod call;
 mod chatgpt;
-mod cite_check;
 mod doc;
 mod eval;
 mod photo_metadata;
@@ -37,11 +36,8 @@ enum Cmd {
 		#[command(subcommand)]
 		source: Source,
 	},
-	/// Hold the tree to its shape; exits non-zero where it breaks.
-	Check {
-		#[command(subcommand)]
-		what: Check,
-	},
+	/// Hold everything under `knowledge/` to `knowledge/README.md`; exits non-zero where it breaks.
+	Check,
 	/// Print the path of each capture's recording, fetched beside the capture first where none is kept.
 	Recording {
 		#[arg(required = true)]
@@ -109,14 +105,6 @@ enum Yt {
 }
 
 #[derive(Subcommand)]
-enum Check {
-	/// every call capture, against `docs/ARCHITECTURE.md`'s "Call captures"
-	Calls,
-	/// every citation in `knowledge/structured/`, against its capture in `knowledge/references/`
-	Cites,
-}
-
-#[derive(Subcommand)]
 enum What {
 	/// whisper's transcript, re-pulled from the kept recording
 	Audio(Targets),
@@ -171,8 +159,22 @@ fn main() {
 				step: Yt::Transcribe { frames, urls },
 			} => rt().block_on(yt::transcribe(&root, frames.into(), &urls)),
 		},
-		Cmd::Check { what: Check::Calls } => eprintln!("{} call captures hold their shape", call::all(&root).len()),
-		Cmd::Check { what: Check::Cites } => cite_check::run(&root),
+		Cmd::Check => {
+			let calls = call::all(&root).len();
+			match corpus::compile(&root) {
+				Ok(index) => {
+					for path in &index.pending {
+						eprintln!("{path}: no `content.md` reads it yet");
+					}
+					eprintln!("{calls} call captures, {} pages and digests hold their shape", index.claims.len());
+				}
+				Err(errors) => {
+					errors.iter().for_each(|e| eprintln!("{e}"));
+					eprintln!("{} errors under knowledge/", errors.len());
+					std::process::exit(1);
+				}
+			}
+		}
 		Cmd::Recording { captures } =>
 			for media in call::recordings(&root, &captures) {
 				println!("{}", media.display());
