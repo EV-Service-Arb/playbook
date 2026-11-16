@@ -250,9 +250,9 @@ rolodex's `venues/` tree; nothing here duplicates that.
 .claude-plugin/marketplace.json   the one marketplace: Claude Code, claude.ai and Codex all read it
 plugin/                           the procedure: what a member installs, the owner as well
 ├─ skills/service-arb/SKILL.md    how to answer, in the terms of the three tools
-└─ .claude-plugin/plugin.json · .mcp.json   where the data is: the `playbook` server; Codex reads these too
+└─ .claude-plugin/plugin.json · .mcp.json   where the data is: the `playbook` server, the conductor's `/mcp`; Codex reads these too
 guides/<area>.md                  how to decide, per area: data, served by `guide`
-playbook_web/                     the data: search · read · guide over MCP, behind the Service-Arb panel (`sa:playbook:mcp:use`), every call logged
+playbook_web/                     the data: search · read · guide, operations the conductor's `/mcp` lists as tools (`sa:playbook:mcp:use`), every call logged
   └─ bakes in guides/, knowledge/structured/{approved,suggested}/ and knowledge/references/**/*.md
 skills/                           ingest · distill · ops: upkeep, run from a checkout; .claude/skills links here
 ```
