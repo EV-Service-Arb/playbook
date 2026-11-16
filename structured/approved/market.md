@@ -13,9 +13,6 @@
   > competition is read off the top 3 profiles' review counts, the keywords in their names, and whether their primary category is the service; fulfilment, whether you can find someone to do the job or buy the lead — a lead nobody can fulfil is worth nothing
   [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=98)
   [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=130)
-- ~1,000 searches/mo for a service, over all its phrasings, is ~1 lead a day — Eric's conservative rule of thumb
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=293)
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=327)
 - a narrow keyword brings callers who want exactly that job; a broad one brings tire-kickers — a detailing profile gets the $20 car wash
   [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=392)
 - (!) the untapped niches are mostly high ticket, and a $20–100k job gets quoted around, unlike a clogged toilet: the hard part is a contractor who closes, leaves you margin and doesn't scam you — Eric

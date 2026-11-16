@@ -40,4 +40,5 @@ v_utils = { version = "^2.23.0", features = ["cli", "xdg"] }
 non_kebab_case_bins = "allow"
 
 [workspace.lints.rust]
+stable_features = "allow"
 unused_features = "allow"

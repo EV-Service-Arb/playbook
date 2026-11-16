@@ -221,7 +221,8 @@ fn extract(root: &Path, rev: &str, dir: &Path, paths: &[&str]) {
 		.stdin(archive.stdout.take().expect("piped"))
 		.status()
 		.expect("tar runs");
-	assert!(archive.wait().expect("git was spawned").success() && tar.success(), "extracting {rev} into {}", dir.display());
+	assert!(archive.wait().expect("git was spawned").success(), "extracting {rev} into {}", dir.display());
+	assert!(tar.success(), "extracting {rev} into {}", dir.display());
 }
 
 /// Runs the side's server from its own dir, so its `mcp.db` lands there, and gives each case a member.

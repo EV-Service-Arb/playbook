@@ -5,7 +5,7 @@
 - ticket $300–2,000, no material cost; a drain job often upsells, a hydro-jet goes for $1,500 with his plumbers
   [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=97)
   [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=129)
-- the incumbents rank for it as plumbers: in Dallas the #1 for "drain cleaning" has 23 reviews and no address, #2 has 2 reviews and a one-star, #3 is Roto-Rooter, 1,151 reviews and no drain keyword; none is listed under drainage service
+- the incumbents rank for it as plumbers: in Dallas the #1 for "drain cleaning", `Dallas hydro jetting and drain`, is listed as a plumber with 23 reviews and no address; #2, `Drain Cleaning Dallas TX`, exact-matches the search and has an address but 2 reviews at one star; #3 is Roto-Rooter, 1,151 reviews and no drain keyword; none is listed under drainage service
   [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=194)
   [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=226)
   [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=258)

@@ -53,16 +53,20 @@ async fn the_server_carries_data_and_the_skill_the_procedure() {
 		let client = connect(&url, TOKEN).await;
 		let info = client.peer_info().unwrap();
 		let instructions = info.instructions.clone().unwrap();
-		assert!(instructions.contains("`service-arb` skill") && instructions.len() <= 512, "{instructions}");
-		assert!(!instructions.contains("**sources**") && !instructions.contains("effective"), "{instructions}");
+		assert!(instructions.contains("`service-arb` skill"), "{instructions}");
+		assert!(instructions.len() <= 512, "{instructions}");
+		assert!(!instructions.contains("**sources**"), "{instructions}");
+		assert!(!instructions.contains("effective"), "{instructions}");
 		assert!(info.capabilities.prompts.is_none());
 
 		let tools = client.list_all_tools().await.unwrap();
 		let description = |name: &str| tools.iter().find(|t| t.name == name).unwrap().description.clone().unwrap();
 		let search = description("search");
-		assert!(search.contains("tested myself") && search.contains("Eric"), "{search}");
+		assert!(search.contains("tested myself"), "{search}");
+		assert!(search.contains("Eric"), "{search}");
 		let guide = description("guide");
-		assert!(guide.contains("verification: video") && guide.contains("experts: "), "{guide}");
+		assert!(guide.contains("verification: video"), "{guide}");
+		assert!(guide.contains("experts: "), "{guide}");
 
 		let (text, error) = call(&client, "search", json!({ "pattern": "Magisk" })).await;
 		assert!(!error, "{text}");
@@ -70,7 +74,8 @@ async fn the_server_carries_data_and_the_skill_the_procedure() {
 		assert!(label.contains("effective "), "{label}");
 
 		let (text, error) = call(&client, "search", json!({ "pattern": "the" })).await;
-		assert!(error && text.lines().filter(|l| l.starts_with("- ref/") || l.starts_with("- structured/")).count() >= 2, "{text}");
+		assert!(error, "{text}");
+		assert!(text.lines().filter(|l| l.starts_with("- ref/") || l.starts_with("- structured/")).count() >= 2, "{text}");
 	})
 	.await;
 }

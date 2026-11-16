@@ -139,7 +139,11 @@ fn channels_in(readme: &Path) -> Vec<(String, String)> {
 	for (at, _) in text.match_indices("](https://www.youtube.com/") {
 		let who = &text[text[..at].rfind('[').expect("a markdown link opens its text with `[`") + 1..at];
 		assert!(
-			!who.is_empty() && who.chars().all(|c| c.is_ascii_lowercase()),
+			!who.is_empty(),
+			"a youtube link in ref/README.md names the directory its videos go in, as its text, and reads `{who}`"
+		);
+		assert!(
+			who.chars().all(|c| c.is_ascii_lowercase()),
 			"a youtube link in ref/README.md names the directory its videos go in, as its text, and reads `{who}`"
 		);
 		let channel = &text[at + 2..];

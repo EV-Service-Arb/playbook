@@ -12,7 +12,3 @@
   [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=456)
 - Eric has a student in it doing well
   [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=195)
-
-## plays
-- a profile with ~10 reviews at a lead a day: three $30k jobs a month at 15% commission, Eric estimates
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=327)
