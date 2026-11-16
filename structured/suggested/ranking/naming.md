@@ -5,8 +5,6 @@
   [r2 2026-10-06](https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=451)
   > keyword-stuffed names that rank well are usually backed by a DBA registered to that exact string — `Ilya`
   [r4 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5415)
-  > Eric: the #1 for "drain cleaning" in Dallas holds it on `drain` and `Dallas` in its name, with 23 reviews and no address
-  [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=258)
 
 - register the plain brand (`Aquafix`), not the keyword string (`Aquafix Plombier Chauffagiste – Lyon, Nord`)
   reason: google requires the GBP name to match real-world usage on site/signage/stationery, and prohibits extra info in the name

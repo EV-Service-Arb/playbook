@@ -36,21 +36,6 @@
   [r3 2026-07-24](https://www.youtube.com/watch?v=5Taappne53c&t=233)
 - a contractor within 45–60 min of every profile; once you trust one, launch where he can reach and hold off on profiles an hour from him
   [r3 2026-07-24](https://www.youtube.com/watch?v=5Taappne53c&t=299)
-- a niche is judged on the service — urgency, ticket, how easy it is to fulfil, margin, seasonality — then on the market it is run in: competition and search demand — Eric
-  [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=64)
-  [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=161)
-  > competition is read off the top 3 profiles' review counts, the keywords in their names, and whether their primary category is the service; fulfilment, whether you can find someone to do the job or buy the lead — a lead nobody can fulfil is worth nothing
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=98)
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=130)
-- ~1,000 searches/mo for a service, over all its phrasings, is ~1 lead a day — Eric's conservative rule of thumb
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=293)
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=327)
-- a narrow keyword brings callers who want exactly that job; a broad one brings tire-kickers — a detailing profile gets the $20 car wash
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=392)
-- (!) the untapped niches are mostly high ticket, and a $20–100k job gets quoted around, unlike a clogged toilet: the hard part is a contractor who closes, leaves you margin and doesn't scam you — Eric
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=719)
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=750)
-  [r2 2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c&t=980)
 
 ## facts
 - (!) google local service ads are no longer worth buying — `Ilya`
@@ -61,8 +46,3 @@
   [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2319)
   [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2390)
   [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2432)
-
-## plays
-- (!) an untapped niche hides under a trade: search a sub-service by its own name — `drain cleaning` rather than `plumbing` — and see whether the top profiles carry its keyword or its category. in Dallas none did; five minutes of looking — Eric
-  [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=486)
-  [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=520)

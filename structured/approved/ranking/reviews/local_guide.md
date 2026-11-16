@@ -11,3 +11,7 @@
     [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4522)
   - privacy cards from privacy.com, - pre-paid cards, and can make a random purchase on them, increasing trust
     [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4579)
+
+- the level comes from points: reviews on other profiles, suggested edits, photos. from level 4 google trusts what the account says — Eric
+  > or buy accounts already levelled; he hands out his source over instagram DM
+  [r2 2026-11-13](https://www.youtube.com/watch?v=g2goSCTF18I&t=130)

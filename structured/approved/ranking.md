@@ -34,6 +34,9 @@
   TODO: compile ranking of all the relevant things we can be doing to improve [#35](https://github.com/EV-Service-Arb/playbook/issues/35)
   TODO: check if image reviews and video reviews would get it higher [#36](https://github.com/EV-Service-Arb/playbook/issues/36)
 
+- a physical-address profile ranks way easier than one without — Eric
+  [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=226)
+
 ## plays
 - (!) have someone drive by the location and run google maps "directions" to it — huge boost, per `James McBride`
   [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=691)

@@ -15,8 +15,6 @@
   > Eric: address over service area, and keep pushing for it even when the live reviewer asks whether you're really a service area
   [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2081)
   [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2113)
-  > Eric: physical-address profiles are way easier to rank
-  [r2 2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk&t=226)
 - botting searches for your business name does nothing for ranking — Marcus Milan
   [r3 2026-07-24](https://www.youtube.com/watch?v=5Taappne53c&t=266)
 - (!) human activity lifts ranking: locals asking google maps for directions to the business count almost as much as reviews — `James McBride`; Eric sees it making a big difference
