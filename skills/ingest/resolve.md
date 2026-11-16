@@ -9,7 +9,7 @@ Sources may disagree; `knowledge/structured/` may not. Run when it contradicts i
 - the conclusion is our opinion. Where the evidence is not conclusive, make it less precise rather than
   pick a side: some say 2–3 profiles per gmail at most, others run 5–6, so the claim is `2–6*`, with what
   moves a case along that range
-- the record, `knowledge/other/resolved/<date>-<slug>.md`: every source weighed, linked, and a short why for
+- the record, `knowledge/log/resolved/<date>-<slug>.md`: every source weighed, linked, and a short why for
   the conclusion
 - the conflicting bullets become one, with a `resolved:` line linking the record
 - the conflict and its conclusion, or where the weighing got stuck, go to the owner either way. They

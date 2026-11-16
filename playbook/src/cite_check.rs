@@ -92,8 +92,8 @@ fn check(text: &str, dir: &Path, captures: &BTreeMap<String, Capture>, today: Da
 		}
 		if let Some(link) = trimmed.strip_prefix("resolved: ") {
 			match link_only(link) {
-				Some((_, url)) if url.contains("other/resolved/") && dir.join(url).is_file() => (),
-				_ => errors.push((line, "`resolved:` links its record in `knowledge/other/resolved/`, which must exist".into())),
+				Some((_, url)) if url.contains("log/resolved/") && dir.join(url).is_file() => (),
+				_ => errors.push((line, "`resolved:` links its record in `knowledge/log/resolved/`, which must exist".into())),
 			}
 		}
 		if cited || trimmed.starts_with("// unsourced:") {

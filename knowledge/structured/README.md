@@ -48,7 +48,7 @@ Observed from how the notes get written by hand. Follow it when persisting anyth
 - `//` parenthetical, thinking out loud, the second-order observation
 - `reason:` why, under the claim it explains
 - `TODO:` something to go test
-- `resolved:` links the record of how a contradiction was settled, `knowledge/other/resolved/<date>-<slug>.md`
+- `resolved:` links the record of how a contradiction was settled, `knowledge/log/resolved/<date>-<slug>.md`
 - `(!)` marks the surprising bit — the part that actually changes how we'd act
 - attribute by name, in full: `Ilya says…`, `Eric recommends…`, `Sam Hart says…`
   > who said it is half the information. an unattributed claim is weaker than a named one

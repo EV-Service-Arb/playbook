@@ -23,7 +23,7 @@ knowledge/          references/                 raw · verbatim · dated
  structured/suggested/ ──────► structured/approved/
                   the human promotes │
                                      ▼
-                                   other/      plans, comparisons, decisions
+                                    log/       plans, comparisons, decisions
 
         every bullet on the right links back to a second on the left
 ```
@@ -127,7 +127,7 @@ Promotion is the human moving a bullet from one to the other. An agent may place
 `approved/` only material the human already wrote — their own call notes, transcribed
 and re-sourced — never its own inference.
 
-**`knowledge/other/`** — conclusions that follow from the notes rather than from a source:
+**`knowledge/log/`** — conclusions that follow from the notes rather than from a source:
 plans, comparisons, decisions, how a contradiction was resolved.
 
 ## Blocks
@@ -193,7 +193,7 @@ is as good as nothing. How the decay is counted lives in `playbook/src/cite_chec
 A claim backed by several sources cites its best one first; the rest sit under it as secondary.
 Between two sources of equal base, this is newest-wins. Sources may contradict each other; `knowledge/structured/`
 may not. A contradiction is resolved into one claim, weighed by more than the number, and the record of
-it goes to `knowledge/other/resolved/`.
+it goes to `knowledge/log/resolved/`.
 
 ## Pullers
 
