@@ -11,4 +11,4 @@
 - a listing created, a listing verified: they are separate steps, and verification is where they fail. plan for verification, its own guide, before building more // inferred
 
 ## when it goes wrong
-- nothing vetted yet: `search` `missing place|mall method` with scope `structured/suggested` // inferred
+- nothing vetted yet: `search` `missing place|mall method` with scope `knowledge/structured/suggested` // inferred

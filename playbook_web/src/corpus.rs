@@ -11,7 +11,7 @@ const MIN_MATCH: usize = 2; // a lone letter is noise, not relevance
 const BROAD: f64 = 0.4; // a pattern hitting this share of the files in scope is an enumeration
 const OVERFLOW: usize = 5; // files per kind listed past its slots, for the agent to `read`
 const WORST: f64 = 10.;
-const CHANNELS: &[(&str, &str)] = &[("eric", "Eric"), ("zach", "Zach Peterson"), ("marcus", "Marcus Milan"), ("matt", "Matt Gazda")]; // `ref/youtube/<dir>` to its row in docs/ARCHITECTURE.md#people
+const CHANNELS: &[(&str, &str)] = &[("eric", "Eric"), ("zach", "Zach Peterson"), ("marcus", "Marcus Milan"), ("matt", "Matt Gazda")]; // `knowledge/references/youtube/<dir>` to its row in docs/ARCHITECTURE.md#people
 const LINE_CAP: usize = 700;
 const STRUCTURED_LINES: usize = 12;
 const REF_BLOCKS: usize = 2; // paragraphs or bullets shown per chunk
@@ -38,13 +38,13 @@ impl Corpus {
 			.map(|&(path, text)| {
 				let lines: Vec<&str> = text.lines().collect();
 				let kind = match path {
-					p if p.starts_with("structured/approved/") => Kind::Approved,
-					p if p.starts_with("structured/suggested/") => Kind::Suggested,
-					p if p.starts_with("ref/skool_") && p.contains("/course/") => Kind::Course,
-					p if p.starts_with("ref/youtube/") => Kind::Video,
-					p if p.starts_with("ref/") && lines.contains(&"## transcript") => Kind::Call,
-					p if p.starts_with("ref/") => Kind::Text,
-					p => unreachable!("build.rs bakes only structured/ and ref/ besides guides/: {p}"),
+					p if p.starts_with("knowledge/structured/approved/") => Kind::Approved,
+					p if p.starts_with("knowledge/structured/suggested/") => Kind::Suggested,
+					p if p.starts_with("knowledge/references/skool_") && p.contains("/course/") => Kind::Course,
+					p if p.starts_with("knowledge/references/youtube/") => Kind::Video,
+					p if p.starts_with("knowledge/references/") && lines.contains(&"## transcript") => Kind::Call,
+					p if p.starts_with("knowledge/references/") => Kind::Text,
+					p => unreachable!("build.rs bakes only knowledge/ besides guides/: {p}"),
 				};
 				let mut current = None;
 				let chapter = lines
@@ -96,7 +96,11 @@ impl Corpus {
 				}
 			})
 			.collect();
-		let lessons: Vec<&str> = FILES.iter().filter(|(p, _)| p.starts_with("ref/skool_") && p.contains("/course/")).map(|(_, t)| *t).collect();
+		let lessons: Vec<&str> = FILES
+			.iter()
+			.filter(|(p, _)| p.starts_with("knowledge/references/skool_") && p.contains("/course/"))
+			.map(|(_, t)| *t)
+			.collect();
 		for d in docs.iter_mut().filter(|d| matches!(d.kind, Kind::Call | Kind::Video | Kind::Text)) {
 			let within = d.lines.iter().find_map(|l| l.strip_prefix("- within: <")?.split_once('>')).map(|(u, _)| u);
 			let linked = |url: &str| {
@@ -138,8 +142,8 @@ impl Corpus {
 			_ => vec![re.clone()],
 		};
 		let scope = scope.unwrap_or("");
-		if !(scope.is_empty() || scope.starts_with("structured") || scope.starts_with("ref")) {
-			return Err("scope is a path prefix under `structured/` or `ref/`".into());
+		if !(scope.is_empty() || scope.starts_with("knowledge")) {
+			return Err("scope is a path prefix under `knowledge/structured/` or `knowledge/references/`".into());
 		}
 		let in_scope: Vec<&Doc> = self
 			.docs
@@ -196,8 +200,8 @@ impl Corpus {
 		}
 		let broad = |hit: usize, of: usize| of >= 5 && hit as f64 > of as f64 * BROAD;
 		if broad(files.len(), in_scope.len()) {
-			// the directories a level below the scope; below `structured/` and `ref/` from the top, as those two narrow nothing
-			let depth = scope.split('/').filter(|s| !s.is_empty()).count().max(1);
+			// the directories a level below the scope; below `knowledge/structured/` and `knowledge/references/` from the top, as those narrow nothing
+			let depth = scope.split('/').filter(|s| !s.is_empty()).count().max(2);
 			let sub = |path: &'static str| path.match_indices('/').nth(depth).map(|(i, _)| &path[..i]);
 			let mut subs: Vec<(&str, usize, usize)> = Vec::new(); // sub-scope, files hit, files in it
 			for d in &in_scope {
@@ -479,12 +483,12 @@ impl Doc {
 	}
 
 	fn channel(&self) -> (u8, &'static str) {
-		let dir = self.path.split('/').nth(2).expect("a video sits at ref/youtube/<channel>/");
+		let dir = self.path.split('/').nth(3).expect("a video sits at knowledge/references/youtube/<channel>/");
 		let who = CHANNELS
 			.iter()
 			.find(|(d, _)| *d == dir)
 			.map(|&(_, who)| who)
-			.unwrap_or_else(|| panic!("ref/youtube/{dir}: no person for the channel; give it a row in docs/ARCHITECTURE.md#people and in `CHANNELS`"));
+			.unwrap_or_else(|| panic!("knowledge/references/youtube/{dir}: no person for the channel; give it a row in docs/ARCHITECTURE.md#people and in `CHANNELS`"));
 		let &(_, base) = PEOPLE
 			.iter()
 			.find(|(p, _)| p.starts_with(who))

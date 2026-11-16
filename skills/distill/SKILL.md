@@ -1,11 +1,11 @@
 ---
 name: distill
-description: Turn what a capture in ref/ says into claims in structured/suggested/. Use on "distill this", on a capture nobody has distilled yet, and after answering a question in a checkout where the answer leaned on ref/ because structured/ had nothing.
+description: Turn what a capture in knowledge/references/ says into claims in knowledge/structured/suggested/. Use on "distill this", on a capture nobody has distilled yet, and after answering a question in a checkout where the answer leaned on knowledge/references/ because knowledge/structured/ had nothing.
 ---
 
 # distill
 
-Claims go to `structured/suggested/`, in [the block format](../../structured/README.md).
+Claims go to `knowledge/structured/suggested/`, in [the block format](../../knowledge/structured/README.md).
 
 - a claim goes to the block the next asker would open, per the note in
   [Overview](../../docs/ARCHITECTURE.md#overview), not where the source happened to say it
@@ -18,11 +18,11 @@ Claims go to `structured/suggested/`, in [the block format](../../structured/REA
   its digest; a chapter the platform wrote has no finer second than its own
 - `## shown` and `shown.md` are a model's reading: [recordings.md](../ingest/recordings.md)
 - a source no row of either reliability table covers is asked of the owner, never guessed.
-  `ref/research/` sits at r5 with no row
+  `knowledge/references/research/` sits at r5 with no row
 
 ## From an answer
 
-An answer `structured/` could not give and `ref/` did leaves its clearest claim behind, so the next
+An answer `knowledge/structured/` could not give and `knowledge/references/` did leaves its clearest claim behind, so the next
 question finds it there. Only what the answer leaned on, best number first: no anecdote, no guess,
 nothing a better source contradicts.
 

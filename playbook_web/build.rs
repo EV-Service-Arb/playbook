@@ -16,7 +16,7 @@ fn main() {
 		.expect("playbook_web/ sits in the workspace root")
 		.to_path_buf();
 	let mut files = Vec::new();
-	for dir in ["guides", "structured/approved", "structured/suggested", "ref"] {
+	for dir in ["guides", "knowledge/structured/approved", "knowledge/structured/suggested", "knowledge/references"] {
 		println!("cargo:rerun-if-changed={}", root.join(dir).display());
 		walk(&root.join(dir), &mut files);
 	}
@@ -82,7 +82,7 @@ fn main() {
 	writeln!(out, "const PEOPLE: &[(&str, u8)] = &{people:?};").unwrap();
 	let people: Vec<String> = people.iter().map(|(who, base)| format!("{base} {who}")).collect();
 	writeln!(out, "pub const SEARCH_DESCRIPTION: &str = {:?};", format!(
-		"Case-insensitive regex over the service-arb playbook. Each kind of source has its own slots, so none crowds out another: structured/approved and structured/suggested notes, the course (lessons and the recordings they link), calls, videos, texts. Within a kind, a passage holding the rarer of the pattern's alternatives ranks first. Each hit gives path:line, its header, its label, the source URL and the lines around it; the files past the slots follow as path:line, for `read`. A pattern hitting most of the scope is refused, with the sub-scopes it hits.\n\nA label is who said it, their base reliability, the date, and the effective reliability: base plus age, lower is better, 10 at most and as good as nothing. A call's base is its speaker's, so its label gives the age term to add to it instead.\n\nBase by role: {}.\nBase by person, whatever their role: {}.",
+		"Case-insensitive regex over the service-arb playbook. Each kind of source has its own slots, so none crowds out another: knowledge/structured/approved and knowledge/structured/suggested notes, the course (lessons and the recordings they link), calls, videos, texts. Within a kind, a passage holding the rarer of the pattern's alternatives ranks first. Each hit gives path:line, its header, its label, the source URL and the lines around it; the files past the slots follow as path:line, for `read`. A pattern hitting most of the scope is refused, with the sub-scopes it hits.\n\nA label is who said it, their base reliability, the date, and the effective reliability: base plus age, lower is better, 10 at most and as good as nothing. A call's base is its speaker's, so its label gives the age term to add to it instead.\n\nBase by role: {}.\nBase by person, whatever their role: {}.",
 		roles.join(" · "),
 		people.join(" · ")
 	))
@@ -126,11 +126,11 @@ fn stylesheet(pages: &Path, out: &Path) {
 	.unwrap();
 }
 
-/// `README.md`s are indices and format rules, not knowledge. `ref/cases/` states no source and no date.
+/// `README.md`s are indices and format rules, not knowledge. `knowledge/references/cases/` states no source and no date.
 fn walk(dir: &Path, files: &mut Vec<PathBuf>) {
 	for entry in fs::read_dir(dir).unwrap_or_else(|e| panic!("{}: {e}", dir.display())) {
 		let path = entry.unwrap().path();
-		if path.ends_with("ref/cases") {
+		if path.ends_with("knowledge/references/cases") {
 			continue;
 		}
 		if path.is_dir() {

@@ -32,7 +32,7 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Cmd {
-	/// Capture each source we have no capture of yet into `ref/`: the given links, or where none, every one `ref/README.md` links.
+	/// Capture each source we have no capture of yet into `knowledge/references/`: the given links, or where none, every one `knowledge/references/README.md` links.
 	Pull {
 		#[command(subcommand)]
 		source: Source,
@@ -48,7 +48,7 @@ enum Cmd {
 		captures: Vec<PathBuf>,
 	},
 	/// Write `<capture>/shown.md`, what the recording shows that its speech does not, for each capture nobody has
-	/// watched yet; every one under `ref/` where none are given.
+	/// watched yet; every one under `knowledge/references/` where none are given.
 	Watch {
 		#[command(flatten)]
 		frames: Frames,
@@ -68,7 +68,7 @@ enum Cmd {
 		/// the old side's system rev, the last release where unset
 		#[arg(long)]
 		against: Option<String>,
-		/// the rev both sides take `structured/{approved,suggested}` and `ref/` from, this tree's where unset
+		/// the rev both sides take `knowledge/structured/{approved,suggested}` and `knowledge/references/` from, this tree's where unset
 		#[arg(long)]
 		info: Option<String>,
 		/// answers in flight at once; each is a `claude` process of ~240 MB
@@ -89,7 +89,7 @@ enum Source {
 	Chatgpt { urls: Vec<String> },
 	/// every group's classroom, and the calls feed into the registry
 	Skool,
-	/// youtube channels, through the index `ref/youtube/README.md`
+	/// youtube channels, through the index `knowledge/references/youtube/README.md`
 	Yt {
 		#[command(subcommand)]
 		step: Yt,
@@ -98,7 +98,7 @@ enum Source {
 
 #[derive(Subcommand)]
 enum Yt {
-	/// List every video of the channels `ref/README.md` links, in `ref/youtube/README.md`.
+	/// List every video of the channels `knowledge/references/README.md` links, in `knowledge/references/youtube/README.md`.
 	Sync,
 	/// Capture the given videos, or every one that list has unticked.
 	Transcribe {
@@ -112,7 +112,7 @@ enum Yt {
 enum Check {
 	/// every call capture, against `docs/ARCHITECTURE.md`'s "Call captures"
 	Calls,
-	/// every citation in `structured/`, against its capture in `ref/`
+	/// every citation in `knowledge/structured/`, against its capture in `knowledge/references/`
 	Cites,
 }
 
@@ -260,7 +260,7 @@ fn re_transcribe(root: &Path, what: What) {
 				let staged = root.join("tmp/call-pull").join(id);
 				assert!(!staged.exists(), "{} is already staged — a pull was cut short; move it back beside its capture", staged.display());
 				std::fs::create_dir_all(staged.parent().expect("joined above")).expect("tmp/ is writable");
-				std::fs::rename(c.path.with_extension(""), &staged).expect("tmp/ is on the same filesystem as ref/");
+				std::fs::rename(c.path.with_extension(""), &staged).expect("tmp/ is on the same filesystem as knowledge/references/");
 				std::fs::remove_file(&c.path).expect("the capture was just read");
 			}
 			// a drive, vimeo or vocaroo recording is named by the registry, so only a registry run can pull it

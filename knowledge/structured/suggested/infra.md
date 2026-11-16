@@ -3,7 +3,7 @@
   > up to 5–6 when we are added as manager, opsec is clean, and the managing email is high-trust and on an org (workspace)
   > 2–3 at most when we sit on the profiles as owner, or the account is already tainted
   reason: one banned gmail takes every profile on it at once
-  resolved: [2026-10-23](../../secondary/resolved/2026-10-23-profiles-per-gmail.md)
+  resolved: [2026-10-23](../../other/resolved/2026-10-23-profiles-per-gmail.md)
   [r1 2026-08-20](https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=194)
   [r2 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=341)
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2643)

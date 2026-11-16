@@ -1,6 +1,6 @@
 # How many profiles one gmail can hold
 
-`structured/suggested/infra.md` said "3–5 per gmail, at most — Eric". Answers built on the corpus said
+`knowledge/structured/suggested/infra.md` said "3–5 per gmail, at most — Eric". Answers built on the corpus said
 2–3, from Eric's other calls.
 
 ## Sources

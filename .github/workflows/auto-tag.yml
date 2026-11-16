@@ -8,9 +8,9 @@ on:
     paths:
       - "guides/**"
       - "docs/ARCHITECTURE.md"
-      - "structured/approved/**"
-      - "structured/suggested/**"
-      - "ref/**/*.md"
+      - "knowledge/structured/approved/**"
+      - "knowledge/structured/suggested/**"
+      - "knowledge/references/**/*.md"
       - "playbook_web/**"
       - "Cargo.lock"
 concurrency:

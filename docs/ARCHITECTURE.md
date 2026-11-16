@@ -15,7 +15,7 @@ Capture and distillation never happen in the same file.
                      │
                      │  playbook pull, social_networks
                      ▼
-                   ref/                        raw · verbatim · dated
+knowledge/          references/                 raw · verbatim · dated
                      │
          ┌───────────┴────────────┐
          │ an agent reads it      │ the human's own notes, re-sourced
@@ -23,17 +23,17 @@ Capture and distillation never happen in the same file.
  structured/suggested/ ──────► structured/approved/
                   the human promotes │
                                      ▼
-                                secondary/     plans, comparisons, decisions
+                                   other/      plans, comparisons, decisions
 
         every bullet on the right links back to a second on the left
 ```
 
-> very important to note that knowledge-base must be organized based on where and how it's likely to be used. [structured/approved/] drives the final agent's knowledge, so while [ref/] is organized based on where and when data is from, the actual knowledge we poses must follow the access patterns. Eg "expectations" from doing something are clearly subservient to the method/action itself, and data on how verify profiles, and on how to get reviews, are completely separate buckets.
+> very important to note that knowledge-base must be organized based on where and how it's likely to be used. [knowledge/structured/approved/] drives the final agent's knowledge, so while [knowledge/references/] is organized based on where and when data is from, the actual knowledge we poses must follow the access patterns. Eg "expectations" from doing something are clearly subservient to the method/action itself, and data on how verify profiles, and on how to get reviews, are completely separate buckets.
 > As such, the 
 
 ## Layers
 
-**`ref/`** — raw, verbatim, never hand-edited. One file per source, stating its own
+**`knowledge/references/`** — raw, verbatim, never hand-edited. One file per source, stating its own
 source id, where it came from and when it was recorded. A capture is identified by
 that id and not by its path, so a file is free to be named and placed after what it
 *says* — and a source that reorders or renames upstream is moved, not pulled twice.
@@ -41,7 +41,7 @@ Re-running a puller over an existing capture is a no-op; a stale one is re-pulle
 deleting it.
 
 ```
-ref/
+knowledge/references/
 ├── README.md                     # the source list — every source, and which of them a puller reaches
 ├── loom/<date>-<title>.md        # call recordings: summary, then the transcript under its chapters
 ├── fathom/<date>-<title>.md      # the same, for calls recorded on fathom
@@ -64,7 +64,7 @@ ref/
 Two things a capture cannot state about itself are written beside it instead, since a
 capture is never edited: **how far behind upstream it is**, in `skool_<group>/README.md`,
 rewritten every run with the day of the run; and **what a source says that this tree
-has no capture of**, printed by the puller for `ref/README.md` to be told about by hand.
+has no capture of**, printed by the puller for `knowledge/references/README.md` to be told about by hand.
 
 ### Call captures
 
@@ -108,35 +108,35 @@ plain prose, in paragraphs, no stamps in it
 `playbook pull call` checks every capture on disk against this on each run, and `playbook check calls` runs only
 that; a hook runs it after any agent edit under a call capture's platform dir.
 
-Machine transcriptions of a recording belong in `ref/` too, each naming what produced it: whisper's
+Machine transcriptions of a recording belong in `knowledge/references/` too, each naming what produced it: whisper's
 of its audio, in `transcribed by:`, and `playbook watch`'s of its picture, in `shown.md`,
 whose header names the model, the day and what it cost. A youtube capture reads its picture the same
 way, into its own `## shown`, and states the models and the cost in its header. Every line of `shown.md` links the second it
 describes and embeds the frame at that second, so the claim can be checked by eye.
 
-The one reading an agent may put in `ref/` is what the source's own platform would have:
+The one reading an agent may put in `knowledge/references/` is what the source's own platform would have:
 a recording its platform never summarised gets a summary from `/ingest call-digest`, which says so
 in the capture's `read by:` line. Nothing else.
 
-**`structured/suggested/`** — an agent's own reading of a source. Unreviewed.
-**`structured/approved/`** — what the human has already vetted.
-**`structured/internal/`** — what we know about our own team and its operations. Read in a checkout,
+**`knowledge/structured/suggested/`** — an agent's own reading of a source. Unreviewed.
+**`knowledge/structured/approved/`** — what the human has already vetted.
+**`knowledge/structured/internal/`** — what we know about our own team and its operations. Read in a checkout,
 never baked into the member image.
 
 Promotion is the human moving a bullet from one to the other. An agent may place into
 `approved/` only material the human already wrote — their own call notes, transcribed
 and re-sourced — never its own inference.
 
-**`secondary/`** — conclusions that follow from the notes rather than from a source:
+**`knowledge/other/`** — conclusions that follow from the notes rather than from a source:
 plans, comparisons, decisions, how a contradiction was resolved.
 
 ## Blocks
 
-`structured/` is a tree of topical blocks, the same shape on both sides. As with rust modules, `x.md`
+`knowledge/structured/` is a tree of topical blocks, the same shape on both sides. As with rust modules, `x.md`
 is the block and `x/` holds its children, and either one can exist alone:
 
 ```
-structured/{approved,suggested}/
+knowledge/structured/{approved,suggested}/
 ├── market.md       market/niches/<niche>/…     niche and city choice; per-trade economics
 ├── profile/        creation · verification/{video,live,missing_place} · suspension/registration
 ├── ranking/        naming · categories · site · reviews/{stand,rate_limits,deletion,sourcing,local_guide}
@@ -159,8 +159,8 @@ beneath it, and the link text is the base reliability and the date:
   [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3026)
 ```
 
-The rest of the format and the style are in `structured/README.md`. `playbook check cites` enforces
-them, in `nix run .#check`, and a hook runs it after any agent edit under `structured/`.
+The rest of the format and the style are in `knowledge/structured/README.md`. `playbook check cites` enforces
+them, in `nix run .#check`, and a hook runs it after any agent edit under `knowledge/structured/`.
 
 ## Reliability
 
@@ -170,9 +170,9 @@ it sets the base. A person on the [people](#people) list takes their own base in
 | base | source                                                        |
 |------|---------------------------------------------------------------|
 | 0    | tested myself                                                 |
-| 1    | skool course material or in [structured/approved/]            |
+| 1    | skool course material or in [knowledge/structured/approved/]  |
 | 3    | a gmbpp member tested it                                      |
-| 4    | a gmbpp member claimed it or in [structured/suggested]        |
+| 4    | a gmbpp member claimed it or in [knowledge/structured/suggested] |
 | 5    | a gmbpp member heard or thought of it; a cheap group member tested it |
 | 6    | a cheap group member claimed it                               |
 | 7    | a cheap group member heard or thought of it                   |
@@ -191,22 +191,22 @@ Then everything decays with age, up to 10 — a cheap group member having heard 
 is as good as nothing. How the decay is counted lives in `playbook/src/cite_check.rs`, not here.
 
 A claim backed by several sources cites its best one first; the rest sit under it as secondary.
-Between two sources of equal base, this is newest-wins. Sources may contradict each other; `structured/`
+Between two sources of equal base, this is newest-wins. Sources may contradict each other; `knowledge/structured/`
 may not. A contradiction is resolved into one claim, weighed by more than the number, and the record of
-it goes to `secondary/resolved/`.
+it goes to `knowledge/other/resolved/`.
 
 ## Pullers
 
 Every tool here is a subcommand of the `playbook` crate at the root of the cargo workspace, so each
 dependency is pinned once for all of them. `playbook <cmd>` is `cargo r -p playbook -- <cmd>`, run
 from anywhere inside the checkout. Each `pull <platform>` takes source URLs as arguments, or with
-none reads `ref/README.md` for links of its platform and fetches the ones missing from disk. So
-adding a source is pasting its link into `ref/README.md` and re-running. `pull yt` alone goes
-through an index: `sync` lists every video of the channels `ref/README.md` links into
-`ref/youtube/README.md`, and `transcribe` captures what that list has unticked, or only the listed
+none reads `knowledge/references/README.md` for links of its platform and fetches the ones missing from disk. So
+adding a source is pasting its link into `knowledge/references/README.md` and re-running. `pull yt` alone goes
+through an index: `sync` lists every video of the channels `knowledge/references/README.md` links into
+`knowledge/references/youtube/README.md`, and `transcribe` captures what that list has unticked, or only the listed
 videos it is given.
 
-`ref/README.md` is the only registry. A capture quotes its own source URL and a
+`knowledge/references/README.md` is the only registry. A capture quotes its own source URL and a
 transcript quotes every link that was said out loud, so a puller that scanned the tree
 would feed on its own output. A puller that *finds* a link — one lesson pointing at
 another platform's recording — prints it rather than following it, and the registry
@@ -221,7 +221,7 @@ playbook/src/
 ├── chatgpt.rs         # pull chatgpt: headless chromium → the DOM's turns
 ├── yt.rs              # pull yt sync: channels → the dated list of their videos; pull yt transcribe: captions in citable blocks, summary and chapters through `ask_llm`, the video through `Client::watch`, frames only where the captions say something is shown (`--legacy`: wherever the picture changes) → `## shown`, description
 ├── skool.rs           # pull skool: skool's classroom → the course tree, module by module and lesson by lesson; the calls feed → the registry's group calls
-├── cite_check.rs      # check cites, not a puller: holds every citation in structured/ to its capture in ref/
+├── cite_check.rs      # check cites, not a puller: holds every citation in knowledge/structured/ to its capture in knowledge/references/
 ├── photo_metadata.rs  # photo-metadata: exif of our own photos, and synthetic sidecars
 └── eval.rs            # eval
 ```
@@ -253,7 +253,7 @@ plugin/                           the procedure: what a member installs, the own
 └─ .claude-plugin/plugin.json · .mcp.json   where the data is: the `playbook` server; Codex reads these too
 guides/<area>.md                  how to decide, per area: data, served by `guide`
 playbook_web/                     the data: search · read · guide over MCP, behind the Service-Arb panel (`sa:playbook:mcp:use`), every call logged
-  └─ bakes in guides/, structured/{approved,suggested}/ and ref/**/*.md
+  └─ bakes in guides/, knowledge/structured/{approved,suggested}/ and knowledge/references/**/*.md
 skills/                           ingest · distill · ops: upkeep, run from a checkout; .claude/skills links here
 ```
 
@@ -294,7 +294,7 @@ A host's rating is how sure we are it still serves a recording a year on, 1 leas
 | youtube | 5 | taken down or made private, rarely |
 
 A recording goes in when its host rates ≤ 2, or ≤ 3 for course material (a recording a lesson in
-`ref/skool_*/course/` links), committed with `git add -f` past the gitignore. Every clone downloads
+`knowledge/references/skool_*/course/` links), committed with `git add -f` past the gitignore. Every clone downloads
 every object, and every checkout, worktrees included, copies each out of `.git/lfs`, so the free
 tier is a budget per clone, not a quota to fill.
 
@@ -305,12 +305,12 @@ history, and an hour of call is ~300–400 MB.
 
 ## Invariants
 
-- Nothing enters `structured/` that did not enter `ref/` first — bar `r0`, which enters as the
+- Nothing enters `knowledge/structured/` that did not enter `knowledge/references/` first — bar `r0`, which enters as the
   comment that closed its test's issue, and the owner's own words, which enter `// unsourced: Valera`
   and are re-sourced once a capture holds them.
 - Every claim carries a link to its source and the date it was said.
-- `ref/` is written by pullers, never by hand — bar what `/ingest call-digest` fills in, which says so.
+- `knowledge/references/` is written by pullers, never by hand — bar what `/ingest call-digest` fills in, which says so.
 - An agent's own reading goes to `suggested/`, never straight to `approved/`.
 - A puller writes a new capture, moves one, or does nothing; it never edits what one says.
-- The member image carries `guides/`, `structured/approved/`, `structured/suggested/` and `ref/**/*.md` only: no scripts, no docs, no
+- The member image carries `guides/`, `knowledge/structured/approved/`, `knowledge/structured/suggested/` and `knowledge/references/**/*.md` only: no scripts, no docs, no
   history, no media.

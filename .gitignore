@@ -88,4 +88,4 @@ graphify-out/
 ### could be used for initial debugging of apps using `config` crate
 /config.toml
 **/rustc-ice*
-ref/**/recording.*
+knowledge/references/**/recording.*

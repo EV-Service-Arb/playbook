@@ -34,7 +34,10 @@ trait KeyUser {
 async fn read_returns_one_chapter() {
 	serve("read", i64::MAX, Concierge::default(), async |url| {
 		let client = connect(&url, TOKEN).await;
-		for (path, header) in [("ref/loom/2026-09-18-group-call.md", "[03:34]"), ("structured/suggested/infra.md", "## facts")] {
+		for (path, header) in [
+			("knowledge/references/loom/2026-09-18-group-call.md", "[03:34]"),
+			("knowledge/structured/suggested/infra.md", "## facts"),
+		] {
 			let (text, error) = call(&client, "read", json!({ "path": path, "header": header })).await;
 			assert!(!error, "{text}");
 			let headers = text.lines().filter(|l| l.split_once(" | ").is_some_and(|(_, l)| l.starts_with('#'))).count();
@@ -75,7 +78,7 @@ async fn the_server_carries_data_and_the_skill_the_procedure() {
 
 		let (text, error) = call(&client, "search", json!({ "pattern": "the" })).await;
 		assert!(error, "{text}");
-		assert!(text.lines().filter(|l| l.starts_with("- ref/") || l.starts_with("- structured/")).count() >= 2, "{text}");
+		assert!(text.lines().filter(|l| l.starts_with("- knowledge/")).count() >= 2, "{text}");
 	})
 	.await;
 }

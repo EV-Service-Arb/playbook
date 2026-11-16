@@ -1,4 +1,4 @@
-//! Call captures: `ref/<platform>/<date>-<title>.md`, held to `docs/ARCHITECTURE.md`'s "Call
+//! Call captures: `knowledge/references/<platform>/<date>-<title>.md`, held to `docs/ARCHITECTURE.md`'s "Call
 //! captures", of which this is the only enforcement.
 //!
 //! Both platforms' share pages are server-rendered and public, so nothing here needs an account. A
@@ -47,11 +47,11 @@ pub fn recordings(root: &Path, captures: &[PathBuf]) -> Vec<PathBuf> {
 pub fn pull(root: &Path, urls: &[String]) {
 	let have = captured(root);
 	let wanted: BTreeMap<Rec, Option<Listed>> = match urls.is_empty() {
-		true => links_in(&root.join("ref/README.md")),
+		true => links_in(&root.join("knowledge/references/README.md")),
 		false => urls.iter().map(|a| (rec_of(a), None)).collect(),
 	};
 	if wanted.is_empty() {
-		eprintln!("no recording links in ref/README.md and none given — nothing to pull");
+		eprintln!("no recording links in knowledge/references/README.md and none given — nothing to pull");
 		return;
 	}
 
@@ -73,7 +73,7 @@ pub fn pull(root: &Path, urls: &[String]) {
 			Platform::Drive | Platform::Vimeo | Platform::Vocaroo => {
 				let listed = listed
 					.as_ref()
-					.unwrap_or_else(|| panic!("{id}: a {} recording is pulled through what ref/README.md says of it", platform.name()));
+					.unwrap_or_else(|| panic!("{id}: a {} recording is pulled through what knowledge/references/README.md says of it", platform.name()));
 				heard(*platform, listed, &media)
 			}
 		};
@@ -142,11 +142,11 @@ impl Platform {
 
 	fn dir(self) -> &'static str {
 		match self {
-			Platform::Loom => "ref/loom",
-			Platform::Fathom => "ref/fathom",
-			Platform::Drive => "ref/drive",
-			Platform::Vimeo => "ref/vimeo",
-			Platform::Vocaroo => "ref/vocaroo",
+			Platform::Loom => "knowledge/references/loom",
+			Platform::Fathom => "knowledge/references/fathom",
+			Platform::Drive => "knowledge/references/drive",
+			Platform::Vimeo => "knowledge/references/vimeo",
+			Platform::Vocaroo => "knowledge/references/vocaroo",
 		}
 	}
 
@@ -335,7 +335,7 @@ fn check(name: &str, text: &str) -> Rec {
 	(platform, id)
 }
 
-/// The registry is `ref/README.md` and nothing else — a capture quotes its own source URL, and a
+/// The registry is `knowledge/references/README.md` and nothing else — a capture quotes its own source URL, and a
 /// transcript quotes every link that was said out loud, so scanning the tree would make the
 /// pullers feed on their own output.
 fn links_in(readme: &Path) -> BTreeMap<Rec, Option<Listed>> {

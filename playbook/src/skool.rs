@@ -1,4 +1,4 @@
-//! Mirrors each group's classroom under `ref/skool_<group>/course/`, one
+//! Mirrors each group's classroom under `knowledge/references/skool_<group>/course/`, one
 //! directory per module and one file per lesson, both numbered in the order skool serves them.
 //!
 //! Skool is read by `social_networks_adapters`, linked; this only decides how a capture is filed.
@@ -11,15 +11,15 @@
 //!
 //! A capture is identified by the id it states and not by where it sits, so a lesson
 //! upstream renames or reorders is moved rather than pulled twice. What it says is never edited:
-//! `ref/skool_<group>/README.md` is rewritten every run with the day of the run and with every lesson
+//! `knowledge/references/skool_<group>/README.md` is rewritten every run with the day of the run and with every lesson
 //! skool has touched since we captured it, and re-pulling one is deleting its file.
 //!
 //! Every link the classroom says out loud — the lesson's video, the links in its body, whatever sits
-//! in its resources — is collected, and the ones missing from `ref/README.md` are printed at the end
+//! in its resources — is collected, and the ones missing from `knowledge/references/README.md` are printed at the end
 //! to go into it. A lesson skool hosts itself carries a mux URL that is signed and dies within the
 //! hour, so it is written down but is not a link anything can follow later.
 //!
-//! The calls feed `ref/README.md` links as `[calls]` is read too, and every recording posted there
+//! The calls feed `knowledge/references/README.md` links as `[calls]` is read too, and every recording posted there
 //! goes straight into the registry's group calls list, dated by its post.
 
 use std::{
@@ -34,7 +34,10 @@ use social_networks_adapters::{
 use v_utils::macros::{MyConfigPrimitives, Settings};
 
 // each group, and the directory it was given by hand
-const GROUPS: &[(&str, &str)] = &[("gmp-passive-profits-5347", "ref/skool_gmbpp"), ("20kmodropservicingblueprint", "ref/skool_cheap")];
+const GROUPS: &[(&str, &str)] = &[
+	("gmp-passive-profits-5347", "knowledge/references/skool_gmbpp"),
+	("20kmodropservicingblueprint", "knowledge/references/skool_cheap"),
+];
 
 pub async fn pull(root: &Path) {
 	let config = Config::try_build(SettingsFlags::default()).unwrap_or_else(|e| panic!("reading ~/.config/social_networks: {e}"));
@@ -42,7 +45,7 @@ pub async fn pull(root: &Path) {
 		.skool
 		.expect("a skool classroom is only readable by a member, so this needs a `[skool]` section in ~/.config/social_networks");
 	let mut skool = Skool::try_new(Some(creds)).await.unwrap_or_else(|e| panic!("{e:?}"));
-	register_calls(&mut skool, &root.join("ref/README.md")).await;
+	register_calls(&mut skool, &root.join("knowledge/references/README.md")).await;
 	let mut links: BTreeSet<String> = BTreeSet::new();
 	for (group, out_root) in GROUPS {
 		let courses = skool
@@ -52,11 +55,11 @@ pub async fn pull(root: &Path) {
 		links.extend(classroom(root, group, out_root, &courses));
 	}
 
-	let registry = std::fs::read_to_string(root.join("ref/README.md")).expect("ref/README.md is the registry");
+	let registry = std::fs::read_to_string(root.join("knowledge/references/README.md")).expect("knowledge/references/README.md is the registry");
 	let missing: Vec<&String> = links.iter().filter(|link| !registry.contains(link.as_str())).collect();
 	if !missing.is_empty() {
 		// the registry is written by hand on purpose, so this stops at saying what to put in it
-		eprintln!("\nlinks the classroom says and `ref/README.md` does not — paste them under `## Sources`, then re-run the puller of their platform:");
+		eprintln!("\nlinks the classroom says and `knowledge/references/README.md` does not — paste them under `## Sources`, then re-run the puller of their platform:");
 		for link in missing {
 			eprintln!("  {link}");
 		}
@@ -72,16 +75,16 @@ struct Config {
 	skool: Option<SkoolConfig>,
 }
 
-/// Every recording posted to the feed `ref/README.md` links as `[calls]`, dated by its post, written
+/// Every recording posted to the feed `knowledge/references/README.md` links as `[calls]`, dated by its post, written
 /// into the registry's group calls list. Unlike a lesson's links these are what that list is for, so
 /// they go in rather than being printed.
 async fn register_calls(skool: &mut Skool, registry_path: &Path) {
 	const LIST: &str = "- group calls, as they get shared:";
-	let registry = std::fs::read_to_string(registry_path).expect("ref/README.md is the registry");
+	let registry = std::fs::read_to_string(registry_path).expect("knowledge/references/README.md is the registry");
 	let feed = registry
 		.lines()
 		.find_map(|l| l.strip_prefix("- [calls](")?.strip_suffix(')'))
-		.expect("ref/README.md links the calls feed as `- [calls](…)`");
+		.expect("knowledge/references/README.md links the calls feed as `- [calls](…)`");
 	let feed = feed.strip_prefix("https://www.skool.com").expect("the calls feed is a skool link");
 
 	let mut posts: Vec<serde_json::Value> = Vec::new();
@@ -123,10 +126,13 @@ async fn register_calls(skool: &mut Skool, registry_path: &Path) {
 	}
 
 	let mut lines: Vec<&str> = registry.lines().collect();
-	let start = lines.iter().position(|l| *l == LIST).unwrap_or_else(|| panic!("ref/README.md has no `{LIST}` line"));
+	let start = lines
+		.iter()
+		.position(|l| *l == LIST)
+		.unwrap_or_else(|| panic!("knowledge/references/README.md has no `{LIST}` line"));
 	let end = start + 1 + lines[start + 1..].iter().take_while(|l| l.starts_with("  - ")).count();
 	lines.splice(end..end, added.iter().map(String::as_str));
-	std::fs::write(registry_path, lines.join("\n") + "\n").expect("ref/README.md is ours to write");
+	std::fs::write(registry_path, lines.join("\n") + "\n").expect("knowledge/references/README.md is ours to write");
 	for line in &added {
 		eprintln!("registered {}", line.trim_start_matches("  - "));
 	}
@@ -341,7 +347,7 @@ fn slug(title: &str) -> String {
 }
 
 /// Every `http(s)://` run in a blob of text. A lesson's links are the half of it that outlives the
-/// lesson, and they are the reason `ref/README.md` grows.
+/// lesson, and they are the reason `knowledge/references/README.md` grows.
 fn urls_in(text: &str) -> Vec<String> {
 	let mut found = Vec::new();
 	//LOOP: bounded by the number of occurrences in a finite string

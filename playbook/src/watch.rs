@@ -14,10 +14,10 @@ use std::{
 use ask_llm::{Client, Footage, Model, Pick, Said, Shown, Watch};
 
 const WORKERS: usize = 4;
-/// The line of `ref/README.md` this rewrites with what watching has cost so far.
+/// The line of `knowledge/references/README.md` this rewrites with what watching has cost so far.
 const TOTALS: &str = "- what the recordings show, as `playbook watch` read it:";
 
-/// Every capture under `ref/` where `captures` is empty.
+/// Every capture under `knowledge/references/` where `captures` is empty.
 pub fn run(root: &Path, pick: Pick, captures: &[PathBuf]) {
 	let captures: Vec<PathBuf> = match captures.is_empty() {
 		true => crate::call::all(root),
@@ -190,7 +190,7 @@ fn stamp(secs: u64) -> String {
 	}
 }
 
-/// What every `shown.md` on disk cost, summed into `ref/README.md`'s line for it.
+/// What every `shown.md` on disk cost, summed into `knowledge/references/README.md`'s line for it.
 fn totals(root: &Path) {
 	let (mut n, mut usd) = (0, 0f64);
 	for capture in crate::call::all(root) {
@@ -206,13 +206,13 @@ fn totals(root: &Path) {
 		usd += cost.trim().parse::<f64>().unwrap_or_else(|e| panic!("{}: `{cost}`: {e}", shown.display()));
 		n += 1;
 	}
-	let readme = root.join("ref/README.md");
-	let text = std::fs::read_to_string(&readme).expect("ref/README.md is the registry");
+	let readme = root.join("knowledge/references/README.md");
+	let text = std::fs::read_to_string(&readme).expect("knowledge/references/README.md is the registry");
 	let line = text
 		.lines()
 		.find(|l| l.starts_with(TOTALS))
-		.unwrap_or_else(|| panic!("ref/README.md has no `{TOTALS}` line to keep the totals on"));
+		.unwrap_or_else(|| panic!("knowledge/references/README.md has no `{TOTALS}` line to keep the totals on"));
 	let now = format!("{TOTALS} {n} recordings, ${usd:.2} in all");
-	std::fs::write(&readme, text.replace(line, &now)).expect("ref/README.md is writable");
+	std::fs::write(&readme, text.replace(line, &now)).expect("knowledge/references/README.md is writable");
 	eprintln!("{now}");
 }

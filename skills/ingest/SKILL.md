@@ -1,6 +1,6 @@
 ---
 name: ingest
-description: Bring something new into the playbook from a checkout — a source URL or channel to register and pull, a call capture whose `read by:` says `nothing yet`, the owner's notes or chats, a new person, a todo or a fact about how our own team runs, or a contradiction in structured/ to resolve. Use when handed any of these, when `playbook pull call` says a recording was left unread, or as `/ingest call-digest <path>`.
+description: Bring something new into the playbook from a checkout — a source URL or channel to register and pull, a call capture whose `read by:` says `nothing yet`, the owner's notes or chats, a new person, a todo or a fact about how our own team runs, or a contradiction in knowledge/structured/ to resolve. Use when handed any of these, when `playbook pull call` says a recording was left unread, or as `/ingest call-digest <path>`.
 argument-hint: "[pull|call-digest|notes|people|internal|resolve] [<path or url>...]"
 ---
 
@@ -15,7 +15,7 @@ Only in a checkout. What arrived picks the procedure, or the argument names it:
 | the owner's notes, the owner's chats | [notes.md](notes.md) |
 | a person | [people.md](people.md) |
 | about us: a todo, how the team runs | [internal.md](internal.md) |
-| a contradiction in `structured/` | [resolve.md](resolve.md) |
+| a contradiction in `knowledge/structured/` | [resolve.md](resolve.md) |
 
 Working from a recording rather than its transcript: [recordings.md](recordings.md).
 

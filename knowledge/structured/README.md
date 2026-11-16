@@ -1,7 +1,7 @@
 # Blocks
 
 `playbook check cites` holds every block here to this file. It runs in `nix run .#check`, and a hook
-runs it after any agent edit under `structured/`.
+runs it after any agent edit under `knowledge/structured/`.
 
 ## Sections
 A block has up to three sections, in this order, and no other headers:
@@ -26,7 +26,7 @@ A citation is a line that holds only a link, `[r<base> <date>](url)`:
   base is written, because the effective number changes every day
 - `<date>` is the capture's own: `recorded:`, `uploaded:`, a lesson's `updated:`, a chatgpt share's
   `pulled:`
-- the url resolves to a capture in `ref/`, and a `?t=` links the second the claim was said
+- the url resolves to a capture in `knowledge/references/`, and a `?t=` links the second the claim was said
 - skool course material is always `r1`
 - `r0` is a test we ran ourselves. It links the comment that closed the test's issue,
   `https://github.com/Service-Arb/playbook/issues/<n>#issuecomment-<id>`
@@ -36,7 +36,7 @@ A citation is a line that holds only a link, `[r<base> <date>](url)`:
 ## Effective reliability
 Counted by `effective` in `playbook/src/cite_check.rs`. The number is fractional, so two citations keep their order as both of them age. A run leads with its
 best effective reliability, and a tie goes to the newer one. Claims that contradict are
-[resolved](../skills/ingest/resolve.md) into one.
+[resolved](../../skills/ingest/resolve.md) into one.
 
 ## Style
 Observed from how the notes get written by hand. Follow it when persisting anything.
@@ -48,7 +48,7 @@ Observed from how the notes get written by hand. Follow it when persisting anyth
 - `//` parenthetical, thinking out loud, the second-order observation
 - `reason:` why, under the claim it explains
 - `TODO:` something to go test
-- `resolved:` links the record of how a contradiction was settled, `secondary/resolved/<date>-<slug>.md`
+- `resolved:` links the record of how a contradiction was settled, `knowledge/other/resolved/<date>-<slug>.md`
 - `(!)` marks the surprising bit — the part that actually changes how we'd act
 - attribute by name, in full: `Ilya says…`, `Eric recommends…`, `Sam Hart says…`
   > who said it is half the information. an unattributed claim is weaker than a named one

@@ -1,5 +1,5 @@
-//! Holds every block under `structured/` to `structured/README.md`: each citation resolves to a
-//! capture in `ref/`, carries that capture's date, stays inside its duration, and sits in its run by
+//! Holds every block under `knowledge/structured/` to its `README.md`: each citation resolves to a
+//! capture in `knowledge/references/`, carries that capture's date, stays inside its duration, and sits in its run by
 //! effective reliability; no bullet goes unbacked; a `resolved:` line links a record that exists.
 //!
 //! Prints every failure as `path:line: why` and exits non-zero if there was one.
@@ -18,12 +18,12 @@ const WORST: f64 = 10.;
 
 pub fn run(root: &Path) {
 	let today = jiff::Zoned::now().date();
-	let captures = captures(&root.join("ref"));
+	let captures = captures(&root.join("knowledge/references"));
 
 	let mut blocks = Vec::new();
-	md_files(&root.join("structured"), &mut blocks);
+	md_files(&root.join("knowledge/structured"), &mut blocks);
 	blocks.retain(|p| p.file_name().expect("walked files have names") != "README.md");
-	assert!(!blocks.is_empty(), "no blocks under {}/structured", root.display());
+	assert!(!blocks.is_empty(), "no blocks under {}/knowledge/structured", root.display());
 
 	let mut errors = Vec::new();
 	for path in &blocks {
@@ -43,7 +43,7 @@ pub fn run(root: &Path) {
 	eprintln!("{} blocks hold their citations", blocks.len());
 }
 
-/// What a capture in `ref/` says about itself.
+/// What a capture in `knowledge/references/` says about itself.
 struct Capture {
 	date: Date,
 	duration: Option<u64>,
@@ -92,8 +92,8 @@ fn check(text: &str, dir: &Path, captures: &BTreeMap<String, Capture>, today: Da
 		}
 		if let Some(link) = trimmed.strip_prefix("resolved: ") {
 			match link_only(link) {
-				Some((_, url)) if url.contains("secondary/resolved/") && dir.join(url).is_file() => (),
-				_ => errors.push((line, "`resolved:` links its record in `secondary/resolved/`, which must exist".into())),
+				Some((_, url)) if url.contains("other/resolved/") && dir.join(url).is_file() => (),
+				_ => errors.push((line, "`resolved:` links its record in `knowledge/other/resolved/`, which must exist".into())),
 			}
 		}
 		if cited || trimmed.starts_with("// unsourced:") {
@@ -147,7 +147,7 @@ fn citation(line: usize, label: &str, url: &str, captures: &BTreeMap<String, Cap
 	};
 
 	if url.starts_with(ISSUE_COMMENT) {
-		// a test's result lives on github and not in ref/, so there is no capture to hold its date to
+		// a test's result lives on github and not in knowledge/references/, so there is no capture to hold its date to
 		if !url.contains("#issuecomment-") {
 			return Err("an `r0` cites the issue comment that closed the test, not the issue".into());
 		}
@@ -161,7 +161,7 @@ fn citation(line: usize, label: &str, url: &str, captures: &BTreeMap<String, Cap
 	}
 
 	let key = source_key(url).ok_or_else(|| format!("`{url}` is no source this checker knows"))?;
-	let capture = captures.get(&key).ok_or_else(|| format!("`{url}` has no capture in ref/"))?;
+	let capture = captures.get(&key).ok_or_else(|| format!("`{url}` has no capture in knowledge/references/"))?;
 	if key.starts_with("skool:") && base != 1 {
 		return Err(format!("skool course material is `r1`, not `r{base}`"));
 	}
@@ -227,7 +227,7 @@ fn param<'a>(url: &'a str, name: &str) -> Option<&'a str> {
 	query.split('&').find_map(|kv| kv.strip_prefix(name)?.strip_prefix('='))
 }
 
-/// Every capture under `ref/` that states a source this checker can cite, by that source.
+/// Every capture under `knowledge/references/` that states a source this checker can cite, by that source.
 fn captures(ref_dir: &Path) -> BTreeMap<String, Capture> {
 	let mut files = Vec::new();
 	md_files(ref_dir, &mut files);

@@ -24,7 +24,7 @@ const INSTRUCTIONS: &str = "The service-arb playbook: dated, sourced knowledge o
 pub struct SearchArgs {
 	/// a regex, case-insensitive; each `|` alternative is scored on its own
 	pattern: String,
-	/// a path prefix to search under, e.g. `ref/loom` or `structured/approved/profile`
+	/// a path prefix to search under, e.g. `knowledge/references/loom` or `knowledge/structured/approved/profile`
 	scope: Option<String>,
 	/// search what recordings showed on screen instead of what was said
 	screen: Option<bool>,

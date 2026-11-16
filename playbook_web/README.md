@@ -1,9 +1,9 @@
 # playbook_web
 
-The playbook's data for members: a remote MCP server that answers from `guides/`, `structured/{approved,suggested}/`
-and `ref/**/*.md`, in slices, to the Service-Arb members holding `sa:playbook:mcp:use`. `build.rs` bakes that text
+The playbook's data for members: a remote MCP server that answers from `guides/`, `knowledge/structured/{approved,suggested}/`
+and `knowledge/references/**/*.md`, in slices, to the Service-Arb members holding `sa:playbook:mcp:use`. `build.rs` bakes that text
 into the binary, so the server reads nothing from disk per request and nothing else of the repo
-reaches the image. `ref/cases/` states no source and no date, so it stays out.
+reaches the image. `knowledge/references/cases/` states no source and no date, so it stays out.
 
 Its tools are the instruments of the `service-arb` skill, which `plugin/` ships with this server's address
 (`docs/ARCHITECTURE.md#answering`).

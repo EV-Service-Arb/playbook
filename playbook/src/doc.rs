@@ -1,4 +1,4 @@
-//! `ref/docs/<title>.md` for every google doc we do not have yet.
+//! `knowledge/references/docs/<title>.md` for every google doc we do not have yet.
 //!
 //! A doc shared by link exports itself as markdown to anyone, so this is one request per doc. A doc
 //! is edited in place and publishes no date of its own, so the capture carries the day it was pulled;
@@ -13,11 +13,11 @@ use std::{
 const DOC: &str = "https://docs.google.com/document/d/";
 
 pub fn pull(root: &Path, urls: &[String]) {
-	let out_dir = root.join("ref/docs");
-	std::fs::create_dir_all(&out_dir).expect("ref/docs is ours to create");
+	let out_dir = root.join("knowledge/references/docs");
+	std::fs::create_dir_all(&out_dir).expect("knowledge/references/docs is ours to create");
 
 	let wanted: Vec<String> = match urls.is_empty() {
-		true => links_in(&root.join("ref/README.md")),
+		true => links_in(&root.join("knowledge/references/README.md")),
 		false => urls.iter().map(|a| id_of(a)).collect(),
 	};
 	let have = captured(&out_dir);
@@ -68,7 +68,7 @@ fn captured(dir: &Path) -> BTreeMap<String, PathBuf> {
 	found
 }
 
-/// The registry is `ref/README.md` and nothing else, as for every puller here.
+/// The registry is `knowledge/references/README.md` and nothing else, as for every puller here.
 fn links_in(readme: &Path) -> Vec<String> {
 	let text = std::fs::read_to_string(readme).unwrap_or_else(|e| panic!("reading {}: {e}", readme.display()));
 	let mut found: Vec<String> = text

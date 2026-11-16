@@ -1,4 +1,4 @@
-//! `ref/research/<id>.md` for every chatgpt share we do not have yet.
+//! `knowledge/references/research/<id>.md` for every chatgpt share we do not have yet.
 //!
 //! The share page ships its conversation as an interned react-flight blob and the `/backend-api`
 //! route is behind cloudflare, so the page is rendered in headless chromium and the turns are read
@@ -15,15 +15,15 @@ const ROLE: &str = "data-message-author-role=\"";
 const DISCLAIMER: &str = "data-testid=\"thread-disclaimer\"";
 
 pub fn pull(root: &Path, urls: &[String]) {
-	let out_dir = root.join("ref/research");
-	std::fs::create_dir_all(&out_dir).expect("ref/research is ours to create");
+	let out_dir = root.join("knowledge/references/research");
+	std::fs::create_dir_all(&out_dir).expect("knowledge/references/research is ours to create");
 
 	let wanted: BTreeSet<String> = match urls.is_empty() {
-		true => links_in(&root.join("ref/README.md")),
+		true => links_in(&root.join("knowledge/references/README.md")),
 		false => urls.iter().map(|a| id_of(a)).collect(),
 	};
 	if wanted.is_empty() {
-		eprintln!("no chatgpt share links in ref/README.md and none given — nothing to pull");
+		eprintln!("no chatgpt share links in knowledge/references/README.md and none given — nothing to pull");
 		return;
 	}
 
@@ -35,7 +35,7 @@ pub fn pull(root: &Path, urls: &[String]) {
 		}
 		eprintln!("rendering {id}");
 		let dom = render(&format!("{SHARE}{id}"));
-		std::fs::write(&out, document(id, &dom)).expect("ref/research is ours to write");
+		std::fs::write(&out, document(id, &dom)).expect("knowledge/references/research is ours to write");
 		println!("{}", out.display());
 	}
 }
@@ -45,7 +45,7 @@ fn id_of(arg: &str) -> String {
 	tail.split(['?', '#']).next().expect("split yields at least once").to_string()
 }
 
-/// The registry is `ref/README.md` and nothing else — a capture quotes its own source URL, and a
+/// The registry is `knowledge/references/README.md` and nothing else — a capture quotes its own source URL, and a
 /// transcript quotes every link that was said out loud, so scanning the tree would make the
 /// pullers feed on their own output.
 fn links_in(readme: &Path) -> BTreeSet<String> {

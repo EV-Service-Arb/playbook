@@ -8,4 +8,4 @@ capture, per [Layers](../../docs/ARCHITECTURE.md#layers).
   before leaning on it
 - a claim only the picture makes cites that line's second
 - `cargo r -p playbook -- watch` spends money per recording, and with no arguments takes every unwatched one
-  under `ref/`. Name the captures. `cargo r -p playbook -- re-transcribe picture <path>` prices a redo
+  under `knowledge/references/`. Name the captures. `cargo r -p playbook -- re-transcribe picture <path>` prices a redo

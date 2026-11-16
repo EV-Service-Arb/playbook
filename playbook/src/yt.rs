@@ -1,6 +1,6 @@
-//! `sync` lists every video of every channel `ref/README.md` links, in `ref/youtube/README.md`, under
+//! `sync` lists every video of every channel `knowledge/references/README.md` links, in `knowledge/references/youtube/README.md`, under
 //! a header per person: the link text names their directory. `transcribe` captures videos that list
-//! has into `ref/youtube/<who>/<id>.md`, ticking each as it goes.
+//! has into `knowledge/references/youtube/<who>/<id>.md`, ticking each as it goes.
 //!
 //! Youtube is read by `social_networks_adapters`, linked; this only decides how a capture is filed.
 //!
@@ -26,14 +26,14 @@ use jiff::civil::Date;
 use social_networks_adapters::youtube::{self, Chapter, Cue};
 
 const WATCH: &str = "https://www.youtube.com/watch?v=";
-const INDEX: &str = "ref/youtube/README.md";
+const INDEX: &str = "knowledge/references/youtube/README.md";
 const BLOCK: f64 = 30.;
 const SUMMARY: &str = "SUMMARY";
 const SECTIONS: &str = "SECTIONS";
 
 pub async fn sync(root: &Path) {
-	let channels = channels_in(&root.join("ref/README.md"));
-	assert!(!channels.is_empty(), "no youtube channel linked in ref/README.md — nothing to sync");
+	let channels = channels_in(&root.join("knowledge/references/README.md"));
+	assert!(!channels.is_empty(), "no youtube channel linked in knowledge/references/README.md — nothing to sync");
 	// youtube's flat listing dates nothing, so a video's date is asked for once and read back from here after
 	let known: BTreeMap<String, Entry> = match root.join(INDEX).exists() {
 		true => parse(root).sections.into_iter().flat_map(|s| s.entries).map(|e| (e.id.clone(), e)).collect(),
@@ -42,7 +42,7 @@ pub async fn sync(root: &Path) {
 	let mut sections = Vec::new();
 	for (who, channel) in channels {
 		let mut ids: BTreeSet<String> = youtube::uploads(&channel).await.unwrap_or_else(|e| panic!("listing {channel}: {e:?}")).into_iter().collect();
-		ids.extend(captured(&root.join("ref/youtube").join(&who))); // one taken down upstream stays, as its capture does
+		ids.extend(captured(&root.join("knowledge/references/youtube").join(&who))); // one taken down upstream stays, as its capture does
 		let unknown: Vec<&str> = ids.iter().filter(|id| !known.contains_key(*id)).map(String::as_str).collect();
 		eprintln!("{who}: {} video(s), {} not dated yet", ids.len(), unknown.len());
 		let mut entries: Vec<Entry> = ids.iter().filter_map(|id| known.get(id).cloned()).collect();
@@ -86,8 +86,8 @@ pub async fn transcribe(root: &Path, pick: Pick, urls: &[String]) {
 	let tmp = std::env::temp_dir().join("yt-pull");
 	let mut mute = Vec::new();
 	for section in &index.sections {
-		let dir = root.join("ref/youtube").join(&section.who);
-		std::fs::create_dir_all(&dir).expect("ref/youtube is ours to create under");
+		let dir = root.join("knowledge/references/youtube").join(&section.who);
+		std::fs::create_dir_all(&dir).expect("knowledge/references/youtube is ours to create under");
 		for Entry { id, .. } in &section.entries {
 			let out = dir.join(format!("{id}.md"));
 			if out.exists() || !(only.is_empty() || only.contains(&id.as_str())) {
@@ -98,7 +98,7 @@ pub async fn transcribe(root: &Path, pick: Pick, urls: &[String]) {
 			// channel is still worth having, so it is named at the end rather than aborting here
 			match video(id, &tmp, &dir.join(id), pick).await {
 				Some(doc) => {
-					std::fs::write(&out, doc).expect("ref/youtube is ours to write");
+					std::fs::write(&out, doc).expect("knowledge/references/youtube is ours to write");
 					write(root, &index);
 					println!("{}", out.display());
 				}
@@ -129,7 +129,7 @@ struct Entry {
 	title: String,
 }
 
-/// `[<who>](<channel>)` for every youtube link in the registry. The registry is `ref/README.md` and
+/// `[<who>](<channel>)` for every youtube link in the registry. The registry is `knowledge/references/README.md` and
 /// nothing else — a capture quotes its own source URL, and a transcript quotes every link that was
 /// said out loud, so scanning the tree would make the pullers feed on their own output.
 fn channels_in(readme: &Path) -> Vec<(String, String)> {
@@ -140,11 +140,11 @@ fn channels_in(readme: &Path) -> Vec<(String, String)> {
 		let who = &text[text[..at].rfind('[').expect("a markdown link opens its text with `[`") + 1..at];
 		assert!(
 			!who.is_empty(),
-			"a youtube link in ref/README.md names the directory its videos go in, as its text, and reads `{who}`"
+			"a youtube link in knowledge/references/README.md names the directory its videos go in, as its text, and reads `{who}`"
 		);
 		assert!(
 			who.chars().all(|c| c.is_ascii_lowercase()),
-			"a youtube link in ref/README.md names the directory its videos go in, as its text, and reads `{who}`"
+			"a youtube link in knowledge/references/README.md names the directory its videos go in, as its text, and reads `{who}`"
 		);
 		let channel = &text[at + 2..];
 		found.push((who.to_string(), channel[..channel.find(')').expect("a markdown link closes with `)`")].to_string()));
@@ -169,7 +169,7 @@ fn write(root: &Path, index: &Index) {
 	let spent = index
 		.sections
 		.iter()
-		.flat_map(|s| s.entries.iter().map(move |e| root.join("ref/youtube").join(&s.who).join(format!("{}.md", e.id))))
+		.flat_map(|s| s.entries.iter().map(move |e| root.join("knowledge/references/youtube").join(&s.who).join(format!("{}.md", e.id))))
 		.filter(|p| p.exists())
 		.map(|p| {
 			let text = std::fs::read_to_string(&p).unwrap_or_else(|e| panic!("reading {}: {e}", p.display()));
@@ -200,13 +200,13 @@ fn write(root: &Path, index: &Index) {
 	for Section { who, channel, entries } in &index.sections {
 		out.push_str(&format!("\n## {who} — <{channel}>\n\n"));
 		for Entry { id, uploaded, title } in entries {
-			match root.join("ref/youtube").join(who).join(format!("{id}.md")).exists() {
+			match root.join("knowledge/references/youtube").join(who).join(format!("{id}.md")).exists() {
 				true => out.push_str(&format!("- [x] [{uploaded}]({WATCH}{id}) [{title}]({who}/{id}.md)\n")),
 				false => out.push_str(&format!("- [ ] [{uploaded}]({WATCH}{id}) {title}\n")),
 			}
 		}
 	}
-	std::fs::write(root.join(INDEX), out).expect("ref/youtube is ours to write");
+	std::fs::write(root.join(INDEX), out).expect("knowledge/references/youtube is ours to write");
 }
 
 fn parse(root: &Path) -> Index {

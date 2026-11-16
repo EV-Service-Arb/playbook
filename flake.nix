@@ -24,7 +24,7 @@
           pname = "playbook";
           enable = true;
           lfs = true;
-          gitignore.extra = "ref/**/recording.*";
+          gitignore.extra = "knowledge/references/**/recording.*";
           jobs.errors.augment = [{ name = "flake-app"; args.app = "check"; }];
           containerRelease = { registry = "ghcr.io/ev-service-arb"; lfs = false; }; # the image takes only markdown; the media is 17G
         };
@@ -39,7 +39,7 @@
         combined = v_flakes.utils.combine { inherit rust; modules = [ rs github readme ]; };
 
         port = "59082";
-        # the member surface; build.rs bakes in guides/, structured/{approved,suggested}/ and ref/**/*.md, and nothing else of the tree reaches the image
+        # the member surface; build.rs bakes in guides/, knowledge/structured/{approved,suggested}/ and knowledge/references/**/*.md, and nothing else of the tree reaches the image
         build_rust = v_flakes.rs.build_nightly system;
         playbook_web = (pkgs.makeRustPlatform { rustc = build_rust; cargo = build_rust; }).buildRustPackage {
           pname = "playbook_web";
@@ -53,9 +53,9 @@
               ./playbook_web
               ./docs/ARCHITECTURE.md # build.rs inlines its reliability tables into `search`'s description
               ./guides
-              ./structured/approved
-              ./structured/suggested
-              (pkgs.lib.fileset.fileFilter (f: f.hasExt "md") ./ref)
+              ./knowledge/structured/approved
+              ./knowledge/structured/suggested
+              (pkgs.lib.fileset.fileFilter (f: f.hasExt "md") ./knowledge/references)
             ];
           };
           cargoLock = {

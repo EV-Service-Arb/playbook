@@ -21,7 +21,7 @@ const ANSWER_MODEL: &str = "claude-sonnet-5-5";
 const JUDGE_MODEL: &str = "claude-sonnet-5-5";
 const PANEL_ASSERTION_KEYS: &str = "eval:WGZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmY="; // the Ed25519 base point; nobody signs in here
 /// What a side takes from its info rev; the rest of its tree is the system rev's.
-const INFO: [&str; 3] = ["structured/approved", "structured/suggested", "ref"];
+const INFO: [&str; 3] = ["knowledge/structured/approved", "knowledge/structured/suggested", "knowledge/references"];
 const OUT: &str = "/tmp/playbook-eval";
 
 /// Whether any case scored lower on this tree than on the old side.

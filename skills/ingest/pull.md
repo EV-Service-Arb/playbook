@@ -1,6 +1,6 @@
 # pull
 
-A source enters by a line in `ref/README.md` and its platform's puller, per
+A source enters by a line in `knowledge/references/README.md` and its platform's puller, per
 [Pullers](../../docs/ARCHITECTURE.md#pullers). Never a capture written any other way, and never a link
 a puller printed followed without registering it.
 
