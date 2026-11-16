@@ -1,750 +1,157 @@
-//! Drives the server over streamable HTTP with a member's token, the way a member's client does.
+//! Calls the server as the conductor's forward does: one signed assertion per request, naming the member.
 
-use std::sync::{
-	Arc, Mutex,
-	atomic::{AtomicBool, AtomicI64, Ordering},
-};
+use std::path::PathBuf;
 
-use base64::{Engine, engine::general_purpose::URL_SAFE_NO_PAD};
-use evconcierge_projection::{EventSource, Member, Page, Pulled, ScopeEvent, ScopeEventBody, SourceError, UserEvent, UserEventKind};
-use rmcp::{
-	RoleClient, ServiceExt,
-	model::CallToolRequestParams,
-	service::RunningService,
-	transport::{StreamableHttpClientTransport, streamable_http_client::StreamableHttpClientTransportConfig},
+use axum::{
+	Router,
+	body::{Body, to_bytes},
+	http::{Request, StatusCode},
 };
+use sa_auth::{Assertion, Principal, Service, Signer, User};
 use serde_json::{Value, json};
-use sha2::{Digest, Sha256};
-use tokio::sync::watch;
+use tower::ServiceExt as _;
 
-const MEMBER: &str = "member@example.com";
-const TOKEN: &str = "test-token";
-const BASE: &str = "/playbook_mcp";
-const PUBLIC_URL: &str = "https://sa.evinvest.ltd/playbook_mcp";
-const PANEL: &str = "k1:BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=";
-const STRANGER: &str = "k1:CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg=";
-
-type Withdraw = fn(&Concierge, &str);
-
-trait KeyUser {
-	fn key_user(&self) -> Option<&str>;
-}
+const CONDUCTOR: &str = "k1:BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=";
 
 #[tokio::test]
 async fn read_returns_one_chapter() {
-	serve("read", i64::MAX, Concierge::default(), async |url| {
-		let client = connect(&url, TOKEN).await;
-		for (path, header) in [
-			("knowledge/references/loom/2026-09-18-group-call.md", "[03:34]"),
-			("knowledge/structured/suggested/infra.md", "## facts"),
-		] {
-			let (text, error) = call(&client, "read", json!({ "path": path, "header": header })).await;
-			assert!(!error, "{text}");
-			let headers = text.lines().filter(|l| l.split_once(" | ").is_some_and(|(_, l)| l.starts_with('#'))).count();
-			assert_eq!(headers, 1, "{text}");
-		}
-	})
-	.await;
+	let app = app("read", i64::MAX);
+	for (path, header) in [
+		("knowledge/references/loom/2026-09-18-group-call.md", "[03:34]"),
+		("knowledge/structured/suggested/infra.md", "## facts"),
+	] {
+		let (status, text) = get(&app, member("u0"), "/read", json!({ "path": path, "header": header })).await;
+		assert_eq!(status, StatusCode::OK, "{text}");
+		let headers = text.lines().filter(|l| l.split_once(" | ").is_some_and(|(_, l)| l.starts_with('#'))).count();
+		assert_eq!(headers, 1, "{text}");
+	}
 }
 
-/// The procedure is the `service-arb` skill's: the server names it, and says only what each tool returns. What
-/// changes with the corpus rides on the tools: the reliability table, the guides, every hit's effective number,
-/// and where a broad pattern could narrow to.
+/// The procedure is the `service-arb` skill's: the document names it, and each operation says only what it returns.
+/// What changes with the corpus rides on the operations: the reliability table, the guides, every hit's effective
+/// number, and where a broad pattern could narrow to.
 #[tokio::test]
 async fn the_server_carries_data_and_the_skill_the_procedure() {
-	serve("contract", i64::MAX, Concierge::default(), async |url| {
-		let client = connect(&url, TOKEN).await;
-		let info = client.peer_info().unwrap();
-		let instructions = info.instructions.clone().unwrap();
-		assert!(instructions.contains("`service-arb` skill"), "{instructions}");
-		assert!(instructions.len() <= 512, "{instructions}");
-		assert!(!instructions.contains("**sources**"), "{instructions}");
-		assert!(!instructions.contains("effective"), "{instructions}");
-		assert!(info.capabilities.prompts.is_none());
+	let app = app("contract", i64::MAX);
+	let doc = document(&app).await;
+	let instructions = doc["info"]["description"].as_str().unwrap();
+	assert!(instructions.contains("`service-arb` skill"), "{instructions}");
+	assert!(instructions.len() <= 512, "{instructions}");
+	let description = |path: &str| doc["paths"][path]["get"]["description"].as_str().unwrap().to_owned();
+	let search = description("/search");
+	assert!(search.contains("tested myself"), "{search}");
+	assert!(search.contains("Eric"), "{search}");
+	let guide = description("/guide");
+	assert!(guide.contains("verification: video"), "{guide}");
+	assert!(guide.contains("experts: "), "{guide}");
 
-		let tools = client.list_all_tools().await.unwrap();
-		let description = |name: &str| tools.iter().find(|t| t.name == name).unwrap().description.clone().unwrap();
-		let search = description("search");
-		assert!(search.contains("tested myself"), "{search}");
-		assert!(search.contains("Eric"), "{search}");
-		let guide = description("guide");
-		assert!(guide.contains("verification: video"), "{guide}");
-		assert!(guide.contains("experts: "), "{guide}");
+	let (status, text) = get(&app, member("u0"), "/search", json!({ "pattern": "Magisk" })).await;
+	assert_eq!(status, StatusCode::OK, "{text}");
+	let label = text.lines().next().unwrap();
+	assert!(label.contains("effective "), "{label}");
 
-		let (text, error) = call(&client, "search", json!({ "pattern": "Magisk" })).await;
-		assert!(!error, "{text}");
-		let label = text.lines().next().unwrap();
-		assert!(label.contains("effective "), "{label}");
-
-		let (text, error) = call(&client, "search", json!({ "pattern": "the" })).await;
-		assert!(error, "{text}");
-		assert!(text.lines().filter(|l| l.starts_with("- knowledge/")).count() >= 2, "{text}");
-	})
-	.await;
+	let (status, text) = get(&app, member("u0"), "/search", json!({ "pattern": "the" })).await;
+	assert_eq!(status, StatusCode::UNPROCESSABLE_ENTITY, "{text}");
+	let error = serde_json::from_str::<Value>(&text).unwrap()["error"].as_str().unwrap().to_owned();
+	assert!(error.lines().filter(|l| l.starts_with("- knowledge/")).count() >= 2, "{error}");
 }
 
-/// The call that crosses the budget is answered; the request after it is refused until midnight UTC.
+/// Every operation is the member's, opened by `sa:playbook:mcp:use`, and states what it refuses with.
 #[tokio::test]
-async fn quota_overrun_is_429() {
-	serve("quota", 1, Concierge::default(), async |url| {
-		let client = connect(&url, TOKEN).await;
-		call(&client, "guide", json!({ "area": "reviews" })).await;
-		let res = reqwest::Client::new()
-			.post(format!("{url}{BASE}"))
-			.bearer_auth(TOKEN)
-			.header("accept", "application/json, text/event-stream")
-			.json(&json!({ "jsonrpc": "2.0", "id": 1, "method": "ping" }))
-			.send()
-			.await
-			.unwrap();
-		assert_eq!(res.status(), 429);
-		let retry: i64 = res.headers()["retry-after"].to_str().unwrap().parse().unwrap();
-		assert!((1..=86_400).contains(&retry), "{retry}");
-	})
-	.await;
-}
-
-/// The panel forwards to the in-cluster address, so the Host it sends is that one, not `PUBLIC_URL`'s.
-#[tokio::test]
-async fn any_host_is_served() {
-	serve("host", i64::MAX, Concierge::default(), async |url| {
-		let res = reqwest::Client::new()
-			.post(format!("{url}{BASE}"))
-			.bearer_auth(TOKEN)
-			.header("host", "playbook-web.personal:59082")
-			.header("accept", "application/json, text/event-stream")
-			.json(
-				&json!({ "jsonrpc": "2.0", "id": 1, "method": "initialize", "params": { "protocolVersion": "2025-06-18", "capabilities": {}, "clientInfo": { "name": "t", "version": "0" } } }),
-			)
-			.send()
-			.await
-			.unwrap();
-		assert_eq!(res.status(), 200, "{}", res.text().await.unwrap());
-	})
-	.await;
-}
-
-/// A client with nothing but the MCP url finds the authorization server through the path-inserted
-/// metadata of RFC 9728 and RFC 8414.
-#[tokio::test]
-async fn no_token_leads_to_the_authorization_server() {
-	serve("unauthorized", i64::MAX, Concierge::default(), async |url| {
-		let http = reqwest::Client::new();
-		let res = http.post(format!("{url}{BASE}")).json(&json!({})).send().await.unwrap();
-		assert_eq!(res.status(), 401);
-		let challenge = res.headers()["www-authenticate"].to_str().unwrap();
-		assert_eq!(
-			challenge,
-			format!("Bearer resource_metadata=\"https://sa.evinvest.ltd/.well-known/oauth-protected-resource{BASE}\"")
-		);
-		let resource: Value = http.get(format!("{url}/.well-known/oauth-protected-resource{BASE}")).send().await.unwrap().json().await.unwrap();
-		assert_eq!(resource["resource"], PUBLIC_URL);
-		assert_eq!(resource["authorization_servers"], json!([PUBLIC_URL]));
-		let server: Value = http
-			.get(format!("{url}/.well-known/oauth-authorization-server{BASE}"))
-			.send()
-			.await
-			.unwrap()
-			.json()
-			.await
-			.unwrap();
-		assert_eq!(server["issuer"], PUBLIC_URL);
-		assert_eq!(server["authorization_endpoint"], format!("{PUBLIC_URL}/authorize"));
-		assert_eq!(server["token_endpoint"], format!("{PUBLIC_URL}/token"));
-	})
-	.await;
-}
-
-/// `/authorize` answers only a request the panel signed, for this very method and path, and
-/// only a holder of `sa:playbook:mcp:use` gets the consent page; anyone else is sent to the panel
-/// to ask for it, carrying the way back.
-#[tokio::test]
-async fn authorize_takes_the_panels_word_for_who_is_asking() {
-	serve("assertion", i64::MAX, Concierge::default(), async |url| {
-		let (client_id, _) = register(&url, "Claude Code").await;
-		let authorize = authorize_url(&url, &client_id);
-		let http = reqwest::Client::builder().redirect(reqwest::redirect::Policy::none()).build().unwrap();
-		let get = |assertion: Option<String>| {
-			let req = http.get(authorize.clone());
-			async move { if let Some(a) = assertion { req.header(sa_auth::HEADER, a) } else { req }.send().await.unwrap() }
-		};
-		for bad in [
-			None,
-			Some("not.a.jws".into()),
-			Some(assertion(STRANGER, "u1", "GET", true)),
-			Some(assertion(PANEL, "u1", "POST", true)),
-		] {
-			let res = get(bad).await;
-			assert_eq!(res.status(), 401);
-			assert_eq!(res.headers()["content-type"], "text/html; charset=utf-8");
+async fn the_document_lists_three_operations_behind_the_playbook_permission() {
+	let doc = document(&app("document", i64::MAX)).await;
+	let paths = doc["paths"].as_object().unwrap();
+	assert_eq!(paths.keys().collect::<Vec<_>>(), ["/guide", "/read", "/search"]);
+	for (path, item) in paths {
+		let op = &item["get"];
+		assert_eq!(op["x-permission"], "sa:playbook:mcp:use", "{path}");
+		for code in ["unanswerable", "over_budget", "unauthenticated", "forbidden"] {
+			assert!(op["x-errors"].get(code).is_some(), "{path}: {code} in {}", op["x-errors"]);
 		}
-		assert_eq!(get(Some(assertion(PANEL, "u1", "GET", true))).await.status(), 200);
-
-		let res = get(Some(assertion(PANEL, "u1", "GET", false))).await;
-		assert_eq!(res.status(), 303);
-		let to = reqwest::Url::parse("https://sa.evinvest.ltd").unwrap().join(res.headers()["location"].to_str().unwrap()).unwrap();
-		assert_eq!(to.path(), "/access/");
-		let q: std::collections::HashMap<_, _> = to.query_pairs().into_owned().collect();
-		assert_eq!(q["need"], sa_auth::Mcp::Use.as_str());
-		assert_eq!(q["continue"], format!("{}?{}", authorize.path(), authorize.query().unwrap()));
-	})
-	.await;
-}
-
-/// Cancel is a GET back to `/authorize`: the client learns `access_denied` at its own registered
-/// redirect, whoever is signed in, and nothing is issued.
-#[tokio::test]
-async fn cancel_tells_the_client_access_denied() {
-	serve("deny", i64::MAX, Concierge::default(), async |url| {
-		let http = reqwest::Client::builder().redirect(reqwest::redirect::Policy::none()).build().unwrap();
-		let (client_id, _) = register(&url, "Claude Code").await;
-		let mut deny = authorize_url(&url, &client_id);
-		deny.query_pairs_mut().append_pair("decision", "deny");
-		for assertion in [None, Some(assertion(PANEL, "u1", "GET", false))] {
-			let req = http.get(deny.clone());
-			let res = if let Some(a) = assertion { req.header(sa_auth::HEADER, a) } else { req }.send().await.unwrap();
-			assert_eq!(res.status(), 303);
-			assert_eq!(res.headers()["location"], "http://localhost:64461/callback?error=access_denied&state=s1");
-		}
-		let mut stranger = deny.clone();
-		stranger.query_pairs_mut().clear().extend_pairs(
-			deny.query_pairs()
-				.map(|(k, v)| (k.clone(), if k == "redirect_uri" { "https://evil.example/cb".into() } else { v })),
-		);
-		let res = http.get(stranger).send().await.unwrap();
-		assert_eq!(res.status(), 400);
-		assert!(res.headers().get("location").is_none());
-	})
-	.await;
-}
-
-/// Whatever goes wrong on the browser's side of the flow is a page saying what to do next, with
-/// the reason in small print; the JSON endpoints stay JSON.
-#[tokio::test]
-async fn browser_errors_are_pages() {
-	serve("errors", i64::MAX, Concierge::default(), async |url| {
-		let http = reqwest::Client::new();
-		let (client_id, _) = register(&url, "Claude Code").await;
-		let mut unknown = authorize_url(&url, &client_id);
-		unknown.query_pairs_mut().clear().append_pair("client_id", "nobody");
-		let page = |res: reqwest::Response| async move {
-			assert_eq!(res.status(), 400);
-			assert_eq!(res.headers()["content-type"], "text/html; charset=utf-8");
-			res.text().await.unwrap()
-		};
-		insta::assert_snapshot!(redact(&page(http.get(unknown).send().await.unwrap()).await), @r#"
-		<!doctype html>
-		<html lang="en">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>This sign-in link doesn’t work · Service-Arb</title>
-		<link rel="stylesheet" href="https://sa.evinvest.ltd/playbook_mcp/assets/connect.[hash].css">
-		<body class="bg-background text-ink font-sans antialiased">
-		<main class="flex min-h-dvh flex-col items-center justify-center gap-6 p-4 text-sm">
-		<div class="bg-card text-ink flex flex-col gap-6 rounded-xl border border-border py-6 shadow-sm w-[440px] max-w-full items-center px-8 pt-8 pb-7">
-		<div class="flex items-center"><span class="bg-brand flex size-12 items-center justify-center rounded-xl border border-border font-serif text-[22px] font-semibold">SA</span></div>
-		<div class="flex w-full flex-col items-center gap-1.5 text-center">
-			<h1 class="text-xl font-semibold">This sign-in link doesn’t work</h1>
-			<p class="text-ink-soft text-[13px]">It isn’t one Claude Code would open, or it was changed on the way.</p>
-		</div>
-		<ol class="flex w-full flex-col gap-3.5">
-			<li class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">1</span><div class="flex flex-col gap-0.5"><span class="font-medium">Go back to Claude Code</span><span class="text-ink-soft text-[13px]">Type <code>/mcp</code>, pick service-arb.</span></div></li>
-			<li class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">2</span><div class="flex flex-col gap-0.5"><span class="font-medium">Choose Authenticate</span><span class="text-ink-soft text-[13px]">A fresh page opens here.</span></div></li>
-		</ol>
-		<p class="text-ink-soft text-center text-xs">Details: Failed to deserialize query string: missing field `response_type`</p>
-		</div>
-		<p class="text-ink-soft text-xs">Service-Arb · EV Invest</p>
-		</main>
-		</body>
-		</html>
-		"#);
-		let spent = http.post(format!("{url}{BASE}/authorize")).header(sa_auth::HEADER, assertion(PANEL, "u1", "POST", true)).form(&[("nonce", "made-up")]).send();
-		insta::assert_snapshot!(redact(&page(spent.await.unwrap()).await), @r#"
-		<!doctype html>
-		<html lang="en">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>This sign-in link has expired · Service-Arb</title>
-		<link rel="stylesheet" href="https://sa.evinvest.ltd/playbook_mcp/assets/connect.[hash].css">
-		<body class="bg-background text-ink font-sans antialiased">
-		<main class="flex min-h-dvh flex-col items-center justify-center gap-6 p-4 text-sm">
-		<div class="bg-card text-ink flex flex-col gap-6 rounded-xl border border-border py-6 shadow-sm w-[440px] max-w-full items-center px-8 pt-8 pb-7">
-		<div class="flex items-center"><span class="bg-brand flex size-12 items-center justify-center rounded-xl border border-border font-serif text-[22px] font-semibold">SA</span></div>
-		<div class="flex w-full flex-col items-center gap-1.5 text-center">
-			<h1 class="text-xl font-semibold">This sign-in link has expired</h1>
-			<p class="text-ink-soft text-[13px]">Links from Claude Code last 10 minutes and work once.</p>
-		</div>
-		<ol class="flex w-full flex-col gap-3.5">
-			<li class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">1</span><div class="flex flex-col gap-0.5"><span class="font-medium">Go back to Claude Code</span><span class="text-ink-soft text-[13px]">Type <code>/mcp</code>, pick service-arb.</span></div></li>
-			<li class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold">2</span><div class="flex flex-col gap-0.5"><span class="font-medium">Choose Authenticate</span><span class="text-ink-soft text-[13px]">A fresh page opens here.</span></div></li>
-		</ol>
-		<p class="text-ink-soft text-center text-xs">Details: the consent form is spent, expired, or someone else&#39;s</p>
-		</div>
-		<p class="text-ink-soft text-xs">Service-Arb · EV Invest</p>
-		</main>
-		</body>
-		</html>
-		"#);
-		let res = http.post(format!("{url}{BASE}/token")).form(&[("grant_type", "nope"), ("client_id", "x")]).send().await.unwrap();
-		assert_eq!(res.headers()["content-type"], "application/json");
-	})
-	.await;
-}
-
-/// The code comes only from the consent form's POST, by the member it was shown to, once. A
-/// native client's loopback redirect is registered without a port and matches whichever it
-/// listens on (RFC 8252 §7.3), as Claude Code's client metadata does.
-#[tokio::test]
-async fn a_code_is_issued_only_on_consent() {
-	serve("consent", i64::MAX, Concierge::default(), async |url| {
-		let http = reqwest::Client::builder().redirect(reqwest::redirect::Policy::none()).build().unwrap();
-		let (client_id, verifier) = register(&url, "<b>Claude</b> & co").await;
-		let res = http.get(authorize_url(&url, &client_id)).header(sa_auth::HEADER, assertion(PANEL, "u1", "GET", true)).send().await.unwrap();
-		assert_eq!(res.status(), 200);
-		assert!(res.headers().get("location").is_none());
-		let page = res.text().await.unwrap();
-		insta::assert_snapshot!(redact(&page), @r#"
-		<!doctype html>
-		<html lang="en">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Connect &lt;b&gt;Claude&lt;/b&gt; &amp; co · Service-Arb</title>
-		<link rel="stylesheet" href="https://sa.evinvest.ltd/playbook_mcp/assets/connect.[hash].css">
-		<body class="bg-background text-ink font-sans antialiased">
-		<main class="flex min-h-dvh flex-col items-center justify-center gap-6 p-4 text-sm">
-		<div class="bg-card text-ink flex flex-col gap-6 rounded-xl border border-border py-6 shadow-sm w-[440px] max-w-full items-center px-8 pt-8 pb-7">
-		<div class="flex items-center gap-3"><span class="bg-muted flex size-12 items-center justify-center rounded-xl text-[22px] font-semibold">B</span><span class="text-ink-soft text-xs" aria-hidden="true">• • •</span><span class="bg-brand flex size-12 items-center justify-center rounded-xl border border-border font-serif text-[22px] font-semibold">SA</span></div>
-		<div class="flex w-full flex-col items-center gap-1.5 text-center">
-			<h1 class="text-xl font-semibold">&lt;b&gt;Claude&lt;/b&gt; &amp; co wants to access the Service-Arb playbook</h1>
-			<p class="text-ink-soft text-[13px]">sa.evinvest.ltd</p>
-		</div>
-		<div class="group/item flex items-center border border-transparent text-sm rounded-md transition-colors [a]:hover:bg-hover/50 [a]:transition-colors duration-100 flex-wrap outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] border-border py-3 px-4 gap-2.5 w-full bg-secondary">
-			<span class="relative flex size-8 shrink-0 overflow-hidden rounded-full"><span class="bg-muted flex size-full items-center justify-center rounded-full text-[13px] font-semibold">M</span></span>
-			<div class="flex min-w-0 flex-1 flex-col">
-				<span class="text-ink-soft text-xs">Signed in as</span>
-				<span class="truncate font-medium">member@example.com</span>
-			</div>
-			<a class="text-primary-ink text-[13px] font-medium hover:underline" href="https://sa.evinvest.ltd/auth/login?prompt=select_account&amp;return_to=%2Fplaybook_mcp%2Fauthorize%3Fresponse_type%3Dcode%26client_id%3D[client]%26redirect_uri%3Dhttp%253A%252F%252Flocalhost%253A64461%252Fcallback%26code_challenge%3DAhBy5AnaikEmb5ju_8w77MAjuufyCuYfpqXJ0nYyDKI%26code_challenge_method%3DS256%26state%3Ds1">Switch account</a>
-		</div>
-		<div class="flex w-full flex-col gap-3">
-			<p class="text-ink-mid text-[13px] font-medium">This will allow &lt;b&gt;Claude&lt;/b&gt; &amp; co to:</p>
-			<div class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-7 shrink-0 items-center justify-center rounded-lg" aria-hidden="true">⌕</span><div class="flex flex-col gap-0.5"><span class="font-medium">Search and read the playbook</span><span class="text-ink-soft text-[13px]">Guides, call notes and reference material, as you.</span></div></div>
-			<div class="flex w-full items-start gap-3"><span class="bg-popover text-primary-ink flex size-7 shrink-0 items-center justify-center rounded-lg" aria-hidden="true">◷</span><div class="flex flex-col gap-0.5"><span class="font-medium">Use your daily allowance</span><span class="text-ink-soft text-[13px]">Every lookup is logged under your account and counts toward your daily budget.</span></div></div>
-			<p class="text-ink-soft text-[13px]">&lt;b&gt;Claude&lt;/b&gt; &amp; co cannot change anything in the playbook or the panel.</p>
-		</div>
-		<hr class="w-full border-border">
-		<div class="text-ink-soft flex w-full flex-col gap-1 rounded-lg bg-secondary px-3 py-2.5">
-			<p class="text-xs">You’ll be returned to</p>
-			<p class="text-[13px] break-all">http://<b class="text-ink font-medium">localhost:64461</b>/callback</p>
-			<p class="text-xs">That’s an app on this computer. Allow only if you just ran <code>/mcp</code> → Authenticate in Claude Code.</p>
-		</div>
-		<form class="grid w-full grid-cols-2 gap-3" method="post" action="https://sa.evinvest.ltd/playbook_mcp/authorize">
-			<input type="hidden" name="nonce" value="[nonce]">
-			<a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[var(--control-radius)] text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-accent-error/20 aria-invalid:border-accent-error border border-input bg-transparent shadow-xs hover:bg-hover hover:text-ink h-10 px-6 has-[>svg]:px-4 w-full" href="/playbook_mcp/authorize?response_type=code&amp;client_id=[client]&amp;redirect_uri=http%3A%2F%2Flocalhost%3A64461%2Fcallback&amp;code_challenge=AhBy5AnaikEmb5ju_8w77MAjuufyCuYfpqXJ0nYyDKI&amp;code_challenge_method=S256&amp;state=s1&amp;decision=deny">Cancel</a>
-			<button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-[var(--control-radius)] text-sm font-medium transition-all cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-accent-error/20 aria-invalid:border-accent-error bg-primary text-on-primary hover:bg-primary/90 focus-visible:ring-0 focus-visible:outline-solid focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring h-10 px-6 has-[>svg]:px-4 w-full">Allow access</button>
-		</form>
-		</div>
-		<p class="text-ink-soft text-xs">Service-Arb · EV Invest</p>
-		</main>
-		</body>
-		</html>
-		"#);
-		let nonce = page.split(r#"name="nonce" value=""#).nth(1).unwrap().split('"').next().unwrap().to_owned();
-		let css = page.split(r#"rel="stylesheet" href=""#).nth(1).unwrap().split('"').next().unwrap();
-		let res = http.get(format!("{url}{}", css.strip_prefix("https://sa.evinvest.ltd").unwrap())).send().await.unwrap();
-		assert_eq!((res.status().as_u16(), &res.headers()["content-type"]), (200, &"text/css".parse::<reqwest::header::HeaderValue>().unwrap()));
-		assert!(res.headers()["cache-control"].to_str().unwrap().contains("immutable"));
-
-		let post = |sub: &str, nonce: &str| {
-			http.post(format!("{url}{BASE}/authorize")).header(sa_auth::HEADER, assertion(PANEL, sub, "POST", true)).form(&[("nonce", nonce)]).send()
-		};
-		assert_eq!(post("u1", "made-up").await.unwrap().status(), 400);
-		assert_eq!(post("u2", &nonce).await.unwrap().status(), 400);
-		let res = post("u1", &nonce).await.unwrap();
-		assert!(res.status().is_redirection(), "{}", res.status());
-		assert_eq!(post("u1", &nonce).await.unwrap().status(), 400);
-
-		let back = reqwest::Url::parse(res.headers()["location"].to_str().unwrap()).unwrap();
-		assert_eq!(back.as_str().split('?').next(), Some("http://localhost:64461/callback"));
-		assert_eq!(back.query_pairs().find(|(k, _)| k == "state").unwrap().1, "s1");
-		let code = back.query_pairs().find(|(k, _)| k == "code").unwrap().1.into_owned();
-		let tokens: Value = http
-			.post(format!("{url}{BASE}/token"))
-			.form(&[
-				("grant_type", "authorization_code"),
-				("client_id", &client_id),
-				("code", &code),
-				("code_verifier", &verifier),
-				("redirect_uri", "http://localhost:64461/callback"),
-			])
-			.send()
-			.await
-			.unwrap()
-			.json()
-			.await
-			.unwrap();
-		let client = connect(&url, tokens["access_token"].as_str().unwrap()).await;
-		let (text, error) = call(&client, "guide", json!({ "area": "reviews" })).await;
-		assert!(!error, "{text}");
-	})
-	.await;
-}
-
-/// A refresh asks concierge's word, not `/authorize`'s: once the permission is gone or the account
-/// suspended, it is refused and every token of the member stops working.
-#[tokio::test]
-async fn a_refresh_is_refused_once_concierge_withdraws_access() {
-	let concierge = Concierge::default();
-	for sub in ["u1", "u2"] {
-		concierge.join(sub);
-		concierge.grant(sub, &[sa_auth::Mcp::Use.as_str()]);
 	}
-	serve("withdraw", i64::MAX, concierge.clone(), async |url| {
-		let withdrawals: [(&str, Withdraw); 2] = [("u1", |c, sub| c.grant(sub, &[])), ("u2", Concierge::suspend)];
-		for (sub, withdraw) in withdrawals {
-			concierge.synced().await;
-			let (client_id, tokens) = sign_in(&url, sub).await;
-			let res = refresh(&url, &client_id, &tokens).await;
-			assert_eq!(res.status(), 200, "{sub}");
-			let tokens: Value = res.json().await.unwrap();
-
-			withdraw(&concierge, sub);
-			concierge.synced().await;
-			let res = refresh(&url, &client_id, &tokens).await;
-			assert_eq!(res.status(), 400, "{sub}");
-			assert_eq!(res.json::<Value>().await.unwrap()["error"], "invalid_grant", "{sub}");
-			assert_eq!(ping(&url, tokens["access_token"].as_str().unwrap()).await, 401, "{sub}");
-		}
-	})
-	.await;
 }
 
-/// While concierge cannot be heard from, a refresh is turned away without spending the token, which
-/// works again once the projection catches up.
+/// The call that crosses a member's budget is answered; theirs after it is refused until midnight UTC, and
+/// another member's is not.
 #[tokio::test]
-async fn a_refresh_waits_while_concierge_is_unreachable() {
-	let concierge = Concierge::default();
-	concierge.join("u1");
-	concierge.grant("u1", &[sa_auth::Mcp::Use.as_str()]);
-	concierge.0.down.store(true, Ordering::SeqCst);
-	serve("unreachable", i64::MAX, concierge.clone(), async |url| {
-		let (client_id, tokens) = sign_in(&url, "u1").await;
-		let res = refresh(&url, &client_id, &tokens).await;
-		assert_eq!(res.status(), 503);
-		assert_eq!(res.json::<Value>().await.unwrap()["error"], "temporarily_unavailable");
-
-		concierge.0.down.store(false, Ordering::SeqCst);
-		concierge.synced().await;
-		assert_eq!(refresh(&url, &client_id, &tokens).await.status(), 200);
-	})
-	.await;
+async fn the_budget_is_each_members_own() {
+	let app = app("budget", 1);
+	let guide = json!({ "area": "reviews" });
+	assert_eq!(get(&app, member("u0"), "/guide", guide.clone()).await.0, StatusCode::OK);
+	let (status, text) = get(&app, member("u0"), "/guide", guide.clone()).await;
+	assert_eq!(status, StatusCode::TOO_MANY_REQUESTS, "{text}");
+	assert_eq!(serde_json::from_str::<Value>(&text).unwrap()["code"], "over_budget");
+	assert_eq!(get(&app, member("u1"), "/guide", guide).await.0, StatusCode::OK);
 }
 
-/// The consent flow end to end for `sub`: a fresh client, and the token response it ends with.
-async fn sign_in(url: &str, sub: &str) -> (String, Value) {
-	let http = reqwest::Client::builder().redirect(reqwest::redirect::Policy::none()).build().unwrap();
-	let (client_id, verifier) = register(url, "Claude Code").await;
-	let page = http
-		.get(authorize_url(url, &client_id))
-		.header(sa_auth::HEADER, assertion(PANEL, sub, "GET", true))
-		.send()
-		.await
+/// The log names who asked as the assertion does, refused calls of the corpus included.
+#[tokio::test]
+async fn a_call_is_logged_under_the_assertions_sub() {
+	let (app, db) = app_at("log", i64::MAX);
+	get(&app, member("u7"), "/guide", json!({ "area": "reviews" })).await;
+	get(&app, member("u7"), "/guide", json!({ "area": "nowhere" })).await;
+	let logged: Vec<(String, String, String, bool)> = rusqlite::Connection::open(db)
 		.unwrap()
-		.text()
-		.await
+		.prepare("SELECT sub, email, tool, error FROM calls ORDER BY rowid")
+		.unwrap()
+		.query_map([], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?)))
+		.unwrap()
+		.collect::<Result<_, _>>()
 		.unwrap();
-	let nonce = page.split(r#"name="nonce" value=""#).nth(1).unwrap().split('"').next().unwrap();
-	let res = http
-		.post(format!("{url}{BASE}/authorize"))
-		.header(sa_auth::HEADER, assertion(PANEL, sub, "POST", true))
-		.form(&[("nonce", nonce)])
-		.send()
-		.await
-		.unwrap();
-	let back = reqwest::Url::parse(res.headers()["location"].to_str().unwrap()).unwrap();
-	let code = back.query_pairs().find(|(k, _)| k == "code").unwrap().1.into_owned();
-	let tokens = http
-		.post(format!("{url}{BASE}/token"))
-		.form(&[
-			("grant_type", "authorization_code"),
-			("client_id", &client_id),
-			("code", &code),
-			("code_verifier", &verifier),
-			("redirect_uri", "http://localhost:64461/callback"),
-		])
-		.send()
-		.await
-		.unwrap()
-		.json()
-		.await
-		.unwrap();
-	(client_id, tokens)
+	let row = |error| ("u7".to_owned(), "u7@example.com".to_owned(), "guide".to_owned(), error);
+	assert_eq!(logged, [row(false), row(true)]);
 }
 
-async fn refresh(url: &str, client_id: &str, tokens: &Value) -> reqwest::Response {
-	reqwest::Client::new()
-		.post(format!("{url}{BASE}/token"))
-		.form(&[
-			("grant_type", "refresh_token"),
-			("client_id", client_id),
-			("refresh_token", tokens["refresh_token"].as_str().unwrap()),
-		])
-		.send()
-		.await
-		.unwrap()
+fn app(name: &str, daily_bytes: i64) -> Router {
+	app_at(name, daily_bytes).0
 }
 
-/// the MCP endpoint's status for a ping with `token`
-async fn ping(url: &str, token: &str) -> u16 {
-	reqwest::Client::new()
-		.post(format!("{url}{BASE}"))
-		.bearer_auth(token)
-		.header("accept", "application/json, text/event-stream")
-		.json(&json!({ "jsonrpc": "2.0", "id": 1, "method": "ping" }))
-		.send()
-		.await
-		.unwrap()
-		.status()
-		.as_u16()
-}
-
-/// concierge's two streams as the projection pulls them, scope `sa` only, written by the test.
-#[derive(Clone, Default)]
-struct Concierge(Arc<Streams>);
-impl Concierge {
-	fn join(&self, sub: &str) {
-		let member = Member {
-			email: MEMBER.into(),
-			email_verified: true,
-			username: sub.into(),
-			preferred_name: "M".into(),
-			status: "active".into(),
-			kyc_level: 0,
-			token_version: 1,
-			lifecycle_sequence: 1,
-		};
-		self.push_scope(
-			sub,
-			ScopeEventBody::MemberJoined {
-				user_id: sub.into(),
-				auth_subject: subject(sub),
-				member,
-			},
-		);
-	}
-
-	fn grant(&self, sub: &str, permissions: &[&str]) {
-		self.push_scope(
-			sub,
-			ScopeEventBody::GrantsChanged {
-				user_id: sub.into(),
-				auth_subject: subject(sub),
-				permissions: permissions.iter().map(|p| (*p).to_owned()).collect(),
-			},
-		);
-	}
-
-	fn suspend(&self, sub: &str) {
-		let mut users = self.0.users.lock().unwrap();
-		let sequence = 2 + users.iter().filter(|e| e.user_id == sub).count() as u64; // past MEMBER_JOINED's lifecycle_sequence
-		let event_id = format!("user-{}", users.len());
-		users.push(UserEvent {
-			event_id,
-			kind: UserEventKind::Suspended,
-			user_id: sub.into(),
-			auth_subject: subject(sub),
-			sequence,
-			occurred_at: 0,
-			kyc_level: 0,
-			email: MEMBER.into(),
-			email_verified: true,
-			token_version: 1,
-			role: "investor".into(),
-		});
-	}
-
-	fn push_scope(&self, sub: &str, body: ScopeEventBody) {
-		let mut scope = self.0.scope.lock().unwrap();
-		let sequence = 1 + scope.iter().filter(|e| e.key_user() == Some(sub)).count() as u64;
-		let position = scope.len() as i64 + 1;
-		scope.push(ScopeEvent {
-			event_id: format!("scope-{position}"),
-			position,
-			scope: "sa".into(),
-			occurred_at: 0,
-			sequence,
-			body,
-		});
-	}
-
-	/// Until a cycle that pulled everything written so far has finished: the pulls of the cycle
-	/// after it start past all of it.
-	async fn synced(&self) {
-		let (scope, users) = (self.0.scope.lock().unwrap().len() as i64, self.0.users.lock().unwrap().len() as i64);
-		self.0.pulled.subscribe().wait_for(|&(s, u)| s >= scope && u >= users).await.unwrap();
-	}
-}
-
-struct Streams {
-	scope: Mutex<Vec<ScopeEvent>>,
-	users: Mutex<Vec<UserEvent>>,
-	down: AtomicBool,
-	users_after: AtomicI64,
-	/// on every scope pull, which starts a cycle: its `after`, and the last lifecycle pull's
-	pulled: watch::Sender<(i64, i64)>,
-}
-
-impl Default for Streams {
-	fn default() -> Self {
-		Self {
-			scope: Mutex::default(),
-			users: Mutex::default(),
-			down: AtomicBool::default(),
-			users_after: AtomicI64::new(-1),
-			pulled: watch::Sender::new((-1, -1)),
-		}
-	}
-}
-
-impl KeyUser for ScopeEvent {
-	fn key_user(&self) -> Option<&str> {
-		match &self.body {
-			ScopeEventBody::MemberJoined { user_id, .. } | ScopeEventBody::GrantsChanged { user_id, .. } => Some(user_id),
-			ScopeEventBody::ScopeChanged(_) => None,
-		}
-	}
-}
-
-fn subject(sub: &str) -> String {
-	format!("google:{sub}")
-}
-
-#[async_trait::async_trait]
-impl EventSource for Concierge {
-	async fn pull_user_events(&self, after: i64, limit: u32) -> Result<Page<Pulled<UserEvent>>, SourceError> {
-		if self.0.down.load(Ordering::SeqCst) {
-			return Err(SourceError::Unavailable("down".into()));
-		}
-		let users = self.0.users.lock().unwrap();
-		let events: Vec<_> = users.iter().skip(after as usize).take(limit as usize).cloned().map(Pulled::Known).collect();
-		self.0.users_after.store(after, Ordering::SeqCst);
-		Ok(Page {
-			next_position: after + events.len() as i64,
-			events,
-		})
-	}
-
-	async fn pull_scope_events(&self, after: i64, limit: u32) -> Result<Page<Pulled<ScopeEvent>>, SourceError> {
-		if self.0.down.load(Ordering::SeqCst) {
-			return Err(SourceError::Unavailable("down".into()));
-		}
-		let scope = self.0.scope.lock().unwrap();
-		let events: Vec<_> = scope.iter().skip(after as usize).take(limit as usize).cloned().map(Pulled::Known).collect();
-		self.0.pulled.send_replace((after, self.0.users_after.load(Ordering::SeqCst)));
-		Ok(Page {
-			next_position: after + events.len() as i64,
-			events,
-		})
-	}
-}
-
-/// the page with what changes per run or per stylesheet held still
-fn redact(page: &str) -> String {
-	let page = regex::Regex::new(r#"name="nonce" value="[^"]+""#).unwrap().replace_all(page, r#"name="nonce" value="[nonce]""#);
-	let page = regex::Regex::new(r"client_id(=|%3D)[A-Za-z0-9_-]{43}").unwrap().replace_all(&page, "client_id$1[client]");
-	regex::Regex::new(r"connect\.[0-9a-f]+\.css").unwrap().replace_all(&page, "connect.[hash].css").into_owned()
-}
-
-/// a DCR client with a portless loopback redirect, and the PKCE verifier for `authorize_url`
-async fn register(url: &str, name: &str) -> (String, String) {
-	let reg: Value = reqwest::Client::new()
-		.post(format!("{url}{BASE}/register"))
-		.json(&json!({ "redirect_uris": ["http://localhost/callback"], "client_name": name }))
-		.send()
-		.await
-		.unwrap()
-		.json()
-		.await
-		.unwrap();
-	(reg["client_id"].as_str().unwrap().to_owned(), "a-verifier-long-enough-to-be-one-0123456789".to_owned())
-}
-
-fn authorize_url(url: &str, client_id: &str) -> reqwest::Url {
-	reqwest::Url::parse_with_params(
-		&format!("{url}{BASE}/authorize"),
-		[
-			("response_type", "code"),
-			("client_id", client_id),
-			("redirect_uri", "http://localhost:64461/callback"),
-			("code_challenge", &URL_SAFE_NO_PAD.encode(Sha256::digest("a-verifier-long-enough-to-be-one-0123456789"))),
-			("code_challenge_method", "S256"),
-			("state", "s1"),
-		],
-	)
-	.unwrap()
-}
-
-/// what the panel puts on a request to `<BASE>/authorize`, signed with `key`
-fn assertion(key: &str, sub: &str, method: &str, may_use: bool) -> String {
-	let signer: sa_auth::Signer = key.parse().unwrap();
-	signer.sign(&sa_auth::Assertion {
-		aud: sa_auth::Service::Playbook,
-		principal: sa_auth::Principal::User(sa_auth::User {
-			sub: sub.into(),
-			email: MEMBER.into(),
-			email_verified: true,
-			name: "M".into(),
-			permissions: may_use.then(|| sa_auth::Mcp::Use.as_str()).into_iter().collect(),
-		}),
-		method: method.into(),
-		path: format!("{BASE}/authorize"),
-		exp: i64::try_from(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs()).unwrap() + sa_auth::TTL,
-	})
-}
-
-/// Runs `body` against a fresh server, served under `BASE` and projecting `concierge`, that knows one
-/// member, holding the access token `TOKEN`. `body` gets the origin.
-async fn serve(name: &str, daily_bytes: i64, concierge: Concierge, body: impl AsyncFnOnce(String) -> ()) {
+/// A fresh server on its own database.
+fn app_at(name: &str, daily_bytes: i64) -> (Router, PathBuf) {
 	let dir = std::env::temp_dir().join(format!("playbook_web-test-{}", std::process::id()));
 	std::fs::create_dir_all(&dir).unwrap();
 	let db = dir.join(format!("{name}.db"));
 	if db.exists() {
 		std::fs::remove_file(&db).unwrap();
 	}
-	let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
-	let url = format!("http://127.0.0.1:{}", listener.local_addr().unwrap().port());
 	let config = playbook_web::Config {
-		public_url: PUBLIC_URL.into(),
-		panel_keys: PANEL.parse::<sa_auth::Signer>().unwrap().public().parse().unwrap(),
+		assertion_keys: CONDUCTOR.parse::<Signer>().unwrap().public().parse().unwrap(),
 		db: db.clone(),
 		daily_bytes,
-		sync_every: std::time::Duration::from_millis(5),
 	};
-	let (app, sync) = playbook_web::app(config, concierge).await;
-	rusqlite::Connection::open(&db)
-		.unwrap()
-		.execute(
-			"INSERT INTO tokens (hash, kind, sub, email, client_id, expires) VALUES (?1, 'access', 'u0', ?2, 'test', ?3)",
-			(URL_SAFE_NO_PAD.encode(Sha256::digest(TOKEN)), MEMBER, i64::MAX),
-		)
-		.unwrap();
-	tokio::select! {
-		r = async { axum::serve(listener, app).await } => panic!("the server stopped: {r:?}"),
-		() = sync => panic!("the projection stopped"),
-		() = body(url) => {}
-	}
+	(playbook_web::app(config), db)
 }
 
-async fn connect(url: &str, token: &str) -> RunningService<RoleClient, ()> {
-	let transport = StreamableHttpClientTransport::from_config(StreamableHttpClientTransportConfig::with_uri(format!("{url}{BASE}")).auth_header(token));
-	().serve(transport).await.unwrap()
+fn member(sub: &str) -> Principal {
+	Principal::User(User {
+		sub: sub.into(),
+		email: format!("{sub}@example.com"),
+		email_verified: true,
+		name: "M".into(),
+		permissions: ["sa:playbook:mcp:use"].into_iter().collect(),
+	})
 }
 
-async fn call(client: &RunningService<RoleClient, ()>, tool: &str, args: Value) -> (String, bool) {
-	let res = client
-		.call_tool(CallToolRequestParams::new(tool.to_owned()).with_arguments(args.as_object().unwrap().clone()))
-		.await
+async fn document(app: &Router) -> Value {
+	let (status, text) = get(app, Principal::Conductor, "/openapi.json", json!({})).await;
+	assert_eq!(status, StatusCode::OK, "{text}");
+	serde_json::from_str(&text).unwrap()
+}
+
+/// `GET path?query`, asserted for `principal` as the conductor signs it: the path, never the query.
+async fn get(app: &Router, principal: Principal, path: &str, query: Value) -> (StatusCode, String) {
+	let assertion = Assertion {
+		aud: Service::Playbook,
+		principal,
+		method: "GET".into(),
+		path: path.into(),
+		exp: i64::try_from(std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs()).unwrap() + sa_auth::TTL,
+	};
+	let req = Request::get(format!("{path}?{}", serde_urlencoded::to_string(&query).unwrap()))
+		.header(sa_auth::HEADER, CONDUCTOR.parse::<Signer>().unwrap().sign(&assertion))
+		.body(Body::empty())
 		.unwrap();
-	let text = res.content.iter().map(|c| c.as_text().unwrap().text.as_str()).collect::<Vec<_>>().join("\n");
-	(text, res.is_error == Some(true))
+	let res = app.clone().oneshot(req).await.unwrap();
+	let status = res.status();
+	(status, String::from_utf8(to_bytes(res.into_body(), usize::MAX).await.unwrap().to_vec()).unwrap())
 }

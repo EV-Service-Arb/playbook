@@ -390,7 +390,7 @@ impl Corpus {
 				text: text.to_string(),
 				ids: vec![area.to_owned()],
 			})
-			.ok_or_else(|| format!("no guide `{area}`. {GUIDE_DESCRIPTION}"))
+			.ok_or_else(|| format!("no guide `{area}`. The guides:\n{GUIDES}"))
 	}
 }
 

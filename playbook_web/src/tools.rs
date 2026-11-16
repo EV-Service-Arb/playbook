@@ -1,27 +1,50 @@
-use std::sync::Arc;
+//! `search`, `read` and `guide`: what an agent reaches through the conductor's `/mcp`, each answered as text and
+//! logged against the asker's daily budget.
 
-use axum::http::request::Parts;
-use rmcp::{
-	ErrorData as McpError, RoleServer, ServerHandler,
-	handler::server::{router::tool::ToolRouter, wrapper::Parameters},
-	model::*,
-	schemars,
-	service::RequestContext,
-	tool, tool_handler, tool_router,
+use axum::{
+	extract::State as Axum,
+	http::{Method, StatusCode},
 };
+use ev_lib::api::{ErrorCode, JsonSchema, Params, Refusal, Route};
+use sa_auth::{Gate, Mcp, User};
 use serde::{Deserialize, Serialize};
 
 use crate::{
-	Member, State,
-	corpus::{CORPUS, Found, GUIDE_DESCRIPTION, SEARCH_DESCRIPTION},
+	State,
+	corpus::{CORPUS, Found},
 	now,
 };
 
-/// Codex and ChatGPT read the first 512 characters; claude.ai none
-const INSTRUCTIONS: &str = "The service-arb playbook: dated, sourced knowledge on running Google Business Profiles into subcontracted trade work, used through the `service-arb` skill, which https://github.com/EV-Service-Arb/playbook installs.";
+const DAY: i64 = 24 * 60 * 60;
 
-#[derive(Deserialize, Serialize, schemars::JsonSchema)]
-pub struct SearchArgs {
+#[derive(Clone, Copy, Serialize, strum::VariantArray)]
+#[serde(rename_all = "snake_case")]
+pub(crate) enum Code {
+	/// The corpus holds nothing for these arguments; the error says what would.
+	Unanswerable,
+	/// Today's bytes are spent; the budget resets at 00:00 UTC.
+	OverBudget,
+}
+
+impl ErrorCode for Code {
+	fn status(self) -> StatusCode {
+		match self {
+			Self::Unanswerable => StatusCode::UNPROCESSABLE_ENTITY,
+			Self::OverBudget => StatusCode::TOO_MANY_REQUESTS,
+		}
+	}
+}
+
+pub(crate) fn routes() -> Vec<Route<State, Gate>> {
+	vec![
+		Route::new(Method::GET, "/search", Gate::USER.needs(Mcp::Use), search),
+		Route::new(Method::GET, "/read", Gate::USER.needs(Mcp::Use), read),
+		Route::new(Method::GET, "/guide", Gate::USER.needs(Mcp::Use), guide),
+	]
+}
+
+#[derive(Deserialize, JsonSchema, Serialize)]
+struct SearchArgs {
 	/// a regex, case-insensitive; each `|` alternative is scored on its own
 	pattern: String,
 	/// a path prefix to search under, e.g. `knowledge/references/loom` or `knowledge/structured/approved/profile`
@@ -30,8 +53,8 @@ pub struct SearchArgs {
 	screen: Option<bool>,
 }
 
-#[derive(Deserialize, Serialize, schemars::JsonSchema)]
-pub struct ReadArgs {
+#[derive(Deserialize, JsonSchema, Serialize)]
+struct ReadArgs {
 	/// a path as `search` returned it
 	path: String,
 	/// part of the header line of the chapter or section to read, e.g. `Selling calls` or `## facts`
@@ -40,74 +63,55 @@ pub struct ReadArgs {
 	line: Option<usize>,
 }
 
-#[derive(Deserialize, Serialize, schemars::JsonSchema)]
-pub struct GuideArgs {
+#[derive(Deserialize, JsonSchema, Serialize)]
+struct GuideArgs {
 	/// one of the guides listed
 	area: String,
 }
 
-#[derive(Clone)]
-pub struct Playbook {
-	state: Arc<State>,
-	tool_router: ToolRouter<Self>,
+async fn search(Axum(state): Axum<State>, user: User, Params(args): Params<SearchArgs>) -> Result<String, Refusal<Code>> {
+	state.answer(&user, "search", &args, || CORPUS.search(&args.pattern, args.scope.as_deref(), args.screen.unwrap_or(false)))
 }
 
-#[tool_router]
-impl Playbook {
-	pub fn new(state: Arc<State>) -> Self {
-		Self {
-			state,
-			tool_router: Self::tool_router(),
+async fn read(Axum(state): Axum<State>, user: User, Params(args): Params<ReadArgs>) -> Result<String, Refusal<Code>> {
+	state.answer(&user, "read", &args, || CORPUS.read(&args.path, &args.header, args.line))
+}
+
+async fn guide(Axum(state): Axum<State>, user: User, Params(args): Params<GuideArgs>) -> Result<String, Refusal<Code>> {
+	state.answer(&user, "guide", &args, || CORPUS.guide(&args.area))
+}
+
+impl State {
+	/// Refused once `user` has spent today's bytes; the call that crosses the budget is answered.
+	fn answer(&self, user: &User, tool: &str, args: &impl Serialize, found: impl FnOnce() -> Result<Found, String>) -> Result<String, Refusal<Code>> {
+		let today = now() - now() % DAY;
+		let spent: i64 = self
+			.db
+			.lock()
+			.unwrap()
+			.query_row("SELECT COALESCE(SUM(bytes), 0) FROM calls WHERE sub = ?1 AND at >= ?2", (&user.sub, today), |r| r.get(0))
+			.unwrap();
+		if spent >= self.daily_bytes {
+			return Err(Refusal::new(
+				Code::OverBudget,
+				format!("{} has used today's {} bytes; the budget resets at 00:00 UTC", user.email, self.daily_bytes),
+			));
 		}
-	}
-
-	#[tool(description = SEARCH_DESCRIPTION, annotations(read_only_hint = true, open_world_hint = false))]
-	async fn search(&self, Parameters(args): Parameters<SearchArgs>, ctx: RequestContext<RoleServer>) -> Result<CallToolResult, McpError> {
-		Ok(self.answer(&ctx, "search", &args, CORPUS.search(&args.pattern, args.scope.as_deref(), args.screen.unwrap_or(false))))
-	}
-
-	#[tool(
-		description = "One chapter of a capture (a `###` under `## transcript` or `## summary`) or one section of a note, whole, with every line numbered. Never a whole file.",
-		annotations(read_only_hint = true, open_world_hint = false)
-	)]
-	async fn read(&self, Parameters(args): Parameters<ReadArgs>, ctx: RequestContext<RoleServer>) -> Result<CallToolResult, McpError> {
-		Ok(self.answer(&ctx, "read", &args, CORPUS.read(&args.path, &args.header, args.line)))
-	}
-
-	#[tool(description = GUIDE_DESCRIPTION, annotations(read_only_hint = true, open_world_hint = false))]
-	async fn guide(&self, Parameters(args): Parameters<GuideArgs>, ctx: RequestContext<RoleServer>) -> Result<CallToolResult, McpError> {
-		Ok(self.answer(&ctx, "guide", &args, CORPUS.guide(&args.area)))
-	}
-
-	fn answer(&self, ctx: &RequestContext<RoleServer>, tool: &str, args: &impl Serialize, found: Result<Found, String>) -> CallToolResult {
-		let parts = ctx.extensions.get::<Parts>().expect("served over streamable http only");
-		let Member { sub, email } = parts.extensions.get::<Member>().expect("the guard admits members only");
-		let (text, ids, error) = match found {
+		let (text, ids, error) = match found() {
 			Ok(Found { text, ids }) => (text, ids, false),
 			Err(e) => (e, vec![], true),
 		};
-		self.state
-			.db
+		self.db
 			.lock()
 			.unwrap()
 			.execute(
 				"INSERT INTO calls (at, sub, email, tool, args, ids, bytes, error) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)",
-				(now(), sub, email, tool, serde_json::to_string(args).unwrap(), ids.join(" "), text.len() as i64, error),
+				(now(), &user.sub, &user.email, tool, serde_json::to_string(args).unwrap(), ids.join(" "), text.len() as i64, error),
 			)
 			.expect("the calls table is created on start");
 		match error {
-			false => CallToolResult::success(vec![ContentBlock::text(text)]),
-			true => CallToolResult::error(vec![ContentBlock::text(text)]),
+			false => Ok(text),
+			true => Err(Refusal::new(Code::Unanswerable, text)),
 		}
-	}
-}
-
-#[tool_handler(router = self.tool_router)]
-impl ServerHandler for Playbook {
-	fn get_info(&self) -> ServerConfig {
-		ServerConfig::new(ServerCapabilities::builder().enable_tools().build())
-			.with_server_info(Implementation::from_build_env())
-			.with_protocol_version(ProtocolVersion::V_2026_07_28)
-			.with_instructions(INSTRUCTIONS)
 	}
 }
