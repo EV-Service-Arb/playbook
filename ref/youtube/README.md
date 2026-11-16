@@ -3,7 +3,7 @@
 - checked: 2026-11-16
 - written by: `playbook pull yt sync`, which lists every video; `transcribe` ticks each it captures
 
-- spent: $0.74 over 38 captures, as their `cost:` lines state
+- spent: $0.79 over 41 captures, as their `cost:` lines state
 
 A directory per person, named by the text of their channel's link in `../README.md`. In it,
 `<id>.md` is a video's capture — summary, chapters, what is shown, description, then the captions
@@ -15,10 +15,10 @@ every unticked line.
 
 ## eric — <https://www.youtube.com/@ericvelch>
 
-- [ ] [2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk) I Found The Most Profitable Drop-servicing Niche and NO ONE is Doing it
+- [x] [2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk) [I Found The Most Profitable Drop-servicing Niche and NO ONE is Doing it](eric/SOUF1oObJYk.md)
 - [ ] [2026-11-15](https://www.youtube.com/watch?v=M8dvZUDt2P4) Speed-running $0 to $10k/mo with a "fake" plumbing company (just copy me and hit it next month)
 - [ ] [2026-11-13](https://www.youtube.com/watch?v=WJkcTccFHjc) how I build lead gen profiles that print me $30k/mo
-- [ ] [2026-11-13](https://www.youtube.com/watch?v=g2goSCTF18I) How I Verified 100+ Google Business Profiles (with physical locations)
+- [x] [2026-11-13](https://www.youtube.com/watch?v=g2goSCTF18I) [How I Verified 100+ Google Business Profiles (with physical locations)](eric/g2goSCTF18I.md)
 - [ ] [2026-11-13](https://www.youtube.com/watch?v=tDb70E4JmWE) i documented my journey from dying in a hospital bed to millionaire at 20
 - [ ] [2026-11-12](https://www.youtube.com/watch?v=YkCaqtl2dnw) the more I hate myself, the richer i get. $254k/mo at 20
 - [ ] [2026-11-11](https://www.youtube.com/watch?v=fmeDFqDnSrU) How I Run a 6-Figure Drop-servicing Business Outside of my Country
@@ -40,7 +40,7 @@ every unticked line.
 - [ ] [2026-10-18](https://www.youtube.com/watch?v=BRmRgTSr-oY) Exactly How we Hit $11k/mo in 30 Days (so you can Copy Step by Step)
 - [ ] [2026-10-14](https://www.youtube.com/watch?v=NIiqJlQazQg) How Mark Built a $180,000 "Remote Plumbing Business" in 4 Months (starting from $0)
 - [ ] [2026-10-13](https://www.youtube.com/watch?v=iNNACAezn0c) How we Speed-ran $11,795 in the First 30 Days Starting "Remote Service Arbitrage"
-- [ ] [2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c) The Most UNTAPPED Niches for Remote Service Arbitrage (0 Competition)
+- [x] [2026-10-11](https://www.youtube.com/watch?v=0Sldsg6TW1c) [The Most UNTAPPED Niches for Remote Service Arbitrage (0 Competition)](eric/0Sldsg6TW1c.md)
 - [x] [2026-10-08](https://www.youtube.com/watch?v=SVRvdCy6iyA) [How to get Unlimited Google Reviews in 2026 (that actually stick)](eric/SVRvdCy6iyA.md)
 - [x] [2026-10-07](https://www.youtube.com/watch?v=v9nnHybxfsU) [The Difference Between $0 and $100k/mo with Remote Service Arbitrage (why most people fail)](eric/v9nnHybxfsU.md)
 - [x] [2026-10-06](https://www.youtube.com/watch?v=e81n-o8aw_w) [How I Rank ANY Service Business #1 on Google Within 7 Days (3 Google Loopholes)](eric/e81n-o8aw_w.md)
