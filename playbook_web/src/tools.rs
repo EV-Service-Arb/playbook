@@ -7,6 +7,7 @@ use axum::{
 };
 use ev_lib::api::{ErrorCode, JsonSchema, Params, Refusal, Route};
 use sa_auth::{Gate, Mcp, User};
+use sa_core::agent::Tool;
 use serde::{Deserialize, Serialize};
 
 use crate::{
@@ -69,15 +70,15 @@ struct GuideArgs {
 	area: String,
 }
 
-async fn search(Axum(state): Axum<State>, user: User, Params(args): Params<SearchArgs>) -> Result<String, Refusal<Code>> {
+async fn search(Axum(state): Axum<State>, Tool: Tool, user: User, Params(args): Params<SearchArgs>) -> Result<String, Refusal<Code>> {
 	state.answer(&user, "search", &args, || CORPUS.search(&args.pattern, args.scope.as_deref(), args.screen.unwrap_or(false)))
 }
 
-async fn read(Axum(state): Axum<State>, user: User, Params(args): Params<ReadArgs>) -> Result<String, Refusal<Code>> {
+async fn read(Axum(state): Axum<State>, Tool: Tool, user: User, Params(args): Params<ReadArgs>) -> Result<String, Refusal<Code>> {
 	state.answer(&user, "read", &args, || CORPUS.read(&args.path, &args.header, args.line))
 }
 
-async fn guide(Axum(state): Axum<State>, user: User, Params(args): Params<GuideArgs>) -> Result<String, Refusal<Code>> {
+async fn guide(Axum(state): Axum<State>, Tool: Tool, user: User, Params(args): Params<GuideArgs>) -> Result<String, Refusal<Code>> {
 	state.answer(&user, "guide", &args, || CORPUS.guide(&args.area))
 }
 

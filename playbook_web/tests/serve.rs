@@ -56,15 +56,17 @@ async fn the_server_carries_data_and_the_skill_the_procedure() {
 	assert!(error.lines().filter(|l| l.starts_with("- knowledge/")).count() >= 2, "{error}");
 }
 
-/// Every operation is the member's, opened by `sa:playbook:mcp:use`, and states what it refuses with.
+/// Every operation is the member's own tool on the conductor's `/mcp`, opened by `sa:playbook:mcp:use`, and states
+/// what it refuses with.
 #[tokio::test]
-async fn the_document_lists_three_operations_behind_the_playbook_permission() {
+async fn the_document_lists_three_tools_behind_the_playbook_permission() {
 	let doc = document(&app("document", i64::MAX)).await;
 	let paths = doc["paths"].as_object().unwrap();
 	assert_eq!(paths.keys().collect::<Vec<_>>(), ["/guide", "/read", "/search"]);
 	for (path, item) in paths {
 		let op = &item["get"];
 		assert_eq!(op["x-permission"], "sa:playbook:mcp:use", "{path}");
+		assert_eq!(op["x-tool"], true, "{path}");
 		for code in ["unanswerable", "over_budget", "unauthenticated", "forbidden"] {
 			assert!(op["x-errors"].get(code).is_some(), "{path}: {code} in {}", op["x-errors"]);
 		}

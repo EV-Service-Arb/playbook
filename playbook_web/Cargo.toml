@@ -11,6 +11,7 @@ regex.workspace = true
 regex-syntax.workspace = true
 rusqlite.workspace = true
 sa_auth.workspace = true
+sa_core.workspace = true
 schemars.workspace = true
 serde.workspace = true
 serde_json.workspace = true

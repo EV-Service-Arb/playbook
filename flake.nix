@@ -108,7 +108,7 @@
 
         apps.eval = {
           type = "app";
-          meta.description = "answer playbook/eval.json on this tree and on the last release; exits 1 when a case scores lower";
+          meta.description = "answer playbook/eval.json on this tree and on the last release, each through a conductor (PANEL_BIN); exits 1 when a case scores lower";
           program = "${pkgs.writeShellApplication {
             name = "eval";
             runtimeInputs = [ rust pkgs.stdenv.cc pkgs.git claude-code ];

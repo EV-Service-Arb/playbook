@@ -3150,6 +3150,7 @@ dependencies = [
  "defmt",
  "jiff-core",
  "jiff-static",
+ "jiff-tzdb",
  "jiff-tzdb-platform",
  "log",
  "portable-atomic",
@@ -4499,6 +4500,7 @@ dependencies = [
  "regex-syntax",
  "rusqlite",
  "sa_auth",
+ "sa_core",
  "schemars 1.2.2",
  "serde",
  "serde_json",
@@ -5412,6 +5414,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9774ba4a74de5f7b1c1451ed6cd5285a32eddb5cccb8cc655a4e50009e06477f"
 
 [[package]]
+name = "sa_alerts"
+version = "0.1.0"
+dependencies = [
+ "jiff",
+ "sa_auth",
+ "schemars 1.2.2",
+ "serde",
+ "serde_json",
+ "thiserror 2.0.21",
+ "uuid",
+]
+
+[[package]]
 name = "sa_auth"
 version = "0.1.0"
 dependencies = [
@@ -5428,6 +5443,30 @@ dependencies = [
  "strum",
  "thiserror 2.0.21",
  "tracing",
+]
+
+[[package]]
+name = "sa_core"
+version = "0.1.0"
+dependencies = [
+ "axum 0.8.9",
+ "ev_lib",
+ "futures",
+ "hex",
+ "hmac 0.13.0",
+ "jiff",
+ "sa_alerts",
+ "sa_auth",
+ "schemars 1.2.2",
+ "serde",
+ "serde_json",
+ "sha2 0.11.1",
+ "strum",
+ "subtle",
+ "thiserror 2.0.21",
+ "tokio",
+ "url",
+ "uuid",
 ]
 
 [[package]]
@@ -7913,7 +7952,3 @@ checksum = "27bc9d5b815bc103f142aa054f561d9187d191692ec7c2d1e2b4737f8dbd7296"
 dependencies = [
  "zune-core",
 ]
-
-[[patch.unused]]
-name = "sa_core"
-version = "0.1.0"

@@ -231,8 +231,9 @@ lists every call capture under the paths with the estimated cost of redoing it; 
 estimated at the `--legacy` rate either way, as the default's cost is known only after the pick. It runs only with
 `--execute`, and asks first when the total is past $1. Audio is redone only for a whisper transcript
 that has no digest yet, since a re-pull drops the digest. `playbook eval` answers `playbook/eval.json`
-through a member's client, on this tree and on the last release, and judges each answer against the
-case's expectations.
+through a member's client, on this tree and on the last release, each side behind a conductor of its
+own (`PANEL_BIN`, in dev sign-in) whose `/mcp` the client connects to, and judges each answer against
+the case's expectations.
 
 > each expectation is stated as succinctly as possible, to capture the intention rather than the wording
 

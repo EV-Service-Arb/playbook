@@ -17,6 +17,7 @@ regex = "1.13.1"
 regex-syntax = "0.8.11"
 rusqlite = { version = "0.40", features = ["bundled"] }
 sa_auth = { git = "https://github.com/EV-Service-Arb/site_conductor", branch = "main", features = ["axum"] }
+sa_core = { git = "https://github.com/EV-Service-Arb/site_conductor", branch = "main", features = ["api"] }
 schemars = "1"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
