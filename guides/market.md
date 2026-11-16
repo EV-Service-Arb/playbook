@@ -9,10 +9,10 @@
 
 ## how to decide
 - trades named as workable: concrete, plumbing, landscaping, roofing (roofing hedged)
-  [r4 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6377)
+  <!--r4 2026-09-18 https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6377-->
 - *cleaning* recurs, ~11 months a client when run well, but it is operation-intensive: insurance, payroll at 40–55%, contractor agreements
-  [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5133)
-  [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6480)
+  <!--r3 2026-09-18 https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5133-->
+  <!--r3 2026-09-18 https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6480-->
 - pick the city by the two numbers above, and only then the trade inside it // inferred
 
 ## when it goes wrong

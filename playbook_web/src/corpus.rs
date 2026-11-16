@@ -401,7 +401,7 @@ pub struct Found {
 
 pub static CORPUS: LazyLock<Corpus> = LazyLock::new(Corpus::load);
 
-static CITATION: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"^\s*\[r(\d) (\d{4}-\d{2}-\d{2})\]\([^)]+\)\s*$").unwrap());
+static CITATION: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"^\s*<!--r(\d) (\d{4}-\d{2}-\d{2}) \S+-->\s*$").unwrap());
 
 #[derive(Clone, Copy, Eq, Ord, PartialEq, PartialOrd)]
 enum Kind {

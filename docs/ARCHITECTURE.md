@@ -152,11 +152,11 @@ collecting unrelated bullets splits into children.
 ## Note format
 
 A bullet is one line. Elaboration goes underneath it. Every claim carries its source directly
-beneath it, and the link text is the base reliability and the date:
+beneath it, as a comment holding the base reliability, the date and the url:
 
 ```md
 - one review a day per profile, at most
-  [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3026)
+  <!--r2 2026-09-18 https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3026-->
 ```
 
 The rest of the format and the style are in `knowledge/structured/README.md`. `playbook check cites` enforces

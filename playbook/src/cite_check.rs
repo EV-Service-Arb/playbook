@@ -73,19 +73,19 @@ fn check(text: &str, dir: &Path, captures: &BTreeMap<String, Capture>, today: Da
 			continue;
 		}
 
-		let cited = match link_only(trimmed) {
-			Some((label, url)) => match citation(line, label, url, captures) {
-				Ok(c) => {
-					run.push(c);
-					true
+		let cited = match cite_comment(trimmed) {
+			Some((label, url)) => {
+				match citation(line, label, url, captures) {
+					Ok(c) => run.push(c),
+					Err(why) => errors.push((line, why)),
 				}
-				Err(why) => {
-					errors.push((line, why));
-					true
-				}
-			},
+				true
+			}
 			None => false,
 		};
+		if !cited && link_only(trimmed).is_some_and(|(label, _)| label.starts_with('r') && label.contains(' ')) {
+			errors.push((line, "a citation is a comment, `<!--r<0-7> <YYYY-MM-DD> <url>-->`, not a link".into()));
+		}
 		if !cited {
 			sorted(&run, today, &mut errors);
 			run.clear();
@@ -130,6 +130,12 @@ fn check(text: &str, dir: &Path, captures: &BTreeMap<String, Capture>, today: Da
 	errors
 }
 
+/// `<!--label url-->` and nothing else on the line.
+fn cite_comment(line: &str) -> Option<(&str, &str)> {
+	let (label, url) = line.strip_prefix("<!--")?.strip_suffix("-->")?.rsplit_once(' ')?;
+	(!url.is_empty() && !label.starts_with(' ') && !url.contains("--")).then_some((label, url))
+}
+
 /// `[label](url)` and nothing else on the line.
 fn link_only(line: &str) -> Option<(&str, &str)> {
 	let rest = line.strip_prefix('[')?.strip_suffix(')')?;
@@ -143,7 +149,7 @@ fn citation(line: usize, label: &str, url: &str, captures: &BTreeMap<String, Cap
 		.and_then(|l| l.split_once(' '))
 		.and_then(|(b, d)| Some((b.parse::<u8>().ok().filter(|b| *b <= 7)?, d.parse::<Date>().ok()?)));
 	let Some((base, date)) = parsed else {
-		return Err(format!("a link alone on a line is a citation, and `{label}` is not `r<0-7> <YYYY-MM-DD>`"));
+		return Err(format!("a comment alone on a line is a citation, and `{label}` is not `r<0-7> <YYYY-MM-DD>`"));
 	};
 
 	if url.starts_with(ISSUE_COMMENT) {

@@ -3,72 +3,72 @@
   // unsourced: Jordan Rodriguez
 
 - everybody has trouble finding good review-getters
-  [r4 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=596)
-  [r4 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=806)
+  <!--r4 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=596-->
+  <!--r4 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=806-->
 
 ## facts
 - facebook didn't like Ilya's 25$ gift card for GMB post
-  [r3 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6154)
+  <!--r3 2026-09-18 https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6154-->
 
   > potential solution is to post on the Marketplace there, in `misc` category
-  [r4 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6243)
+  <!--r4 2026-09-18 https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6243-->
 
 - Derick Parsons with a bonus for review-getter
   basically 50$ bonus for getting a good review volume&quality in a week.
   Says works same way as giving out a gold star to kindergarteners.
   And now he has like 5$/review cost.
-  [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2141)
-  [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2181)
+  <!--r3 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2141-->
+  <!--r3 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2181-->
 
   > he does an onboarding, where he baby-steps them through getting the first review
-  [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2295)
+  <!--r3 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2295-->
   // I think I want to do the standard thing with recording myself, then coaching him through it, then having him record his own approach.
 
   > he says they have 25 review-scouts, and it's a giant operation. Positions it very legit, and says what others are getting to break beliefs and stuff.
-  [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2335)
+  <!--r3 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2335-->
 
   // And he positions themselves as "data collection & promotion" enterprise. And says 30 reviews/hour is average, and that they can make 150$/h if highly motivated, - are you highly motivated
   // though he doesn't lead with the 150$, it sounds scammy
-  [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2209)
-  [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2526)
+  <!--r3 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2209-->
+  <!--r3 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=2526-->
 
 ## plays
 - reviews: FB church groups are oftentimes willing to leave reviews on your profiles if you pretend to be one of them
-  [r4 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4996)
+  <!--r4 2026-09-18 https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4996-->
 
 - Artheme Chaykin has amazing point on automating job description on FBMarketplace for review getters
   so basically the more you show straight away the better, cause we want to filter in the hustlers, - so show full difficulty, and those that stay, are unlikely to need to be motivated too much
-  [r5 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=559)
-  [r5 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=596)
+  <!--r5 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=559-->
+  <!--r5 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=596-->
 
   > every time you repost on FB marketplace, use a new picture // otherwise they'll clock it
-  [r3 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=675)
+  <!--r3 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=675-->
 
 - follow a school on instagram, befriend most connected people
-  [r4 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=8169)
+  <!--r4 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=8169-->
 
 - try to trade naked pics with cold traffic on facebook
-  [r5 2026-09-25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=6925)
+  <!--r5 2026-09-25 https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=6925-->
 
 - when asking for reviews, ask for them for my dad and not myself
-  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2684)
-  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=124)
+  <!--r3 2026-10-09 https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2684-->
+  <!--r3 2026-10-09 https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=124-->
 
 - collecting reviews for a plumber brother, positioning it as a surprise, a-la he's the best on the team and deserves his own business
   The Little Volcano walked a college campus with it; there is no brother
-  [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1863)
-  [r3 2026-10-16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1891)
+  <!--r3 2026-10-16 https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1863-->
+  <!--r3 2026-10-16 https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1891-->
 
 - Muhammad has 150+ reviews on his profiles, + to authorities on getting reviews
   // unsourced: Valera
   joins the calls as `Abdullah`
-  [r3 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1869)
+  <!--r3 2026-10-23 https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1869-->
   Q: does he get them local or remote?
 
 - Gabe Jacobs: massive advice on automating checking people coming from ads
   has a form on a site that checks device fingerprint, geolocation, IP location, tz, etc. Then score them. Lol, actual bookie tactics
-  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1916)
-  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1665)
+  <!--r3 2026-10-09 https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1916-->
+  <!--r3 2026-10-09 https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1665-->
   > the ads are his $5-a-review posts on Craigslist gigs and Facebook. a vetted person goes onto his message board, and his tool sends them the profile's review link
-  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1707)
-  [r3 2026-10-09](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1961)
+  <!--r3 2026-10-09 https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1707-->
+  <!--r3 2026-10-09 https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1961-->

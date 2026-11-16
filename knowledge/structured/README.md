@@ -14,12 +14,12 @@ A claim scoped to one trade lives under `market/niches/<niche>/`, at the same pa
 outside it. A general claim with a trade caveat keeps its `*niche*:` tag where it is.
 
 ## Citations
-A citation is a line that holds only a link, `[r<base> <date>](url)`:
+A citation is a line that holds only an HTML comment, `<!--r<base> <date> <url>-->`, with no padding inside it:
 
 ```md
 - one review a day per profile, at most
-  [r2 2026-09-18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3026)
-  [r4 2026-08-07](https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1200)
+  <!--r2 2026-09-18 https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3026-->
+  <!--r4 2026-08-07 https://www.loom.com/share/143a77b218e54f3eb570ba1e47f8285a?t=1200-->
 ```
 
 - `<base>` is the base reliability from `docs/ARCHITECTURE.md`'s `## Reliability`, 0 to 7. Only the
