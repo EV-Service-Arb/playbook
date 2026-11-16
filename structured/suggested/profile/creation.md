@@ -1,5 +1,5 @@
 ## info
-- "add a missing place" lets you submit: name, category, address/pin, phone, website, opening hours
+- "add a missing place" lets you submit: name, category, address/pin, phone, website, opening hours — taking it to a verified profile: `profile/verification/missing_place`
 - website and phone both go in at creation time // no need to wait for a claim to attach them
   [r5 2026-09-18](https://chatgpt.com/share/6aacb045-ac9c-83eb-a97d-8624c616a763)
 

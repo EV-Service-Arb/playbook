@@ -138,7 +138,7 @@ is the block and `x/` holds its children, and either one can exist alone:
 ```
 structured/{approved,suggested}/
 ├── market.md       market/niches/<niche>/…     niche and city choice; per-trade economics
-├── profile/        creation · verification/{video,live} · suspension/registration
+├── profile/        creation · verification/{video,live,missing_place} · suspension/registration
 ├── ranking/        naming · categories · site · reviews/{stand,rate_limits,deletion,sourcing,local_guide}
 ├── conversion.md   site, intake, VA call handling
 ├── fulfilment.md   contractors, splits, pricing

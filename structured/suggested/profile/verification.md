@@ -5,6 +5,8 @@
   [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3409)
 - don't take the SMS-code route: code-verified profiles get suspended a lot more, and `CallRail` or `Quo` numbers never receive the code — it needs a real registered number — Eric
   [r2 2026-10-23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3382)
+  > Eric, three weeks on: a missing-place profile does verify by text code, once warmed up with 10–12 reviews — `profile/verification/missing_place`
+  [r2 2026-11-13](https://www.youtube.com/watch?v=g2goSCTF18I&t=359)
 
 ## facts
 - auto-verified with no live call: two *plumbing*, one *cleaning* and one *commercial cleaning* profile — `PP`, only his first needed a live
