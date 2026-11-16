@@ -185,6 +185,7 @@ it sets the base. A person on the [people](#people) list takes their own base in
 | 2    | Zach Peterson (youtube `@zachpeters0n`)  |
 | 3    | Gabe Jacobs (skool `gabe-jacobs-9502`)   |
 | 3    | Marcus Milan (youtube `@marcusmilxn`)    |
+| 3    | Matt Gazda (youtube `@Matt_Gazda`)      |
 
 Then everything decays with age, up to 10 — a cheap group member having heard of it long ago, which
 is as good as nothing. How the decay is counted lives in `playbook/src/cite_check.rs`, not here.

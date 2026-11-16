@@ -1,7 +1,7 @@
 # YouTube, as the channels serve it
 
-- checked: 2026-10-23
-- written by: `scripts/yt-pull.rs sync`, which lists every video; `transcribe` ticks each it captures
+- checked: 2026-11-16
+- written by: `playbook pull yt sync`, which lists every video; `transcribe` ticks each it captures
 
 - spent: $0.74 over 38 captures, as their `cost:` lines state
 
@@ -10,11 +10,33 @@ A directory per person, named by the text of their channel's link in `../README.
 in citable blocks — and `<id>/<secs>.jpg` the frames its `## shown` lines were read off.
 
 A line per video, newest first: the day youtube says it was uploaded, linked to the video, then
-its title — linked to the capture once there is one. `scripts/yt-pull.rs transcribe` captures
+its title — linked to the capture once there is one. `playbook pull yt transcribe` captures
 every unticked line.
 
 ## eric — <https://www.youtube.com/@ericvelch>
 
+- [ ] [2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk) I Found The Most Profitable Drop-servicing Niche and NO ONE is Doing it
+- [ ] [2026-11-15](https://www.youtube.com/watch?v=M8dvZUDt2P4) Speed-running $0 to $10k/mo with a "fake" plumbing company (just copy me and hit it next month)
+- [ ] [2026-11-13](https://www.youtube.com/watch?v=WJkcTccFHjc) how I build lead gen profiles that print me $30k/mo
+- [ ] [2026-11-13](https://www.youtube.com/watch?v=g2goSCTF18I) How I Verified 100+ Google Business Profiles (with physical locations)
+- [ ] [2026-11-13](https://www.youtube.com/watch?v=tDb70E4JmWE) i documented my journey from dying in a hospital bed to millionaire at 20
+- [ ] [2026-11-12](https://www.youtube.com/watch?v=YkCaqtl2dnw) the more I hate myself, the richer i get. $254k/mo at 20
+- [ ] [2026-11-11](https://www.youtube.com/watch?v=fmeDFqDnSrU) How I Run a 6-Figure Drop-servicing Business Outside of my Country
+- [ ] [2026-11-10](https://www.youtube.com/watch?v=UwnMnh74ZIE) We went from $0 to $56k/mo in 30 days to prove how easy it is (Remote Service Arbitrage)
+- [ ] [2026-11-08](https://www.youtube.com/watch?v=xqcHEb9B9ZA) i somehow hit $10k my first month with this business model
+- [ ] [2026-11-07](https://www.youtube.com/watch?v=4GBT46T6slM) How they Built a $240k Remote Service Business in 90 Days
+- [ ] [2026-11-07](https://www.youtube.com/watch?v=pj9vyanK2tk) How Kyle Started a 6-Figure Remote Plumbing Business While in Highschool
+- [ ] [2026-11-05](https://www.youtube.com/watch?v=7RJrPx1gxko) How I Run a 7-Figure Plumbing Business at 20 Without any Licenses (from my computer)
+- [ ] [2026-11-05](https://www.youtube.com/watch?v=u8A-J5_4i7M) High Ticket Service Arbitrage LIVE Call Closing - $630 in under 3 mins
+- [ ] [2026-11-03](https://www.youtube.com/watch?v=MkZAdVgD56Y) How Nik Makes $30k/mo at 19/yo With GMB Arbitrage
+- [ ] [2026-11-03](https://www.youtube.com/watch?v=QFNCo17d2Fg) How Marco Built a $210k GMB Arbitrage Business in 6 Months
+- [ ] [2026-11-02](https://www.youtube.com/watch?v=V42cetcSRkE) How Jeremiah went from Working Construction to $170k/yr with Remote Service Arbitrage
+- [ ] [2026-11-02](https://www.youtube.com/watch?v=m4gYOeoPVoU) This Strategy Gets Me 20-50 Google Reviews Daily on Autopilot (copy it step by step)
+- [ ] [2026-10-31](https://www.youtube.com/watch?v=yipY-G_Lo5w) Why Your Google Business Verification Video Keeps Failing (and how to verify ANY profile)
+- [ ] [2026-10-30](https://www.youtube.com/watch?v=VURCLAgIIZM) how i made $236k this month at 20 (i've never seen anyone else do this)
+- [ ] [2026-10-27](https://www.youtube.com/watch?v=DPRyx3d8oZM) Why your Google Business Profile Reviews are Getting Deleted (and how to fix it)
+- [ ] [2026-10-25](https://www.youtube.com/watch?v=7q6eVp8TAmE) Why Your Google Business Profile Isn't Ranking Anymore (and how to fix it)
+- [ ] [2026-10-23](https://www.youtube.com/watch?v=ec3SAWEyjsU) How I Generate Unlimited ORGANIC Leads For Local Service Businesses ($0)
 - [ ] [2026-10-18](https://www.youtube.com/watch?v=BRmRgTSr-oY) Exactly How we Hit $11k/mo in 30 Days (so you can Copy Step by Step)
 - [ ] [2026-10-14](https://www.youtube.com/watch?v=NIiqJlQazQg) How Mark Built a $180,000 "Remote Plumbing Business" in 4 Months (starting from $0)
 - [ ] [2026-10-13](https://www.youtube.com/watch?v=iNNACAezn0c) How we Speed-ran $11,795 in the First 30 Days Starting "Remote Service Arbitrage"
@@ -260,6 +282,10 @@ every unticked line.
 
 ## marcus — <https://www.youtube.com/@marcusmilxn>
 
+- [ ] [2026-11-11](https://www.youtube.com/watch?v=wWm-J8H36GY) Someone Called My “Fake” Plumbing Business (I picked up)
+- [ ] [2026-11-08](https://www.youtube.com/watch?v=Zv9ZtoHwT-Q) I Launched a Google Business Profile Across the Country
+- [ ] [2026-10-29](https://www.youtube.com/watch?v=2fuWKtN9HSU) i built a “fake” plumbing business that makes $30k/mo
+- [ ] [2026-10-27](https://www.youtube.com/watch?v=fOkLfMtCpbM) How to Get So Many Home Service Leads It Feels Illegal
 - [ ] [2026-10-23](https://www.youtube.com/watch?v=O3FZjVIk4v0) if i started a home service business in 2026,this is how i’d rank #1 on google
 - [ ] [2026-10-20](https://www.youtube.com/watch?v=a7fC901L5ss) How I Would Build a $30k/mo Service Business With No Trade Experience
 - [ ] [2026-09-29](https://www.youtube.com/watch?v=o-7MWN2uLYs) my business Is boring, but makes me $30,000/mo
@@ -281,6 +307,29 @@ every unticked line.
 
 ## zach — <https://www.youtube.com/@zachpeters0n>
 
+- [ ] [2026-11-16](https://www.youtube.com/watch?v=K_bDhPz1CuI) rank higher on Google by citing gbp categories and services
+- [ ] [2026-11-14](https://www.youtube.com/watch?v=aPGp9fDQnX8) easy $100k a month Local SEO framework in 2027 for service businesses
+- [ ] [2026-11-14](https://www.youtube.com/watch?v=gvlOTBQ25_4) 3 local seo changes to double your service business leads
+- [ ] [2026-11-13](https://www.youtube.com/watch?v=0wYbz3vIH-0) Raw reality of scaling service business with SEO
+- [ ] [2026-11-12](https://www.youtube.com/watch?v=P8d8ymdpLAs) Local seo will bring so many qualified clients to your business.
+- [ ] [2026-11-10](https://www.youtube.com/watch?v=paKfU0EaTrY) boring local seo strategy brings qualified clients
+- [ ] [2026-11-09](https://www.youtube.com/watch?v=c_RUJRX0k5A) How One Landscaper did $1.7M in Quotes in 1 month with Multiple Google Business Profiles
+- [ ] [2026-11-07](https://www.youtube.com/watch?v=XnKbSprlqPM) required pages your website needs to rank your service business higher on Google for more clients
+- [ ] [2026-11-05](https://www.youtube.com/watch?v=24UQQYTlEc8) the $15k profit a month Local SEO strategy no service business does
+- [ ] [2026-11-05](https://www.youtube.com/watch?v=ixNr_jyhYFo) $50k a month local Seo strategy for service businesses
+- [ ] [2026-11-04](https://www.youtube.com/watch?v=aiH6VeSRIFQ) check and see if you rank top 3 on Google for your target service keyword
+- [ ] [2026-11-02](https://www.youtube.com/watch?v=_MHAzvGG5UA) Rank your local service business higher on Google for more clients
+- [ ] [2026-11-01](https://www.youtube.com/watch?v=9irH7743SaA) google maps pays me $50k a month from 5 local seo tricks to scale my service business
+- [ ] [2026-10-31](https://www.youtube.com/watch?v=ViITGaXBWqw) rank your service business higher on Google for more free jobs and clients with easy local Seo
+- [ ] [2026-10-30](https://www.youtube.com/watch?v=-0Md8f05KMM) double your service business revenue with no additional advertising
+- [ ] [2026-10-28](https://www.youtube.com/watch?v=LNrNPqygOc8) rank your service business higher on Google to double your revenue with simple website strategy
+- [ ] [2026-10-28](https://www.youtube.com/watch?v=wTbpxkCjsnk) landscaping business does $50k a month from these 5 Website SEO hacks
+- [ ] [2026-10-27](https://www.youtube.com/watch?v=-gBd7JhfVJ0) no one does this
+- [ ] [2026-10-27](https://www.youtube.com/watch?v=_uPE03c3jjk) Get more leads for you businesses using content marketing
+- [ ] [2026-10-26](https://www.youtube.com/watch?v=AWNVzZrx9Ck) copy my SEO strategy to rank your business higher on Google for more clients fast
+- [ ] [2026-10-25](https://www.youtube.com/watch?v=TW69CAez6AM) $50k a month service business remotely with simple SEO system
+- [ ] [2026-10-24](https://www.youtube.com/watch?v=u9MVTFJwPNg) scale to millions with local SEO any service business
+- [ ] [2026-10-23](https://www.youtube.com/watch?v=kw_0cHgyxXM) rank your service business higher on Google for more clients in 20 seconds
 - [ ] [2026-10-22](https://www.youtube.com/watch?v=UjICJeA8WK8) $1B SEO strategy that made Billions for Tommy Mello in the garage door space
 - [ ] [2026-10-21](https://www.youtube.com/watch?v=drSnZNgT94w) Rank your service business higher on Google in 30 seconds
 - [ ] [2026-10-20](https://www.youtube.com/watch?v=aU7-vCT3EAQ) rank your business higher on Google fast
@@ -495,3 +544,14 @@ every unticked line.
 - [ ] [2025-04-17](https://www.youtube.com/watch?v=pV9bb5JaJ_U) Google Review Generation #shorts
 - [ ] [2025-04-16](https://www.youtube.com/watch?v=NfVoZhp8qQc) Convert more Website Visitors #shorts
 - [ ] [2025-04-16](https://www.youtube.com/watch?v=mybTkISXcTc) Local Business Strategy #shorts
+
+## matt — <https://www.youtube.com/@Matt_Gazda>
+
+- [ ] [2026-11-16](https://www.youtube.com/watch?v=8s3qIkaCABs) How Sam Made $12K in His Second Month Drop Servicing (No Skills Needed
+- [ ] [2026-11-12](https://www.youtube.com/watch?v=rkB-cnYS4U0) Google Review Methods Tier List: S Tier Makes Me $70K/Month Drop Servicing
+- [ ] [2026-11-12](https://www.youtube.com/watch?v=zpFmF5mIZho) I Exploited Plumbers for $150K and They Thanked Me | Full Drop Servicing Tutorial
+- [ ] [2026-08-18](https://www.youtube.com/watch?v=aXZ1OJqiQGE) How to never have your google business profile suspend again
+- [ ] [2026-08-13](https://www.youtube.com/watch?v=sRLJXFgKXvA) How Daniel made 6k his second month with drop servicing
+- [ ] [2026-08-05](https://www.youtube.com/watch?v=W2yzhNhIWWw) How to find reliable contractors for your drop servicing business
+- [ ] [2026-08-02](https://www.youtube.com/watch?v=_W8-Z8Q5eEE) The only drop servicing tutorial you will ever need (copy me im begging)
+- [ ] [2026-07-13](https://www.youtube.com/watch?v=l2pLR4iY9vA) I make 30k a month drop servicing (COPY ME)

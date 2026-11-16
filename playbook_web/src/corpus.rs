@@ -11,7 +11,7 @@ const MIN_MATCH: usize = 2; // a lone letter is noise, not relevance
 const BROAD: f64 = 0.4; // a pattern hitting this share of the files in scope is an enumeration
 const OVERFLOW: usize = 5; // files per kind listed past its slots, for the agent to `read`
 const WORST: f64 = 10.;
-const CHANNELS: &[(&str, &str)] = &[("eric", "Eric"), ("zach", "Zach Peterson"), ("marcus", "Marcus Milan")]; // `ref/youtube/<dir>` to its row in docs/ARCHITECTURE.md#people
+const CHANNELS: &[(&str, &str)] = &[("eric", "Eric"), ("zach", "Zach Peterson"), ("marcus", "Marcus Milan"), ("matt", "Matt Gazda")]; // `ref/youtube/<dir>` to its row in docs/ARCHITECTURE.md#people
 const LINE_CAP: usize = 700;
 const STRUCTURED_LINES: usize = 12;
 const REF_BLOCKS: usize = 2; // paragraphs or bullets shown per chunk
@@ -117,7 +117,8 @@ impl Corpus {
 		}
 		for d in docs.iter().filter(|d| d.kind > Kind::Suggested) {
 			let date = d.date.unwrap_or_else(|| panic!("{} states no date", d.path));
-			assert!(date.as_bytes()[4] == b'-' && date.as_bytes()[7] == b'-', "{}: `{date}` is not a date", d.path);
+			assert!(date.as_bytes()[4] == b'-', "{}: `{date}` is not a date", d.path);
+			assert!(date.as_bytes()[7] == b'-', "{}: `{date}` is not a date", d.path);
 			if d.kind == Kind::Video {
 				d.channel();
 			}

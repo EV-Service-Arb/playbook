@@ -128,6 +128,7 @@
         };
 
         devShells.default = pkgs.mkShell {
+          inputsFrom = [ playbook_web ];
           shellHook = pre-commit-check.shellHook + combined.shellHook + ''
             cp -f ${v_flakes.files.treefmt { inherit pkgs; }} ./.treefmt.toml
           '';
