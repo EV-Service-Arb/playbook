@@ -20,20 +20,20 @@ Eric runs the weekly group call. The room reports the week — Ryan pulled over 
 
 ### [03:34](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=214) Spoofing location on an android
 
-- Eric's answer is to root the phone first, then install Magisk — the rooting is the hard part, and YouTube plus ChatGPT is how he got through it.
-  <!--Eric says ?t=254-->
+- Gabe's answer is to root the phone first, then install Magisk — the rooting is the hard part, and YouTube plus ChatGPT is how he got through it.
+  <!--Gabe Jacobs says ?t=254-->
 - Once Magisk is on, any of the location spoofers in its store works; `GPS Locator` is the one named.
-  <!--Eric says ?t=289-->
+  <!--Gabe Jacobs says ?t=289-->
 - Valeriy's objection: the ordinary apps all go through the mock-location API, which is visible as spoofed.
   <!--Valera says ?t=254-->
 - Without rooting, plugging the phone into a computer and spoofing from there also works, and is a pain.
-  <!--Eric says ?t=360-->
+  <!--Gabe Jacobs says ?t=360-->
 
 ### [06:57](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=417) Injecting a real video into the verification flow
 
 - A real-life video injected into the verification flow drew none of the AI-detection errors — Google catches the AI *video*, not the injection.
   <!--Gabe Jacobs ran ?t=417-->
-- Eric paid people on Fiverr to edit the words and signs in the video; his went through on service-area profiles but he expects a storefront to hold up better.
+- Gabe paid people on Fiverr to edit the words and signs in the video; his went through on service-area profiles but he expects a storefront to hold up better.
   <!--Gabe Jacobs ran ?t=417-->
 - One pre-recorded video passed around the whole group is the obvious failure mode, and was raised as one.
   <!--gmbpp member says ?t=487-->
@@ -70,7 +70,7 @@ Eric runs the weekly group call. The room reports the week — Ryan pulled over 
 ### [24:46](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1486) What a physical address verification fails on
 
 - Signage is what nearly everyone fails on. Photograph the sign before recording and ask ChatGPT whether it reads as permanent — Donovan's trick, and it has helped a lot of people.
-  <!--Donovan says ?t=1486-->
+  <!--Eric heard ?t=1486-->
 - Show yourself at the location, show the CRM on a device, show yourself unlocking the door. A staff-only sticker may help.
   <!--Eric says ?t=1543-->
 - Approval is partly luck: the same video passes once and fails once. Set up three profiles while you are already there and shoot three videos.
@@ -98,7 +98,7 @@ Eric runs the weekly group call. The room reports the week — Ryan pulled over 
 - Reviews take a week to two weeks to disappear, so a result read earlier than that is not a result.
   <!--Eric says ?t=1756-->
 - 300 in a day did get a profile suspended. Under that, only the reviews drop.
-  <!--Eric says ?t=1756-->
+  <!--Ilya ran ?t=2356-->
 - (!) Getting a one-star first and building on top of it seems to slow the deletions — Eric's anecdote, seen twice, too early to lean on.
   <!--Eric ran ?t=1756-->
 
@@ -185,7 +185,7 @@ Eric runs the weekly group call. The room reports the week — Ryan pulled over 
 - At $550, Eric's answer is to eat it. Sending a second contractor puts you negative anyway.
   <!--Eric says ?t=3589-->
 - Customers normally do pay on site; this one was a property manager, and the job was picked on lowest price.
-  <!--Eric says ?t=3613-->
+  <!--gmbpp member ran ?t=3613-->
 
 ### [1:02:07](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3727) Screenshotting every review, to appeal the ones that vanish
 
@@ -224,8 +224,8 @@ Eric runs the weekly group call. The room reports the week — Ryan pulled over 
   <!--Ilya ran ?t=4309-->
 - The catch: his profiles are five to ten years old. Google gates the reviews after twenty or thirty in a short window, and about 10-15% were removed in the last sweep.
   <!--Ilya ran ?t=4341-->
-- Eric's qualifier: on a new profile, do not try this.
-  <!--Eric says ?t=4271-->
+- A member's qualifier: on a new profile, do not try this.
+  <!--gmbpp member says ?t=5691-->
 
 ### [1:12:53](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4373) Expired domains, local guide accounts, warming a gmail
 
@@ -306,11 +306,11 @@ Eric runs the weekly group call. The room reports the week — Ryan pulled over 
 ### [1:39:33](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5973) A fully AI video against an edited real one
 
 - Fully AI is out — the detection is on the noise AI video carries, the same signal YouTube uses.
-  <!--Eric says ?t=5973-->
+  <!--Valera says ?t=5973-->
 - An edited real video is the open path, and one member's stopped working last week after a month of going through.
   <!--gmbpp member ran ?t=6021-->
 - The failure message names the video as pre-recorded when it catches it.
-  <!--Eric says ?t=6084-->
+  <!--gmbpp member ran ?t=6084-->
 
 ### [1:42:18](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6138) Facebook marketplace to find the people
 
@@ -328,9 +328,9 @@ Eric runs the weekly group call. The room reports the week — Ryan pulled over 
 - One member is spread across concrete, plumbers, drywall and landscaping to see which takes off, and is blocked on new plumbing GMBs until the video problem is solved.
   <!--gmbpp member ran ?t=6347-->
 - Eric's advice to Valeriy was plumbing, plus one or two cleaning profiles in his own city to work out remote reviews and pricing.
-  <!--Eric says ?t=6398-->
+  <!--Valera heard ?t=6398-->
 - Cleaning is recurring and operations-heavy; plumbing and HVAC are one-off and higher ticket for the same setup work.
-  <!--Eric says ?t=6513-->
+  <!--Ilya says ?t=6513-->
 
 ### [1:51:36](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6696) Selling the calls you cannot fulfil
 

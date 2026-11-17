@@ -36,8 +36,9 @@ What members have reported about how many reviews a profile takes, how fast, and
   > having the profile lay there for few weeks inactive and then getting 50 reviews will break it. Like this slow strategy becomes more important for profiles that were stale exactly because it breaks expectations harder
 
 - (?) a profile is not suspended over reviews, the reviews just drop — Eric
+  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2361-->
   > one exception reported: 300 reviews in a single day did get a suspension
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2356-->
+  <!--2026-09-18 Ilya ran https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2356-->
   > a member says ~60 on a new profile got it suspended
   <!--2026-10-23 gmbpp member ran https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=167-->
 

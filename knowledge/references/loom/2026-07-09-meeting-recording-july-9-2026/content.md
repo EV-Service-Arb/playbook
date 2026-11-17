@@ -187,7 +187,7 @@ the following day.
 ### [38:38](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=2318) plumbing vs. landscaping vs. pool remodeling
 
 - Eric flags that pool-remodeling leads can be less liquid since a single job can take months and contractors get booked out far in advance.
-  <!--Eric says ?t=2318-->
+  <!--Eric says ?t=2278-->
 - The group compares niches: plumbing pays out same-day with less ongoing involvement, while landscaping requires more follow-up but can scale to high revenue (a group member, Cole, is cited doing ~$250k/month in landscaping revenue).
   <!--Eric says ?t=2387-->
   <!--Eric heard ?t=2350-->
@@ -260,8 +260,8 @@ the following day.
 
 - One participant is worried about new Instagram/YouTube accounts getting banned quickly, especially once a video gains traction, and is experimenting with different devices, emails, and proxies to avoid it.
   <!--Eric ran ?t=3634-->
-- Eric advises it's fine to post about the drop-servicing business model itself, just not to detail the review-generation methods publicly.
-  <!--Eric says ?t=3609-->
+- A member advises Eric it's fine to post about the drop-servicing business model itself, just not to detail the review-generation methods publicly.
+  <!--gmbpp member says ?t=3609-->
 
 ### [1:00:34](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=3634) how everyone found Eric; wrapping up the call
 
