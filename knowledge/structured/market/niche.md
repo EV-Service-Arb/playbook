@@ -13,7 +13,7 @@ own name. one trade is mastered before a second is added. each trade's own page 
     <!--2026-11-16 says https://www.youtube.com/watch?v=SOUF1oObJYk&t=97-->
   - (?) Eric puts a beginner on *plumbing*, plus one or two *cleaning* profiles in their own city to work out remote reviews and pricing
     <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6434-->
-    > five weeks on he steered a plumbing member off cleaning altogether: [cleaning](niches/cleaning.md)
+    > for a beginner. a member already on plumbing gets nothing from adding it: [cleaning](niches/cleaning.md)
 - (?) the ticket outweighs the ops load: a profile costs the same to set up whatever the trade
   - (?) (!) `Ilya`, 13 years in remote *house cleaning*, would start on plumbing or HVAC today
     reason: the same GMB setup cost buys a much higher ticket, and cleaning only pays off once the operations are already built

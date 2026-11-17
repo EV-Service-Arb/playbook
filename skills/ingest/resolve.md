@@ -2,8 +2,11 @@
 
 Sources may disagree; `knowledge/structured/` may not. Run when it contradicts itself, or a source contradicts it.
 
-A contradiction is two claims that cannot both be acted on. Two numbers for one quantity are not one:
-both stay as evidence, per `knowledge/README.md`.
+A contradiction is two claims that cannot both be acted on by the same operator in the same situation.
+Before calling one, read who each was said to and what they were running: advice to a beginner and
+advice to a member already in a trade, a rule for new profiles and a result on ten-year-old ones, one
+person's pass and another's rejection, are each scoped by their case, and the scope goes into the bullet.
+Two numbers for one quantity are not one either: both stay as evidence, per `knowledge/README.md`.
 
 - gather every mention first, across `knowledge/structured/` and `knowledge/references/`
 - then weigh: trust and age, what each speaker meant, how sure they sounded, what they were doing
