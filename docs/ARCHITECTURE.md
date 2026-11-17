@@ -149,8 +149,9 @@ lists every call capture under the paths with the estimated cost of redoing it; 
 estimated at the `--legacy` rate either way, as the default's cost is known only after the pick. It runs only with
 `--execute`, and asks first when the total is past $1. Audio is redone only for a whisper transcript
 no `content.md` reads yet, since a re-pull moves the stamps one cites. `playbook eval` answers `playbook/eval.json`
-through a member's client, on this tree and on the last release, and judges each answer against the
-case's expectations.
+through a member's client, on this tree and on the last release, each side behind a conductor of its
+own (`PANEL_BIN`, in dev sign-in) whose `/mcp` the client connects to, and judges each answer against
+the case's expectations.
 
 > each expectation is stated as succinctly as possible, to capture the intention rather than the wording
 
@@ -168,8 +169,8 @@ rolodex's `venues/` tree; nothing here duplicates that.
 .claude-plugin/marketplace.json   the one marketplace: Claude Code, claude.ai and Codex all read it
 plugin/                           the procedure: what a member installs, the owner as well
 ├─ skills/service-arb/            how to answer, in the terms of the three tools; who to refer someone to
-└─ .claude-plugin/plugin.json · .mcp.json   where the data is: the `playbook` server; Codex reads these too
-playbook_web/                     the data: search · read · guide over MCP, behind the Service-Arb panel (`sa:playbook:mcp:use`), every call logged
+└─ .claude-plugin/plugin.json · .mcp.json   where the data is: the `playbook` server, the conductor's `/mcp`; Codex reads these too
+playbook_web/                     the data: search · read · guide, operations the conductor's `/mcp` lists as tools (`sa:playbook:mcp:use`), every call logged
   └─ compiles knowledge/, bakes in its README.md, structured/ and references/**/*.md
 skills/                           ingest · ops: upkeep, run from a checkout; .claude/skills links here
 ```

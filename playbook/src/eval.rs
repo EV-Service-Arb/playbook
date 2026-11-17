@@ -1,6 +1,7 @@
 //! Answers `playbook/eval.json` the way a member's client does, on this tree and on the last
 //! release, and has an agent judge each answer against the case's expectations. Each side answers
-//! with the `plugin/` its rev ships; a rev with none shipped the server alone.
+//! with the `plugin/` its rev ships, through a conductor of its own (`PANEL_BIN`) whose `/mcp` lists its
+//! playbook_web's operations, as a member's does.
 
 use std::{
 	io::{Read as _, Write as _},
@@ -19,7 +20,11 @@ use sha2::{Digest, Sha256};
 
 const ANSWER_MODEL: &str = "claude-sonnet-5-5";
 const JUDGE_MODEL: &str = "claude-sonnet-5-5";
-const PANEL_ASSERTION_KEYS: &str = "eval:WGZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmY="; // the Ed25519 base point; nobody signs in here
+/// The conductor's assertion key and its public half: the bytes 0..31, for this machine alone (site_conductor's `scripts/local-stack.sh`).
+const ASSERTION_KEY: &str = "local:AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8=";
+const ASSERTION_KEYS: &str = "local:A6EHv/POEL4dcN0Y50vAmWfk1jCbpQ1fHdyGZBJVMbg=";
+/// Where the eval's OAuth client is sent back to: never listened on, the code is read off the redirect.
+const REDIRECT_URI: &str = "http://127.0.0.1:9/callback";
 /// What a side takes from its info rev; the rest of its tree is the system rev's.
 const INFO: &str = "knowledge";
 const OUT: &str = "/tmp/playbook-eval";
@@ -57,9 +62,10 @@ pub fn run(root: &Path, against: Option<String>, info: Option<String>, jobs: Non
 	}
 
 	let out = PathBuf::from(OUT).join(SystemTime::now().duration_since(UNIX_EPOCH).expect("the clock is past 1970").as_secs().to_string());
-	std::fs::create_dir_all(&out).unwrap_or_else(|e| panic!("{}: {e}", out.display()));
+	std::fs::create_dir_all(out.join(".claude")).unwrap_or_else(|e| panic!("{}: {e}", out.display())); // each answer's claude config and plugin copy
+	let conductor = PathBuf::from(std::env::var_os("PANEL_BIN").expect("PANEL_BIN is unset: the conductor binary each side answers through, e.g. site_conductor's target/debug/panel"));
 	let bins: Vec<PathBuf> = sides.iter().map(|s| build(root, s)).collect();
-	let servers: Vec<Server> = sides.iter().zip(&bins).map(|(s, bin)| serve(bin, s.name, &cases, &out)).collect();
+	let servers: Vec<Server> = sides.iter().zip(&bins).map(|(s, bin)| serve(bin, &conductor, s.name, &cases, &out)).collect();
 
 	let todo: Vec<(usize, usize)> = (0..cases.len()).flat_map(|c| (0..sides.len()).map(move |s| (c, s))).collect();
 	let next = AtomicUsize::new(0);
@@ -162,17 +168,23 @@ struct Answered {
 }
 
 struct Server {
-	child: Child,
+	/// playbook_web, then the conductor in front of it
+	children: Vec<Child>,
+	/// the conductor's `/mcp`
 	url: String,
-	/// what the side's rev ships members, `None` before it shipped one
-	plugin: Option<PathBuf>,
+	/// what the side's rev ships members
+	plugin: PathBuf,
+	/// each case's member's bearer at `/mcp`, by case id
+	bearers: Vec<(String, String)>,
 }
 
 impl Drop for Server {
 	fn drop(&mut self) {
-		// a panic here, mid-unwind, would abort before the other server is killed
-		if let Err(e) = self.child.kill().and_then(|()| self.child.wait().map(drop)) {
-			eprintln!("killing the server at {}: {e}", self.url);
+		for child in &mut self.children {
+			// a panic here, mid-unwind, would abort before the other processes are killed
+			if let Err(e) = child.kill().and_then(|()| child.wait().map(drop)) {
+				eprintln!("killing a process behind {}: {e}", self.url);
+			}
 		}
 	}
 }
@@ -225,45 +237,97 @@ fn extract(root: &Path, rev: &str, dir: &Path, paths: &[&str]) {
 	assert!(tar.success(), "extracting {rev} into {}", dir.display());
 }
 
-/// Runs the side's server from its own dir, so its `mcp.db` lands there, and gives each case a member.
-fn serve(bin: &Path, side: &str, cases: &[Case], out: &Path) -> Server {
-	let port = TcpListener::bind("127.0.0.1:0").and_then(|l| l.local_addr()).expect("a free port").port();
-	let url = format!("http://127.0.0.1:{port}");
-	let log = std::fs::File::create(out.join(format!("{side}-server.log"))).expect("the run dir was just made");
+/// Runs the side's playbook_web from its own dir, so its `mcp.db` lands there, behind a conductor in dev sign-in, and
+/// signs each case's member in at the conductor's `/mcp`.
+fn serve(bin: &Path, conductor: &Path, side: &str, cases: &[Case], out: &Path) -> Server {
 	let dir = bin.parent().expect("built into its side's dir");
-	let child = Command::new(bin)
-		.env("PORT", port.to_string())
-		.env("PUBLIC_URL", format!("{url}/playbook_mcp"))
-		.env("PANEL_ASSERTION_KEYS", PANEL_ASSERTION_KEYS)
-		.current_dir(dir)
-		.stdout(log.try_clone().expect("a file handle clones"))
-		.stderr(log)
-		.spawn()
-		.expect("the server was just built");
-	let plugin = Some(dir.join("plugin")).filter(|p| p.exists());
-	let mut server = Server { child, url, plugin };
+	let plugin = dir.join("plugin");
+	let mcp = read_json(&plugin.join(".mcp.json"));
+	let servers = mcp["mcpServers"].as_object().expect("the plugin's .mcp.json holds `mcpServers`");
+	assert!(
+		servers.values().all(|s| s["url"].as_str().is_some_and(|u| u.ends_with("/mcp"))),
+		"the {side} side's plugin predates the conductor's /mcp: compare against a rev at or after it (--against)"
+	);
+	let free = || TcpListener::bind("127.0.0.1:0").and_then(|l| l.local_addr()).expect("a free port").port();
+	let log = |name: &str| {
+		let f = std::fs::File::create(out.join(format!("{side}-{name}.log"))).expect("the run dir was just made");
+		(f.try_clone().expect("a file handle clones"), f)
+	};
+	let mut server = Server {
+		children: Vec::new(),
+		url: String::new(),
+		plugin,
+		bearers: Vec::new(),
+	};
 
-	// /health is routed only once `app()` has made the schema
+	let playbook = free();
+	let (stdout, stderr) = log("playbook");
+	server.children.push(
+		Command::new(bin)
+			.env("PORT", playbook.to_string())
+			.env("APP_ENV", "development")
+			.env("PANEL_ASSERTION_KEYS", ASSERTION_KEYS)
+			.current_dir(dir)
+			.stdout(stdout)
+			.stderr(stderr)
+			.spawn()
+			.expect("the server was just built"),
+	);
+	wait_healthy(&mut server, playbook, &format!("the {side} playbook_web; see {side}-playbook.log"));
+
+	let state = dir.join("conductor");
+	std::fs::create_dir_all(&state).expect("the side's dir is ours");
+	std::fs::write(state.join("config.json"), r#"{"google": []}"#).expect("the side's dir is ours");
+	let key = Command::new(conductor).arg("gen-data-key").output().expect("PANEL_BIN runs");
+	assert!(key.status.success(), "{} gen-data-key: {}", conductor.display(), String::from_utf8_lossy(&key.stderr));
+	let port = free();
+	let origin = format!("http://127.0.0.1:{port}");
+	let (stdout, stderr) = log("conductor");
+	server.children.push(
+		Command::new(conductor)
+			.arg("--config")
+			.arg(state.join("config.json"))
+			.arg("serve")
+			.env_clear()
+			.env("PATH", std::env::var_os("PATH").expect("PATH is set"))
+			.env("HOME", std::env::var_os("HOME").expect("HOME is set"))
+			.env("APP_ENV", "development")
+			.env("PANEL_BIND", format!("127.0.0.1:{port}"))
+			.env("PANEL_DB_PATH", state.join("panel.db"))
+			.env("PANEL_DATA_KEY", String::from_utf8(key.stdout).expect("a hex key").trim())
+			.env("PANEL_PUBLIC_ORIGIN", &origin)
+			.env("PANEL_DEV_SIGN_IN", "sa:everyone") // what every member of scope `sa` holds
+			.env("PANEL_DEV_SIGN_IN_EMAIL", "eval@eval.test")
+			.env("PANEL_ASSERTION_KEY", ASSERTION_KEY)
+			.env("PANEL_PLAYBOOK_URL", format!("http://127.0.0.1:{playbook}"))
+			.env("PANEL_SITES_URL", "http://127.0.0.1:9") // nothing listens: their operations stay out of the catalog
+			.env("PANEL_REVIEW_ARCHIVE_URL", "http://127.0.0.1:9")
+			.env("TOKENS_START_CAP_MULTIPLE", "1")
+			.current_dir(&state)
+			.stdout(stdout)
+			.stderr(stderr)
+			.spawn()
+			.expect("PANEL_BIN runs"),
+	);
+	wait_healthy(&mut server, port, &format!("the {side} conductor; see {side}-conductor.log"));
+	server.url = format!("{origin}/mcp");
+	// one member a case, so no case eats another's daily budget
+	server.bearers = cases.iter().map(|c| (c.id.clone(), sign_in(&origin, &format!("{}@eval.test", c.id)))).collect();
+	server
+}
+
+/// `/health` is routed only once the process has made its schema.
+fn wait_healthy(server: &mut Server, port: u16, what: &str) {
 	let start = Instant::now();
 	//LOOP: bounded by the timeout
 	while !healthy(port) {
-		if let Some(status) = server.child.try_wait().expect("the child is ours") {
-			panic!("the {side} server exited with {status}; see {side}-server.log");
+		let child = server.children.last_mut().expect("the process was just pushed");
+		if let Some(status) = child.try_wait().expect("the child is ours") {
+			panic!("{what} exited with {status}");
 		}
-		assert!(start.elapsed() < Duration::from_secs(30), "the {side} server is not healthy after 30s");
+		assert!(start.elapsed() < Duration::from_secs(120), "{what} is not healthy after 120s");
 		std::thread::sleep(Duration::from_millis(100));
 	}
-	let db = rusqlite::Connection::open(dir.join("mcp.db")).expect("the server made it");
-	for c in cases {
-		// one member a case, so no case eats another's daily budget
-		db.execute(
-			"INSERT INTO tokens (hash, kind, sub, email, client_id, expires) VALUES (?1, 'access', ?2, ?3, 'eval', ?4)",
-			(URL_SAFE_NO_PAD.encode(Sha256::digest(token(c))), &c.id, format!("{}@eval", c.id), i64::MAX),
-		)
-		.unwrap_or_else(|e| panic!("the {side} server's `tokens` changed shape: {e}"));
-	}
-	server.url.push_str("/playbook_mcp");
-	server
 }
 
 fn healthy(port: u16) -> bool {
@@ -276,50 +340,127 @@ fn healthy(port: u16) -> bool {
 	res.starts_with("HTTP/1.0 200") || res.starts_with("HTTP/1.1 200")
 }
 
-fn token(c: &Case) -> String {
-	format!("eval-{}", c.id)
+/// `email`'s bearer at the conductor's `/mcp`, as a member's client gets one: registered, signed in (dev sign-in's
+/// `?as=`), allowed on the consent page, the code redeemed with its PKCE verifier.
+fn sign_in(origin: &str, email: &str) -> String {
+	let agent: ureq::Agent = ureq::Agent::config_builder().max_redirects(0).http_status_as_error(false).build().into();
+	let mut cookies = Vec::new();
+	let registered: Value = serde_json::from_str(&{
+		let mut res = agent
+			.post(&format!("{origin}/mcp/register"))
+			.header("content-type", "application/json")
+			.send(json!({ "redirect_uris": [REDIRECT_URI], "client_name": "playbook eval" }).to_string())
+			.unwrap_or_else(|e| panic!("registering at {origin}: {e}"));
+		res.body_mut().read_to_string().expect("the conductor answers json")
+	})
+	.expect("/mcp/register answers json");
+	let client_id = registered["client_id"].as_str().unwrap_or_else(|| panic!("/mcp/register: {registered}")).to_owned();
+	follow(&agent, origin, &mut cookies, "GET", &format!("/auth/login?as={email}&return_to=/health"), &[]); // a page that answers without the front end
+	let verifier = URL_SAFE_NO_PAD.encode(Sha256::digest(email)); // one sign-in per member, and nobody to guess it
+	let challenge = URL_SAFE_NO_PAD.encode(Sha256::digest(&verifier));
+	follow(
+		&agent,
+		origin,
+		&mut cookies,
+		"GET",
+		&format!("/mcp/authorize?response_type=code&client_id={client_id}&redirect_uri={REDIRECT_URI}&code_challenge={challenge}&code_challenge_method=S256"),
+		&[],
+	);
+	let csrf = cookies.iter().find(|(k, _)| k == "sa_csrf").expect("a signed-in browser holds sa_csrf").1.clone();
+	let back = follow(
+		&agent,
+		origin,
+		&mut cookies,
+		"POST",
+		"/mcp/authorize",
+		&[("client_id", &client_id), ("redirect_uri", REDIRECT_URI), ("code_challenge", &challenge), ("csrf", &csrf)],
+	);
+	let code = back
+		.strip_prefix(&format!("{REDIRECT_URI}?code="))
+		.unwrap_or_else(|| panic!("the consent sent the browser to {back}, not back with a code"));
+	let token: Value = serde_json::from_str(&follow(
+		&agent,
+		origin,
+		&mut cookies,
+		"POST",
+		"/mcp/token",
+		&[
+			("grant_type", "authorization_code"),
+			("client_id", &client_id),
+			("code", code),
+			("code_verifier", &verifier),
+			("redirect_uri", REDIRECT_URI),
+		],
+	))
+	.expect("/mcp/token answers json");
+	token["access_token"].as_str().unwrap_or_else(|| panic!("/mcp/token: {token}")).to_owned()
+}
+
+/// `method path` on `origin`, keeping its cookies and following its redirects: the body of the first answer that is
+/// none, or the first location off `origin`.
+fn follow(agent: &ureq::Agent, origin: &str, cookies: &mut Vec<(String, String)>, method: &str, path: &str, form: &[(&str, &str)]) -> String {
+	let (mut method, mut url) = (method.to_owned(), format!("{origin}{path}"));
+	//LOOP: bounded: a sign-in's chain is three hops at most
+	for _ in 0..8 {
+		let cookie: Vec<String> = cookies.iter().map(|(k, v)| format!("{k}={v}")).collect();
+		let mut res = match method.as_str() {
+			"POST" => agent.post(&url).header("cookie", cookie.join("; ")).send_form(form.iter().copied()),
+			_ => agent.get(&url).header("cookie", cookie.join("; ")).call(),
+		}
+		.unwrap_or_else(|e| panic!("{method} {url}: {e}"));
+		for set in res.headers().get_all("set-cookie") {
+			let set = set.to_str().expect("a cookie is ascii");
+			let (name, value) = set.split(';').next().expect("split yields one").split_once('=').expect("a cookie is name=value");
+			cookies.retain(|(k, _)| k != name);
+			cookies.push((name.to_owned(), value.to_owned()));
+		}
+		let status = res.status().as_u16();
+		if !(300..400).contains(&status) {
+			let body = res.body_mut().read_to_string().expect("the conductor answers text");
+			assert!((200..300).contains(&status), "{method} {url}: {status} {body}");
+			return body;
+		}
+		let to = res.headers()["location"].to_str().expect("a location is ascii");
+		let to = to.strip_prefix(origin).unwrap_or(to);
+		if !to.starts_with('/') {
+			return to.to_owned();
+		}
+		(method, url) = ("GET".into(), format!("{origin}{to}"));
+	}
+	panic!("{url}: past 8 redirects");
+}
+
+fn read_json(p: &Path) -> Value {
+	serde_json::from_str(&std::fs::read_to_string(p).unwrap_or_else(|e| panic!("{}: {e}", p.display()))).unwrap_or_else(|e| panic!("{}: {e}", p.display()))
 }
 
 fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 	let cfg = |role: &str| out.join(".claude").join(format!("{}-{}-{role}", c.id, side.name));
-	let authorization = format!("Bearer {}", token(c));
-	let args: Vec<String> = match &server.plugin {
-		Some(plugin) => {
-			// the plugin as shipped, but for where its server is and whose token it carries
-			let copy = cfg("plugin");
-			let status = Command::new("cp").arg("-rT").arg(plugin).arg(&copy).status().expect("cp runs");
-			assert!(status.success(), "copying {} to {}", plugin.display(), copy.display());
-			let read = |p: &Path| -> Value {
-				serde_json::from_str(&std::fs::read_to_string(p).unwrap_or_else(|e| panic!("{}: {e}", p.display()))).unwrap_or_else(|e| panic!("{}: {e}", p.display()))
-			};
-			let name = read(&copy.join(".claude-plugin/plugin.json"))["name"].as_str().expect("a plugin names itself").to_owned();
-			let mut mcp = read(&copy.join(".mcp.json"));
-			let servers = mcp["mcpServers"].as_object_mut().expect("the plugin's .mcp.json holds `mcpServers`");
-			assert_eq!(servers.len(), 1, "the {} side's plugin connects one server", side.name);
-			let (key, entry) = servers.iter_mut().next().expect("asserted one");
-			entry["url"] = json!(server.url);
-			entry["headers"] = json!({ "Authorization": authorization });
-			let tools = format!("mcp__plugin_{name}_{key}");
-			std::fs::write(copy.join(".mcp.json"), mcp.to_string()).expect("the copy was just made");
-			// a member's client has the Skill tool; nothing else of Claude Code's would answer from the playbook
-			[
-				"--plugin-dir",
-				copy.to_str().expect("utf-8 paths"),
-				"--tools",
-				"Skill",
-				"--allowedTools",
-				&format!("Skill,{tools}"),
-			]
-			.map(String::from)
-			.into()
-		}
-		None => {
-			let mcp = json!({ "mcpServers": { "service-arb": { "type": "http", "url": server.url, "headers": { "Authorization": authorization } } } });
-			["--strict-mcp-config", "--mcp-config", &mcp.to_string(), "--tools", "", "--allowedTools", "mcp__service-arb"]
-				.map(String::from)
-				.into()
-		}
-	};
+	let bearer = &server.bearers.iter().find(|(id, _)| *id == c.id).expect("serve signs every case in").1;
+	// the plugin as shipped, but for where its server is and whose bearer it carries
+	let copy = cfg("plugin");
+	let status = Command::new("cp").arg("-rT").arg(&server.plugin).arg(&copy).status().expect("cp runs");
+	assert!(status.success(), "copying {} to {}", server.plugin.display(), copy.display());
+	let name = read_json(&copy.join(".claude-plugin/plugin.json"))["name"].as_str().expect("a plugin names itself").to_owned();
+	let mut mcp = read_json(&copy.join(".mcp.json"));
+	let servers = mcp["mcpServers"].as_object_mut().expect("the plugin's .mcp.json holds `mcpServers`");
+	assert_eq!(servers.len(), 1, "the {} side's plugin connects one server", side.name);
+	let (key, entry) = servers.iter_mut().next().expect("asserted one");
+	entry["url"] = json!(server.url);
+	entry["headers"] = json!({ "Authorization": format!("Bearer {bearer}") });
+	let tools = format!("mcp__plugin_{name}_{key}");
+	std::fs::write(copy.join(".mcp.json"), mcp.to_string()).expect("the copy was just made");
+	// a member's client has the Skill tool; nothing else of Claude Code's would answer from the playbook
+	let args: Vec<String> = [
+		"--plugin-dir",
+		copy.to_str().expect("utf-8 paths"),
+		"--tools",
+		"Skill",
+		"--allowedTools",
+		&format!("Skill,{tools}"),
+	]
+	.map(String::from)
+	.into();
 	let args: Vec<&str> = ["--model", ANSWER_MODEL].into_iter().chain(args.iter().map(String::as_str)).collect();
 	let (answer, called) = claude(&cfg("answer"), out, &c.question, &args);
 	let text = answer["result"].as_str().expect("a result is a string");

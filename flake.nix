@@ -79,12 +79,11 @@
           };
           cargoBuildFlags = [ "-p" "playbook_web" ];
           cargoTestFlags = [ "-p" "playbook_web" ];
-          nativeBuildInputs = [ pkgs.cmake pkgs.tailwindcss_4 pkgs.pkg-config ]; # aws-lc, under reqwest's rustls; the connect pages' stylesheet
+          nativeBuildInputs = [ pkgs.pkg-config ];
           buildInputs = pkgs.lib.optionals pkgs.stdenv.isLinux [ pkgs.openssl ]; # ev_lib's sentry turns on reqwest's native-tls
           # std's panic locations name its source inside the toolchain, which would pull all of it into the image
           RUSTFLAGS = "--remap-path-prefix=${build_rust}=/rust";
           disallowedReferences = [ build_rust ];
-          SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # the tests build an HTTP client; the image sets its own
         };
         containerStd = v_flakes.container.implement {
           inherit pkgs;
@@ -114,11 +113,12 @@
 
         apps.eval = {
           type = "app";
-          meta.description = "answer playbook/eval.json on this tree and on the last release; exits 1 when a case scores lower";
+          meta.description = "answer playbook/eval.json on this tree and on the last release, each through a conductor (PANEL_BIN); exits 1 when a case scores lower";
           program = "${pkgs.writeShellApplication {
             name = "eval";
-            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.cmake pkgs.tailwindcss_4 pkgs.git claude-code ];
-            text = ''cargo r -p playbook -- eval "$@"'';
+            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git claude-code ]; # .cargo/config.toml links with mold
+            # each side's playbook_web links openssl: ev_lib's sentry turns on reqwest's native-tls
+            text = ''OPENSSL_LIB_DIR=${pkgs.openssl.out}/lib OPENSSL_INCLUDE_DIR=${pkgs.openssl.dev}/include cargo r -p playbook -- eval "$@"'';
           }}/bin/eval";
         };
 
@@ -137,7 +137,7 @@
           shellHook = pre-commit-check.shellHook + combined.shellHook + ''
             cp -f ${v_flakes.files.treefmt { inherit pkgs; }} ./.treefmt.toml
           '';
-          packages = [ rust pkgs.sqlite pkgs.tailwindcss_4 pkgs.cargo-insta ] ++ pre-commit-check.enabledPackages ++ combined.enabledPackages;
+          packages = [ rust pkgs.sqlite ] ++ pre-commit-check.enabledPackages ++ combined.enabledPackages;
           env.PORT = toString SA_PORTS;
         };
       }

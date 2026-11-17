@@ -5,34 +5,25 @@ edition.workspace = true
 publish = false
 
 [dependencies]
-async-trait.workspace = true
 axum.workspace = true
-base64.workspace = true
 corpus.workspace = true
 ev_lib.workspace = true
-ev_lib_classes.workspace = true
-evconcierge_projection.workspace = true
-getrandom.workspace = true
 regex.workspace = true
 regex-syntax.workspace = true
-reqwest.workspace = true
-rmcp.workspace = true
 rusqlite.workspace = true
 sa_auth.workspace = true
+sa_core.workspace = true
+schemars.workspace = true
 serde.workspace = true
 serde_json.workspace = true
-sha2.workspace = true
-sqlx.workspace = true
-tailwind_fuse.workspace = true
+strum.workspace = true
 tokio.workspace = true
 tracing.workspace = true
 tracing-subscriber.workspace = true
 
 [build-dependencies]
 corpus.workspace = true
-ev_lib_classes.workspace = true
-sha2.workspace = true
 
 [dev-dependencies]
-insta.workspace = true
-rmcp = { workspace = true, features = ["client", "transport-streamable-http-client-reqwest", "reqwest"] }
+serde_urlencoded.workspace = true
+tower.workspace = true

@@ -1,14 +1,11 @@
-//! Compiles the corpus and bakes it and the connect pages' stylesheet into the binary: the server reads nothing
-//! from disk per request, and the image carries only what is listed here.
+//! Compiles the corpus and bakes it and the operations' docs into the binary: the server reads nothing from disk per
+//! request, and the image carries only what is listed here.
 
 use std::{
 	fmt::Write,
 	fs,
 	path::{Path, PathBuf},
-	process::Command,
 };
-
-use sha2::{Digest, Sha256};
 
 fn main() {
 	let root = PathBuf::from(std::env::var("CARGO_MANIFEST_DIR").unwrap())
@@ -40,15 +37,28 @@ fn main() {
 		writeln!(out, "\t({rel:?}, include_str!({:?})),", f.display().to_string()).unwrap();
 	}
 	out.push_str("];\n");
-	writeln!(
-		out,
-		"pub const GUIDE_DESCRIPTION: &str = {:?};",
-		format!(
-			"One page of the manual, whole: what we do in an area, each step or decision in the order it is met, and the evidence under it, every citation given as who, how they know, when, and what that is worth today. `people`: who has run what, and how to reach them. The pages:\n{}",
-			pages.join("\n")
-		)
-	)
-	.unwrap();
+	let guide = format!(
+		"One page of the manual, whole: what we do in an area.\n\nEach step or decision in the order it is met, and the evidence under it, every citation given as who, how they know, when, and what that is worth today. `people`: who has run what, and how to reach them. The pages:\n{}",
+		pages.join("\n")
+	);
+	writeln!(out, "const GUIDE_DESCRIPTION: &str = {guide:?};").unwrap();
+	// `document()` takes each handler's summary, then its description after a blank line
+	let docs = [
+		(
+			"search",
+			"Case-insensitive regex over the service-arb playbook.\n\nEach kind of source has its own slots, so none crowds out another: the manual (knowledge/structured), the course (lessons and the recordings they link), calls, videos, texts. Within a kind, a passage holding the rarer of the pattern's alternatives ranks first. Each hit gives path:line, its header, its label, the source URL and the lines around it; the files past the slots follow as path:line, for `read`. A pattern hitting most of the scope is refused, with the sub-scopes it hits.\n\nA label is who backs the passage, how they know (ran it, says so, heard it), when the information is from, and `effective`: what that is worth today, 0 to 1, higher is better. `unvetted`: nobody of ours has checked the claim. `unscored`: nothing says who speaks.".to_owned(),
+		),
+		(
+			"read",
+			"One chapter of a capture or a digest (a `###`), or one section of a manual page, whole, with every line numbered.\n\nNever a whole file.".to_owned(),
+		),
+		("guide", guide),
+	];
+	writeln!(out, "pub(crate) static DOCS: ev_lib::api::Docs = &[").unwrap();
+	for (handler, doc) in docs {
+		writeln!(out, "\t(\"playbook_web::tools::{handler}\", {doc:?}),").unwrap();
+	}
+	out.push_str("];\n");
 
 	let cited = |line: usize, b: &corpus::Backing| format!("Cited {{ line: {line}, who: {:?}, how: {:?}, trust: {:?}, day: {} }}", b.who, b.how, b.trust, b.day);
 	out.push_str("pub static CLAIMS: &[(&str, &[Claim])] = &[\n");
@@ -70,40 +80,6 @@ fn main() {
 
 	let out_dir = PathBuf::from(std::env::var("OUT_DIR").unwrap());
 	fs::write(out_dir.join("corpus.rs"), out).unwrap();
-	stylesheet(&root.join("playbook_web/src/pages.rs"), &out_dir);
-}
-
-/// Tailwind over the kit's class inventory and `pages.rs`, under a name that changes with it, so it is cached for good.
-/// The inventory and tokens are written out because tailwind can neither scan nor `@import` a crate unpacked from crates.io.
-fn stylesheet(pages: &Path, out: &Path) {
-	println!("cargo:rerun-if-changed={}", pages.display());
-	fs::write(out.join("uikit-classes.txt"), ev_lib_classes::CLASS_INVENTORY).unwrap();
-	fs::write(out.join("tokens.css"), ev_lib_classes::TOKENS_CSS).unwrap();
-	let entry = format!(
-		"@import \"tailwindcss\";\n@import \"./tokens.css\";\n@source \"./uikit-classes.txt\";\n@source {:?};\n",
-		pages.display().to_string()
-	);
-	fs::write(out.join("entry.css"), entry).unwrap();
-	let css = out.join("connect.css");
-	let status = Command::new("tailwindcss")
-		.arg("-i")
-		.arg(out.join("entry.css"))
-		.arg("-o")
-		.arg(&css)
-		.arg("--minify")
-		.status()
-		.expect("tailwindcss (v4) is on PATH: the dev shell and the nix build carry it");
-	assert!(status.success(), "tailwindcss failed on {}", out.join("entry.css").display());
-	let hash = Sha256::digest(fs::read(&css).unwrap());
-	let hash: String = hash[..8].iter().map(|b| format!("{b:02x}")).collect();
-	fs::write(
-		out.join("stylesheet.rs"),
-		format!(
-			"pub(crate) const CSS: &str = include_str!({:?});\npub(crate) const CSS_FILE: &str = \"connect.{hash}.css\";\n",
-			css.display().to_string()
-		),
-	)
-	.unwrap();
 }
 
 /// `README.md`s are indices and format rules, not knowledge. `knowledge/references/cases/` states no source and no date.
