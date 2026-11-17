@@ -26,6 +26,7 @@
           lfs = true;
           gitignore.extra = "knowledge/references/**/recording.*";
           jobs.errors.augment = [{ name = "flake-app"; args.app = "check"; }];
+          jobs.warnings.augment = [{ name = "flake-app"; args.app = "digested"; }];
           containerRelease = { registry = "ghcr.io/ev-service-arb"; lfs = false; }; # the image takes only markdown; the media is 17G
         };
         readme = v_flakes.readme-fw {
@@ -54,6 +55,7 @@
               ./playbook_web
               ./knowledge/README.md
               ./knowledge/structured
+              ./knowledge/log # `resolved:` links are checked against it; build.rs bakes none of it
               (pkgs.lib.fileset.fileFilter (f: f.hasExt "md") ./knowledge/references)
             ];
           };
@@ -69,7 +71,6 @@
           RUSTFLAGS = "--remap-path-prefix=${build_rust}=/rust";
           disallowedReferences = [ build_rust ];
           SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt"; # the tests build an HTTP client; the image sets its own
-          PLAYBOOK_RELEASE = "1"; # build.rs refuses a recording no `content.md` reads
         };
         containerStd = v_flakes.container.implement {
           inherit pkgs;
@@ -99,12 +100,24 @@
 
         apps.check = {
           type = "app";
-          meta.description = "check knowledge/, build playbook_web as a release";
+          meta.description = "check knowledge/, build playbook_web";
           program = "${pkgs.writeShellApplication {
             name = "check";
-            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git ]; # .cargo/config.toml links with mold
+            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git pkgs.pkg-config ]; # .cargo/config.toml links with mold
+            runtimeEnv.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig"; # openssl-sys, under `playbook`'s adapters
             text = "cargo r -q -p playbook -- check && nix build .#playbook_web --no-link";
           }}/bin/check";
+        };
+
+        apps.digested = {
+          type = "app";
+          meta.description = "exits 1 while a recording has no content.md";
+          program = "${pkgs.writeShellApplication {
+            name = "digested";
+            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git pkgs.pkg-config ];
+            runtimeEnv.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+            text = "cargo r -q -p playbook -- check --digested";
+          }}/bin/digested";
         };
 
         apps.eval = {

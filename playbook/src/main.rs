@@ -37,7 +37,11 @@ enum Cmd {
 		source: Source,
 	},
 	/// Hold everything under `knowledge/` to `knowledge/README.md`; exits non-zero where it breaks.
-	Check,
+	Check {
+		/// exit non-zero while a recording has no `content.md`
+		#[arg(long)]
+		digested: bool,
+	},
 	/// Print the path of each capture's recording, fetched beside the capture first where none is kept.
 	Recording {
 		#[arg(required = true)]
@@ -159,13 +163,16 @@ fn main() {
 				step: Yt::Transcribe { frames, urls },
 			} => rt().block_on(yt::transcribe(&root, frames.into(), &urls)),
 		},
-		Cmd::Check => match corpus::compile(&root) {
+		Cmd::Check { digested } => match corpus::compile(&root) {
 			Ok(index) => {
 				let calls = call::all(&root).len();
 				for path in &index.pending {
 					eprintln!("{path}: no `content.md` reads it yet");
 				}
 				eprintln!("{calls} call captures, {} pages and digests hold their shape", index.claims.len());
+				if digested && !index.pending.is_empty() {
+					std::process::exit(1); // r[impl knowledge.digest.first]
+				}
 			}
 			Err(errors) => {
 				errors.iter().for_each(|e| eprintln!("{e}"));

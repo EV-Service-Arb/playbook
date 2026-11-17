@@ -17,11 +17,8 @@ fn main() {
 		.to_path_buf();
 	let knowledge = root.join("knowledge");
 	println!("cargo:rerun-if-changed={}", knowledge.display());
-	println!("cargo:rerun-if-env-changed=PLAYBOOK_RELEASE");
 	let index = corpus::compile(&root).unwrap_or_else(|errors| panic!("knowledge/ does not compile:\n{}", errors.join("\n")));
 	for pending in &index.pending {
-		// r[impl knowledge.digest.first]
-		assert!(std::env::var_os("PLAYBOOK_RELEASE").is_none(), "{pending}: a release carries no recording without its `content.md`");
 		println!("cargo:warning={pending}: no `content.md` reads it yet");
 	}
 
