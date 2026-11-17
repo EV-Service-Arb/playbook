@@ -2,7 +2,7 @@
 
 a city of 50k–300k people, dense, on a $90–130k median income, outside the high-crime parts; with
 enough searches for the trade that our own share of them clears ~200 a month against who already ranks,
-top 3 profiles on under ~200 reviews, and a contractor within the hour of every profile.
+a place in the top 3 that costs fewer reviews than it returns, and a contractor within the hour of every profile.
 
 ## size and people
 
@@ -21,7 +21,7 @@ top 3 profiles on under ~200 reviews, and a contractor within the hour of every 
 
 ## search demand
 
-- (?) the floor is on the searches we expect to capture ourselves, above ~200 a month, not on the area's total: the total needed falls as the competition thins. 400–700 a month, summed over the trade's phrasings and net of searches for business names, is that floor against ordinary competition
+- (?) the floor is on the searches we expect to capture ourselves, above ~200 a month, not on the area's total: the total needed falls as the competition thins
   - it's about numbers vs existing competition. Hell it's technically possible to survive on 200 if there is absolutely nobody else in town or like best guy is without SEO and below 20 reviews or sth. It's more about expected search volume that you yourself will capture, which should be above like 200 for it to be considered reasonable
     <!--2026-11-17 Valera says-->
   - I think Eric likes >350 or so
@@ -34,8 +34,9 @@ top 3 profiles on under ~200 reviews, and a contractor within the hour of every 
 
 ## competition
 
-- (?) competition is read off the top 3 profiles' review counts: under ~100 is easy, 100–200 takes a month or two, 200–300 and up is skipped
-  > the ceiling is 200 by one source, 300 by the other
+- (?) the question is what a place in the top 3 costs here, in reviews: read off the top 3 profiles' counts and how well they do SEO, not off a review cutoff. past that, whether p2 or p1 is worth the reviews it would take
+  - we more so care about what we need to get into top 3. Everything else is means to an end. Beyond that it's the question of how many reviews would going up to p2 or p1 would cost, and whether that number of reviews is worth it. And while looking at a new market, we reason about how many reviews we would need for p3 (and it will obviously also include how good the existing guys are at SEO, and not blunt review-based comparison)
+    <!--2026-11-17 Valera says-->
   - not wise to compete with people with 200+ reviews
     <!--2026-09-17 Valera says-->
   - (?) competition by the top-3 profiles' review counts: ≤50–100 easy, top 3 within the month on 40–60 reviews; 100–200 medium, 1–2 months but more calls once ranked; 300+ skip, spread the reviews over more profiles instead

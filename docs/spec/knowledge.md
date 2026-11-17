@@ -17,8 +17,11 @@ An agent MUST open every bullet it writes with `(?)`, MUST NOT remove a `(?)`, a
 r[knowledge.manual.whole]
 Integrating a claim MUST leave its page reading as one text: rewrite, move or split what is there rather than append.
 
-r[knowledge.contradiction]
-Sources may contradict each other; the manual MUST NOT. A contradiction is resolved into one claim, and the record of it goes to `knowledge/log/resolved/`.
+r[knowledge.contradiction+2]
+Sources may contradict each other; the manual MUST NOT. A contradiction is two claims that cannot both be acted on. It is resolved into one claim, and the record of it goes to `knowledge/log/resolved/`.
+
+r[knowledge.manual.estimate]
+A number in the manual is an estimate. Sources putting different numbers on one quantity do not contradict: each number MUST stay beside the others as evidence, and a conclusion MUST NOT merge them into one figure or one range.
 
 r[knowledge.image]
 The member image MUST carry `knowledge/README.md`, `knowledge/structured/` and the `.md` files of `knowledge/references/` only: no `knowledge/internal/`, no scripts, no history, no media.

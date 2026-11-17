@@ -199,6 +199,11 @@ the path it would have outside it.
 - the lead and `## open` carry no `(?)`: the lead is rewritten whenever the page under it changes, and an
   open question claims nothing
 - one claim, one bullet. A new source for it joins the evidence
+- a number is an estimate. Almost nothing here has an exact value, even in theory: it moves with the
+  city, the trade, the competition, the month. So a conclusion names what we are after and what moves
+  it, and carries no number of its own; each source's number stays under it as evidence, in that source's
+  words. Sources that differ are not in conflict, and are never averaged or widened into one range: how
+  far apart they are is how sure the estimate is
 
 ## Style
 
