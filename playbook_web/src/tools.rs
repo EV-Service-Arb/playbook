@@ -48,7 +48,7 @@ pub(crate) fn routes() -> Vec<Route<State, Gate>> {
 struct SearchArgs {
 	/// a regex, case-insensitive; each `|` alternative is scored on its own
 	pattern: String,
-	/// a path prefix to search under, e.g. `knowledge/references/loom` or `knowledge/structured/approved/profile`
+	/// a path prefix to search under, e.g. `knowledge/references/loom` or `knowledge/structured/profile`
 	scope: Option<String>,
 	/// search what recordings showed on screen instead of what was said
 	screen: Option<bool>,
@@ -58,7 +58,7 @@ struct SearchArgs {
 struct ReadArgs {
 	/// a path as `search` returned it
 	path: String,
-	/// part of the header line of the chapter or section to read, e.g. `Selling calls` or `## facts`
+	/// part of the header line of the chapter or section to read, e.g. `Selling calls`
 	header: String,
 	/// a line number inside the chapter, when the header text repeats in the file
 	line: Option<usize>,
@@ -66,7 +66,7 @@ struct ReadArgs {
 
 #[derive(Deserialize, JsonSchema, Serialize)]
 struct GuideArgs {
-	/// one of the guides listed
+	/// one of the pages listed, or `people`
 	area: String,
 }
 

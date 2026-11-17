@@ -10,7 +10,6 @@ use v_utils::io::{ConfirmResult, confirmation};
 
 mod call;
 mod chatgpt;
-mod cite_check;
 mod doc;
 mod eval;
 mod photo_metadata;
@@ -37,10 +36,11 @@ enum Cmd {
 		#[command(subcommand)]
 		source: Source,
 	},
-	/// Hold the tree to its shape; exits non-zero where it breaks.
+	/// Hold everything under `knowledge/` to `knowledge/README.md`; exits non-zero where it breaks.
 	Check {
-		#[command(subcommand)]
-		what: Check,
+		/// exit non-zero while a recording has no `content.md`
+		#[arg(long)]
+		digested: bool,
 	},
 	/// Print the path of each capture's recording, fetched beside the capture first where none is kept.
 	Recording {
@@ -109,14 +109,6 @@ enum Yt {
 }
 
 #[derive(Subcommand)]
-enum Check {
-	/// every call capture, against `docs/ARCHITECTURE.md`'s "Call captures"
-	Calls,
-	/// every citation in `knowledge/structured/`, against its capture in `knowledge/references/`
-	Cites,
-}
-
-#[derive(Subcommand)]
 enum What {
 	/// whisper's transcript, re-pulled from the kept recording
 	Audio(Targets),
@@ -171,8 +163,23 @@ fn main() {
 				step: Yt::Transcribe { frames, urls },
 			} => rt().block_on(yt::transcribe(&root, frames.into(), &urls)),
 		},
-		Cmd::Check { what: Check::Calls } => eprintln!("{} call captures hold their shape", call::all(&root).len()),
-		Cmd::Check { what: Check::Cites } => cite_check::run(&root),
+		Cmd::Check { digested } => match corpus::compile(&root) {
+			Ok(index) => {
+				let calls = call::all(&root).len();
+				for path in &index.pending {
+					eprintln!("{path}: no `content.md` reads it yet");
+				}
+				eprintln!("{calls} call captures, {} pages and digests hold their shape", index.claims.len());
+				if digested && !index.pending.is_empty() {
+					std::process::exit(1); // r[impl knowledge.digest.first]
+				}
+			}
+			Err(errors) => {
+				errors.iter().for_each(|e| eprintln!("{e}"));
+				eprintln!("{} errors under knowledge/", errors.len());
+				std::process::exit(1);
+			}
+		},
 		Cmd::Recording { captures } =>
 			for media in call::recordings(&root, &captures) {
 				println!("{}", media.display());
@@ -193,7 +200,6 @@ struct Capture {
 	source: String,
 	minutes: f64,
 	transcribed_by: String,
-	read_by: String,
 }
 
 fn re_transcribe(root: &Path, what: What) {
@@ -277,8 +283,8 @@ fn plan(c: &Capture, picture: Option<(Pick, &Path)>) -> Result<(f64, String), St
 			if !c.transcribed_by.starts_with("whisper") {
 				return Err(format!("transcribed by {}, which a re-pull fetches again rather than transcribes", c.transcribed_by));
 			}
-			if c.read_by.starts_with("`/") {
-				return Err("digested, and a re-pull drops the digest".into());
+			if c.path.with_extension("").join("content.md").exists() {
+				return Err("digested, and a re-pull moves the stamps its `content.md` cites".into());
 			}
 			Ok((0., format!("{:.0} min through local whisper", c.minutes)))
 		}
@@ -323,7 +329,7 @@ fn read(path: &Path) -> Capture {
 	let field = |key: &str| {
 		text.lines()
 			.find_map(|l| l.strip_prefix(&format!("- {key}: ")))
-			.unwrap_or_else(|| panic!("{} states no `{key}:` — run `playbook check calls`", path.display()))
+			.unwrap_or_else(|| panic!("{} states no `{key}:` — run `playbook check`", path.display()))
 			.to_string()
 	};
 	let secs = field("duration")
@@ -334,6 +340,5 @@ fn read(path: &Path) -> Capture {
 		source: field("source").trim_matches(['<', '>']).to_string(),
 		minutes: secs as f64 / 60.,
 		transcribed_by: field("transcribed by"),
-		read_by: field("read by"),
 	}
 }

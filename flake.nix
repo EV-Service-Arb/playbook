@@ -19,13 +19,28 @@
           inherit pkgs rust;
           build.enable = false; # playbook_web's build.rs bakes the corpus; the root is a virtual workspace
         };
+        cliTools = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git pkgs.pkg-config ]; # .cargo/config.toml links with mold
+        cliEnv.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig"; # openssl-sys, under `playbook`'s adapters
+        check = pkgs.writeShellApplication {
+          name = "check";
+          runtimeInputs = cliTools;
+          runtimeEnv = cliEnv;
+          text = "cargo r -q -p playbook -- check && nix build .#playbook_web --no-link";
+        };
+        digested = pkgs.writeShellApplication {
+          name = "digested";
+          runtimeInputs = cliTools;
+          runtimeEnv = cliEnv;
+          text = "cargo r -q -p playbook -- check --digested";
+        };
         github = v_flakes.github {
           inherit pkgs rs;
           pname = "playbook";
           enable = true;
           lfs = true;
           gitignore.extra = "knowledge/references/**/recording.*";
-          jobs.errors.augment = [{ name = "flake-app"; args.app = "check"; }];
+          jobs.errors.augment = [{ name = "check"; program = check; }];
+          jobs.warnings.augment = [{ name = "digested"; program = digested; }];
           containerRelease = { registry = "ghcr.io/ev-service-arb"; lfs = false; }; # the image takes only markdown; the media is 17G
         };
         readme = v_flakes.readme-fw {
@@ -39,7 +54,7 @@
         combined = v_flakes.utils.combine { inherit rust; modules = [ rs github readme ]; };
 
         port = "59082";
-        # the member surface; build.rs bakes in guides/, knowledge/structured/{approved,suggested}/ and knowledge/references/**/*.md, and nothing else of the tree reaches the image
+        # the member surface; build.rs compiles knowledge/ and bakes in its README.md, structured/ and references/**/*.md, and nothing else of the tree reaches the image
         build_rust = v_flakes.rs.build_nightly system;
         playbook_web = (pkgs.makeRustPlatform { rustc = build_rust; cargo = build_rust; }).buildRustPackage {
           pname = "playbook_web";
@@ -49,12 +64,12 @@
             fileset = pkgs.lib.fileset.unions [
               ./Cargo.toml
               ./Cargo.lock
-              ./playbook # a workspace member, so cargo reads its manifest; build.rs inlines cite_check.rs's DECAY_DAYS
+              ./corpus
+              ./playbook # a workspace member, so cargo reads its manifest
               ./playbook_web
-              ./docs/ARCHITECTURE.md # build.rs inlines its reliability tables into `search`'s description
-              ./guides
-              ./knowledge/structured/approved
-              ./knowledge/structured/suggested
+              ./knowledge/README.md
+              ./knowledge/structured
+              ./knowledge/log # `resolved:` links are checked against it; build.rs bakes none of it
               (pkgs.lib.fileset.fileFilter (f: f.hasExt "md") ./knowledge/references)
             ];
           };
@@ -95,16 +110,6 @@
 
         packages = containerStd.packages // { inherit playbook_web; };
         containers = containerStd.containers;
-
-        apps.check = {
-          type = "app";
-          meta.description = "check calls, check cites, build playbook_web";
-          program = "${pkgs.writeShellApplication {
-            name = "check";
-            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git ]; # .cargo/config.toml links with mold
-            text = "cargo r -q -p playbook -- check calls && cargo r -q -p playbook -- check cites && nix build .#playbook_web --no-link";
-          }}/bin/check";
-        };
 
         apps.eval = {
           type = "app";

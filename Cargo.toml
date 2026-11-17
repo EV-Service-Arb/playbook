@@ -1,15 +1,17 @@
 [workspace]
-members = ["playbook", "playbook_web"]
+members = ["corpus", "playbook", "playbook_web"]
 resolver = "3"
 
 [workspace.package]
 edition = "2024"
+repository = "https://github.com/EV-Service-Arb/playbook"
 
 [workspace.dependencies]
 ask_llm = { version = "^3.10.2", default-features = false }
 axum = { version = "0.8.9", features = ["query"] }
 base64 = "0.22"
 clap = { version = "^4.6.7", features = ["derive"] }
+corpus = { path = "corpus" }
 ev_lib = { version = "0.34.0", default-features = false, features = ["error_monitoring", "api"] }
 jiff = "0.2"
 libsql-rusqlite = "0.9.30" # `playbook` links libsql through social_networks_adapters, and a second bundled sqlite clashes with it
@@ -38,3 +40,7 @@ non_kebab_case_bins = "allow"
 [workspace.lints.rust]
 stable_features = "allow"
 unused_features = "allow"
+
+[workspace.lints.clippy]
+if_not_else = "warn"
+integer_division = "warn"

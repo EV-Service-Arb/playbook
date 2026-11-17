@@ -4,7 +4,6 @@
 - recorded: 2025-12-05 — last modified on drive, which records no other date
 - duration: 00:01:18
 - transcribed by: whisper-cpp `ggml-base.en` — drive transcribes nothing
-- read by: nothing yet — drive wrote no summary and no chapters, and `/call-digest` writes them here
 - within: <https://drive.google.com/drive/folders/1jFd8aorlIyDqMB_OwfuFrzrFG0cPObkp> — GMB
 - pulled by: `scripts/call-pull.rs`
 

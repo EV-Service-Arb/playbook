@@ -4,7 +4,6 @@
 - recorded: 2025-12-17T19:31:09.739Z
 - duration: 00:03:28
 - transcribed by: loom
-- read by: loom
 - pulled by: `scripts/loom-pull.rs`
 
 ## summary

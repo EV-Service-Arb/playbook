@@ -55,7 +55,6 @@ pub fn pull(root: &Path, urls: &[String]) {
 		return;
 	}
 
-	let mut undigested = Vec::new();
 	for (rec, listed) in &wanted {
 		let (platform, id) = rec;
 		let url = format!("{}{id}", platform.share());
@@ -87,7 +86,7 @@ pub fn pull(root: &Path, urls: &[String]) {
 			recording.summary = None;
 			recording.chapters = None;
 		}
-		let (name, doc, digested) = render(*platform, id, recording);
+		let (name, doc) = render(*platform, id, recording);
 		check(&name, &doc);
 		let dir = root.join(platform.dir());
 		std::fs::create_dir_all(&dir).unwrap_or_else(|e| panic!("creating {}: {e}", dir.display()));
@@ -96,16 +95,6 @@ pub fn pull(root: &Path, urls: &[String]) {
 		std::fs::rename(&staged, out.with_extension("")).unwrap_or_else(|e| panic!("moving {} beside {}: {e}", staged.display(), out.display()));
 		std::fs::write(&out, doc).unwrap_or_else(|e| panic!("writing {}: {e}", out.display()));
 		println!("{}", out.display());
-		if !digested {
-			undigested.push(out);
-		}
-	}
-
-	if !undigested.is_empty() {
-		eprintln!("\nnobody has read these yet — run `/ingest call-digest` over each:");
-		for out in &undigested {
-			eprintln!("  {}", out.display());
-		}
 	}
 }
 
@@ -220,7 +209,6 @@ fn captured(root: &Path) -> BTreeMap<Rec, PathBuf> {
 			}
 			let text = std::fs::read_to_string(&path).unwrap_or_else(|e| panic!("reading {}: {e}", path.display()));
 			let rec = check(&path.display().to_string(), &text);
-			verbatim(root, &path, &text);
 			assert_eq!(rec.0, platform, "{} is a {} capture filed under {}", path.display(), rec.0.name(), platform.dir());
 			if let Some(clash) = found.insert(rec.clone(), path.clone()) {
 				panic!("{} and {} both claim {}", clash.display(), path.display(), rec.1);
@@ -228,45 +216,6 @@ fn captured(root: &Path) -> BTreeMap<Rec, PathBuf> {
 		}
 	}
 	found
-}
-
-/// A digest only moves headers, so its prose has to be the prose of the capture it was run on — the
-/// committed one. An uncommitted pull has nothing to be held to, which is why pulls are committed first.
-fn verbatim(root: &Path, path: &Path, text: &str) {
-	let prose = |t: &str| -> Vec<String> {
-		let body = t.split_once("\n## transcript\n").expect("checked to have one").1;
-		body.lines().filter(|l| !l.trim().is_empty() && !l.starts_with("### ")).map(str::to_string).collect()
-	};
-	if !text.lines().any(|l| l.starts_with("- read by: `/")) {
-		return; // a fresh pull is the platform's text by construction; a re-pull may differ from the last one
-	}
-	let rel = path.strip_prefix(root).expect("captures live under the root");
-	let out = Command::new("git")
-		.arg("-C")
-		.arg(root)
-		.arg("show")
-		.arg(format!("HEAD:{}", rel.display()))
-		.output()
-		.expect("git runs");
-	if !out.status.success() {
-		return; // not committed yet, so nothing to hold it to
-	}
-	let committed = String::from_utf8(out.stdout).expect("captures are utf-8");
-	if !committed.contains("\n## transcript\n") {
-		return; // committed in a shape before this one, and re-pulled since
-	}
-	let (now, then) = (prose(text), prose(&committed));
-	if let Some((i, (a, b))) = now.iter().zip(&then).enumerate().find(|(_, (a, b))| a != b) {
-		panic!("{}: paragraph {} of the transcript is not what was committed —\n  now: {a}\n  was: {b}", path.display(), i + 1);
-	}
-	assert_eq!(
-		now.len(),
-		then.len(),
-		"{}: the transcript has {} paragraphs, and {} were committed",
-		path.display(),
-		now.len(),
-		then.len()
-	);
 }
 
 /// Hold a capture to `docs/ARCHITECTURE.md`'s "Call captures", returning the recording it states.
@@ -279,8 +228,10 @@ fn check(name: &str, text: &str) -> Rec {
 	let (platform, id) = rec_of(field("source").trim_start_matches('<').trim_end_matches('>'));
 	let duration = secs(field("duration"));
 	let silent = field("transcribed by").ends_with("— nobody speaks");
-	let read_by = field("read by");
-	let unchaptered = read_by.contains("no chapters");
+	assert!(
+		!text.lines().any(|l| l.starts_with("- read by: ")),
+		"{name}: a capture names no reader of it; a reading goes beside it, in `<capture>/`"
+	);
 
 	let sections: Vec<&str> = text.lines().filter(|l| l.starts_with("## ")).collect();
 	assert_eq!(sections.last(), Some(&"## transcript"), "{name}: `## transcript` has to be its last section");
@@ -293,7 +244,7 @@ fn check(name: &str, text: &str) -> Rec {
 	}
 
 	let link = format!("]({}{id}{}", platform.share(), platform.seek());
-	let mut chapters = Vec::new();
+	let mut titled = Vec::new();
 	let mut last = None;
 	let mut first = true;
 	//LOOP: bounded by the lines of a finite file
@@ -312,26 +263,14 @@ fn check(name: &str, text: &str) -> Rec {
 		assert_eq!(secs(stamp), t, "{name}: `{line}` says one time and links to another");
 		assert!(t <= duration, "{name}: `{line}` is past the end of the recording");
 		assert!(last < Some(t), "{name}: `{line}` does not come after the chapter before it");
-		assert!(unchaptered || !title.trim().is_empty(), "{name}: `{line}` has no title, and the capture says it is chaptered");
 		last = Some(t);
-		chapters.push((t, title.trim().to_string()));
+		titled.push(!title.trim().is_empty());
 	}
 	assert_eq!(first, silent, "{name}: a transcript is empty exactly when `transcribed by:` ends `— nobody speaks`");
-
-	// a platform's own summary is verbatim and need not agree with its chapters; ours has to
-	if read_by.starts_with("`/") {
-		let summary = text.split_once("\n## summary\n").unwrap_or_else(|| panic!("{name}: digested, and no `## summary`")).1;
-		let summary = summary.split_once("\n## ").expect("`## transcript` follows").0;
-		let topics: Vec<(u64, String)> = summary
-			.lines()
-			.filter_map(|l| l.strip_prefix("### "))
-			.map(|l| {
-				let (topic, at) = l.trim().rsplit_once(' ').unwrap_or_else(|| panic!("{name}: `### {l}` is not `### <topic> <stamp>`"));
-				(secs(at), topic.to_string())
-			})
-			.collect();
-		assert_eq!(topics, chapters, "{name}: the summary's topics and the transcript's chapters differ");
-	}
+	assert!(
+		titled.iter().all(|t| *t) || titled.iter().all(|t| !*t),
+		"{name}: headers are the platform's chapters, every one titled, or a stamp per paragraph, none titled"
+	);
 	(platform, id)
 }
 
@@ -762,8 +701,8 @@ fn paragraphs(phrases: &[(f64, String)], turns: bool) -> Vec<(f64, String)> {
 	out
 }
 
-/// The capture, its filename, and whether it needs `/ingest call-digest`.
-fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bool) {
+/// The capture, and its filename.
+fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String) {
 	let share = platform.share();
 	// loom chapters a long call's first hour or so and stops; a reading that stops short is no reading.
 	// measured against the last words rather than the recording, since calls are left running after everyone's gone
@@ -771,16 +710,11 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 		let spoken = r.phrases.last().expect("chapters come with a transcript").0;
 		c.last().is_none_or(|(t, _)| (*t as f64) < spoken - TAIL_SECS)
 	}) {
-		eprintln!("  {}'s chapters stop short of the end — leaving its reading to `/ingest call-digest`", platform.name());
+		eprintln!("  {}'s chapters stop short of the end — dropped with its summary, a stamp per paragraph instead", platform.name());
 		r.summary = None;
 		r.chapters = None;
 	}
 
-	let missing: Vec<&str> = [("summary", r.summary.is_none()), ("chapters", r.chapters.is_none())]
-		.iter()
-		.filter(|(_, m)| *m)
-		.map(|(w, _)| *w)
-		.collect();
 	let mut out = format!(
 		"# {}\n\
 		 \n\
@@ -788,7 +722,6 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 		 - recorded: {}\n\
 		 - duration: {}\n\
 		 - transcribed by: {}\n\
-		 - read by: {}\n\
 		 {}\
 		 - pulled by: `playbook pull call`\n\
 		 \n",
@@ -796,15 +729,6 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 		r.recorded,
 		hms(r.duration),
 		r.transcribed_by,
-		match (r.phrases.is_empty(), missing.is_empty()) {
-			(true, _) => "nobody — nothing is said".to_string(),
-			(false, true) => platform.name().to_string(),
-			(false, false) => format!(
-				"nothing yet — {} wrote no {}, and `/ingest call-digest` writes them here",
-				platform.name(),
-				missing.join(" and no ")
-			),
-		},
 		r.within.as_ref().map_or(String::new(), |w| format!("- within: {w}\n")),
 	);
 	if let Some(summary) = &r.summary {
@@ -836,9 +760,8 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 			flush(&mut out, &mut body);
 			assert!(next.peek().is_none(), "{id}: chaptered past the last phrase of its transcript");
 		}
-		// no chapters to hang the text on, so every paragraph gets its own untitled anchor — the
-		// times `/ingest call-digest` needs to place chapters, and deletes once it has
 		None => {
+			// no chapters to hang the text on, so every paragraph gets its own untitled anchor: the finest second a digest can cite
 			let mut last = None;
 			for (ts, text) in paragraphs(&r.phrases, r.turns) {
 				let t = ts as u64;
@@ -856,5 +779,5 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String, bo
 		Platform::Drive => format!("-{}", &id[..6]),
 		Platform::Loom | Platform::Fathom | Platform::Vimeo | Platform::Vocaroo => String::new(),
 	};
-	(format!("{}-{}{tail}.md", &r.recorded[..10], slug(&r.title)), out, missing.is_empty() || r.phrases.is_empty())
+	(format!("{}-{}{tail}.md", &r.recorded[..10], slug(&r.title)), out)
 }

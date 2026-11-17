@@ -5,28 +5,6 @@
 - uploaded: 2026-09-11
 - duration: 00:15:08
 - pulled by: `scripts/yt-pull.rs`
-- read by: `gpt-5.6-luna` summary and chapters, nothing shown: `gpt-5.6-luna` named no span where something is
-- cost: $0.0013
-
-## summary
-
-- Bradley grew a painting company acquired for $300,000 to an enterprise value of $1.5–$2 million using multiple Google Business Profiles and review generation.
-- The painting company expanded from fewer than 20 reviews to roughly 350–400 across three profiles; a newer HVAC profile grew from under 50 to over 100 reviews.
-- Each profile took about 30 minutes to set up, while review processes required only a few hours initially; a second painting location reached 30 reviews and generated $50,000 in jobs.
-- The system supports Local Services Ads and pay-per-click campaigns because review counts improve ad ranking and budget delivery; prior marketing included $6,000–$8,000 monthly ad spend and vehicle wraps.
-- Painting jobs average $3,000–$8,000, close rates range from 15–20% for weak salespeople to 50–60% for strong ones, and sales may take two to three months; Bradley aims to grow HVAC from under $1 million to nearly $2 million.
-
-## chapters
-
-- [00:00:00](https://www.youtube.com/watch?v=3MEgzC6Rzbc&t=0) Introduction and background
-- [00:01:25](https://www.youtube.com/watch?v=3MEgzC6Rzbc&t=85) The role of GMB and reviews
-- [00:03:33](https://www.youtube.com/watch?v=3MEgzC6Rzbc&t=213) Marketing strategy shift
-- [00:04:47](https://www.youtube.com/watch?v=3MEgzC6Rzbc&t=287) Implementation and results
-- [00:07:21](https://www.youtube.com/watch?v=3MEgzC6Rzbc&t=441) Niche operations and sales
-- [00:10:59](https://www.youtube.com/watch?v=3MEgzC6Rzbc&t=659) Business impact and future
-- [00:14:32](https://www.youtube.com/watch?v=3MEgzC6Rzbc&t=872) Conclusion and call to action
-
-## shown
 
 ## description
 

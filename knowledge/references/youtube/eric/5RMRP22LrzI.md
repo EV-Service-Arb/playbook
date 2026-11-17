@@ -5,35 +5,6 @@
 - uploaded: 2026-09-14
 - duration: 00:19:14
 - pulled by: `scripts/yt-pull.rs`
-- read by: `gpt-5.6-luna` summary and chapters, `gpt-5.6-luna` what is shown, over 10 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s
-- cost: $0.0058
-
-## summary
-
-- The speaker explains how obsessing over earning $100k per month made him suppress enjoyment, despite eventually earning about $130k per month at age 20.
-- He describes the reality of reaching that income: adaptation, heavier workloads, anxiety about losing progress, financial scarcity, and persistent insecurities.
-- He argues that money does not resolve personal problems, depression, insecurity, or difficulty relating to others; those issues require an intentional shift in mindset.
-- He recommends fighting negative thought patterns, choosing to seek help, staying emotionally grounded, and giving yourself permission to enjoy the present while continuing to work.
-
-## chapters
-
-- [00:00:00](https://www.youtube.com/watch?v=5RMRP22LrzI&t=0) the $100k goal and lost enjoyment
-- [00:01:06](https://www.youtube.com/watch?v=5RMRP22LrzI&t=66) sharing experience without preaching
-- [00:02:14](https://www.youtube.com/watch?v=5RMRP22LrzI&t=134) ordinary flaws behind apparent success
-- [00:03:23](https://www.youtube.com/watch?v=5RMRP22LrzI&t=203) money does not fix personal problems
-- [00:04:31](https://www.youtube.com/watch?v=5RMRP22LrzI&t=271) the unglamorous reality of $100k months
-- [00:06:11](https://www.youtube.com/watch?v=5RMRP22LrzI&t=371) choosing happiness while staying driven
-- [00:07:54](https://www.youtube.com/watch?v=5RMRP22LrzI&t=474) what reaching $100k actually feels like
-- [00:10:35](https://www.youtube.com/watch?v=5RMRP22LrzI&t=635) stress over maintaining income
-- [00:11:42](https://www.youtube.com/watch?v=5RMRP22LrzI&t=702) workload, guilt, and scarcity
-- [00:13:57](https://www.youtube.com/watch?v=5RMRP22LrzI&t=837) emotional grounding and relationship difficulties
-- [00:15:40](https://www.youtube.com/watch?v=5RMRP22LrzI&t=940) permission to enjoy the present
-- [00:17:55](https://www.youtube.com/watch?v=5RMRP22LrzI&t=1075) money alone will never create happiness
-
-## shown
-
-- [00:09:35](https://www.youtube.com/watch?v=5RMRP22LrzI&t=575) A picture-in-picture bathroom mirror selfie shows the speaker shirtless, displaying extensive tattoos and a muscular physique.
-  ![](5RMRP22LrzI/575.jpg)
 
 ## description
 

@@ -6,6 +6,7 @@ publish = false
 
 [dependencies]
 axum.workspace = true
+corpus.workspace = true
 ev_lib.workspace = true
 regex.workspace = true
 regex-syntax.workspace = true
@@ -19,6 +20,9 @@ strum.workspace = true
 tokio.workspace = true
 tracing.workspace = true
 tracing-subscriber.workspace = true
+
+[build-dependencies]
+corpus.workspace = true
 
 [dev-dependencies]
 serde_urlencoded.workspace = true

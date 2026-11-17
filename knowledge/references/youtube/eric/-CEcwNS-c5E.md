@@ -5,28 +5,6 @@
 - uploaded: 2026-04-27
 - duration: 00:09:08
 - pulled by: `scripts/yt-pull.rs`
-- cost: $0.0000
-
-## summary
-
-- Service arbitrage involves creating Google Business listings for high-demand local services (plumbing, HVAC, electricians) in low-competition areas and charging premium prices while subcontracting work to cheaper labor.
-- Set up free Google Business listings with minimal requirements: add 5-star reviews (at $2/review or from friends), post photos and edits to rank at the top of local search results.
-- Answer incoming calls with a simple phone script (can use ChatGPT), get a quote from your subcontractor, and invoice the customer at 2-3x the subcontractor's cost.
-- The creator scaled to $80,000/month in revenue using this model, paying subcontractors ~$5,000 per job while charging customers $8,000, netting $3,000 per job.
-- Business profiles built through this method can eventually be sold as going concerns, providing long-term value beyond monthly revenue.
-
-## chapters
-
-- [00:00:00](https://www.youtube.com/watch?v=-CEcwNS-c5E&t=0) My journey to success
-  ![](-CEcwNS-c5E/8.jpg)
-- [00:00:50](https://www.youtube.com/watch?v=-CEcwNS-c5E&t=50) The service arbitrage model
-  ![](-CEcwNS-c5E/58.jpg)
-- [00:02:50](https://www.youtube.com/watch?v=-CEcwNS-c5E&t=170) Why this business model works
-  ![](-CEcwNS-c5E/178.jpg)
-- [00:04:44](https://www.youtube.com/watch?v=-CEcwNS-c5E&t=284) Setting up your Google profile
-  ![](-CEcwNS-c5E/292.jpg)
-- [00:07:09](https://www.youtube.com/watch?v=-CEcwNS-c5E&t=429) Execution and scaling
-  ![](-CEcwNS-c5E/437.jpg)
 
 ## description
 

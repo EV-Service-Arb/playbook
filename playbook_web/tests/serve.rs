@@ -18,7 +18,7 @@ async fn read_returns_one_chapter() {
 	let app = app("read", i64::MAX);
 	for (path, header) in [
 		("knowledge/references/loom/2026-09-18-group-call.md", "[03:34]"),
-		("knowledge/structured/suggested/infra.md", "## facts"),
+		("knowledge/structured/contractors/splits.md", "## the split"),
 	] {
 		let (status, text) = get(&app, member("u0"), "/read", json!({ "path": path, "header": header })).await;
 		assert_eq!(status, StatusCode::OK, "{text}");
@@ -28,8 +28,8 @@ async fn read_returns_one_chapter() {
 }
 
 /// The procedure is the `service-arb` skill's: the document names it, and each operation says only what it returns.
-/// What changes with the corpus rides on the operations: the reliability table, the guides, every hit's effective
-/// number, and where a broad pattern could narrow to.
+/// What changes with the corpus rides on the operations: the pages, the people, what every hit is worth today, and
+/// where a broad pattern could narrow to.
 #[tokio::test]
 async fn the_server_carries_data_and_the_skill_the_procedure() {
 	let app = app("contract", i64::MAX);
@@ -38,17 +38,18 @@ async fn the_server_carries_data_and_the_skill_the_procedure() {
 	assert!(instructions.contains("`service-arb` skill"), "{instructions}");
 	assert!(instructions.len() <= 512, "{instructions}");
 	let description = |path: &str| doc["paths"][path]["get"]["description"].as_str().unwrap().to_owned();
-	let search = description("/search");
-	assert!(search.contains("tested myself"), "{search}");
-	assert!(search.contains("Eric"), "{search}");
 	let guide = description("/guide");
-	assert!(guide.contains("verification: video"), "{guide}");
-	assert!(guide.contains("experts: "), "{guide}");
+	assert!(guide.contains("- contractors/splits: splits"), "{guide}");
 
-	let (status, text) = get(&app, member("u0"), "/search", json!({ "pattern": "Magisk" })).await;
-	assert_eq!(status, StatusCode::OK, "{text}");
-	let label = text.lines().next().unwrap();
-	assert!(label.contains("effective "), "{label}");
+	let (status, people) = get(&app, member("u0"), "/guide", json!({ "area": "people" })).await;
+	assert_eq!(status, StatusCode::OK, "{people}");
+	assert!(people.contains("| Eric |"), "{people}");
+
+	// r[verify trust.arithmetic]
+	let (status, page) = get(&app, member("u0"), "/guide", json!({ "area": "contractors/splits" })).await;
+	assert_eq!(status, StatusCode::OK, "{page}");
+	assert!(page.contains(" · effective 0."), "{page}");
+	assert!(!page.contains("<!--"), "a citation is served as what it is worth, never as what that is computed from:\n{page}");
 
 	let (status, text) = get(&app, member("u0"), "/search", json!({ "pattern": "the" })).await;
 	assert_eq!(status, StatusCode::UNPROCESSABLE_ENTITY, "{text}");

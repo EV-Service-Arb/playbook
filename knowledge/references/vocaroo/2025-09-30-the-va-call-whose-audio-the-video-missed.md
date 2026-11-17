@@ -4,7 +4,6 @@
 - recorded: 2025-09-30 — uploaded, as vocaroo has it
 - duration: 00:01:18
 - transcribed by: whisper-cpp `ggml-base.en` — vocaroo transcribes nothing
-- read by: nothing yet — vocaroo wrote no summary and no chapters, and `/call-digest` writes them here
 - pulled by: `scripts/call-pull.rs`
 
 ## transcript

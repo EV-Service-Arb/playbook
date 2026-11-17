@@ -1,5 +1,5 @@
-//! The playbook's `guides/`, `knowledge/structured/{approved,suggested}/` and `knowledge/references/` text, served in
-//! slices to the Service-Arb members holding `sa:playbook:mcp:use`, behind the conductor. See `README.md`.
+//! The playbook's `knowledge/structured/` and `knowledge/references/` text, served in slices to the Service-Arb
+//! members holding `sa:playbook:mcp:use`, behind the conductor. See `README.md`.
 
 mod corpus;
 mod tools;

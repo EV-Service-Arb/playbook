@@ -5,26 +5,6 @@
 - uploaded: 2026-09-21
 - duration: 00:13:58
 - pulled by: `scripts/yt-pull.rs`
-- read by: `gpt-5.6-luna` summary and chapters, nothing shown: `gpt-5.6-luna` named no span where something is
-- cost: $0.0022
-
-## summary
-
-- Joey built a remote cleaning business in Australia to $10,000–$12,000 monthly profit within about six months, reaching consistent $10,000 months after roughly three months of focused work.
-- His lead-generation system centered on Google Business Profiles (GBPs) and SEO: he now operates about eight cleaning profiles, typically seeing five to six leads per day, while a new plumbing niche produced its first lead within a week using two profiles and 28–30 reviews.
-- He converts approximately 25%–30% of leads, with an average job worth $500–$600 across house, commercial, and bond cleaning; cleaners receive 70% commission and he keeps 30%.
-- He recruits contractors through Facebook Marketplace, warns that finding reliable cleaners takes trial and error, and recommends spreading branding across profiles to reduce competitor reporting and attacks.
-- He says Instagram ads and $1,000–$2,000-per-month SEO agencies produced poor results, while one-on-one guidance, SEO implementation, multiple service-area profiles, and consistent execution drove growth.
-
-## chapters
-
-- [00:00:00](https://www.youtube.com/watch?v=4_FyKqhcFG0&t=0) Introduction to Joey
-- [00:00:25](https://www.youtube.com/watch?v=4_FyKqhcFG0&t=25) Joey's journey and growth
-- [00:04:23](https://www.youtube.com/watch?v=4_FyKqhcFG0&t=263) Scaling and overcoming hurdles
-- [00:09:12](https://www.youtube.com/watch?v=4_FyKqhcFG0&t=552) Operational tips and outlook
-- [00:13:29](https://www.youtube.com/watch?v=4_FyKqhcFG0&t=809) Closing and call to action
-
-## shown
 
 ## description
 

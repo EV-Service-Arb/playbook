@@ -4,7 +4,6 @@
 - recorded: 2026-09-18 — first seen, as the registry has it; vimeo states no date
 - duration: 00:59:51
 - transcribed by: whisper-cpp `ggml-base.en` — vimeo transcribes nothing
-- read by: nothing yet — vimeo wrote no summary and no chapters, and `/call-digest` writes them here
 - pulled by: `scripts/call-pull.rs`
 
 ## transcript

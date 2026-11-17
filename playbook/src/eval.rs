@@ -26,7 +26,7 @@ const ASSERTION_KEYS: &str = "local:A6EHv/POEL4dcN0Y50vAmWfk1jCbpQ1fHdyGZBJVMbg=
 /// Where the eval's OAuth client is sent back to: never listened on, the code is read off the redirect.
 const REDIRECT_URI: &str = "http://127.0.0.1:9/callback";
 /// What a side takes from its info rev; the rest of its tree is the system rev's.
-const INFO: [&str; 3] = ["knowledge/structured/approved", "knowledge/structured/suggested", "knowledge/references"];
+const INFO: &str = "knowledge";
 const OUT: &str = "/tmp/playbook-eval";
 
 /// Whether any case scored lower on this tree than on the old side.
@@ -197,10 +197,10 @@ fn build(root: &Path, side: &Side) -> PathBuf {
 	}
 	std::fs::create_dir_all(&dir).expect("target/ is writable");
 	extract(root, &side.system, &dir, &[]);
-	for d in INFO {
-		std::fs::remove_dir_all(dir.join(d)).unwrap_or_else(|e| panic!("{} has no {d}: {e}", side.system));
+	if side.info != side.system {
+		std::fs::remove_dir_all(dir.join(INFO)).unwrap_or_else(|e| panic!("{} has no {INFO}: {e}", side.system));
+		extract(root, &side.info, &dir, &[INFO]);
 	}
-	extract(root, &side.info, &dir, &INFO);
 
 	// shared, so the two sides build their dependencies once
 	let target = root.join("target/eval/cargo");
