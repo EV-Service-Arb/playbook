@@ -104,6 +104,20 @@ async fn a_call_is_logged_under_the_assertions_sub() {
 	assert_eq!(logged, [row(false), row(true)]);
 }
 
+/// The conductor vendors the committed document; `PLAYBOOK_GEN=1` writes it, otherwise a stale one fails.
+#[tokio::test]
+async fn the_committed_document_is_the_served_one() {
+	let served = serde_json::to_string_pretty(&document(&app("committed", i64::MAX)).await).unwrap() + "\n";
+	let path = concat!(env!("CARGO_MANIFEST_DIR"), "/openapi.json");
+	match std::env::var_os("PLAYBOOK_GEN") {
+		Some(_) => std::fs::write(path, served).unwrap(),
+		None => assert!(
+			std::fs::read_to_string(path).unwrap_or_else(|e| panic!("{path}: {e}; `PLAYBOOK_GEN=1 cargo t -p playbook_web` writes it")) == served,
+			"{path} is not the served document: `PLAYBOOK_GEN=1 cargo t -p playbook_web`"
+		),
+	}
+}
+
 fn app(name: &str, daily_bytes: i64) -> Router {
 	app_at(name, daily_bytes).0
 }
