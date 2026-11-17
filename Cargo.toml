@@ -10,7 +10,7 @@ ask_llm = { version = "^3.10.2", default-features = false }
 axum = { version = "0.8.9", features = ["query"] }
 base64 = "0.22"
 clap = { version = "^4.6.7", features = ["derive"] }
-ev_lib = { version = "0.33.0", default-features = false, features = ["error_monitoring", "api"] }
+ev_lib = { version = "0.34.0", default-features = false, features = ["error_monitoring", "api"] }
 jiff = "0.2"
 libsql-rusqlite = "0.9.30" # `playbook` links libsql through social_networks_adapters, and a second bundled sqlite clashes with it
 regex = "1.13.1"
