@@ -28,6 +28,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          [ -z "$(git tag -l 'v*' --points-at HEAD)" ] || { echo "HEAD already tagged by hand"; exit 0; }
           last="$(git tag -l 'v*' --sort=-v:refname | grep -vFe - | head -n1)"
           ver="${last#v}"; [ -n "$ver" ] || ver="0.0.0"
           IFS=. read -r ma mi pa <<<"$ver"
