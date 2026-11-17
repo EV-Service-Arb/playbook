@@ -6,7 +6,7 @@ description: Answer a service-arbitrage question out of the playbook — Google 
 # service-arb
 
 A knowledge base on running Google Business Profiles into subcontracted trade work, reached through the
-`playbook` server's three tools: `search`, `read` and `guide`. Every claim in it links the second someone said
+`playbook` server's three tools: `playbook_search`, `playbook_read` and `playbook_guide`. Every claim in it links the second someone said
 it, and the date. Answer from what they return, never from general knowledge: a gap filled from elsewhere
 reads as the playbook's word. Without the tools, the server is not connected or not signed in: say that,
 and stop.
@@ -16,12 +16,12 @@ and stop.
 
 ## Finding
 
-- `search` the words a speaker would say, not the question's: people talk, and transcripts mishear. Alternate
+- `playbook_search` the words a speaker would say, not the question's: people talk, and transcripts mishear. Alternate
   synonyms and likely mis-transcriptions in one pattern: `review(s)? (a|per) day|reviews? daily`. The hits come
   ranked and capped; take them in that order
 - refused as too broad: pass one of the scopes the refusal names, or narrow the words
-- `read` a chapter when a hit carries the answer and its lines cut off what was said around it
-- advising rather than quoting: `guide` the page first. Its description lists the pages
+- `playbook_read` a chapter when a hit carries the answer and its lines cut off what was said around it
+- advising rather than quoting: `playbook_guide` the page first. Its description lists the pages
 - nothing after a rephrasing or two: the corpus is silent on it
 
 ## Weighing
