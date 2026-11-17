@@ -12,23 +12,23 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [00:00](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=0) Cole joins the call; landscaping subcontracting margins
 
 - Cole dials in mid-permit-submission work; his subcontracting landscaping company is on track for $250-300K this month.
-  <!--Cole ran ?t=0-->
+  <!--Cole ran ?t=104-->
 - He runs a 15-25% markup on subcontractor job revenue and avoids over-quoting to stay competitive.
-  <!--Cole ran ?t=0-->
+  <!--Cole ran ?t=140-->
 
 ### [03:13](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=193) Deposit structure and team size
 
 - Cole marks up the sub's quote (e.g. 15% on $100K), collects 50% of the marked-up total upfront, pays the sub 50%, and keeps the rest at completion.
   <!--Cole ran ?t=193-->
 - He runs roughly 4-5 projects a month, each one to two months long, with about 41 subcontracted workers under his company name.
-  <!--Cole ran ?t=193-->
+  <!--Cole ran ?t=221-->
 
 ### [04:42](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=282) Client acquisition system and profile performance
 
 - The group frames GMB client acquisition as the backbone of the business; Eric's system covers getting clients, and students handle contracts and hiring subs themselves.
   <!--Eric says ?t=282-->
 - Raymond reports a $3,680 day and a $6,500/week profit pace after starting June 1st, with 9 businesses verified but only 3 ranking.
-  <!--Raymond ran ?t=282-->
+  <!--Raymond ran ?t=351-->
 
 ### [06:27](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=387) GMB verification count and getting reviews
 
@@ -38,9 +38,9 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [07:44](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=464) Review automation script and aged Gmail accounts
 
 - A member is testing a Python script that automates leaving Facebook reviews but it glitches on the send step.
-  <!--gmbpp member ran ?t=464-->
+  <!--Raymond ran ?t=464-->
 - Buying aged Gmail accounts and leaving self-reviews works at roughly a 60% stick rate if limited to one review per day.
-  <!--gmbpp member says ?t=464-->
+  <!--Eric says ?t=497-->
 
 ### [09:14](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=554) Batch filming verification videos
 
@@ -50,15 +50,15 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [10:29](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=629) Video verification approval struggles
 
 - Approval is inconsistent and niche-dependent; plumbing is especially hard to pass, with rejections citing a different missing element each time even when the video is replicated exactly.
-  <!--gmbpp member ran ?t=629-->
+  <!--Raymond ran ?t=670-->
 
 ### [11:44](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=704) What to show in SAB verification videos
 
 - Raymond's sequence: house address, truck signage, equipment in the garage, office with two screens on; Ryan's simpler version: sitting in the car showing business cards and trunk equipment.
   <!--Raymond ran ?t=704-->
-  <!--Ryan D ran ?t=704-->
+  <!--Ryan D ran ?t=752-->
 - Some members are testing verification without any vehicle at all, using only tools and a business card.
-  <!--gmbpp member ran ?t=704-->
+  <!--gmbpp member ran ?t=809-->
 
 ### [13:58](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=838) Address vs SAB-to-address ranking
 
@@ -93,7 +93,7 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [21:20](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1280) Choosing a niche: landscaping vs plumbing
 
 - Raymond recommends researching local competition and income levels before picking a niche; landscaping worked for him because of a high-income service area, but any niche can work if the operator sticks with it.
-  <!--Raymond says ?t=1280-->
+  <!--Raymond says ?t=1311-->
 
 ### [23:25](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1405) Eric's own niche-selection story
 
@@ -103,7 +103,7 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [23:57](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1437) Onsite estimating and quote process
 
 - Raymond no longer runs onsites himself; two estimators collect measurements and write quotes. He personally just gathers name, email, address, and phone, then hands off to the subcontractor, managing only client communication and payments.
-  <!--Raymond ran ?t=1437-->
+  <!--Raymond ran ?t=1470-->
 
 ### [26:41](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1601) Researching niche competition and keywords
 
@@ -113,12 +113,12 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [27:36](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1656) Energy drink review-farming method
 
 - Raymond buys wholesale Gatorade (~$0.70-0.80/bottle) and sets up a free-drink table at a local university, using a QR code straight to the review page plus a cheat-sheet of sample comments, netting ~100 reviews per profile in 2-3 days with none removed.
-  <!--Raymond ran ?t=1656-->
+  <!--Raymond ran ?t=1700-->
 
 ### [30:48](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1848) Collecting payments (Stripe, Jobber, CRM fees)
 
 - Payments run through wire transfer, e-transfer, or card via Stripe integrated into the Jobber CRM; Jobber charges ~2.9% + $0.30 on card payments, which should be passed on to the client via the quote.
-  <!--gmbpp member says ?t=1848-->
+  <!--Cole says ?t=1848-->
 
 ### [32:25](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=1945) Chargeback and deposit disputes
 
@@ -149,7 +149,7 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [40:28](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2428) AI truck images and van mismatch concerns
 
 - AI-generated truck photos on listings haven't caused problems so far; but a mismatch between the van shown and the van that shows up can cost a job, as can location-inconsistent stock photos.
-  <!--gmbpp member ran ?t=2428-->
+  <!--gmbpp member ran ?t=2458-->
 
 ### [42:37](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2557) GMBs per city, lead volume, proximity ranking
 
@@ -169,12 +169,12 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [47:45](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2865) SAB video location doesn't need to match listed area
 
 - For service-area-business videos, Google doesn't cross-reference where the video was filmed against the listed service area, so the same video can support profiles listed anywhere in the same city or country; physical-address profiles still require location spoofing.
-  <!--gmbpp member says ?t=2865-->
+  <!--Eric says ?t=2865-->
 
 ### [48:25](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=2905) Live video verification via local service ads
 
 - A contact got GMB approved fast through Google's live-agent video verification by first requesting to run Local Service Ads (which Google is incentivized to approve quickly since it generates ad revenue); the agent only asked for phone number and email, with no location cross-check.
-  <!--gmbpp member heard ?t=2905-->
+  <!--Eric heard ?t=2931-->
 
 ### [53:45](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3225) Buying reviews via Reddit contractor
 
@@ -184,27 +184,27 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [55:02](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3302) GMBs per Gmail account and review pacing
 
 - Keep to one GMB profile per Gmail account for safety; once a profile is live, reviews can start immediately without waiting.
-  <!--gmbpp member says ?t=3302-->
+  <!--Eric says ?t=3302-->
 
 ### [56:15](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3375) Review volume targets for a new address profile
 
 - Target roughly 50-60 reviews to start on a new address-verified plumbing profile.
-  <!--gmbpp member says ?t=3375-->
+  <!--Eric says ?t=3375-->
 
 ### [56:48](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3408) Aged Gmail review stick rate and proxies
 
 - Buying aged US Gmail accounts for self-reviews works even from non-local emails if paired with a residential proxy (~$5-6 per 5GB, pay-per-data); stick rate runs 60-70%, limited to one review per account per day.
-  <!--gmbpp member ran ?t=3408-->
+  <!--gmbpp member ran ?t=3502-->
 
 ### [59:47](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3587) Google's cross-profile tracking and suspension rules
 
 - Google detects the same reviewer account leaving reviews across multiple GMBs owned by one operator and can suspend all linked profiles; the safe rule is one review per Gmail account total, spaced at least two weeks apart, max two reviews per account ever — one member had six plumbing profiles suspended this way.
-  <!--gmbpp member ran ?t=3587-->
+  <!--gmbpp member ran ?t=3656-->
 
 ### [1:01:47](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3707) Recruiting help for energy drink handouts
 
 - Hiring someone else to run the energy-drink review table is harder to staff than doing it personally; younger students avoid approaching people their own age or younger.
-  <!--gmbpp member ran ?t=3707-->
+  <!--Joseph ran ?t=3707-->
 
 ### [1:02:54](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3774) Craigslist and Marketplace for finding help
 
@@ -214,7 +214,7 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 ### [1:04:42](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3882) Sourcing and paying plumbing contractors
 
 - Facebook Marketplace/Nextdoor work well for detailing contractors but plumbers are harder to land; Indeed (free 3-day trial) is the most reliable source, per James (~$40K/month); cold-calling low-review GMB listings directly for solo contractors also works, with typical contractor markups around 20-30%.
-  <!--gmbpp member says ?t=3882-->
+  <!--Eric says ?t=3913-->
 
 ### [1:08:20](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4100) Indeed and Craigslist account bans
 
@@ -230,12 +230,12 @@ Eric hosts a weekly mastermind call with students running Google Business Profil
 
 - Cole is reconsidering plumbing after seeing local competitors with 400-1,600+ reviews; Eric's rule of thumb is to target a niche where the top competitor sits under a few hundred reviews, since proximity ranks above review count for address-verified profiles.
   <!--Cole ran ?t=4365-->
-  <!--Eric says ?t=4365-->
+  <!--Eric says ?t=4482-->
 
 ### [1:15:52](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4552) Alternate niches and get-rich-quick warning
 
 - Electrical and fencing are floated as plumbing-adjacent alternatives; Eric warns against chasing same-day-payout niches purely for speed, comparing that mindset to gambling, and notes it breeds laziness.
-  <!--gmbpp member says ?t=4552-->
+  <!--Eric says ?t=4588-->
 
 ### [1:17:51](https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=4671) Specializing subcontractors by skill
 

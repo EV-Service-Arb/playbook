@@ -1,10 +1,13 @@
 # payments
 
-the contractor collects from the customer, as his [contract](contracts.md) says, and upsells harder for it; whether we should collect ourselves is open. a contractor who collects is audited by calling his customers afterwards. we never pay a contractor before the customer has paid us, and eat a botched job under ~$1k.
+until ~$3–4k a month the contractor collects under his own name: the job's liability is his, and he upsells harder. past that we set the company up and collect ourselves, through the VA. a contractor who collects is audited by calling his customers afterwards. we never pay a contractor before the customer has paid us.
 
 ## who collects
 
-- (?) the contractor collects, and upsells harder for having the money pass through his hands; Eric moved early to collecting himself, and whether it matters is open
+- (?) the contractor collects until we make ~$3–4k a month; then we legalize and collect ourselves
+  resolved: [2026-11-17](../../log/resolved/2026-11-17-who-collects-payment.md)
+  - (?) whoever takes the payment under their branding assumes responsibility for the job; "if you want to be super safe, you just let them take payments until you're making, like, 3-4k a month"
+    <!--2026-09-25 Eric says https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=141-->
   - if it's contractors who are taking payments, they actually have more incentive to upsell while they're in the house
     <!--2026-09-25 gmbpp member says https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=5462-->
   - Eric very quickly transitioned to taking payments himself

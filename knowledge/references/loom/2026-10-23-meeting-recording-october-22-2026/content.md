@@ -23,7 +23,7 @@ heat map scans to see where a profile actually ranks.
 
 - A member's plumbing contractor takes small jobs and doesn't upsell; he is told nothing should be
   charged under $250, and plans to find a better contractor.
-  <!--gmbpp member ran ?t=0-->
+  <!--gmbpp member ran ?t=63-->
 
 ### [01:29](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=89) Roll call: 61 reviews in an hour
 
@@ -34,10 +34,10 @@ heat map scans to see where a profile actually ranks.
 
 - A member hired two high schoolers and a university student to collect reviews, and about half drop
   off; one new profile was suspended after 60 reviews.
-  <!--gmbpp member ran ?t=132-->
+  <!--gmbpp member ran ?t=167-->
 - Eric thinks they are faking them: reviews from new, local people should stick. Even at an effective
   $8 a review after drop-offs, it is still worth paying for.
-  <!--Eric says ?t=132-->
+  <!--Eric says ?t=273-->
 
 ### [05:28](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=328) Live calls: reps asking to see the sign's screws
 
@@ -61,12 +61,12 @@ heat map scans to see where a profile actually ranks.
 
 - Rankings are fluid now: a profile can be top three in the morning and fifth in the afternoon, and
   differ by where the search is made. Keep adding pictures and a few reviews a week.
-  <!--gmbpp member says ?t=635-->
+  <!--John Osayi says ?t=635-->
 
 ### [11:31](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=691) Directions requests: a phenomenal boost, not spoofable
 
 - Getting people to search the location in maps and request directions is a phenomenal boost.
-  <!--gmbpp member says ?t=691-->
+  <!--James McBride says ?t=691-->
 - James McBride: it has to be real people physically nearby; google knows the phone's location from
   cell towers, so spoofing and bots don't work. He rates it almost as good as reviews.
   <!--James McBride says ?t=691-->
@@ -95,7 +95,7 @@ heat map scans to see where a profile actually ranks.
 - What reviews and the owner's replies mention signals what the profile ranks for: an appliance
   profile whose reviews keep naming refrigerators ranks top three for refrigerator repair, but not for
   dryers. The biggest lever is still two to five reviews a week.
-  <!--gmbpp member says ?t=932-->
+  <!--John Osayi says ?t=932-->
 
 ### [16:01](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=961) Engaging with the profile: posts, products and hacks
 
@@ -106,7 +106,7 @@ heat map scans to see where a profile actually ranks.
 ### [16:31](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=991) LSA spend in a niche
 
 - In niches where competitors pour money into LSA, that spend is a factor in local rankings too.
-  <!--gmbpp member says ?t=991-->
+  <!--John Osayi says ?t=991-->
 
 ### [17:33](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1053) James McBride's own Jobber
 
@@ -121,7 +121,7 @@ heat map scans to see where a profile actually ranks.
   <!--Eric says ?t=1109-->
 - Human activity is making a big difference. Companies sell bots that request directions from local
   people, at a high price. A burst of reviews should help a profile whose ranking dropped.
-  <!--Eric says ?t=1109-->
+  <!--Eric says ?t=1165-->
 
 ### [21:24](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1284) Cleaning: ticket size and job types
 
@@ -138,8 +138,8 @@ heat map scans to see where a profile actually ranks.
 
 - Muhammad makes $300–400 profit per plumbing job; he is told cleaning would make him about
   $150–200 per job, need a new contractor, and be hard to hand to a VA.
-  <!--Muhammad ran ?t=1390-->
-  <!--gmbpp member says ?t=1390-->
+  <!--Muhammad ran ?t=1445-->
+  <!--gmbpp member says ?t=1445-->
 
 ### [25:08](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1508) A new profile outranked: run a heat map scan
 
@@ -182,7 +182,7 @@ heat map scans to see where a profile actually ranks.
 - Kit Volcano made about $3k in the month. HVAC is slow in mild weather; he will rent out his mobile
   auto glass profile at about $500 a month, rank and rent his low-ticket and cleaning ones, and go all
   in on plumbing.
-  <!--Kit Volcano ran ?t=1985-->
+  <!--Kit Volcano ran ?t=2017-->
 
 ### [34:41](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2081) Address over service area, with picky live reps
 
@@ -194,9 +194,9 @@ heat map scans to see where a profile actually ranks.
 - Tested by one person: AI-generate an image of the street sign as it would look at the location,
   laid out with Google Earth, show it on the computer screen in the video, then pull up an invoice and
   turn it away. It was getting approved.
-  <!--Eric heard ?t=2113-->
+  <!--Eric heard ?t=2151-->
 - A member plans to print the sign across two pages instead, and film it on his car.
-  <!--gmbpp member says ?t=2113-->
+  <!--gmbpp member says ?t=2180-->
 
 ### [37:31](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2251) Location spoofers
 
@@ -219,10 +219,10 @@ heat map scans to see where a profile actually ranks.
 ### [41:51](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2511) Reviews in bursts, and real customers' reviews
 
 - A new member asks whether 20 reviews in a day, then nothing, looks unnatural.
-  <!--gmbpp member says ?t=2511-->
+  <!--Alan says ?t=2511-->
 - John Osayi: over seven years only 3% of 5,000 customers left a review. He pays people off Craigslist
   to ask locals for reviews. Fast-growing companies incentivize nearly all of theirs.
-  <!--John Osayi ran ?t=2511-->
+  <!--John Osayi ran ?t=2545-->
 
 ### [45:25](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2725) Rank tracking: Local Falcon, GMB Radar
 
@@ -241,28 +241,28 @@ heat map scans to see where a profile actually ranks.
   <!--gmbpp member ran ?t=2905-->
 - Eric: look at the accounts — no picture and a single review means not real. Have a new reviewer
   leave four or five, then pause to see whether they get deleted.
-  <!--Eric says ?t=2905-->
+  <!--Eric says ?t=2941-->
 
 ### [50:32](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3032) Spam calls on new numbers: CallRail block and challenge
 
 - New numbers draw constant spam calls. In CallRail, settings → block numbers → filter callers by
   category: block robocallers, telemarketers and toll-free numbers, and challenge the rest, which
   makes the caller press a key to connect.
-  <!--gmbpp member says ?t=3032-->
+  <!--gmbpp member says ?t=3120-->
 
 ### [53:50](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3230) Review swaps with business owners: a volume game
 
 - Review swaps with other business owners are pure volume, about two or three reviews an hour — a job
   for a $4-an-hour VA or a bot. Eric knows someone whose bot gets five a day.
-  <!--Eric says ?t=3230-->
+  <!--Eric says ?t=3280-->
 
 ### [55:23](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3323) Instant verification: no codes to VoIP numbers
 
 - Raf gets asked for a text code or a business video. CallRail and Quo numbers don't receive the code;
   it needs a real registered number. Eric doesn't recommend code verifications, which get suspended
   more; the fix is better emails.
-  <!--Raphael D'Angelo ran ?t=3323-->
-  <!--Eric says ?t=3323-->
+  <!--Raphael D'Angelo ran ?t=3351-->
+  <!--Eric says ?t=3382-->
 
 ### [56:49](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3409) Buying emails in bulk
 
@@ -274,7 +274,7 @@ heat map scans to see where a profile actually ranks.
 - A member's five detailing profiles get a few calls but nobody takes the $200–250 package; Eric says
   it is too early to tell.
   <!--gmbpp member ran ?t=3439-->
-  <!--Eric says ?t=3439-->
+  <!--Eric says ?t=3475-->
 
 ### [58:35](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3515) A cut of gross instead of profit
 
@@ -286,25 +286,25 @@ heat map scans to see where a profile actually ranks.
 
 - Solo plumbers looking for work take 40% gladly. Contractors come from Facebook Marketplace,
   contractor groups and Craigslist; an SMS blast got almost nothing, and Indeed is said to work.
-  <!--gmbpp member says ?t=3580-->
+  <!--gmbpp member says ?t=3614-->
 - A member found a contractor through a poorly optimized profile with 44 reviews; a big company he
   had worked with paid for five jobs of eight.
-  <!--gmbpp member ran ?t=3580-->
+  <!--PP ran ?t=3653-->
 
 ### [1:02:47](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3767) Drop-off patterns: keyword-stacked names, AI sites
 
 - Members ask whether keyword-stacked names or AI-built sites explain the drop; profiles with no site
   at all still show up. John Osayi: people search for weeks before they book, so stay on top for the
   long term.
-  <!--John Osayi says ?t=3767-->
-  <!--gmbpp member says ?t=3767-->
+  <!--John Osayi says ?t=3873-->
+  <!--JS says ?t=3767-->
 
 ### [1:05:30](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3930) Holidays, the economy and slow weeks
 
 - John Osayi lives near Salem, where Halloween slows calls; Thanksgiving is good for oven repair. A
   member suspects the economy is hitting the higher-ticket niches.
   <!--John Osayi says ?t=3930-->
-  <!--gmbpp member says ?t=3930-->
+  <!--gmbpp member says ?t=3983-->
 
 ### [1:06:55](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4015) JS: detailing calls gone since September
 
@@ -336,7 +336,7 @@ heat map scans to see where a profile actually ranks.
   <!--Glenn ran ?t=4503-->
 - PP has around 300 reviews over two profiles from giving away drinks, works playgrounds and parks,
   and approaches people under 30.
-  <!--PP ran ?t=4503-->
+  <!--PP ran ?t=4588-->
 
 ### [1:19:30](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4770) A removed review reinstated
 
@@ -350,7 +350,7 @@ heat map scans to see where a profile actually ranks.
   <!--Glenn ran ?t=4795-->
 - PP replies to reviews through Claude, naming a city the business serves; a lead came from that city
   the next day. His reviewers write their text with ChatGPT on their own phones.
-  <!--PP ran ?t=4795-->
+  <!--PP ran ?t=4854-->
 
 ### [1:22:52](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4972) Few reviews, calls anyway: demand matters
 
@@ -361,16 +361,16 @@ heat map scans to see where a profile actually ranks.
 ### [1:24:58](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5098) Live verification: rep roulette, before 12 Eastern
 
 - A member passed six video verifications, then failed six live ones; it depends on the rep.
-  <!--gmbpp member ran ?t=5098-->
+  <!--gmbpp member ran ?t=5118-->
 - PP: call before 12 Eastern, and hang up on a rep with an English name until you get one who isn't.
-  <!--PP says ?t=5098-->
+  <!--PP says ?t=5141-->
 
 ### [1:30:12](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5412) Live calls: dumb excuses, never hang up
 
 - PP: stay calm and move the camera slowly; meet every demand with a dumb excuse, delivered with
   conviction — internet down, employees took the car, invoices are made by an employee who's gone.
   Hanging up leaves a bad impression.
-  <!--PP says ?t=5412-->
+  <!--PP says ?t=5472-->
 
 ### [1:33:39](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5619) PP: the US, and winter emergencies
 
@@ -387,13 +387,13 @@ heat map scans to see where a profile actually ranks.
 
 - Valera offers his deployed tool: a page holding the QR code, the review text to copy, and images to
   attach.
-  <!--Valera says ?t=5883-->
+  <!--Valera says ?t=5908-->
 
 ### [1:39:33](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5973) Getting past AI refusals
 
 - Members find Claude refuses to help; Valera's advice is to build the sketchy part separately or with
   a simpler model.
-  <!--gmbpp member ran ?t=5973-->
+  <!--PP ran ?t=5973-->
   <!--Valera says ?t=5973-->
 
 ### [1:41:28](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6088) Erwin: out-of-state profiles, Craigslist reviewers from Kenya
@@ -406,7 +406,7 @@ heat map scans to see where a profile actually ranks.
 
 - TaskRabbit and Airtasker forbid it in their terms; GigSmart charges a 35–45% fee with W-2 workers in
   California.
-  <!--gmbpp member says ?t=6322-->
+  <!--Erwin says ?t=6322-->
 
 ### [1:48:15](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6495) Review quantity, then local quality
 
@@ -419,12 +419,12 @@ heat map scans to see where a profile actually ranks.
 - A member saves every review with the reviewer's profile link, as evidence for getting a hidden one
   back. Valera's tool already does it, and will request reinstatements automatically.
   <!--gmbpp member ran ?t=6578-->
-  <!--Valera says ?t=6578-->
+  <!--Valera says ?t=6620-->
 
 ### [1:52:20](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6740) Close
 
 - Eric closes the call.
-  <!--Eric says ?t=6740-->
+  <!--Eric says ?t=6789-->
 
 ## open
 

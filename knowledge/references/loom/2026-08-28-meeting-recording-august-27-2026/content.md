@@ -12,58 +12,58 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [00:00](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=0) Call Opens, Catching Up
 
 - Members catch up before the call starts; Julian is posting the call link later than usual.
-  <!--gmbpp member says ?t=0-->
+  <!--Eric says ?t=0-->
 
 ### [00:48](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=48) Hiring Reviewers: Craigslist Beats Facebook
 
 - David asks Devin how to hire people to leave reviews; Facebook Marketplace has been slow, Craigslist converts better.
-  <!--Devin Grandt ran ?t=48-->
+  <!--Devin Grandt ran ?t=94-->
 - Calling gets a higher response rate than texting; Craigslist responders are told to email, then give a phone number for texted details.
-  <!--Devin Grandt says ?t=48-->
+  <!--Devin Grandt says ?t=137-->
 - Facebook geo groups are worth trying alongside Craigslist; Meta Ads is the fallback if Craigslist doesn't produce candidates.
-  <!--Devin Grandt says ?t=48-->
+  <!--Devin Grandt says ?t=237-->
 
 ### [04:27](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=267) Incentivizing Reviewers with Candy and a QR Code
 
 - Hired reviewers are given a small candy (Skittles, Starburst) and shown a QR code rather than being told what to praise, to avoid looking like a scam.
   <!--Devin Grandt says ?t=267-->
 - Reviewers should write a short, generic compliment; SEO-optimized long reviews come from a separate Gmail-based method with spoofed location.
-  <!--Devin Grandt says ?t=267-->
+  <!--Devin Grandt says ?t=303-->
 
 ### [05:37](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=337) Boosting and Spamming Facebook Marketplace for Hires
 
 - Boosting Marketplace posts is expensive (~$2/message) and not worth it compared to Craigslist.
   <!--Devin Grandt says ?t=337-->
 - A better approach: buy ~20 Marketplace accounts and post several "I need employees ASAP" listings per account per day, slowly.
-  <!--Devin Grandt says ?t=337-->
+  <!--Devin Grandt says ?t=410-->
 
 ### [07:21](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=441) Screen-share: Critiquing a Job-listing Post
 
 - A member shares his draft Marketplace hiring post; the group suggests removing "student" to widen the target demographic and using a native-looking UGC photo instead of a text-heavy graphic.
-  <!--gmbpp member says ?t=441-->
+  <!--gmbpp member says ?t=548-->
 - Suggested image ideas: a person holding Skittles near a mall, tested against other variants.
-  <!--gmbpp member says ?t=441-->
+  <!--gmbpp member says ?t=575-->
 
 ### [10:43](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=643) Verifying a "Permanent" Sign with ChatGPT
 
 - Recommendation: don't use a loose paper sign; make a decent-looking, semi-permanent sign and photograph it.
-  <!--gmbpp member says ?t=643-->
+  <!--Eric says ?t=643-->
 - Trick: send the photo to ChatGPT and ask if it looks like paper or permanent signage before using it for verification.
-  <!--gmbpp member says ?t=643-->
+  <!--Eric says ?t=643-->
 
 ### [11:47](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=707) Greg: Getting Reviews on a Freshly Verified Profile
 
 - Greg just got a profile verified via a coworking space and asks the best way to start collecting reviews.
   <!--Greg ran ?t=707-->
 - Consensus: hiring someone to collect reviews is the easiest method; the "stand method" (an in-person stand asking passersby) works well for locals.
-  <!--gmbpp member says ?t=707-->
+  <!--gmbpp member says ?t=755-->
 
 ### [13:07](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=787) Pricing Hired Reviewers per Review
 
 - Suggested pay structure: pay per review collected (e.g. ~$2.50–$4/review), framed to the hire as an hourly rate ($40+/hour for volume) rather than a flat wage.
-  <!--gmbpp member says ?t=787-->
+  <!--gmbpp member says ?t=849-->
 - No hard cap on daily review volume; one member's hire got 80 reviews in a day with only ~5 removed.
-  <!--gmbpp member ran ?t=787-->
+  <!--gmbpp member ran ?t=849-->
 
 ### [14:34](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=874) Derek: Reusing Gmail Accounts Across Niches
 
@@ -75,9 +75,9 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [15:12](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=912) Reviews Don't Stick from Reviewers Out of Area
 
 - A member questions a hired reviewer's claim of getting reviews to stick from out-of-state; the group agrees distant reviews get removed within one to two weeks.
-  <!--gmbpp member says ?t=912-->
+  <!--gmbpp member says ?t=948-->
 - Reviews need to come from roughly within a 30–50 mile radius of the listed address to hold.
-  <!--gmbpp member says ?t=912-->
+  <!--gmbpp member says ?t=990-->
 
 ### [17:30](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=1050) Zach: Follower Growth vs. Views as a Vanity Metric
 
@@ -89,7 +89,7 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 - Zach's $297 offer (website, GMB optimization, follow-up systems) draws leads who already have that in place and want more advanced SEO.
   <!--Zach Peterson ran ?t=1115-->
 - After learning a peer marketer charges far more for similar work, Zach is considering building a higher-ticket upsell service.
-  <!--Zach Peterson ran ?t=1115-->
+  <!--Zach Peterson ran ?t=1166-->
 
 ### [20:44](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=1244) Zach's Landscaping Case Study Origin
 
@@ -99,7 +99,7 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [22:41](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=1361) Platform Bans and Diversifying off Instagram
 
 - Discussion of how easily social accounts get taken down; Zach is building up TikTok and other platforms as a hedge, having found Eric originally through Instagram.
-  <!--Zach Peterson says ?t=1361-->
+  <!--Zach Peterson says ?t=1398-->
 
 ### [24:37](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=1477) Owning Your Own Business vs. One Bad Month with a Client
 
@@ -109,16 +109,16 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [25:46](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=1546) Answering Your Own Calls vs. Hiring a VA
 
 - Zach answers his own landscaping calls since jobs are high-ticket and infrequent; he'd hire a VA for a higher-volume, lower-ticket niche like cleaning or lawn care.
-  <!--Zach Peterson ran ?t=1546-->
+  <!--Zach Peterson ran ?t=1566-->
 - Water softening/filtering is floated as a niche similar to what Eric teaches.
-  <!--gmbpp member says ?t=1546-->
+  <!--Greg says ?t=1566-->
 
 ### [27:02](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=1622) Greg: What Changed Between a Rejected and Approved Verification
 
 - Greg's first manual-verification attempt got the profile suspended; on re-appeal via video verification he showed the street sign and phone board more thoroughly, added a DBA registration, and included an office lease and invoice on camera.
-  <!--Greg ran ?t=1622-->
+  <!--Greg ran ?t=1656-->
 - His permanent sign was a foam-board sign from FedEx, taped to the wall.
-  <!--Greg ran ?t=1622-->
+  <!--Greg ran ?t=1680-->
 
 ### [28:24](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=1704) Selling Water-damage Leads vs. Building a Personal Brand
 
@@ -128,7 +128,7 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [29:16](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=1756) Recording Profile Variations at Once to Hedge Rejections
 
 - Suggestion: reuse the same signage to record three name-variant profiles at once in one visit, so a rejected video still leaves two backups.
-  <!--gmbpp member says ?t=1756-->
+  <!--Eric says ?t=1756-->
 
 ### [29:44](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=1784) Aged Accounts: When It's Safe to Start Listing Profiles
 
@@ -152,7 +152,7 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 - Zach reports around $150k in closed project value so far but hasn't tracked actual profit or confirmed payment from the contractor he partners with.
   <!--Zach Peterson ran ?t=2001-->
 - His cut is roughly 20% of the contractor's profit margin (e.g. ~$15,000 on a $70,000 retaining-wall job at ~20% margin).
-  <!--Zach Peterson ran ?t=2001-->
+  <!--Zach Peterson ran ?t=2054-->
 
 ### [34:48](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=2088) Collecting Large Payments Without a Payment Processor
 
@@ -162,14 +162,14 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [37:21](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=2241) Instant vs. Phone vs. Email Verification Odds
 
 - Ranked reliability: instant verification (~90% success) > phone code (~75%) > email code (not recommended).
-  <!--gmbpp member says ?t=2241-->
+  <!--Eric says ?t=2283-->
 - A real phone number tied to a carrier (e.g. ~$20 for one, or ~$0.50 for a one-time text code) is needed for phone verification to work.
-  <!--gmbpp member says ?t=2241-->
+  <!--gmbpp member says ?t=2358-->
 
 ### [40:25](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=2425) Design-build vs. Maintenance Landscaping Work
 
 - Zach's work is mostly full design-and-build installs (e.g. two pool quotes over $100k) rather than maintenance, which would have a shorter, easier sales cycle; the landscaping company subcontracts pool design out.
-  <!--Zach Peterson ran ?t=2425-->
+  <!--Zach Peterson ran ?t=2469-->
 
 ### [43:34](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=2614) Snow Removal as an Underused Seasonal Niche
 
@@ -185,9 +185,9 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [47:14](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=2834) Faking Reinstatement Documents After Suspension
 
 - A member describes photographing (not directly uploading) printed reinstatement documents to get a suspended profile reinstated for re-verification.
-  <!--gmbpp member ran ?t=2834-->
+  <!--gmbpp member ran ?t=2856-->
 - Advice to keep each profile on a separate email — connecting one email to two profiles got both suspended.
-  <!--gmbpp member says ?t=2834-->
+  <!--gmbpp member says ?t=2889-->
 
 ### [49:17](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=2957) Chris: Reviews Needed to Rank a Plumbing Profile
 
@@ -202,7 +202,7 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [52:11](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=3131) Profits from Australian End-of-lease Cleaning
 
 - A cleaning operator pays subcontractors a flat rate (~$300) per job and charges clients (~$500), profiting roughly $10-15k/month; Australia's service-area profiles are described as low-competition relative to search volume.
-  <!--gmbpp member ran ?t=3131-->
+  <!--Chris ran ?t=3131-->
 
 ### [55:01](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=3301) Glenn: Setting Up Texting Through CallRail
 
@@ -217,7 +217,7 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [58:20](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=3500) Spacing Profiles Apart and Category-name Removals
 
 - Spreading multiple profiles miles apart helps them each rank for nearby searchers; one member reports Google periodically stripping business-name keywords and getting verification phone calls questioning the business.
-  <!--gmbpp member ran ?t=3500-->
+  <!--Chris ran ?t=3500-->
 
 ### [1:00:13](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=3613) Aged Domain Email vs. an Aged Gmail for GMB
 
@@ -247,7 +247,7 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [1:10:52](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=4252) Owning a GMB Profile vs. Depending on One Client
 
 - The group agrees the underlying skills (client management, negotiation) are the same at any price point, but owning your own GMB profile earns more per "client" (contractor) and isn't as exposed to a single client's churn.
-  <!--gmbpp member says ?t=4252-->
+  <!--Zach Peterson says ?t=4252-->
 
 ### [1:12:24](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=4344) Growing Content on Twitter and Instagram
 
@@ -257,37 +257,37 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [1:13:56](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=4436) Future Goal: Performance-based Partnerships
 
 - Frustrated by constant ad creation and ad fatigue, one member's long-term goal is to find a few trusted contractors and work purely on a performance/commission basis instead of a flat retainer.
-  <!--gmbpp member says ?t=4436-->
+  <!--Zach Peterson says ?t=4436-->
 
 ### [1:16:46](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=4606) Setup Fee Plus Commission Structure
 
 - Current model: a $3-4k one-time setup fee for GMB/website work, plus a roughly 10% commission on jobs tracked through call tracking.
-  <!--gmbpp member ran ?t=4606-->
+  <!--Greg ran ?t=4636-->
 
 ### [1:18:33](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=4713) Optimizing Existing Profiles vs. Building New Ones
 
 - Client services are framed as either optimizing an existing GMB profile or creating and multiplying new ones for the client's business.
-  <!--gmbpp member says ?t=4713-->
+  <!--Greg says ?t=4713-->
 
 ### [1:19:17](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=4757) Verifying Profiles for Out-of-area Clients
 
 - For non-local clients, the sales approach is to tell them upfront what office/video verification will be required and let the client (or their local resource) execute it.
-  <!--gmbpp member says ?t=4757-->
+  <!--Greg says ?t=4778-->
 
 ### [1:21:26](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=4886) Charging Upfront vs. Waiting on Commission
 
 - Charging an upfront setup fee is preferred over pure commission, since commission-only clients (some taking 3+ months to pay) create cash-flow uncertainty.
-  <!--gmbpp member says ?t=4886-->
+  <!--Greg says ?t=4886-->
 
 ### [1:22:58](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=4978) Frustration with Client Churn After Big Wins
 
 - A member recounts a client who generated ~$800k in work off ~$10k of ad spend over a year but still churned after one slower month, reinforcing the appeal of owning profiles directly instead of relying on client goodwill.
-  <!--gmbpp member ran ?t=4978-->
+  <!--Greg ran ?t=4978-->
 
 ### [1:25:37](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=5137) GMB Skills as a Stepping Stone to Bigger Offers
 
 - The group frames GMB profile creation as a transferable skill: it can become content, proof for higher-ticket offers, or direct income via owned profiles, unlike low-ticket outreach clients who are hard to retain.
-  <!--gmbpp member says ?t=5137-->
+  <!--Zach Peterson says ?t=5137-->
 
 ### [1:28:39](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=5319) What Eric's Business Looks Like Now
 
@@ -297,17 +297,17 @@ This is a weekly group call in Eric's Google Business Profile (GMB) coaching com
 ### [1:29:16](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=5356) How Long the Opportunity Window Stays Open
 
 - On whether Google will keep cracking down on verification: staying fully legitimate (real office, lease, DBA per profile) is seen as the way to stay durable regardless of tightening rules.
-  <!--gmbpp member says ?t=5356-->
+  <!--Greg says ?t=5385-->
 
 ### [1:31:26](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=5486) Selling GMB Services: Optimize vs. Multiply Profiles
 
 - Sales pitch is framed two ways: helping a business with no GMB leads get optimized, or helping an already-optimized business multiply into more profiles (each needing its own DBA and lease).
-  <!--gmbpp member says ?t=5486-->
+  <!--Greg says ?t=5486-->
 
 ### [1:32:55](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=5575) Pitching a Done-for-you High-ticket Model
 
 - One member is moving toward a $10-15k done-for-you offer (handling office setup and verification directly) for larger companies, needing more proof of results (e.g. from a $50-250k roofing job) before charging that much.
-  <!--gmbpp member says ?t=5575-->
+  <!--Greg says ?t=5575-->
 
 ### [1:34:51](https://www.loom.com/share/6512424c5abc43148b1803ba7dbb664e?t=5691) Closing Remarks
 

@@ -68,7 +68,7 @@ verifications. Grisha is to have another profile and 40 reviews on each by next 
 - Eric suggests just making a new gmail with a TextVerified number.
   <!--Eric says ?t=526-->
 - A member splits a batch: some on his setup, one or two in a normal browser, to tell whether the gmails or the proxy are at fault; another loses one or two in ten with Multilogin.
-  <!--gmbpp member ran ?t=526-->
+  <!--gmbpp member ran ?t=624-->
 
 ### [11:02](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=662) Warming a bought gmail before changing its password
 
@@ -86,14 +86,14 @@ verifications. Grisha is to have another profile and 40 reviews on each by next 
 - Gabe has 50–60 profiles, each owned by its own email inside one free Google Workspace, every email verified with TextVerified, and no suspensions he did not cause in over a year.
   <!--Gabe Jacobs ran ?t=796-->
 - He keeps to lower-risk niches; locksmith and plumbing are high-risk. Others point out the Workspace is a single point of failure.
-  <!--Gabe Jacobs says ?t=796-->
-  <!--gmbpp member says ?t=796-->
+  <!--Gabe Jacobs says ?t=848-->
+  <!--gmbpp member says ?t=930-->
 
 ### [16:10](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=970) Spoofed Android phones as separate islands
 
 - Gabe knows someone who spoofs a ~$100 Android, puts 10 emails and 10 profiles on it, and never uses it again; an iPhone can be spoofed from a computer, and Eric has a walkthrough.
-  <!--Gabe Jacobs heard ?t=970-->
-  <!--Eric says ?t=970-->
+  <!--Gabe Jacobs heard ?t=930-->
+  <!--Gabe Jacobs says ?t=1001-->
 
 ### [18:45](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1125) A one-star review so the rest stick
 
@@ -110,7 +110,7 @@ verifications. Grisha is to have another profile and 40 reviews on each by next 
 - Eric has only seen aged gmails instantly verify once warmed up; he uses real people's accounts, paying them on Facebook Marketplace.
   <!--Eric says ?t=1381-->
 - A member got good gmails for $20 by asking a friend for one "to start a YouTube channel".
-  <!--gmbpp member ran ?t=1381-->
+  <!--gmbpp member ran ?t=1414-->
 
 ### [24:15](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1455) Cleaning's season, and hiring people who stop
 
@@ -182,20 +182,20 @@ verifications. Grisha is to have another profile and 40 reviews on each by next 
 
 - Austin asks about high schools; Eric says avoid them, though a public spot across the street is fair. Others suggest a liquor store clerk's network and public transport.
   <!--Eric says ?t=2467-->
-  <!--gmbpp member says ?t=2467-->
+  <!--Austin heard ?t=2508-->
 
 ### [42:37](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2557) Henry's campus method: a cooler, groups, and his dad's business
 
 - Henry goes to the same university for two weeks, walks around with a cooler of drinks, and picks groups of five to ten rather than individuals.
-  <!--Henry A ran ?t=2557-->
+  <!--Henry A ran ?t=2617-->
 - He says it is for his dad's business, so people are kinder and write nothing stupid; another member sets up a table among student clubs with QR codes for every profile.
-  <!--Henry A ran ?t=2557-->
-  <!--gmbpp member ran ?t=2557-->
+  <!--Henry A ran ?t=2660-->
+  <!--gmbpp member ran ?t=2688-->
 
 ### [46:32](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2792) Walking up to groups with nothing to hand out
 
 - An Australian member walks up to groups of five or six with nothing to give, compliments them, and asks them to help a young entrepreneur.
-  <!--gmbpp member ran ?t=2792-->
+  <!--gmbpp member ran ?t=2825-->
 
 ### [49:07](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=2947) Where to find review-getters: the homeless, international students
 
@@ -211,14 +211,14 @@ verifications. Grisha is to have another profile and 40 reviews on each by next 
 
 - A member's review-getter left reviews from the same gmail across six profiles, and Google removed half. Eric: those reviews get deleted, the profiles are fine.
   <!--gmbpp member ran ?t=3118-->
-  <!--Eric says ?t=3118-->
+  <!--Eric says ?t=3210-->
 
 ### [54:35](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3275) Catching him by QR scan times, and local guide levels
 
 - The member's Codex-built app times each QR code from generation to scan; scans 42 seconds apart showed one person making accounts himself.
   <!--gmbpp member ran ?t=3275-->
 - Level 5 local guides are the real ones; level 1 accounts with one review are the suspect ones. He pays only for non-duplicates and moves to weekly pay.
-  <!--gmbpp member ran ?t=3275-->
+  <!--gmbpp member ran ?t=3338-->
 
 ### [58:30](https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=3510) Booking a lead on the spot
 

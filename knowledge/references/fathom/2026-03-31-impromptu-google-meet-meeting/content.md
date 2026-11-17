@@ -44,14 +44,14 @@ An impromptu group call among service-business owners (plumbing, electrical, ins
 - Devin has been running GMB profiles for two months: initially about one job/day (~$600), but leads and reviews dropped off sharply in the past week.
   <!--Devin Grandt ran ?t=874-->
 - Checking rank in the evening can be misleading — competitors may be closed, skewing the "check position" search.
-  <!--gmbpp member says ?t=874-->
+  <!--gmbpp member says ?t=1133-->
 
 ### [15:49](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=949) Fast review-gathering tactics
 
 - Eric mentioned a contact ("Cole") who got ~70 Google reviews in 30 minutes by offering free energy drinks (or beer, in another member's case) to students at a public college campus in exchange for a QR-code review.
   <!--Eric heard ?t=949-->
 - Cheaper alternatives (Diet Coke instead of Celsius/energy drinks) get the same effect for less cost; public campuses are considered fair game, private ones are not.
-  <!--gmbpp member says ?t=949-->
+  <!--Art Khan says ?t=1004-->
 
 ### [18:29](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1109) Profile counts and locations
 
@@ -59,16 +59,17 @@ An impromptu group call among service-business owners (plumbing, electrical, ins
   <!--Eric ran ?t=1109-->
   <!--gmbpp member ran ?t=1109-->
 - Devin has 8 service-area profiles ranked #1-2 on his phone but was getting zero calls; the group suspected he was checking rank at times when competitors were closed.
-  <!--Devin Grandt ran ?t=1109-->
+  <!--Devin Grandt ran ?t=1133-->
 
 ### [20:10](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1210) Live GMB profile audits
 
 - Art offered live GMB audits on screen share; Devin and Luke volunteered profiles (Luke's "Insulation Done Right, Ottawa").
   <!--Art Khan ran ?t=1210-->
 - An aged, dormant GMB listing can get auto-verified without the usual video-verification step.
-  <!--gmbpp member says ?t=1210-->
+  <!--Art Khan says ?t=1249-->
 - Local Falcon and incognito-mode rank checks are both still biased by device location; being consistently in the top three matters more than any single rank check.
-  <!--gmbpp member says ?t=1210-->
+  <!--Luke Silver says ?t=1358-->
+  <!--Eric says ?t=1390-->
 
 ### [23:44](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=1424) Best niches to target
 
@@ -118,14 +119,15 @@ An impromptu group call among service-business owners (plumbing, electrical, ins
 ### [33:26](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2006) Reviews that stick vs. get deleted
 
 - Reviews are more likely to stick if they come from accounts that are non-local (out of state but still in-country — Google only checks country, not state), and from accounts that have never left a review before and are at least a year old.
-  <!--gmbpp member says ?t=2006-->
+  <!--Art Khan says ?t=2028-->
+  <!--Devin Grandt says ?t=2042-->
 
 ### [34:19](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2059) Selling calls to publishers
 
 - Beyond partnering with contractors, members can monetize excess leads by forwarding calls to pay-per-call publishers (elocal.com, ServiceDirect.com, Ringba.com), which pay per qualified call — e.g. ~$30-50/plumbing call, ~$100/water-damage call — deposited directly, fully passive.
-  <!--gmbpp member says ?t=2059-->
+  <!--Art Khan says ?t=2126-->
 - This lets someone run profiles in markets where they have no local operator at all — they never manage the underlying job, only sell the call.
-  <!--gmbpp member says ?t=2059-->
+  <!--Art Khan says ?t=2059-->
 
 ### [37:20](https://fathom.video/share/Y1jPUhCBxGNW8KjsrwE4P29LC4gbkPYR?t=2240) Post-construction cleanup niche
 

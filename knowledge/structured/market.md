@@ -20,8 +20,3 @@ under [niches/](market/niches/). the city: [city](market/city.md).
   - (?) (!) google local service ads are no longer worth buying — `Ilya`
     > then: $20/call, 50% signed, 1 in 4 went recurring. now: $60–70/call, 1 in 10 recurring. this is why he is moving back to organic GMBs
     <!--2026-09-18 Ilya ran https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5075-->
-
-## open
-
-- Q: city first and then the trade inside it, or the trade first? the old guide had "pick the city by the two numbers above, and only then the trade inside it // inferred"; Eric judges the service first
-- Q: "a niche that won't fulfil still makes calls. sell them rather than drop them // inferred" — against Eric's "a lead nobody can fulfil is worth nothing", unless someone buys it

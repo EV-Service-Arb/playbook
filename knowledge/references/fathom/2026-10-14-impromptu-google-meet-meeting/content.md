@@ -25,14 +25,14 @@ and agree to trade code and connect each other with the people they named.
 - Sumit could not go out locally for four months, so his VA posted reviews from aged emails. They
   were deleted the next day, yet still pushed already-ranking profiles up: where everyone has ~20
   reviews, the one with the most velocity stays on top.
-  <!--Sumit ran ?t=1-->
+  <!--Sumit ran ?t=9-->
 - That made him about $3K a month; he is now going to his local mall and college for reviews again.
-  <!--Sumit ran ?t=1-->
+  <!--Sumit ran ?t=9-->
 - Valera wants to bootstrap from reviews within his city, or cheap ones, before spending on
   experiments. Sumit thinks nobody in the group is beating Google remotely, and would put $2K into
   marketplace ads and paying people instead.
-  <!--Valera says ?t=1-->
-  <!--Sumit says ?t=1-->
+  <!--Valera says ?t=108-->
+  <!--Sumit says ?t=159-->
 
 ### [03:40](https://fathom.video/share/rsnb2zCYakzpPS3Yt4_dbh8oB4aqMHu-?t=220) Live verification: spoofing, and picking a spot with no street view
 
@@ -100,8 +100,8 @@ and agree to trade code and connect each other with the people they named.
 - Valera objects that leads from ads are outbid by those advertising for themselves; Sumit explains
   that an ad account's pixel builds its own sub-market over time, so an old account gets leads more
   easily.
-  <!--Valera says ?t=1290-->
-  <!--Sumit says ?t=1290-->
+  <!--Valera says ?t=1323-->
+  <!--Sumit says ?t=1336-->
 
 ### [25:06](https://fathom.video/share/rsnb2zCYakzpPS3Yt4_dbh8oB4aqMHu-?t=1506) Detour: degrees, finance jobs, the visa
 
@@ -121,8 +121,8 @@ and agree to trade code and connect each other with the people they named.
   <!--Valera heard ?t=2139-->
 - Sumit tried paying per review and people found it too abstract; he now offers $25 an hour with a
   quota of 10. Valera has not found a serious taker yet; a plain, unedited ad image is his advice.
-  <!--Sumit ran ?t=2139-->
-  <!--Valera ran ?t=2139-->
+  <!--Sumit ran ?t=2168-->
+  <!--Valera ran ?t=2179-->
 
 ### [37:06](https://fathom.video/share/rsnb2zCYakzpPS3Yt4_dbh8oB4aqMHu-?t=2226) Keeping reviews out of the ad's text
 
@@ -137,7 +137,7 @@ and agree to trade code and connect each other with the people they named.
   <!--Sumit says ?t=2311-->
 - On Facebook Marketplace, many contractors did not show up, and listings with a photo of a woman
   are people in India running the same play.
-  <!--Sumit ran ?t=2311-->
+  <!--Sumit ran ?t=2359-->
 
 ### [40:25](https://fathom.video/share/rsnb2zCYakzpPS3Yt4_dbh8oB4aqMHu-?t=2425) AI answering calls
 

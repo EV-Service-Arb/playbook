@@ -42,7 +42,7 @@ member's profile that lost most of its reviews after posting them too fast.
   <!--Devin Grandt ran ?t=277-->
 - He rebuilt with office verifications, brought the Craigslist-hiring idea to Lucas, but struggles
   to keep hired people around past a day.
-  <!--Devin Grandt ran ?t=277-->
+  <!--Devin Grandt ran ?t=318-->
 
 ### [06:36](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=396) Switching Service-Area Listings to an Address: Aging and Device Limits
 
@@ -52,12 +52,12 @@ member's profile that lost most of its reviews after posting them too fast.
 - Rule of thumb from Devin and James: a listing needs to be aged at least a month and trusted by
   Google; only two switches per location/device before the verification rate drops sharply (90%,
   then 80%).
-  <!--Devin Grandt says ?t=396-->
-  <!--James McBride says ?t=396-->
+  <!--Devin Grandt says ?t=426-->
+  <!--James McBride says ?t=462-->
 - Devin got 11 straight switches through on aged (2-month) GMBs in an awful area; testing across
   plumbing, water damage restoration, and concrete niches all worked for him, though water damage
   is hard regardless of niche.
-  <!--Devin Grandt ran ?t=396-->
+  <!--Devin Grandt ran ?t=497-->
 
 ### [09:54](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=594) Melo's Update: Plumbing vs. Detailing Lead Volume
 
@@ -71,45 +71,45 @@ member's profile that lost most of its reviews after posting them too fast.
   analyzed.
   <!--gmbpp member says ?t=624-->
 - Some results seem random: identical-looking videos pass for some and fail for others.
-  <!--gmbpp member says ?t=624-->
+  <!--gmbpp member says ?t=690-->
 - Active tests: setting the service area to the whole USA before verifying; setting the service
   area elsewhere while recording at the true mailing address; and setting the service area where
   you are but listing the address somewhere else entirely.
-  <!--gmbpp member says ?t=624-->
+  <!--gmbpp member says ?t=690-->
 - Processing times have stretched from a few hours to multiple days (one member: 10 days for 8
   submissions).
-  <!--gmbpp member ran ?t=624-->
+  <!--gmbpp member ran ?t=770-->
 
 ### [14:03](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=843) Location Permissions and Browser Settings While Recording
 
 - One member's five plumbing profiles all got rejected despite recording at the real location;
   discussion of whether browser location-permission prompts (allow/deny) affect verification —
   consensus is it doesn't matter once the setting is already configured.
-  <!--gmbpp member ran ?t=843-->
+  <!--gmbpp member ran ?t=873-->
 
 ### [14:59](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=899) Ryan's Update: From Deck and Fence to Plumbing
 
 - Ryan shifted focus to plumbing; last verification was three weeks ago. Of 12 listings, two have
   ~50 and ~41 reviews respectively but lost several reviews this week and aren't producing leads as
   expected.
-  <!--Ryan D ran ?t=899-->
+  <!--Ryan D ran ?t=947-->
 - His NYC-borough profiles sit in a high-volume (~25,000 SEMrush) but highly competitive market,
   pulling roughly one to two leads every two days.
-  <!--Ryan D ran ?t=899-->
+  <!--Ryan D ran ?t=977-->
 
 ### [17:22](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1042) Is It Worth Pushing More Reviews? Cost-Benefit by Ranking Position
 
 - Eric's framework: if you're a small review gap away from the profiles above you, pushing more
   reviews makes sense; if the gap is huge, it doesn't. Aim to get a profile to the low end of what's
   rankable, then evaluate from there.
-  <!--Eric says ?t=1042-->
+  <!--Eric says ?t=1066-->
 
 ### [18:47](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1127) Live Ranking Check: Brooklyn Plumber Co Heat Map
 
 - The group live-checks Ryan's "Brooklyn Plumber Co," ranking 2nd for "Plumber Brooklyn," and runs a
   heat map showing top-3 rankings roughly 2–2.5 miles out in every direction — a good, residential
   spread that looked similar before a batch of reviews got deleted.
-  <!--Ryan D ran ?t=1127-->
+  <!--Ryan D ran ?t=1162-->
 
 ### [20:33](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1233) Verifying US Profiles From Overseas
 
@@ -129,12 +129,12 @@ member's profile that lost most of its reviews after posting them too fast.
 - Test 1: set the service area to the whole country.
   <!--gmbpp member says ?t=1349-->
 - Test 2: record at the true mailing address but list the service area elsewhere.
-  <!--gmbpp member says ?t=1349-->
+  <!--gmbpp member says ?t=1375-->
 - Test 3: record and list the service area where you are, but use an address outside that area.
-  <!--gmbpp member says ?t=1349-->
+  <!--gmbpp member says ?t=1375-->
 - Spoofed location alone was already tested and failed, confirming the video itself is analyzed.
   Adding a missing place as a local guide is also mentioned as a solid way to get profiles up.
-  <!--gmbpp member says ?t=1349-->
+  <!--gmbpp member says ?t=1419-->
 
 ### [24:48](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1488) Pitching Reviewers on Indeed: What to Tell Them
 
@@ -142,14 +142,14 @@ member's profile that lost most of its reviews after posting them too fast.
   instead frames it as being a "brand ambassador," using a Claude-built form that routes anything
   under four stars to a thank-you page and four-plus stars to the actual Google review page, so the
   person doing the asking never sees the business profile directly.
-  <!--gmbpp member ran ?t=1488-->
+  <!--gmbpp member ran ?t=1511-->
 
 ### [26:15](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1575) Snacks vs. No Snacks: A Reviewer Incentive A/B Test
 
 - Giving out full-size Skittles ($1 items) got 50 reviews with no complaints; giving out cheap
   Starbursts the next day got far fewer reviews plus two one-star reviews and reports — though
   results are treated as anecdotal and niche/person-dependent.
-  <!--gmbpp member ran ?t=1575-->
+  <!--Devin Grandt ran ?t=1655-->
 
 ### [28:16](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1696) Lucas's Hands-Off Method: Just Hiring People to Ask
 
@@ -169,13 +169,13 @@ member's profile that lost most of its reviews after posting them too fast.
   number" filters; another member says the press-1/2 filter fixed it for him, but it hasn't worked
   for Melo.
   <!--Melo ran ?t=1782-->
-  <!--gmbpp member says ?t=1782-->
+  <!--gmbpp member says ?t=1810-->
 
 ### [30:45](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1845) Address Verification Requires Storefront Signage, Not Just a Car
 
 - Confirmed: an address-based (not service-area) verification specifically requires storefront
   signage — showing a car isn't sufficient the way it can be for service-area videos.
-  <!--gmbpp member says ?t=1845-->
+  <!--Eric says ?t=1877-->
 
 ### [32:00](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=1920) The New Zealand Guy's Verification Method: Random Building and Papers
 
@@ -183,18 +183,18 @@ member's profile that lost most of its reviews after posting them too fast.
   instant-verified profiles: he stuck printed papers on a random building's exterior, never went
   inside, and got verified — shown at 1.5x speed with the address confirmed as a real building
   ("Anvers Film").
-  <!--Eric heard ?t=1920-->
+  <!--Eric heard ?t=1949-->
 
 ### [34:49](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2089) Feeding a Pre-Recorded Video Into the Camera (Pixel Method)
 
 - A separate method surfaced in another Skool group: "feeding to the camera" — piping a
   pre-recorded or AI-stitched video into the phone's live camera feed instead of actually recording,
   reportedly only working on Google Pixel phones (Pixel 7 and up).
-  <!--gmbpp member heard ?t=2089-->
+  <!--gmbpp member heard ?t=2141-->
 - Process as described: root the Pixel, install GrapheneOS, connect to a laptop or cloud server via
   USB or the cloud, and use one of several paid apps to feed the video in; once triggered, the camera
   view loops the fed video as if live, including for photos/snapshots.
-  <!--gmbpp member heard ?t=2089-->
+  <!--gmbpp member heard ?t=2209-->
 
 ### [37:56](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2276) What GrapheneOS Actually Does
 
@@ -203,21 +203,21 @@ member's profile that lost most of its reviews after posting them too fast.
   <!--gmbpp member says ?t=2276-->
 - Theoretical capacity: up to 62–65 profiles per phone stock, or 30–34 after rooting and installing
   GrapheneOS, per forum research (untested by the speaker).
-  <!--gmbpp member says ?t=2276-->
+  <!--gmbpp member says ?t=2316-->
 
 ### [39:15](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2355) Card Detailing Email Verification via a Hostinger Domain
 
 - Hayden's method (via a contact in Orange County, California): buy a domain and get the free
   email that comes with it from Hostinger, then use that professional email address for the email-code
   verification path — reportedly worked ~99% of the time for card-detailing profiles.
-  <!--gmbpp member heard ?t=2355-->
+  <!--gmbpp member heard ?t=2392-->
 
 ### [40:45](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2445) Clarifying What Root Access and Graphene Enable
 
 - Clarification: rooting (available on any Android phone) is what enables feeding a pre-recorded
   video to the camera via a developer setting; GrapheneOS itself isn't required for that trick — its
   role is isolating up to 30–34 separate device-like profiles.
-  <!--gmbpp member says ?t=2445-->
+  <!--gmbpp member says ?t=2505-->
 
 ### [42:29](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2549) Why Video Verification Works, and a Member's Low-Ranking New Profile
 
@@ -226,7 +226,7 @@ member's profile that lost most of its reviews after posting them too fast.
   <!--gmbpp member says ?t=2549-->
 - One member reports very low search volume (~1K/month) and no ranking yet on a new address-based
   profile that still lacks reviews.
-  <!--gmbpp member ran ?t=2549-->
+  <!--gmbpp member ran ?t=2622-->
 
 ### [44:36](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2676) G's Grind: Door-to-Door Reviews From a Remote Connecticut Town
 
@@ -237,7 +237,7 @@ member's profile that lost most of its reviews after posting them too fast.
 - Day one: ~7-8 reviews. Day two: an ambulance call interrupted one location, rain forced a move,
   the phone died, and the day ended with only 2 reviews after ~$34 in Uber fares and roughly 4-5
   hours of effort.
-  <!--Grisha G ran ?t=2676-->
+  <!--Grisha G ran ?t=2853-->
 
 ### [48:00](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2880) Luca's Houston Contact and Uber Math
 
@@ -250,7 +250,7 @@ member's profile that lost most of its reviews after posting them too fast.
 - Asked whether Jeremiah (doing ~10 videos/month for three months) plans to automate with an EA:
   at roughly $10K/month in an HVAC-type niche, call volume (~5 leads/day) isn't high enough yet to
   justify it.
-  <!--gmbpp member says ?t=2905-->
+  <!--Eric says ?t=2940-->
 
 ### [49:20](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=2960) New Member's First Plumbing Job, 20 Days In
 
@@ -282,7 +282,7 @@ member's profile that lost most of its reviews after posting them too fast.
   <!--Devin Grandt says ?t=3240-->
 - Whether GMB switching luck depends on phone/device is unclear; some members (like Devin) seem to
   get unusually high switch success regardless.
-  <!--gmbpp member says ?t=3240-->
+  <!--Devin Grandt says ?t=3275-->
 
 ### [56:01](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3361) Buying Phone Numbers From PVAX Store
 
@@ -291,7 +291,7 @@ member's profile that lost most of its reviews after posting them too fast.
   unlike most alternatives. Luca reports buying batches of 20, then 13 replacements, then 50, with
   the third batch being fully clean (US IP).
   <!--gmbpp member says ?t=3361-->
-  <!--Luca ran ?t=3361-->
+  <!--Luca ran ?t=3398-->
 
 ### [57:17](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3437) Luca's Process: Handing Profile Creation Off to a Trusted Guy
 
@@ -304,7 +304,7 @@ member's profile that lost most of its reviews after posting them too fast.
 - Reported staged pattern: Google first quietly deletes suspicious reviews (showing as anonymous
   "Google user" or not posting at all), then flags the account, and only suspends after sustained
   heavy fake-review volume (estimated around 40 fake reviews/day as a rough threshold).
-  <!--gmbpp member says ?t=3485-->
+  <!--Luca says ?t=3485-->
 - Luca is playing it safe — waiting a few days between review batches, uploading photos-only reviews
   first — while still pulling in bookings.
   <!--Luca ran ?t=3485-->
@@ -330,7 +330,7 @@ member's profile that lost most of its reviews after posting them too fast.
 - Even following these rules, a good share of in-person reviews still get dropped; attributed partly
   to Google's AI enforcement getting stricter generally, referencing a Google terms-of-service update
   around April 30.
-  <!--gmbpp member says ?t=3687-->
+  <!--gmbpp member says ?t=3714-->
 
 ### [1:02:45](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3765) NFC Review Cards and Google Tracking Reviewer Proximity
 
@@ -341,7 +341,7 @@ member's profile that lost most of its reviews after posting them too fast.
   <!--gmbpp member says ?t=3765-->
 - Suggested mitigation: turn off location settings, and get reviews from different physical areas
   and times rather than clustering them.
-  <!--gmbpp member says ?t=3765-->
+  <!--gmbpp member says ?t=3819-->
 
 ### [1:04:52](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=3892) Facebook Marketplace Account Suspensions
 
@@ -353,7 +353,7 @@ member's profile that lost most of its reviews after posting them too fast.
 
 - Workaround: buy old Facebook accounts (~$5-10 each, e.g. via "OGU") to run split tests across
   multiple listings/accounts instead of risking one primary account.
-  <!--gmbpp member says ?t=3966-->
+  <!--Luca says ?t=3966-->
 
 ### [1:07:00](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4020) Luca's $12K Week: Upselling and Getting Creative Beyond the Playbook
 
@@ -374,51 +374,51 @@ member's profile that lost most of its reviews after posting them too fast.
 - Suggested fix for feeling too intimidating to approach strangers directly: recruit a friend who's
   motivated by money to do the in-person asking, and have that person recruit further people they
   know, building a referral chain.
-  <!--gmbpp member says ?t=4096-->
+  <!--Luca says ?t=4096-->
 
 ### [1:09:11](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4151) Will Reviews From a Different City Stick? Austin vs. Houston
 
 - Consensus: reviews sourced from a city 60+ miles from the profile's location tend not to stick,
   based on one member's own profile roughly 60 miles out already showing this pattern.
-  <!--gmbpp member says ?t=4151-->
+  <!--Luca says ?t=4151-->
 
 ### [1:09:41](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4181) Targeting College Students for Review Recruitment Posts
 
 - Facebook "listings" (not job posts, which some accounts can't create) targeted at teens/college
   students as a demographic work well for recruiting review-getters; description text on the post
   barely matters, but the photo does — a generic Amazon gift-card image gets few clicks.
-  <!--gmbpp member says ?t=4181-->
+  <!--Luca says ?t=4231-->
 
 ### [1:11:37](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4297) Handling Phone Verification When Using Someone Else's Device
 
 - If a phone-verification code lands on someone else's device, add your own email, choose "verify
   later," and it will often still come through as instant; friends', family's, or a
   girlfriend's-family's devices are all fair game for one-time verifications.
-  <!--gmbpp member says ?t=4297-->
+  <!--Luca says ?t=4297-->
 
 ### [1:12:29](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4349) Volume Game: Posting Widely for Reviewer Recruitment
 
 - Reiterated: recruiting review-getters is a volume game — post broadly and repeatedly, since most
   posts get seen but ignored.
-  <!--gmbpp member says ?t=4349-->
+  <!--Luca says ?t=4349-->
 
 ### [1:13:23](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4403) Paying Reviewers $2.50-3/Review, With Incentives for Volume
 
 - Typical pay is $2.50-3 per review, with occasional bonuses ($5/profile-day, covering an Uber, or
   buying lunch) to keep a reliable reviewer motivated.
-  <!--gmbpp member says ?t=4403-->
+  <!--Luca says ?t=4403-->
 
 ### [1:14:17](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4457) Using a Proxy or a Different City for a New GMB Setup
 
 - Uncertainty over whether a proxy is needed when setting up a new GMB profile in a different
   city/state than the account's usual location; plan is to test with a new Dallas-area batch.
-  <!--gmbpp member says ?t=4457-->
+  <!--Luca says ?t=4488-->
 
 ### [1:15:24](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4524) Upselling to Ceramic Coating and High-Ticket Detailing Jobs
 
 - Beyond base detailing, ceramic coating ($1,000-3,000, roughly annual jobs) is floated as a
   higher-margin upsell; one member pays his detailer as little as $65 to fulfill a $220 job.
-  <!--gmbpp member says ?t=4524-->
+  <!--Luca says ?t=4524-->
 
 ### [1:17:20](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4640) Optimizing for AI Chat Search Instead of Just Google
 
@@ -445,7 +445,7 @@ member's profile that lost most of its reviews after posting them too fast.
 
 - Posting a simple "hiring mobile car detailers" listing (rather than targeting Hispanic-community
   groups specifically) pulled in five contractors who already had their own equipment.
-  <!--gmbpp member ran ?t=4931-->
+  <!--Luca ran ?t=4957-->
 
 ### [1:23:19](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=4999) Upsell Math: Pricing a $455 Detailing Job and Paying the Detailer
 
@@ -473,13 +473,13 @@ member's profile that lost most of its reviews after posting them too fast.
   roughly 80% of one member's bookings come through the website rather than the phone, so missed
   calls aren't a major concern. Rejection is framed as routine — move to the next lead rather than
   negotiate down.
-  <!--gmbpp member says ?t=5256-->
+  <!--Luca says ?t=5256-->
 
 ### [1:30:41](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5441) Website Booking Flow: Keep It Simple, Built in Lovable
 
 - Booking websites are built in Lovable, optionally connected to Supabase or Google Sheets; the
   main design goal is keeping the booking flow as simple as possible rather than visually elaborate.
-  <!--gmbpp member says ?t=5441-->
+  <!--Luca says ?t=5441-->
 
 ### [1:31:59](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5519) Luca's Business History: From $42K/Month Agency to Rebuilding
 
@@ -508,7 +508,7 @@ member's profile that lost most of its reviews after posting them too fast.
 
 - Pushover ($5 flat, not per-use) is mentioned for missed-call push notifications; conversation
   turns to ribbing about turning Luca or Eric's knowledge into a paid mentorship/course.
-  <!--gmbpp member says ?t=5746-->
+  <!--Luca says ?t=5746-->
 
 ### [1:36:20](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5780) Revenue-Share Deals: Running Profiles for Other Businesses
 
@@ -522,21 +522,21 @@ member's profile that lost most of its reviews after posting them too fast.
 - For a batch of six profiles created within the last three days, recommended to wait another 4-7
   days before adding more reviews, since Google can flag accounts as fake via a mismatch between
   claimed interactions (calls, clicks) and zero actual call/interaction analytics on the profile.
-  <!--gmbpp member says ?t=5833-->
+  <!--Luca says ?t=5898-->
 
 ### [1:39:20](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=5960) Cautionary Tale: A Profile That Lost 33 of 48 Reviews
 
 - Live example shown: a profile that had 48 reviews is now down to 15 after reviews were spammed
   with near-identical wording; several show as anonymous "Google user," meaning the reviewer's
   account was itself removed/banned or the review was about to be taken down.
-  <!--gmbpp member ran ?t=5960-->
+  <!--Luca ran ?t=6002-->
 
 ### [1:41:26](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=6086) Spacing Out Paid Reviews Without Getting Them Deleted
 
 - To keep paid Facebook Marketplace reviewers' reviews from being deleted, request proof (a
   screenshot of the posted review) before paying, and require it as leverage against reviewers who
   don't follow spacing instructions.
-  <!--gmbpp member says ?t=6086-->
+  <!--Luca says ?t=6116-->
 
 ### [1:42:44](https://www.loom.com/share/fa108a766a924ad9b543fe11ce41a569?t=6164) The Reddit Method (Mentioned) and Call Wrap-Up
 

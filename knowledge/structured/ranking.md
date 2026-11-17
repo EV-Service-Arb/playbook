@@ -55,18 +55,16 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
 - from guys experiencing drop-offs in leads, it looks like google updated their ranking system
   <!--2026-10-23 Bradley ran https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=440-->
   <!--2026-10-23 gmbpp member ran https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=768-->
-  think they started putting more value on stuff like last advice and interactions with profiles, probably age too
+- think they started putting more value on stuff like last advice and interactions with profiles, probably age too
   <!--2026-10-23 Eric says https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1133-->
   <!--2026-10-23 James McBride says https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=741-->
-  it also looks like it's more difficult to rank profiles as n1 from just reviews now
+- it also looks like it's more difficult to rank profiles as n1 from just reviews now
   <!--2026-10-23 Dante ran https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=877-->
-  need to make it look like amazing client interactions with them all the time
+- need to make it look like amazing client interactions with them all the time
   <!--2026-10-23 Valera says-->
-  James McBride also says there are hacks to increase this: engage with the profile, products and everything else it lets you add
+- James McBride also says there are hacks to increase this: engage with the profile, products and everything else it lets you add
   <!--2026-10-23 James McBride says https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=961-->
   <!--2026-10-23 James McBride says https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=991-->
-  TODO: compile ranking of all the relevant things we can be doing to improve [#35](https://github.com/EV-Service-Arb/playbook/issues/35)
-  TODO: check if image reviews and video reviews would get it higher [#36](https://github.com/EV-Service-Arb/playbook/issues/36)
 
 ## directions requests
 
@@ -126,6 +124,8 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
 
 ## open
 
+- TODO: compile ranking of all the relevant things we can be doing to improve [#35](https://github.com/EV-Service-Arb/playbook/issues/35)
+- TODO: check if image reviews and video reviews would get it higher [#36](https://github.com/EV-Service-Arb/playbook/issues/36)
 - (?) TODO: a directions bot that has local people request directions — Zach Peterson floated building one; companies sell it already, at a high price — Eric
   > `James McBride` says bots don't count
   <!--2026-10-23 Eric says https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1165-->

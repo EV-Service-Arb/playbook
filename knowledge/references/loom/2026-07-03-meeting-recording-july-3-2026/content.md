@@ -19,9 +19,9 @@ This is the group's weekly Thursday call on running local-service lead-gen busin
 - Kareem gets 2 of 4 same-day GMBs verified, one within 29 minutes, crediting a signage change.
   <!--Kareem ran ?t=61-->
 - The trick: brand the sign generically (e.g. "The Honest Plumber") and put the city only in the GMB name, not on the sign itself.
-  <!--Kareem ran ?t=61-->
+  <!--Kareem ran ?t=82-->
 - A single reusable sign works across profiles; an A4 paper with the business name taped to the signage is enough, and the verification AI does not flag it.
-  <!--Kareem ran ?t=61-->
+  <!--Graham ran ?t=110-->
 
 ### [02:56](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=176) State-by-state verification difficulty
 
@@ -35,61 +35,61 @@ This is the group's weekly Thursday call on running local-service lead-gen busin
 - One member sells leads outright rather than subcontracting; others subcontract and manage the customer relationship end-to-end.
   <!--gmbpp member ran ?t=236-->
 - For cleaning jobs, the operator confirms completion with the client, sends the cleaner back for touch-ups (paying for it if it takes over an hour), and treats small fixes as free redos.
-  <!--gmbpp member says ?t=236-->
+  <!--James McBride says ?t=289-->
 
 ### [05:46](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=346) Missing-place Google Maps verification method
 
 - Using a Level 4+ Local Guide account, submit a new business as a "missing place" at a real address; it publishes unverified but already linked to your phone/website.
   <!--Eric says ?t=346-->
 - Over 2-4 weeks, build reviews and photos with aged Local Guide/Workspace accounts, then claim the listing via an easy text or email (domain) code.
-  <!--Eric says ?t=346-->
+  <!--Eric says ?t=411-->
 - Works well for cleaning and flooring; considered too spammy a niche for plumbing.
-  <!--Eric says ?t=346-->
+  <!--Eric says ?t=534-->
 
 ### [09:30](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=570) Reserving leads and selling leads to businesses
 
 - The group's model: rank a GMB/website, give a business 3-5 free leads with no strings, then pitch a flat monthly or weekly retainer once the business is closing them.
-  <!--gmbpp member says ?t=570-->
+  <!--Ryan D says ?t=597-->
 - Retainers cited range from $500/month up to roughly $2,400/month; they work exclusively with one client per city.
-  <!--gmbpp member ran ?t=570-->
+  <!--Ryan D ran ?t=644-->
 
 ### [12:37](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=757) Niche picks: paving, roofing, masonry
 
 - Landscape design nets $1,000/month flat from one client; a Phoenix-area website reportedly sold for $5,300/month.
-  <!--gmbpp member says ?t=757-->
+  <!--Ryan D says ?t=791-->
 - Asphalt/paving and masonry are flagged as low-competition, high-retainer niches (a 3-review profile landed a $1,000/month asphalt retainer); roofing pays well but is more competitive, with ~130,000 monthly searches for "roofer" in Austin cited as an example.
-  <!--gmbpp member says ?t=757-->
+  <!--gmbpp member says ?t=818-->
 
 ### [15:16](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=916) Elliot's fencing lead progress
 
 - Elliot reports 71 leads last month across 5 GMBs, over $10,000 in booked contractor revenue, and roughly $3,000 in his own commission so far, paid out only once jobs fully complete.
   <!--Elliot ran ?t=916-->
 - His parents are uneasy about the business and pushed him to consult a lawyer; the group estimates his fencing GMBs are worth more like $1,000-1,500/month.
-  <!--Elliot says ?t=916-->
-  <!--gmbpp member says ?t=916-->
+  <!--Elliot says ?t=992-->
+  <!--gmbpp member says ?t=1022-->
 
 ### [17:54](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=1074) Hiring and pricing cleaners
 
 - Hiring: screen cleaners on a call for fit, be fully transparent that you handle marketing/customers and pay them what they'd normally charge (often marked up ~50%); personal networks and Facebook are common sources.
-  <!--gmbpp member says ?t=1074-->
+  <!--gmbpp member says ?t=1105-->
 - Pricing: one member uses AI to set prices and drops them ~10% if bookings stall; an alternative is calling the top 3 local competitors for a standard job quote and matching the lowest.
-  <!--gmbpp member ran ?t=1074-->
+  <!--gmbpp member ran ?t=1195-->
 
 ### [20:33](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=1233) Phone script for answering plumbing calls
 
 - Never quote technical work over the phone; always book a paid ($60) in-person inspection that applies toward the job if it proceeds.
-  <!--gmbpp member says ?t=1233-->
+  <!--gmbpp member says ?t=1280-->
 - Only very standardized jobs (toilet install, sink, drain cleaning) get a rough phone estimate, and it should always be framed as preliminary.
-  <!--gmbpp member says ?t=1233-->
+  <!--gmbpp member says ?t=1360-->
 
 ### [23:49](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=1429) Reviews, legal questions, and liability
 
 - Getting reviews: post as a college business class project on Facebook Marketplace or in person to collect 20-25 reviews per profile.
   <!--gmbpp member says ?t=1429-->
 - Legal: a GMB name not matching the servicing company's invoice violates Google's Terms of Service but isn't illegal; fake reviews are the FTC-relevant risk. A $100 Fiverr contract making subcontractors liable is suggested in place of buying insurance.
-  <!--gmbpp member says ?t=1429-->
+  <!--gmbpp member says ?t=1606-->
 - Vet subcontractors found off Facebook by their existing star ratings before handing them leads.
-  <!--gmbpp member says ?t=1429-->
+  <!--gmbpp member says ?t=1640-->
 
 ### [28:13](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=1693) LLC and holding company setup
 
@@ -101,34 +101,34 @@ This is the group's weekly Thursday call on running local-service lead-gen busin
 - A reported tactic outside detailing/cleaning: publish a profile, get it suspended, get it reinstated, after which reviews stick reliably — risky but seemingly effective due to added trust.
   <!--gmbpp member heard ?t=1777-->
 - For detailing and cleaning, suspended profiles are easy to resubmit, and reusing the same props/signs across same-day verification videos does not appear to hurt approval.
-  <!--gmbpp member says ?t=1777-->
+  <!--Kareem says ?t=1853-->
 
 ### [32:49](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=1969) Storage unit verification method
 
 - Rent a cheap storage unit (deals as low as ~$1-4, unit costs cited up to $26) for the verification video and address; decline insurance at signup, submit blank paperwork, and either let the grace period lapse or get the deposit refunded after filming.
-  <!--gmbpp member says ?t=1969-->
+  <!--Kareem says ?t=2018-->
 - A single master lock is reused across units; when the street address can't be shown, filming a neighboring storage business is accepted as a substitute.
-  <!--gmbpp member says ?t=1969-->
+  <!--Kareem says ?t=2075-->
 
 ### [36:03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2163) Street signs, spoofing, and a verification story from the UK
 
 - Custom street signs on a real (non-spoofed) US address reportedly always fail; location spoofing (tool cited: GetGo, ~$13/month) is treated as necessary in the US.
-  <!--gmbpp member says ?t=2163-->
+  <!--gmbpp member says ?t=2096-->
 - A UK contact verified electrician and demolition profiles on his real home address, with a "staff only" sign, and no location spoofing at all — the group is unsure if that's UK-specific.
-  <!--gmbpp member heard ?t=2163-->
+  <!--gmbpp member heard ?t=2096-->
 
 ### [37:24](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2244) Separating profiles across phones and proxies
 
 - Ryan logs in via phone (one SIM per phone) rather than a shared computer, keeping 1-4 GMBs per Gmail even though some phones have handled 200+ accounts without issue.
   <!--Ryan D ran ?t=2244-->
 - Proxidize + Multilogin is mentioned as a computer-based alternative, at roughly $1,500-2,000/month setup cost, though unused by the person describing it.
-  <!--gmbpp member says ?t=2244-->
+  <!--Ryan D says ?t=2273-->
 
 ### [39:03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2343) Suspension stories and fresh-Gmail timing advice
 
 - James had a Gmail (made solely for one GMB) get suspended two days after the listing verified; the group's takeaway is to age a fresh Gmail at least one to two weeks before using it for a GMB.
   <!--James McBride ran ?t=2343-->
-  <!--gmbpp member says ?t=2343-->
+  <!--James McBride says ?t=2791-->
 
 ### [40:28](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2428) Onboarding and paying detailing contractors
 
@@ -162,12 +162,12 @@ This is the group's weekly Thursday call on running local-service lead-gen busin
 ### [53:09](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=3189) Reviews via Reddit and proxy citations
 
 - Reddit is suggested as another review-solicitation channel alongside Facebook, with a caution to be careful there; proxy-based multi-login setups for citations are mentioned as still being worked out, alongside sourcing aged Ontario Gmail accounts.
-  <!--gmbpp member says ?t=3189-->
+  <!--Bobby says ?t=3189-->
 
 ### [54:48](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=3288) Wrap-up and sign-off
 
 - The call closes with well-wishes and confirmation to meet again next Thursday at the same time.
-  <!--gmbpp member says ?t=3288-->
+  <!--Eric says ?t=3288-->
 
 ## open
 

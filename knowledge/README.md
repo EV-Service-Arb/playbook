@@ -94,7 +94,7 @@ date only where it is earlier than the capture's.
 | Anmar | gmbpp member | | | |
 | Luca | gmbpp member | | | |
 | Karim | gmbpp member | | | |
-| Cole | gmbpp member | | | |
+| Cole | 0.7 | | landscaping on subcontractors, design-and-build: marks the sub's quote up 15–25%, takes half upfront. "hundreds of thousands a month", as a member relays it | |
 | Greg | gmbpp member | | | |
 | Walker | gmbpp member | | | |
 | Chris | gmbpp member | | | |
@@ -119,7 +119,16 @@ date only where it is earlier than the capture's.
 | Joey | gmbpp member | | | |
 | Keith | gmbpp member | | | |
 | Noah | gmbpp member | | | |
+| Julian | gmbpp member | | | |
+| Kai | gmbpp member | | | |
 | Zach | gmbpp member | | | |
+| Nathaniel | gmbpp member | | | |
+| Raf | gmbpp member | | | |
+| Austin | gmbpp member | | | |
+| Graham | gmbpp member | | | |
+| Bobby | gmbpp member | | | |
+| Alan | gmbpp member | | | |
+| Shaheem | gmbpp member | | | |
 
 `available` is 1–10, how often they have helped or shared; 3 is never asked. youtube `<x>` is the
 channel captured under `references/youtube/<x>/`. A speaker nobody could
