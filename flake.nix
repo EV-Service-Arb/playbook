@@ -111,8 +111,9 @@
           meta.description = "answer playbook/eval.json on this tree and on the last release, each through a conductor (PANEL_BIN); exits 1 when a case scores lower";
           program = "${pkgs.writeShellApplication {
             name = "eval";
-            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.git claude-code ];
-            text = ''cargo r -p playbook -- eval "$@"'';
+            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git claude-code ]; # .cargo/config.toml links with mold
+            # each side's playbook_web links openssl: ev_lib's sentry turns on reqwest's native-tls
+            text = ''OPENSSL_LIB_DIR=${pkgs.openssl.out}/lib OPENSSL_INCLUDE_DIR=${pkgs.openssl.dev}/include cargo r -p playbook -- eval "$@"'';
           }}/bin/eval";
         };
 
