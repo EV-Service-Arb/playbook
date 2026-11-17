@@ -19,14 +19,28 @@
           inherit pkgs rust;
           build.enable = false; # playbook_web's build.rs bakes the corpus; the root is a virtual workspace
         };
+        cliTools = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git pkgs.pkg-config ]; # .cargo/config.toml links with mold
+        cliEnv.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig"; # openssl-sys, under `playbook`'s adapters
+        check = pkgs.writeShellApplication {
+          name = "check";
+          runtimeInputs = cliTools;
+          runtimeEnv = cliEnv;
+          text = "cargo r -q -p playbook -- check && nix build .#playbook_web --no-link";
+        };
+        digested = pkgs.writeShellApplication {
+          name = "digested";
+          runtimeInputs = cliTools;
+          runtimeEnv = cliEnv;
+          text = "cargo r -q -p playbook -- check --digested";
+        };
         github = v_flakes.github {
           inherit pkgs rs;
           pname = "playbook";
           enable = true;
           lfs = true;
           gitignore.extra = "knowledge/references/**/recording.*";
-          jobs.errors.augment = [{ name = "flake-app"; args.app = "check"; }];
-          jobs.warnings.augment = [{ name = "flake-app"; args.app = "digested"; }];
+          jobs.errors.augment = [{ name = "check"; program = check; }];
+          jobs.warnings.augment = [{ name = "digested"; program = digested; }];
           containerRelease = { registry = "ghcr.io/ev-service-arb"; lfs = false; }; # the image takes only markdown; the media is 17G
         };
         readme = v_flakes.readme-fw {
@@ -97,28 +111,6 @@
 
         packages = containerStd.packages // { inherit playbook_web; };
         containers = containerStd.containers;
-
-        apps.check = {
-          type = "app";
-          meta.description = "check knowledge/, build playbook_web";
-          program = "${pkgs.writeShellApplication {
-            name = "check";
-            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git pkgs.pkg-config ]; # .cargo/config.toml links with mold
-            runtimeEnv.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig"; # openssl-sys, under `playbook`'s adapters
-            text = "cargo r -q -p playbook -- check && nix build .#playbook_web --no-link";
-          }}/bin/check";
-        };
-
-        apps.digested = {
-          type = "app";
-          meta.description = "exits 1 while a recording has no content.md";
-          program = "${pkgs.writeShellApplication {
-            name = "digested";
-            runtimeInputs = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git pkgs.pkg-config ];
-            runtimeEnv.PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
-            text = "cargo r -q -p playbook -- check --digested";
-          }}/bin/digested";
-        };
 
         apps.eval = {
           type = "app";
