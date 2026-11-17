@@ -2,6 +2,15 @@
 
 the call books the job at a price we name. we quote the middle of the area's range, never under a ~$250 minimum call-out, and say a partner company comes out, so a van or a contract under another name does not lose the job. who takes the call: [va](../staff/va.md); what the tech does with the price in the house: [pricing](../contractors/pricing.md).
 
+## how fast
+
+- (?) a customer is called at once: a new lead, and one who turns unsure. the same holds for a [contractor being pitched](../contractors/sourcing.md#pitching)
+  - call them instantly, - customer obviously. And same for contractors too
+    <!--2026-11-17 Valera says-->
+  - (?) Alex Hormozi: contacted within 60 seconds, a lead is 391% likelier to close; he names no study [where he says it](https://www.youtube.com/watch?v=StVqS0jD7Ls&t=203). the number is Velocify's, a lead-software vendor, over ~3.5 million leads, ~2013, and is often credited to Harvard Business Review by mistake
+    > what HBR did print, [The Short Life of Online Sales Leads](https://hbr.org/2011/03/the-short-life-of-online-sales-leads) (Oldroyd, McElheran, Elkington): a 42-hour median first response, 23% of firms never answering. Oldroyd's 2007 study with InsideSales: a first call at 5 minutes instead of 30 qualifies 21 times as often
+    <!--2013-01-01 agent heard-->
+
 ## who comes out
 
 - (?) on the booking call, say a partner company will come out, so a van or contract under another name doesn't throw the customer
@@ -22,7 +31,3 @@ the call books the job at a price we name. we quote the middle of the area's ran
     <!--2026-09-25 Devin Grandt says https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1188-->
 - (?) set a minimum call-out and quote nothing under it: ~$250 in *plumbing*
   <!--2026-10-23 gmbpp member says https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=63-->
-
-## open
-
-- Q: does a customer who turns unsure on the call get called back at once too? an earlier reading took the owner's "call them instantly" that way; it is filed under [sourcing](../contractors/sourcing.md#pitching), as pitching a contractor

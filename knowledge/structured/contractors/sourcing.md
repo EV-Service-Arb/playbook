@@ -37,3 +37,5 @@ we look for solo tradesmen short of work: they take our [split](splits.md) gladl
 - (?) a contractor who turns suspicious or unsure while being pitched gets a call straight away
   - if they get anyhow suspicious/uncertain when we're pitching them, - call them instantly
     <!--2026-09-17 Valera says-->
+  - if they are interested, we want to call them immediately to establish trust, I think Eric mentioned this too at some point
+    <!--2026-11-17 Valera says-->

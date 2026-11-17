@@ -1,8 +1,8 @@
 # city
 
 a city of 50k–300k people, dense, on a $90–130k median income, outside the high-crime parts; with
-400–700 searches a month for the trade, top 3 profiles on under ~200 reviews, and a contractor within
-the hour of every profile.
+enough searches for the trade that our own share of them clears ~200 a month against who already ranks,
+top 3 profiles on under ~200 reviews, and a contractor within the hour of every profile.
 
 ## size and people
 
@@ -21,8 +21,11 @@ the hour of every profile.
 
 ## search demand
 
-- (?) at least 400–700 searches a month for the trade in the area, summed over its phrasings, net of searches for business names
-  > the two floors are from two sources, and nobody has reconciled them
+- (?) the floor is on the searches we expect to capture ourselves, above ~200 a month, not on the area's total: the total needed falls as the competition thins. 400–700 a month, summed over the trade's phrasings and net of searches for business names, is that floor against ordinary competition
+  - it's about numbers vs existing competition. Hell it's technically possible to survive on 200 if there is absolutely nobody else in town or like best guy is without SEO and below 20 reviews or sth. It's more about expected search volume that you yourself will capture, which should be above like 200 for it to be considered reasonable
+    <!--2026-11-17 Valera says-->
+  - I think Eric likes >350 or so
+    <!--2026-11-17 Valera heard-->
   - want at least 700 monthly searches in the area I'm positioning for
     <!--2026-09-17 Valera says-->
   - (?) at least 400 relevant searches/mo, summed over the niche's queries, minus searches for business names — some owners bot their own name

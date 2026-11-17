@@ -161,6 +161,11 @@ who was on and what scale each operates at, then what was settled. a paragraph
 ```
 
 - every stamp is one the capture has
+
+> a digest can name the wrong speaker: loom names nobody. Whoever notices one decides which it is: a
+> one-off is corrected in place; a digest wrong throughout is weak as a whole and is digested again by a
+> stronger model
+
 - a chapter is a topic: a two-hour call has tens of them
 - what a point would change in how we operate decides whether it is written. So does who says it: the
   larger the operation they run, the more of what they say is kept

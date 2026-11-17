@@ -31,6 +31,10 @@ What members have reported about how many reviews a profile takes, how fast, and
 
 ## suspension
 
+- it's not about exact numbers, it's about how massive a spike is compared to what google is expecting. So 200 or 300 a day is trivially stupid high. Best is slowly ramping it up, and somewhat consistent forever onwards past a point where you hit a min amount you need there. But outside of this it's just a trade-off of how quickly you need them
+  <!--2026-11-17 Valera says-->
+  > having the profile lay there for few weeks inactive and then getting 50 reviews will break it. Like this slow strategy becomes more important for profiles that were stale exactly because it breaks expectations harder
+
 - (?) a profile is not suspended over reviews, the reviews just drop — Eric
   > one exception reported: 300 reviews in a single day did get a suspension
   <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2356-->
