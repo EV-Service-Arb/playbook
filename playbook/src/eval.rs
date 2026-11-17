@@ -62,7 +62,7 @@ pub fn run(root: &Path, against: Option<String>, info: Option<String>, jobs: Non
 	}
 
 	let out = PathBuf::from(OUT).join(SystemTime::now().duration_since(UNIX_EPOCH).expect("the clock is past 1970").as_secs().to_string());
-	std::fs::create_dir_all(&out).unwrap_or_else(|e| panic!("{}: {e}", out.display()));
+	std::fs::create_dir_all(out.join(".claude")).unwrap_or_else(|e| panic!("{}: {e}", out.display())); // each answer's claude config and plugin copy
 	let conductor = PathBuf::from(std::env::var_os("PANEL_BIN").expect("PANEL_BIN is unset: the conductor binary each side answers through, e.g. site_conductor's target/debug/panel"));
 	let bins: Vec<PathBuf> = sides.iter().map(|s| build(root, s)).collect();
 	let servers: Vec<Server> = sides.iter().zip(&bins).map(|(s, bin)| serve(bin, &conductor, s.name, &cases, &out)).collect();
