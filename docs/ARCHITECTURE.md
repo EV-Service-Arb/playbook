@@ -36,7 +36,7 @@ what cannot be checked is an invariant in [docs/spec/](spec/).
                      ├─► search · read · guide     members      server
                      └─► playbook view <dir>       checkout     a copy, line for line
                      ▼
-              norm = init × γ(age; half-life)      every citation, rendered alike
+              norm = init × γ(age; half-life, step)   every citation, rendered alike
 ```
 
 Each step reads only what the one above it wrote. Two directions follow from that:

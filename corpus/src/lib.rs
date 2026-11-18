@@ -26,6 +26,8 @@ pub struct Index {
 	pub captures: BTreeMap<String, Capture>,
 	/// what the citations of each page, digest and log decay at
 	pub half_lives: BTreeMap<String, HalfLife>,
+	/// how many times older is one notch more ancient, unless a reader says otherwise
+	pub step: f64,
 	/// recordings no `content.md` reads yet
 	pub pending: Vec<String>,
 }
@@ -58,19 +60,20 @@ pub struct Backing {
 	/// when the information is from, in days since 1970-01-01
 	day: i64,
 	half_life: Timeframe,
+	step: f64,
 	/// a url, or a digest's `?t=` into its own capture
 	at: Option<String>,
 }
 impl Backing {
-	// r[impl trust.norm]
-	/// What it is worth on `today`, decaying at `half_life` where given, else at its module's.
-	pub fn norm(&self, today: i64, half_life: Option<Timeframe>) -> f64 {
-		self.init * gamma(today - self.day, half_life.unwrap_or(self.half_life))
+	// r[impl trust.norm+2]
+	/// What it is worth on `today`, decaying at `half_life` and `step` where given, else at its module's and the default.
+	pub fn norm(&self, today: i64, half_life: Option<Timeframe>, step: Option<f64>) -> f64 {
+		self.init * gamma(today - self.day, half_life.unwrap_or(self.half_life), step.unwrap_or(self.step))
 	}
 
 	// r[impl trust.arithmetic+2]
 	/// `Dante ran 2σ · 400d · init 0.57 · norm 0.21 · <url>`
-	pub fn label(&self, today: i64, half_life: Option<Timeframe>) -> String {
+	pub fn label(&self, today: i64, half_life: Option<Timeframe>, step: Option<f64>) -> String {
 		let at = self.at.as_ref().map(|a| format!(" · {a}")).unwrap_or_default();
 		format!(
 			"{} {} {}σ · {} · init {:.2} · norm {:.2}{at}",
@@ -79,7 +82,7 @@ impl Backing {
 			*self.certainty,
 			age(today - self.day),
 			self.init,
-			self.norm(today, half_life)
+			self.norm(today, half_life, step)
 		)
 	}
 }
@@ -110,7 +113,6 @@ pub struct Capture {
 	stamps: BTreeSet<u64>,
 }
 
-// r[impl trust.decay]
 /// `age_days` as a reader gets it: `0d`, `400d`, `2w`.
 pub fn age(age_days: i64) -> String {
 	match age_days.max(0) {
@@ -192,6 +194,7 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 			certainty,
 			day,
 			half_life: tables.half_life,
+			step: tables.step,
 			at: None,
 		});
 		if let Some(first) = by_source.insert(key.clone(), path.clone()) {
@@ -255,19 +258,12 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 	}
 	for (path, text, dir) in &pages {
 		// the nearest of `x.md`, then each page whose `x/` holds it
-		let mut module = path.strip_suffix(".md").expect("walked for .md");
-		let half_life = loop {
-			if let Some(Some(span)) = stated.get(format!("{module}.md").as_str()) {
-				break HalfLife {
-					span: *span,
-					page: Some(format!("{module}.md")),
-				};
-			}
-			match module.rsplit_once('/') {
-				Some((up, _)) => module = up,
-				None => break default.clone(),
-			}
-		};
+		let half_life = std::iter::successors(path.strip_suffix(".md"), |m| m.rsplit_once('/').map(|(up, _)| up))
+			.find_map(|m| {
+				let page = format!("{m}.md");
+				stated.get(page.as_str()).copied().flatten().map(|span| HalfLife { span, page: Some(page) })
+			})
+			.unwrap_or_else(|| default.clone());
 		let (found, wrong) = ctx.page(text, dir, half_life.span);
 		errors.extend(wrong.into_iter().map(|(line, why)| format!("{path}:{line}: {why}")));
 		claims.insert(path.clone(), found);
@@ -304,16 +300,19 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 			claims,
 			captures,
 			half_lives,
+			step: tables.step,
 			pending,
 		}),
 		false => Err(errors),
 	}
 }
 
-/// What `age_days` leaves of a trust: ½ at one half-life.
-fn gamma(age_days: i64, half_life: Timeframe) -> f64 {
-	let age = age_days.max(0); // a capture dated in a timezone ahead of the clock is a day in its future
-	1. / (1. + age as f64 / (half_life.0 as f64 / DAY_MS))
+// r[impl trust.decay+2]
+/// What `age_days` leaves of a trust: ½ at one half-life, and a notch less each time age grows `step`-fold.
+fn gamma(age_days: i64, half_life: Timeframe, step: f64) -> f64 {
+	assert!(step > 1., "a step of {step} never ages anything");
+	let age = age_days.max(0) as f64; // a capture dated in a timezone ahead of the clock is a day in its future
+	1. / (1. + (1. + (step - 1.) * age / (half_life.0 as f64 / DAY_MS)).log(step))
 }
 
 /// A page's own `<!--half-life <timeframe>-->`, right under its title; nowhere else does one reach anything.
@@ -506,6 +505,7 @@ impl Ctx<'_> {
 				init: source * *PercentU::from(cite.certainty),
 				day,
 				half_life,
+				step: self.tables.step,
 				at: cite.at.map(str::to_owned),
 			})
 		};
@@ -600,12 +600,15 @@ impl<'a> Cite<'a> {
 /// The trust tables of `knowledge/README.md`.
 struct Tables {
 	half_life: Timeframe,
+	/// how many times older is one notch more ancient
+	step: f64,
 	/// who, their trust, how to reach them
 	people: Vec<(String, f64, String)>,
 }
 impl Tables {
 	fn parse(readme: &str) -> Self {
 		let mut half_life = None;
+		let mut step = None;
 		let mut people: Vec<(String, f64, String)> = Vec::new();
 		let mut header: Vec<&str> = Vec::new();
 		for l in readme.lines() {
@@ -624,6 +627,7 @@ impl Tables {
 			match header[..2] {
 				["default", "value"] => match cells[0] {
 					"half-life" => half_life = Some(Timeframe::from_str(cells[1]).unwrap_or_else(|e| panic!("knowledge/README.md#trust: half-life `{}`: {e}", cells[1]))),
+					"step" => step = Some(cells[1].parse::<f64>().unwrap_or_else(|e| panic!("knowledge/README.md#trust: step `{}`: {e}", cells[1]))),
 					d => panic!("knowledge/README.md#trust: no default `{d}`"),
 				},
 				["who", "trust"] => {
@@ -641,6 +645,7 @@ impl Tables {
 		assert!(!people.is_empty(), "knowledge/README.md has the people table");
 		Self {
 			half_life: half_life.expect("knowledge/README.md#trust states the default half-life"),
+			step: step.filter(|s| *s > 1.).expect("knowledge/README.md#trust states the default step, above 1"),
 			people,
 		}
 	}

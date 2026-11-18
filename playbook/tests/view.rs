@@ -94,7 +94,7 @@ fn renders_every_citation_in_place() {
 	assert!(digest.contains("[Dante ran 2σ · "), "{digest}");
 	assert!(digest.contains(" · ?t=353]"), "{digest}");
 	assert!(
-		page.starts_with("# sourcing · half-life 5y, suggested by knowledge/structured/contractors/sourcing.md\n"),
+		page.starts_with("# sourcing · half-life 5y, suggested by knowledge/structured/contractors/sourcing.md · step 4\n"),
 		"{page}"
 	);
 	assert!(capture.lines().any(|l| l.starts_with("- recorded: 2026-09-25T00:01:52.046Z · ") && l.ends_with('d')), "{capture}");
@@ -102,8 +102,11 @@ fn renders_every_citation_in_place() {
 
 	let norm = |page: &str| page.split(" · norm ").nth(1).unwrap()[..4].to_owned();
 	let (overridden, ..) = run(&["--half-life", "1d"]);
-	assert!(overridden.starts_with("# sourcing · half-life 1d, --half-life\n"), "{overridden}");
+	assert!(overridden.starts_with("# sourcing · half-life 1d, --half-life · step 4\n"), "{overridden}");
 	assert!(norm(&overridden) < norm(&page), "a day's half-life leaves less than five years':\n{overridden}\n{page}");
+	let (stepped, ..) = run(&["--half-life", "1d", "--step", "100"]);
+	assert!(stepped.lines().next().unwrap().ends_with(" · step 100, --step"), "{stepped}");
+	assert!(norm(&stepped) > norm(&overridden), "a wider step ages the tail slower:\n{stepped}\n{overridden}");
 
 	fs::remove_dir_all(&root).unwrap();
 	fs::remove_dir_all(&out).unwrap();

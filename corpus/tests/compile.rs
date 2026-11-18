@@ -145,7 +145,7 @@ fn compile() {
 		"2026-10-01-call.md:6: a citation says how sure",
 	);
 
-	// r[verify trust.norm]
+	// r[verify trust.norm+2]
 	check("the default half-life", &[], "half-life 1y, knowledge/README.md's default");
 	check(
 		"a page's own",

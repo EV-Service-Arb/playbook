@@ -51,6 +51,9 @@ enum Cmd {
 		/// decay every citation at this, instead of at its module's suggestion
 		#[arg(long)]
 		half_life: Option<corpus::Timeframe>,
+		/// how many times older makes a citation one notch more ancient, instead of knowledge/README.md's default
+		#[arg(long)]
+		step: Option<f64>,
 	},
 	/// Print the path of each capture's recording, fetched beside the capture first where none is kept.
 	Recording {
@@ -190,7 +193,7 @@ fn main() {
 				std::process::exit(1);
 			}
 		},
-		Cmd::View { dir, half_life } => view::run(&root, &dir, half_life),
+		Cmd::View { dir, half_life, step } => view::run(&root, &dir, half_life, step),
 		Cmd::Recording { captures } =>
 			for media in call::recordings(&root, &captures) {
 				println!("{}", media.display());

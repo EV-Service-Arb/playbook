@@ -435,7 +435,7 @@ impl Doc {
 
 	/// what backs `line` best today
 	fn best(&self, line: usize, today: i64) -> Option<&'static corpus::Backing> {
-		let by_worth = |a: &&corpus::Backing, b: &&corpus::Backing| a.norm(today, None).total_cmp(&b.norm(today, None));
+		let by_worth = |a: &&corpus::Backing, b: &&corpus::Backing| a.norm(today, None, None).total_cmp(&b.norm(today, None, None));
 		match self.claim(line) {
 			Some(c) => c.backing.iter().map(|(_, b)| b).max_by(by_worth),
 			None => self.speaker.filter(|_| !self.screen && !self.path.ends_with("/content.md")),
@@ -443,7 +443,7 @@ impl Doc {
 	}
 
 	fn norm(&self, line: usize, today: i64) -> Option<f64> {
-		self.best(line, today).map(|c| c.norm(today, None))
+		self.best(line, today).map(|c| c.norm(today, None, None))
 	}
 
 	// r[impl trust.arithmetic+2]
@@ -451,8 +451,8 @@ impl Doc {
 	fn label(&self, line: usize, today: i64) -> String {
 		let date = || self.date.expect("asserted on load");
 		match (self.best(line, today), self.claim(line)) {
-			(Some(cited), Some(claim)) => format!("{}{}", cited.label(today, None), if claim.vetted { "" } else { " · unvetted" }),
-			(Some(cited), None) => cited.label(today, None),
+			(Some(cited), Some(claim)) => format!("{}{}", cited.label(today, None, None), if claim.vetted { "" } else { " · unvetted" }),
+			(Some(cited), None) => cited.label(today, None, None),
 			(None, _) if self.kind == Kind::Manual => "unscored: a heading".into(),
 			(None, _) if self.screen => format!("a reading of the screen · {} · unscored", date()),
 			(None, _) => match self.digest {
@@ -465,7 +465,7 @@ impl Doc {
 	/// the line as a reader gets it: a citation gives what it is worth instead of what it is computed from
 	fn line(&self, i: usize, today: i64) -> String {
 		match self.claims.iter().flat_map(|c| &c.backing).find(|(line, _)| *line == i) {
-			Some((_, c)) => format!("{}[{}]", &self.lines[i][..self.lines[i].len() - self.lines[i].trim_start().len()], c.label(today, None)),
+			Some((_, c)) => format!("{}[{}]", &self.lines[i][..self.lines[i].len() - self.lines[i].trim_start().len()], c.label(today, None, None)),
 			None if i == 0
 				&& let Some(h) = INDEX.half_lives.get(self.path) =>
 				format!("{} · {h}", self.lines[0]),

@@ -41,7 +41,10 @@ it is worth. Edit `knowledge/` itself.
 <!--2026-09-25 Dante ran 2σ https://…?t=353-->   →   [Dante ran 2σ · 400d · init 0.57 · norm 0.21 · https://…?t=353]
 
   init  =  source(who)  ×  P(certainty)        what it was worth when said
-  norm  =  init  ×  γ(age; half-life)          what it is worth today. advice is ranked by norm
+  norm  =  init  ×  γ(age; half-life, step)    what it is worth today. advice is ranked by norm
+
+  γ = 1 / (1 + log_step(1 + (step − 1)·age / half-life))
+      1 fresh · ½ at the half-life · one notch less (⅓, ¼, …) each time age grows step-fold · never 0
 ```
 
 - source(who) is the [people](#people) table. P(certainty) is the share of a normal distribution within that many σ
@@ -51,10 +54,13 @@ it is worth. Edit `knowledge/` itself.
 - the decay is an estimate: nobody knows how fast one bullet goes stale. Where this information goes
   stale faster or slower than its module, read it by init and age, which are printed beside norm for
   that, or pass `view --half-life` for the whole task
+- the step is how many times older makes information one notch more ancient: it loses a lot between fresh and
+  the half-life, and little between one old age and the next. `view --step` overrides it
 
 | default | value |
 |---|---|
 | half-life | 1y |
+| step | 4 |
 
 ### Certainty
 

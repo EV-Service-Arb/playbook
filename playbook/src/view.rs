@@ -11,7 +11,7 @@ use corpus::Timeframe;
 const MARK: &str = ".playbook-view";
 const DATED: [&str; 4] = ["- recorded: ", "- uploaded: ", "- updated: ", "- pulled: "];
 
-pub fn run(root: &Path, dir: &Path, half_life: Option<Timeframe>) {
+pub fn run(root: &Path, dir: &Path, half_life: Option<Timeframe>, step: Option<f64>) {
 	let refuse = |why: String| -> ! {
 		eprintln!("{why}");
 		std::process::exit(1)
@@ -22,6 +22,9 @@ pub fn run(root: &Path, dir: &Path, half_life: Option<Timeframe>) {
 	});
 	if half_life.is_some_and(|h| h.0 == 0) {
 		refuse("a half-life is longer than nothing".into());
+	}
+	if step.is_some_and(|s| s <= 1.) {
+		refuse("a step is above 1: how many times older is one notch more ancient".into());
 	}
 	fs::create_dir_all(dir).unwrap_or_else(|e| panic!("{}: {e}", dir.display()));
 	let dir = fs::canonicalize(dir).expect("just created");
@@ -55,7 +58,7 @@ pub fn run(root: &Path, dir: &Path, half_life: Option<Timeframe>) {
 		let mut lines: Vec<String> = text.lines().map(str::to_owned).collect();
 		for (i, backing) in index.claims.get(rel).into_iter().flatten().flat_map(|c| &c.backing) {
 			let indent = lines[*i].len() - lines[*i].trim_start().len();
-			lines[*i] = format!("{}[{}]", &lines[*i][..indent], backing.label(today, half_life));
+			lines[*i] = format!("{}[{}]", &lines[*i][..indent], backing.label(today, half_life, step));
 		}
 		if let Some(h) = index.half_lives.get(rel)
 			&& lines.first().is_some_and(|l| l.starts_with("# "))
@@ -63,6 +66,10 @@ pub fn run(root: &Path, dir: &Path, half_life: Option<Timeframe>) {
 			lines[0] += &match half_life {
 				Some(span) => format!(" · half-life {span}, --half-life"),
 				None => format!(" · {h}"),
+			};
+			lines[0] += &match step {
+				Some(s) => format!(" · step {s}, --step"),
+				None => format!(" · step {}", index.step),
 			};
 		}
 		if let Some(capture) = index.captures.get(rel) {
@@ -73,7 +80,7 @@ pub fn run(root: &Path, dir: &Path, half_life: Option<Timeframe>) {
 			lines[dated] += &format!(" · {}", corpus::age(today - capture.day));
 			if let Some(speaker) = &capture.speaker {
 				let source = lines.iter().position(|l| l.starts_with("- source: ")).expect("a capture states its source");
-				lines[source] += &format!(" · {}", speaker.label(today, half_life));
+				lines[source] += &format!(" · {}", speaker.label(today, half_life, step));
 			}
 		}
 		let end = if text.ends_with('\n') { "\n" } else { "" };
