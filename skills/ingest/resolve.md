@@ -1,12 +1,14 @@
 # resolve
 
-Sources may disagree; `knowledge/structured/` may not. Run when it contradicts itself, or a source contradicts it.
+Sources may disagree; `knowledge/structured/` may not. Run when it contradicts itself, a source contradicts it, or one method may beat another.
 
 A contradiction is two claims that cannot both be acted on by the same operator in the same situation.
 Before calling one, read who each was said to and what they were running: advice to a beginner and
 advice to a member already in a trade, a rule for new profiles and a result on ten-year-old ones, one
 person's pass and another's rejection, are each scoped by their case, and the scope goes into the bullet.
 Two numbers for one quantity are not one either: both stay as evidence, per `knowledge/README.md`.
+Methods with different trade-offs can coexist. We only evict those that are strictly inferior to other known methods.
+// evict as in we still list those methods in `### other`, and point to what they are beat by and why
 
 - gather every mention first, across `knowledge/structured/` and `knowledge/references/`
 - then weigh: trust and age, what each speaker meant, how sure they sounded, what they were doing

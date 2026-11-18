@@ -178,7 +178,7 @@ the path it would have outside it.
 ```md
 # <topic>
 
-<what we do here, as of now. the page's answer, in a few lines>
+<the page's answer as of now, in a few lines: what we do, or which way fits which case>
 
 ## <a step or a decision, in the order it is met>
 
@@ -186,6 +186,11 @@ the path it would have outside it.
   > what qualifies it
   - <evidence: who, what they ran or said, the number>
     <!--2026-09-25 Dante ran https://…?t=353-->
+
+### other
+
+- <a method another beats on every count: by what, and why>
+- <an idea or a finding worth keeping that no conclusion stands on yet>
 
 ## open
 
