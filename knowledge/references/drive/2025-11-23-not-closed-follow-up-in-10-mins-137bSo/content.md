@@ -12,14 +12,14 @@ A Brampton caller has water coming out beside the driveway. The answerer quotes 
 ### [00:00](https://drive.google.com/file/d/137bSooyZmAB_ksnyr961nD8asVMKYlGO?t=0) Opening, an unlocated leak
 
 - opens "This is Eric speaking from Plumber ...", the caller says water is coming out from the side of the driveway, location unknown; the answerer says "we can come take a look tonight"
-  <!--says ?t=0-->
+  <!--says 1σ ?t=0-->
 
 ### [00:46](https://drive.google.com/file/d/137bSooyZmAB_ksnyr961nD8asVMKYlGO?t=46) Inspection fee of $80, then the caller stalls
 
 - "we would need to come over to do sort of like an inspection... and then we can give you a price on the work"; "for the inspection fee, we charge a flat $80, which is waived if we do go ahead with the repair"; "it's not like an additional $80"; offers tonight around 8:30
-  <!--says ?t=46-->
+  <!--says 1σ ?t=46-->
 - the caller replies "let me quickly discuss and I will call you back"; the answerer accepts ("Sure") with no attempt to hold the slot; the recording title says to follow up in 10 minutes
-  <!--says ?t=80-->
+  <!--says 1σ ?t=80-->
 
 ## open
 

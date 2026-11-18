@@ -12,7 +12,7 @@ The speaker explains how obsessing over earning $100k per month made him suppres
 ### [00:00:00](https://www.youtube.com/watch?v=5RMRP22LrzI&t=0) the $100k goal and lost enjoyment
 
 - The speaker explains how obsessing over earning $100k per month made him suppress enjoyment, despite eventually earning about $130k per month at age 20.
-  <!--ran ?t=0-->
+  <!--ran 2σ ?t=0-->
 
 ### [00:01:06](https://www.youtube.com/watch?v=5RMRP22LrzI&t=66) sharing experience without preaching
 
@@ -23,14 +23,14 @@ The speaker explains how obsessing over earning $100k per month made him suppres
 ### [00:04:31](https://www.youtube.com/watch?v=5RMRP22LrzI&t=271) the unglamorous reality of $100k months
 
 - He describes the reality of reaching that income: adaptation, heavier workloads, anxiety about losing progress, financial scarcity, and persistent insecurities.
-  <!--ran ?t=305-->
+  <!--ran 2σ ?t=305-->
 - He argues that money does not resolve personal problems, depression, insecurity, or difficulty relating to others; those issues require an intentional shift in mindset.
-  <!--says ?t=305-->
+  <!--says 1σ ?t=305-->
 
 ### [00:06:11](https://www.youtube.com/watch?v=5RMRP22LrzI&t=371) choosing happiness while staying driven
 
 - He recommends fighting negative thought patterns, choosing to seek help, staying emotionally grounded, and giving yourself permission to enjoy the present while continuing to work.
-  <!--says ?t=371-->
+  <!--says 1σ ?t=371-->
 
 ### [00:07:54](https://www.youtube.com/watch?v=5RMRP22LrzI&t=474) what reaching $100k actually feels like
 

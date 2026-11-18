@@ -2,28 +2,35 @@
 
 use std::{
 	collections::{BTreeMap, BTreeSet},
-	fs,
+	fmt, fs,
 	ops::Range,
 	path::{Path, PathBuf},
+	str::FromStr,
 };
 
-const TAU_DAYS: f64 = 180.;
-const S: f64 = 1.;
-const HOWS: [&str; 3] = ["ran", "says", "heard"];
+use serde::{Deserialize, Serialize};
+pub use v_utils::primitives::Timeframe;
+use v_utils::primitives::{Certainty, TimeframeDesignator, percent::PercentU};
+
+const DAY_MS: f64 = 86_400_000.;
 const DIGEST_SECTIONS: [&str; 3] = ["## gist", "## chapters", "## open"];
 
 type Errors = Vec<(usize, String)>;
 
 /// What `compile` resolved, keyed by path from the repo root.
+#[derive(Deserialize, Serialize)]
 pub struct Index {
-	/// every backed bullet of a manual page or a digest
+	/// every backed bullet of a manual page, a digest or a log
 	pub claims: BTreeMap<String, Vec<Claim>>,
 	/// every capture that states a source
 	pub captures: BTreeMap<String, Capture>,
+	/// what the citations of each page, digest and log decay at
+	pub half_lives: BTreeMap<String, HalfLife>,
 	/// recordings no `content.md` reads yet
 	pub pending: Vec<String>,
 }
 
+#[derive(Deserialize, Serialize)]
 pub struct Claim {
 	/// the bullet and everything nested under it, 0-based
 	pub lines: Range<usize>,
@@ -32,16 +39,68 @@ pub struct Claim {
 	pub backing: Vec<(usize, Backing)>,
 }
 
-#[derive(Clone)]
-pub struct Backing {
-	pub who: String,
-	pub how: &'static str,
-	/// `source(who) × grade(how)`
-	pub trust: f64,
-	/// when the information is from, in days since 1970-01-01
-	pub day: i64,
+#[derive(Clone, Copy, Deserialize, PartialEq, Serialize, strum::Display, strum::EnumString, strum::VariantNames)]
+#[strum(serialize_all = "lowercase")]
+pub enum How {
+	Ran,
+	Says,
+	Heard,
 }
 
+// r[impl trust.init]
+#[derive(Clone, Deserialize, Serialize)]
+pub struct Backing {
+	who: String,
+	how: How,
+	certainty: Certainty,
+	/// `source(who) × P(certainty)`
+	init: f64,
+	/// when the information is from, in days since 1970-01-01
+	day: i64,
+	half_life: Timeframe,
+	/// a url, or a digest's `?t=` into its own capture
+	at: Option<String>,
+}
+impl Backing {
+	// r[impl trust.norm]
+	/// What it is worth on `today`, decaying at `half_life` where given, else at its module's.
+	pub fn norm(&self, today: i64, half_life: Option<Timeframe>) -> f64 {
+		self.init * gamma(today - self.day, half_life.unwrap_or(self.half_life))
+	}
+
+	// r[impl trust.arithmetic+2]
+	/// `Dante ran 2σ · 400d · init 0.57 · norm 0.21 · <url>`
+	pub fn label(&self, today: i64, half_life: Option<Timeframe>) -> String {
+		let at = self.at.as_ref().map(|a| format!(" · {a}")).unwrap_or_default();
+		format!(
+			"{} {} {}σ · {} · init {:.2} · norm {:.2}{at}",
+			self.who,
+			self.how,
+			*self.certainty,
+			age(today - self.day),
+			self.init,
+			self.norm(today, half_life)
+		)
+	}
+}
+
+/// How fast a page's knowledge goes stale, and who says so.
+#[derive(Clone, Deserialize, Serialize)]
+pub struct HalfLife {
+	pub span: Timeframe,
+	/// the page whose `<!--half-life-->` it is; none: knowledge/README.md's default
+	pub page: Option<String>,
+}
+impl fmt::Display for HalfLife {
+	fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+		match &self.page {
+			Some(page) => write!(f, "half-life {}, suggested by {page}", self.span),
+			None => write!(f, "half-life {}, knowledge/README.md's default", self.span),
+		}
+	}
+}
+
+#[derive(Deserialize, Serialize)]
 pub struct Capture {
 	pub day: i64,
 	/// where the source fixes who speaks: a lesson, a channel's video
@@ -52,22 +111,12 @@ pub struct Capture {
 }
 
 // r[impl trust.decay]
-/// What `age_days` leaves of a trust.
-pub fn gamma(age_days: i64) -> f64 {
-	let age = age_days.max(0); // a capture dated in a timezone ahead of the server's clock is a day in its future
-	(1. + age as f64 / TAU_DAYS).powf(-S)
-}
-
-/// The `YYYY-MM-DD` of a day since 1970-01-01, after Howard Hinnant's `civil_from_days`.
-pub fn date(day: i64) -> String {
-	let z = day + 719_468;
-	let era = z.div_euclid(146_097);
-	let doe = z - era * 146_097;
-	let yoe = (doe - doe / 1_460 + doe / 36_524 - doe / 146_096) / 365;
-	let doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
-	let mp = (5 * doy + 2) / 153;
-	let (d, m) = (doy - (153 * mp + 2) / 5 + 1, (mp + 2) % 12 + 1);
-	format!("{:04}-{m:02}-{d:02}", yoe + era * 400 + (m <= 2) as i64)
+/// `age_days` as a reader gets it: `0d`, `400d`, `2w`.
+pub fn age(age_days: i64) -> String {
+	match age_days.max(0) {
+		0 => "0d".into(), // a Timeframe is never empty
+		n => Timeframe::from_naive(n as u64, TimeframeDesignator::Days).to_string(),
+	}
 }
 
 /// Days since 1970-01-01 of a `YYYY-MM-DD`, after Howard Hinnant's `days_from_civil`.
@@ -124,7 +173,7 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 			lessons.iter().any(|t| t.contains(u))
 		});
 		let who = match path.strip_prefix("knowledge/references/youtube/").and_then(|p| p.split_once('/')) {
-			_ if lesson(path) || taught => Some("Eric".to_owned()), // not above his other word until he keeps the course in sync with it
+			_ if lesson(path) || taught => Some("Eric".to_owned()),
 			_ if path.starts_with("knowledge/references/research/") => Some("chatgpt".to_owned()),
 			Some((channel, _)) => Some(
 				tables
@@ -134,11 +183,16 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 			),
 			None => None,
 		};
+		// r[impl trust.certainty]
+		let certainty = Certainty::try_new(if lesson(path) || taught { 2. } else { 1. }).expect("non-negative");
 		let speaker = who.map(|who| Backing {
-			trust: tables.source(&who).unwrap_or_else(|| panic!("knowledge/README.md#people has no row `{who}`")) * tables.grade["says"],
+			init: tables.source(&who).unwrap_or_else(|| panic!("knowledge/README.md#people has no row `{who}`")) * *PercentU::from(certainty),
 			who,
-			how: "says",
+			how: How::Says,
+			certainty,
 			day,
+			half_life: tables.half_life,
+			at: None,
 		});
 		if let Some(first) = by_source.insert(key.clone(), path.clone()) {
 			panic!("{key} is captured twice: {first} and {path}");
@@ -165,13 +219,17 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 		by_source: &by_source,
 	};
 	let mut claims = BTreeMap::new();
+	let mut half_lives = BTreeMap::new();
 	let mut pending = Vec::new();
+	let default = HalfLife { span: tables.half_life, page: None };
 	for (path, capture) in captures.iter().filter(|(_, c)| c.duration.is_some()) {
 		let digest = format!("{}/content.md", path.strip_suffix(".md").expect("walked for .md"));
 		match texts.iter().find(|(p, _)| *p == digest) {
 			Some((_, text)) => {
-				let (found, wrong) = ctx.digest(text, capture);
+				let (found, mut wrong) = ctx.digest(text, capture);
+				stated_half_life(&text.lines().collect::<Vec<_>>(), false, &mut wrong);
 				claims.insert(digest.clone(), found);
+				half_lives.insert(digest.clone(), default.clone());
 				errors.extend(wrong.into_iter().map(|(line, why)| format!("{digest}:{line}: {why}")));
 			}
 			None => pending.push(path.clone()),
@@ -188,16 +246,94 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 	walk(&knowledge.join("structured"), &mut pages);
 	walk(&knowledge.join("internal"), &mut pages);
 	assert!(!pages.is_empty(), "no pages under {}/structured", knowledge.display());
-	for page in &pages {
-		let (found, wrong) = ctx.page(&read(page), page.parent().expect("a page sits in a dir"));
-		errors.extend(wrong.into_iter().map(|(line, why)| format!("{}:{line}: {why}", rel(page))));
-		claims.insert(rel(page), found);
+	let pages: Vec<(String, String, PathBuf)> = pages.iter().map(|p| (rel(p), read(p), p.parent().expect("a page sits in a dir").to_owned())).collect();
+	let mut stated = BTreeMap::new();
+	for (path, text, _) in &pages {
+		let mut wrong = Errors::new();
+		stated.insert(path.as_str(), stated_half_life(&text.lines().collect::<Vec<_>>(), true, &mut wrong));
+		errors.extend(wrong.into_iter().map(|(line, why)| format!("{path}:{line}: {why}")));
+	}
+	for (path, text, dir) in &pages {
+		// the nearest of `x.md`, then each page whose `x/` holds it
+		let mut module = path.strip_suffix(".md").expect("walked for .md");
+		let half_life = loop {
+			if let Some(Some(span)) = stated.get(format!("{module}.md").as_str()) {
+				break HalfLife {
+					span: *span,
+					page: Some(format!("{module}.md")),
+				};
+			}
+			match module.rsplit_once('/') {
+				Some((up, _)) => module = up,
+				None => break default.clone(),
+			}
+		};
+		let (found, wrong) = ctx.page(text, dir, half_life.span);
+		errors.extend(wrong.into_iter().map(|(line, why)| format!("{path}:{line}: {why}")));
+		claims.insert(path.clone(), found);
+		half_lives.insert(path.clone(), half_life);
+	}
+
+	let mut logs = Vec::new();
+	walk(&knowledge.join("log"), &mut logs);
+	for log in &logs {
+		let text = read(log);
+		let lines: Vec<&str> = text.lines().collect();
+		let mut wrong = Errors::new();
+		stated_half_life(&lines, false, &mut wrong);
+		let found = ctx.bullets(&lines, 0..lines.len(), None, tables.half_life, false, &mut wrong);
+		errors.extend(wrong.into_iter().map(|(line, why)| format!("{}:{line}: {why}", rel(log))));
+		claims.insert(rel(log), found);
+		half_lives.insert(rel(log), default.clone());
+	}
+
+	// r[impl trust.derived+2]
+	for (path, text) in texts.iter().map(|(p, t)| (p, t.as_str())).chain(pages.iter().map(|(p, t, _)| (p, t.as_str()))) {
+		for (i, l) in text.lines().enumerate() {
+			if l.contains(" · norm ") || l.starts_with("# ") && l.contains(" · half-life ") {
+				errors.push(format!(
+					"{path}:{}: a label `playbook view` rendered: write what it renders from, as knowledge/README.md#citation has it",
+					i + 1
+				));
+			}
+		}
 	}
 
 	match errors.is_empty() {
-		true => Ok(Index { claims, captures, pending }),
+		true => Ok(Index {
+			claims,
+			captures,
+			half_lives,
+			pending,
+		}),
 		false => Err(errors),
 	}
+}
+
+/// What `age_days` leaves of a trust: ½ at one half-life.
+fn gamma(age_days: i64, half_life: Timeframe) -> f64 {
+	let age = age_days.max(0); // a capture dated in a timezone ahead of the clock is a day in its future
+	1. / (1. + age as f64 / (half_life.0 as f64 / DAY_MS))
+}
+
+/// A page's own `<!--half-life <timeframe>-->`, right under its title; nowhere else does one reach anything.
+fn stated_half_life(lines: &[&str], page: bool, errors: &mut Errors) -> Option<Timeframe> {
+	let mut found = None;
+	for (i, l) in lines.iter().enumerate() {
+		let Some(span) = l.trim().strip_prefix("<!--half-life").and_then(|r| r.strip_suffix("-->")) else {
+			continue;
+		};
+		if !page || i != 1 {
+			errors.push((i + 1, "a half-life sits on the line right under a page's title, and reaches nothing elsewhere".into()));
+			continue;
+		}
+		match Timeframe::from_str(span.trim()) {
+			Ok(t) if t.0 > 0 => found = Some(t),
+			Ok(_) => errors.push((i + 1, "a half-life is longer than nothing".into())),
+			Err(e) => errors.push((i + 1, format!("`{}` is no timeframe: {e}", span.trim()))),
+		}
+	}
+	found
 }
 
 struct Ctx<'a> {
@@ -206,14 +342,14 @@ struct Ctx<'a> {
 	by_source: &'a BTreeMap<String, String>,
 }
 impl Ctx<'_> {
-	fn page(&self, text: &str, dir: &Path) -> (Vec<Claim>, Errors) {
+	fn page(&self, text: &str, dir: &Path, half_life: Timeframe) -> (Vec<Claim>, Errors) {
 		let lines: Vec<&str> = text.lines().collect();
 		let mut errors = Errors::new();
 		if !lines.first().is_some_and(|l| l.starts_with("# ")) {
 			errors.push((1, "a page opens `# <topic>`".into()));
 		}
 		let first_section = lines.iter().position(|l| l.starts_with("## ")).unwrap_or(lines.len());
-		if !lines[1.min(first_section)..first_section].iter().any(|l| !l.trim().is_empty()) {
+		if !lines[1.min(first_section)..first_section].iter().any(|l| !l.trim().is_empty() && !l.starts_with("<!--half-life")) {
 			errors.push((1, "a page states what we do before its first `## `".into()));
 		}
 		let open = lines.iter().position(|l| *l == "## open");
@@ -232,7 +368,9 @@ impl Ctx<'_> {
 				errors.push((i + 1, "`resolved:` links its record in `knowledge/log/resolved/`, which must exist".into()));
 			}
 		}
-		let claims = self.bullets(&lines, 0..open.unwrap_or(lines.len()), None, &mut errors);
+		let open = open.unwrap_or(lines.len());
+		let mut claims = self.bullets(&lines, 0..open, None, half_life, true, &mut errors);
+		claims.extend(self.bullets(&lines, open..lines.len(), None, half_life, false, &mut errors));
 		(claims, errors)
 	}
 
@@ -286,12 +424,13 @@ impl Ctx<'_> {
 				Some(t) => last = Some(t),
 			}
 		}
-		let claims = self.bullets(&lines, chapters + 1..end, Some(capture), &mut errors);
+		let claims = self.bullets(&lines, chapters + 1..end, Some(capture), self.tables.half_life, true, &mut errors);
 		(claims, errors)
 	}
 
-	/// The bullets of `within`, each with every citation beneath it. Inside a digest the capture is `given`.
-	fn bullets(&self, lines: &[&str], within: Range<usize>, given: Option<&Capture>, errors: &mut Errors) -> Vec<Claim> {
+	/// The bullets of `within`, each with every citation beneath it. Inside a digest the capture is `given`. `cited`: every
+	/// top-level bullet cites.
+	fn bullets(&self, lines: &[&str], within: Range<usize>, given: Option<&Capture>, half_life: Timeframe, cited: bool, errors: &mut Errors) -> Vec<Claim> {
 		struct Open {
 			claim: Claim,
 			indent: usize,
@@ -335,7 +474,7 @@ impl Ctx<'_> {
 			}
 			close(&mut stack, &mut done, indent, i);
 			let Some(cite) = Cite::parse(trimmed, given.is_some()) else { continue };
-			match cite.and_then(|c| self.resolve(c, given)) {
+			match cite.and_then(|c| self.resolve(c, given, half_life)) {
 				Err(why) => {
 					errors.push((i + 1, why));
 					refused.extend(stack.iter().map(|o| o.claim.lines.start));
@@ -346,7 +485,7 @@ impl Ctx<'_> {
 		}
 		close(&mut stack, &mut done, 0, within.end);
 		for (indent, claim) in &done {
-			if *indent == 0 && claim.backing.is_empty() && !refused.contains(&claim.lines.start) {
+			if cited && *indent == 0 && claim.backing.is_empty() && !refused.contains(&claim.lines.start) {
 				errors.push((claim.lines.start + 1, "nothing beneath this bullet cites a source".into()));
 			}
 		}
@@ -356,15 +495,18 @@ impl Ctx<'_> {
 	}
 
 	// r[impl trust.age]
-	fn resolve(&self, cite: Cite, given: Option<&Capture>) -> Result<Backing, String> {
-		let how = HOWS.iter().find(|h| **h == cite.how).expect("`Cite::parse` took it from `HOWS`");
+	fn resolve(&self, cite: Cite, given: Option<&Capture>, half_life: Timeframe) -> Result<Backing, String> {
+		let how = cite.how;
 		let backing = |who: &str, day: i64| {
 			let source = self.tables.source(who).ok_or_else(|| format!("`{who}` has no row in knowledge/README.md#people"))?;
 			Ok(Backing {
 				who: who.to_owned(),
 				how,
-				trust: source * self.tables.grade[*how],
+				certainty: cite.certainty,
+				init: source * *PercentU::from(cite.certainty),
 				day,
+				half_life,
+				at: cite.at.map(str::to_owned),
 			})
 		};
 		let stated = cite.date.map(|d| days(d).ok_or_else(|| format!("`{d}` is not a date"))).transpose()?;
@@ -379,7 +521,7 @@ impl Ctx<'_> {
 			if !at.contains("#issuecomment-") {
 				return Err("a test of our own cites the comment that closed its issue, not the issue".into());
 			}
-			if (cite.who.as_str(), *how) != ("us", "ran") {
+			if cite.who != "us" || how != How::Ran {
 				return Err("an issue comment is a test of our own: `us ran`".into());
 			}
 			return backing("us", stated.ok_or("a test of our own is dated")?);
@@ -414,11 +556,12 @@ impl Ctx<'_> {
 	}
 }
 
-/// `<!--[<date>] [<who>] <how> [<url>|?t=<second>]-->`
+/// `<!--[<date>] [<who>] <how> <n>σ [<url>|?t=<second>]-->`
 struct Cite<'a> {
 	date: Option<&'a str>,
 	who: String,
-	how: &'a str,
+	how: How,
+	certainty: Certainty,
 	at: Option<&'a str>,
 }
 impl<'a> Cite<'a> {
@@ -433,13 +576,22 @@ impl<'a> Cite<'a> {
 		}
 		let date = dated.then(|| tokens.remove(0));
 		let at = placed.then(|| tokens.pop().expect("checked"));
-		let Some(how) = tokens.pop().filter(|h| HOWS.contains(h)) else {
-			return Some(Err(format!("a citation says how its speaker knows, one of {HOWS:?}, before its url")));
+		let certainty = match tokens.pop().and_then(|t| t.strip_suffix('σ')) {
+			Some(n) => match n.parse::<f64>().map_err(|e| e.to_string()).and_then(|n| Certainty::try_new(n).map_err(|e| e.to_string())) {
+				Ok(c) => c,
+				Err(e) => return Some(Err(format!("`{n}σ` is no certainty: {e}"))),
+			},
+			None => return Some(Err("a citation says how sure its speaker is, as `<n>σ`, before its url".into())),
+		};
+		let Some(how) = tokens.pop().and_then(|h| How::from_str(h).ok()) else {
+			let hows: &[&str] = <How as strum::VariantNames>::VARIANTS;
+			return Some(Err(format!("a citation says how its speaker knows, one of {hows:?}, before its certainty")));
 		};
 		Some(Ok(Self {
 			date,
 			who: tokens.join(" "),
 			how,
+			certainty,
 			at,
 		}))
 	}
@@ -447,13 +599,13 @@ impl<'a> Cite<'a> {
 
 /// The trust tables of `knowledge/README.md`.
 struct Tables {
-	grade: BTreeMap<String, f64>,
+	half_life: Timeframe,
 	/// who, their trust, how to reach them
 	people: Vec<(String, f64, String)>,
 }
 impl Tables {
 	fn parse(readme: &str) -> Self {
-		let mut grade = BTreeMap::new();
+		let mut half_life = None;
 		let mut people: Vec<(String, f64, String)> = Vec::new();
 		let mut header: Vec<&str> = Vec::new();
 		for l in readme.lines() {
@@ -470,10 +622,10 @@ impl Tables {
 				continue;
 			}
 			match header[..2] {
-				["grade", "how"] => {
-					let g = cells[0].parse().unwrap_or_else(|e| panic!("knowledge/README.md: grade `{}`: {e}", cells[0]));
-					grade.insert(cells[1].to_owned(), g);
-				}
+				["default", "value"] => match cells[0] {
+					"half-life" => half_life = Some(Timeframe::from_str(cells[1]).unwrap_or_else(|e| panic!("knowledge/README.md#trust: half-life `{}`: {e}", cells[1]))),
+					d => panic!("knowledge/README.md#trust: no default `{d}`"),
+				},
 				["who", "trust"] => {
 					let trust = cells[1]
 						.parse()
@@ -486,11 +638,11 @@ impl Tables {
 				_ => {}
 			}
 		}
-		for how in HOWS {
-			assert!(grade.contains_key(how), "knowledge/README.md#trust grades `{how}`");
-		}
 		assert!(!people.is_empty(), "knowledge/README.md has the people table");
-		Self { grade, people }
+		Self {
+			half_life: half_life.expect("knowledge/README.md#trust states the default half-life"),
+			people,
+		}
 	}
 
 	fn source(&self, who: &str) -> Option<f64> {

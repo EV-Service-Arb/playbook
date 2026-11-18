@@ -14,12 +14,12 @@ The reinstatement process starts by logging into the suspended Google Business P
 ### [00:00:33](https://www.youtube.com/watch?v=VGaLCraVY00&t=33) appeal factors
 
 - Video verification improves both reinstatement success and suspension resistance, while less-spammy niches such as cleaning and car detailing are easier than plumbing or locksmithing.
-  <!--says ?t=33-->
+  <!--says 1σ ?t=33-->
 
 ### [00:01:05](https://www.youtube.com/watch?v=VGaLCraVY00&t=65) starting the appeal
 
 - The reinstatement process starts by logging into the suspended Google Business Profile, selecting “Learn more,” then “Take action,” choosing the profile, and clicking “Continue.”
-  <!--says ?t=65-->
+  <!--says 1σ ?t=65-->
 
 ### [00:01:38](https://www.youtube.com/watch?v=VGaLCraVY00&t=98) gathering evidence
 
@@ -28,12 +28,12 @@ The reinstatement process starts by logging into the suspended Google Business P
 ### [00:02:46](https://www.youtube.com/watch?v=VGaLCraVY00&t=166) submitting the appeal
 
 - Google may request business registration, a business license, tax certificates, and a utility bill; the appeal can include a brief description or simply identify the attached documents.
-  <!--says ?t=166-->
+  <!--says 1σ ?t=166-->
 
 ### [00:03:19](https://www.youtube.com/watch?v=VGaLCraVY00&t=199) preventing suspensions
 
 - The speaker recommends avoiding spammy behavior and changes to the business name, address, or service category, and mentions Fiverr and Upwork for help preparing documents.
-  <!--says ?t=199-->
+  <!--says 1σ ?t=199-->
 
 ### [00:03:54](https://www.youtube.com/watch?v=VGaLCraVY00&t=234) related business profile strategy
 

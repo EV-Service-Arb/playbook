@@ -12,7 +12,7 @@ The subject is a remote drain-cleaning lead-generation business: rank Google Bus
 ### [00:00:00](https://www.youtube.com/watch?v=SOUF1oObJYk&t=0) remote service business model
 
 - The subject is a remote drain-cleaning lead-generation business: rank Google Business Profiles, route calls to local plumbers, and take a 40% commission.
-  <!--says ?t=0-->
+  <!--says 1σ ?t=0-->
 
 ### [00:00:32](https://www.youtube.com/watch?v=SOUF1oObJYk&t=32) drain cleaning niche reveal
 
@@ -21,7 +21,7 @@ The subject is a remote drain-cleaning lead-generation business: rank Google Bus
 ### [00:01:37](https://www.youtube.com/watch?v=SOUF1oObJYk&t=97) urgency, pricing, and fulfillment
 
 - Drain cleaning is presented as urgent, year-round, easy for any plumber to fulfill, with typical tickets of $300–$2,000 and hydro-jet upsells around $1,500.
-  <!--says ?t=97-->
+  <!--says 1σ ?t=97-->
 
 ### [00:02:09](https://www.youtube.com/watch?v=SOUF1oObJYk&t=129) upsells, margins, and seasonality
 
@@ -34,12 +34,12 @@ The subject is a remote drain-cleaning lead-generation business: rank Google Bus
 ### [00:04:51](https://www.youtube.com/watch?v=SOUF1oObJYk&t=291) search volume and lead estimates
 
 - The Dallas example has roughly 3.8K monthly searches, weak competition, few reviews, poor category targeting, and ranking potential from exact-match names, a drainage-service category, and about 10–23 reviews.
-  <!--says ?t=291-->
+  <!--says 1σ ?t=291-->
 
 ### [00:05:57](https://www.youtube.com/watch?v=SOUF1oObJYk&t=357) scaling profiles and commission math
 
 - The proposed expansion across Dallas, Irving, Plano, and Fort Worth could generate 20 organic leads daily; at a $500 ticket and 40% commission, the speaker estimates up to $100,000 monthly, while 20 profiles with about 20 reviews could conservatively produce $30,000 profit.
-  <!--says ?t=357-->
+  <!--says 1σ ?t=357-->
 
 ### [00:06:29](https://www.youtube.com/watch?v=SOUF1oObJYk&t=389) comparison with garage door repair
 

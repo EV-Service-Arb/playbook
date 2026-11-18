@@ -28,12 +28,15 @@ what cannot be checked is an invariant in [docs/spec/](spec/).
                      │  integrate                               skill
                      ▼
  structured/**                               the manual: conclusions, evidence beneath
-                     │  compile                                 code, at build
+                     │  compile                                 code
                      ▼
-              who · trust · date, per claim
-                     │  search · read · guide                   server, at the moment asked
+     per citation: who · how · σ · date · half-life of its module
+              init = source(who) × P(σ)
+                     │                                          at the moment read
+                     ├─► search · read · guide     members      server
+                     └─► playbook view <dir>       checkout     a copy, line for line
                      ▼
-              effective = trust × γ(age)
+              norm = init × γ(age; half-life)      every citation, rendered alike
 ```
 
 Each step reads only what the one above it wrote. Two directions follow from that:
@@ -41,8 +44,8 @@ Each step reads only what the one above it wrote. Two directions follow from tha
 - **the manual is filed by where it is used**, `references/` by where it came from. A result someone
   got sits under the method that got it; how to verify a profile and how to get reviews are separate
   pages however often one call mixed them
-- **nothing derived is written down.** A citation states who, how they know and when; what that is
-  worth is computed when it is read. A number typed into a note is stale the day its table moves
+- **nothing derived is written down.** A citation states who, how they know, how sure and when; what
+  that is worth is computed when it is read. A number typed into a note is stale the day its table moves
 
 ## Layers
 
@@ -117,7 +120,7 @@ The formats of all of them, the trust tables and the style are [knowledge/README
 
 Every tool here is a subcommand of the `playbook` crate at the root of the cargo workspace, so each
 dependency is pinned once for all of them. `corpus/` beside it is the compiler of `knowledge/`: `playbook check`
-prints what it refuses, and `playbook_web` bakes what it resolves. `playbook <cmd>` is `cargo r -p playbook -- <cmd>`, run
+prints what it refuses, `playbook_web` bakes what it resolves, and `playbook view` renders it for a checkout agent. `playbook <cmd>` is `cargo r -p playbook -- <cmd>`, run
 from anywhere inside the checkout. Each `pull <platform>` takes source URLs as arguments, or with
 none reads `knowledge/references/README.md` for links of its platform and fetches the ones missing from disk. So
 adding a source is pasting its link into `knowledge/references/README.md` and re-running. `pull yt` alone goes
@@ -141,6 +144,7 @@ playbook/src/
 ├── yt.rs              # pull yt sync: channels → the dated list of their videos; pull yt transcribe: description and captions in citable blocks, then the picture through `watch`
 ├── skool.rs           # pull skool: skool's classroom → the course tree, module by module and lesson by lesson; the calls feed → the registry's group calls
 ├── photo_metadata.rs  # photo-metadata: exif of our own photos, and synthetic sidecars
+├── view.rs            # view, not a puller: `knowledge/` mirrored outside the checkout, every citation rendered as `corpus` labels it
 └── eval.rs            # eval
 ```
 

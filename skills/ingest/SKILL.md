@@ -8,6 +8,11 @@ argument-hint: "[capture|digest|propose|integrate|notes|people|internal|resolve]
 
 Only in a checkout. The formats are [knowledge/README.md](../../knowledge/README.md); read it first.
 
+Every step reads `knowledge/` through a fresh `playbook view <dir>`, a directory outside the checkout, where each
+citation carries what it is worth ([trust](../../knowledge/README.md#trust)). Where the task's information goes
+stale faster or slower than its modules suggest, view it with `--half-life`. Every edit goes to `knowledge/`
+itself, at the same `path:line`, citations copied from there.
+
 A source goes down these in order, and each step reads only what the one before wrote:
 
 | step | from | to | read |

@@ -4,5 +4,11 @@ version = "0.1.0"
 edition.workspace = true
 publish = false
 
+[dependencies]
+v_utils = { git = "https://github.com/valeratrades/v_utils", rev = "b7c91ad5a5e91f916121999162aa54c9dfbfe257", default-features = false, features = ["lite"] } # shortcut: `Certainty` is past 2.23, which `social_networks_adapters` pins with `=`; the workspace's once it lifts that pin
+
+serde.workspace = true
+strum.workspace = true
+
 [lints]
 workspace = true

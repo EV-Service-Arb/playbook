@@ -45,10 +45,11 @@ async fn the_server_carries_data_and_the_skill_the_procedure() {
 	assert_eq!(status, StatusCode::OK, "{people}");
 	assert!(people.contains("| Eric |"), "{people}");
 
-	// r[verify trust.arithmetic]
+	// r[verify trust.arithmetic+2]
 	let (status, page) = get(&app, member("u0"), "/guide", json!({ "area": "contractors/splits" })).await;
 	assert_eq!(status, StatusCode::OK, "{page}");
-	assert!(page.contains(" · effective 0."), "{page}");
+	assert!(page.contains(" · init 0."), "{page}");
+	assert!(page.contains(" · norm 0."), "{page}");
 	assert!(!page.contains("<!--"), "a citation is served as what it is worth, never as what that is computed from:\n{page}");
 
 	let (status, text) = get(&app, member("u0"), "/search", json!({ "pattern": "the" })).await;

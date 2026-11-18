@@ -14,7 +14,7 @@ fn main() {
 		.to_path_buf();
 	let knowledge = root.join("knowledge");
 	println!("cargo:rerun-if-changed={}", knowledge.display());
-	let index = corpus::compile(&root).unwrap_or_else(|errors| panic!("knowledge/ does not compile:\n{}", errors.join("\n")));
+	let mut index = corpus::compile(&root).unwrap_or_else(|errors| panic!("knowledge/ does not compile:\n{}", errors.join("\n")));
 	for pending in &index.pending {
 		println!("cargo:warning={pending}: no `content.md` reads it yet");
 	}
@@ -31,14 +31,18 @@ fn main() {
 		let rel = f.strip_prefix(&root).unwrap().to_str().expect("corpus paths are utf-8");
 		if let Some(page) = rel.strip_prefix("knowledge/structured/") {
 			let topic = fs::read_to_string(f).unwrap();
-			let topic = topic.lines().next().and_then(|l| l.strip_prefix("# ")).expect("`corpus::compile` holds a page to its opening line");
+			let topic = topic
+				.lines()
+				.next()
+				.and_then(|l| l.strip_prefix("# "))
+				.expect("`corpus::compile` holds a page to its opening line");
 			pages.push(format!("- {}: {topic}", page.trim_end_matches(".md")));
 		}
 		writeln!(out, "\t({rel:?}, include_str!({:?})),", f.display().to_string()).unwrap();
 	}
 	out.push_str("];\n");
 	let guide = format!(
-		"One page of the manual, whole: what we do in an area.\n\nEach step or decision in the order it is met, and the evidence under it, every citation given as who, how they know, when, and what that is worth today. `people`: who has run what, and how to reach them. The pages:\n{}",
+		"One page of the manual, whole: what we do in an area.\n\nEach step or decision in the order it is met, and the evidence under it, every citation given as who, how they know, how sure, how long ago, and what that was worth when said (`init`) and is worth today (`norm`). `people`: who has run what, and how to reach them. The pages:\n{}",
 		pages.join("\n")
 	);
 	writeln!(out, "const GUIDE_DESCRIPTION: &str = {guide:?};").unwrap();
@@ -46,7 +50,7 @@ fn main() {
 	let docs = [
 		(
 			"search",
-			"Case-insensitive regex over the service-arb playbook.\n\nEach kind of source has its own slots, so none crowds out another: the manual (knowledge/structured), the course (lessons and the recordings they link), calls, videos, texts. Within a kind, a passage holding the rarer of the pattern's alternatives ranks first. Each hit gives path:line, its header, its label, the source URL and the lines around it; the files past the slots follow as path:line, for `read`. A pattern hitting most of the scope is refused, with the sub-scopes it hits.\n\nA label is who backs the passage, how they know (ran it, says so, heard it), when the information is from, and `effective`: what that is worth today, 0 to 1, higher is better. `unvetted`: nobody of ours has checked the claim. `unscored`: nothing says who speaks.".to_owned(),
+			"Case-insensitive regex over the service-arb playbook.\n\nEach kind of source has its own slots, so none crowds out another: the manual (knowledge/structured), the course (lessons and the recordings they link), calls, videos, texts. Within a kind, a passage holding the rarer of the pattern's alternatives ranks first. Each hit gives path:line, its header, its label, the source URL and the lines around it; the files past the slots follow as path:line, for `read`. A pattern hitting most of the scope is refused, with the sub-scopes it hits.\n\nA label is who backs the passage, how they know (ran it, says so, heard it), how sure they were in σ, the information's age, `init`: what it was worth when said, and `norm`: what it is worth today, 0 to 1, higher is better. `unvetted`: nobody of ours has checked the claim. `unscored`: nothing says who speaks.".to_owned(),
 		),
 		(
 			"read",
@@ -60,26 +64,12 @@ fn main() {
 	}
 	out.push_str("];\n");
 
-	let cited = |line: usize, b: &corpus::Backing| format!("Cited {{ line: {line}, who: {:?}, how: {:?}, trust: {:?}, day: {} }}", b.who, b.how, b.trust, b.day);
-	out.push_str("pub static CLAIMS: &[(&str, &[Claim])] = &[\n");
-	for (path, claims) in index.claims.iter().filter(|(p, _)| files.iter().any(|f| f.ends_with(p.as_str()))) {
-		writeln!(out, "\t({path:?}, &[").unwrap();
-		for c in claims {
-			let backing: Vec<String> = c.backing.iter().map(|(line, b)| cited(*line, b)).collect();
-			writeln!(out, "\t\tClaim {{ from: {}, to: {}, vetted: {}, backing: &[{}] }},", c.lines.start, c.lines.end, c.vetted, backing.join(", ")).unwrap();
-		}
-		out.push_str("\t]),\n");
-	}
-	out.push_str("];\npub static SPEAKERS: &[(&str, Cited)] = &[\n");
-	for (path, capture) in &index.captures {
-		if let Some(s) = &capture.speaker {
-			writeln!(out, "\t({path:?}, {}),", cited(0, s)).unwrap();
-		}
-	}
-	out.push_str("];\n");
-
 	let out_dir = PathBuf::from(std::env::var("OUT_DIR").unwrap());
 	fs::write(out_dir.join("corpus.rs"), out).unwrap();
+	let baked = |p: &String| files.iter().any(|f| f.ends_with(p.as_str()));
+	index.claims.retain(|p, _| baked(p));
+	index.half_lives.retain(|p, _| baked(p));
+	fs::write(out_dir.join("index.json"), serde_json::to_string(&index).unwrap()).unwrap();
 }
 
 /// `README.md`s are indices and format rules, not knowledge. `knowledge/references/cases/` states no source and no date.

@@ -20,6 +20,10 @@ Integrating a claim MUST leave its page reading as one text: rewrite, move or sp
 r[knowledge.contradiction+2]
 Sources may contradict each other; the manual MUST NOT. A contradiction is two claims that cannot both be acted on. It is resolved into one claim, and the record of it goes to `knowledge/log/resolved/`.
 
+r[knowledge.revision]
+A later statement by a speaker that contradicts their own earlier one is a revision, not a contradiction between sources: it
+wins unless they say otherwise. The manual MUST NOT stand on a view its own speaker has since revised.
+
 r[knowledge.manual.estimate]
 A number in the manual is an estimate. Sources putting different numbers on one quantity do not contradict: each number MUST stay beside the others as evidence, and a conclusion MUST NOT merge them into one figure or one range.
 

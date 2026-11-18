@@ -12,9 +12,9 @@ Ten seconds filmed over a phone showing the Google Business Profile setup form, 
 ### [00:00](https://drive.google.com/file/d/1x5evaVWwfpDIGRMtm2UZNm3dpBGZ4gar?t=0) Adding themselves, on the phone form
 
 - the member says they have just "grew up the business" and will "add myself so the emails was like not in your" — the clause is cut off
-  <!--gmbpp member says ?t=0-->
+  <!--gmbpp member says 1σ ?t=0-->
 - the phone shows the Business Profile setup: `Add your services`, `Business name`, `Business category`, `Business address`
-  <!--gmbpp member says ?t=5-->
+  <!--gmbpp member says 1σ ?t=5-->
 
 ## open
 

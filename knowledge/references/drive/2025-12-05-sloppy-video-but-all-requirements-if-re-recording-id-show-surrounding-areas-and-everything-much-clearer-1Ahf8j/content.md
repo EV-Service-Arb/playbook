@@ -12,24 +12,24 @@ A one-take walk-through for an address verification: street signs at the corner,
 ### [00:00](https://drive.google.com/file/d/1Ahf8jzVHyYF_RymtzMg1FghmgA-dJVad?t=0) Street, corner and neighbouring buildings
 
 - opens on the street signs `Powerhouse St` and `Lansdowne Ave` on a pole, then walks the sidewalk and the road past brick buildings and construction equipment, so the surroundings identify where the address is
-  <!--gmbpp member says ?t=0-->
+  <!--gmbpp member says 1σ ?t=0-->
 - the building's own number is filmed close up: `30 Powerhouse Street`
-  <!--gmbpp member says ?t=42-->
+  <!--gmbpp member says 1σ ?t=42-->
 
 ### [00:14](https://drive.google.com/file/d/1Ahf8jzVHyYF_RymtzMg1FghmgA-dJVad?t=14) The only line of speech
 
 - "every routine that I would do, basically, I mean, I have a gift", with no context in the transcript
-  <!--gmbpp member says ?t=14-->
+  <!--gmbpp member says 1σ ?t=14-->
 
 ### [00:46](https://drive.google.com/file/d/1Ahf8jzVHyYF_RymtzMg1FghmgA-dJVad?t=46) Inside to the office door
 
 - enters a lobby and goes to a wooden door `G07` carrying a `SunCool HVAC` sticker with a phone number, with an electronic card lock and handle shown
-  <!--gmbpp member says ?t=62-->
+  <!--gmbpp member says 1σ ?t=62-->
 
 ### [01:07](https://drive.google.com/file/d/1Ahf8jzVHyYF_RymtzMg1FghmgA-dJVad?t=67) Proof of operation on a laptop
 
 - on the desk: a laptop, a key fob and a phone. The laptop shows an invoicing dashboard for `SunCool HVAC of Toronto` with CA$8,017.04 against CA$8,970.00, then a call and chat inbox of missed calls under the same name
-  <!--gmbpp member says ?t=69-->
+  <!--gmbpp member says 1σ ?t=69-->
 
 ## open
 

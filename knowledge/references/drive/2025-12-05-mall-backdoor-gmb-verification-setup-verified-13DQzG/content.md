@@ -12,11 +12,11 @@ An unnamed member walks a rented mall back corridor staged as a plumber's premis
 ### [00:00](https://drive.google.com/file/d/13DQzG3r8GgO2UtmNsWFVQq4acLeKSPr_?t=0) The staged back door
 
 - the member says the sign on the door is their own and the lock is "makeshift", "fake as well", put up so they can be filmed unlocking the door
-  <!--gmbpp member says ?t=0-->
+  <!--gmbpp member says 1σ ?t=0-->
 - inside is "some random" storage room, with a second company sign posted at its entrance
-  <!--gmbpp member says ?t=0-->
+  <!--gmbpp member says 1σ ?t=0-->
 - the picture shows a red `PLUMBER First Choice NORTH YORK` sign on a gray double door in a service corridor, a black combination-style lock above a separate key cylinder, then a storage room of boxes and a pallet jack
-  <!--gmbpp member says ?t=3-->
+  <!--gmbpp member says 1σ ?t=3-->
 
 ## open
 

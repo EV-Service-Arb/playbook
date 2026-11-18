@@ -12,11 +12,11 @@ A silent fourteen-second walk into a clinic-style premises for a verification vi
 ### [00:02](https://drive.google.com/file/d/1HrFItz5LtBpebrrKOJoPqrEX9MTgOl9V?t=2) Door, hallway and waiting area
 
 - a light gray door with a black keypad deadbolt above a silver knob, then the open door onto a hallway with a framed floor-plan diagram and printed notices
-  <!--gmbpp member says ?t=5-->
+  <!--gmbpp member says 1σ ?t=5-->
 - the waiting area has a visitor chair and security warnings (`WARNING Security Cameras In Use`), an `EXIT` sign through the next doorway
-  <!--gmbpp member says ?t=8-->
+  <!--gmbpp member says 1σ ?t=8-->
 - a blue wall sign shows a cartoon plumber with a wrench: `PLUMBER ON COMMAND VAUGHAN`; the last frame shows a red `DO NOT ENTER` sign
-  <!--gmbpp member says ?t=13-->
+  <!--gmbpp member says 1σ ?t=13-->
 
 ## open
 

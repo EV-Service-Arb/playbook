@@ -18,28 +18,53 @@ A source moves down this list one step at a time, each step reading only what th
 One line, an html comment, under the text it backs:
 
 ```md
-<!--2026-09-25 Dante ran https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=353-->
+<!--2026-09-25 Dante ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=353-->
 ```
 
 - the date the information is from: the capture's, or earlier where the speaker dates it
 - who: a row of [people](#people). Left out where the source fixes it: a course lesson, a channel's video,
   a chatgpt share. `agent`: one of ours inferred it, from nothing it could cite
 - how they know: `ran` it and report the result, `says` so, `heard` it from someone
+- how sure the statement is, in σ: [certainty](#certainty)
 - the url of the capture, at the second it was said. No url: it was never recorded
 - `us ran` cites the comment that closed the test's issue
 
-In a `content.md` the capture is given, so a point's citation is `<!--Dante ran ?t=353-->`, with the
+In a `content.md` the capture is given, so a point's citation is `<!--Dante ran 2σ ?t=353-->`, with the
 date only where it is earlier than the capture's.
 
 ## Trust
 
-`source(who) × grade(how) × γ(age)`, per [docs/spec/trust.md](../docs/spec/trust.md). Only the server computes it.
+Read `knowledge/` through `playbook view <dir>`: a copy, line for line, with every citation rendered as what
+it is worth. Edit `knowledge/` itself.
 
-| grade | how |
+```
+<!--2026-09-25 Dante ran 2σ https://…?t=353-->   →   [Dante ran 2σ · 400d · init 0.57 · norm 0.21 · https://…?t=353]
+
+  init  =  source(who)  ×  P(certainty)        what it was worth when said
+  norm  =  init  ×  γ(age; half-life)          what it is worth today. advice is ranked by norm
+```
+
+- source(who) is the [people](#people) table. P(certainty) is the share of a normal distribution within that many σ
+- the half-life is how fast a module's knowledge goes stale: dealing with contractors, ~5y; google's
+  algorithm, ~1y. A page states its own under its title, `<!--half-life 5y-->`, for itself and its `x/`;
+  the nearest one holds, else the default below. `view` puts the one used on each page's title line
+- the decay is an estimate: nobody knows how fast one bullet goes stale. Where this information goes
+  stale faster or slower than its module, read it by init and age, which are printed beside norm for
+  that, or pass `view --half-life` for the whole task
+
+| default | value |
 |---|---|
-| 1 | ran |
-| 0.8 | says |
-| 0.6 | heard |
+| half-life | 1y |
+
+### Certainty
+
+Read off the statement, never off who says it:
+
+| σ | the statement |
+|---|---|
+| 2 | they saw it in their own data, or teach it in a course |
+| 1 | plain advice |
+| < 1 | a guess, an aside, a hedge: "I think", "I heard", "maybe" |
 
 <a id="people"></a>A person's trust is a number, or the row they stand in for:
 

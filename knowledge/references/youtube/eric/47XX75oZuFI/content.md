@@ -12,12 +12,12 @@ The speaker says he rose from a few thousand dollars monthly to $100,000–$150,
 ### [00:00:00](https://www.youtube.com/watch?v=47XX75oZuFI&t=0) the core lesson
 
 - The speaker says he rose from a few thousand dollars monthly to $100,000–$150,000 monthly by accepting that failure, wasted money, and hard work are unavoidable.
-  <!--ran ?t=0-->
+  <!--ran 2σ ?t=0-->
 
 ### [00:01:06](https://www.youtube.com/watch?v=47XX75oZuFI&t=66) leaving comfortable work
 
 - He explains leaving a car-detailing business earning $5,000–$10,000 monthly, then reaching $20,000 monthly two months later by taking more risk and working harder.
-  <!--ran ?t=66-->
+  <!--ran 2σ ?t=66-->
 
 ### [00:02:11](https://www.youtube.com/watch?v=47XX75oZuFI&t=131) taking the leap
 
@@ -26,7 +26,7 @@ The speaker says he rose from a few thousand dollars monthly to $100,000–$150,
 ### [00:03:52](https://www.youtube.com/watch?v=47XX75oZuFI&t=232) committing money and effort
 
 - He recommends trying many approaches, failing quickly, investing in yourself, and using tools such as mentorship or coaching only when you genuinely believe they can produce the result.
-  <!--says ?t=232-->
+  <!--says 1σ ?t=232-->
 
 ### [00:04:24](https://www.youtube.com/watch?v=47XX75oZuFI&t=264) testing ideas quickly
 
@@ -41,6 +41,6 @@ The speaker says he rose from a few thousand dollars monthly to $100,000–$150,
 ### [00:09:24](https://www.youtube.com/watch?v=47XX75oZuFI&t=564) targeting $100k monthly
 
 - His main mindset exercise is committing to a specific target—his was $100,000 per month—writing it down, visualizing it daily, and taking immediate action instead of staying comfortable.
-  <!--says ?t=564-->
+  <!--says 1σ ?t=564-->
 
 ### [00:09:58](https://www.youtube.com/watch?v=47XX75oZuFI&t=598) adopting the mindset

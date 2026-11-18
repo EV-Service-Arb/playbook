@@ -16,8 +16,8 @@ Eric coaches Aiden, a newcomer with a house-cleaning business in Chicago and Min
 ### [03:31](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=211) Spam calls about the Google listing
 
 - Aiden has had many calls in two days saying "verify Google listing not showing correctly, speak to an agent" on the profile he got instantly verified; his call tracking shows where they come from. Eric: ignore them, probably spam.
-  <!--Aiden ran ?t=211-->
-  <!--Eric says ?t=211-->
+  <!--Aiden ran 2σ ?t=211-->
+  <!--Eric says 1σ ?t=211-->
 
 ### [06:37](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=397) Submitting a live-video support ticket
 
@@ -26,12 +26,12 @@ Eric coaches Aiden, a newcomer with a house-cleaning business in Chicago and Min
 ### [16:18](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=978) Selling the Chicago profile
 
 - Eric asks whether Aiden would sell his Chicago profile, a blank one with six reviews, to a member who wants to do house cleaning in Chicago; neither knows what such profiles go for.
-  <!--Eric says ?t=978-->
+  <!--Eric says 1σ ?t=978-->
 
 ### [16:18](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=978) Adding yourself as manager on a profile
 
 - To get into a profile made on someone else's Gmail: three dots, business profile settings, people and access, add your email as manager, accept the invite.
-  <!--Eric says ?t=978-->
+  <!--Eric says 1σ ?t=978-->
 
 ### [16:18](https://www.loom.com/share/64ca328cf63e498a972764993ec3892a?t=978) Next steps
 

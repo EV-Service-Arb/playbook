@@ -10,12 +10,14 @@ For each point of the digest worth keeping, one entry:
 ## <page it belongs on, as a path under knowledge/structured/>
 
 - <the point, with its citation as the manual will carry it>
-  does: <confirms | qualifies | contradicts | adds a step | is a route beside | is new evidence for> "<the bullet it meets, quoted>"
+  does: <confirms | qualifies | contradicts | revises | adds a step | is a route beside | is new evidence for> "<the bullet it meets, quoted>"
 ```
 
 - a point goes to the page the next asker would open, not to where the call happened to raise it. The
   result someone got from a method sits under that method
 - a point no page fits: say which new page, and what else already in the manual would move there
 - a point that contradicts the manual is marked, never softened: [resolve.md](resolve.md) settles it
+- a speaker contradicting what they said before `revises` it: the bullets standing on their earlier view go to
+  [resolve.md](resolve.md) as one revision, not as a contradiction between sources
 - what is left out and why, in one closing list: `## not kept`. A story no conclusion stands on stays
   in the digest

@@ -16,12 +16,12 @@ Finds contractors for a drop-servicing business by creating a Nextdoor account a
 ### [00:01:04](https://www.youtube.com/watch?v=ZE9sDxXY6gk&t=64) creating a Nextdoor account
 
 - Emphasizes that calling beats texting, that a polished script is unnecessary, and that licensed contractors can be sourced within about 15 minutes.
-  <!--says ?t=64-->
+  <!--says 1σ ?t=64-->
 
 ### [00:01:39](https://www.youtube.com/watch?v=ZE9sDxXY6gk&t=99) searching Nextdoor for contractors
 
 - Finds contractors for a drop-servicing business by creating a Nextdoor account and calling local plumbers who post that they need work.
-  <!--says ?t=99-->
+  <!--says 1σ ?t=99-->
 
 ### [00:02:11](https://www.youtube.com/watch?v=ZE9sDxXY6gk&t=131) finding plumbers seeking work
 
@@ -32,14 +32,14 @@ Finds contractors for a drop-servicing business by creating a Nextdoor account a
 ### [00:03:52](https://www.youtube.com/watch?v=ZE9sDxXY6gk&t=232) explaining the 60/40 split
 
 - Explains a 60/40 profit split: the contractor keeps 60% after materials, while the business owner keeps 40% and handles advertising, customers, and job coordination.
-  <!--says ?t=232-->
+  <!--says 1σ ?t=232-->
 
 ### [00:04:25](https://www.youtube.com/watch?v=ZE9sDxXY6gk&t=265) handling the organic-lead angle
 
 ### [00:04:58](https://www.youtube.com/watch?v=ZE9sDxXY6gk&t=298) live plumber call example
 
 - Demonstrates a contractor call covering job volume, licensing, availability, documentation, and starting with two or three jobs.
-  <!--Muhammad ran ?t=298-->
+  <!--Muhammad ran 2σ ?t=298-->
 
 ### [00:05:31](https://www.youtube.com/watch?v=ZE9sDxXY6gk&t=331) checking licensing and availability
 

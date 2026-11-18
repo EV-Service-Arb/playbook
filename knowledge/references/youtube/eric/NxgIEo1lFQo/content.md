@@ -20,7 +20,7 @@ The subject is creating multiple Google Business Profiles for local-service area
 ### [00:02:44](https://www.youtube.com/watch?v=NxgIEo1lFQo&t=164) lead routing and 40% splits
 
 - The subject is creating multiple Google Business Profiles for local-service areas, then monetizing calls through contractor partnerships or selling setup and training.
-  <!--says ?t=164-->
+  <!--says 1σ ?t=164-->
 
 ### [00:03:48](https://www.youtube.com/watch?v=NxgIEo1lFQo&t=228) finding clients through profiles
 
@@ -31,17 +31,17 @@ The subject is creating multiple Google Business Profiles for local-service area
 ### [00:08:08](https://www.youtube.com/watch?v=NxgIEo1lFQo&t=488) youtube as client acquisition
 
 - Client acquisition methods include personal profiles, SMS blasts using Outscraper and Fiverr or GoHighLevel, and YouTube content; 10,000 texts are claimed to produce about 10 interested prospects.
-  <!--says ?t=488-->
+  <!--says 1σ ?t=488-->
 
 ### [00:09:46](https://www.youtube.com/watch?v=NxgIEo1lFQo&t=586) profile revenue economics
 
 - It describes a roofing example involving $9,000, a 40% revenue split, average roofing jobs of $8,000–$20,000, and a claimed potential of up to $10,000 monthly from one strong profile.
-  <!--says ?t=621-->
+  <!--says 1σ ?t=621-->
 
 ### [00:11:28](https://www.youtube.com/watch?v=NxgIEo1lFQo&t=688) verification requirements by niche
 
 - Verification varies by niche: cleaning, detailing, landscaping, and pool services may verify easily, while plumbing, HVAC, and roofing typically require video proof of location, signage/equipment, and management.
-  <!--says ?t=787-->
+  <!--says 1σ ?t=787-->
 
 ### [00:13:41](https://www.youtube.com/watch?v=NxgIEo1lFQo&t=821) video proof requirements
 
@@ -50,7 +50,7 @@ The subject is creating multiple Google Business Profiles for local-service area
 ### [00:16:26](https://www.youtube.com/watch?v=NxgIEo1lFQo&t=986) ranking and reinstatement upsells
 
 - Additional services include SEO ranking, reviews, and reinstatement, with examples of charging $2,000 to restore a profile generating $10,000 monthly.
-  <!--says ?t=1051-->
+  <!--says 1σ ?t=1051-->
 
 ### [00:18:04](https://www.youtube.com/watch?v=NxgIEo1lFQo&t=1084) remote service business offer
 

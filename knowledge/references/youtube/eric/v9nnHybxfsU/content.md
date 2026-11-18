@@ -12,9 +12,9 @@ Remote service arbitrage lists local business profiles that rank on Google, send
 ### [00:00:00](https://www.youtube.com/watch?v=v9nnHybxfsU&t=0) business model and results
 
 - The speaker contrasts students earning $10k, $50k, or $100k monthly with others earning $0 despite identical resources, attributing the gap to seven execution factors.
-  <!--heard ?t=32-->
+  <!--heard 0.5σ ?t=32-->
 - Remote service arbitrage lists local business profiles that rank on Google, sends leads to partnered plumbers or other service providers, and keeps a 40% commission.
-  <!--says ?t=130-->
+  <!--says 1σ ?t=130-->
 
 ### [00:02:44](https://www.youtube.com/watch?v=v9nnHybxfsU&t=164) conviction and commitment
 
@@ -23,7 +23,7 @@ Remote service arbitrage lists local business profiles that rank on Google, send
 ### [00:08:08](https://www.youtube.com/watch?v=v9nnHybxfsU&t=488) sticking to one plan
 
 - Success requires conviction, sticking to one plan, choosing a suitable niche, avoiding complacency, and focusing on verification, SEO, reviews, and consistent inputs.
-  <!--says ?t=488-->
+  <!--says 1σ ?t=488-->
 
 ### [00:10:52](https://www.youtube.com/watch?v=v9nnHybxfsU&t=652) choosing the right niche
 
@@ -32,7 +32,7 @@ Remote service arbitrage lists local business profiles that rank on Google, send
 ### [00:15:12](https://www.youtube.com/watch?v=v9nnHybxfsU&t=912) simplifying the process
 
 - The process should use simple tools such as ChatGPT rather than Claude Code, evaluate results weekly rather than daily, and fully use coaching resources and scheduled calls.
-  <!--says ?t=946-->
+  <!--says 1σ ?t=946-->
 
 ### [00:17:24](https://www.youtube.com/watch?v=v9nnHybxfsU&t=1044) tracking trends not daily swings
 

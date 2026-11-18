@@ -6,74 +6,74 @@ what members and sources have reported about verifying a profile by recorded vid
 
 - do I need different phones when registering multiple profiles at once for vid review submission
   A: can use the same!
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1603-->
+  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1603-->
 - (?) same phone number across profiles is fine; the business *name* has to differ at least slightly — Eric
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1603-->
+  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1603-->
 
 ## what it shows
 
 - (?) the course's own videos are the baseline for what to show: signage, the vehicle, a business card. a member's failure story qualifies them, it does not replace them // inferred
-  <!--2026-10-30 agent says-->
+  <!--2026-10-30 agent says 1σ-->
 - (?) (!) most failures are signage — Eric
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1500-->
+  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1500-->
 - (?) before recording, photograph the sign and ask chatgpt "is this a permanent sign?" // credited to `Donovan`, reported to have helped a lot of people
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1500-->
+  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1500-->
 - (?) the rest of the video is low-risk: show yourself at the location, unlock the door, show the CRM for management access, a staff-only sticker may help slightly
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1543-->
+  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1543-->
 
 ## street and signs
 
 - Eric says that someone got video verif through with matching house number only; without even showing the street sign
-  <!--2026-09-25 Eric heard https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1413-->
+  <!--2026-09-25 Eric heard 0.5σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1413-->
   > he did spoof the location too
-  <!--2026-09-25 Eric heard https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1452-->
+  <!--2026-09-25 Eric heard 0.5σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1452-->
 - apparently showing wrong street signs is fine
-  <!--2026-09-25 Grisha G ran https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=4490-->
+  <!--2026-09-25 Grisha G ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=4490-->
 - Eric: a guy is showing a street sign how it would look on the correct location — AI-generated, laid out with Google Earth, on his computer screen — then shows an invoice next to it like it was real, and smoothly gets over to the invoice so the AI reviewing doesn't notice it was opened on a pc
-  <!--2026-10-23 Eric heard https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2151-->
-  <!--2026-10-23 Eric heard https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2180-->
+  <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2151-->
+  <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2180-->
   tested by one person, gets approved
-  <!--2026-10-23 Eric heard https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2113-->
+  <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2113-->
   > location spoofed as well
-  <!--2026-10-23 Eric heard https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2251-->
+  <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2251-->
   Q: does he start from outside, or does the entire vid from inside the house
 - (?) (!) an address video without being there: AI-generate the street signs as they'd look at that corner, matched to google earth, show the image on a computer screen in the video, flash an invoice, and spoof the phone's location — Eric, passing on one member's method that gets approved
   reason: the reviewer cross-references the scenery against the address
-  <!--2026-10-23 Eric heard https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2113-->
-  <!--2026-10-23 Eric heard https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2151-->
-  <!--2026-10-23 Eric heard https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2180-->
-  <!--2026-10-23 Eric heard https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2207-->
+  <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2113-->
+  <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2151-->
+  <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2180-->
+  <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2207-->
 
 ## attempts
 
 - (?) (!) while you are set up at the location anyway, create three profiles and record three videos
   reason: the identical video passes on one submission and fails on another, so buy yourself two more draws
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1573-->
+  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1573-->
 
 ## service-area video
 
 - (?) a SAB video is harder to record than an address one, unless you actually live in the area you are claiming
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3516-->
+  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3516-->
 
 ## recorded and edited video
 
 - Gabe Jacobs is doing pre-recorded videos with AI, - no edits worked!
-  <!--2026-09-18 Gabe Jacobs ran https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=429-->
+  <!--2026-09-18 Gabe Jacobs ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=429-->
 
   likely has legs, as long as we minimize amount of edits, and don't generate any parts of the video with AI fully
 
   Q: do edit cuts matter? TODO: test if cutting 2 videos together while doing nothing else passes
 - `David`'s doing AI-verifications
   also mentioned rooting android
-  <!--2026-09-18 David ran https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6077-->
+  <!--2026-09-18 David ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6077-->
 - (?) fully AI-generated video has no chance — `Valera`, google detects it the same way youtube does, by the noise signature
-  <!--2026-09-18 Valera says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5990-->
+  <!--2026-09-18 Valera says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5990-->
 - (?) but a *real* recorded video injected through a rooted phone produced none of the AI error messages
-  <!--2026-09-18 Gabe Jacobs ran https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=393-->
+  <!--2026-09-18 Gabe Jacobs ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=393-->
 - (?) editing signs and text into a real video (paid out on fiverr) still failed — but that was for SAB profiles; untested for a storefront/office video
-  <!--2026-09-18 Gabe Jacobs ran https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=446-->
+  <!--2026-09-18 Gabe Jacobs ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=446-->
 - (?) (!) the whole injection route worked for a month and then stopped working last week for at least one member — "it would tell you, hey, this is pre-recorded"
   > so anything in this section has a shelf life measured in weeks
-  <!--2026-09-18 David ran https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6048-->
+  <!--2026-09-18 David ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6048-->
 - (?) anything that injects or edits video has a shelf life of weeks. check the newest capture before relying on it // inferred
-  <!--2026-10-30 agent says-->
+  <!--2026-10-30 agent says 1σ-->

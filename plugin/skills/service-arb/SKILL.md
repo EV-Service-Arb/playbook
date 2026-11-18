@@ -29,14 +29,16 @@ and stop.
 
 ## Weighing
 
-Every hit's label says who backs it, how they know, when, and `effective`: what that is worth today.
-Higher is better. Effective decides the answer, not recency or how vivid a story is.
+Every hit's label says who backs it, how they know, how sure in σ, how long ago, `init`: what it was worth
+when said, and `norm`: what it is worth today. Higher is better. Norm decides the answer, not recency or how
+vivid a story is.
 
-- build from the highest effective down. Sources disagree on what is so: the higher one leads
+- build from the highest norm down. Sources disagree on what is so: the higher one leads
+- norm assumes the topic goes stale at its module's pace. Where this one plainly goes stale slower (a
+  contractor's habits) or faster (a google loophole), weigh it by init and age instead
 - `unscored` is the words as said, with nobody named: a quote for a claim something scored makes, never
   a weight of its own. Its label names the digest that says who spoke
-- `unvetted`, or backed only by someone who `heard` it, never becomes a checklist item or a "don't": it
-  goes after the advice as a caveat, with who and when
+- `unvetted` never becomes a checklist item or a "don't": it goes after the advice as a caveat, with who and when
 - last pass: nothing dated after your newest citation says otherwise
 - attribute each claim to who said it, from the label
 

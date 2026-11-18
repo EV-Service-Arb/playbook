@@ -14,6 +14,7 @@ mod doc;
 mod eval;
 mod photo_metadata;
 mod skool;
+mod view;
 mod watch;
 mod yt;
 
@@ -41,6 +42,15 @@ enum Cmd {
 		/// exit non-zero while a recording has no `content.md`
 		#[arg(long)]
 		digested: bool,
+	},
+	/// Mirror `knowledge/` into `<dir>` line for line, every citation and capture date rendered as what it is
+	/// worth today. Refuses a tree that does not compile, and a `<dir>` that holds anything but a previous view.
+	View {
+		/// outside the checkout
+		dir: PathBuf,
+		/// decay every citation at this, instead of at its module's suggestion
+		#[arg(long)]
+		half_life: Option<corpus::Timeframe>,
 	},
 	/// Print the path of each capture's recording, fetched beside the capture first where none is kept.
 	Recording {
@@ -180,6 +190,7 @@ fn main() {
 				std::process::exit(1);
 			}
 		},
+		Cmd::View { dir, half_life } => view::run(&root, &dir, half_life),
 		Cmd::Recording { captures } =>
 			for media in call::recordings(&root, &captures) {
 				println!("{}", media.display());

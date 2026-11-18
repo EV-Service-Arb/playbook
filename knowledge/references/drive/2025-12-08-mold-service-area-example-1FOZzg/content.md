@@ -12,14 +12,14 @@ A silent twenty-seven-second film of a mold-remediation van on a snowy street: t
 ### [00:00](https://drive.google.com/file/d/1FOZzgKw_oBvnlgwSAzFvRUbGO06Hk_n9?t=0) The van outside
 
 - a white minivan beside the sidewalk with a door sign showing a green cartoon germ: `MOLD ASSIST`; a partial license plate is shown at the rear
-  <!--gmbpp member says ?t=5-->
+  <!--gmbpp member says 1σ ?t=5-->
 
 ### [00:07](https://drive.google.com/file/d/1FOZzgKw_oBvnlgwSAzFvRUbGO06Hk_n9?t=7) Inside the van
 
 - the side door is opened: black seats, an orange bucket of tools, papers
-  <!--gmbpp member says ?t=10-->
+  <!--gmbpp member says 1σ ?t=10-->
 - the rear cargo area holds cleaning equipment, bottles, bags, the orange bucket and tools
-  <!--gmbpp member says ?t=19-->
+  <!--gmbpp member says 1σ ?t=19-->
 
 ## open
 

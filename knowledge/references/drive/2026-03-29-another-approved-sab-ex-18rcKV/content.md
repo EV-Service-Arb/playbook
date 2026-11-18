@@ -12,21 +12,21 @@ A silent two-minute walk-through of a rented-car and then a Miami apartment, fil
 ### [00:00](https://drive.google.com/file/d/18rcKVZuW0wfZqq-WBaUZNUp8kGKK6KaA?t=0) The street and a rental car
 
 - street signs `4 CT` and `NE 68 St`; a black Mercedes CLS with an Arizona plate parked half on the sidewalk
-  <!--gmbpp member says ?t=0-->
+  <!--gmbpp member says 1σ ?t=0-->
 - inside the car: a card for `GABE'S CORVETTE RENTALS MIAMI` and a rental agreement from `Gabes Corvette Rentals Miami, 421 NE 68th St Miami FL 33138`, with the key in the ignition; the speedometer reads 143869
-  <!--gmbpp member says ?t=44-->
+  <!--gmbpp member says 1σ ?t=44-->
 
 ### [01:10](https://drive.google.com/file/d/18rcKVZuW0wfZqq-WBaUZNUp8kGKK6KaA?t=70) Gate, courtyard and the apartment door
 
 - a key opens a slatted gray gate beside a wall marked `21`; behind it a courtyard with a turquoise pool, palms and a stair to an upper terrace
-  <!--gmbpp member says ?t=83-->
+  <!--gmbpp member says 1σ ?t=83-->
 - at a turquoise door a key is turned in a Yale electronic deadbolt, a damaged separate lock below it
-  <!--gmbpp member says ?t=102-->
+  <!--gmbpp member says 1σ ?t=102-->
 
 ### [01:50](https://drive.google.com/file/d/18rcKVZuW0wfZqq-WBaUZNUp8kGKK6KaA?t=110) The living room
 
 - the door opens on a living room with a tan dog, a sectional, a window air conditioner and a laptop on a black folding table showing a web dashboard of green bars
-  <!--gmbpp member says ?t=110-->
+  <!--gmbpp member says 1σ ?t=110-->
 
 ## open
 

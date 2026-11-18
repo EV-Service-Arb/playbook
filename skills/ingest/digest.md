@@ -8,7 +8,7 @@ recording reaches the manual, so what it leaves out is lost.
 
 Read these, so you know what we would act on and whose word weighs:
 
-- the manual's outline: `find knowledge/structured -name '*.md'`, and the lead of the pages nearest the
+- the manual's outline: `find <view>/structured -name '*.md'`, and the lead of the pages nearest the
   recording's subject
 - [people](../../knowledge/README.md#people): who runs what, and at what scale
 
@@ -29,6 +29,9 @@ A single read of a two-hour call loses its middle. Three passes:
   cannot name is their group's row, `gmbpp member`
 - how they know: `ran` — they did it and report what happened; `says` — they assert it; `heard` — they
   pass on someone else's
+- how sure, in σ, per [certainty](../../knowledge/README.md#certainty): from what they base it on and how they
+  qualify it. Seen in their own data, or taught in a course, is `2σ`; plain advice `1σ`; "I think", "I heard",
+  "maybe" below. Who is speaking never raises it: their weight is already in the people table
 - a point only the picture makes cites the second of its `shown.md` line. Open the frame before leaning
   on it: `shown.md` is a model's reading
 - a question and what it was answered is one point, `Q: … / A: …`, cited to the answer

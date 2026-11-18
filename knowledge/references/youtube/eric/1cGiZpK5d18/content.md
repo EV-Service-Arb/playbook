@@ -14,14 +14,14 @@ Emotional awareness is presented as the basis of every business decision, with l
 ### [00:00:34](https://www.youtube.com/watch?v=1cGiZpK5d18&t=34) logic reinforces emotional outcomes
 
 - Emotional awareness is presented as the basis of every business decision, with logic mainly reinforcing the emotional outcome someone wants.
-  <!--says ?t=34-->
+  <!--says 1σ ?t=34-->
 - The core process is to identify the emotional resistance, break the decision into numbers and tangible actions, accept unavoidable discomfort, and take the risk or investment that can produce more money.
-  <!--says ?t=34-->
+  <!--says 1σ ?t=34-->
 
 ### [00:01:41](https://www.youtube.com/watch?v=1cGiZpK5d18&t=101) channel emotions instead of detaching
 
 - The speaker argues against emotional detachment and instead recommends channeling stress, insecurity, discomfort, and dissatisfaction into useful action.
-  <!--says ?t=101-->
+  <!--says 1σ ?t=101-->
 
 ### [00:02:14](https://www.youtube.com/watch?v=1cGiZpK5d18&t=134) stress as motivation for growth
 
@@ -38,7 +38,7 @@ Emotional awareness is presented as the basis of every business decision, with l
 ### [00:09:27](https://www.youtube.com/watch?v=1cGiZpK5d18&t=567) remote service business and 40% model
 
 - His remote service business generated leads for local plumbing jobs, outsourced fulfillment, and kept a 40% cut; hiring a virtual assistant became necessary once call volume reached roughly 100 leads daily.
-  <!--ran ?t=567-->
+  <!--ran 2σ ?t=567-->
 
 ### [00:09:59](https://www.youtube.com/watch?v=1cGiZpK5d18&t=599) hiring a virtual assistant to scale
 
@@ -49,4 +49,4 @@ Emotional awareness is presented as the basis of every business decision, with l
 ### [00:12:14](https://www.youtube.com/watch?v=1cGiZpK5d18&t=734) results and closing business-model reference
 
 - He describes growing from a few thousand dollars monthly to $10k, $20k, $50k, and over $100k in monthly profit by accepting short-term discomfort and reinvesting in growth.
-  <!--ran ?t=734-->
+  <!--ran 2σ ?t=734-->

@@ -69,7 +69,7 @@
               ./playbook_web
               ./knowledge/README.md
               ./knowledge/structured
-              ./knowledge/log # `resolved:` links are checked against it; build.rs bakes none of it
+              ./knowledge/log # compiled with the rest, its citations and `resolved:` links; build.rs bakes none of it
               (pkgs.lib.fileset.fileFilter (f: f.hasExt "md") ./knowledge/references)
             ];
           };

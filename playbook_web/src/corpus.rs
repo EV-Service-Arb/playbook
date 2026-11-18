@@ -21,32 +21,6 @@ const SLOTS: [(Kind, usize); 4] = [(Kind::Manual, 6), (Kind::Call, 3), (Kind::Vi
 
 const PEOPLE: &str = "knowledge/README.md";
 
-/// A backed bullet of a page or a digest, as `corpus::compile` resolved it.
-pub struct Claim {
-	from: usize,
-	to: usize,
-	vetted: bool,
-	backing: &'static [Cited],
-}
-pub struct Cited {
-	line: usize,
-	who: &'static str,
-	how: &'static str,
-	trust: f64,
-	day: i64,
-}
-impl Cited {
-	// r[impl trust.effective]
-	fn effective(&self, today: i64) -> f64 {
-		self.trust * corpus::gamma(today - self.day)
-	}
-
-	// r[impl trust.arithmetic]
-	fn label(&self, today: i64) -> String {
-		format!("{} {} · {} · effective {:.2}", self.who, self.how, corpus::date(self.day), self.effective(today))
-	}
-}
-
 pub struct Corpus {
 	docs: Vec<Doc>,
 }
@@ -57,7 +31,7 @@ impl Corpus {
 			.filter(|(p, _)| *p != PEOPLE)
 			.map(|&(path, text)| {
 				let lines: Vec<&str> = text.lines().collect();
-				let speaker = SPEAKERS.iter().find(|(p, _)| *p == path).map(|(_, s)| s);
+				let speaker = INDEX.captures.get(path).and_then(|c| c.speaker.as_ref());
 				let kind = match path {
 					p if p.starts_with("knowledge/structured/") => Kind::Manual,
 					p if p.starts_with("knowledge/references/youtube/") => Kind::Video,
@@ -65,7 +39,7 @@ impl Corpus {
 					p if p.starts_with("knowledge/references/") => Kind::Text,
 					p => unreachable!("build.rs bakes only knowledge/: {p}"),
 				};
-				let claims = CLAIMS.iter().find(|(p, _)| *p == path).map_or(&[][..], |(_, c)| c);
+				let claims = INDEX.claims.get(path).map_or(&[][..], Vec::as_slice);
 				let mut current = None;
 				let chapter = lines
 					.iter()
@@ -162,7 +136,7 @@ impl Corpus {
 		struct File<'a> {
 			doc: &'a Doc,
 			hits: Vec<Hit>,
-			effective: Option<f64>,
+			norm: Option<f64>,
 		}
 		let mut files: Vec<File> = Vec::new();
 		let mut candidates = 0;
@@ -190,7 +164,7 @@ impl Corpus {
 				hit.branches.iter_mut().zip(on_line).for_each(|(h, l)| *h |= l);
 			}
 			if !hits.is_empty() {
-				files.push(File { doc, hits, effective: None });
+				files.push(File { doc, hits, norm: None });
 			}
 		}
 		let broad = |hit: usize, of: usize| of >= 5 && hit as f64 > of as f64 * BROAD;
@@ -249,14 +223,14 @@ impl Corpus {
 			}
 			f.hits.sort_by(|a, b| b.score.total_cmp(&a.score));
 			f.hits.truncate(PER_SOURCE);
-			f.effective = f.doc.effective(f.hits[0].start, today);
+			f.norm = f.doc.norm(f.hits[0].start, today);
 		}
 		files.sort_by(|a, b| {
 			a.doc
 				.kind
 				.cmp(&b.doc.kind)
 				.then(b.hits[0].score.total_cmp(&a.hits[0].score))
-				.then(b.effective.partial_cmp(&a.effective).expect("a trust is never NaN"))
+				.then(b.norm.partial_cmp(&a.norm).expect("a trust is never NaN"))
 				.then(b.doc.date.cmp(&a.doc.date))
 		});
 
@@ -275,7 +249,7 @@ impl Corpus {
 		}
 		// the manual leads; the rest follow by what each is worth, the unscored last
 		let leading = shown.iter().take_while(|f| f.doc.kind == Kind::Manual).count();
-		shown[leading..].sort_by(|a, b| b.effective.partial_cmp(&a.effective).expect("a trust is never NaN").then(b.doc.date.cmp(&a.doc.date)));
+		shown[leading..].sort_by(|a, b| b.norm.partial_cmp(&a.norm).expect("a trust is never NaN").then(b.doc.date.cmp(&a.doc.date)));
 
 		let mut text = String::new();
 		let mut ids = Vec::new();
@@ -393,6 +367,9 @@ pub struct Found {
 
 pub static CORPUS: LazyLock<Corpus> = LazyLock::new(Corpus::load);
 
+/// What `corpus::compile` resolved at build, for the files baked.
+static INDEX: LazyLock<corpus::Index> = LazyLock::new(|| serde_json::from_str(include_str!(concat!(env!("OUT_DIR"), "/index.json"))).expect("build.rs wrote it"));
+
 #[derive(Clone, Copy, Eq, Ord, PartialEq, PartialOrd)]
 enum Kind {
 	Manual,
@@ -415,9 +392,9 @@ struct Doc {
 	/// a capture's own date; the manual dates each claim instead
 	date: Option<&'static str>,
 	source: Option<&'static str>,
-	claims: &'static [Claim],
+	claims: &'static [corpus::Claim],
 	/// who speaks, where the source fixes it
-	speaker: Option<&'static Cited>,
+	speaker: Option<&'static corpus::Backing>,
 	/// the `content.md` that reads this recording
 	digest: Option<&'static str>,
 }
@@ -452,30 +429,30 @@ impl Doc {
 	}
 
 	/// the innermost backed bullet holding `line`
-	fn claim(&self, line: usize) -> Option<&'static Claim> {
-		self.claims.iter().filter(|c| (c.from..c.to).contains(&line)).max_by_key(|c| c.from)
+	fn claim(&self, line: usize) -> Option<&'static corpus::Claim> {
+		self.claims.iter().filter(|c| c.lines.contains(&line)).max_by_key(|c| c.lines.start)
 	}
 
 	/// what backs `line` best today
-	fn best(&self, line: usize, today: i64) -> Option<&'static Cited> {
-		let by_worth = |a: &&Cited, b: &&Cited| a.effective(today).total_cmp(&b.effective(today));
+	fn best(&self, line: usize, today: i64) -> Option<&'static corpus::Backing> {
+		let by_worth = |a: &&corpus::Backing, b: &&corpus::Backing| a.norm(today, None).total_cmp(&b.norm(today, None));
 		match self.claim(line) {
-			Some(c) => c.backing.iter().max_by(by_worth),
+			Some(c) => c.backing.iter().map(|(_, b)| b).max_by(by_worth),
 			None => self.speaker.filter(|_| !self.screen && !self.path.ends_with("/content.md")),
 		}
 	}
 
-	fn effective(&self, line: usize, today: i64) -> Option<f64> {
-		self.best(line, today).map(|c| c.effective(today))
+	fn norm(&self, line: usize, today: i64) -> Option<f64> {
+		self.best(line, today).map(|c| c.norm(today, None))
 	}
 
-	// r[impl trust.arithmetic]
-	/// who backs `line`, how they know, since when, and what that is worth today; or that nothing scores it
+	// r[impl trust.arithmetic+2]
+	/// who backs `line`, how they know and how sure, how long ago, and what that is worth; or that nothing scores it
 	fn label(&self, line: usize, today: i64) -> String {
 		let date = || self.date.expect("asserted on load");
 		match (self.best(line, today), self.claim(line)) {
-			(Some(cited), Some(claim)) => format!("{}{}", cited.label(today), if claim.vetted { "" } else { " · unvetted" }),
-			(Some(cited), None) => cited.label(today),
+			(Some(cited), Some(claim)) => format!("{}{}", cited.label(today, None), if claim.vetted { "" } else { " · unvetted" }),
+			(Some(cited), None) => cited.label(today, None),
 			(None, _) if self.kind == Kind::Manual => "unscored: a heading".into(),
 			(None, _) if self.screen => format!("a reading of the screen · {} · unscored", date()),
 			(None, _) => match self.digest {
@@ -487,17 +464,12 @@ impl Doc {
 
 	/// the line as a reader gets it: a citation gives what it is worth instead of what it is computed from
 	fn line(&self, i: usize, today: i64) -> String {
-		let cited = self.claims.iter().flat_map(|c| c.backing).find(|c| c.line == i);
-		match cited {
-			Some(c) => {
-				let indent = &self.lines[i][..self.lines[i].len() - self.lines[i].trim_start().len()];
-				let at = self.lines[i]
-					.trim_end_matches("-->")
-					.rsplit(' ')
-					.next()
-					.filter(|t| t.starts_with("http") || t.starts_with('?') || t.starts_with('#'));
-				format!("{indent}[{}{}]", c.label(today), at.map(|a| format!(" · {a}")).unwrap_or_default())
-			}
+		match self.claims.iter().flat_map(|c| &c.backing).find(|(line, _)| *line == i) {
+			Some((_, c)) => format!("{}[{}]", &self.lines[i][..self.lines[i].len() - self.lines[i].trim_start().len()], c.label(today, None)),
+			None if i == 0
+				&& let Some(h) = INDEX.half_lives.get(self.path) =>
+				format!("{} · {h}", self.lines[0]),
+			None if self.lines[i].starts_with("<!--half-life") => String::new(), // the title line carries it
 			None => self.lines[i].to_owned(),
 		}
 	}
