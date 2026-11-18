@@ -82,8 +82,11 @@ enum Cmd {
 		#[arg(long)]
 		against: Option<String>,
 		/// the rev both sides take `knowledge/structured/{approved,suggested}` and `knowledge/references/` from, this tree's where unset
-		#[arg(long)]
+		#[arg(long, conflicts_with = "whole")]
 		info: Option<String>,
+		/// each side takes its own system rev's `knowledge/`, for a change to its format, which no one rev's can feed both sides
+		#[arg(long)]
+		whole: bool,
 		/// answers in flight at once; each is a `claude` process of ~240 MB
 		#[arg(long, default_value = "8")]
 		jobs: std::num::NonZeroUsize,
@@ -201,8 +204,8 @@ fn main() {
 		Cmd::Watch { frames, captures } => watch::run(&root, frames.into(), &captures),
 		Cmd::PhotoMetadata(options) => photo_metadata::run(options),
 		Cmd::ReTranscribe { what } => re_transcribe(&root, what),
-		Cmd::Eval { against, info, jobs, ids } =>
-			if eval::run(&root, against, info, jobs, ids) {
+		Cmd::Eval { against, info, whole, jobs, ids } =>
+			if eval::run(&root, against, info, whole, jobs, ids) {
 				std::process::exit(1);
 			},
 	}

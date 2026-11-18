@@ -30,7 +30,7 @@ const INFO: &str = "knowledge";
 const OUT: &str = "/tmp/playbook-eval";
 
 /// Whether any case scored lower on this tree than on the old side.
-pub fn run(root: &Path, against: Option<String>, info: Option<String>, jobs: NonZeroUsize, ids: Vec<String>) -> bool {
+pub fn run(root: &Path, against: Option<String>, info: Option<String>, whole: bool, jobs: NonZeroUsize, ids: Vec<String>) -> bool {
 	let cases: Vec<Case> =
 		serde_json::from_str(&std::fs::read_to_string(root.join("playbook/eval.json")).expect("playbook/eval.json is in the tree")).expect("playbook/eval.json is a list of cases");
 	for id in &ids {
@@ -48,10 +48,14 @@ pub fn run(root: &Path, against: Option<String>, info: Option<String>, jobs: Non
 	let sides = [
 		Side {
 			name: "new",
+			info: if whole { new.clone() } else { info.clone() },
 			system: new,
-			info: info.clone(),
 		},
-		Side { name: "old", system: old, info },
+		Side {
+			name: "old",
+			info: if whole { old.clone() } else { info },
+			system: old,
+		},
 	];
 	for s in &sides {
 		println!("{}: system {}, info {}", s.name, s.system, s.info);
@@ -532,9 +536,7 @@ fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 fn claude(cfg: &Path, cwd: &Path, prompt: &str, args: &[&str]) -> (Value, Vec<String>) {
 	std::fs::create_dir_all(cfg).expect("the run dir was just made");
 	let env = |k: &str| std::env::var_os(k).unwrap_or_else(|| panic!("{k} is unset"));
-	let login = PathBuf::from(env("HOME")).join(".claude/.credentials.json"); // the session `claude` is logged in as; linked, so a refresh lands in the original
-	assert!(login.exists(), "{}: `claude` is not logged in", login.display());
-	std::os::unix::fs::symlink(&login, cfg.join(".credentials.json")).unwrap_or_else(|e| panic!("{}: {e}", cfg.display()));
+	let login = std::env::var_os("CLAUDE_SECURESTORAGE_CONFIG_DIR").unwrap_or_else(|| PathBuf::from(env("HOME")).join(".claude").into()); // where this machine's `claude` is logged in; unset, that is its default config dir
 	let mut child = Command::new("claude")
 		.args(["-p", "--output-format", "stream-json", "--verbose", "--no-session-persistence"])
 		.args(args)
@@ -542,6 +544,7 @@ fn claude(cfg: &Path, cwd: &Path, prompt: &str, args: &[&str]) -> (Value, Vec<St
 		.env("PATH", env("PATH"))
 		.env("HOME", env("HOME"))
 		.env("CLAUDE_CONFIG_DIR", cfg)
+		.env("CLAUDE_SECURESTORAGE_CONFIG_DIR", login)
 		.env("ENABLE_CLAUDEAI_MCP_SERVERS", "false") // the account's own connectors, which a member's are not
 		.current_dir(cwd)
 		.stdin(Stdio::piped())
