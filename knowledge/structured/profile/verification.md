@@ -7,9 +7,9 @@ have reported, across its routes:
 
 ## routes
 
-- (?) a profile meant to last verifies by video, live call or its business address, not instantly and not by code
+- a profile meant to last verifies by video, live call or its business address, not instantly and not by code
   resolved: [2026-11-18](../../log/resolved/2026-11-18-instant-verification.md)
-  - (?) Matt Gazda: slower, harder, safer; the easy way out is a profile suspended months later. learned from experience
+  - Matt Gazda: slower, harder, safer; the easy way out is a profile suspended months later. learned from experience
     <!--2026-11-17 ran https://www.youtube.com/watch?v=0IRfNgq_4zY&t=234-->
     <!--2026-11-17 ran https://www.youtube.com/watch?v=0IRfNgq_4zY&t=268-->
   - (?) Eric pushes everyone toward instant right now — [instant](verification/instant.md)
