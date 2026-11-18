@@ -146,6 +146,7 @@ fn member(sub: &str) -> Principal {
 		email_verified: true,
 		name: "M".into(),
 		permissions: ["sa:playbook:mcp:use"].into_iter().collect(),
+		actor: None,
 	})
 }
 
