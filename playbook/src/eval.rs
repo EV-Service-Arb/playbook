@@ -31,10 +31,6 @@ const OUT: &str = "/tmp/playbook-eval";
 
 /// Whether any case scored lower on this tree than on the old side.
 pub fn run(root: &Path, against: Option<String>, info: Option<String>, jobs: NonZeroUsize, ids: Vec<String>) -> bool {
-	assert!(
-		std::env::var_os("CLAUDE_CODE_OAUTH_TOKEN").is_some(),
-		"CLAUDE_CODE_OAUTH_TOKEN is unset; `claude setup-token` makes one"
-	);
 	let cases: Vec<Case> =
 		serde_json::from_str(&std::fs::read_to_string(root.join("playbook/eval.json")).expect("playbook/eval.json is in the tree")).expect("playbook/eval.json is a list of cases");
 	for id in &ids {
@@ -536,13 +532,15 @@ fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 fn claude(cfg: &Path, cwd: &Path, prompt: &str, args: &[&str]) -> (Value, Vec<String>) {
 	std::fs::create_dir_all(cfg).expect("the run dir was just made");
 	let env = |k: &str| std::env::var_os(k).unwrap_or_else(|| panic!("{k} is unset"));
+	let login = PathBuf::from(env("HOME")).join(".claude/.credentials.json"); // the session `claude` is logged in as; linked, so a refresh lands in the original
+	assert!(login.exists(), "{}: `claude` is not logged in", login.display());
+	std::os::unix::fs::symlink(&login, cfg.join(".credentials.json")).unwrap_or_else(|e| panic!("{}: {e}", cfg.display()));
 	let mut child = Command::new("claude")
 		.args(["-p", "--output-format", "stream-json", "--verbose", "--no-session-persistence"])
 		.args(args)
 		.env_clear()
 		.env("PATH", env("PATH"))
 		.env("HOME", env("HOME"))
-		.env("CLAUDE_CODE_OAUTH_TOKEN", env("CLAUDE_CODE_OAUTH_TOKEN"))
 		.env("CLAUDE_CONFIG_DIR", cfg)
 		.env("ENABLE_CLAUDEAI_MCP_SERVERS", "false") // the account's own connectors, which a member's are not
 		.current_dir(cwd)

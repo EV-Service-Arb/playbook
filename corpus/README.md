@@ -5,4 +5,5 @@ citation to who said it, how sure, when the information is from, and the half-li
   what it resolves, so nothing is released that fails it
 - it resolves no further than `init`. `Backing::norm` and `Backing::label` are called by whoever knows what
   day it is; `label` is the one form every reader gets a citation in
+- [trust.typ](trust.typ) plots γ under a few half-lives and steps
 - the trust tables and the default half-life are read out of `knowledge/README.md`; nothing here restates them
