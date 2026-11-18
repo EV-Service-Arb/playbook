@@ -1,9 +1,9 @@
 # YouTube, as the channels serve it
 
-- checked: 2026-11-16
+- checked: 2026-11-18
 - written by: `playbook pull yt sync`, which lists every video; `transcribe` ticks each it captures
 
-- spent: $0.79 over 40 watched, as their `shown.md` `cost:` lines state
+- spent: $0.79 over 41 watched, as their `shown.md` `cost:` lines state
 
 A directory per person, named by the text of their channel's link in `../README.md`. In it,
 `<id>.md` is a video's capture — its description, then the captions in citable blocks — and
@@ -15,6 +15,7 @@ every unticked line.
 
 ## eric — <https://www.youtube.com/@ericvelch>
 
+- [ ] [2026-11-18](https://www.youtube.com/watch?v=w8rJrmdLkYs) after 5 years of being broke, I cracked the code to “f*ck you money”
 - [x] [2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk) [I Found The Most Profitable Drop-servicing Niche and NO ONE is Doing it](eric/SOUF1oObJYk.md)
 - [ ] [2026-11-15](https://www.youtube.com/watch?v=M8dvZUDt2P4) Speed-running $0 to $10k/mo with a "fake" plumbing company (just copy me and hit it next month)
 - [ ] [2026-11-13](https://www.youtube.com/watch?v=WJkcTccFHjc) how I build lead gen profiles that print me $30k/mo
@@ -307,7 +308,9 @@ every unticked line.
 
 ## zach — <https://www.youtube.com/@zachpeters0n>
 
+- [ ] [2026-11-17](https://www.youtube.com/watch?v=I5xY9AgllLY) best your competitors on Google with simple local Seo strategy
 - [ ] [2026-11-16](https://www.youtube.com/watch?v=K_bDhPz1CuI) rank higher on Google by citing gbp categories and services
+- [ ] [2026-11-16](https://www.youtube.com/watch?v=KaHIlhdxsS4) rank your service business higher on AI search with simple strategy
 - [ ] [2026-11-14](https://www.youtube.com/watch?v=aPGp9fDQnX8) easy $100k a month Local SEO framework in 2027 for service businesses
 - [ ] [2026-11-14](https://www.youtube.com/watch?v=gvlOTBQ25_4) 3 local seo changes to double your service business leads
 - [ ] [2026-11-13](https://www.youtube.com/watch?v=0wYbz3vIH-0) Raw reality of scaling service business with SEO
@@ -547,6 +550,7 @@ every unticked line.
 
 ## matt — <https://www.youtube.com/@Matt_Gazda>
 
+- [x] [2026-11-17](https://www.youtube.com/watch?v=0IRfNgq_4zY) [The Real Reason Your GMB's Keep Getting Suspended](matt/0IRfNgq_4zY.md)
 - [ ] [2026-11-16](https://www.youtube.com/watch?v=8s3qIkaCABs) How Sam Made $12K in His Second Month Drop Servicing (No Skills Needed
 - [ ] [2026-11-12](https://www.youtube.com/watch?v=rkB-cnYS4U0) Google Review Methods Tier List: S Tier Makes Me $70K/Month Drop Servicing
 - [ ] [2026-11-12](https://www.youtube.com/watch?v=zpFmF5mIZho) I Exploited Plumbers for $150K and They Thanked Me | Full Drop Servicing Tutorial
