@@ -14,7 +14,7 @@ They are the instruments of the `service-arb` skill, which `plugin/` ships with 
 
 | operation | returns |
 |---|---|
-| `GET /search?pattern&scope&screen` | case-insensitive regex hits, each with path:line, header, label and source URL, two per file. Each kind (manual, course, calls, videos, texts) has its own slots and slots it leaves empty go to the others. Within a kind, chunks rank by which alternatives of the pattern they hold, rare ones weighing more (BM25's idf, each term present or not). The files past the slots are listed by path:line. `screen` searches what recordings showed instead of what was said. A pattern hitting 40% of the files in scope is refused, naming the directories below the scope it hits and how much of each |
+| `GET /search?pattern&scope&screen` | case-insensitive regex hits, each with path:line, header, label and source URL, two per file. Each kind (manual, calls, videos, texts) has its own slots and slots it leaves empty go to the others. Within a kind, chunks rank by which alternatives of the pattern they hold, rare ones weighing more (BM25's idf, each term present or not). The files past the slots are listed by path:line. `screen` searches what recordings showed instead of what was said. A pattern hitting 40% of the files in scope is refused, naming the directories below the scope it hits and how much of each |
 | `GET /read?path&header&line` | one `###` chapter of a capture or a digest, or one `##` section of a page, never a whole file |
 | `GET /guide?area` | one page of the manual, or `people` |
 

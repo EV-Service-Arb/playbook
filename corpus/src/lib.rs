@@ -124,7 +124,7 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 			lessons.iter().any(|t| t.contains(u))
 		});
 		let who = match path.strip_prefix("knowledge/references/youtube/").and_then(|p| p.split_once('/')) {
-			_ if lesson(path) || taught => Some("course".to_owned()),
+			_ if lesson(path) || taught => Some("Eric".to_owned()), // not above his other word until he keeps the course in sync with it
 			_ if path.starts_with("knowledge/references/research/") => Some("chatgpt".to_owned()),
 			Some((channel, _)) => Some(
 				tables

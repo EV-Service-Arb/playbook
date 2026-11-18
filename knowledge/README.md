@@ -46,17 +46,16 @@ date only where it is earlier than the capture's.
 | who | trust | reach | proven at | available |
 |---|---|---|---|---|
 | us | 1 | | | |
-| course | 0.9 | | | |
 | gmbpp member | 0.6 | | | |
 | cheap member | 0.4 | | | |
 | chatgpt | 0.45 | | | |
 | agent | 0.25 | | | |
-| Valera | us | | | |
+| Valera | 0.8 | | | |
 | Eric | 0.8 | youtube `eric` | | |
 | Zach Peterson | 0.8 | youtube `zach` | | |
 | Gabe Jacobs | 0.7 | skool `gabe-jacobs-9502` | android spoofing (root, Magisk), injecting real footage into video verification, AI vs human receptionist | 6 // inferred, offered to help others with verification |
 | Marcus Milan | 0.7 | youtube `marcus` | | |
-| Matt Gazda | 0.7 | youtube `matt` | | |
+| Matt Gazda | 0.8 | youtube `matt` | | |
 | Ilya | gmbpp member | discord `ilyac` | house cleaning, run for years remotely: contractor splits, insurance, reselling off-niche leads. reviews from the philippines onto aged profiles, review gating, DBA names | 5 // inferred, shared at length on the 2026-09-18 call |
 | Ryan D | gmbpp member | Eric's group calls, handle unknown | review tables: 200+ reviews in a week, campus entrances, QR close | 5 // inferred, shared the whole method on a call |
 | Henry A | gmbpp member | discord `growthghost`, skool `henry-a-1639` | review screenshot capture for reinstatement appeals (Playwright) | 6 // inferred, offered his code, pointed us to Devin |

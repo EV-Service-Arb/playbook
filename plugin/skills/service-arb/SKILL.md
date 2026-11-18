@@ -40,7 +40,7 @@ Higher is better. Effective decides the answer, not recency or how vivid a story
 ## The answer
 
 Three parts, split by `---`:
-1. **sources**: numbered, best first. Each: the claim, who said it (course, Eric, a member by name), the date,
+1. **sources**: numbered, best first. Each: the claim, who said it (Eric, a member by name), the date,
    the bare URL at the second on its own line. Unsourced: say whose it is ("Valera, unrecorded")
 2. **advice**: no URLs, `[n]` into the sources. Say how strongly each point is backed
 3. **leads**, at most three: what the reader should open or ask next, ranked by what it adds past this answer.

@@ -17,7 +17,7 @@ const BLOCK_LINES: usize = 8;
 const CHAPTER_CAP: usize = 24_000;
 
 /// how many files of which kinds one search shows: trust decides across kinds, relevance within one
-const SLOTS: [(Kind, usize); 5] = [(Kind::Manual, 6), (Kind::Course, 2), (Kind::Call, 3), (Kind::Video, 2), (Kind::Text, 1)];
+const SLOTS: [(Kind, usize); 4] = [(Kind::Manual, 6), (Kind::Call, 3), (Kind::Video, 2), (Kind::Text, 3)];
 
 const PEOPLE: &str = "knowledge/README.md";
 
@@ -60,7 +60,6 @@ impl Corpus {
 				let speaker = SPEAKERS.iter().find(|(p, _)| *p == path).map(|(_, s)| s);
 				let kind = match path {
 					p if p.starts_with("knowledge/structured/") => Kind::Manual,
-					_ if speaker.is_some_and(|s| s.who == "course") => Kind::Course,
 					p if p.starts_with("knowledge/references/youtube/") => Kind::Video,
 					p if p.starts_with("knowledge/references/") && lines.contains(&"## transcript") => Kind::Call,
 					p if p.starts_with("knowledge/references/") => Kind::Text,
@@ -274,8 +273,8 @@ impl Corpus {
 			overflow.extend(of_kind.iter().skip(slots).take(OVERFLOW));
 			dropped += of_kind.len().saturating_sub(slots + OVERFLOW);
 		}
-		// the manual and the course lead; the rest follow by what each is worth, the unscored last
-		let leading = shown.iter().take_while(|f| f.doc.kind <= Kind::Course).count();
+		// the manual leads; the rest follow by what each is worth, the unscored last
+		let leading = shown.iter().take_while(|f| f.doc.kind == Kind::Manual).count();
 		shown[leading..].sort_by(|a, b| b.effective.partial_cmp(&a.effective).expect("a trust is never NaN").then(b.doc.date.cmp(&a.doc.date)));
 
 		let mut text = String::new();
@@ -397,8 +396,6 @@ pub static CORPUS: LazyLock<Corpus> = LazyLock::new(Corpus::load);
 #[derive(Clone, Copy, Eq, Ord, PartialEq, PartialOrd)]
 enum Kind {
 	Manual,
-	/// a lesson, or a capture a lesson links
-	Course,
 	/// a recording of speech other than a video
 	Call,
 	Video,
