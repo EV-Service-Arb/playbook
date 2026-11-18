@@ -373,7 +373,14 @@ fn sign_in(origin: &str, email: &str) -> String {
 		&mut cookies,
 		"POST",
 		"/mcp/authorize",
-		&[("client_id", &client_id), ("redirect_uri", REDIRECT_URI), ("code_challenge", &challenge), ("csrf", &csrf)],
+		// a member's own client asks first: what destroys or spends is proposed
+		&[
+			("client_id", &client_id),
+			("redirect_uri", REDIRECT_URI),
+			("code_challenge", &challenge),
+			("csrf", &csrf),
+			("approval", "ask"),
+		],
 	);
 	let code = back
 		.strip_prefix(&format!("{REDIRECT_URI}?code="))
