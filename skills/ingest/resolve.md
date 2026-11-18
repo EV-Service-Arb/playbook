@@ -7,6 +7,8 @@ Before calling one, read who each was said to and what they were running: advice
 advice to a member already in a trade, a rule for new profiles and a result on ten-year-old ones, one
 person's pass and another's rejection, are each scoped by their case, and the scope goes into the bullet.
 Two numbers for one quantity are not one either: both stay as evidence, per `knowledge/README.md`.
+Nor are two methods that buy different things — speed against longevity, cost against isolation: each
+stays as its own bullet, saying the situation it wins in. Picking one is the reader's, not ours.
 
 - gather every mention first, across `knowledge/structured/` and `knowledge/references/`
 - then weigh: trust and age, what each speaker meant, how sure they sounded, what they were doing

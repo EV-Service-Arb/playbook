@@ -14,6 +14,9 @@ and stop.
 > **The record tilts to the unusual.** What works goes unsaid as common knowledge; a failure gets
 > told. One rejection story is an anecdote, never a requirement.
 
+> **The reader decides.** Assume they are smarter than you, with less context and less data. What you
+> owe them is the part of the record that bears on where they stand now, not a verdict.
+
 ## Finding
 
 - `playbook_search` the words a speaker would say, not the question's: people talk, and transcripts mishear. Alternate
@@ -29,7 +32,8 @@ and stop.
 Every hit's label says who backs it, how they know, when, and `effective`: what that is worth today.
 Higher is better. Effective decides the answer, not recency or how vivid a story is.
 
-- build from the highest effective down. Sources disagree: the higher one leads
+- build from the highest effective down. Sources disagree on what is so: the higher one leads. Sources
+  doing it differently are [options](#options), not a disagreement
 - `unscored` is the words as said, with nobody named: a quote for a claim something scored makes, never
   a weight of its own. Its label names the digest that says who spoke
 - `unvetted`, or backed only by someone who `heard` it, never becomes a checklist item or a "don't": it
@@ -37,12 +41,22 @@ Higher is better. Effective decides the answer, not recency or how vivid a story
 - last pass: nothing dated after your newest citation says otherwise
 - attribute each claim to who said it, from the label
 
+## Options
+
+Most questions have several right answers, each buying something different: instant verification has a
+profile live today, a video-verified one lasts. Never fold them into one.
+
+- each option with the situation it wins in, and what it costs
+- what the reader said of themselves decides which leads and how much room each gets: bootstrapping
+  as fast as possible leans to instant; building a business to expand leans to longevity
+- nothing said: cover each evenly, enough for them to choose
+
 ## The answer
 
 Three parts, split by `---`:
 1. **sources**: numbered, best first. Each: the claim, who said it (Eric, a member by name), the date,
    the bare URL at the second on its own line. Unsourced: say whose it is ("Valera, unrecorded")
-2. **advice**: no URLs, `[n]` into the sources. Say how strongly each point is backed
+2. **advice**: no URLs, `[n]` into the sources. Say how strongly each point is backed. Options side by side, each with its situation
 3. **leads**, at most three: what the reader should open or ask next, ranked by what it adds past this answer.
    A course lead is the skool.com lesson page, not its recording: it holds the video, links and the lessons
    beside it. A call mined dry adds nothing. A person, per [experts.md](experts.md), adds what nobody recorded. One

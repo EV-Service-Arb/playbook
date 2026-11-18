@@ -1,7 +1,6 @@
 # suspension
 
-google suspends a profile it does not trust: a fresh gmail, a domain or NAP shared with another
-profile, content that does not fit the trade, a young profile changing what identifies it. a suspended
+google suspends a profile it does not trust: a fresh gmail, a NAP shared with another profile, content that does not fit the trade, a young profile changing what identifies it. a suspended
 profile is appealed at once, on its own. registering the business: [registration](suspension/registration.md).
 
 ## the gmail
@@ -17,7 +16,7 @@ profile is appealed at once, on its own. registering the business: [registration
 ## the domain
 
 - several profiles share one `.com` domain, each on a subdomain of its own carrying its own NAP
-  resolved: [2026-11-18](../../log/resolved/2026-11-18-shared-domain.md)
+  > one domain to pay for. if google links profiles by their domain, they share its fate: nobody has measured that
   - switch all to sub-domains // [site_conductor#117](https://github.com/EV-Service-Arb/site_conductor/issues/117)
     <!--2026-11-18 Valera says-->
   - Matt Gazda: reusing a domain, use subdomains — "this is actually meta right now" — with a different NAP on each
@@ -25,7 +24,8 @@ profile is appealed at once, on its own. registering the business: [registration
     <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=200-->
     > only to save money, or where the profiles are branded // transcript garbled there
     <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=234-->
-  - (?) Eric: the shared domain is what links profiles, so lead-gen operators duplicate the site onto a new domain and swap the name; a company running a real brand shares one site. a safety margin, not a measured result
+- (?) a domain per profile, the site duplicated onto it and the name swapped: costs a domain each, and nothing on the site ties one profile to another
+  - (?) Eric: the shared domain is what links profiles; a company running a real brand shares one site. a safety margin, not a measured result
     <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2543-->
   - Eric says that brand names matching is fine, but website matching could technically become problematic
     <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2504-->
