@@ -10,7 +10,7 @@ For each point of the digest worth keeping, one entry:
 ## <page it belongs on, as a path under knowledge/structured/>
 
 - <the point, with its citation as the manual will carry it>
-  does: <confirms | qualifies | contradicts | adds a step | is new evidence for> "<the bullet it meets, quoted>"
+  does: <confirms | qualifies | contradicts | adds a step | is a route beside | is new evidence for> "<the bullet it meets, quoted>"
 ```
 
 - a point goes to the page the next asker would open, not to where the call happened to raise it. The

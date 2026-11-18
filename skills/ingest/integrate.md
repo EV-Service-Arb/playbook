@@ -19,5 +19,5 @@ not done.
   `(?)` conclusion, never change its words and never mark it
 - a conclusion says what we do or what is so. `Dante found a contractor in ten minutes` is evidence;
   `facebook marketplace finds a contractor within the hour` is the conclusion it stands under
-- a contradiction: [resolve.md](resolve.md), never two bullets. Two numbers for one quantity are not one: both stay, as evidence
+- a contradiction, or a method another may beat: [resolve.md](resolve.md)
 - the proposal's `## not kept` stays not kept

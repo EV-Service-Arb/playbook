@@ -178,7 +178,7 @@ the path it would have outside it.
 ```md
 # <topic>
 
-<what we do here, as of now. the page's answer, in a few lines>
+<the page's answer as of now, in a few lines: what we do, or which way fits which case>
 
 ## <a step or a decision, in the order it is met>
 
@@ -186,6 +186,11 @@ the path it would have outside it.
   > what qualifies it
   - <evidence: who, what they ran or said, the number>
     <!--2026-09-25 Dante ran https://…?t=353-->
+
+### other
+
+- <a method another beats on every count: by what, and why>
+- <an idea or a finding worth keeping that no conclusion stands on yet>
 
 ## open
 
@@ -198,8 +203,6 @@ the path it would have outside it.
 - the lead and `## open` carry no `(?)`: the lead is rewritten whenever the page under it changes, and an
   open question claims nothing
 - one claim, one bullet. A new source for it joins the evidence
-- several methods that each work: each its own conclusion, saying the situation it wins in and what it
-  costs. The page lays them out; the reader picks
 - a number is an estimate. Almost nothing here has an exact value, even in theory: it moves with the
   city, the trade, the competition, the month. So a conclusion names what we are after and what moves
   it, and carries no number of its own; each source's number stays under it as evidence, in that source's
