@@ -1,29 +1,83 @@
 # suspension
 
-what members and sources have reported about what gets profiles suspended together, and appealing
-once they are. registering the business: [registration](suspension/registration.md).
-
-## domains and names
-
-- Eric says that brand names matching is fine, but website matching could technically become problematic
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2504-->
-  Q: what's a reasonable number though?
-
-  oh, and apparently you can keep the name be the same, and just spread out domains later
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2558-->
-- (?) lead-gen operators run one domain per profile; companies running them as a real brand share one site
-  > Eric: the brand *name* repeating across cities is harmless — two unrelated "Amazing Plumbing" can't suspend each other. the shared *domain* is the linking factor
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2543-->
-- (?) so: duplicate the same site, buy a new domain, swap the name
-  > Eric is explicit that this is a safety margin, not a measured result
-  <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2543-->
+google suspends a profile it does not trust: a fresh gmail, a domain or NAP shared with another
+profile, content that does not fit the trade, a young profile changing what identifies it. a suspended
+profile is appealed at once, on its own. registering the business: [registration](suspension/registration.md).
 
 ## the gmail
 
 - aged gmails can directly get suspended themselves, so prefer to have actual emails own them
   <!--2026-09-18 gmbpp member heard https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3173-->
+  - (?) Matt Gazda: a brand new gmail, or one bought "off a plug", reads as suspicious: google weighs the email's activity and history
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=64-->
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=98-->
 - (?) (!) a banned gmail takes every profile verified on it with it, and winning the gmail appeal does not bring them back — each profile must then be appealed individually
   <!--2026-09-18 gmbpp member ran https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2105-->
+
+## the domain
+
+- (?) several profiles share one `.com` domain, each on a subdomain of its own carrying its own NAP
+  resolved: [2026-11-18](../../log/resolved/2026-11-18-shared-domain.md)
+  - switch all to sub-domains // [site_conductor#117](https://github.com/EV-Service-Arb/site_conductor/issues/117)
+    <!--2026-11-18 Valera says-->
+  - (?) Matt Gazda: reusing a domain, use subdomains — "this is actually meta right now" — with a different NAP on each
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=167-->
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=200-->
+    > only to save money, or where the profiles are branded // transcript garbled there
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=234-->
+  - (?) Eric: the shared domain is what links profiles, so lead-gen operators duplicate the site onto a new domain and swap the name; a company running a real brand shares one site. a safety margin, not a measured result
+    <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2543-->
+  - Eric says that brand names matching is fine, but website matching could technically become problematic
+    <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2504-->
+    Q: what's a reasonable number though?
+
+    oh, and apparently you can keep the name be the same, and just spread out domains later
+    <!--2026-09-18 Eric says https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2558-->
+- must use .com domains
+  <!--2026-11-18 Valera says-->
+  - (?) Matt Gazda: `.com`, never `site.co.ai`, `.it`, `.net`: zero trust signals with google. people he knows lost every profile over the domain, and he has seen profiles wiped in a day for it
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=200-->
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=234-->
+
+## NAP
+
+- (?) one NAP per profile, the same on the profile, its site and every citation, and never shared with another profile in its niche
+  - (?) Matt Gazda: the same NAP on two or three profiles gets them suspended, and they would not rank anyway
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=133-->
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=167-->
+
+## what is on the profile
+
+- (?) everything on the profile fits its trade: no AI photos that look fake, no other trade's content, no site unrelated to it
+  - (?) Matt Gazda: locksmithing on a plumbing profile, "a random website for your website"
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=98-->
+- (?) only US IPs work on the profile: no offshore SEO, no `Fiverr`
+  - (?) Matt Gazda: do it yourself
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=98-->
+
+## changes
+
+- (?) (!) leave a young profile's NAP and website domain alone; photos, posts, products, chat and citations change freely
+  > a name change that cannot wait touches a small part of the name: `landscaping of Arizona` → `flourish landscaping of Arizona`
+  - (?) Matt Gazda: NAP and domain are the highest trust signals google reads. the first 6 months, the first year to be careful; his slide says 4 months
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=268-->
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=301-->
+
+## citations
+
+- (?) citations whose NAP matches the profile's protect it from suspension; mismatched ones cause it
+  - (?) Matt Gazda: `Yelp`, `Facebook`, `X`, `Nextdoor`. "a huge sleeper", the best way never to be suspended again
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=336-->
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=369-->
+
+## the address and the rating
+
+- (?) a second profile on the same address can trip google's automatic suspension
+  - (?) Matt Gazda: seen it, unsure how it works
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=369-->
+- (?) a flood of negative reviews suspends a profile
+  - (?) Matt Gazda: his energy-drink table's QR code showed in a viral instagram clip; ~1.4 stars, then suspended
+    <!--2026-11-17 ran https://www.youtube.com/watch?v=0IRfNgq_4zY&t=403-->
 
 ## suspended profiles
 
@@ -33,6 +87,9 @@ once they are. registering the business: [registration](suspension/registration.
 
 ## appeals
 
+- (?) appeal within the first 24 hours
+  - (?) Matt Gazda: a high chance of reinstatement, even submitting with no evidence. he does not know whether an AI or a person reads it
+    <!--2026-11-17 says https://www.youtube.com/watch?v=0IRfNgq_4zY&t=33-->
 - (?) appealing with pasted chatgpt text got auto-rejected and escalated into the full gmail ban
   <!--2026-09-18 gmbpp member ran https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2081-->
 - (?) what actually worked: transfer the profiles to a fresh account, then appeal and re-verify from there — Eric, after a gmail suspension took 10 profiles
