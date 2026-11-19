@@ -28,6 +28,7 @@ const REDIRECT_URI: &str = "http://127.0.0.1:9/callback";
 /// What a side takes from its info rev; the rest of its tree is the system rev's.
 const INFO: &str = "knowledge";
 const OUT: &str = "/tmp/playbook-eval";
+const RUNS: &str = "examples/integration_runs";
 
 /// Whether any case scored lower on this tree than on the old side.
 pub fn run(root: &Path, against: Option<String>, info: Option<String>, whole: bool, jobs: NonZeroUsize, ids: Vec<String>) -> bool {
@@ -106,9 +107,9 @@ pub fn run(root: &Path, against: Option<String>, info: Option<String>, whole: bo
 				s.name,
 				if a.skill { "✓" } else { "✗" },
 				a.turns,
-				a.tokens_in / 1000,
-				format!("{}k", a.tokens_out / 1000),
-				a.answer_usd,
+				a.answer.tokens_in / 1000,
+				format!("{}k", a.answer.tokens_out / 1000),
+				a.answer.usd,
 				calls.join(" · ")
 			);
 		}
@@ -132,8 +133,67 @@ pub fn run(root: &Path, against: Option<String>, info: Option<String>, whole: bo
 			}
 		}
 	}
-	println!("\n${:.2}, answers in {}", answered.iter().flatten().map(|a| a.usd).sum::<f64>(), out.display());
+	println!(
+		"\n${:.2}, answers in {}",
+		answered.iter().flatten().map(|a| a.answer.usd + a.judge.usd).sum::<f64>(),
+		out.display()
+	);
+	record(root, &sides[0], &out, &cases, answered.iter().map(|a| &a[0]), ids.is_empty());
 	regressed
+}
+
+/// `examples/integration_runs/`: the new side's answers, and a README over them. A run of every case replaces the lot.
+fn record<'a>(root: &Path, new: &Side, out: &Path, cases: &[Case], answered: impl Iterator<Item = &'a Answered>, every: bool) {
+	let dir = root.join(RUNS);
+	if every && dir.exists() {
+		std::fs::remove_dir_all(&dir).expect("examples/integration_runs/ is ours");
+	}
+	std::fs::create_dir_all(&dir).unwrap_or_else(|e| panic!("{}: {e}", dir.display()));
+	let (answer, judge): (Usage, Usage) = answered.fold(Default::default(), |(a, j), x| (a + x.answer, j + x.judge));
+	for c in cases {
+		std::fs::copy(out.join(&c.id).join("new.md"), dir.join(format!("{}.md", c.id))).expect("ask wrote it");
+	}
+
+	let mut short: Vec<(String, String)> = std::fs::read_dir(&dir)
+		.expect("just made")
+		.map(|e| e.expect("a readable entry").path())
+		.filter(|p| p.file_name() != Some("README.md".as_ref()))
+		.filter_map(|p| {
+			let md = std::fs::read_to_string(&p).expect("written by a run");
+			let score = md
+				.lines()
+				.find_map(|l| l.strip_prefix("- score: "))
+				.unwrap_or_else(|| panic!("{} states no score", p.display()))
+				.to_owned();
+			let (met, of) = score.split_once('/').expect("a score is met/total");
+			(met != of).then(|| (p.file_name().expect("a file").to_str().expect("utf-8").to_owned(), score))
+		})
+		.collect();
+	short.sort();
+	let badge = |label: &str, message: &str, color: &str| {
+		let esc = |s: &str| s.replace('-', "--").replace('_', "__").replace(' ', "%20").replace('/', "%2F").replace('$', "%24");
+		format!("https://img.shields.io/badge/{}-{}-{color}", esc(label), esc(message))
+	};
+	let used = |u: Usage| format!("${:.2} · {}k in / {}k out", u.usd, u.tokens_in / 1000, u.tokens_out / 1000);
+	let tag = git(root, &["describe", "--tags", "--abbrev=0", "--match", "v*", &new.system]);
+	let version = git(root, &["describe", "--tags", "--match", "v*", &new.system]);
+	let readme = format!(
+		"# integration runs
+
+What `playbook eval` last got on this tree: per case, the question, each expectation with the judge's verdict and why, then the answer as a member would read it. A run of some cases only replaces those cases' files; the badges are that run's.
+
+![answer]({}) ![judge]({}) [![version]({})](https://github.com/EV-Service-Arb/playbook/releases/tag/{tag})
+
+## short of every expectation
+
+{}",
+		badge(&format!("answer {ANSWER_MODEL}"), &used(answer), "blue"),
+		badge(&format!("judge {JUDGE_MODEL}"), &used(judge), "blue"),
+		badge("version", &version, "green"),
+		short.iter().map(|(f, score)| format!("- [{}]({f}) {score}
+", f.trim_end_matches(".md"))).collect::<String>(),
+	);
+	std::fs::write(dir.join("README.md"), readme).expect("just made");
 }
 
 #[derive(Deserialize)]
@@ -157,14 +217,40 @@ struct Side {
 
 struct Answered {
 	verdicts: Vec<Verdict>,
-	usd: f64,
-	answer_usd: f64,
+	answer: Usage,
+	judge: Usage,
 	skill: bool,
 	turns: u64,
 	/// every tool the answer called, by name past its server prefix, and how often
 	calls: Vec<(String, usize)>,
+}
+
+#[derive(Clone, Copy, Default)]
+struct Usage {
+	usd: f64,
 	tokens_in: u64,
 	tokens_out: u64,
+}
+impl std::ops::Add for Usage {
+	type Output = Self;
+
+	fn add(self, o: Self) -> Self {
+		Self {
+			usd: self.usd + o.usd,
+			tokens_in: self.tokens_in + o.tokens_in,
+			tokens_out: self.tokens_out + o.tokens_out,
+		}
+	}
+}
+impl From<&Value> for Usage {
+	fn from(result: &Value) -> Self {
+		let usage = |k: &str| result["usage"][k].as_u64().unwrap_or_else(|| panic!("claude reports `usage.{k}`"));
+		Self {
+			usd: result["total_cost_usd"].as_f64().expect("claude reports its cost"),
+			tokens_in: usage("input_tokens") + usage("cache_creation_input_tokens") + usage("cache_read_input_tokens"),
+			tokens_out: usage("output_tokens"),
+		}
+	}
 }
 
 struct Server {
@@ -479,7 +565,6 @@ fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 			None => calls.push((tool, 1)),
 		}
 	}
-	let usage = |k: &str| answer["usage"][k].as_u64().unwrap_or_else(|| panic!("claude reports `usage.{k}`"));
 	let skill = calls.iter().any(|(t, _)| t == "Skill");
 
 	let expectations: String = c.expect.iter().map(|e| format!("- {e}\n")).collect();
@@ -525,14 +610,11 @@ fn ask(c: &Case, side: &Side, server: &Server, out: &Path) -> Answered {
 	std::fs::create_dir_all(&dir).expect("the run dir was just made");
 	std::fs::write(dir.join(format!("{}.md", side.name)), md).expect("the run dir was just made");
 
-	let usd = |v: &Value| v["total_cost_usd"].as_f64().expect("claude reports its cost");
 	Answered {
-		usd: usd(&answer) + usd(&judged),
-		answer_usd: usd(&answer),
+		answer: Usage::from(&answer),
+		judge: Usage::from(&judged),
 		skill,
 		turns: answer["num_turns"].as_u64().expect("claude reports its turns"),
-		tokens_in: usage("input_tokens") + usage("cache_creation_input_tokens") + usage("cache_read_input_tokens"),
-		tokens_out: usage("output_tokens"),
 		calls,
 		verdicts,
 	}

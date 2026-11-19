@@ -104,7 +104,7 @@ fn compile() {
 		"a pasted label",
 		&[(
 			"<!--2026-09-25 Dante ran 2σ https://www.loom.com/share/abc?t=353-->",
-			"[Dante ran 2σ · 54d · init 0.57 · norm 0.56 · https://www.loom.com/share/abc?t=353]",
+			"[Dante ran, 95% sure · 54d · init 0.57 · norm 0.56 · https://www.loom.com/share/abc?t=353]",
 		)],
 		"sourcing.md:9: a label `playbook view` rendered",
 	);

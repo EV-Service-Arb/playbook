@@ -59,8 +59,7 @@
   "question": "Rather than splitting every job, can I just lease a ranked listing to a contractor for a flat monthly fee? What does that go for?",
   "expect": [
    "says yes, members rent verified profiles to contractors",
-   "puts the rent at about $2K a month per profile",
-   "says the contractor then takes all the calls"
+   "puts the rent at about $2K a month per profile"
   ]
  },
  {
@@ -128,7 +127,7 @@
   "question": "Should I set up my listings as service-area (no address shown) or with a physical address?",
   "expect": [
    "says service-area listings are the safer option, at around 70% success",
-   "gives the opposing view that a service-area listing is useless and adding an address is worth trying"
+   "gives the opposing view that an address ranks better and is worth trying"
   ]
  },
  {

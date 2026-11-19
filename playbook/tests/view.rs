@@ -88,10 +88,10 @@ fn renders_every_citation_in_place() {
 		assert!(!rendered.lines().any(|l| l.contains("<!--") && l.contains('σ')), "a raw citation is left:\n{rendered}");
 	}
 	let label = page.lines().find(|l| l.trim_start().starts_with('[')).unwrap();
-	for part in ["[Dante ran 2σ · ", "d · init 0.", " · norm 0.", " · https://www.loom.com/share/abc?t=353]"] {
+	for part in ["[Dante ran, 95% sure · ", "d · init 0.", " · norm 0.", " · https://www.loom.com/share/abc?t=353]"] {
 		assert!(label.contains(part), "{part} in {label}");
 	}
-	assert!(digest.contains("[Dante ran 2σ · "), "{digest}");
+	assert!(digest.contains("[Dante ran, 95% sure · "), "{digest}");
 	assert!(digest.contains(" · ?t=353]"), "{digest}");
 	assert!(
 		page.starts_with("# sourcing · half-life 5y, suggested by knowledge/structured/contractors/sourcing.md · step 4\n"),

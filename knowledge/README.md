@@ -38,7 +38,7 @@ Read `knowledge/` through `playbook view <dir>`: a copy, line for line, with eve
 it is worth. Edit `knowledge/` itself.
 
 ```
-<!--2026-09-25 Dante ran 2σ https://…?t=353-->   →   [Dante ran 2σ · 400d · init 0.57 · norm 0.21 · https://…?t=353]
+<!--2026-09-25 Dante ran 2σ https://…?t=353-->   →   [Dante ran, 95% sure · 400d · init 0.57 · norm 0.21 · https://…?t=353]
 
   init  =  source(who)  ×  P(certainty)        what it was worth when said
   norm  =  init  ×  γ(age; half-life, step)    what it is worth today. advice is ranked by norm

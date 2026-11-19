@@ -72,14 +72,14 @@ impl Backing {
 	}
 
 	// r[impl trust.arithmetic+2]
-	/// `Dante ran 2σ · 400d · init 0.57 · norm 0.21 · <url>`
+	/// `Dante ran, 95% sure · 400d · init 0.57 · norm 0.21 · <url>`
 	pub fn label(&self, today: i64, half_life: Option<Timeframe>, step: Option<f64>) -> String {
 		let at = self.at.as_ref().map(|a| format!(" · {a}")).unwrap_or_default();
 		format!(
-			"{} {} {}σ · {} · init {:.2} · norm {:.2}{at}",
+			"{} {}, {:.0}% sure · {} · init {:.2} · norm {:.2}{at}",
 			self.who,
 			self.how,
-			*self.certainty,
+			*PercentU::from(self.certainty) * 100.,
 			age(today - self.day),
 			self.init,
 			self.norm(today, half_life, step)
