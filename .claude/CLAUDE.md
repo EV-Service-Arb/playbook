@@ -1,0 +1,1 @@
+- never run `playbook eval` over every case without the owner's explicit go-ahead: a full run spends ~$5 of tokens. Name the case ids to run fewer

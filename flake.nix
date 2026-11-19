@@ -38,7 +38,7 @@
           pname = "playbook";
           enable = true;
           lfs = true;
-          gitignore.extra = "knowledge/references/**/recording.*";
+          gitignore.extra = "knowledge/references/**/recording.*\n!.claude/\n.claude/*\n!.claude/CLAUDE.md";
           jobs.errors.augment = [{ name = "check"; program = check; }];
           jobs.warnings.augment = [{ name = "digested"; program = digested; }];
           containerRelease = { registry = "ghcr.io/ev-service-arb"; lfs = false; }; # the image takes only markdown; the media is 17G
