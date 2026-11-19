@@ -1,6 +1,6 @@
 # Mastering SEO for Your Business: Boosting Visibility and Leads
 
-- of: [2025-12-08-mastering-seo-for-your-business-boosting-visibility-and-leads.md](../2025-12-08-mastering-seo-for-your-business-boosting-visibility-and-leads.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

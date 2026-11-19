@@ -1,6 +1,6 @@
 # Optimizing Business Profiles for Success in Salt Lake City
 
-- of: [2026-01-18-optimizing-business-profiles-for-success-in-salt-lake-city.md](../2026-01-18-optimizing-business-profiles-for-success-in-salt-lake-city.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

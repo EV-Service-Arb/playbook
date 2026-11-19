@@ -1,6 +1,6 @@
 # shown: Essential Trust Signals for Google My Business Verification and Longevity
 
-- capture: [2025-12-20-essential-trust-signals-for-google-my-business-verification-and-longevity.md](../2025-12-20-essential-trust-signals-for-google-my-business-verification-and-longevity.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 54 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.1464

@@ -1,6 +1,6 @@
 # shown: Effective Strategies for Recording and Verifying Google My Business Addresses
 
-- capture: [2025-12-07-effective-strategies-for-recording-and-verifying-google-my-business-addresses.md](../2025-12-07-effective-strategies-for-recording-and-verifying-google-my-business-addresses.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 105 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0304

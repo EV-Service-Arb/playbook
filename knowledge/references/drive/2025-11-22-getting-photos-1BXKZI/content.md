@@ -1,6 +1,6 @@
 # getting photos
 
-- of: [2025-11-22-getting-photos-1BXKZI.md](../2025-11-22-getting-photos-1BXKZI.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

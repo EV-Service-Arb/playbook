@@ -1,6 +1,6 @@
 # shown: This Untapped Google Review Method Gets us HUNDREDS of Reviews Daily (for dirt cheap)
 
-- capture: [6Js2xVz5wV0.md](../6Js2xVz5wV0.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 12 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0056

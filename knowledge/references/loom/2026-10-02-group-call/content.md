@@ -1,6 +1,6 @@
 # group call
 
-- of: [2026-10-02-group-call.md](../2026-10-02-group-call.md)
+- of: [src.md](src.md)
 - digested by: `/call-digest`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

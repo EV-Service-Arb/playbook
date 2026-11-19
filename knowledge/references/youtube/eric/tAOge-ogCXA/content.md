@@ -1,6 +1,6 @@
 # This 0 Competition Niche made Noah $10,000 His First Week (GMB Arbitrage)
 
-- of: [tAOge-ogCXA.md](../tAOge-ogCXA.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

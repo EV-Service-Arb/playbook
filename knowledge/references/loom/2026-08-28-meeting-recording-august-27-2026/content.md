@@ -1,6 +1,6 @@
 # Meeting Recording - August 27, 2026
 
-- of: [2026-08-28-meeting-recording-august-27-2026.md](../2026-08-28-meeting-recording-august-27-2026.md)
+- of: [src.md](src.md)
 - digested by: `/call-digest`, 2026-09-22, cited per point 2026-11-16
 
 ## gist

@@ -1,6 +1,6 @@
 //! `sync` lists every video of every channel `knowledge/references/README.md` links, in `knowledge/references/youtube/README.md`, under
 //! a header per person: the link text names their directory. `transcribe` captures videos that list
-//! has into `knowledge/references/youtube/<who>/<id>.md`, ticking each as it goes.
+//! has into `knowledge/references/youtube/<who>/<id>/src.md`, ticking each as it goes.
 //!
 //! Youtube is read by `social_networks_adapters`, linked; this only decides how a capture is filed.
 //!
@@ -84,7 +84,7 @@ pub async fn transcribe(root: &Path, pick: Pick, urls: &[String]) {
 		let dir = root.join("knowledge/references/youtube").join(&section.who);
 		std::fs::create_dir_all(&dir).expect("knowledge/references/youtube is ours to create under");
 		for Entry { id, .. } in &section.entries {
-			let out = dir.join(format!("{id}.md"));
+			let out = dir.join(id).join("src.md");
 			if out.exists() || !(only.is_empty() || only.contains(&id.as_str())) {
 				continue;
 			}
@@ -154,8 +154,8 @@ fn captured(dir: &Path) -> Vec<String> {
 	std::fs::read_dir(dir)
 		.unwrap_or_else(|e| panic!("reading {}: {e}", dir.display()))
 		.map(|e| e.expect("a directory entry is readable").path())
-		.filter(|p| p.extension().is_some_and(|e| e == "md"))
-		.map(|p| p.file_stem().expect("filtered on an extension").to_str().expect("a video id is ascii").to_string())
+		.filter(|p| p.join("src.md").exists())
+		.map(|p| p.file_name().expect("read_dir yields named entries").to_str().expect("a video id is ascii").to_string())
 		.collect()
 }
 
@@ -180,9 +180,9 @@ fn write(root: &Path, index: &Index) {
 		 \n\
 		 - spent: ${:.2} over {} watched, as their `shown.md` `cost:` lines state\n\
 		 \n\
-		 A directory per person, named by the text of their channel's link in `../README.md`. In it,\n\
-		 `<id>.md` is a video's capture — its description, then the captions in citable blocks — and\n\
-		 `<id>/` its readings: `shown.md` what is shown, off the frames in `frames/`, and `content.md`.\n\
+		 A directory per person, named by the text of their channel's link in `../README.md`. In it, a\n\
+		 folder per video: `src.md` its capture — its description, then the captions in citable blocks —\n\
+		 and beside it `shown.md` what is shown, off the frames in `frames/`, and `content.md`.\n\
 		 \n\
 		 A line per video, newest first: the day youtube says it was uploaded, linked to the video, then\n\
 		 its title — linked to the capture once there is one. `playbook pull yt transcribe` captures\n\
@@ -192,8 +192,8 @@ fn write(root: &Path, index: &Index) {
 	for Section { who, channel, entries } in &index.sections {
 		out.push_str(&format!("\n## {who} — <{channel}>\n\n"));
 		for Entry { id, uploaded, title } in entries {
-			match root.join("knowledge/references/youtube").join(who).join(format!("{id}.md")).exists() {
-				true => out.push_str(&format!("- [x] [{uploaded}]({WATCH}{id}) [{title}]({who}/{id}.md)\n")),
+			match root.join("knowledge/references/youtube").join(who).join(id).join("src.md").exists() {
+				true => out.push_str(&format!("- [x] [{uploaded}]({WATCH}{id}) [{title}]({who}/{id}/src.md)\n")),
 				false => out.push_str(&format!("- [ ] [{uploaded}]({WATCH}{id}) {title}\n")),
 			}
 		}
@@ -227,7 +227,7 @@ fn parse(root: &Path) -> Index {
 			let title = match line.starts_with("- [x]") {
 				true => title
 					.strip_prefix('[')
-					.and_then(|t| t.strip_suffix(&format!("]({}/{id}.md)", section.who)))
+					.and_then(|t| t.strip_suffix(&format!("]({}/{id}/src.md)", section.who)))
 					.unwrap_or_else(|| panic!("{bad}")),
 				false => title,
 			};
@@ -268,7 +268,7 @@ async fn video(id: &str, tmp: &Path, out: &Path, pick: Pick) -> Option<String> {
 		footage: Footage::Screen,
 		pick,
 		about: video.description.clone(),
-		frames: out.with_extension("").join("frames"),
+		frames: out.with_file_name("frames"),
 	};
 	crate::watch::shown(out, &format!("{WATCH}{id}"), &media, spec, "playbook pull yt transcribe")
 		.await

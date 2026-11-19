@@ -1,6 +1,6 @@
 # shown: Group call
 
-- capture: [2026-08-07-group-call.md](../2026-08-07-group-call.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 27 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0156

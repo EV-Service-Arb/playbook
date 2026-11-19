@@ -1,6 +1,6 @@
 # shown: i numbed myself emotionally and it made me $1.3m at 20
 
-- capture: [1cGiZpK5d18.md](../1cGiZpK5d18.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 15 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0067

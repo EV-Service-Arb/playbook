@@ -1,6 +1,6 @@
 # Another approved SAB ex
 
-- of: [2026-03-29-another-approved-sab-ex-18rcKV.md](../2026-03-29-another-approved-sab-ex-18rcKV.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

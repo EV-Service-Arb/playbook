@@ -1,6 +1,6 @@
 # Unlocking Live Video Verification for Business Approval
 
-- of: [2026-02-28-unlocking-live-video-verification-for-business-approval.md](../2026-02-28-unlocking-live-video-verification-for-business-approval.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

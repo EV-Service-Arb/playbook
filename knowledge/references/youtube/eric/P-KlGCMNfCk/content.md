@@ -1,6 +1,6 @@
 # exactly how i made $1.3m at 20 years old
 
-- of: [P-KlGCMNfCk.md](../P-KlGCMNfCk.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

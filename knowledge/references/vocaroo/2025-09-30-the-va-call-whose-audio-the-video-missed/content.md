@@ -1,6 +1,6 @@
 # the VA call whose audio the video missed
 
-- of: [2025-09-30-the-va-call-whose-audio-the-video-missed.md](../2025-09-30-the-va-call-whose-audio-the-video-missed.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

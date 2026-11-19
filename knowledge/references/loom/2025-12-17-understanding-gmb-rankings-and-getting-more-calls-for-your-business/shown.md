@@ -1,6 +1,6 @@
 # shown: Understanding GMB Rankings and Getting More Calls for Your Business 📞
 
-- capture: [2025-12-17-understanding-gmb-rankings-and-getting-more-calls-for-your-business.md](../2025-12-17-understanding-gmb-rankings-and-getting-more-calls-for-your-business.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 10 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.0336

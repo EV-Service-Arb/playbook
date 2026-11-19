@@ -1,6 +1,6 @@
 # Impromptu Google Meet Meeting
 
-- of: [2026-03-31-impromptu-google-meet-meeting.md](../2026-03-31-impromptu-google-meet-meeting.md)
+- of: [src.md](src.md)
 - digested by: `/call-digest`, 2026-09-22, cited per point 2026-11-16
 
 ## gist

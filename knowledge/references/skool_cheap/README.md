@@ -9,23 +9,23 @@ this again to re-pull it.
 
 ## Full Step By Step Guide - How to get to 6 Figs
 
-- [How This Model Works:](course/01-full-step-by-step-guide-how-to-get-to-6-figs/01-how-this-model-works.md)
-- [Setup and Planning](course/01-full-step-by-step-guide-how-to-get-to-6-figs/02-setup-and-planning.md)
-- [VERIFICATION (MOST IMPORTANT)](course/01-full-step-by-step-guide-how-to-get-to-6-figs/03-verification-most-important.md)
-- [Generating Leads](course/01-full-step-by-step-guide-how-to-get-to-6-figs/04-generating-leads.md)
-- [Fulfilment:](course/01-full-step-by-step-guide-how-to-get-to-6-figs/05-fulfilment.md)
-- [Hiring a VA - automating](course/01-full-step-by-step-guide-how-to-get-to-6-figs/06-hiring-a-va-automating.md)
-- [The OG Guide](course/01-full-step-by-step-guide-how-to-get-to-6-figs/07-the-og-guide.md)
+- [How This Model Works:](course/01-full-step-by-step-guide-how-to-get-to-6-figs/01-how-this-model-works/src.md)
+- [Setup and Planning](course/01-full-step-by-step-guide-how-to-get-to-6-figs/02-setup-and-planning/src.md)
+- [VERIFICATION (MOST IMPORTANT)](course/01-full-step-by-step-guide-how-to-get-to-6-figs/03-verification-most-important/src.md)
+- [Generating Leads](course/01-full-step-by-step-guide-how-to-get-to-6-figs/04-generating-leads/src.md)
+- [Fulfilment:](course/01-full-step-by-step-guide-how-to-get-to-6-figs/05-fulfilment/src.md)
+- [Hiring a VA - automating](course/01-full-step-by-step-guide-how-to-get-to-6-figs/06-hiring-a-va-automating/src.md)
+- [The OG Guide](course/01-full-step-by-step-guide-how-to-get-to-6-figs/07-the-og-guide/src.md)
 
 ## SCALE LIKE A MF
 
-- [Live Training Free Sauce (Pinned Vid)](course/02-scale-like-a-mf/01-live-training-free-sauce-pinned-vid.md)
-- [1 On 1 Help](course/02-scale-like-a-mf/02-1-on-1-help.md)
+- [Live Training Free Sauce (Pinned Vid)](course/02-scale-like-a-mf/01-live-training-free-sauce-pinned-vid/src.md)
+- [1 On 1 Help](course/02-scale-like-a-mf/02-1-on-1-help/src.md)
 
 ## Resources - Sheets, Forms, Scripts, etc
 
-- [All resources here](course/03-resources-sheets-forms-scripts-etc/01-all-resources-here.md)
+- [All resources here](course/03-resources-sheets-forms-scripts-etc/01-all-resources-here/src.md)
 
 ## 1 on 1 Call, (Detailing only)
 
-- [Msg me a day and time, will send meeting link](course/04-1-on-1-call-detailing-only/01-msg-me-a-day-and-time-will-send-meeting-link.md)
+- [Msg me a day and time, will send meeting link](course/04-1-on-1-call-detailing-only/01-msg-me-a-day-and-time-will-send-meeting-link/src.md)

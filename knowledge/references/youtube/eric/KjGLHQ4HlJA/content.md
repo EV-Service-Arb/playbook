@@ -1,6 +1,6 @@
 # How to make ur first $ online if ur tired of course sellers and scams
 
-- of: [KjGLHQ4HlJA.md](../KjGLHQ4HlJA.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

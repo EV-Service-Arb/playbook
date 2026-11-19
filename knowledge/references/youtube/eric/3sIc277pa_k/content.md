@@ -1,6 +1,6 @@
 # Raw Reality - Going from $0 to $15k/mo in 90 days (Remote Service Arbitrage)
 
-- of: [3sIc277pa_k.md](../3sIc277pa_k.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

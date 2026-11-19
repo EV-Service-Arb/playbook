@@ -1,6 +1,6 @@
 # shown: Avoiding Suspensions: Best Practices for Your GMB 🚫
 
-- capture: [2025-12-15-avoiding-suspensions-best-practices-for-your-gmb.md](../2025-12-15-avoiding-suspensions-best-practices-for-your-gmb.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 27 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.0763

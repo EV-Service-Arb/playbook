@@ -1,6 +1,6 @@
 # Setupcall with Derek
 
-- of: [2026-08-20-setupcall-with-derek.md](../2026-08-20-setupcall-with-derek.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

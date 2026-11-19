@@ -1,6 +1,6 @@
 # shown: why your SEO is not working - 5 things to fix if you are a local service business
 
-- capture: [1ok0Rwr8MwE.md](../1ok0Rwr8MwE.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 79 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-23
 - cost: $0.0267

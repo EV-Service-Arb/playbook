@@ -1,6 +1,6 @@
 # VAN setup for service area
 
-- of: [2025-12-05-van-setup-for-service-area-1WgTtQ.md](../2025-12-05-van-setup-for-service-area-1WgTtQ.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

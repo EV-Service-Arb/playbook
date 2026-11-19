@@ -1,6 +1,6 @@
 # Mastering Instant Page Verification Techniques! 🚀
 
-- of: [2025-12-09-mastering-instant-page-verification-techniques.md](../2025-12-09-mastering-instant-page-verification-techniques.md)
+- of: [src.md](src.md)
 - digested by: `/call-digest`, 2026-09-22, cited per point 2026-11-16
 
 ## gist

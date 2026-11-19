@@ -1,6 +1,6 @@
 # shown: Raw Reality - Going from $0 to $15k/mo in 90 days (Remote Service Arbitrage)
 
-- capture: [3sIc277pa_k.md](../3sIc277pa_k.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 84 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0288

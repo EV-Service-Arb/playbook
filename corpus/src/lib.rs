@@ -154,10 +154,21 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 
 	let mut captures = BTreeMap::new();
 	let mut by_source: BTreeMap<String, String> = BTreeMap::new();
+	for (path, _) in &texts {
+		if !["src.md", "shown.md", "content.md"].iter().any(|f| path.ends_with(&format!("/{f}"))) {
+			errors.push(format!(
+				"{path}:1: a source is a folder: its capture `src.md`, its readings `shown.md` and `content.md` beside it"
+			));
+		}
+	}
 	for (path, text) in &texts {
 		let field = |name: &str| text.lines().find_map(|l| l.strip_prefix("- ")?.strip_prefix(name)?.strip_prefix(": "));
 		let Some(source) = field("source").map(|s| s.trim_matches(['<', '>'])) else {
-			continue; // a registry, an index or a reading beside a capture: none states a source
+			continue; // a reading beside a capture states none
+		};
+		let Some(dir) = path.strip_suffix("/src.md") else {
+			errors.push(format!("{path}:1: a source is stated in its folder's `src.md`"));
+			continue;
 		};
 		let key = source_key(source).unwrap_or_else(|| panic!("{path}: `{source}` is on no platform `source_key` knows"));
 		let stamp = ["recorded", "uploaded", "updated", "pulled"]
@@ -208,7 +219,7 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 				source: source.to_owned(),
 				duration,
 				stamps: {
-					let shown = format!("{}/shown.md", path.strip_suffix(".md").expect("walked for .md"));
+					let shown = format!("{dir}/shown.md");
 					let shown = texts.iter().find(|(p, _)| *p == shown).map_or("", |(_, t)| t.as_str());
 					seconds(text).chain(seconds(shown)).collect()
 				},
@@ -226,7 +237,7 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 	let mut pending = Vec::new();
 	let default = HalfLife { span: tables.half_life, page: None };
 	for (path, capture) in captures.iter().filter(|(_, c)| c.duration.is_some()) {
-		let digest = format!("{}/content.md", path.strip_suffix(".md").expect("walked for .md"));
+		let digest = path.replace("/src.md", "/content.md");
 		match texts.iter().find(|(p, _)| *p == digest) {
 			Some((_, text)) => {
 				let (found, mut wrong) = ctx.digest(text, capture);
@@ -239,7 +250,7 @@ pub fn compile(root: &Path) -> Result<Index, Vec<String>> {
 		}
 	}
 	for (path, _) in texts.iter().filter(|(p, _)| p.ends_with("/content.md")) {
-		let capture = format!("{}.md", path.strip_suffix("/content.md").expect("filtered on it"));
+		let capture = path.replace("/content.md", "/src.md");
 		if !captures.get(&capture).is_some_and(|c| c.duration.is_some()) {
 			errors.push(format!("{path}:1: digests no recording: `{capture}` is none"));
 		}
@@ -671,7 +682,7 @@ fn source_key(url: &str) -> Option<String> {
 		return Some(format!("youtube:{}", param("v")?));
 	}
 	if url.contains("skool.com/") && url.contains("/classroom") {
-		return Some(format!("skool:{}", param("md")?));
+		return Some(format!("skool:{}", param("md").or_else(|| url.split('?').next()?.rsplit('/').next())?)); // a module is its classroom path's last segment
 	}
 	[
 		("loom.com/share/", "loom"),

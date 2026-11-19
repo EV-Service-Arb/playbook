@@ -1,6 +1,6 @@
 # Optimizing Your Business Name for Success 🚀
 
-- of: [2025-12-13-optimizing-your-business-name-for-success.md](../2025-12-13-optimizing-your-business-name-for-success.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

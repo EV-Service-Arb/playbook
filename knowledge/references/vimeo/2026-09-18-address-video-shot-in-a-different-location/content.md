@@ -1,6 +1,6 @@
 # address video shot in a different location
 
-- of: [2026-09-18-address-video-shot-in-a-different-location.md](../2026-09-18-address-video-shot-in-a-different-location.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

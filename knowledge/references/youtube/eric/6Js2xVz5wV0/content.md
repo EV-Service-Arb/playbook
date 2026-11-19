@@ -1,6 +1,6 @@
 # This Untapped Google Review Method Gets us HUNDREDS of Reviews Daily (for dirt cheap)
 
-- of: [6Js2xVz5wV0.md](../6Js2xVz5wV0.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

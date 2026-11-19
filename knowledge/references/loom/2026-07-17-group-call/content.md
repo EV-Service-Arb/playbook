@@ -1,6 +1,6 @@
 # group call
 
-- of: [2026-07-17-group-call.md](../2026-07-17-group-call.md)
+- of: [src.md](src.md)
 - digested by: sonnet, 2026-11-17
 
 ## gist

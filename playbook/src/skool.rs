@@ -153,7 +153,7 @@ fn classroom(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BT
 		 - checked: {today}\n\
 		 - written by: `playbook pull skool`, every run\n\
 		 \n\
-		 A lesson skool has touched since we captured it is marked `stale` — delete its file and run\n\
+		 A lesson skool has touched since we captured it is marked `stale` — delete its folder and run\n\
 		 this again to re-pull it.\n"
 	);
 	let mut links: BTreeSet<String> = BTreeSet::new();
@@ -162,11 +162,10 @@ fn classroom(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BT
 
 	for (m, course) in courses.iter().enumerate() {
 		let module_dir = out_dir.join(format!("{:02}-{}", m + 1, slug(&course.title)));
-		std::fs::create_dir_all(&module_dir).expect("a module dir is ours to create");
 		index.push_str(&format!("\n## {}\n\n", course.title));
 
 		written += place(
-			&module_dir.join("README.md"),
+			&module_dir.join("src.md"),
 			&have,
 			&course.id,
 			&format!(
@@ -185,6 +184,7 @@ fn classroom(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BT
 				course.body,
 			),
 		) as usize;
+		let have = captured(&out_dir); // a module moved carries its lessons along
 
 		for (l, lesson) in course.lessons.iter().enumerate() {
 			let id = lesson.id.as_str();
@@ -228,7 +228,7 @@ fn classroom(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BT
 			let behind = have.get(id).is_some_and(|had| captured_at(had) != at);
 			stale += behind as usize;
 
-			let out = module_dir.join(format!("{:02}-{}.md", l + 1, slug(&lesson.title)));
+			let out = module_dir.join(format!("{:02}-{}", l + 1, slug(&lesson.title))).join("src.md");
 			written += place(&out, &have, id, &doc) as usize;
 			index.push_str(&format!(
 				"- [{}]({}){}\n",
@@ -248,23 +248,25 @@ fn classroom(root: &Path, group: &str, out_root: &str, courses: &[Course]) -> BT
 	links
 }
 
-/// Write `doc` where it belongs, moving a capture of the same lesson that sits somewhere else — a
+/// Write `doc` as `out`, moving the folder of the same lesson or module that sits somewhere else — a
 /// rename or a reorder upstream changes the path and nothing about what was captured.
 fn place(out: &Path, have: &BTreeMap<String, PathBuf>, id: &str, doc: &str) -> bool {
 	match have.get(id) {
 		Some(had) if had == out => false,
 		Some(had) => {
+			let (from, to) = (had.parent().expect("a capture is its folder's src.md"), out.parent().expect("joined onto a folder"));
 			assert!(
-				!out.exists(),
+				!to.exists(),
 				"{} belongs at {}, and another capture is already there — delete its `course/` and run this again",
-				had.display(),
-				out.display()
+				from.display(),
+				to.display()
 			);
-			std::fs::rename(had, out).unwrap_or_else(|e| panic!("moving {} to {}: {e}", had.display(), out.display()));
+			std::fs::rename(from, to).unwrap_or_else(|e| panic!("moving {} to {}: {e}", from.display(), to.display()));
 			eprintln!("moved {} → {}", had.display(), out.display());
 			false
 		}
 		None => {
+			std::fs::create_dir_all(out.parent().expect("joined onto a folder")).expect("the course dir is ours to create under");
 			std::fs::write(out, doc).expect("the course dir is ours to write");
 			println!("{}", out.display());
 			true
@@ -277,7 +279,7 @@ fn place(out: &Path, have: &BTreeMap<String, PathBuf>, id: &str, doc: &str) -> b
 fn captured(dir: &Path) -> BTreeMap<String, PathBuf> {
 	let mut found = BTreeMap::new();
 	//LOOP: bounded by the number of files in a finite tree
-	for entry in walk(dir) {
+	for entry in walk(dir).into_iter().filter(|p| p.ends_with("src.md")) {
 		let text = std::fs::read_to_string(&entry).unwrap_or_else(|e| panic!("reading {}: {e}", entry.display()));
 		let id = line(&text, "- id: ").unwrap_or_else(|| panic!("{} states no id — it was not written by `playbook pull skool`", entry.display()));
 		if let Some(clash) = found.insert(id.to_string(), entry.clone()) {

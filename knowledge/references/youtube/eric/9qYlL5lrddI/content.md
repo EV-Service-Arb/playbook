@@ -1,6 +1,6 @@
 # Why Your Google Business Profile Stopped Getting Calls (and how to fix it)
 
-- of: [9qYlL5lrddI.md](../9qYlL5lrddI.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

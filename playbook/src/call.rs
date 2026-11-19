@@ -1,4 +1,4 @@
-//! Call captures: `knowledge/references/<platform>/<date>-<title>.md`, held to `docs/ARCHITECTURE.md`'s "Call
+//! Call captures: `knowledge/references/<platform>/<date>-<title>/src.md`, held to `docs/ARCHITECTURE.md`'s "Call
 //! captures", of which this is the only enforcement.
 //!
 //! Both platforms' share pages are server-rendered and public, so nothing here needs an account. A
@@ -37,8 +37,8 @@ pub fn recordings(root: &Path, captures: &[PathBuf]) -> Vec<PathBuf> {
 				.iter()
 				.find(|(_, p)| std::fs::canonicalize(p).is_ok_and(|p| p == path))
 				.unwrap_or_else(|| panic!("{} is not a call capture", arg.display()));
-			let kept = path.with_extension("");
-			recording_in(&kept).unwrap_or_else(|| fetch(&format!("{}{id}", platform.share()), &kept))
+			let kept = path.parent().expect("a capture is its folder's src.md");
+			recording_in(kept).unwrap_or_else(|| fetch(&format!("{}{id}", platform.share()), kept))
 		})
 		.collect()
 }
@@ -90,9 +90,10 @@ pub fn pull(root: &Path, urls: &[String]) {
 		check(&name, &doc);
 		let dir = root.join(platform.dir());
 		std::fs::create_dir_all(&dir).unwrap_or_else(|e| panic!("creating {}: {e}", dir.display()));
-		let out = dir.join(&name);
-		assert!(!out.exists(), "{} is taken, and not by {id} — two recordings share a day and a title", out.display());
-		std::fs::rename(&staged, out.with_extension("")).unwrap_or_else(|e| panic!("moving {} beside {}: {e}", staged.display(), out.display()));
+		let kept = dir.join(&name);
+		assert!(!kept.exists(), "{} is taken, and not by {id} — two recordings share a day and a title", kept.display());
+		std::fs::rename(&staged, &kept).unwrap_or_else(|e| panic!("moving {} to {}: {e}", staged.display(), kept.display()));
+		let out = kept.join("src.md");
 		std::fs::write(&out, doc).unwrap_or_else(|e| panic!("writing {}: {e}", out.display()));
 		println!("{}", out.display());
 	}
@@ -202,11 +203,10 @@ fn captured(root: &Path) -> BTreeMap<Rec, PathBuf> {
 		}
 		//LOOP: bounded by the number of files in a finite directory
 		for entry in std::fs::read_dir(&dir).unwrap_or_else(|e| panic!("reading {}: {e}", dir.display())) {
-			let path = entry.expect("a directory entry is readable").path();
-			if path.is_dir() {
-				assert!(path.with_extension("md").exists(), "{} sits beside no capture", path.display());
-				continue;
-			}
+			let kept = entry.expect("a directory entry is readable").path();
+			assert!(kept.is_dir(), "{} is no folder: a source is a folder holding its capture as `src.md`", kept.display());
+			let path = kept.join("src.md");
+			assert!(path.exists(), "{} holds no `src.md`", kept.display());
 			let text = std::fs::read_to_string(&path).unwrap_or_else(|e| panic!("reading {}: {e}", path.display()));
 			let rec = check(&path.display().to_string(), &text);
 			assert_eq!(rec.0, platform, "{} is a {} capture filed under {}", path.display(), rec.0.name(), platform.dir());
@@ -779,5 +779,5 @@ fn render(platform: Platform, id: &str, mut r: Recording) -> (String, String) {
 		Platform::Drive => format!("-{}", &id[..6]),
 		Platform::Loom | Platform::Fathom | Platform::Vimeo | Platform::Vocaroo => String::new(),
 	};
-	(format!("{}-{}{tail}.md", &r.recorded[..10], slug(&r.title)), out)
+	(format!("{}-{}{tail}", &r.recorded[..10], slug(&r.title)), out)
 }

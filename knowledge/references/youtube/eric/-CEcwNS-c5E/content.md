@@ -1,6 +1,6 @@
 # I hit $30k/mo from my moms basement doing this lol
 
-- of: [-CEcwNS-c5E.md](../-CEcwNS-c5E.md)
+- of: [src.md](src.md)
 - digested by: summary and chapters, `scripts/yt-pull.rs`, 2026-09-18, cited per point 2026-11-16
 
 ## gist

@@ -1,6 +1,6 @@
 # call close example (commercial)
 
-- of: [2025-12-20-call-close-example-commercial-16b_XT.md](../2025-12-20-call-close-example-commercial-16b_XT.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

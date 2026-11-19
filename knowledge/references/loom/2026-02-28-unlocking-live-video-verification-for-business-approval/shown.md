@@ -1,6 +1,6 @@
 # shown: Unlocking Live Video Verification for Business Approval 🚀
 
-- capture: [2026-02-28-unlocking-live-video-verification-for-business-approval.md](../2026-02-28-unlocking-live-video-verification-for-business-approval.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 11 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.0283

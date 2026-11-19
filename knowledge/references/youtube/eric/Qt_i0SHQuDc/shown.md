@@ -1,6 +1,6 @@
 # shown: How to Build a Proper Relationship with your Contractor (Remote Service Arbitrage)
 
-- capture: [Qt_i0SHQuDc.md](../Qt_i0SHQuDc.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 34 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0136

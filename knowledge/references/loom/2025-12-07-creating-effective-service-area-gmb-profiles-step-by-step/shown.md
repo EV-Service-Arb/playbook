@@ -1,6 +1,6 @@
 # shown: Creating Effective Service Area GMB Profiles Step by Step 🚀
 
-- capture: [2025-12-07-creating-effective-service-area-gmb-profiles-step-by-step.md](../2025-12-07-creating-effective-service-area-gmb-profiles-step-by-step.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 35 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.0977

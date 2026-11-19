@@ -1,6 +1,6 @@
 # Optimizing Google Business Profile for Plumbers
 
-- of: [2025-12-05-optimizing-google-business-profile-for-plumbers-1C6EDJ.md](../2025-12-05-optimizing-google-business-profile-for-plumbers-1C6EDJ.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

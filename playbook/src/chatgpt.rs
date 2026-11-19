@@ -1,4 +1,4 @@
-//! `knowledge/references/research/<id>.md` for every chatgpt share we do not have yet.
+//! `knowledge/references/research/<id>/src.md` for every chatgpt share we do not have yet.
 //!
 //! The share page ships its conversation as an interned react-flight blob and the `/backend-api`
 //! route is behind cloudflare, so the page is rendered in headless chromium and the turns are read
@@ -28,13 +28,14 @@ pub fn pull(root: &Path, urls: &[String]) {
 	}
 
 	for id in &wanted {
-		let out = out_dir.join(format!("{id}.md"));
+		let out = out_dir.join(id).join("src.md");
 		if out.exists() {
 			eprintln!("have {id}");
 			continue;
 		}
 		eprintln!("rendering {id}");
 		let dom = render(&format!("{SHARE}{id}"));
+		std::fs::create_dir_all(out_dir.join(id)).expect("knowledge/references/research is ours to create under");
 		std::fs::write(&out, document(id, &dom)).expect("knowledge/references/research is ours to write");
 		println!("{}", out.display());
 	}

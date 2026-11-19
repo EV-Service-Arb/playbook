@@ -1,6 +1,6 @@
 # shown: Co working setup example
 
-- capture: [2026-03-29-co-working-setup-example-13WOQj.md](../2026-03-29-co-working-setup-example-13WOQj.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 21 frames, as `ask_llm`'s `Footage::Filmed` picks them · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0024

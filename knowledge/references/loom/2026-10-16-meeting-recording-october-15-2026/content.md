@@ -1,6 +1,6 @@
 # Meeting Recording - October 15, 2026
 
-- of: [2026-10-16-meeting-recording-october-15-2026.md](../2026-10-16-meeting-recording-october-15-2026.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17 — points on operations only
 
 ## gist

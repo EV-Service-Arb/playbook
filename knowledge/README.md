@@ -1,8 +1,8 @@
 # knowledge
 
 ```
-references/<platform>/<capture>.md     raw: what a source said, as pulled. never edited
-references/<platform>/<capture>/       readings of it: shown.md (the picture), content.md (the whole)
+references/<platform>/<capture>/src.md raw: what a source said, as pulled. never edited
+references/<platform>/<capture>/       beside it, readings of it: shown.md (the picture), content.md (the whole)
 log/digest/<date>-<capture>.md         what a digest should change in the manual, before it does
 log/resolved/<date>-<slug>.md          how a contradiction was settled
 structured/                            the manual: what we do, and the evidence under it
@@ -169,7 +169,7 @@ name is cited as their group's row.
 ```md
 # <the capture's title>
 
-- of: [<capture>.md](../<capture>.md)
+- of: [src.md](src.md)
 - digested by: <what>, <date>
 
 ## gist

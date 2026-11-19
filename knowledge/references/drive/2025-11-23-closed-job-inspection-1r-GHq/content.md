@@ -1,6 +1,6 @@
 # closed job/inspection
 
-- of: [2025-11-23-closed-job-inspection-1r-GHq.md](../2025-11-23-closed-job-inspection-1r-GHq.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

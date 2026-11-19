@@ -1,6 +1,6 @@
 # "GMB flipping" might be the easiest way to hit $100k/mo ($100,350 in 55 days)
 
-- of: [Oq5cVF1j2ec.md](../Oq5cVF1j2ec.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

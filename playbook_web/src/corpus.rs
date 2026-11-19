@@ -89,7 +89,7 @@ impl Corpus {
 			let Some((dir, reading)) = docs[i].path.rsplit_once('/').filter(|(_, f)| ["shown.md", "content.md"].contains(f)) else {
 				continue;
 			};
-			let capture = format!("{dir}.md");
+			let capture = format!("{dir}/src.md");
 			let parent = docs.iter().position(|d| d.path == capture).unwrap_or_else(|| panic!("{} has no capture beside it", docs[i].path));
 			(docs[i].kind, docs[i].date, docs[i].source) = (docs[parent].kind, docs[parent].date, docs[parent].source);
 			if reading == "content.md" {

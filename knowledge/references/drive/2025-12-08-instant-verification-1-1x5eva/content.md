@@ -1,6 +1,6 @@
 # instant verification 1
 
-- of: [2025-12-08-instant-verification-1-1x5eva.md](../2025-12-08-instant-verification-1-1x5eva.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

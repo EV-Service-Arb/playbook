@@ -21,7 +21,7 @@ said
 ";
 const DIGEST: &str = "# Group call
 
-- of: [call.md](../call.md)
+- of: [src.md](src.md)
 - digested by: a test, 2026-10-01
 
 ## gist
@@ -50,7 +50,7 @@ fn tree(name: &str) -> PathBuf {
 	let root = std::env::temp_dir().join(format!("view-{}-{name}", std::process::id()));
 	for (path, text) in [
 		("knowledge/README.md", README),
-		("knowledge/references/loom/call.md", CAPTURE),
+		("knowledge/references/loom/call/src.md", CAPTURE),
 		("knowledge/references/loom/call/content.md", DIGEST),
 		("knowledge/structured/contractors/sourcing.md", PAGE),
 		("knowledge/references/loom/call/frames/1.jpg", "jpg"),
@@ -77,7 +77,7 @@ fn renders_every_citation_in_place() {
 		(
 			read("structured/contractors/sourcing.md"),
 			read("references/loom/call/content.md"),
-			read("references/loom/call.md"),
+			read("references/loom/call/src.md"),
 		)
 	};
 

@@ -1,6 +1,6 @@
 # The Most UNTAPPED Niches for Remote Service Arbitrage (0 Competition)
 
-- of: [0Sldsg6TW1c.md](../0Sldsg6TW1c.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-11-16, cited per point 2026-11-16
 
 ## gist

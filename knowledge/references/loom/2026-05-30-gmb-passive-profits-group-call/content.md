@@ -1,6 +1,6 @@
 # GMB Passive Profits Group Call
 
-- of: [2026-05-30-gmb-passive-profits-group-call.md](../2026-05-30-gmb-passive-profits-group-call.md)
+- of: [src.md](src.md)
 - digested by: `/call-digest`, 2026-09-22, cited per point 2026-11-16
 
 ## gist

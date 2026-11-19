@@ -1,6 +1,6 @@
 # How Bradley Grew a $2M Painting Company Using Google My Business
 
-- of: [3MEgzC6Rzbc.md](../3MEgzC6Rzbc.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

@@ -1,6 +1,6 @@
 # shown: Unlocking Your Path to Profitable Google Business Profiles 💰
 
-- capture: [2025-12-07-unlocking-your-path-to-profitable-google-business-profiles.md](../2025-12-07-unlocking-your-path-to-profitable-google-business-profiles.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 14 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.0464

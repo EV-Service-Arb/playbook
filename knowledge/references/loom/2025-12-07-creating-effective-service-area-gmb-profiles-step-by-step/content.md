@@ -1,6 +1,6 @@
 # Creating Effective Service Area GMB Profiles: Step by Step
 
-- of: [2025-12-07-creating-effective-service-area-gmb-profiles-step-by-step.md](../2025-12-07-creating-effective-service-area-gmb-profiles-step-by-step.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

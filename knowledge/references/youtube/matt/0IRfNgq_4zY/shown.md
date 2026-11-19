@@ -1,6 +1,6 @@
 # shown: The Real Reason Your GMB's Keep Getting Suspended
 
-- capture: [0IRfNgq_4zY.md](../0IRfNgq_4zY.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 11 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-11-18
 - cost: $0.0042

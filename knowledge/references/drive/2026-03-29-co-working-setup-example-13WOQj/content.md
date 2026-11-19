@@ -1,6 +1,6 @@
 # Co working setup example
 
-- of: [2026-03-29-co-working-setup-example-13WOQj.md](../2026-03-29-co-working-setup-example-13WOQj.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

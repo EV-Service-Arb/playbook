@@ -1,6 +1,6 @@
 # Address verification ex
 
-- of: [2026-03-12-address-verification-ex-19Uitt.md](../2026-03-12-address-verification-ex-19Uitt.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

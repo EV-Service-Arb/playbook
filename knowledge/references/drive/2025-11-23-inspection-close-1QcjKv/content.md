@@ -1,6 +1,6 @@
 # inspection close
 
-- of: [2025-11-23-inspection-close-1QcjKv.md](../2025-11-23-inspection-close-1QcjKv.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

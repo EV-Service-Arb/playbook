@@ -1,6 +1,6 @@
 # How I Rank ANY Service Business #1 on Google Within 7 Days (3 Google Loopholes)
 
-- of: [e81n-o8aw_w.md](../e81n-o8aw_w.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

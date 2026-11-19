@@ -1,6 +1,6 @@
 # shown: Impromptu Google Meet Meeting
 
-- capture: [2026-03-31-impromptu-google-meet-meeting.md](../2026-03-31-impromptu-google-meet-meeting.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 49 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0194

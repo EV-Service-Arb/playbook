@@ -1,6 +1,6 @@
 # How to Build a Proper Relationship with your Contractor (Remote Service Arbitrage)
 
-- of: [Qt_i0SHQuDc.md](../Qt_i0SHQuDc.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

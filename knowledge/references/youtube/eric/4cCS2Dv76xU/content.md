@@ -1,6 +1,6 @@
 # How Zach Started a 7 Figure Landscaping Business with $0 from his Computer (in 90 days)
 
-- of: [4cCS2Dv76xU.md](../4cCS2Dv76xU.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

@@ -1,6 +1,6 @@
 # shown: Meeting Recording - July 3, 2026
 
-- capture: [2026-07-03-meeting-recording-july-3-2026.md](../2026-07-03-meeting-recording-july-3-2026.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 129 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.3419

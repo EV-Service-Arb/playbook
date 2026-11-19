@@ -1,6 +1,6 @@
 # mold service area example
 
-- of: [2025-12-08-mold-service-area-example-1FOZzg.md](../2025-12-08-mold-service-area-example-1FOZzg.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

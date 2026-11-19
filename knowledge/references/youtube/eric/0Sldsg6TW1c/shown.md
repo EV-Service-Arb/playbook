@@ -1,6 +1,6 @@
 # shown: The Most UNTAPPED Niches for Remote Service Arbitrage (0 Competition)
 
-- capture: [0Sldsg6TW1c.md](../0Sldsg6TW1c.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 35 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-11-16
 - cost: $0.0143

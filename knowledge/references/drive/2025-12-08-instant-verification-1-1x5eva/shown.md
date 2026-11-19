@@ -1,6 +1,6 @@
 # shown: instant verification 1
 
-- capture: [2025-12-08-instant-verification-1-1x5eva.md](../2025-12-08-instant-verification-1-1x5eva.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 10 frames, as `ask_llm`'s `Footage::Filmed` picks them · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0011

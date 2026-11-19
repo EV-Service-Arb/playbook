@@ -1,6 +1,6 @@
 # shown: Why Your Google Business Profile Stopped Getting Calls (and how to fix it)
 
-- capture: [9qYlL5lrddI.md](../9qYlL5lrddI.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 20 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0088

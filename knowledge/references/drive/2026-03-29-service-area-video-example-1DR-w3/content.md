@@ -1,6 +1,6 @@
 # Service area video example
 
-- of: [2026-03-29-service-area-video-example-1DR-w3.md](../2026-03-29-service-area-video-example-1DR-w3.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

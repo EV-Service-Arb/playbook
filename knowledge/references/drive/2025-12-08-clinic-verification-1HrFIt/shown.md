@@ -1,6 +1,6 @@
 # shown: clinic verification
 
-- capture: [2025-12-08-clinic-verification-1HrFIt.md](../2025-12-08-clinic-verification-1HrFIt.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 15 frames, where the picture changes or every 1s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.0140

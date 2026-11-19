@@ -21,7 +21,7 @@ said
 ";
 const DIGEST: &str = "# Group call
 
-- of: [call.md](../call.md)
+- of: [src.md](src.md)
 - digested by: a test, 2026-10-01
 
 ## gist
@@ -71,8 +71,8 @@ fn check(name: &str, edits: &[(&str, &str)], expect: &str) {
 		fs::write(path, edits.iter().fold(text.to_owned(), |t, (from, to)| t.replace(from, to))).unwrap();
 	};
 	write("README.md", README);
-	fs::create_dir_all(root.join("knowledge/references/loom")).unwrap();
-	fs::write(root.join("knowledge/references/loom/call.md"), CAPTURE).unwrap();
+	fs::create_dir_all(root.join("knowledge/references/loom/call")).unwrap();
+	fs::write(root.join("knowledge/references/loom/call/src.md"), CAPTURE).unwrap();
 	write("references/loom/call/content.md", DIGEST);
 	write("structured/contractors.md", PARENT);
 	write("structured/contractors/sourcing.md", PAGE);

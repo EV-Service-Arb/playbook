@@ -1,6 +1,6 @@
 # shown: GMB Passive Profits Group Call
 
-- capture: [2026-05-30-gmb-passive-profits-group-call.md](../2026-05-30-gmb-passive-profits-group-call.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 163 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.4365

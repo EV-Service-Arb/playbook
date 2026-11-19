@@ -1,6 +1,6 @@
 # everyone said i'd fail, now i make $133k/mo at 20
 
-- of: [1Cd_BV9YTOM.md](../1Cd_BV9YTOM.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

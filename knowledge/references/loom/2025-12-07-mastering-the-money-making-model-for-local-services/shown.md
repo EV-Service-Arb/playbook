@@ -1,6 +1,6 @@
 # shown: Mastering the Money-Making Model for Local Services 💰
 
-- capture: [2025-12-07-mastering-the-money-making-model-for-local-services.md](../2025-12-07-mastering-the-money-making-model-for-local-services.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 14 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.0332

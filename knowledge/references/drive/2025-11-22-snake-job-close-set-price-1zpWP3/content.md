@@ -1,6 +1,6 @@
 # snake job close (set price)
 
-- of: [2025-11-22-snake-job-close-set-price-1zpWP3.md](../2025-11-22-snake-job-close-set-price-1zpWP3.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

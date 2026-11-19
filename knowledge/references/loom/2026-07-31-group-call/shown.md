@@ -1,6 +1,6 @@
 # shown: group call
 
-- capture: [2026-07-31-group-call.md](../2026-07-31-group-call.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-terra`, over 333 frames, where the picture changes or every 30s · `scripts/call-watch.rs`
 - watched: 2026-09-24
 - cost: $0.8693

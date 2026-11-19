@@ -1,6 +1,6 @@
 # shown: How I Run a 7 Figure Local Service Business with 0 Liability
 
-- capture: [GWtDKaGeMJ4.md](../GWtDKaGeMJ4.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 42 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0169

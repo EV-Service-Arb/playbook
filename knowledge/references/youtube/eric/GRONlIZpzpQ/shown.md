@@ -1,6 +1,6 @@
 # shown: The Most Profitable WINTER Niches for Remote Service Arbitrage
 
-- capture: [GRONlIZpzpQ.md](../GRONlIZpzpQ.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 23 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0076

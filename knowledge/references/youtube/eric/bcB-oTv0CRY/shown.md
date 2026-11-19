@@ -1,6 +1,6 @@
 # shown: How I Doubled My Drop-servicing Business Overnight (3 things to implement today)
 
-- capture: [bcB-oTv0CRY.md](../bcB-oTv0CRY.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 37 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0120

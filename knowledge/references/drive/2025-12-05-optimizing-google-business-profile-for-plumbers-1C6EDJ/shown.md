@@ -1,6 +1,6 @@
 # shown: Optimizing Google Business Profile for Plumbers
 
-- capture: [2025-12-05-optimizing-google-business-profile-for-plumbers-1C6EDJ.md](../2025-12-05-optimizing-google-business-profile-for-plumbers-1C6EDJ.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 1105 frames, as `ask_llm`'s `Footage::Filmed` picks them · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.2874

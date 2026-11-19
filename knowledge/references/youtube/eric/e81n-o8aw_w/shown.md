@@ -1,6 +1,6 @@
 # shown: How I Rank ANY Service Business #1 on Google Within 7 Days (3 Google Loopholes)
 
-- capture: [e81n-o8aw_w.md](../e81n-o8aw_w.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 111 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0353

@@ -15,7 +15,7 @@ what cannot be checked is an invariant in [docs/spec/](spec/).
    loom · fathom · youtube · chatgpt · skool · discord
                      │  pull                                    code
                      ▼
- references/<platform>/<capture>.md          raw. never edited
+ references/<platform>/<capture>/src.md      raw. never edited
                      │  watch                                   code
                      ▼
               <capture>/shown.md             what the picture shows
@@ -49,7 +49,7 @@ Each step reads only what the one above it wrote. Two directions follow from tha
 
 ## Layers
 
-**`knowledge/references/`** — what a source said. One file per source, stating its own source id,
+**`knowledge/references/`** — what a source said. One folder per source, stating its own source id,
 where it came from and when it was recorded. A capture is identified by that id and not by its path,
 so a file is free to be named and placed after what it *says* — and a source that reorders or renames
 upstream is moved, not pulled twice. Re-running a puller over an existing capture is a no-op; a stale
@@ -58,19 +58,20 @@ one is re-pulled by deleting it.
 ```
 knowledge/references/
 ├── README.md                     # the source list — every source, and which of them a puller reaches
-├── <platform>/<capture>.md       # raw, as pulled. loom · fathom · drive · vimeo · vocaroo · youtube/<who>
-├── <platform>/<capture>/         # beside it: what was made of it, each file naming what made it
+├── <platform>/<capture>/         # a folder per source: loom · fathom · drive · vimeo · vocaroo · docs · research · youtube/<who>
+│   ├── src.md                    # raw, as pulled. Everything else here is what was made of it, each file naming what made it
 │   ├── recording.<ext>           # as the host serves it — gitignored, bar what LFS keeps
 │   ├── shown.md                  # what is on screen that the speech does not say, by `playbook watch`
 │   ├── frames/<secs>.jpg         # the frame each line of `shown.md` was read off — LFS
 │   └── content.md                # the whole recording, as chapters of attributed points, by the digest step
-├── docs/<title>.md               # google docs, exported as markdown
-├── research/<id>.md              # chatgpt shares, one `## user` / `## assistant` section per turn
 ├── youtube/README.md             # every video each channel lists, dated, ticked once captured — `playbook pull yt sync`
 └── skool_<group>/                # a classroom, via `social_networks` — `gmbpp`, and the `cheap` group
     ├── README.md                 # what upstream holds, and the day it was last compared to this
-    └── course/<NN-module>/       # a directory per module, a file per lesson, both in upstream's order
+    └── course/<NN-module>/       # a source per module, its lessons each a source inside it, both in upstream's order
 ```
+
+Every source is a folder, recording or text alike — a google doc's markdown export, a chatgpt share
+with a `## user` / `## assistant` section per turn — and its `src.md` the only file a puller writes there.
 
 Two things a capture cannot state about itself are written beside it instead, since a capture is never
 edited: **how far behind upstream it is**, in `skool_<group>/README.md`, rewritten every run with the
@@ -101,8 +102,8 @@ plain prose, in paragraphs, no stamps in it
 - the transcript is the platform's; where it has none, the puller transcribes the audio itself, and
   `transcribed by:` says so
 - a recording nobody speaks in is captured all the same: `transcribed by:` ends `— nobody speaks`
-- a recording is read through `playbook recording <capture.md>`, which hands back the one beside the
-  capture, fetching it from its host first when there is none
+- a recording is read through `playbook recording <capture>/src.md`, which hands back the one in its
+  folder, fetching it from its host first when there is none
 - every line of `shown.md` links the second it describes and embeds the frame at that second, so the
   claim can be checked by eye; its header names the model, the day and what it cost
 - chapters of our own, and everything else we read into a recording, live in `content.md`

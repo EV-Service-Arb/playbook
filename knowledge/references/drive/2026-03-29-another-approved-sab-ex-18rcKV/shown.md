@@ -1,6 +1,6 @@
 # shown: Another approved SAB ex
 
-- capture: [2026-03-29-another-approved-sab-ex-18rcKV.md](../2026-03-29-another-approved-sab-ex-18rcKV.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 115 frames, as `ask_llm`'s `Footage::Filmed` picks them · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0116

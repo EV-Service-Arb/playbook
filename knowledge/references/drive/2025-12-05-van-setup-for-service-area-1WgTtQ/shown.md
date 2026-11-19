@@ -1,6 +1,6 @@
 # shown: VAN setup for service area
 
-- capture: [2025-12-05-van-setup-for-service-area-1WgTtQ.md](../2025-12-05-van-setup-for-service-area-1WgTtQ.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 2 frames, as `ask_llm`'s `Footage::Filmed` picks them · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0003

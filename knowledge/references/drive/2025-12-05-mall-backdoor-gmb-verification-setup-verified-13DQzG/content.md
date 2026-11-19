@@ -1,6 +1,6 @@
 # Mall Backdoor GMB Verification Setup (verified)
 
-- of: [2025-12-05-mall-backdoor-gmb-verification-setup-verified-13DQzG.md](../2025-12-05-mall-backdoor-gmb-verification-setup-verified-13DQzG.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

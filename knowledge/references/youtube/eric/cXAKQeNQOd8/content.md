@@ -1,6 +1,6 @@
 # How to Rank #1 on Google as a Service Area Business (SAB)
 
-- of: [cXAKQeNQOd8.md](../cXAKQeNQOd8.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-09-18, cited per point 2026-11-16
 
 ## gist

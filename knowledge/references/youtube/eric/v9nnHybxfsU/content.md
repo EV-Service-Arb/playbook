@@ -1,6 +1,6 @@
 # The Difference Between $0 and $100k/mo with Remote Service Arbitrage (why most people fail)
 
-- of: [v9nnHybxfsU.md](../v9nnHybxfsU.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

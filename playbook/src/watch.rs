@@ -1,4 +1,4 @@
-//! Writes `<capture>/shown.md` for every call capture whose recording has a picture and nobody has
+//! Writes `shown.md` beside `src.md` for every call capture whose recording has a picture and nobody has
 //! watched yet: what is on screen that the speech does not say, each line at the frame it was read
 //! off, and that frame kept beside it. A screen's frames are read where the pick says; by default only
 //! where the speech says something is shown, timed line by line by local whisper.
@@ -23,7 +23,7 @@ pub fn run(root: &Path, pick: Pick, captures: &[PathBuf]) {
 		true => crate::call::all(root),
 		false => captures.iter().map(|a| std::fs::canonicalize(a).unwrap_or_else(|e| panic!("{}: {e}", a.display()))).collect(),
 	};
-	let todo: Vec<PathBuf> = captures.into_iter().filter(|c| !c.with_extension("").join("shown.md").exists()).collect();
+	let todo: Vec<PathBuf> = captures.into_iter().filter(|c| !c.with_file_name("shown.md").exists()).collect();
 	eprintln!("{} recordings to watch", todo.len());
 	let media = crate::call::recordings(root, &todo);
 
@@ -61,7 +61,7 @@ struct Capture {
 
 /// Watch one recording into its `shown.md`, returning what it cost; `None` for one with no picture.
 async fn watch(path: &Path, media: &Path, pick: Pick) -> Option<f64> {
-	let kept = path.with_extension("");
+	let kept = path.parent().expect("a capture is its folder's src.md");
 	let capture = read(path);
 	let footage = match capture.source.contains("drive.google.com") {
 		true => Footage::Filmed,
@@ -97,7 +97,7 @@ async fn watch(path: &Path, media: &Path, pick: Pick) -> Option<f64> {
 /// `spec` read off `media` into `<capture>/shown.md`, its frames in `<capture>/frames/`. What it cost;
 /// `None` for a recording with no picture.
 pub(crate) async fn shown(path: &Path, source: &str, media: &Path, spec: Watch, writer: &str) -> Option<f64> {
-	let kept = path.with_extension("");
+	let kept = path.parent().expect("a capture is its folder's src.md");
 	assert_eq!(spec.frames, kept.join("frames"), "`shown.md` links its frames as `frames/<secs>.jpg`");
 	let (title, footage, pick) = (spec.title.clone(), spec.footage, spec.pick);
 	let watched = Client::default()
@@ -123,11 +123,9 @@ pub(crate) async fn shown(path: &Path, source: &str, media: &Path, spec: Watch, 
 		_ => "?t=",
 	};
 	let today = String::from_utf8(Command::new("date").arg("+%F").output().expect("date runs").stdout).expect("date prints ascii");
-	// not `source:`, which would make this a second capture of the recording
-	let name = path.file_name().expect("a capture has a name").to_string_lossy();
 	let mut out = format!(
 		"# shown: {title}\n\n\
-		 - capture: [{name}](../{name})\n\
+		 - capture: [src.md](src.md)\n\
 		 - watched by: {watched_by} · `{writer}`\n\
 		 - watched: {}\n\
 		 - cost: ${cost:.4}\n",
@@ -140,7 +138,7 @@ pub(crate) async fn shown(path: &Path, source: &str, media: &Path, spec: Watch, 
 		}
 		out.push_str(&format!("  ![](frames/{secs}.jpg)\n"));
 	}
-	std::fs::create_dir_all(&kept).expect("the capture's dir is ours to create");
+	std::fs::create_dir_all(kept).expect("the capture's dir is ours to create");
 	std::fs::write(kept.join("shown.md"), out).expect("the capture's dir is writable");
 	Some(cost)
 }
@@ -200,7 +198,7 @@ fn stamp(secs: u64) -> String {
 fn totals(root: &Path) {
 	let (mut n, mut usd) = (0, 0f64);
 	for capture in crate::call::all(root) {
-		let shown = capture.with_extension("").join("shown.md");
+		let shown = capture.with_file_name("shown.md");
 		if !shown.exists() {
 			continue;
 		}

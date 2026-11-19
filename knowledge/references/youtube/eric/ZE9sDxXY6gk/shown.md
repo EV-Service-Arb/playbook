@@ -1,6 +1,6 @@
 # shown: How I Get High Quality Contractors for my $80k/mo Drop-servicing Business (Live Calling Contractors)
 
-- capture: [ZE9sDxXY6gk.md](../ZE9sDxXY6gk.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 8 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0050

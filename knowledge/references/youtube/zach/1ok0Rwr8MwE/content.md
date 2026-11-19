@@ -1,6 +1,6 @@
 # why your SEO is not working - 5 things to fix if you are a local service business
 
-- of: [1ok0Rwr8MwE.md](../1ok0Rwr8MwE.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-23, cited per point 2026-11-16
 
 ## gist

@@ -1,6 +1,6 @@
 # Mastering the Money-Making Model for Local Services
 
-- of: [2025-12-07-mastering-the-money-making-model-for-local-services.md](../2025-12-07-mastering-the-money-making-model-for-local-services.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

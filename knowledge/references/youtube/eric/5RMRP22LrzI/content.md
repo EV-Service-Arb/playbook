@@ -1,6 +1,6 @@
 # after 4 years i finally escaped the matrix and now i'm depressed
 
-- of: [5RMRP22LrzI.md](../5RMRP22LrzI.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

@@ -1,6 +1,6 @@
 # How John Went from Bankrupt to $17k/mo with GMB Arbitrage (In 2.5 Months)
 
-- of: [p6TQlv7A8Qk.md](../p6TQlv7A8Qk.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

@@ -1,6 +1,6 @@
 # Aidan Dorau: Coaching Call
 
-- of: [2026-08-11-aidan-dorau-coaching-call.md](../2026-08-11-aidan-dorau-coaching-call.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17 — points on operations only
 
 ## gist

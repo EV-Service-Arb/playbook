@@ -266,7 +266,7 @@ fn re_transcribe(root: &Path, what: What) {
 	match pick {
 		Some(pick) => {
 			for c in &todo {
-				let kept = c.path.with_extension("");
+				let kept = c.path.parent().expect("a capture is its folder's src.md");
 				if kept.join("shown.md").exists() {
 					std::fs::remove_file(kept.join("shown.md")).expect("the capture's dir is ours");
 				}
@@ -283,8 +283,8 @@ fn re_transcribe(root: &Path, what: What) {
 				let staged = root.join("tmp/call-pull").join(id);
 				assert!(!staged.exists(), "{} is already staged — a pull was cut short; move it back beside its capture", staged.display());
 				std::fs::create_dir_all(staged.parent().expect("joined above")).expect("tmp/ is writable");
-				std::fs::rename(c.path.with_extension(""), &staged).expect("tmp/ is on the same filesystem as knowledge/references/");
-				std::fs::remove_file(&c.path).expect("the capture was just read");
+				std::fs::rename(c.path.parent().expect("a capture is its folder's src.md"), &staged).expect("tmp/ is on the same filesystem as knowledge/references/");
+				std::fs::remove_file(staged.join("src.md")).expect("the capture was just read");
 			}
 			// a drive, vimeo or vocaroo recording is named by the registry, so only a registry run can pull it
 			call::pull(root, &[]);
@@ -300,7 +300,7 @@ fn plan(c: &Capture, picture: Option<(Pick, &Path)>) -> Result<(f64, String), St
 			if !c.transcribed_by.starts_with("whisper") {
 				return Err(format!("transcribed by {}, which a re-pull fetches again rather than transcribes", c.transcribed_by));
 			}
-			if c.path.with_extension("").join("content.md").exists() {
+			if c.path.with_file_name("content.md").exists() {
 				return Err("digested, and a re-pull moves the stamps its `content.md` cites".into());
 			}
 			Ok((0., format!("{:.0} min through local whisper", c.minutes)))

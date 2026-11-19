@@ -1,6 +1,6 @@
 # Avoiding Suspensions: Best Practices for Your GMB
 
-- of: [2025-12-15-avoiding-suspensions-best-practices-for-your-gmb.md](../2025-12-15-avoiding-suspensions-best-practices-for-your-gmb.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

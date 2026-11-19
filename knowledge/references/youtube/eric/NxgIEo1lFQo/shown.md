@@ -1,6 +1,6 @@
 # shown: local businesses pay me $9k for this and it took 43 mins
 
-- capture: [NxgIEo1lFQo.md](../NxgIEo1lFQo.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 58 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0207

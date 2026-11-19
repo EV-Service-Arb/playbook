@@ -1,6 +1,6 @@
 # not closed, follow up in 10 mins
 
-- of: [2025-11-23-not-closed-follow-up-in-10-mins-137bSo.md](../2025-11-23-not-closed-follow-up-in-10-mins-137bSo.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

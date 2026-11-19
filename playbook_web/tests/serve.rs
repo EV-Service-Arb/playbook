@@ -17,7 +17,7 @@ const CONDUCTOR: &str = "k1:BwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwc=";
 async fn read_returns_one_chapter() {
 	let app = app("read", i64::MAX);
 	for (path, header) in [
-		("knowledge/references/loom/2026-09-18-group-call.md", "[03:34]"),
+		("knowledge/references/loom/2026-09-18-group-call/src.md", "[03:34]"),
 		("knowledge/structured/contractors/splits.md", "## the split"),
 	] {
 		let (status, text) = get(&app, member("u0"), "/read", json!({ "path": path, "header": header })).await;

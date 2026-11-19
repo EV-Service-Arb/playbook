@@ -1,4 +1,4 @@
-//! `knowledge/references/docs/<title>.md` for every google doc we do not have yet.
+//! `knowledge/references/docs/<title>/src.md` for every google doc we do not have yet.
 //!
 //! A doc shared by link exports itself as markdown to anyone, so this is one request per doc. A doc
 //! is edited in place and publishes no date of its own, so the capture carries the day it was pulled;
@@ -41,8 +41,10 @@ pub fn pull(root: &Path, urls: &[String]) {
 			today.trim(),
 			body.trim()
 		);
-		let out = out_dir.join(format!("{}.md", slug(title)));
-		assert!(!out.exists(), "{} is taken, and not by {id}", out.display());
+		let kept = out_dir.join(slug(title));
+		assert!(!kept.exists(), "{} is taken, and not by {id}", kept.display());
+		std::fs::create_dir_all(&kept).unwrap_or_else(|e| panic!("creating {}: {e}", kept.display()));
+		let out = kept.join("src.md");
 		std::fs::write(&out, doc).unwrap_or_else(|e| panic!("writing {}: {e}", out.display()));
 		println!("{}", out.display());
 	}
@@ -57,7 +59,9 @@ fn captured(dir: &Path) -> BTreeMap<String, PathBuf> {
 	let mut found = BTreeMap::new();
 	//LOOP: bounded by the number of files in a finite directory
 	for entry in std::fs::read_dir(dir).unwrap_or_else(|e| panic!("reading {}: {e}", dir.display())) {
-		let path = entry.expect("a directory entry is readable").path();
+		let kept = entry.expect("a directory entry is readable").path();
+		assert!(kept.is_dir(), "{} is no folder: a source is a folder holding its capture as `src.md`", kept.display());
+		let path = kept.join("src.md");
 		let text = std::fs::read_to_string(&path).unwrap_or_else(|e| panic!("reading {}: {e}", path.display()));
 		let source = text
 			.lines()

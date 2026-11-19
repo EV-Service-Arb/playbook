@@ -1,6 +1,6 @@
 # shown: Address verification ex
 
-- capture: [2026-03-12-address-verification-ex-19Uitt.md](../2026-03-12-address-verification-ex-19Uitt.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 148 frames, as `ask_llm`'s `Footage::Filmed` picks them · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0132

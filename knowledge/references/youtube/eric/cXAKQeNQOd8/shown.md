@@ -1,6 +1,6 @@
 # shown: How to Rank #1 on Google as a Service Area Business (SAB)
 
-- capture: [cXAKQeNQOd8.md](../cXAKQeNQOd8.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 78 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-09-18
 - cost: $0.0240

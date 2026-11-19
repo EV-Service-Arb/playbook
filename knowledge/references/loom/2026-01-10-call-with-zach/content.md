@@ -1,6 +1,6 @@
 # Call with Zach
 
-- of: [2026-01-10-call-with-zach.md](../2026-01-10-call-with-zach.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17 — points on operations only
 
 ## gist

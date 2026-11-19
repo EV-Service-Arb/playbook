@@ -1,6 +1,6 @@
 # How I Get High Quality Contractors for my $80k/mo Drop-servicing Business (Live Calling Contractors)
 
-- of: [ZE9sDxXY6gk.md](../ZE9sDxXY6gk.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

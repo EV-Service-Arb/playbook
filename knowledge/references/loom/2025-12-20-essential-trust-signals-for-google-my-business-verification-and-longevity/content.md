@@ -1,6 +1,6 @@
 # Essential Trust Signals for Google My Business Verification and Longevity
 
-- of: [2025-12-20-essential-trust-signals-for-google-my-business-verification-and-longevity.md](../2025-12-20-essential-trust-signals-for-google-my-business-verification-and-longevity.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

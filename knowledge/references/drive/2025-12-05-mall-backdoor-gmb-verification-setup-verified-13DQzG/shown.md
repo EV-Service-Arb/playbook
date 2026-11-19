@@ -1,6 +1,6 @@
 # shown: Mall Backdoor GMB Verification Setup (verified)
 
-- capture: [2025-12-05-mall-backdoor-gmb-verification-setup-verified-13DQzG.md](../2025-12-05-mall-backdoor-gmb-verification-setup-verified-13DQzG.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 15 frames, as `ask_llm`'s `Footage::Filmed` picks them · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0015

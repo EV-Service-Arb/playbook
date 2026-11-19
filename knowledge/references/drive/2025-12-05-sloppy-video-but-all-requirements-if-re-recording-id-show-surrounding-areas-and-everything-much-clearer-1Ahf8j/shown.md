@@ -1,6 +1,6 @@
 # shown: Sloppy Video but all requirements - if re recording id show surrounding areas and everything much clearer
 
-- capture: [2025-12-05-sloppy-video-but-all-requirements-if-re-recording-id-show-surrounding-areas-and-everything-much-clearer-1Ahf8j.md](../2025-12-05-sloppy-video-but-all-requirements-if-re-recording-id-show-surrounding-areas-and-everything-much-clearer-1Ahf8j.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna`, over 75 frames, as `ask_llm`'s `Footage::Filmed` picks them · `scripts/call-watch.rs`
 - watched: 2026-10-09
 - cost: $0.0072

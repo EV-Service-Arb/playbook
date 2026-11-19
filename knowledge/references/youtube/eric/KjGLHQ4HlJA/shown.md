@@ -1,6 +1,6 @@
 # shown: How to make ur first $ online if ur tired of course sellers and scams
 
-- capture: [KjGLHQ4HlJA.md](../KjGLHQ4HlJA.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 42 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0176

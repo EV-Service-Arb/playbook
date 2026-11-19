@@ -1,6 +1,6 @@
 # The Real Reason Your GMB's Keep Getting Suspended
 
-- of: [0IRfNgq_4zY.md](../0IRfNgq_4zY.md)
+- of: [src.md](src.md)
 - digested by: `claude-sonnet-5-5`, 2026-11-18
 
 ## gist

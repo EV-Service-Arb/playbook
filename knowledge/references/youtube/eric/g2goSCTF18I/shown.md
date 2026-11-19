@@ -1,6 +1,6 @@
 # shown: How I Verified 100+ Google Business Profiles (with physical locations)
 
-- capture: [g2goSCTF18I.md](../g2goSCTF18I.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 47 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-11-16
 - cost: $0.0150

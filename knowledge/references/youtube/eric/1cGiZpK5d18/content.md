@@ -1,6 +1,6 @@
 # i numbed myself emotionally and it made me $1.3m at 20
 
-- of: [1cGiZpK5d18.md](../1cGiZpK5d18.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-09, cited per point 2026-11-16
 
 ## gist

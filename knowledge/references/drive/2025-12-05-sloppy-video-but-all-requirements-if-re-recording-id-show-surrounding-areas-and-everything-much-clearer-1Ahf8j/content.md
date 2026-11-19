@@ -1,6 +1,6 @@
 # Sloppy Video but all requirements - if re recording id show surrounding areas and everything much clearer
 
-- of: [2025-12-05-sloppy-video-but-all-requirements-if-re-recording-id-show-surrounding-areas-and-everything-much-clearer-1Ahf8j.md](../2025-12-05-sloppy-video-but-all-requirements-if-re-recording-id-show-surrounding-areas-and-everything-much-clearer-1Ahf8j.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

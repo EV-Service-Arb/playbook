@@ -1,6 +1,6 @@
 # shown: How I get ANY Suspended Google Business Profile Re-instated
 
-- capture: [VGaLCraVY00.md](../VGaLCraVY00.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 14 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0054

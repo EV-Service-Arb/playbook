@@ -1,6 +1,6 @@
 # shown: exactly how i made $1.3m at 20 years old
 
-- capture: [P-KlGCMNfCk.md](../P-KlGCMNfCk.md)
+- capture: [src.md](src.md)
 - watched by: `gpt-5.6-luna` what is shown, over 40 frames, `gpt-5.6-luna` picking where, `Pick::Likely` every 0.5s · `playbook pull yt transcribe`
 - watched: 2026-10-09
 - cost: $0.0163

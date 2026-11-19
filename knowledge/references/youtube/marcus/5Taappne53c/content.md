@@ -1,6 +1,6 @@
 # Your GBP location is stopping you from $20k/mo
 
-- of: [5Taappne53c.md](../5Taappne53c.md)
+- of: [src.md](src.md)
 - digested by: `gpt-5.6-luna` summary and chapters, `playbook pull yt transcribe`, 2026-10-23, cited per point 2026-11-16
 
 ## gist

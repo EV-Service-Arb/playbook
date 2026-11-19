@@ -17,7 +17,7 @@ A source goes down these in order, and each step reads only what the one before 
 
 | step | from | to | read |
 |---|---|---|---|
-| capture | a URL, a channel | `<capture>.md`, `<capture>/shown.md` | [capture.md](capture.md) |
+| capture | a URL, a channel | `<capture>/src.md`, `<capture>/shown.md` | [capture.md](capture.md) |
 | digest | the capture and `shown.md` | `<capture>/content.md` | [digest.md](digest.md) |
 | propose | `content.md` | `knowledge/log/digest/<date>-<capture>.md` | [propose.md](propose.md) |
 | integrate | the proposal | `knowledge/structured/` | [integrate.md](integrate.md) |

@@ -1,6 +1,6 @@
 # Effective Strategies for Recording and Verifying Google My Business Addresses
 
-- of: [2025-12-07-effective-strategies-for-recording-and-verifying-google-my-business-addresses.md](../2025-12-07-effective-strategies-for-recording-and-verifying-google-my-business-addresses.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

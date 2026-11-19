@@ -1,6 +1,6 @@
 # Unlocking Your Path to Profitable Google Business Profiles
 
-- of: [2025-12-07-unlocking-your-path-to-profitable-google-business-profiles.md](../2025-12-07-unlocking-your-path-to-profitable-google-business-profiles.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

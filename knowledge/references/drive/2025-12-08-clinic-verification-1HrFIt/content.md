@@ -1,6 +1,6 @@
 # clinic verification
 
-- of: [2025-12-08-clinic-verification-1HrFIt.md](../2025-12-08-clinic-verification-1HrFIt.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist

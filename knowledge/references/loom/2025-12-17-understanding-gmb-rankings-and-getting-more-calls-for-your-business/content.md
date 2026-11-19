@@ -1,6 +1,6 @@
 # Understanding GMB Rankings and Getting More Calls for Your Business
 
-- of: [2025-12-17-understanding-gmb-rankings-and-getting-more-calls-for-your-business.md](../2025-12-17-understanding-gmb-rankings-and-getting-more-calls-for-your-business.md)
+- of: [src.md](src.md)
 - digested by: `/ingest digest`, 2026-11-17
 
 ## gist
