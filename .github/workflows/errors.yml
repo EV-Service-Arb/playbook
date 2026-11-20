@@ -9,6 +9,9 @@ jobs:
     name: check
     outputs:
       seconds: ${{ steps.run.outputs['check_seconds'] }}
+    permissions:
+      actions: write
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -26,14 +29,16 @@ jobs:
         with:
           extra-conf: |
             lazy-trees = true
+            extra-substituters = https://valeratrades.cachix.org file:///tmp/nix-lean-cache
+            extra-trusted-public-keys = valeratrades.cachix.org-1:gXVwhzO5YB+BaiEJYT48qZgzdaErGQew6xtZcz4Fo1Q=
             post-build-hook = /tmp/nix-lean-pbh.sh
-            extra-substituters = file:///tmp/nix-lean-cache
             extra-trusted-substituters = file:///tmp/nix-lean-cache
             require-sigs = false
-      - name: Restore lean nix cache
+      - id: lean-restore
+        name: Restore lean nix cache
         uses: actions/cache/restore@v5
         with:
-          key: nix-lean-particle-check-${{ runner.os }}-${{ hashFiles('flake.lock') }}-${{ github.run_id }}
+          key: nix-lean-particle-check-${{ runner.os }}-${{ hashFiles('flake.lock') }}-${{ hashFiles('**/*.nix') }}
           path: /tmp/nix-lean-cache
           restore-keys: |-
             nix-lean-particle-check-${{ runner.os }}-${{ hashFiles('flake.lock') }}-
@@ -52,24 +57,34 @@ jobs:
         with:
           key: nix-eval-${{ runner.os }}-${{ hashFiles('flake.lock') }}
           path: ~/.cache/nix
-      - if: always() && github.ref_name == github.event.repository.default_branch
+      - if: always() && github.ref_name == github.event.repository.default_branch && steps.lean-restore.outputs.cache-hit != 'true'
         name: Prune lean nix cache to what this run used
         run: |
           cd /tmp/nix-lean-cache
           shopt -s nullglob
           narinfos=(*.narinfo)
           ((${#narinfos[@]})) || exit 0
-          sed -n 's/^StorePath: //p' "${narinfos[@]}" | xargs nix-store --check-validity --print-invalid | while read -r p; do
+          paths=$(sed -n 's/^StorePath: //p' "${narinfos[@]}")
+          { xargs nix-store --check-validity --print-invalid <<< "$paths"
+            sed 's|^/nix/store/\([a-z0-9]*\)-.*|-o /dev/null https://valeratrades.cachix.org/\1.narinfo|' <<< "$paths" | xargs curl -s --parallel -w '%{http_code} %{url}\n' | sed -n 's|^200 .*/\(.*\)\.narinfo$|/nix/store/\1|p'
+          } | while read -r p; do
             n=$(basename "$p") && n=${n%%-*}.narinfo
             echo "$n" && sed -n 's/^URL: //p' "$n"
           done | sudo xargs -r rm -f
         shell: bash
-      - if: always() && github.ref_name == github.event.repository.default_branch
+      - if: always() && github.ref_name == github.event.repository.default_branch && steps.lean-restore.outputs.cache-hit != 'true'
         name: Save lean nix cache
         uses: actions/cache/save@v5
         with:
-          key: nix-lean-particle-check-${{ runner.os }}-${{ hashFiles('flake.lock') }}-${{ github.run_id }}
+          key: nix-lean-particle-check-${{ runner.os }}-${{ hashFiles('flake.lock') }}-${{ hashFiles('**/*.nix') }}
           path: /tmp/nix-lean-cache
+      - env:
+          FAMILY: nix-lean-particle-check-${{ runner.os }}-
+          GH_TOKEN: ${{ github.token }}
+          KEY: ${{ steps.lean-restore.outputs.cache-primary-key }}
+        if: always() && github.ref_name == github.event.repository.default_branch && steps.lean-restore.outputs.cache-hit != 'true'
+        name: Drop older lean nix caches
+        run: gh cache list -R "$GITHUB_REPOSITORY" -L 100 --key "$FAMILY" --json id,key -q 'if any(.[]; .key == $ENV.KEY) then .[] | select(.key != $ENV.KEY) | .id else empty end' | xargs -r -n1 gh cache delete -R "$GITHUB_REPOSITORY"
     timeout-minutes: 90
   report:
     if: always() && github.ref_name == github.event.repository.default_branch

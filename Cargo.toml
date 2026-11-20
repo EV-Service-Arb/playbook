@@ -9,29 +9,30 @@ repository = "https://github.com/EV-Service-Arb/playbook"
 [workspace.dependencies]
 ask_llm = { version = "^3.10.2", default-features = false }
 axum = { version = "0.8.9", features = ["query"] }
-base64 = "0.22"
-clap = { version = "^4.6.7", features = ["derive"] }
+base64 = "0.23.1"
+clap = { version = "4.6.9", features = ["derive"] }
 corpus = { path = "corpus" }
 ev_lib = { version = "0.34.0", default-features = false, features = ["error_monitoring", "api"] }
-jiff = "0.2"
+hex = "0.4.3"
+jiff = "0.2.46"
 libsql-rusqlite = "0.9.30" # `playbook` links libsql through social_networks_adapters, and a second bundled sqlite clashes with it
-regex = "1.13.1"
-regex-syntax = "0.8.11"
-rusqlite = { version = "0.40", features = ["bundled"] }
+regex = "1.13.2"
+regex-syntax = "0.8.12"
+rusqlite = { version = "0.40.2", features = ["bundled"] }
 sa_auth = { git = "https://github.com/EV-Service-Arb/site_conductor", branch = "main", features = ["axum"] }
 sa_core = { git = "https://github.com/EV-Service-Arb/site_conductor", branch = "main", features = ["api"] }
-schemars = "1"
-serde = { version = "1", features = ["derive"] }
-serde_json = "1"
-serde_urlencoded = "0.7"
-sha2 = "0.10"
-social_networks_adapters = { git = "https://github.com/valeratrades/social_networks", rev = "4d66c85e2630d8b377ed6fa4224e092208aec903", features = ["youtube-reads"] } # past 0.5 it is not on crates.io; the first rev on ask_llm 3.10
-strum = { version = "0.28", features = ["derive"] }
-tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "signal", "time"] }
-tower = { version = "0.5", features = ["util"] }
-tracing = "0.1"
-tracing-subscriber = { version = "0.3", features = ["env-filter"] }
-ureq = "3"
+schemars = "1.2.3"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+serde_urlencoded = "0.7.1"
+sha2 = "0.11.1"
+social_networks_adapters = { git = "https://github.com/valeratrades/social_networks", rev = "4e0d30877a3592cac06ff67a5b6ac17ac045f194", features = ["youtube-reads"] } # past 0.5 it is not on crates.io; the first rev on v_flakes' pins
+strum = { version = "0.28.0", features = ["derive"] }
+tokio = { version = "1.54.1", features = ["macros", "rt-multi-thread", "net", "signal", "time"] }
+tower = { version = "0.5.3", features = ["util"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
+ureq = "3.5.2"
 v_utils = { version = "^2.23.0", features = ["cli", "xdg"] }
 
 [workspace.lints.cargo]

@@ -17,6 +17,7 @@
         pre-commit-check = pre-commit-hooks.lib.${system}.run (v_flakes.files.preCommit { inherit pkgs; });
         rs = v_flakes.rs {
           inherit pkgs rust;
+          pinDeps = true;
           build.enable = false; # playbook_web's build.rs bakes the corpus; the root is a virtual workspace
         };
         cliTools = [ rust pkgs.stdenv.cc pkgs.mold pkgs.git pkgs.pkg-config ]; # .cargo/config.toml links with mold

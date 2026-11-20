@@ -9,6 +9,7 @@ ask_llm.workspace = true
 base64.workspace = true
 clap.workspace = true
 corpus.workspace = true
+hex.workspace = true
 jiff.workspace = true
 libsql-rusqlite.workspace = true
 serde.workspace = true

@@ -108,7 +108,7 @@ fn sha256(path: &Path) -> String {
 		}
 		digest.update(&buffer[..read]);
 	}
-	format!("{:x}", digest.finalize())
+	hex::encode(digest.finalize())
 }
 
 fn exiftool(path: &Path) -> Value {
