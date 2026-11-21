@@ -7,6 +7,8 @@ what members and sources have reported about a profile's business name.
 
 - the service and city in the name alone can hold #1: Dallas' top "drain cleaning" profile, `Dallas hydro jetting and drain`, has `drain` and `Dallas` in its name, 23 reviews and no address — Eric
   <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=258-->
+  - (?) *electrician*: `Electricians Peterborough` ranks above a 53-review profile on 15 reviews by exact-matching the search — Eric, 2026-05
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=324-->
 - (?) (!) main service keyword and location in the GBP name is a very high ranking factor — Zach Peterson
   <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=419-->
   > get a DBA if you have to

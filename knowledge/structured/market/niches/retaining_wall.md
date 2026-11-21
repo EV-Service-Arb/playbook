@@ -24,3 +24,4 @@ wants exactly that job. landscaping, masonry and concrete contractors fulfil it,
   - any landscaping company can fulfil it, a masonry or concrete contractor likely too; easy to sell the leads, to them or on lead-buying platforms
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=424-->
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=456-->
+  > each a trade of its own: [landscaping](landscaping.md), [masonry](masonry.md), [concrete](concrete.md)

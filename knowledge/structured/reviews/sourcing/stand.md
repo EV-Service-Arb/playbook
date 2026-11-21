@@ -85,6 +85,8 @@ What members have reported about collecting reviews in person: tables, venues, t
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4588-->
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4625-->
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4940-->
+  - (?) Eric, 2026-05: buy everyone in a Starbucks line a coffee for a review
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=585-->
 - (?) people holding a free drink will wait while they write: `PP` has them ask chatgpt for the text, prompted differently each time so no two match
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4913-->
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4940-->

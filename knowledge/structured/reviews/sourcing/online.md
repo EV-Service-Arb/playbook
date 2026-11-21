@@ -4,13 +4,17 @@ What members have reported about asking strangers online for reviews: groups, re
 
 ## groups
 
-- reviews: FB church groups are oftentimes willing to leave reviews on your profiles if you pretend to be one of them
-  <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4996-->
-- (?) churches and church groups work "really effectively" as a review source
-  > the general shape: get into an existing group chat of ~50 people with a shared interest, then ask once
-  <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4996-->
-- (?) church groups on facebook
-  <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4996-->
+- (?) facebook groups give a new profile its first reviews fast: post the ask in a couple, and ask friends and family beside
+  - (?) Eric, 2026-05: 50 reviews in "30 minutes of work" — a couple of Facebook groups, friends and family
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=553-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=585-->
+  - reviews: FB church groups are oftentimes willing to leave reviews on your profiles if you pretend to be one of them
+    <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4996-->
+  - (?) churches and church groups work "really effectively" as a review source
+    > the general shape: get into an existing group chat of ~50 people with a shared interest, then ask once
+    <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4996-->
+  - (?) church groups on facebook
+    <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4996-->
 
 ## review swaps
 

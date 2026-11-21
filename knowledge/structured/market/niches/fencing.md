@@ -21,11 +21,7 @@ out or sells easily.
   - the top searches name a company: `phoenix fence company` leads. a name exact-matching it, made distinct, ranks #1 on ~5 five-star reviews
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=520-->
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=553-->
-- (?) research every phrasing: a broad "fencing" pulls in unrelated terms
-  - Phoenix: ~1.3k searches/mo for "fence company" phrasings, ~600 more for "contractor", a few hundred for "fencing" — research every phrasing, a broad "fencing" pulls in unrelated terms
-    <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=553-->
-    <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=619-->
-    <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=653-->
+  > every phrasing counted: [city](../city.md#search-demand)
 
 ## fulfilling it
 

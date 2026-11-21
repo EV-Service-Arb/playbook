@@ -1,7 +1,7 @@
 # city
 
 a city of 50k–300k people, dense, on a $90–130k median income, outside the high-crime parts; with
-enough searches for the trade that our own share of them clears ~200 a month against who already ranks,
+enough searches for the trade, every phrasing of it counted, that our own share of them clears ~200 a month against who already ranks,
 a place in the top 3 that costs fewer reviews than it returns, and a contractor within the hour of every profile.
 
 ## size and people
@@ -36,6 +36,21 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=362-->
   - (?) Eric: competition and searches move together — a Miami plumber faces many heavily reviewed profiles, but far more searches than a tiny village's; the two have to add up
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=263-->
+  - (?) Eric, 2026-05: ~1,000 searches a month at #1 is about a lead a day, ~30 a month
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=356-->
+- (?) every phrasing of the service is researched and summed, and one polluted by other intent is dropped: a broad term pulls in searches for something else
+  - Phoenix: ~1.3k searches/mo for "fence company" phrasings, ~600 more for "contractor", a few hundred for "fencing" — research every phrasing, a broad "fencing" pulls in unrelated terms
+    <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=553-->
+    <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=619-->
+    <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=653-->
+  - (?) *asphalt*: `asphalt atlanta` is mostly searches for a supplier; `asphalt paving atlanta`, searched with intent, has 950 a month over its variations — Eric, 2026-05
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=585-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=617-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=707-->
+- (?) SEMrush's free tier is enough: another Gmail account, in its own Chrome profile, resets its limit
+  - (?) Eric never pays for SEMrush: the free tier stops at 10 requests, and switching Gmail account resets it
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=925-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=934-->
 
 ## competition
 
@@ -49,6 +64,10 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
   - (?) Eric: when two of the top three for the service in the city have under 100 reviews, competition is low and you can outrank them
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=295-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=328-->
+  - (?) Eric, 2026-05, *electrician* in Peterborough: `Lancer Electric` leads at 4.6 on 107 reviews without a keyword in its name; a five-star profile with 30 reviews and a keyworded name would rank first
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=292-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=324-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=356-->
 - (?) where nobody competes, a bare profile takes calls before it has photos, a description or reviews
   - James McBride is stupid good at selecting niches or locations wtf
     plumbing, electrician, HVAC, handyman, roofing. Has a contracting background, so he has better understanding of what niches work where

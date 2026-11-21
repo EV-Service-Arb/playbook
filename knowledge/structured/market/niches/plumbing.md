@@ -39,6 +39,11 @@ keeps answering; nothing is charged under $250, and his upsells are where the ti
   - (?) his franchise `Plumber Done Right` had a location in a bunch of cities, topped each, and brought tons of leads a day
     <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=197-->
     <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=236-->
+  - (?) Eric, 2026-05: his own profile, ranked for `plumbing Newmarket` on 116 reviews, brings ~80 leads a month — 46 calls and 124 website clicks in April
+    <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=164-->
+    <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=197-->
+  - (?) Eric scaled his remote plumbing business from zero to $100,000 a month in revenue within 2 months
+    <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=1090-->
 
 ## the split
 

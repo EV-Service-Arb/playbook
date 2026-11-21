@@ -2,11 +2,11 @@
 
 we start on plumbing, or on drain cleaning under it: urgent, year round, a mid ticket paid within a
 day for the same setup cost, and any plumber fulfils it. a low-ticket trade such as detailing pays
-soonest but takes many more jobs for the same money; a high-ticket one such as roofing or landscaping
-pays most per job, but late, on fewer leads and with a crew; recurring work sits between. always a
-local home service, never one whose small job comes back once in years. an untapped trade is found by
-searching a sub-service by its own name. one trade is mastered before a second is added. each
-trade's own page is under [niches/](niches/).
+soonest but takes many more jobs for the same money; a high-ticket one such as roofing, landscaping,
+asphalt, stucco or masonry pays most per job, but late, on fewer leads and with a crew, and the untapped
+trades are mostly these; recurring work sits between. always a local home service, never one whose
+small job comes back once in years. an untapped trade is found by searching a sub-service by its own
+name. one trade is mastered before a second is added. each trade's own page is under [niches/](niches/).
 
 ## the starting trade
 
@@ -40,6 +40,12 @@ trade's own page is under [niches/](niches/).
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=624-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=658-->
     <!--2026-04-21 ran 2σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=690-->
+- (?) a high-ticket untapped trade first — landscaping, asphalt and paving, stucco, masonry — where one or two ranked profiles make a full income. beaten on Eric's later word by drain cleaning and plumbing: paid within a day, on more leads, without a quote shopped around
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-starting-trade.md)
+  - (?) Eric, 2026-05: these four, each with a city, are what he would restart on
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=0-->
+    > his own first $20k profit month came in a lower-ticket, lower-barrier niche
+    <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=1058-->
 
 ## trades that work
 
@@ -52,6 +58,7 @@ trade's own page is under [niches/](niches/).
   - (?) Eric: roofing, plumbing and pest control all good high-ticket trades, about equal
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=597-->
   > James McBride's five trades, and his rural state: [city](city.md#competition)
+  > HVAC, where a big city is already held: [hvac](niches/hvac.md)
 - (?) a local service, never an online one: online is far more saturated, and local leads come easier for the same pay
   - (?) Eric: online is "20 million times more saturated"; local is easier to get leads for and pays as much
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=497-->
@@ -81,12 +88,21 @@ trade's own page is under [niches/](niches/).
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=559-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=591-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=624-->
+  - (?) Eric, 2026-05: $50k a month in profit takes high ticket — ~$7,500 average at ~20% margin is 30 jobs, 120 leads a month at a 25% close rate, about four leads a day: one or two ranked profiles
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=63-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=131-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=164-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=197-->
   > fencing, a $4,000 job: [fencing](niches/fencing.md#the-job)
 - (?) (!) high ticket — construction, roofing, remodels, landscaping, pools — pays the most per job, but late, seldom and slowly: a contract and a materials deposit come before the work, leads are fewer and patchier, a big quote gets shopped around, and a crew and more liability come with it. the untapped trades are mostly high ticket, so the hard part is a contractor who closes, leaves margin and doesn't scam you
   - (!) the untapped niches are mostly high ticket, and a $20–100k job gets quoted around, unlike a clogged toilet: the hard part is a contractor who closes, leaves you margin and doesn't scam you — Eric
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=719-->
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=750-->
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=980-->
+  - (?) Eric, 2026-05: *landscaping*, *asphalt and paving*, *stucco* and *masonry* are untapped — extremely high average ticket, super low competition, high demand — though not in every city; the commission on these jobs, 20 or 25%
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=228-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=292-->
+    <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=389-->
   - (?) Eric, 2026-04: one high-ticket job can pay a year of low-ticket ones, but money comes after a contract and a materials deposit, where plumbing pays the same day; fewer, less consistent leads; quotes tens of thousands apart get shopped; more can go wrong building a home; a commercial landscaping job needs a whole crew; setup harder
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=98-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=131-->
@@ -102,7 +118,7 @@ trade's own page is under [niches/](niches/).
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=756-->
   - asphalt close cycle is really long
     <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=4619-->
-  > concrete, the same: [concrete](niches/concrete.md); landscaping: [landscaping](niches/landscaping.md)
+  > concrete, the same: [concrete](niches/concrete.md). the other untapped ones: [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [stucco](niches/stucco.md), [masonry](niches/masonry.md)
 - (?) a narrow keyword brings callers who want exactly that job; a broad one brings tire-kickers
   - a narrow keyword brings callers who want exactly that job; a broad one brings tire-kickers — a detailing profile gets the $20 car wash
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=392-->
