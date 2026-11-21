@@ -1,7 +1,7 @@
 # closing
 <!--half-life 5y-->
 
-the call books the job at a price we name. we quote the middle of the area's range, never under a ~$250 minimum call-out, and say a partner company comes out, so a van or a contract under another name does not lose the job. who takes the call: [va](../staff/va.md); what the tech does with the price in the house: [pricing](../contractors/pricing.md).
+the call books a visit, usually the same day, at a call-out fee we name and waive if the job goes ahead; nothing is quoted off a photo. we price in the middle of the area's range, and say a partner company comes out, so a van or a contract under another name does not lose the job. who takes the call: [va](../staff/va.md); what the tech does with the price in the house: [pricing](../contractors/pricing.md).
 
 ## how fast
 
@@ -11,6 +11,18 @@ the call books the job at a price we name. we quote the middle of the area's ran
   - (?) Alex Hormozi: [a lead contacted within 60 seconds is 391% likelier to close](https://www.youtube.com/watch?v=StVqS0jD7Ls&t=203)
     <!--2013-01-01 agent heard 0.5σ-->
     > he names no study. the number is Velocify's, a lead-software vendor, over ~3.5 million leads, ~2013
+
+## the call
+
+- (?) answer with your name and the company, repeat back what the caller describes, no need to understand it, and say someone can come out; then the call-out fee, a broken part extra
+  - (?) Eric, 2026-07, playing a call of his student's: "Rapid Response Service, Jay speaking. How can I help?"; then "a service fee for the technician to come is $180"
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=563-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=626-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=661-->
+- (?) a caller who won't pay the call-out fee is usually the cheap customer: a ranked profile has the volume to let them go
+  - (?) Eric, 2026-07
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=661-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=695-->
 
 ## who comes out
 
@@ -30,5 +42,13 @@ the call books the job at a price we name. we quote the middle of the area's ran
   - Devin Grandt says to pull the area pricing, take middle-to-lower end of the range so you win the bids, and then use claude to estimate the correct price for a job of a given size
     So can also give it actual size of appt in question, and then it'll say that eg 2 bedrooms house is like 30€ or sth
     <!--2026-09-25 Devin Grandt says 1σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1188-->
-- (?) set a minimum call-out and quote nothing under it: ~$250 in *plumbing*
-  <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=63-->
+- (?) book a same-day visit at a set call-out fee, said to be waived on the job: it closes very well as long as the prices are reasonable
+  - (?) *plumbing*: ~$250 minimum call-out, nothing quoted under it
+    <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=63-->
+  - (?) Eric, 2026-07: a technician's diagnostic at $100–180, your choice, usually the same day; a $180 one you say you will waive gets a really high closing rate. his *plumbing* charges $60 for the inspection; *HVAC* can charge more: [hvac](../market/niches/hvac.md#the-price)
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=466-->
+    <!--2026-07-31 ran 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=497-->
+- (?) no quote off a photo: the customer can send one, but the price waits for the diagnostic in the house
+  - (?) Eric, 2026-07: "a million reasons" it could be happening
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=497-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=530-->

@@ -1,12 +1,13 @@
 # niche
 
 we start on plumbing, or on drain cleaning under it: urgent, year round, a mid ticket paid within a
-day for the same setup cost, and any plumber fulfils it. a low-ticket trade such as detailing pays
+day for the same setup cost, and any plumber fulfils it. HVAC is its equal where a city's numbers
+favour it, and fewer lead-gen operators run it. a low-ticket trade such as detailing pays
 soonest but takes many more jobs for the same money; a high-ticket one such as roofing, landscaping,
 asphalt, deck and fence, stucco or masonry pays most per job, but late, on fewer leads and with a
 crew, and the untapped trades are mostly these; recurring work sits between. always a local home service, never one whose
 small job comes back once in years. an untapped trade is found by searching a sub-service by its own
-name. one trade is mastered before a second is added. each trade's own page is under [niches/](niches/).
+name, and is easiest where the top profiles are owners carrying no keyword. one trade is mastered before a second is added. each trade's own page is under [niches/](niches/).
 
 ## the starting trade
 
@@ -14,6 +15,7 @@ name. one trade is mastered before a second is added. each trade's own page is u
   - (!) Eric calls drain cleaning the best niche to start remote service arbitrage on right now: urgent, needed year round, any plumber can do it in 20 minutes to a couple of hours
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=64-->
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=97-->
+  > plumbing is the trade lead-gen operators crowd most: [finding an untapped trade](#finding-an-untapped-trade)
   - (?) Eric puts a beginner on *plumbing*, plus one or two *cleaning* profiles in their own city to work out remote reviews and pricing
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6434-->
     > for a beginner. a member already on plumbing gets nothing from adding it: [cleaning](niches/cleaning.md)
@@ -30,6 +32,12 @@ name. one trade is mastered before a second is added. each trade's own page is u
   - (?) Eric, of the high-ticket trades: without wanting to think about it, plumbing
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=597-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=630-->
+- (?) HVAC starts as well as plumbing where a city's numbers favour it: the two are very similar, and few lead-gen operators run HVAC
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-starting-trade.md)
+  - (?) Eric, 2026-07: HVAC is "up there with one of the best niches" to start on; not inherently better than plumbing or the reverse, the two are very similar and it depends on the numbers
+    <!--2026-07-31 heard 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=0-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=166-->
+  > its ticket, its market, what it made a student: [hvac](niches/hvac.md)
 
 ### other
 
@@ -55,7 +63,8 @@ name. one trade is mastered before a second is added. each trade's own page is u
 
 ## trades that work
 
-- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping, asphalt and paving, deck and fence, pool cleaning and pest control are run and called workable. the best are plumbing and the high-ticket trades with low competition; the low-ticket ones are easier to get into and make less; HVAC is held back by its competition
+- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping, asphalt and paving, deck and fence, pool cleaning and pest control are run and called workable. the best are plumbing and the high-ticket trades with low competition; the low-ticket ones are easier to get into and make less; HVAC, which few lead-gen operators run, is plumbing's equal
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-hvac.md)
   - discussing niches
     - David: concrete, plumbing, landscape, roofing (mb, not sure)
       <!--2026-09-18 David says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6377-->
@@ -71,6 +80,7 @@ name. one trade is mastered before a second is added. each trade's own page is u
     > he picked trades he thought good for the list, from his own experience
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=561-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=760-->
+    > HVAC's place below, for its competition, he revised in July: [hvac](niches/hvac.md#the-market)
   > James McBride's five trades, and his rural state: [city](city.md#competition)
   > each one's own page: [plumbing](niches/plumbing.md), [electrician](niches/electrician.md), [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [fencing](niches/fencing.md), [detailing](niches/detailing.md), [pool cleaning](niches/pool_cleaning.md), [hvac](niches/hvac.md), [cleaning](niches/cleaning.md)
 - (?) a local service, never an online one: online is far more saturated, and local leads come easier for the same pay
@@ -175,17 +185,22 @@ name. one trade is mastered before a second is added. each trade's own page is u
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=520-->
   - in a big city could rank for 80 searches / month line striping (Dallas), and mb rank 1
     <!--2026-10-02 gmbpp member ran 2σ https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=4744-->
+- (?) (!) a trade few lead-gen operators run is the easiest to rank in: its top profiles are owners who don't market and carry no keyword
+  - (?) Eric, 2026-07: *plumbing* is crowded with people running the same model, maybe from his videos; *HVAC*'s top profiles are mostly the owners', without keywords; in *cleaning* every top-three profile keyword-stuffs
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=99-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=133-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=199-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=232-->
+  > Toronto's top HVAC profiles: [hvac](niches/hvac.md#the-market)
 
 ## seasonality
 
-- (?) calls dip around holidays and in mild weather, and spike where a holiday breaks something: keep more profiles than you need, as a buffer
-  > a trade's own season: [pool cleaning](niches/pool_cleaning.md#the-job), by area
+- (?) calls dip around holidays and spike where a holiday breaks something, and a trade can have a season of its own: keep more profiles than you need, as a buffer
+  > a trade's own season: [pool cleaning](niches/pool_cleaning.md#the-job), by area; [hvac](niches/hvac.md#the-season), in mild weather
   - (?) calls dip the week before and after holidays — halloween, easter — and rise around others: thanksgiving is big for *appliance repair*, ovens break last-minute and people pay anything — John Osayi, 7 years in the trade
     > so keep more profiles than you need, as a buffer
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=514-->
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3957-->
-    > `Kit Volcano`: *HVAC* goes quiet in mild weather — windows open, nothing breaking
-    <!--2026-10-23 Kit Volcano says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1943-->
   - John Osayi does appliance repair, ovens among it; Thanksgiving is his best week, as last-minute oven repairs can charge a lot
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=514-->
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3957-->

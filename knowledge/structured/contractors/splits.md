@@ -11,6 +11,8 @@ offer a plumber a 60/40 split of the job's profit: 60% to him, 40% to us. solo p
     Just saw an emergent understanding of Masters guy is valuable for example (someone got 40/60 with him, wtf).
     So better split not always better, - qualification level is equally important as the split percentage.
     <!--2026-09-18 Sam Hart ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1117-->
+  - (?) Eric, 2026-07, of the model in general: the partner contractor does the job and gives 40% of the profit
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=99-->
   - (?) pitching "60 40", plumbers take the 60 to be ours until told "I take 40%, and just off the profit"
     <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=5703-->
   - (?) one member runs 70/30 instead: many consistent contractors over one squeezed for 60/40

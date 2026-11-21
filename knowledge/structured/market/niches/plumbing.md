@@ -1,10 +1,10 @@
 # plumbing
 
 the starting trade: a mid ticket, paid within a day, whose big jobs come often enough to set the
-average. there is demand everywhere, more searches than HVAC for a little less competition, though
-still competitive, and a plumber is easy to find. eleven profiles in one city have cleared ~$10k profit the first month, and one
+average. there is demand everywhere, more searches than HVAC, but lead-gen operators crowd it; in
+the States it mostly verifies only by video. a plumber is easy to find. eleven profiles in one city have cleared ~$10k profit the first month, and one
 brand topping many cities clears Eric $20–25k a month. the plumber takes 70% of the profit, so he
-keeps answering; nothing is charged under $250, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
+keeps answering; a set fee gets him in, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
 [cleaning](cleaning.md#economics).
 
 ## the ticket
@@ -20,10 +20,23 @@ keeps answering; nothing is charged under $250, and his upsells are where the ti
 
 ## the market
 
-- (?) demand everywhere: more searches than HVAC for about its ticket, and competition usually a little lower, though still competitive
-  - (?) Eric, 2026-06: about HVAC's ticket, typically higher search volume, competition usually a little lower than HVAC's though still pretty competitive; the demand is there everywhere
+- (?) demand everywhere, more searches than HVAC for about its ticket
+  - (?) Eric, 2026-06: about HVAC's ticket, typically higher search volume; the demand is there everywhere
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=295-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
+- (?) (!) crowded with lead-gen operators running the same model, where HVAC's top profiles are mostly the owners'
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-eric-hvac.md)
+  - (?) Eric, 2026-07: a lot of people, maybe from his videos, list plumbing profiles to run the same model
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=99-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=133-->
+  > HVAC: [hvac](hvac.md#the-market)
+
+## verification
+
+- (?) in the States it mostly offers no route but the video
+  - (?) Eric, 2026-07: plumbing, most of the time and in the States especially, offers only the video, where HVAC gets codes
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=265-->
+  > `PP` had two plumbing profiles auto-verify, his country not said: [instant](../../profile/verification/instant.md#categories)
 
 ## what it makes
 
@@ -72,7 +85,7 @@ keeps answering; nothing is charged under $250, and his upsells are where the ti
 
 ## pricing
 
-- (?) nothing under $250, emergency callouts included, and a contractor who upsells: the callout gets him in, the upsell makes the job
+- (?) a set fee to come out, and a contractor who upsells: the callout gets him in, the upsell makes the job
   - (?) Eric, 2026-04: plumbing runs through the whole house, so one known issue leads to others
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=393-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=425-->
@@ -82,5 +95,6 @@ keeps answering; nothing is charged under $250, and his upsells are where the ti
     Devin Grandt: a contractor whose crew doesn't upsell leaves ~$50 a job at 30%; nothing should be charged under $250
     <!--2026-10-23 Devin Grandt says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=0-->
     <!--2026-10-23 Devin Grandt says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=63-->
-    Raphael D'Angelo, on HVAC: $200 minimum to come out, then his contractor upsells to $500+
-    <!--2026-10-23 Raphael D'Angelo ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1589-->
+  - (?) Eric's own plumbing business charges $60 for the inspection, 2026-07
+    <!--2026-07-31 ran 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=497-->
+  > HVAC's diagnostic, priced higher: [hvac](hvac.md#the-price)

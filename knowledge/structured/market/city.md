@@ -1,7 +1,7 @@
 # city
 
 a city of 50k–300k people, dense, on a $90–130k median income, outside the high-crime parts; with
-enough searches for the trade, every phrasing of it counted, that our own share of them clears ~200 a month against who already ranks,
+enough searches for the trade, every phrasing of it counted and the best of its names targeted, that our own share of them clears ~200 a month against who already ranks,
 a place in the top 3 that costs fewer reviews than it returns, and a contractor within the hour of every profile.
 
 ## size and people
@@ -47,6 +47,11 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=585-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=617-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=707-->
+- (?) a trade with several names gives each city several keywords: target the one with the best volume against its competition
+  - (?) *HVAC*, Phoenix, over all variations: `HVAC` 24.9K, `AC repair` 10.2K, `heating and cooling` 3.7K; heads `hvac phoenix` 2.4K at KD 37, `ac repair phoenix` 3.6K at KD 31, `heating and cooling phoenix` 590 at KD 68. AC repair at 10,000 with five times less competition than the 25,000 term may be the one — Eric, 2026-07
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=332-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=362-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=367-->
 - (?) SEMrush's free tier is enough: another Gmail account, in its own Chrome profile, resets its limit
   - (?) Eric never pays for SEMrush: the free tier stops at 10 requests, and switching Gmail account resets it
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=925-->
@@ -64,6 +69,9 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
   - (?) Eric: when two of the top three for the service in the city have under 100 reviews, competition is low and you can outrank them
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=295-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=328-->
+  - (?) Eric, 2026-07: aim for the lowest count in the top three — at 100, 50 and 40, aim for 40; with the rest optimized, fewer can rank. third on 40 under a second on 2,000: move on to the next profile; a second on 60: more into this one can pay
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=400-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=433-->
   - (?) Eric, 2026-05, *electrician* in Peterborough: `Lancer Electric` leads at 4.6 on 107 reviews without a keyword in its name; a five-star profile with 30 reviews and a keyworded name would rank first
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=292-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=324-->

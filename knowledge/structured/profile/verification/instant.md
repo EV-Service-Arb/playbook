@@ -24,6 +24,7 @@ what members have reported about profiles that verify instantly, with no code, v
 - (?) *tree trimming*: profiles instantly verify right now — Eric
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1322-->
 - (?) auto-verified with no live call: two *plumbing*, one *cleaning* and one *commercial cleaning* profile — `PP`, only his first needed a live
+  > *plumbing* in the States mostly gets only the video; PP's country is not said: [plumbing](../../market/niches/plumbing.md#verification)
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5179-->
 
 ## open

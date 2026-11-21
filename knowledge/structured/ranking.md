@@ -11,6 +11,9 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
 - (?) the map pack's top 3 take most of the calls
   - (?) Zach Peterson: ~80% of people searching for a service call one of the map pack's top 3
     <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=31-->
+  > 4th still takes calls: *HVAC*, two profiles 4th in the pack on 11 and 17 reviews took 123 calls over a minute in a month — Eric's student Jeremiah
+  <!--2026-07-31 heard 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=47-->
+  <!--2026-07-31 heard 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=64-->
 - (?) judge rank off a heat-map scan, never one search: position moves with where in the area the search comes from and with the hour
   - (?) Zach Peterson: a rank map — your map-pack position on a grid around the business — shows where you rank; most profiles are red everywhere
     <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=0-->
@@ -33,6 +36,7 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
   - (?) Eric, 2026-06: on an address a *detailing* profile gets such a boost that search volume and competition hardly matter; *HVAC*, held back by its competition, would move up a tier on address profiles
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=66-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=262-->
+    > Eric, 2026-07: *HVAC* always on an address, as service-area profiles don't perform in it: [hvac](market/niches/hvac.md#the-profile)
   - (?) Zach Peterson: the more so in a competitive area; he gets the address via video verification at an office
     <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=224-->
   - (?) Eric: address over service area, and keep pushing for it even when the live reviewer asks whether you're really a service area

@@ -15,6 +15,9 @@ what members and sources have reported about a profile's business name.
   <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=451-->
   > keyword-stuffed names that rank well are usually backed by a DBA registered to that exact string — `Ilya`
   <!--2026-09-18 Ilya says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5415-->
+  - (?) *HVAC*, Toronto, a very big city with a ton of volume: not one top profile has the city in its name — `LB Heating & Air Conditioning Co.`, `HVAC-Group`, `Mckinnon Heating Cooling`, `Climate Comfort` — so a keyworded profile ranks at the top quickly — Eric, 2026-07
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=232-->
+    <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=265-->
 
 ## the brand
 
