@@ -7,8 +7,8 @@
 
 - [00:00](https://drive.google.com/file/d/1WgTtQNckZSa30YfDK3kpjBmk8OpWpJ6Q?t=0) A white service van is parked on a residential street, with a black-and-white door decal showing a plumber logo and phone number.
   > PLUMBER DONE RIGHT; 1.866.595.9028
-  ![](frames/0.jpg)
+  ![](frames/0.webp)
 
 - [00:01](https://drive.google.com/file/d/1WgTtQNckZSa30YfDK3kpjBmk8OpWpJ6Q?t=1) The view shifts toward the van's front passenger door, keeping the plumbing decal visible and revealing the front wheel and side mirror.
   > PLUMBER DONE RIGHT; 1.866.595.9028
-  ![](frames/1.jpg)
+  ![](frames/1.webp)

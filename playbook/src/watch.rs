@@ -98,7 +98,7 @@ async fn watch(path: &Path, media: &Path, pick: Pick) -> Option<f64> {
 /// `None` for a recording with no picture.
 pub(crate) async fn shown(path: &Path, source: &str, media: &Path, spec: Watch, writer: &str) -> Option<f64> {
 	let kept = path.parent().expect("a capture is its folder's src.md");
-	assert_eq!(spec.frames, kept.join("frames"), "`shown.md` links its frames as `frames/<secs>.jpg`");
+	assert_eq!(spec.frames, kept.join("frames"), "`shown.md` links its frames under `frames/`");
 	let (title, footage, pick) = (spec.title.clone(), spec.footage, spec.pick);
 	let watched = Client::default()
 		.model(Model::Video)
@@ -131,12 +131,13 @@ pub(crate) async fn shown(path: &Path, source: &str, media: &Path, spec: Watch, 
 		 - cost: ${cost:.4}\n",
 		today.trim(),
 	);
-	for Shown { secs, shown, on_screen_text, .. } in &watched.shown {
+	for Shown { secs, shown, on_screen_text, frame } in &watched.shown {
 		out.push_str(&format!("\n- [{}]({source}{seek}{secs}) {}\n", stamp(*secs), shown.replace('\n', " ")));
 		if let Some(text) = on_screen_text {
 			out.push_str(&format!("  > {}\n", text.replace('\n', " / ")));
 		}
-		out.push_str(&format!("  ![](frames/{secs}.jpg)\n"));
+		let frame = frame.file_name().expect("kept as a file in `Watch::frames`").to_str().expect("named by its second");
+		out.push_str(&format!("  ![](frames/{frame})\n"));
 	}
 	std::fs::create_dir_all(kept).expect("the capture's dir is ours to create");
 	std::fs::write(kept.join("shown.md"), out).expect("the capture's dir is writable");

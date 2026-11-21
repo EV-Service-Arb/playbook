@@ -53,7 +53,7 @@ fn tree(name: &str) -> PathBuf {
 		("knowledge/references/loom/call/src.md", CAPTURE),
 		("knowledge/references/loom/call/content.md", DIGEST),
 		("knowledge/structured/contractors/sourcing.md", PAGE),
-		("knowledge/references/loom/call/frames/1.jpg", "jpg"),
+		("knowledge/references/loom/call/frames/1.webp", "webp"),
 	] {
 		fs::create_dir_all(root.join(path).parent().unwrap()).unwrap();
 		fs::write(root.join(path), text).unwrap();
@@ -98,7 +98,7 @@ fn renders_every_citation_in_place() {
 		"{page}"
 	);
 	assert!(capture.lines().any(|l| l.starts_with("- recorded: 2026-09-25T00:01:52.046Z · ") && l.ends_with('d')), "{capture}");
-	assert!(fs::symlink_metadata(out.join("references/loom/call/frames/1.jpg")).unwrap().is_symlink());
+	assert!(fs::symlink_metadata(out.join("references/loom/call/frames/1.webp")).unwrap().is_symlink());
 
 	let norm = |page: &str| page.split(" · norm ").nth(1).unwrap()[..4].to_owned();
 	let (overridden, ..) = run(&["--half-life", "1d"]);

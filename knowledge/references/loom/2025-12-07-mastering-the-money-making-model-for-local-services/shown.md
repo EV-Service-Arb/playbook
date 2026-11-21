@@ -6,4 +6,4 @@
 - cost: $0.0332
 
 - [00:00](https://www.loom.com/share/1f32c7640a514b198adc997ca319238b?t=0) Loom’s Videos library is open, showing 7 videos and cards including “Mastering GMB Marketing for Your Service-Based Business,” “Understanding the GMB Business Model for Free Leads,” “Unlocking Success: A Comprehensive Guide to Our...,” and “Client Wins and Success Stories Update.”},{
-  ![](frames/0.jpg)
+  ![](frames/0.webp)

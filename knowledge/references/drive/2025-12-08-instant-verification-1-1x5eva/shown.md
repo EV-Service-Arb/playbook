@@ -7,20 +7,20 @@
 
 - [00:02](https://drive.google.com/file/d/1x5evaVWwfpDIGRMtm2UZNm3dpBGZ4gar?t=2) A phone displays a business-profile setup form with radio-button choices.
   > Google Business Profile; Add your services; What services do you offer?
-  ![](frames/2.jpg)
+  ![](frames/2.webp)
 
 - [00:05](https://drive.google.com/file/d/1x5evaVWwfpDIGRMtm2UZNm3dpBGZ4gar?t=5) The phone shows the business information form scrolled to the business name section.
   > Google Business Profile; Business name; What’s your business name?
-  ![](frames/5.jpg)
+  ![](frames/5.webp)
 
 - [00:07](https://drive.google.com/file/d/1x5evaVWwfpDIGRMtm2UZNm3dpBGZ4gar?t=7) The phone shows the Google Business Profile setup page with business details fields and an address-related section.
   > Google Business Profile; Add your services; Business name; Business category; Business address
-  ![](frames/7.jpg)
+  ![](frames/7.webp)
 
 - [00:08](https://drive.google.com/file/d/1x5evaVWwfpDIGRMtm2UZNm3dpBGZ4gar?t=8) The phone shows more of the Google Business Profile setup form, including business information fields.
   > Google Business Profile; Business name; Business category; Business address
-  ![](frames/8.jpg)
+  ![](frames/8.webp)
 
 - [00:09](https://drive.google.com/file/d/1x5evaVWwfpDIGRMtm2UZNm3dpBGZ4gar?t=9) The phone remains on the Google Business Profile setup form with multiple business-detail fields visible.
   > Google Business Profile; Business name; Business category; Business address
-  ![](frames/9.jpg)
+  ![](frames/9.webp)

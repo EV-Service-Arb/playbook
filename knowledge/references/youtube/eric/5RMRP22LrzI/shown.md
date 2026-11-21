@@ -6,4 +6,4 @@
 - cost: $0.0058
 
 - [00:09:35](https://www.youtube.com/watch?v=5RMRP22LrzI&t=575) A picture-in-picture bathroom mirror selfie shows the speaker shirtless, displaying extensive tattoos and a muscular physique.
-  ![](frames/575.jpg)
+  ![](frames/575.webp)

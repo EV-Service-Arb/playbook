@@ -7,32 +7,32 @@
 
 - [06:07](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=367) Eric shares a Chrome window showing Google Maps search results and the profile for LuxClean House Cleaning Services Toronto, alongside a map of Toronto.
   > luxclean house cleaning services to; LuxClean House Cleaning Services Toronto; House cleaning service; 139 Dundas St W, Toronto, ON M5G 1C4; 4.8 (65)
-  ![](frames/367.jpg)
+  ![](frames/367.webp)
 
 - [06:24](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=384) The shared Google Maps window shows an address card for 20 Widdicombe Hill, Etobicoke, ON M9R 1B3, with options including adding a missing place or business.
   > 20 Widdicombe Hill; Etobicoke, ON M9R 1B3; Add a missing place; Add your business
-  ![](frames/384.jpg)
+  ![](frames/384.webp)
 
 - [06:43](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=403) A Google Maps “Add a place” form is open with a “Discard changes?” confirmation dialog over it.
   > Add a place; Contact; Phone number; Website; Discard changes?; Cancel; Discard; Submit
-  ![](frames/403.jpg)
+  ![](frames/403.webp)
 
 - [06:59](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=419) The shared browser has navigated to a Google Business page while it is loading.
   > business.google.com/create
-  ![](frames/419.jpg)
+  ![](frames/419.webp)
 
 - [07:32](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=452) A Google Business prompt offers management of the LuxClean House Cleaning Services Toronto listing using the displayed Gmail account.
   > Manage this business to reply to reviews, update info and more; velcheric@gmail.com; LuxClean House Cleaning Services Toronto; 139 Dundas St W, Toronto, ON M5G 1C4, Canada; Manage now; I own or manage another business
-  ![](frames/452.jpg)
+  ![](frames/452.webp)
 
 - [11:33](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=693) A participant-count indicator increases from 9 to 10 in the upper-right corner of the meeting interface.
   > 10
-  ![](frames/693.jpg)
+  ![](frames/693.webp)
 
 - [14:33](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=873) The participant-count indicator increases to 11, and an overflow tile appears showing two additional participants.
   > 11 / 2 others
-  ![](frames/873.jpg)
+  ![](frames/873.webp)
 
 - [17:03](https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=1023) The overflow tile is replaced by a participant tile labeled Chesky Goldberger.
   > Chesky Goldberger
-  ![](frames/1023.jpg)
+  ![](frames/1023.webp)

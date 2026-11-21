@@ -7,16 +7,16 @@
 
 - [00:00](https://drive.google.com/file/d/1Q1W9b8hexx4r9kBX4meUfYCuYLjgowKP?t=0) A phone displays a mostly white webpage or form with several lines of text and a blue-highlighted area; a red shopping bag is visible below the table.
   > Legible text is not clear.
-  ![](frames/0.jpg)
+  ![](frames/0.webp)
 
 - [00:01](https://drive.google.com/file/d/1Q1W9b8hexx4r9kBX4meUfYCuYLjgowKP?t=1) The phone remains on the same white webpage, with a top bar and multiple faint text fields or lines visible.
   > No additional text is legible.
-  ![](frames/1.jpg)
+  ![](frames/1.webp)
 
 - [00:03](https://drive.google.com/file/d/1Q1W9b8hexx4r9kBX4meUfYCuYLjgowKP?t=3) The phone screen shows a white page with a list or form and a blue horizontal line near the top; glare obscures much of the display.
   > No text can be read reliably.
-  ![](frames/3.jpg)
+  ![](frames/3.webp)
 
 - [00:04](https://drive.google.com/file/d/1Q1W9b8hexx4r9kBX4meUfYCuYLjgowKP?t=4) The phone displays a longer form or document with several lines of text and a small circular profile image near the upper right; glare remains on the screen.
   > No text can be read reliably.
-  ![](frames/4.jpg)
+  ![](frames/4.webp)

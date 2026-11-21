@@ -62,7 +62,7 @@ knowledge/references/
 │   ├── src.md                    # raw, as pulled. Everything else here is what was made of it, each file naming what made it
 │   ├── recording.<ext>           # as the host serves it — gitignored, bar what LFS keeps
 │   ├── shown.md                  # what is on screen that the speech does not say, by `playbook watch`
-│   ├── frames/<secs>.jpg         # the frame each line of `shown.md` was read off — LFS
+│   ├── frames/<secs>.webp        # the frame each line of `shown.md` was read off — LFS
 │   └── content.md                # the whole recording, as chapters of attributed points, by the digest step
 ├── youtube/README.md             # every video each channel lists, dated, ticked once captured — `playbook pull yt sync`
 └── skool_<group>/                # a classroom, via `social_networks` — `gmbpp`, and the `cheap` group

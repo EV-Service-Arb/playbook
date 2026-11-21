@@ -6,4 +6,4 @@
 - cost: $0.3752
 
 - [29:44](https://www.loom.com/share/10b557e877b64a068910514c41dd0416?t=1784) Luca points his camera outside, showing a bright high-rise/window view with blue sky and distant buildings.
-  ![](frames/1784.jpg)
+  ![](frames/1784.webp)

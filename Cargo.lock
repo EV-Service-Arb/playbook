@@ -260,9 +260,9 @@ dependencies = [
 
 [[package]]
 name = "ask_llm"
-version = "3.11.2"
+version = "3.12.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e101602e4d552e19acdbcffd1acb50b8b863dad697006f2016adc5a2a1c1f4e4"
+checksum = "8b88bad56b04bbb1cd589cf21c46bc3a1ec981a61e9ee8801f483e6c43dbd34e"
 dependencies = [
  "base64 0.22.1",
  "clap",
