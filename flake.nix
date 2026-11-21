@@ -1,8 +1,12 @@
 {
   inputs = {
     v_flakes.url = "github:valeratrades/v_flakes?ref=v1.6";
+    browser_manipulation = {
+      url = "github:valeratrades/browser_manipulation?ref=v0.4.4"; # the cargo dep's version, which pins its driver; `pull skool` drives it to mint a session
+      inputs.v_flakes.follows = "v_flakes";
+    };
   };
-  outputs = { self, v_flakes }:
+  outputs = { self, v_flakes, browser_manipulation }:
     let
       # the first of this repository's ten in SA_PORT_RANGE: site_conductor's docs/port_range.md
       SA_PORTS = 52830;
@@ -138,8 +142,13 @@
           shellHook = pre-commit-check.shellHook + combined.shellHook + ''
             cp -f ${v_flakes.files.treefmt { inherit pkgs; }} ./.treefmt.toml
           '';
-          packages = [ rust pkgs.sqlite ] ++ pre-commit-check.enabledPackages ++ combined.enabledPackages;
-          env.PORT = toString SA_PORTS;
+          packages = [ rust pkgs.sqlite pkgs.chromium ] ++ pre-commit-check.enabledPackages ++ combined.enabledPackages;
+          env = {
+            PORT = toString SA_PORTS;
+            PLAYWRIGHT_CLI_JS = "${browser_manipulation.packages.${system}.patchright}/package/cli.js";
+            PLAYWRIGHT_NODE_EXE = "${pkgs.nodejs}/bin/node";
+            PLAYWRIGHT_SKIP_DRIVER_DOWNLOAD = "1";
+          };
         };
       }
     );
