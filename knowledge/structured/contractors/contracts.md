@@ -1,7 +1,14 @@
 # contracts
 <!--half-life 5y-->
 
-every contractor signs an independent contractor agreement: it requires his licenses and certifications, leaves the fee and the customer with him, and makes him liable for the work he does. the text is a standard independent contractor agreement for the trade.
+before his first job we agree with him how jobs get quoted and what our cut is. every contractor signs an independent contractor agreement: it requires his licenses and certifications, leaves the fee and the customer with him, and makes him liable for the work he does. the text is a standard independent contractor agreement for the trade.
+
+## before the first job
+
+- (?) agree with him how jobs get quoted and what our cut is before giving him any job
+  - (?) Marcus Milan, 2026-10: the quoting process and the split, before any job; his cut tiered by the job's size: [plumbing](../market/niches/plumbing.md#the-split)
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=459-->
+  > vetting him first: [sourcing](sourcing.md#vetting)
 
 ## the agreement
 

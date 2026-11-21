@@ -3,7 +3,7 @@
 the starting trade: a mid ticket, paid within a day, whose big jobs come often enough to set the
 average. there is demand everywhere, more searches than HVAC, but lead-gen operators crowd it and the competition leaves fewer great cities to find; in
 the States it mostly verifies only by video. a plumber is easy to find in any city, and a customer seldom comes back. eleven profiles in one city have cleared ~$10k profit the first month, and one
-brand topping many cities clears Eric $20–25k a month. the plumber takes 70% of the profit, so he
+brand topping many cities clears Eric $20–25k a month; a dozen profiles at a few jobs a week each, ~$30k for Marcus Milan. the plumber keeps most of the profit, the more the bigger the job, so he
 keeps answering; a set fee gets him in, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
 [cleaning](cleaning.md#economics).
 
@@ -21,6 +21,12 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=297-->
   - (?) Marcus Milan, 2026-09, scoring 1–3: job value 3, above pest control's 2 and detailing's 1
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=31-->
+  - (?) (!) Marcus Milan, 2026-10, one job: $5,800 of plumbing and $3,600 of construction, the sheetrock after tearing up the wall, $9,400 paid; ~$7k profit after materials, his 25% $1,750. on screen, the contractor's costs: ~$500 material, $320 for a helper for 2 days, $2k labour and material to another worker
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=64-->
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=82-->
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=98-->
+  - (?) Marcus Milan, 2026-10: they have quoted full plumbing renovations, six-figure jobs
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=294-->
 - (?) a one-off job: a customer seldom calls back or refers
   - (?) Marcus Milan, 2026-09: repeat and referral 1.5, "it happens, but it's not very common"
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=31-->
@@ -70,6 +76,10 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
 - (?) a handful of calls a day carries the month, where a recurring trade needs many more for the same money
   - (?) Eric, 2026-08: plumbing can reach the $30k a month mark on five calls a day; pool cleaning needs a lot more phone calls
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=260-->
+  - (?) Marcus Milan, 2026-10: ~$30k a month profit is 132 jobs a month, 12 profiles at 2–3 a week each: an $800 average ticket at 30% is $240 a job, ~$31k. he and many of his students run it
+    > he names no trade for the math; his own is plumbing
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=525-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=558-->
   > pool cleaning: [pool cleaning](pool_cleaning.md#the-job)
 - (?) (!) eleven young profiles in one city, at 50–70 reviews each, have cleared ~$10k profit the first month on 6–8 calls a day
   - Dante made 10k profit his first month in plumbing
@@ -114,11 +124,15 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
 
 ## the split
 
-- (?) 30/70 of the profit, the plumber's 70: it keeps a good plumber answering at any hour
+- (?) (!) our cut is a share of the profit, agreed before the first job, that leaves the plumber most of it and falls as the job grows: it keeps a good plumber answering at any hour
   - 30/70 plumbing sounds good, for keeping them happy
     <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=4690-->
     oh, and the guy says %profit actually. Wow, that's not a lot.
     <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=5537-->
+  - (?) Marcus Milan, 2026-10, on profit, tiered by the job: 30% up to $5k, 25% from $5k to $10k, ~20% above $10k, then by the margin, 10–20% on a $50k job, "we play it by ear"
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=459-->
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=494-->
+  > the 60/40 offered a plumber, the 60 his: [splits](../../contractors/splits.md#the-split)
 
 ## pricing
 

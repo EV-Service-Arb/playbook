@@ -7,6 +7,7 @@ offer a plumber a 60/40 split of the job's profit: 60% to him, 40% to us. solo p
 
 - (?) a plumber, a master one included, takes 60/40 of profit, the 60 his; his qualification counts as much as the percentage
   resolved: [2026-11-17](../../log/resolved/2026-11-17-split-direction.md)
+  > a cut that falls as the job grows, and the 30/70 run on plumbing: [plumbing](../market/niches/plumbing.md#the-split)
   - *plumbing*: pay attention to qualification levels of plumbers.
     Just saw an emergent understanding of Masters guy is valuable for example (someone got 40/60 with him, wtf).
     So better split not always better, - qualification level is equally important as the split percentage.

@@ -4,7 +4,7 @@ we start on plumbing, or on drain cleaning under it: urgent, year round, a mid t
 day, and any plumber fulfils it; a trade whose profiles get up easier, as pest control's do, is
 weighed against that ticket. HVAC is its equal where a city's numbers
 favour it, and fewer lead-gen operators run it. a low-ticket trade such as detailing pays
-soonest but takes many more jobs for the same money; a high-ticket one such as roofing, landscaping,
+soonest and steadiest and verifies easier, but takes many more jobs for the same money; a high-ticket one such as roofing, landscaping,
 asphalt, deck and fence, stucco or masonry pays most per job, but late, on fewer leads and with a
 crew, and the untapped trades are mostly these. recurring work sits between: customers add up rather
 than being replaced, for more calls, in pool cleaning, pest control and commercial cleaning; a trade
@@ -118,13 +118,17 @@ name, in a city where that name still has volume, and is easiest where the top p
 
 ## the ticket
 
-- (?) (!) a low ticket pays soonest but takes many more jobs for the same money: past the first months, a higher ticket outweighs the ops load. what it takes to get a profile up differs by trade, and is weighed beside the ticket: a trade whose profiles get up easier can stand level with a higher-ticket one
+- (?) (!) a low ticket pays soonest and steadiest but takes many more jobs for the same money, and never brings the six-figure job: past the first months, a higher ticket outweighs the ops load. what it takes to get a profile up differs by trade, and is weighed beside the ticket: a trade whose profiles get up easier can stand level with a higher-ticket one
   resolved: [2026-11-21](../../log/resolved/2026-11-21-setup-cost-by-trade.md)
   - (?) (!) `Ilya`, 13 years in remote *house cleaning*, would start on plumbing or HVAC today
     reason: the same GMB setup cost buys a much higher ticket, and cleaning only pays off once the operations are already built
     <!--2026-09-18 Ilya says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6540-->
   - (?) Marcus Milan, 2026-09: plumbing scores above pest control, but "it's not just strictly about the metrics... it's also how easy you can fool Google and get your profiles up", and on that pest control beats plumbing "for sure"; he would be open to either in Bellevue, WA
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=829-->
+  - (?) Marcus Milan, 2026-10: any trade works, high ticket or low. high: fewer calls, more profit a job, the chance of a massive one. low, *cleaning* and *car detailing*: more calls, a steadier revenue curve, less a job, never the six-figure job, and google verifies them "a lot easier", "another massive plus". his own is plumbing
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=262-->
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=294-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=327-->
   > each trade's verification: [plumbing](niches/plumbing.md#verification), [pest control](niches/pest_control.md#verification), [detailing](niches/detailing.md#verification)
   - (?) Eric: aim for an average ticket over $500 — at 50% margin, sometimes 40%, at least $200 a booking
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=397-->

@@ -2,7 +2,7 @@
 <!--half-life 1y-->
 
 instant verification has a profile live soonest; video, a live call or the address is for one meant
-to last. what members and sources have reported, across its routes:
+to last. the address on it is a commercial one. what members and sources have reported, across its routes:
 [instant](verification/instant.md), [video](verification/video.md), [live](verification/live.md),
 [SAB to PAB](verification/sab_to_pab.md), [missing place](verification/missing_place.md).
 
@@ -20,6 +20,13 @@ to last. what members and sources have reported, across its routes:
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3107-->
 - (?) a failed video is not the end of the listing. the next attempt is live verification, not a second identical video // inferred
   <!--2026-10-30 agent says 1σ-->
+
+## the address
+
+- (?) the profile's address is a commercial one, whether shown or behind a service area: google knows a plumbing company isn't run out of a house
+  - (?) Marcus Milan, 2026-10: the mailing address must be commercial, physical address or service area
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=130-->
+  > what an address does for ranking: [ranking](../ranking.md#address)
 
 ## codes
 

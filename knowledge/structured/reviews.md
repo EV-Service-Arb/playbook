@@ -5,8 +5,11 @@ What members have reported about review count, pace and text. The rest is filed 
 
 ## count
 
-- (?) review count is one of the largest ranking factors; ideally 5-star, naming the service and the location — Zach Peterson
-  <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=159-->
+- (?) review count is one of the largest ranking factors: the more five-star reviews, the higher it ranks; ideally naming the service and the location
+  - (?) Zach Peterson
+    <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=159-->
+  - (?) Marcus Milan, 2026-10: as many five-star reviews as possible, the more the higher it ranks
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=393-->
   > John Osayi: the text steers which searches you rank for — a profile whose reviews keep naming refrigerators ranks top 3 for fridge repair and outside the top 5 for dryers. owner replies count too
   <!--2026-10-23 John Osayi says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=907-->
   <!--2026-10-23 John Osayi says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=932-->
@@ -22,12 +25,14 @@ What members have reported about review count, pace and text. The rest is filed 
 
 ## customers
 
-- (?) (!) real customers barely review: ~3% of ~5,000 served over 7 years, with text blasts and emails — John Osayi, *appliance repair*
+- (?) (!) real customers barely review, so the count is built with friends, family and incentives, as the companies gaining hundreds a month build theirs: ~3% of ~5,000 served over 7 years, with text blasts and emails — John Osayi, *appliance repair*
   > so he pays people off craigslist to ask around the local community
   <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2545-->
   <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2631-->
   > companies gaining hundreds a month are paying for them, $20 off and the like — "nobody's not incentivized"
   <!--2026-10-23 John Osayi says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2667-->
+  - (?) Marcus Milan, 2026-10: customers, friends and family, or otherwise incentivised, "it's all the same to Google"; the big companies get theirs the same way
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=393-->
 
 ## members
 

@@ -16,6 +16,8 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=591-->
   - (?) Marcus Milan, 2026-09: it can be run remotely, but it is much easier local: "if you can, always set it up locally"
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=0-->
+  - (?) Marcus Milan, 2026-10: ideally local to you; remote works, but brings "a whole another spectrum of issues"
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=262-->
   > which reviews stick: [remote](../reviews/sourcing/remote.md#proximity). from outside, a trade whose top ranks on few reviews: [niche](niche.md#finding-an-untapped-trade)
 
 ## size and people
@@ -25,7 +27,13 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
   > above 300k it's high-rises: contractors can't meet their insurance requirements, and the buildings already have their trades locked in
   > *detailing* has no upper bound: [detailing](niches/detailing.md#the-city)
   <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=34-->
-- (?) density at least ~6,000 people/sq mi, below that searches and calls are too thin
+- (?) a dense city: where it is thinly settled, searches and calls are too thin
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-marcus-city-thresholds.md)
+  - (?) Marcus Milan, 2026-10: a density around 3,000 people per square mile, for good digital traffic. Bellevue, WA, at ~4–5K, from 1K at the outskirts to 10K at the centre, is "a great area for it"
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=130-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=229-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=262-->
+  > his July floor, since revised: at least ~6,000 people/sq mi, below that searches and calls are too thin
   <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=67-->
   > Marcus Milan, 2026-09, scores trades on Bellevue, WA, ~150k people at ~4,500 per square mile, as his control city
   <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=0-->
@@ -45,9 +53,13 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-11-17 Valera heard 0.5σ-->
   - want at least 700 monthly searches in the area I'm positioning for
     <!--2026-09-17 Valera says 1σ-->
-  - (?) at least 400 relevant searches/mo, summed over the niche's queries, minus searches for business names — some owners bot their own name
+  - (?) Marcus Milan, 2026-07: at least 400 relevant searches/mo, summed over the niche's queries, minus searches for business names — some owners bot their own name
     > SEMrush's per-query breakdown shows which is which
     <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=233-->
+  - (?) Marcus Milan, 2026-10: a benchmark of ~500 searches a month. *plumbing*, Bellevue, WA, in `SEMrush` Keyword Magic Tool: ~3K on the general searches, ~1,000 for Bellevue, Washington plumber, well above it
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=130-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=163-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=229-->
   - (?) Eric: search volume off SEMrush Keyword Overview for the service in the city, never ChatGPT: over 400 a month is good to go, over 1,000 a good area
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=328-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=362-->
@@ -59,7 +71,7 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=199-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=492-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=527-->
-- (?) every phrasing of the service is researched and summed, and one polluted by other intent is dropped: a broad term pulls in searches for something else
+- (?) every phrasing of the service is researched and summed, and one polluted by other intent or another place's searches is dropped: a broad term pulls in searches for something else, a city name shared across states its namesakes'
   - Phoenix: ~1.3k searches/mo for "fence company" phrasings, ~600 more for "contractor", a few hundred for "fencing" — research every phrasing, a broad "fencing" pulls in unrelated terms
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=553-->
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=619-->
@@ -73,6 +85,10 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=82-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=103-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=112-->
+  - (?) Marcus Milan, 2026-10: `bellevue plumber` counts the 25 Bellevues in America, 7,190 a month over 395 keywords; search `bellevue wa plumber`
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=163-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=190-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=196-->
 - (?) a trade with several names gives each city several keywords: target the one with the best volume against its competition
   - (?) *HVAC*, Phoenix, over all variations: `HVAC` 24.9K, `AC repair` 10.2K, `heating and cooling` 3.7K; heads `hvac phoenix` 2.4K at KD 37, `ac repair phoenix` 3.6K at KD 31, `heating and cooling phoenix` 590 at KD 68. AC repair at 10,000 with five times less competition than the 25,000 term may be the one — Eric, 2026-07
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=332-->

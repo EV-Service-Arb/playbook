@@ -1,12 +1,16 @@
 # payments
 <!--half-life 5y-->
 
-until ~$3–4k a month the contractor collects under his own name: the job's liability is his, and he upsells harder. past that we set the company up and collect ourselves, through the VA. a contractor who collects is audited by calling his customers afterwards. we never pay a contractor before the customer has paid us.
+the contractor collects under his own name and pays us our cut after: the job's liability is his, and he upsells harder. Marcus Milan runs it so at ~$30k a month; past ~$3–4k a month, once the company is set up, we can collect ourselves instead, through the VA, and hold the money rather than wait on the cut. a contractor who collects is audited by calling his customers afterwards. we never pay a contractor before the customer has paid us.
 
 ## who collects
 
-- (?) the contractor collects until we make ~$3–4k a month; then we legalize and collect ourselves
+- (?) the contractor collects and pays us our cut after, at any scale; past ~$3–4k a month, with the company set up, collecting ourselves is the other way, the liability then ours
   resolved: [2026-11-17](../../log/resolved/2026-11-17-who-collects-payment.md)
+  - (?) Marcus Milan, 2026-10, at the ~$30k a month he says he runs at: the customer pays the contractor, who pays him his cut; $1,750 by Zelle six days after a job
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=34-->
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=98-->
+    <!--2026-10-20 ran 2σ https://www.youtube.com/watch?v=a7fC901L5ss&t=115-->
   - (?) whoever takes the payment under their branding assumes responsibility for the job; "if you want to be super safe, you just let them take payments until you're making, like, 3-4k a month"
     <!--2026-09-25 Eric says 1σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=141-->
   - if it's contractors who are taking payments, they actually have more incentive to upsell while they're in the house

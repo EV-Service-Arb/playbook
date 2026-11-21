@@ -2,7 +2,7 @@
 <!--half-life 1y-->
 
 Calls come from the map pack's top 3, so that is the target, read off a heat-map scan rather than one
-search. What weighs on it: an address, the [name](profile/naming.md) and
+search. What weighs on it: an address, every section filled, the [name](profile/naming.md) and
 [categories](profile/categories.md), [reviews](reviews.md), what searchers do on and after the profile,
 and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches are not worth our time.
 
@@ -42,6 +42,13 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
   - (?) Eric: address over service area, and keep pushing for it even when the live reviewer asks whether you're really a service area
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2081-->
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2113-->
+
+## filling the profile
+
+- (?) once verified, every section is filled: each service with an SEO description, every photo, hours, and service areas over the zip codes around the profile
+  - (?) Marcus Milan, 2026-10: service areas of ~10–15 zip codes around the profile, and the website built around it
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=359-->
+  > keeping it active after: [profile activity](#profile-activity)
 
 ## reviews
 

@@ -21,6 +21,8 @@ what members have reported about profiles that verify instantly, with no code, v
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1893-->
   - (?) Eric, 2026-04: low-ticket trades are the easiest setup: Google isn't strict on *detailing* or *cleaning*, where *plumbing* and *HVAC* need more licensing
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=591-->
+  - (?) Marcus Milan, 2026-10: google verifies low-ticket profiles, *cleaning* and *car detailing*, "a lot easier"; he does not say by which route
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=327-->
   > Eric's June word, between these two, had house cleaning a lot harder to verify than detailing, typically by video; his September word stands
   <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=164-->
   > *detailing*, *pool cleaning* and *commercial cleaning* verify instantly too: [detailing](../../market/niches/detailing.md#verification), [pool cleaning](../../market/niches/pool_cleaning.md#verification), [commercial cleaning](../../market/niches/commercial_cleaning.md#verification)

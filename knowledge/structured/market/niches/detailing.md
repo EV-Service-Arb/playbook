@@ -31,6 +31,8 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
   - (?) Eric, 2026-06: very easy to list on an address, verifies very easily, leads come quickly
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=66-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=164-->
+  - (?) Marcus Milan, 2026-10: google verifies low-ticket profiles, *car detailing* and *cleaning*, "a lot easier", "another massive plus"
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=327-->
   > what the address does for its ranking: [ranking](../../ranking.md#address)
 
 ## the profiles
@@ -82,6 +84,9 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=297-->
   - (?) Marcus Milan, 2026-09, scoring 1–3: job value 1, the lowest beside plumbing and pest control
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=31-->
+  - (?) Marcus Milan, 2026-10, of low ticket: more calls, a steadier revenue curve, less profit a job, never the six-figure job
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=294-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=327-->
 - (?) easy to fulfil: a poor job still gets paid
   - (?) Eric: his detailers did horrible jobs and he still got paid
     <!--2026-04-21 ran 2σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=525-->

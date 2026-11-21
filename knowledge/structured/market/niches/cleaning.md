@@ -1,7 +1,8 @@
 # cleaning
 
 house cleaning: not a trade to start on: ~$150–200 a call against plumbing's $300–400, ~$30 a lead when sold, and the
-most operations of any trade we know. it pays as a recurring base with payroll held at 40–45%, which
+most operations of any trade we know, though its calls come more often and steadier and its profiles
+verify instantly: [instant](../../profile/verification/instant.md#categories). it pays as a recurring base with payroll held at 40–45%, which
 takes an operation already built, as Ilya's is. it gets about detailing's searches and competition,
 for a ticket a little above it. commercial cleaning, whose contracts recur and whose big jobs pay, is
 a trade of its own: [commercial cleaning](commercial_cleaning.md).
@@ -18,9 +19,13 @@ a trade of its own: [commercial cleaning](commercial_cleaning.md).
   - (?) Eric's residential cleaning, mixed in with his detailing: $1k the first week
     <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=33-->
     <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=52-->
-- (?) ~$150–200 profit a call, half of plumbing's
+- (?) more calls on a steadier month, each clearing about half a plumbing call's profit, and never the six-figure job
   - (?) *cleaning* clears ~$150–200 profit a call, against $300–400 for *plumbing* — Eric, steering a plumbing member off it
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1445-->
+  - (?) Marcus Milan, 2026-10, of low ticket, *cleaning* and *car detailing*: more calls, a steadier revenue curve, less profit a job, never the six-figure job
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=294-->
+    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=327-->
+  > he does not weigh the operations: [operations](#operations)
 - (?) the leads sell for ~$30 at most
   - (?) selling *cleaning* leads fetches ~$30 a lead at most
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1718-->

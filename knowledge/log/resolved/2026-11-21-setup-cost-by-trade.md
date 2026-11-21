@@ -15,6 +15,7 @@ plumbing's. Two speakers, one premise: a contradiction on the premise, not on th
 | Eric, 2026-08-08 | pest control verifies without a video, not as rough as plumbing, still one of the harder ones | [5:57](https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=357) |
 | Eric, 2026-08-23 | mid ticket, plumbing and HVAC, his favourite, a little harder to verify | [5:29](https://www.youtube.com/watch?v=8ck24yhvMMo&t=329) |
 | Marcus Milan, 2026-09-23 | plumbing first, pest control second, detailing third on the scorecard; "it's not just strictly about the metrics... it's also how easy you can fool Google and get your profiles up", and there pest control beats plumbing for sure; open to either in Bellevue | [12:44](https://www.youtube.com/watch?v=IHEnUzGW9BY&t=764), [13:49](https://www.youtube.com/watch?v=IHEnUzGW9BY&t=829) |
+| Marcus Milan, 2026-10-20 | any trade works, high ticket or low; low ticket, cleaning and car detailing, gets more calls and a steadier curve, and google verifies it "a lot easier", "another massive plus" | [4:22](https://www.youtube.com/watch?v=a7fC901L5ss&t=262), [5:27](https://www.youtube.com/watch?v=a7fC901L5ss&t=327) |
 
 ## Conclusion
 
@@ -24,7 +25,8 @@ by trade, and Eric judges a trade on it first. The conclusion stands without the
 months a higher ticket outweighs the ops load of many small jobs. Ilya weighs ops load, which neither
 Marcus nor the verification evidence touches. The setup cost is now weighed beside the ticket, and a trade
 whose profiles get up easier can stand level with a higher-ticket one, as pest control does with plumbing
-for Marcus. Ilya's reason stays as he gave it, under his evidence.
+for Marcus; a month on he counts easier verification among low ticket's pluses, which leaves the conclusion
+as it is: he does not weigh the ops load either. Ilya's reason stays as he gave it, under his evidence.
 
 What would decide further: how many profiles each trade loses before one verifies, in our own runs.
 Nobody has given that per trade.
