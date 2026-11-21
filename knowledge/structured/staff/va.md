@@ -13,6 +13,11 @@ a VA takes the calls, texts and payments, so we do nothing on the phone. we hire
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=975-->
     // another bonus, - you train him before the big volume starts hitting too
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=985-->
+  - (?) *pool cleaning*: many more calls than plumbing for the same money, so more VA training, and a VA hired before 20–30k a month — Eric, 2026-08
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=260-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=293-->
+    > a recurring business makes money "without having a VA", his closing line; below that mark, where the calls are still few
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=615-->
   - (?) 5–15 calls/day is what one member handles across his profiles
     <!--2026-09-18 Artheme Chaykin ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=684-->
 

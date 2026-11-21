@@ -16,6 +16,7 @@ word: a revision.
 | Eric, 2026-05-28 | landscaping, asphalt and paving, stucco, masonry are what he would restart on: extremely high ticket, super low competition; $50k/mo off one or two profiles. his own first $20k profit month came in a lower-ticket niche | [0:00](https://www.youtube.com/watch?v=UspII6rXhzY&t=0), [3:48](https://www.youtube.com/watch?v=UspII6rXhzY&t=228), [17:38](https://www.youtube.com/watch?v=UspII6rXhzY&t=1058) |
 | Eric, 2026-06-11 | detailing the easiest to start, S tier for a first bit of money; plumbing his favourite | [12:07](https://www.youtube.com/watch?v=URV4VakPOKo&t=727) |
 | Eric, 2026-07-31 | HVAC "up there with one of the best niches" to start on; not better than plumbing or the reverse, very similar, it depends on the numbers; plumbing crowded with lead-gen operators, HVAC not | [0:00](https://www.youtube.com/watch?v=E4hBo4JVy_o&t=0), [2:46](https://www.youtube.com/watch?v=E4hBo4JVy_o&t=166) |
+| Eric, 2026-08-08 | pool cleaning, pest control, commercial cleaning are the underrated recurring trades: pool cleaning in Dallas, commercial cleaning in Chicago, cities to take; pest control "one of the best services that you can get into". not said as a start; his own model is high-ticket one-off emergencies | [0:00](https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=0), [10:15](https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=615) |
 | Eric, 2026-09-18 | a beginner on plumbing, plus one or two cleaning profiles in their own city to work out reviews and pricing | [1:47:14](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6434) |
 | Eric, 2026-10-16 | the fast trades, the best: plumbing, HVAC, electrical, cleaning and detailing | [7:16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=436) |
 | Eric, 2026-10-23 | cleaning clears ~$150–200 a call against plumbing's $300–400, steering a plumbing member off it | [24:05](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1445) |
@@ -38,6 +39,13 @@ His July HVAC video does not move the start off plumbing: it puts HVAC level wit
 between them resting on the city's numbers, and his October list of the best fast trades has both. So
 HVAC stands on `market/niche.md` as plumbing's equal where a city's numbers favour it, not as a
 replacement; his November drain cleaning video names no HVAC either way.
+
+His August recurring-trades video does not move the start either: it hands out the three trades and
+their cities without calling any of them a start, and sets them against the one-off emergency trades he
+runs. Its commercial cleaning is not the house cleaning the start is kept off: unlike house cleaning it
+has contracts that recur and jobs that pay, so it stands on its own page,
+`market/niches/commercial_cleaning.md`, and `market/niches/cleaning.md` is scoped to house cleaning. The
+three stand on `market/niche.md` under recurring work, each with its own page.
 
 What would reopen it: Eric still lists detailing among the fast trades in October, so if the owner
 wants the quickest first money over the best trade to build on, detailing-first is that case; and an operator who already

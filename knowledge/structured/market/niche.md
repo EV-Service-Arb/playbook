@@ -5,9 +5,11 @@ day for the same setup cost, and any plumber fulfils it. HVAC is its equal where
 favour it, and fewer lead-gen operators run it. a low-ticket trade such as detailing pays
 soonest but takes many more jobs for the same money; a high-ticket one such as roofing, landscaping,
 asphalt, deck and fence, stucco or masonry pays most per job, but late, on fewer leads and with a
-crew, and the untapped trades are mostly these; recurring work sits between. always a local home service, never one whose
+crew, and the untapped trades are mostly these. recurring work sits between: customers add up rather
+than being replaced, for more calls, in pool cleaning, pest control and commercial cleaning; a trade
+that dries up in a cold winter is run in a warm city. always a local home service, never one whose
 small job comes back once in years. an untapped trade is found by searching a sub-service by its own
-name, and is easiest where the top profiles are owners carrying no keyword. one trade is mastered before a second is added. each trade's own page is under [niches/](niches/).
+name, in a city where that name still has volume, and is easiest where the top profiles are owners carrying no keyword. one trade is mastered before a second is added. each trade's own page is under [niches/](niches/).
 
 ## the starting trade
 
@@ -63,7 +65,7 @@ name, and is easiest where the top profiles are owners carrying no keyword. one 
 
 ## trades that work
 
-- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping, asphalt and paving, deck and fence, pool cleaning and pest control are run and called workable. the best are plumbing and the high-ticket trades with low competition; the low-ticket ones are easier to get into and make less; HVAC, which few lead-gen operators run, is plumbing's equal
+- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping, asphalt and paving, deck and fence, pool cleaning, pest control and commercial cleaning are run and called workable. the best are plumbing and the high-ticket trades with low competition; the low-ticket ones are easier to get into and make less; the recurring ones pay on customers adding up; HVAC, which few lead-gen operators run, is plumbing's equal
   resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-hvac.md)
   - discussing niches
     - David: concrete, plumbing, landscape, roofing (mb, not sure)
@@ -81,8 +83,12 @@ name, and is easiest where the top profiles are owners carrying no keyword. one 
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=561-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=760-->
     > HVAC's place below, for its competition, he revised in July: [hvac](niches/hvac.md#the-market)
+  - (?) Eric, 2026-08: pool cleaning, pest control and commercial cleaning are the underrated recurring trades, each with a city to take; pest control "one of the best services that you can get into"
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=0-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=64-->
+    <!--2026-08-08 says 0.5σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=389-->
   > James McBride's five trades, and his rural state: [city](city.md#competition)
-  > each one's own page: [plumbing](niches/plumbing.md), [electrician](niches/electrician.md), [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [fencing](niches/fencing.md), [detailing](niches/detailing.md), [pool cleaning](niches/pool_cleaning.md), [hvac](niches/hvac.md), [cleaning](niches/cleaning.md)
+  > each one's own page: [plumbing](niches/plumbing.md), [electrician](niches/electrician.md), [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [fencing](niches/fencing.md), [detailing](niches/detailing.md), [pool cleaning](niches/pool_cleaning.md), [pest control](niches/pest_control.md), [commercial cleaning](niches/commercial_cleaning.md), [hvac](niches/hvac.md), [cleaning](niches/cleaning.md)
 - (?) a local service, never an online one: online is far more saturated, and local leads come easier for the same pay
   - (?) Eric: online is "20 million times more saturated"; local is easier to get leads for and pays as much
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=497-->
@@ -142,6 +148,9 @@ name, and is easiest where the top profiles are owners carrying no keyword. one 
   - (?) Eric, 2026-04: low and high ticket come out about equal, quick results against "risk it for the biscuit"; mid ticket is what he recommends
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=723-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=756-->
+  - (?) *commercial cleaning*: a big commercial job is bid and quoted against other companies, a longer sales cycle; closed, it makes "a ton of money" — Eric, 2026-08
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=486-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=519-->
   > concrete, the same: [concrete](niches/concrete.md). the other untapped ones: [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [stucco](niches/stucco.md), [masonry](niches/masonry.md)
 - (?) a narrow keyword brings callers who want exactly that job; a broad one brings tire-kickers
   - a narrow keyword brings callers who want exactly that job; a broad one brings tire-kickers — a detailing profile gets the $20 car wash
@@ -149,11 +158,17 @@ name, and is easiest where the top profiles are owners carrying no keyword. one 
 
 ## recurring work
 
-- (?) (!) recurring work sits between low and high ticket: a subscription or a year's contract makes one customer worth thousands
+- (?) (!) recurring work sits between low and high ticket: each customer keeps paying, so the month adds up rather than being replaced, and a subscription or a year's contract makes one customer worth thousands. the price is a lower ticket, more calls and more to manage
   - (?) Eric: cleaning, pest control, lawn services on a subscription; a year's contract for lawn service or snow removal puts a customer's lifetime value up to thousands
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=464-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=497-->
-  > what holding a recurring base takes, in cleaning: [cleaning](niches/cleaning.md#economics). a trade whose work has to recur: [pool cleaning](niches/pool_cleaning.md)
+  - (?) Eric, 2026-08: a one-off trade has to keep bringing in new people; recurring customers add up — 10 at $500 a month is five grand a month from retaining them alone. the cons: lower tickets and margins, more calls, more management
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=0-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=32-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=64-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=228-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=260-->
+  > the trades: [pool cleaning](niches/pool_cleaning.md), whose work has to recur; [pest control](niches/pest_control.md), maintenance plans and emergency jobs both; [commercial cleaning](niches/commercial_cleaning.md), contracts and high-ticket jobs both, unlike house cleaning. what holding a recurring base takes, in house cleaning: [cleaning](niches/cleaning.md#economics)
 
 ## trades to avoid
 
@@ -178,11 +193,18 @@ name, and is easiest where the top profiles are owners carrying no keyword. one 
 
 ## finding an untapped trade
 
-- (?) (!) an untapped trade hides under a known one: search the sub-service by its own name and see whether the top profiles carry its keyword or its category
+- (?) (!) an untapped trade hides under a known one: in a city with the volume, search the sub-service by its own name and see whether the top profiles carry its keyword or its category; it can rank first where the broad term would not
   > its own volume can be too thin to pay
   - (!) an untapped niche hides under a trade: search a sub-service by its own name — `drain cleaning` rather than `plumbing` — and see whether the top profiles carry its keyword or its category. in Dallas none did; five minutes of looking — Eric
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=486-->
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=520-->
+  - (?) Eric, 2026-08: in an area with a lot of volume, a sub-service whose term still has volume of its own — inside *plumbing* drain services or water heater replacement — ranks first where plumbing would not
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=583-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=615-->
+  - (?) *commercial cleaning*: Chicago's `restaurant cleaning`, 4,400 searches a month, is held by one operator's profiles on 14–23 reviews; `move out cleaning` and `event cleaning` carry volume of their own — Eric, 2026-08
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=519-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=550-->
+    > [commercial cleaning](niches/commercial_cleaning.md#the-market)
   - in a big city could rank for 80 searches / month line striping (Dallas), and mb rank 1
     <!--2026-10-02 gmbpp member ran 2σ https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=4744-->
 - (?) (!) a trade few lead-gen operators run is the easiest to rank in: its top profiles are owners who don't market and carry no keyword
@@ -196,7 +218,7 @@ name, and is easiest where the top profiles are owners carrying no keyword. one 
 ## seasonality
 
 - (?) calls dip around holidays and spike where a holiday breaks something, and a trade can have a season of its own: keep more profiles than you need, as a buffer
-  > a trade's own season: [pool cleaning](niches/pool_cleaning.md#the-job), by area; [hvac](niches/hvac.md#the-season), in mild weather
+  > HVAC's quieter mild weather: [hvac](niches/hvac.md#the-season)
   - (?) calls dip the week before and after holidays — halloween, easter — and rise around others: thanksgiving is big for *appliance repair*, ovens break last-minute and people pay anything — John Osayi, 7 years in the trade
     > so keep more profiles than you need, as a buffer
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=514-->
@@ -205,6 +227,14 @@ name, and is easiest where the top profiles are owners carrying no keyword. one 
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=514-->
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3957-->
     // could be nice to add the niche
+- (?) (!) a trade that dries up in a cold winter is run in a city warm year round
+  - (?) *pool cleaning*: good in summer, dry in winter in a cold city; Dallas is warm year round — Eric, 2026-08
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=97-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=293-->
+  - (?) *pest control*: makes less in winter than summer, in some cases — Eric, 2026-08
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=357-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=389-->
+  > *commercial cleaning* has no season: [commercial cleaning](niches/commercial_cleaning.md#the-season). each one's own: [pool cleaning](niches/pool_cleaning.md#the-season), [pest control](niches/pest_control.md#the-season)
 
 ## a second trade
 

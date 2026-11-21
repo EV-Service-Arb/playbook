@@ -4,11 +4,14 @@ what members have reported about profiles that verify instantly, with no code, v
 
 ## the gmail
 
-- (?) (!) instant verification is what Eric pushes everyone toward right now; when google asks for a code or a video instead, the fix is a better gmail — "super easy in canada"
+- (?) (!) instant verification is what Eric pushes everyone toward right now; when google asks for a code or a video instead, the fix is a better gmail, a personal one a couple of years old and used — "super easy in canada"
   > Matt Gazda refuses it for a profile meant to last — [verification](../verification.md#routes)
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3323-->
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3382-->
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3409-->
+  - (?) Eric, 2026-08, on *pool cleaning*: a personal gmail a couple of years old, used for personal stuff, gets verified; "even" old burner gmails, or a parent's email
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=130-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=162-->
 
 ## categories
 
@@ -20,7 +23,7 @@ what members have reported about profiles that verify instantly, with no code, v
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=591-->
   > Eric's June word, between these two, had house cleaning a lot harder to verify than detailing, typically by video; his September word stands
   <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=164-->
-  > *detailing* and *pool cleaning* verify instantly too: [detailing](../../market/niches/detailing.md#verification), [pool cleaning](../../market/niches/pool_cleaning.md#verification)
+  > *detailing*, *pool cleaning* and *commercial cleaning* verify instantly too: [detailing](../../market/niches/detailing.md#verification), [pool cleaning](../../market/niches/pool_cleaning.md#verification), [commercial cleaning](../../market/niches/commercial_cleaning.md#verification)
 - (?) *tree trimming*: profiles instantly verify right now — Eric
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1322-->
 - (?) auto-verified with no live call: two *plumbing*, one *cleaning* and one *commercial cleaning* profile — `PP`, only his first needed a live

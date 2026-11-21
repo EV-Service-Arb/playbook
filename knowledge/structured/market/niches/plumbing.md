@@ -40,6 +40,10 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
 
 ## what it makes
 
+- (?) a handful of calls a day carries the month, where a recurring trade needs many more for the same money
+  - (?) Eric, 2026-08: plumbing can reach the $30k a month mark on five calls a day; pool cleaning needs a lot more phone calls
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=260-->
+  > pool cleaning: [pool cleaning](pool_cleaning.md#the-job)
 - (?) (!) eleven young profiles in one city, at 50–70 reviews each, have cleared ~$10k profit the first month on 6–8 calls a day
   - Dante made 10k profit his first month in plumbing
     <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1907-->

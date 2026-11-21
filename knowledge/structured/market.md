@@ -36,3 +36,6 @@ under [niches/](market/niches/). the city: [city](market/city.md).
   - (?) Eric: all his marketing is Google Business profiles — free leads, no ads, no cold calling
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=165-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=197-->
+  - (?) Eric, 2026-08: strictly Google Business listings, in low-competition, high-demand areas, nothing paid for ads; two months after setting up profiles he had made 100k in revenue
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=130-->
+    <!--2026-08-08 ran 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=648-->

@@ -9,6 +9,10 @@ what members and sources have reported about a profile's business name.
   <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=258-->
   - (?) *electrician*: `Electricians Peterborough` ranks above a 53-review profile on 15 reviews by exact-matching the search — Eric, 2026-05
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=324-->
+  - (?) *pool cleaning*: in Dallas the only top profile with keywords in its name, `Scheduled Dallas Pool Cleaning`, ranks #1 at 4.9 on 26 reviews, above profiles on 453 and 141 — Eric, 2026-08
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=97-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=107-->
+    <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=130-->
 - (?) (!) main service keyword and location in the GBP name is a very high ranking factor — Zach Peterson
   <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=419-->
   > get a DBA if you have to

@@ -1,9 +1,10 @@
 # cleaning
 
-not a trade to start on: ~$150–200 a call against plumbing's $300–400, ~$30 a lead when sold, and the
+house cleaning: not a trade to start on: ~$150–200 a call against plumbing's $300–400, ~$30 a lead when sold, and the
 most operations of any trade we know. it pays as a recurring base with payroll held at 40–45%, which
 takes an operation already built, as Ilya's is. it gets about detailing's searches and competition,
-for a ticket a little above it.
+for a ticket a little above it. commercial cleaning, whose contracts recur and whose big jobs pay, is
+a trade of its own: [commercial cleaning](commercial_cleaning.md).
 
 ## the market
 
