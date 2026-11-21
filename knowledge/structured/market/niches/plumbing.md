@@ -1,7 +1,7 @@
 # plumbing
 
 the starting trade: a mid ticket, paid within a day, whose big jobs come often enough to set the
-average. there is demand everywhere, more searches than HVAC, but lead-gen operators crowd it; in
+average. there is demand everywhere, more searches than HVAC, but lead-gen operators crowd it and the competition leaves fewer great cities to find; in
 the States it mostly verifies only by video. a plumber is easy to find. eleven profiles in one city have cleared ~$10k profit the first month, and one
 brand topping many cities clears Eric $20–25k a month. the plumber takes 70% of the profit, so he
 keeps answering; a set fee gets him in, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
@@ -17,6 +17,8 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=328-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=425-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=723-->
+  - (?) Eric, 2026-08: a $1,000 job keeps $300 profit, a $3,000 one $1,000
+    <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=297-->
 
 ## the market
 
@@ -24,6 +26,19 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
   - (?) Eric, 2026-06: about HVAC's ticket, typically higher search volume; the demand is there everywhere
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=295-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
+  - (?) Eric, 2026-08: a keyword tool shows enough volume for plumber in pretty much any city
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=166-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=199-->
+- (?) (!) its competition leaves fewer great cities: more of the work is up front, finding one where a few dozen reviews reach the top 3
+  - (?) Eric, 2026-08: `plumber vaughan`, ~4.9K searches a month over 200 variations, top three on 47, 59 and 100 reviews: he would rank first on about 50; Mississauga has more volume and 2,588, 465 and 443; living in College Station, low volume and high competition: reconsider
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=199-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=232-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=425-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=458-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=487-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=543-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=857-->
+  > what a top-3 place costs, read off those counts: [city](../city.md#competition)
 - (?) (!) crowded with lead-gen operators running the same model, where HVAC's top profiles are mostly the owners'
   resolved: [2026-11-21](../../../log/resolved/2026-11-21-eric-hvac.md)
   - (?) Eric, 2026-07: a lot of people, maybe from his videos, list plumbing profiles to run the same model

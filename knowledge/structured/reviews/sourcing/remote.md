@@ -4,8 +4,12 @@ What members have reported about reviews left from outside the profile's area: t
 
 ## proximity
 
-- (?) Eric's rule, as restated by `Ilya`: reviews must come from within ~1h proximity of the GMB
-  <!--2026-09-18 Ilya heard 0.5σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4271-->
+- (?) reviews stick only when they are local, bar a couple of methods: Eric's rule
+  - (?) Eric, 2026-08: reviews stick only if they are local, aside from a couple of methods
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=559-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=591-->
+  - (?) Eric's rule as `Ilya` restates it: reviews must come from within ~1h proximity of the GMB
+    <!--2026-09-18 Ilya heard 0.5σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4271-->
 - (?) on a new GMB google watches harder; wait ~6–12 months before trying anything non-local — a member, after Eric had left
   <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5712-->
 

@@ -3,7 +3,7 @@
 
 we pick the trade on what the job is, then the city to run it in on what the market there is — a good
 city can outweigh a better trade — and
-rank organic profiles rather than buy ads. the trade: [niche](market/niche.md), each trade's own page
+rank organic profiles rather than buy ads: a few where a city's numbers are best, or many spread wherever people search. the trade: [niche](market/niche.md), each trade's own page
 under [niches/](market/niches/). the city: [city](market/city.md).
 
 ## how a market is judged
@@ -26,6 +26,18 @@ under [niches/](market/niches/). the city: [city](market/city.md).
 - (?) the city can outweigh the trade: a strong trade in a city of thin demand and heavy competition does worse than a weaker one in a very good spot
   - (?) Eric, 2026-06: plumbing in a city with very low demand and high competition does worse than house cleaning in a very good spot
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=394-->
+
+## technical or volume
+
+- (?) two ways to place profiles, both making money: technical, a few in the cities whose numbers are best, ranked on the least work; volume, as many profiles and reviews as possible wherever people search, each needing only an address. technical gets more out of each profile, and technical with volume's output is the best of both; pick by what you are better at, the market research or turning out profiles and reviews
+  - (?) Eric, 2026-08: the technical one works better, but with an address "you can quite literally make money no matter what you do": 20 profiles across Austin would each rank in some pocket. instead of ten profiles at 100 reviews each, three at about 30 in better markets get the same results
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=658-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=691-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=723-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=758-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=791-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=824-->
+  > *detailing*, which verifies easily on an address, he runs on volume: [detailing](market/niches/detailing.md#the-profiles)
 
 ## paid or organic
 

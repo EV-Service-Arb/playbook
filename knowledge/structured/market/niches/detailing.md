@@ -1,8 +1,8 @@
 # detailing
 
-low ticket, and the easiest trade to start and scale on profiles alone: Eric started on it, made
+low ticket, a job paying about the same every time, and the easiest trade to start and scale on profiles alone: Eric started on it, made
 $15k his second month and took it to ~$80k a month in revenue. a profile verifies instantly on a solid
-gmail, and on an address ranks almost whatever the competition. a poor job still gets paid, and
+gmail, and on an address ranks almost whatever the competition, so it is run on volume: profiles spread over every part of a city. a poor job still gets paid, and
 customers come back on a subscription, for small upsells, but they shop on price. no city is too big
 for it: [city](../city.md#size-and-people). not where we start: past ~$10k a month a higher ticket
 pays more for the same setup, and a broad keyword brings the $20 car wash: [niche](../niche.md#the-ticket).
@@ -32,8 +32,19 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=164-->
   > what the address does for its ranking: [ranking](../../ranking.md#address)
 
+## the profiles
+
+- (?) (!) run on volume: since a profile verifies so easily on an address, profiles spread evenly over every part of a city each take their pocket, without many reviews on any
+  - (?) Eric, 2026-08: detailing is super easy to verify on an address, so there he usually opts for the volume model
+    <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=758-->
+    <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=791-->
+  > the volume model against the technical one: [market](../../market.md#technical-or-volume)
+
 ## the job
 
+- (?) a low ticket that hardly varies: a job pays about the same every time
+  - (?) Eric, 2026-08: detailing is always 100 bucks, 150 bucks
+    <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=297-->
 - (?) easy to fulfil: a poor job still gets paid
   - (?) Eric: his detailers did horrible jobs and he still got paid
     <!--2026-04-21 ran 2σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=525-->

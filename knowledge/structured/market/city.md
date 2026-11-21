@@ -1,8 +1,20 @@
 # city
 
-a city of 50k–300k people, dense, on a $90–130k median income, outside the high-crime parts; with
+where we can, the city we live in or one near it, else one anywhere: 50k–300k people, dense, on a $90–130k median income, outside the high-crime parts; with
 enough searches for the trade, every phrasing of it counted and the best of its names targeted, that our own share of them clears ~200 a month against who already ranks,
 a place in the top 3 that costs fewer reviews than it returns, and a contractor within the hour of every profile.
+
+## where you live
+
+- (?) run where you live if you can, else in a nearby city, else in a strong market anywhere: local reviews are the ones that stick, friends and family give a head start, verification has a few more routes, and you know the area
+  - (?) Eric, 2026-08: maybe 10% easier locally. out of the way, a city nearby: `plumber brantford` too competitive at 522, 131 and 113 reviews, so maybe Hamilton; from somewhere with nothing, "just go into Austin, Texas"
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=394-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=425-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=527-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=551-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=559-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=591-->
+  > which reviews stick: [remote](../reviews/sourcing/remote.md#proximity). from outside, a trade whose top ranks on few reviews: [niche](niche.md#finding-an-untapped-trade)
 
 ## size and people
 
@@ -38,6 +50,10 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=263-->
   - (?) Eric, 2026-05: ~1,000 searches a month at #1 is about a lead a day, ~30 a month
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=356-->
+  - (?) Eric, 2026-08: around 1,000 a month is the goal, more than enough; under it makes no sense unless the market is "super, super dead", with no competition at all. ranked first on 1,000, about a lead a day, 30 a month, by his experience
+    <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=199-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=492-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=527-->
 - (?) every phrasing of the service is researched and summed, and one polluted by other intent is dropped: a broad term pulls in searches for something else
   - Phoenix: ~1.3k searches/mo for "fence company" phrasings, ~600 more for "contractor", a few hundred for "fencing" — research every phrasing, a broad "fencing" pulls in unrelated terms
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=553-->
@@ -69,6 +85,11 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
   - (?) Eric: when two of the top three for the service in the city have under 100 reviews, competition is low and you can outrank them
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=295-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=328-->
+  - (?) Eric, 2026-08: ideally at least two of the top three under 100 reviews; one under 100 is doable too
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=492-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=527-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=666-->
+    > Vaughan against Mississauga: [plumbing](niches/plumbing.md#the-market)
   - (?) Eric, 2026-07: aim for the lowest count in the top three — at 100, 50 and 40, aim for 40; with the rest optimized, fewer can rank. third on 40 under a second on 2,000: move on to the next profile; a second on 60: more into this one can pay
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=400-->
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=433-->

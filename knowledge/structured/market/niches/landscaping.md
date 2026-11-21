@@ -1,6 +1,6 @@
 # landscaping
 
-high ticket, usually high search volume, and competition far below plumbing's: in the same city its
+high ticket, usually high search volume, a little easier to verify than plumbing, and competition far below plumbing's: in the same city its
 top 3 carry far fewer reviews, and in Los Angeles none has a keyword in its name, so the searches feed
 many profiles. a couple of big contracts can make a month, and Eric's best student makes hundreds of
 thousands a month on it; a commercial job takes a whole crew. how high ticket weighs against the rest:
@@ -23,6 +23,13 @@ thousands a month on it; a commercial job takes a whole crew. how high ticket we
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=487-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=519-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=992-->
+
+## verification
+
+- (?) verifies a little easier than plumbing or HVAC, as a lot of the high-ticket trades do
+  - (?) Eric, 2026-08: *plumbing* and *HVAC* are a little harder to verify than *landscaping*; a lot of the higher-ticket niches are a little easier to verify on Google
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=232-->
+  > plumbing's: [plumbing](plumbing.md#verification)
 
 ## what it makes
 

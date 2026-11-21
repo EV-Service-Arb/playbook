@@ -9,7 +9,7 @@ crew, and the untapped trades are mostly these. recurring work sits between: cus
 than being replaced, for more calls, in pool cleaning, pest control and commercial cleaning; a trade
 that dries up in a cold winter is run in a warm city. always a local home service, never one whose
 small job comes back once in years. an untapped trade is found by searching a sub-service by its own
-name, in a city where that name still has volume, and is easiest where the top profiles are owners carrying no keyword. one trade is mastered before a second is added. each trade's own page is under [niches/](niches/).
+name, in a city where that name still has volume, and is easiest where the top profiles are owners carrying no keyword; run from outside the area, a trade whose top ranks on few reviews spares the reviews hardest to get from afar. one trade is mastered before a second is added. each trade's own page is under [niches/](niches/).
 
 ## the starting trade
 
@@ -21,6 +21,12 @@ name, in a city where that name still has volume, and is easiest where the top p
   - (?) Eric puts a beginner on *plumbing*, plus one or two *cleaning* profiles in their own city to work out remote reviews and pricing
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6434-->
     > for a beginner. a member already on plumbing gets nothing from adding it: [cleaning](niches/cleaning.md)
+  - (?) Eric, 2026-08: mid ticket — *plumbing*, *HVAC* — is his favourite, "the best to make a lot of money" and to scale past 30k a month: volume in pretty much any city, 40% margins easily, a contractor super easy to find, results quickly. it takes more marketing knowledge: more competition, so fewer great cities, and a little harder to verify
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=166-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=232-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=264-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=329-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=361-->
   - (?) Eric, 2026-06: plumbing is his favourite: urgent, most jobs done the same or next day and paid the same day, and an emergency doesn't shop on price
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=361-->
@@ -56,12 +62,19 @@ name, in a city where that name still has volume, and is easiest where the top p
     <!--2026-04-21 ran 2σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=690-->
   - (?) Eric, 2026-06: detailing is the easiest trade to start, top tier for making a first bit of money
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=727-->
+  - (?) Eric, 2026-08: just starting, for the quickest results and a first 5–10k month, low ticket "might be the easiest option"
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=361-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=394-->
+    // he points at the board's columns without naming them: low ticket is read off the order he goes in
 - (?) a high-ticket untapped trade first — landscaping, asphalt and paving, stucco, masonry — where one or two ranked profiles make a full income. beaten on Eric's later word by drain cleaning and plumbing: paid within a day, on more leads, without a quote shopped around
   resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-starting-trade.md)
   - (?) Eric, 2026-05: these four, each with a city, are what he would restart on
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=0-->
     > his own first $20k profit month came in a lower-ticket, lower-barrier niche
     <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=1058-->
+  - (?) Eric, 2026-08: high ticket for one who wants to build a proper company and doesn't mind being involved: run more as a service business than a marketing one
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=361-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=394-->
 
 ## trades that work
 
@@ -120,17 +133,25 @@ name, in a city where that name still has volume, and is easiest where the top p
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=624-->
   - (?) *detailing*: ~$100 profit a detail, against $3,000 off one call on a $5–10k job at a 40% cut — 30 details to match it — Eric, 2026-06
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=98-->
+  - (?) Eric, 2026-08: low ticket — *detailing* — has high demand and is easy to fulfil, but is not emergency-based, so its leads are worse, tire kickers after the lowest price; competition in the middle; hard to scale on ~$100 profit a job
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=264-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=297-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=361-->
   - (?) Eric, 2026-05: $50k a month in profit takes high ticket — ~$7,500 average at ~20% margin is 30 jobs, 120 leads a month at a 25% close rate, about four leads a day: one or two ranked profiles
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=63-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=131-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=164-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=197-->
   > fencing, a $4,000 job: [fencing](niches/fencing.md#the-job)
-- (?) (!) high ticket — construction, roofing, remodels, landscaping, pools — pays the most per job, but late, seldom and slowly: a contract and a materials deposit come before the work, leads are fewer and patchier, a big quote gets shopped around, and a crew and more liability come with it. the untapped trades are mostly high ticket, so the hard part is a contractor who closes, leaves margin and doesn't scam you
+- (?) (!) high ticket — construction, roofing, remodels, landscaping, pools — pays the most per job, but late, seldom and slowly: a contract and a materials deposit come before the work, a big quote gets shopped around, so we send the quotes and follow up through a slow close, and a crew and more liability come with it. its markets are often thin on competition, so a profile takes leads easily, though fewer and patchier ones than an emergency trade's. the untapped trades are mostly high ticket, so the hard part is a contractor who closes, leaves margin and doesn't scam you
   - (!) the untapped niches are mostly high ticket, and a $20–100k job gets quoted around, unlike a clogged toilet: the hard part is a contractor who closes, leaves you margin and doesn't scam you — Eric
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=719-->
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=750-->
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=980-->
+  - (?) Eric, 2026-08: in *landscaping*, *asphalt paving*, *stucco*, *concrete* leads come super easily, markets of low competition and high demand are many, and the hardest part is the contractor; a close takes a week or two and the job another week or two, while you send the quotes, follow up and talk back and forth
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=66-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=100-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=134-->
   - (?) Eric, 2026-05: *landscaping*, *asphalt and paving*, *stucco* and *masonry* are untapped — extremely high average ticket, super low competition, high demand — though not in every city; the commission on these jobs, 20 or 25%
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=228-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=292-->
@@ -159,6 +180,9 @@ name, in a city where that name still has volume, and is easiest where the top p
 ## recurring work
 
 - (?) (!) recurring work sits between low and high ticket: each customer keeps paying, so the month adds up rather than being replaced, and a subscription or a year's contract makes one customer worth thousands. the price is a lower ticket, more calls and more to manage
+  > Eric, 2026-08: a trade is low, mid or high ticket, and on top one-off or monthly recurring; the business runs differently for each
+  <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=33-->
+  <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=66-->
   - (?) Eric: cleaning, pest control, lawn services on a subscription; a year's contract for lawn service or snow removal puts a customer's lifetime value up to thousands
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=464-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=497-->
@@ -214,6 +238,13 @@ name, in a city where that name still has volume, and is easiest where the top p
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=199-->
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=232-->
   > Toronto's top HVAC profiles: [hvac](niches/hvac.md#the-market)
+- (?) (!) run from outside the area, where reviews come hardest, pick a trade whose top profiles rank on few reviews
+  - (?) Eric, 2026-08, Austin: `plumber` tops out at 17,651 reviews (`Radiant Plumbing`) and 1,620 (`Reliant Plumbing`); `asphalt` ranks `Austin Pavement Co.` on 13 and `Texan Paving` on 16
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=624-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=658-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=685-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=694-->
+  > why reviews come hardest from outside: [city](city.md#where-you-live)
 
 ## seasonality
 

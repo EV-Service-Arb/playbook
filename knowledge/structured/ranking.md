@@ -99,6 +99,11 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
 - (?) a profile ranks around its pin and fades with distance: where its rank map is green in the middle and red at the edges, open a second one ~10 miles out, in the red
   - (?) Zach Peterson: they compete a little, but the second takes a whole new area's searches
     <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=159-->
+  - (?) Eric, 2026-08: proximity to the searcher is big. `plumber austin` gives a different top in each pocket of the city — Pflugerville 458, 57 and 112 reviews; Wells Branch 1,214, 50 and 759 — and a profile on an address in Bushy Creek is found by people in Bushy Creek, not Windsor Park
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=691-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=701-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=705-->
+    <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=723-->
 
 ## what does not move it
 
