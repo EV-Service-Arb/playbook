@@ -12,6 +12,12 @@ route: [verification](../../../../profile/verification.md).
   resolved: [2026-11-21](../../../../../log/resolved/2026-11-21-eric-cleaning-verification.md)
   - (?) Reece, 2026-11: his new cleaning profiles now get asked to verify, which they weren't before; Eric had told him to try friends' and family's gmails
     <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1539-->
+  - (?) Connor, 2026-11: every *house cleaning* profile of his needed a video, despite `CallRail` numbers, new emails and spoofed locations
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9916-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9972-->
+  - (?) Eric, 2026-11: house cleaning "can also be instant"
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=193-->
+    > on a good gmail, which by his word on the same call means an active one, two weeks being enough: [instant](../../../../profile/verification/instant.md#the-gmail)
   - (?) Eric, 2026-09: cleaning profiles instantly verify with no video at all — "just get a good gmail"
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1893-->
   - (?) Eric, 2026-04: low-ticket trades are the easiest setup: Google isn't strict on *detailing* or *cleaning*, where *plumbing* and *HVAC* need more licensing
@@ -22,7 +28,7 @@ route: [verification](../../../../profile/verification.md).
   <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4815-->
   > Eric's June word, between these two, had house cleaning a lot harder to verify than detailing, typically by video; his September word held until November
   <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=164-->
-  > `PP`'s cleaning profile auto-verified in October: [instant](../../../../profile/verification/instant.md#categories)
+  > `PP`'s cleaning profile auto-verified in October: [niche](../../../niche.md#how-it-verifies)
 
 ## video
 

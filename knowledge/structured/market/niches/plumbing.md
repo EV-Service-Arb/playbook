@@ -101,8 +101,10 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=265-->
   - (?) a member, 2026-11: harder to verify in the US
     <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6916-->
+  > the video passes on a set-up storage unit: Alan's went straight through for every plumbing profile — [video](../../profile/verification/video.md)
+  <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=603-->
   > pest control gets up much easier: [pest control](pest_control.md#verification)
-  > `PP` had two plumbing profiles auto-verify, his country not said: [instant](../../profile/verification/instant.md#categories)
+  > `PP` had two plumbing profiles auto-verify, his country not said: [niche](../niche.md#how-it-verifies)
 - (?) one who can't get through buys the verification: a verified profile with an address, up in about a week
   - (?) a member bought one for $250 from `ASKAP` on Discord (`ASKCAP` as spelled out; said first as "$2.50")
     <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6916-->

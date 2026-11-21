@@ -1,7 +1,7 @@
 # va
 <!--half-life 5y-->
 
-a VA takes the calls, texts and payments, so we do nothing on the phone. we hire one in the philippines as soon as there are calls we can't take and the business cash-flows, so they are trained before the volume hits. they cost $3–4/hr, work off our [`Quo` number](../calls/phones.md), a google sheet and a written script, and should book about half the calls.
+a VA takes the calls, texts and payments, so we do nothing on the phone; an AI gate on the number that dispatches straight to the contractor can stand in for one. we hire one in the philippines as soon as there are calls we can't take and the business cash-flows, so they are trained before the volume hits. they cost $3–4/hr, work off our [`Quo` number](../calls/phones.md), a google sheet and a written script, and should book about half the calls.
 
 ## when to hire
 
@@ -20,6 +20,14 @@ a VA takes the calls, texts and payments, so we do nothing on the phone. we hire
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=615-->
   - (?) 5–15 calls/day is what one member handles across his profiles
     <!--2026-09-18 Artheme Chaykin ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=684-->
+
+## in place of one
+
+- (?) an IVR gate on the number can stand in for a VA: AI records and transcribes each call into a job board, texts the contractor the job and area to answer Y or N, and on Y sends him a link where he picks a time that books into the calendar
+  - (?) Everett, 2026-11, on his *HVAC* profiles
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7899-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7962-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7987-->
 
 ## where
 

@@ -25,6 +25,13 @@ what searchers do on and after the profile, and a [site](site/seo.md) that match
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2647-->
     <!--2026-11-06 Zach Peterson says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3923-->
     <!--2026-11-06 Zach Peterson says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3950-->
+  - (?) Everett: his Claude-coded dashboard shows missed calls and a map-pack heat map. an auto-optimizer on the Google API fills and posts to every profile daily, and an AI scan tells him which profiles need reviews
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=8832-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=8880-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=8909-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7328-->
+    > a member thinks the GBP API grants access only to an account or profile about a year old
+    <!--2026-11-20 gmbpp member says 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4580-->
 - (?) keep scans on record: a scan from before a call drop tells a ranking drop from a demand drop
   > `Local Falcon`, or `GMB Radar` at ~$20–30/mo for 10–20 businesses; nothing free short of building your own
   <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2725-->
@@ -66,6 +73,11 @@ what searchers do on and after the profile, and a [site](site/seo.md) that match
 
 - (?) every newcomer Eric has seen lately ranked to the top quickly once reviews started — one in poland takes 10–15 calls a day off profiles set up two weeks before
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1109-->
+  - (?) Everett, *HVAC*: calls came almost at once, ranking first with no photos, just reviews; they slowed when he didn't optimise
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7282-->
+- (?) a profile at the top tends to stay there while its reviews keep coming: another operator may not want to compete with someone dominating an area — Christian
+  <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10958-->
+  <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10990-->
 
 ## searcher behaviour
 
@@ -111,6 +123,19 @@ what searchers do on and after the profile, and a [site](site/seo.md) that match
   > only real people physically nearby: a spoofed location gives nothing, since the phone still pings the cell towers around it, and bots don't count — `James McBride`
   <!--2026-10-23 James McBride says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=691-->
   <!--2026-10-23 James McBride says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=741-->
+  > a member, 2026-11-19: reviews get a profile into the top 3; human activity keeps it there, or moves it from third to first. ask every reviewer to click directions too
+  <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4818-->
+  <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4984-->
+- (?) CTR services sell that activity; nobody on the calls has tested one
+  - (?) `Jumper Media`, as a member heard it on one of its calls: $500 a month per profile, white-labelled at $300. it asks only for 10 reviews, a profile in good standing and optimised, and a keyword-matched site, and sends "supposedly real human traffic" that clicks directions and the call button; its pitch is 6th or 7th into the top 3. its CEO says it runs through a game paying coins for tasks; a member reckons it is an android click farm
+    <!--2026-11-20 gmbpp member heard 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4620-->
+    <!--2026-11-20 gmbpp member heard 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4666-->
+    <!--2026-11-20 gmbpp member heard 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4697-->
+    <!--2026-11-20 gmbpp member heard 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4761-->
+    <!--2026-11-20 gmbpp member heard 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4818-->
+    <!--2026-11-20 gmbpp member heard 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4860-->
+    <!--2026-11-20 gmbpp member heard 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4984-->
+  // a click farm is the bots `James McBride` says don't count
 
 ## site
 
@@ -122,6 +147,11 @@ what searchers do on and after the profile, and a [site](site/seo.md) that match
 - (?) a profile ranks around its pin and fades with distance, so a city takes several profiles spread over it, more the bigger it is, rather than a couple of strong ones: where a rank map is green in the middle and red at the edges, the next goes in the red
   - (?) Zach Peterson: a second ~10 miles out; they compete a little, but the second takes a whole new area's searches
     <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=159-->
+  - (?) Everett, *HVAC*: his first profile, 39 reviews, fully optimised, with AI truck photos, sits on an address south of Hartford in Wethersfield and ranks seventh for "HVAC Hartford", whose top spots are sponsored or big profiles on 1,200 reviews, the next on nothing. Connor: on a good address it would be top three
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9029-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9052-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9088-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9251-->
   - (?) Eric, 2026-08: proximity to the searcher is big. `plumber austin` gives a different top in each pocket of the city — Pflugerville 458, 57 and 112 reviews; Wells Branch 1,214, 50 and 759 — and a profile on an address in Bushy Creek is found by people in Bushy Creek, not Windsor Park
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=691-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=701-->

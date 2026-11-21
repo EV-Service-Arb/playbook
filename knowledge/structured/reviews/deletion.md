@@ -20,6 +20,11 @@ What members have reported about reviews disappearing: star mix, repeat reviewer
   > his September word, since loosened: never send the same person to review two of your profiles
   - (?) Sunny lost over half of 150+ reviews having the same people review two of his profiles held on two different accounts
     <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=110-->
+  - (?) Connor: one of his reviewers got 10 friends onto one profile, was paid, then reused the same 10 on the next, and they all came down
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4183-->
+  - (?) a member asks only a local reviewer with about 20 reviews of his own to do a second GMB, never a zero-review account, which will fall off
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4268-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4301-->
   > one park stand lost 20 reviews in a day; Eric's first guess was repeat reviewers, which the reporter denied
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2917-->
 - (?) one person, one review on a profile: a second from another gmail gets deleted

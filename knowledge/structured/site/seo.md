@@ -17,6 +17,11 @@ location its own hand-written page.
     <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=754-->
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1281-->
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1314-->
+  - (?) Everett, 2026-11: a different URL per profile, mostly the same site reworded with different keywords. he didn't keyword-match it, and says you should. the site doesn't matter much: some leads come through it from people with ad blockers who can't see the profiles, it helps AI search recommend you, and it lends credibility
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14847-->
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14871-->
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14909-->
+  > one domain per profile: [suspension](../profile/suspension.md#the-domain)
 
 ## what it needs
 
@@ -26,6 +31,10 @@ location its own hand-written page.
     <!--2026-11-13 ran 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1026-->
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1050-->
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1281-->
+  - (?) Everett, 2026-11, *HVAC*: clean and basic, a simple lead form. AI writes a prompt for an HVAC site with SEO, `Claude Design` makes it, and `Claude Code` hooks it up to `Vercel`
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14938-->
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14994-->
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=15026-->
   > location pages are another matter: [location pages](#location-pages)
 
 ## headings

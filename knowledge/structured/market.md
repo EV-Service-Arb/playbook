@@ -3,7 +3,7 @@
 
 we pick the trade on what the job is, then the city to run it in on what the market there is — a good
 city can outweigh a better trade — and
-rank organic profiles rather than buy ads: a few where a city's numbers are best, or many spread wherever people search. the trade: [niche](market/niche.md), each trade's own page
+rank organic profiles rather than buy ads: a few where a city's numbers are best, or many spread wherever people search. beside them, outbound messages win the contracts the profiles don't, and ads hedge against losing the profiles. the trade: [niche](market/niche.md), each trade's own page
 under [niches/](market/niches/). the city: [city](market/city.md).
 
 ## how a market is judged
@@ -60,6 +60,18 @@ under [niches/](market/niches/). the city: [city](market/city.md).
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=824-->
   > *detailing*, which verifies easily on an address, he runs on volume: [detailing](market/niches/detailing.md#the-profiles)
 
+## beside the profiles
+
+- (?) outbound messages win contracts the profiles don't: sent in volume every day to the local businesses and hosts who buy the trade
+  - (?) Connor's `GoHighLevel` is connected to Claude: every night he types "do our outreach", and it sends 150–300 messages to local trucking and limo companies, and to realtors and Airbnb hosts for house cleaning: "so much volume it's impossible not to lock in contracts". one fleet client came of it. a Claude task also posts free ads in local Facebook buy-and-sell groups
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=8115-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=41-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13341-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13367-->
+  - (?) Everett plans the same toward companies for commercial HVAC
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9560-->
+  > the CRM, as the VA's tool, is another matter: [va](staff/va.md). the fleet client: [fleet washing](market/niches/fleet_washing.md)
+
 ## paid or organic
 
 - (?) (!) organic profiles, not google local service ads: an LSA call now costs three times what it did and recurs less
@@ -76,3 +88,7 @@ under [niches/](market/niches/). the city: [city](market/city.md).
     <!--2026-11-06 Derick Parsons says 0.5σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4508-->
     <!--2026-11-06 Derick Parsons says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4549-->
     <!--2026-11-06 Derick Parsons says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4578-->
+- (?) ads as a hedge, not the lead source: once one trade runs, another channel such as Google Ads, and a real brand, keep money coming if the profiles are taken down
+  - (?) Christian: build a real brand, or losing the pages leaves you with nothing
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=12071-->
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=12173-->

@@ -1,6 +1,6 @@
 # local guide
 
-What members have reported about a reviewer account's local guide level, raising it, and warming a gmail for maps.
+What members have reported about a reviewer account's local guide level, buying levelled accounts, raising the level, and warming a gmail for maps.
 
 ## level
 
@@ -19,6 +19,11 @@ What members have reported about a reviewer account's local guide level, raising
 - the level comes from points: reviews on other profiles, suggested edits, photos. from level 4 google trusts what the account says — Eric
   > or buy accounts already levelled; he hands out his source over instagram DM
   <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=g2goSCTF18I&t=130-->
+- (?) buy levelled accounts only cheap: a bought account is good for one review, so its price is the review's
+  - (?) Eric, 2026-11-19: bought at about $20 an account, local guide accounts cost $20 a review, which isn't worth it. Walker's hundreds, bought at about $3 each, mostly level 4 with a few level 5, are "a lot better" for reviews
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2839-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2881-->
+    <!--2026-11-20 Walker ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2881-->
 - (?) a reviewer's gmail matters: a local guide account is worth more, and 360° videos raise the level fastest
   <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4466-->
   <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4481-->

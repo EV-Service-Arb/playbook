@@ -1,7 +1,7 @@
 # closing
 <!--half-life 5y-->
 
-the call books a visit, usually the same day, at a call-out fee we name and waive if the job goes ahead; nothing is quoted off a photo. we price in the middle of the area's range, and say a partner company comes out, so a van or a contract under another name does not lose the job. who takes the call: [va](../staff/va.md); what the tech does with the price in the house: [pricing](../contractors/pricing.md).
+in plumbing and HVAC the call books a visit, usually the same day, at a call-out fee we name and waive if the job goes ahead, and nothing is quoted off a photo; low-commitment work, detailing and house cleaning, is priced flat on the call and booked there. we price in the middle of the area's range, and say a partner company comes out, so a van or a contract under another name does not lose the job. who takes the call: [va](../staff/va.md); what the tech does with the price in the house: [pricing](../contractors/pricing.md).
 
 ## how fast
 
@@ -35,13 +35,23 @@ the call books a visit, usually the same day, at a call-out fee we name and waiv
 
 ## the price
 
-- (?) quote the middle of the area's range, leaning low to win price shoppers: the cheapest lose to distrust, the dearest sell only to the rich. a model turns the area's prices into one for the job's size
+- (?) quote the middle of the area's range, leaning low to win price shoppers: the cheapest lose to distrust, the dearest sell only to the rich. a model turns the area's prices into one for the job's size. *detailing* goes on the upper side, where the low end leaves nothing
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-price-on-the-call.md)
   - using medium pricing nets us good volume under our model
     <!--2026-09-25 Eric says 1σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=3817-->
     we can get jobs over lowest guys, cause of distrust. And going for highest ticket is only good for rich people, and you need to specially optimize everything for selling to them if you do.
   - Devin Grandt says to pull the area pricing, take middle-to-lower end of the range so you win the bids, and then use claude to estimate the correct price for a job of a given size
     So can also give it actual size of appt in question, and then it'll say that eg 2 bedrooms house is like 30€ or sth
     <!--2026-09-25 Devin Grandt says 1σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1188-->
+  - (?) Eric, 2026-11: *house cleaning* at the median of a couple of cleaning companies in the area; *detailing* at the upper side, $200–300, as at $150 you make nothing
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2181-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1291-->
+- (?) (!) the price is named on the call for low-commitment work, *detailing* and *house cleaning*, and in the house for *plumbing* and *HVAC*: a flat price closes a detail or a clean, where quoting it off photos meets resistance
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-price-on-the-call.md)
+  - (?) Eric, 2026-11: unlike plumbing, detailing is priced over the phone, flat standard pricing; cleaning is closed by us, on flat basic pricing, and booked on the call
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1257-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2181-->
+  > each one's price: [detailing](../market/niches/detailing.md#the-price), [cleaning](../market/niches/cleaning.md#the-call), [hvac](../market/niches/hvac.md#the-price)
 - (?) book a same-day visit at a set call-out fee, said to be waived on the job: it closes very well as long as the prices are reasonable
   - (?) *plumbing*: ~$250 minimum call-out, nothing quoted under it
     <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=63-->

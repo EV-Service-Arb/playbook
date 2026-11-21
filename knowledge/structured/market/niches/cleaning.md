@@ -7,7 +7,7 @@ asked to verify: [verification](cleaning/profile/verification.md). it pays on pr
 $20k off 19 of them with every call his own, or as a recurring base with payroll held at 40–45%, which
 takes an operation already built, as Ilya's is. it gets about detailing's searches and competition or less,
 for a ticket a little above it, but a big city's top profiles carry hundreds of reviews, so the area is
-picked by its keywords, away from the leader. its calls come in waves with the rankings. insurance is for
+picked by its keywords, away from the leader. the call is closed by us, on a flat price at the area's median, and booked there. its calls come in waves with the rankings. insurance is for
 a cleaning company with its own cleaners; one passing the jobs to a contractor goes without it at first. commercial cleaning, whose contracts recur and whose big jobs pay, is
 a trade of its own: [commercial cleaning](commercial_cleaning.md).
 
@@ -82,6 +82,18 @@ a trade of its own: [commercial cleaning](commercial_cleaning.md).
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=525-->
   - (?) payroll should land at 40–45%, 50% at worst; industry standard is 55%, and owners paying their cleaners 80–90% are common and are massively overpaying
     <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5133-->
+
+## the call
+
+- (?) close it yourself, on a flat basic price given over the phone, and book it on the call: priced at the median of a couple of cleaning companies in the area
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-price-on-the-call.md)
+  - (?) Eric, 2026-11, to Dan asking whether he or the cleaner closes: a site form asking bedrooms, bathrooms and square feet lets you work the price out mid-call, or feed the details to ChatGPT
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2181-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2221-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2258-->
+  - (?) a member in cleaning: cleaning software such as `BookingKoala` (transcribed "King Koala") has a price calculator built in for the website, and customers book directly
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2258-->
+  > the call across trades: [closing](../../calls/closing.md#the-price)
 
 ## operations
 

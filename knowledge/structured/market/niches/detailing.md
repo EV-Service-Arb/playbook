@@ -1,14 +1,18 @@
 # detailing
 
-low ticket, a job paying about the same every time, and the easiest trade to start and scale on profiles alone: Eric started on it, made
-$15k his second month and took it to ~$80k a month in revenue. a profile verifies instantly on a solid
-gmail, and on an address ranks almost whatever the competition, so it is run on volume: profiles spread over every part of a city. its competition sits in the
-middle, often weak, and beside house cleaning it can be the bigger search and the easier rank; a detailer is easy to find. a poor job still gets paid, and
-customers come back on a subscription, for small upsells, but they shop on price. no city is too big
-for it, but one with cold winters and salted roads is skipped. it is named *mobile* detailing, so a
-client who turns up at the address should have known, and for detailing rather than car wash: it ranks
-for car wash all the same, and detailing brings the better leads. not where we start: past ~$10k a month a higher ticket
-pays more for the same setup, and a broad keyword brings the $20 car wash: [niche](../niche.md#the-ticket).
+low ticket, priced flat on the phone at $200 and up, paid within days, and the easiest trade to start
+and scale on profiles alone: Eric started on it, made $15k his second month and took it to ~$80k a
+month in revenue. a profile verifies instantly on a solid gmail, though one member's instant ones went
+down in batches, and on an address ranks almost whatever the competition, so it is run on volume:
+profiles spread over every part of a city. its competition sits in the middle, often weak, and beside
+house cleaning it can be the bigger search and the easier rank; a detailer is easy to find. a poor job
+still gets paid, and customers come back on a subscription, for small upsells, but they shop on price.
+no city is too big for it, but one with cold winters and salted roads is skipped, and in some it is
+weak. it is named *mobile* detailing, so a client who turns up at the address should have known, and
+for detailing rather than car wash: it ranks for car wash all the same, and detailing brings the better
+leads. not where we start: past ~$10k a month a higher ticket pays more for the same setup, and a broad
+keyword brings the $20 car wash: [niche](../niche.md#the-ticket); beside a slow-closing high-ticket
+trade, it carries the cash: [niche](../niche.md#a-second-trade).
 
 ## the name
 
@@ -51,6 +55,9 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=164-->
   - (?) Marcus Milan, 2026-10: google verifies low-ticket profiles, *car detailing* and *cleaning*, "a lot easier", "another massive plus"
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=327-->
+  > not for long on every gmail: Connor's first seven verified instantly and went down in batches, after which he moved to video — [niche](../niche.md#how-it-verifies)
+  <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9916-->
+  <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10240-->
   > what the address does for its ranking: [ranking](../../ranking.md#address)
 
 ## the profiles
@@ -89,9 +96,15 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=372-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=376-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=404-->
+- (?) for big partnership jobs the tech needs his own polisher: worth its ~$800, as without one they don't close
+  - (?) Connor, the trade not said, though a polisher is a detailer's tool: without it they don't close a $40,000 job
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9454-->
 
 ## the city
 
+- (?) weak in some cities
+  - (?) Sanny, 10 *detailing* and 7 *house cleaning* profiles: detailing is weak in his city, so he funnels its money into house cleaning, aiming at higher ticket later
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2472-->
 - (?) no city is too big for it: everyone has a car
   <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=34-->
   > Marcus Milan's bound for other trades: [city](../city.md#size-and-people)
@@ -124,3 +137,20 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
 - (?) a commodity nobody really needs: its customers shop on price and are hard to please
   - (?) Eric, 2026-06: price shoppers, bad and annoying customers
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=98-->
+- (?) paid within days of booking
+  - (?) Connor: a $1,200 ceramic booked on Monday was $600 in his pocket by Wednesday; Eric: Connor is "doing really well off detailing"
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9680-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1382-->
+
+## the price
+
+- (?) (!) a flat price given on the phone, at the upper side of the area's range: low-commitment work, where quoting off photos meets "a ton of resistance", and at the low end nothing is left
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-price-on-the-call.md)
+  - (?) Eric, 2026-11, to Sanny, whose area prices it at about $150–200: the upper side, $200–300; at $150 you make nothing, $200 is the bare minimum
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1257-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1291-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1382-->
+  - (?) a member: $250 for a sedan or two-row vehicle, $300 for an SUV, add-ons such as mold removal or tire cleaning +$50 each, while the tech still gets $135–150. no basic washes: not worth the stress for $20
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1319-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1353-->
+  > the call itself: [closing](../../calls/closing.md#the-price)

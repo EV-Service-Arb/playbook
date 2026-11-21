@@ -1,7 +1,7 @@
 # sourcing
 <!--half-life 5y-->
 
-we look for solo tradesmen short of work: they take our [split](splits.md) gladly, where a big company cheats on the count. facebook marketplace finds one within the hour when a job is waiting; the area's facebook contractor groups, craigslist ads, cold calls to a weak business profile and SMS blasts fill the bench. a trade nobody advertises is looked for on Nextdoor, or asked for in the groups. a contractor who turns unsure while being pitched gets a call straight away, and before his first job he is vetted on licensing, equipment, skill and reliability.
+we look for solo tradesmen short of work: they take our [split](splits.md) gladly, where a big company cheats on the count. we reach dozens, not a handful, across several places. facebook marketplace finds one within the hour when a job is waiting; the area's facebook contractor groups, instagram, craigslist ads, cold calls to a weak business profile or down a list of the area's licensed contractors, and SMS blasts fill the bench. a trade nobody advertises is looked for on Nextdoor, or asked for in the groups. a contractor who turns unsure while being pitched gets a call straight away, and before his first job he is vetted on licensing, equipment, skill and reliability.
 
 ## who
 
@@ -14,6 +14,11 @@ we look for solo tradesmen short of work: they take our [split](splits.md) gladl
 
 ## where
 
+- (?) reach 30–50 contractors, not four, across several places: it is an hour or two of work
+  - (?) *locksmith*: Eric, 2026-11, to Goodness, in Canada, who spoke to four and couldn't get one to take his calls: facebook posts by locksmiths, Indeed, an actual hire, Nextdoor. a member adds Thumbtack, which Canada doesn't have
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1716-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1805-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1840-->
 - (?) facebook marketplace finds a contractor within the hour, when everyone on it is messaged
   - Dante found contractor in 10m on Facebook marketplace
     customer had few hours tops, so he had to spam everyone to clutch it.
@@ -28,6 +33,12 @@ we look for solo tradesmen short of work: they take our [split](splits.md) gladl
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=393-->
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=425-->
   > what the groups show of a trade before it is chosen: [market](../market.md#how-a-market-is-judged)
+- (?) instagram finds contractors who answer the phone quickly, many of them not on google business at all: filter for small accounts whose photos show good work
+  - (?) Connor, 2026-11, in a pinch: about 250 followers and 15 posts; have `Claude Cowork` scrape them
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13132-->
+    <!--2026-11-20 Connor says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13176-->
+    <!--2026-11-20 Connor says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13210-->
+    <!--2026-11-20 Connor says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13240-->
 - (?) a trade nobody advertises in the groups is looked for on Nextdoor first, or with a post of our own in the groups
   - (?) *pest control*: none advertising in the Seattle, Washington or Spokane groups; Nextdoor his best bet, and a post of his own "would probably bring a ton" — Marcus Milan, 2026-09
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=732-->
@@ -43,6 +54,12 @@ we look for solo tradesmen short of work: they take our [split](splits.md) gladl
   - (?) Marcus Milan, 2026-10: scroll to the bottom of the trade's google listings: one ranking ~30th with a profile not filled out can't be getting many calls, and will take your jobs
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=425-->
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=448-->
+- (?) a list of every licensed contractor in the area, dialled early in the morning when they pick up, lands one; voicemails do nothing
+  - (?) *HVAC*: `Claude` listed 400 "S1" contractors in Everett's area (few exist, mostly big companies; search the niche ones). he dialled all 400 in two days, 7:30–10 a.m. about five were interested. the one who called back took six jobs the next day
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7536-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7560-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7598-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7632-->
 - (?) a craigslist ad for plumbers reaches the solo ones
   - (?) a craigslist ad found the solo plumber
     <!--2026-10-23 gmbpp member ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3614-->

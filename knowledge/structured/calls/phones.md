@@ -1,7 +1,7 @@
 # phones
 <!--half-life 2y-->
 
-each profile's calls land on a `CallRail` tracking number routed to a `Quo` number, which whoever takes the calls answers from their own computer. a spam filter on the number or on the phone can drop real calls without a trace: check both when calls stop.
+each profile's calls land on a `CallRail` tracking number routed to a `Quo` number, which whoever takes the calls answers from their own computer; until the profile verifies, its number costs as little as it can. a spam filter on the number or on the phone can drop real calls without a trace: check both when calls stop.
 
 ## the number
 
@@ -17,6 +17,11 @@ each profile's calls land on a `CallRail` tracking number routed to a `Quo` numb
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=574-->
   - (?) `Hushed` also works for this — `David`
     <!--2026-09-18 David says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2192-->
+- (?) until the profile verifies, its number costs as little as it can: a `Twilio` number at a dollar each, or the `CallRail` number bought only once it is seen to verify
+  - (?) Everett, 2026-11: `Twilio` numbers at a dollar each, so a failed verification attempt costs nothing; all 16 of his *HVAC* profiles instant-verified on them
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9793-->
+  - (?) Eric, 2026-11: get to the step just before the verification options and see whether it verifies before buying the tracking number: pumping out 20 a day, he spent thousands a month on `CallRail`
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1555-->
 
 ## spam filters
 

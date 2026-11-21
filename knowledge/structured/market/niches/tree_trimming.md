@@ -1,13 +1,19 @@
 # tree trimming
 
 high ticket and fast to convert, often paid by insurance, but the commission is lower, ~10–20%, and
-nobody here knows yet how easy the labour is to find. that it verifies instantly:
-[instant](../../profile/verification/instant.md).
+nobody here knows yet how easy the labour is to find. its profiles verify instantly. where it is
+weighed: [niche](../niche.md#how-it-verifies).
 
 ## the job
 
 - (?) (!) high ticket, fast converting: a tree down on a house is paid for on the spot, often by insurance
   - (?) (!) *tree trimming*: high ticket and fast converting — a tree down on a house gets called in and paid for on the spot, often by insurance — Eric
+    <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1322-->
+
+## verification
+
+- (?) its profiles instantly verify right now
+  - (?) Eric, 2026-10
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1322-->
 
 ## the split

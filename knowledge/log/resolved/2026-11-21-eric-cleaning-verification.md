@@ -40,3 +40,14 @@ it among the trades that verify instantly.
 
 What would settle it: a cleaning profile created after November 12 instant-verifying on a personal
 gmail, or several more members sent to video.
+
+## The 2026-11-19 call
+
+| who, when | says | link |
+|---|---|---|
+| Eric, 2026-11-19 | house cleaning and pressure washing "can also be instant"; the gmail is the only important thing, an active one, two weeks being enough | [3:13](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=193), [23:45](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1425), [25:02](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1502) |
+| Connor, 2026-11-19 | every house cleaning and landscaping profile needed a video, despite `CallRail` numbers, new emails and spoofed locations | [2:45:16](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9916), [2:46:12](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9972) |
+
+Neither settles it. Eric's "can" is the instant-first half of the claim, on a good gmail; Connor's are
+more profiles sent to video, but on new emails, which by Eric's own condition on the same call are not
+yet good ones. The claim stands: plan for the video, try instant first on a real person's personal gmail.

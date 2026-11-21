@@ -1,6 +1,6 @@
 # hired
 
-What members have reported about paying other people to collect reviews: finding them, facebook marketplace, vetting, pay and how their reviews stuck. hiring them is a numbers game; strangers paid to leave one review each off an ad: [paid](paid.md).
+Paying other people to collect reviews: finding them (flyers inside the dorms, craigslist, facebook marketplace), vetting them, keeping the few who collect, pay and how their reviews stuck. Hiring them is a numbers game, and paying only for reviews that are up keeps it cheap; strangers paid to leave one review each off an ad: [paid](paid.md).
 
 ## finding
 
@@ -10,16 +10,38 @@ What members have reported about paying other people to collect reviews: finding
   - (?) John, who used hired people campaigning for him in public, on Luca's method: hiring is a numbers game, and the paid ad works better; Eric: hiring is a little hard, you have to try, John has done it more than anybody
     <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=3023-->
     <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2999-->
+  - (?) Goodness, in Canada, can't get reviews himself, and the reviewers he hires give two or three and vanish. Everett: a numbers game, expect a hundred people before one is consistent; $3 for a review that sticks beats $5–10 online
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14696-->
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14723-->
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14750-->
   > the paid ad: [paid](paid.md)
 - (?) `Indeed` reaches local applicants: almost 40 put in resumes for one member, after some trouble getting approved there; Eric: to hire someone, go on Indeed
   <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1299-->
   <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=3155-->
 - (?) craigslist for a reviewer in a city you don't live in: 10 people said yes, all 10 bailed
   <!--2026-09-18 gmbpp member ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4242-->
+- (?) (!) flyers taped up inside the dorms recruit student collectors: "if you want easy money, text me", to a `Google Voice` number, not your own. inside the residence halls they stay up for weeks; outside they are gone the next day
+  - (?) Everett: 25 flyers brought about 90 texts in 7 days, and they sit about 30 days. those outside buildings, in the library and on the rec centre door were gone the next day
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3436-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3501-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3527-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5164-->
+  > where: the second door of the entrance airlock, on the right, or lounges and laundry rooms, taped with high-grip duct tape on all four corners. never over the automatic-door button, not on bulletin boards, not at 2 a.m. colour prints work better than black and white
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5231-->
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5261-->
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5323-->
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5347-->
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5398-->
+  <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5427-->
+  <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5511-->
+  <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5610-->
 - (?) (!) aim the Craigslist ad at college students, not older people, and have each leave one review first: Derick Parsons went through ~15 to find his, most of the trouble from older ones
   <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4024-->
   <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4056-->
   <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4091-->
+  - (?) for an operator who won't approach students himself, as Alan at 55: a member's survey ad on Craigslist or Facebook aimed at teenagers and young adults asks each who answers to hit up 20 to 40 people. two said yes and are pending, and the ad still brings a review here and there
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5047-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5096-->
 - (?) the Craigslist ad, Derick Parsons': broad (flyers, business promotion, sign flipping); when they call, that job is filled, reviews at $5 instead. the gigs section is free for college kids, business categories $75. look like a business and ask why they want the job: one who floats over it is likely abroad, aggression about onboarding a red flag. onboard on one sacrificial profile
   <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4236-->
   <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4272-->
@@ -50,6 +72,35 @@ What members have reported about paying other people to collect reviews: finding
 
 - (?) vet a remote reviewer by the accounts the reviews come from: no profile picture and no other reviews means fake. let a new one leave 4–5, then pause until those stick — Eric
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2967-->
+  - (?) Muhammad lost $500 to a reviewer who made his own gmails and left 60–70 reviews a day across all six of his profiles. he now clicks through the reviewers' profiles: "if all of them have one review only, something is wrong"
+    <!--2026-11-20 Muhammad ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4339-->
+    <!--2026-11-20 Muhammad ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4396-->
+    <!--2026-11-20 Muhammad ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4493-->
+- (?) log the IP of each QR scan to catch one person posting as many; a campus network shared by many real students has not taken reviews down
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-one-network.md)
+  - (?) Muhammad: his QR page records the IP of everyone who scans it, and Claude flags repeats. "50 reviews all from the university's IP will come down sooner or later"
+    <!--2026-11-20 Muhammad says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4455-->
+    <!--2026-11-20 Muhammad says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4521-->
+  - (?) Everett has never asked anyone off the campus wifi, and in a month and a half none came down
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4396-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4419-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4493-->
+
+## keeping them
+
+- (?) few of those who answer collect: screen them with one question, send the instructions and an example video, then push the ones who do every day
+  - (?) Everett opens with "are you good at talking to people?". of maybe 50–60 who texted, five actively get reviews; earlier in the call he counts about 15 who get him reviews now. the example video takes three phones
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5853-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5881-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5912-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5939-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3769-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4035-->
+  - (?) Everett: students need a daily push, and a threat to hand the QR code to someone else gets three to 10 more. the flyer recruits got ~25 reviews in three to five days while he was away
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9320-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9350-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9388-->
+
 ## pay
 
 - (?) a collector is paid a few dollars a review; students come cheapest
@@ -62,6 +113,15 @@ What members have reported about paying other people to collect reviews: finding
   - (?) Chris, Sydney: a ~$40 Gumtree ad found university students at $5 a review; ~$8,000 spent with them over three to four months
     <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1311-->
     <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1343-->
+  - (?) Everett, 2026-11-19: the flyer says $2 and he pays $3, $3–4 "depending how broke the school is"
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3947-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3979-->
+- (?) pay only for reviews that are up: duplicates come down and aren't paid, and the instructions say so in caps. pay the first time the same day, weekly after
+  - (?) Everett
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4216-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4238-->
+  - (?) Muhammad pays same-day only the first time, so they don't take him for a scammer, then weekly
+    <!--2026-11-20 Muhammad ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4339-->
 - Derick Parsons with a bonus for review-getter
   basically 50$ bonus for getting a good review volume&quality in a week.
   Says works same way as giving out a gold star to kindergarteners.
@@ -90,3 +150,5 @@ What members have reported about paying other people to collect reviews: finding
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=273-->
   <!--2026-10-23 gmbpp member ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=167-->
   <!--2026-10-23 gmbpp member ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=246-->
+  - (?) Alan pays $5 a review and half drop off, so really about $10 a review
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5019-->

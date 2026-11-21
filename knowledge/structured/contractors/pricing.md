@@ -1,7 +1,7 @@
 # pricing
 <!--half-life 5y-->
 
-the tech prices the job in the house, upselling from the minimum quoted on the [call](../calls/closing.md#the-price). we take the pricing off his head: a calculator over our price sheet, or someone other than the tech doing the quotes.
+in plumbing and HVAC the tech prices the job in the house, upselling from the minimum quoted on the [call](../calls/closing.md#the-price); detailing and house cleaning are priced on the call. we take the pricing off his head: a calculator over our price sheet, or someone other than the tech doing the quotes.
 
 ## upsell
 

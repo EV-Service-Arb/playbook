@@ -58,3 +58,17 @@ November 16 video already finds garage door repair closed off in Fort Worth, kep
 What would reopen it: Eric still lists detailing among the fast trades in October, so if the owner
 wants the quickest first money over the best trade to build on, detailing-first is that case; and an operator who already
 runs a trade and can carry a slow close, Eric's own case in May, or who wants to run a service business rather than a marketing one, his August case, is the case for a high-ticket untapped one.
+
+## The 2026-11-19 call
+
+| who, when | says | link |
+|---|---|---|
+| Eric, 2026-11-19 | with a friend and Everett, points Connor at plumbing; his own path to 30K went from detailing, a business he had, to plumbing | [42:13](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2533), [42:42](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2562) |
+| Eric, 2026-11-19 | 17 profiles and 60 reviews a day take you further than the best areas, locations and niche with a profile that gets five reviews in a month | [41:42](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2502), [42:13](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2533) |
+
+The start stands: plumbing again, and his own path from detailing to plumbing is the momentum case of
+`### other` run to its end. What he adds qualifies the pick without moving it: which trade counts for
+less than how many profiles and reviews go into it, now a bullet of its own in `market/niche.md`'s
+`## the starting trade`. It is not against his 2026-11-13 word that the area is the biggest
+differentiating factor: that compares one profile at one review count across areas, this an operation's
+volume against one well-placed profile.

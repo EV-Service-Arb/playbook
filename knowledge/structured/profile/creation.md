@@ -1,19 +1,30 @@
 # creation
 <!--half-life 1y-->
 
-what members and sources have reported about getting a profile created and handed to us. the
-missing-place route: [missing_place](verification/missing_place.md).
+a profile is created by someone else on their own account and phone, then handed to us: strangers
+asked in person, people paid off facebook or craigslist, a friend. photos stuck processing don't hold
+up its reviews. the missing-place route: [missing_place](verification/missing_place.md).
 
 ## who creates it
 
 - (!) the mall method: walk up to strangers and ask them to create the GMB on their own account, then add you as owner — `Ryan` got 100+ detailing profiles this way
   > only works for categories that verify instantly. ~30/hr of profiles, per two people who have run it
   <!--2026-09-18 Ryan D ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1967-->
-- (?) people paid off facebook create the profile on their own account and hand it over, for a small payment
+  - (?) Everett, 2026-11, bought no gmails: two friends at school, then people in the dining hall ("usually someone alone"), created each *HVAC* profile on their own Google account and phone, with a `Twilio` number. he makes himself admin, then primary owner after seven days, and removes them. all 16 verified instantly. to ask: sit down, be friendly, and stress there are no strings attached
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14027-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14060-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14129-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14187-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9765-->
+    <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14323-->
+  > primary owner against Eric's manager, never owner: [access](#access)
+- (?) people paid off facebook or craigslist create the profile on their own account and hand it over, for a small payment
   - facebook marketplace listing, $25 for a "small job", walk them through it — takes them two minutes, and a happy one brings friends and family for four or five more
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1913-->
   - (?) Eric, 2026-11: the quickest way to more profiles; he has it down to $10
     <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=466-->
+  - (?) Eric, 2026-11: the people who answered John's craigslist post to do reviews will also make a profile for him if he asks
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=482-->
 
 - (?) a friend instant-verifies the profile on his main gmail at his address, then adds your new gmail as primary owner: nothing to warm
   <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6511-->
@@ -39,6 +50,18 @@ missing-place route: [missing_place](verification/missing_place.md).
   - (?) `Lamarious Thomas` put 20 reviews on a new profile the day after creating it, before the SEO, and its ranking hasn't gone up; Eric: it doesn't really matter what order you go in
     <!--2026-11-13 Lamarious Thomas ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=538-->
     <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=581-->
+
+## photos
+
+- (?) photos stuck processing don't hold anything up: start the reviews, and after more than a day delete and re-upload them, or add them as a customer through suggest an edit → add photos, which goes through within ~10 minutes. the profile strength bar doesn't matter
+  - (?) Eric, 2026-11, to Sanny, whose 10 new *detailing* profiles had every photo pending days later: stuck processing is normal. with too many profiles off one gmail, some won't go through
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=987-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1026-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1060-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1102-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1149-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1180-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1257-->
 
 ## the site
 

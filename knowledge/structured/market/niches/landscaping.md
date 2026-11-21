@@ -1,6 +1,6 @@
 # landscaping
 
-high ticket, usually high search volume, a little easier to verify than plumbing, a printed logo passing its video, and competition far below plumbing's: in the same city its
+high ticket, usually high search volume, verified by video, where a printed logo passes and the profile stays up, and competition far below plumbing's: in the same city its
 top 3 carry far fewer reviews, and in Los Angeles none has a keyword in its name, so the searches feed
 many profiles. a couple of big contracts can make a month, and Eric's best student makes hundreds of
 thousands a month on it, but on construction, where material is most of the job, our take is a thin
@@ -28,10 +28,15 @@ goes slow in winter: [niche](../niche.md#a-second-trade). how high ticket weighs
 
 ## verification
 
-- (?) verifies a little easier than plumbing or HVAC, as a lot of the high-ticket trades do
+- (?) it verifies by video, and a profile so verified stays up. through August it was said to verify a little easier than plumbing or HVAC; HVAC now verifies instantly
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-how-trades-verify.md)
+  - (?) Connor, 2026-11: every landscaping profile since his first detailing ones needed a video, despite `CallRail` numbers, new emails and spoofed locations; none has ever been taken down
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9916-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9972-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10274-->
   - (?) Eric, 2026-08: *plumbing* and *HVAC* are a little harder to verify than *landscaping*; a lot of the higher-ticket niches are a little easier to verify on Google
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=232-->
-  > plumbing's: [plumbing](plumbing.md#verification)
+  > plumbing's, and every trade's now: [niche](../niche.md#how-it-verifies)
 - (?) a printed logo on the door passes as the video's signage
   - (?) `Connor`, who owns no store: a printed picture of the logo on the door passed for a bunch of his landscaping pages, where the same failed for his house cleaning and pressure washing
     <!--2026-11-13 Connor ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=647-->

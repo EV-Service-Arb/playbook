@@ -2,7 +2,7 @@
 <!--half-life 1y-->
 
 google suspends a profile it does not trust: a fresh gmail, a NAP shared with another profile, content that does not fit the trade, a young profile changing what identifies it. a suspended
-profile is appealed at once, on its own, with documents that match it, which win back a video-verified profile far more often than an instant one. registering the business: [registration](suspension/registration.md).
+profile is appealed at once, on its own, with documents that match it, which win back a video-verified profile far more often than an instant one; google support can give a taken-down one the video option back. registering the business: [registration](suspension/registration.md).
 
 ## the gmail
 
@@ -34,6 +34,8 @@ profile is appealed at once, on its own, with documents that match it, which win
 
     oh, and apparently you can keep the name be the same, and just spread out domains later
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2558-->
+  - (?) Everett, 2026-11: a different URL per profile, mostly the same site reworded with different keywords
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14847-->
 - must use .com domains
   <!--2026-11-18 Valera says 1σ-->
   - Matt Gazda: `.com`, never `site.co.ai`, `.it`, `.net`: zero trust signals with google. people he knows lost every profile over the domain, and he has seen profiles wiped in a day for it
@@ -46,6 +48,8 @@ profile is appealed at once, on its own, with documents that match it, which win
   - Matt Gazda: the same NAP on two or three profiles gets them suspended, and they would not rank anyway
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=133-->
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=167-->
+  - (?) Connor, 2026-11: his first 20 *detailing* GMBs, on three emails and all on one phone number, were all taken down within a month
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10215-->
 
 ## what is on the profile
 
@@ -116,5 +120,10 @@ profile is appealed at once, on its own, with documents that match it, which win
   > they work on a video-verified profile far better than on an instant one: [verification](verification.md#routes)
 - (?) name and address on those documents must match the profile being appealed
   <!--2026-09-18 says 1σ https://chatgpt.com/share/6aacb045-ac9c-83eb-a97d-8624c616a763-->
+- (?) a taken-down profile can win back the video option through google support, by persisting: messages back and forth, with documents
+  - (?) Connor, 2026-11: got it once, for a *detailing* profile: about 10 messages plus documents, and the option a week later
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10043-->
+  - (?) Everett, 2026-11: gave up after a 16-email thread of the same questions
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10078-->
 - (?) appeal each profile on its own, with documents whose name and address match it. a won gmail appeal does not bring its profiles back // inferred
   <!--2026-10-30 agent says 1σ-->

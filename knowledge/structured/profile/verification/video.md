@@ -1,6 +1,8 @@
 # video
 
-what members and sources have reported about verifying a profile by recorded video.
+a recorded video verifies a profile meant to last. most fail on signage: a framed logo usually passes,
+and a storage unit dressed as an office does. while set up at the location, shoot three. anything edited
+or injected into the footage works for weeks at most.
 
 ## phones and names
 
@@ -9,6 +11,9 @@ what members and sources have reported about verifying a profile by recorded vid
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1603-->
 - (?) same phone number across profiles is fine; the business *name* has to differ at least slightly — Eric
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1603-->
+  - (?) Eric, 2026-11: a second, video-verified profile on another's number is totally fine
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1620-->
+  > Connor's first 20 *detailing* profiles, on three emails and one phone number, were all taken down within a month; they were instant and crowded onto three emails, so the number alone isn't isolated: [suspension](../suspension.md#nap)
 
 ## gmails
 
@@ -24,6 +29,24 @@ what members and sources have reported about verifying a profile by recorded vid
   - (?) `Devin Grandt`, who shoots address videos in person for others, for pay, shows what google asks for, literally: the street sign, the address on the wall, the office, the dashboard, business cards, the brand on the computer screen, on the front door he unlocks and on the truck he opens
     <!--2026-11-13 Devin Grandt ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=4239-->
     <!--2026-11-13 Devin Grandt ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=3982-->
+- (?) a storage unit passes dressed as an office: the logo framed or on a banner filling the shot, a street and suite number outside, a desk inside with business cards, invoices, a CRM on the laptop and a phone. a small, bare one doesn't
+  - (?) Alan, 2026-11: every *plumbing* and *HVAC* storage-unit video went straight through; one *roofing* failed, and he redid it. two printed logos in frames filling most of the shot, each printed landscape as big as 8x11 allows, in black frames for ~$10 off Amazon. a printed street number by the 24/7 keypad, where the building had none. a suite number outside, made with AI to look like brushed steel. inside: another framed logo over a $50 fold-out desk, a camping chair, business cards, three dummy invoices with different names and real-looking jobs and tax, a dummy CRM on the laptop, a ~$20 eBay desk phone, and tools. it can be just a corner of the facility. a 15 by 10 ft unit cost ~$30 for the month plus a $30 setup fee and carried three or four GMBs. his videos run 3–4 minutes, though 1–2 is said to be good
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=603-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=636-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=675-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=711-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=779-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=813-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=863-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=894-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=924-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=948-->
+    <!--2026-11-20 Alan ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=987-->
+  - (?) a member, 2026-11: one printed banner of the company and city in place of frames, covering the city with a small new print for each city; they went pretty well
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2611-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2652-->
+  - (?) Connor, 2026-11: his storage units are small and bare, and don't verify well
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=754-->
 - (?) (!) most failures are signage — Eric
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1500-->
 - (?) (!) a framed picture of the logo usually passes as signage: before recording, photograph it and ask `ChatGPT` or `Gemini` whether it passes as permanent signage for GBP verification, and fix it if not
@@ -72,6 +95,11 @@ what members and sources have reported about verifying a profile by recorded vid
   <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6582-->
   <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6606-->
   <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6635-->
+  - (?) Eric, 2026-11: the same service twice on one address is only insurance: the same video that fails often verifies the next time unchanged. three take about the time of one, five minutes more
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=267-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=603-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2652-->
+  > a second profile on one address can trip google's automatic suspension: [suspension](../suspension.md#the-address-and-the-rating)
 
 ## service-area video
 

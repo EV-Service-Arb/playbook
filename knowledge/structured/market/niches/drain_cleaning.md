@@ -1,8 +1,9 @@
 # drain cleaning
 
 plumbing's best sub-service to run on its own profiles: urgent, year round, $300–2,000 a ticket with
-no material cost, and the incumbents rank for it as plumbers. a name exact-matching `drain cleaning
-<city>`, primary category drainage service and ~20 reviews take #1. why it is the starting trade:
+no material cost, the high-ticket jobs mostly commercial, and the incumbents rank for it as plumbers. a
+name exact-matching `drain cleaning <city>`, primary category drainage service and ~20 reviews take #1.
+it verifies like plumbing, by video. why it is the starting trade:
 [niche](../niche.md#the-starting-trade).
 
 ## the job
@@ -11,6 +12,14 @@ no material cost, and the incumbents rank for it as plumbers. a name exact-match
   - ticket $300–2,000, no material cost; a drain job often upsells, a hydro-jet goes for $1,500 with his plumbers
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=97-->
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=129-->
+  - (?) Eric, 2026-11, on his own jobs: a single drain that needs snaking is about $300 and about 20 minutes for the plumber, who often upsells a hydro jet, charged at about $1,500; bad drains and commercial customers need it
+    <!--2026-11-20 Eric ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2354-->
+    <!--2026-11-20 Eric ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2382-->
+- (?) commercial customers bring most of the high-ticket drain work, restaurants above all: commercial areas may be worth targeting, untested
+  - (?) Eric: restaurants need the hydro jet all the time because of grease, and bring most of his high-ticket drain work; untested, a personal anecdote
+    <!--2026-11-20 Eric ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2408-->
+    <!--2026-11-20 Eric says 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2408-->
+    <!--2026-11-20 Eric says 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2439-->
 
 ## the market
 
@@ -21,7 +30,18 @@ no material cost, and the incumbents rank for it as plumbers. a name exact-match
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=258-->
   - to take #1 in Dallas: exact-match the name to `drain cleaning <city>`, primary category drainage service, ~20 reviews — Eric
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=258-->
+  - (?) Eric, 2026-11: "it is mostly ranking": nobody targets the drain cleaning keywords or the drainage service category, and being niched down lends some authority, so a drain profile outranks a plumber with more of it: "low-hanging fruit"
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2290-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2324-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2354-->
   > garage door repair, of about its ticket and urgency, is closed off in Fort Worth: [garage door](garage_door.md#the-market)
+
+## verification
+
+- (?) it verifies like plumbing, by video
+  - (?) Eric, 2026-11: drainage service verifies like plumber
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3311-->
+  > plumbing's: [plumbing](plumbing.md#verification)
 
 ## running it
 

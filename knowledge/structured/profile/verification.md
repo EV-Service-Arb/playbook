@@ -2,8 +2,8 @@
 <!--half-life 1y-->
 
 instant verification has a profile live soonest; video, a live call or the address is for one meant
-to last; it starts as a service area and moves to the address later, and one that can't get through is
-bought: [plumbing](../market/niches/plumbing.md#verification). the address on it is a commercial one. what members and sources have reported, across its routes:
+to last; the address goes on from the start, since a service-area profile has no good way onto one now,
+and one that can't get through is bought: [plumbing](../market/niches/plumbing.md#verification). the address on it is a commercial one. what members and sources have reported, across its routes:
 [instant](verification/instant.md), [video](verification/video.md), [live](verification/live.md),
 [SAB to PAB](verification/sab_to_pab.md), [missing place](verification/missing_place.md).
 
@@ -22,14 +22,24 @@ bought: [plumbing](../market/niches/plumbing.md#verification). the address on it
   - (?) a member, 2026-11: video, once cracked, is stronger: the profile lasts longer, is suspended less, and takes many edits, though not to the name or address
     <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6788-->
     <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6887-->
-- (?) start as a service area and move to the address later: an address straight away is hit or miss — [SAB to PAB](verification/sab_to_pab.md)
+  - (?) Connor, 2026-11: lost his instant *detailing* profiles in batches and switched to video; he has never had a video-verified *landscaping* profile taken down
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10240-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10274-->
+  > Everett's 16 instant *HVAC* profiles have none suspended so far, about a month in
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9916-->
+- (?) put the address on from the start: there is no good way to add one to a service-area profile now, and an instant verification takes an address as readily as a service area. one already up as a service area: [SAB to PAB](verification/sab_to_pab.md)
   resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-2026-11-revisions.md)
-  - (?) Eric, 2026-11: a location is hit or miss; starting as a service area and upgrading to an address is far easier, and works
-    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1990-->
-    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2041-->
+  - (?) Eric, 2026-11-19, to John on nine service-area *HVAC* profiles: no good way to add an address now, they will probably all be asked to re-verify; address and service-area profiles verify the same when instant, so put the address on from the start
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=416-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=450-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=482-->
+  > his 2026-11-05 answer, since revised: a location is hit or miss; starting as a service area and upgrading to an address is far easier, and works
+  <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1990-->
+  <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2041-->
+  > an address profile also ranks far easier: [ranking](../ranking.md#address)
   > his September answer, since revised, to "SAB-then-convert after a few weeks, or storage-unit video straight away?": no reason to wait, fail a video deliberately, then take the live call immediately. everything he has video-verified has stuck unless the whole account went down
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3107-->
-- (?) a failed video is not the end of the listing. the next attempt is live verification, not a second identical video; failing live, verification as a service area, converted to the address after // inferred
+- (?) a failed video is not the end of the listing. the next attempt is live verification, not a second identical video; failing live, verification as a service area, though converting it to the address has no good way now: [SAB to PAB](verification/sab_to_pab.md) // inferred
   <!--2026-10-30 agent says 1σ-->
   - (?) Eric, 2026-11: a deleted or botched video — submit a garbage one, fail it, and open a ticket for a live video
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2934-->

@@ -33,6 +33,8 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=130-->
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=229-->
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=262-->
+  - (?) Eric, 2026-11: don't put profiles in the middle of nowhere
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2502-->
   > his July floor, since revised: at least ~6,000 people/sq mi, below that searches and calls are too thin
   <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=67-->
   > Marcus Milan, 2026-09, scores trades on Bellevue, WA, ~150k people at ~4,500 per square mile, as his control city
@@ -71,6 +73,10 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=199-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=492-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=527-->
+  - (?) Eric, 2026-11-19: searches are relative to the competition, "the biggest thing". Goodness got three leads in his first two days listing in cities with "literally zero business profiles", on a couple of reviews, at maybe 200–300 searches a month; for more competitive services, look for at least 1,000. a small dense city differs from a big one at the same volume, since a profile ranks only within a radius
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1909-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1946-->
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=1970-->
   - (?) Eric, 2026-11: 1K+ relevant searches a month, with one or two of the top three under 100 reviews: an area hitting both, "you will be golden"
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=426-->
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=493-->

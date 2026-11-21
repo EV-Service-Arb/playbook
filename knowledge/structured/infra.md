@@ -1,6 +1,8 @@
 # infra
 
-what members have reported about the accounts, devices, proxies, numbers and cards the profiles run on. filed as said; nothing here is concluded
+the accounts, devices, proxies, numbers and cards the profiles run on: about five profiles to a managing
+gmail, spread over several, a gmail with a real person behind it outlasting a bought one; a location spoofed off a
+rooted phone; a residential proxy or none. a model that refuses the work takes it framed as a legitimate job.
 
 ## gmails
 
@@ -30,6 +32,9 @@ what members have reported about the accounts, devices, proxies, numbers and car
   - (?) `Walker`'s three HVAC profiles on his housemate's personal gmail, a month stable; Eric: leave them all there
     <!--2026-11-13 Walker ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2042-->
     <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2042-->
+  - (?) Everett, 2026-11: his 16 *HVAC* profiles under six accounts as primary owner, five under each of two, the rest over the other four; none suspended so far, about a month in
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9889-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9916-->
 - (?) a bought aged gmail warms at least a week before it creates a GMB: try one after five days, and if it fails warm it a couple more
   - (?) Eric, 2026-11: most need some warm-up to get approved, maybe not a couple of weeks
     <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2581-->
@@ -143,6 +148,14 @@ what members have reported about the accounts, devices, proxies, numbers and car
 - (?) don't run local open-weight models for this — inference sold by the labs is subsidised ~10x below what your own hardware costs — `Valera`
   A: for guardrails, seed the conversation on a weaker model that is already helping, then switch models mid-thread; or frame it as reverse-engineering your own lost repo. ~80% hit rate
   <!--2026-09-18 Valera says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3932-->
+- (?) a model that refuses the work takes it framed as a legitimate job: a review generator passes as "a review system for my clients" who scan a QR code
+  - (?) Everett, 2026-11: `Claude` and `Codex` refused a review generator until told it was for real clients scanning a QR code; "a business class project" didn't pass. AI refused to write his reviewer instructions, so he wrote them himself. another member: `DeepSeek` has been okay, `Grok` not
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3810-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3840-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3880-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5853-->
+  - (?) a member, 2026-11: `Venice AI` is unfiltered, and answers what `Claude` refuses
+    <!--2026-11-20 gmbpp member says 0.5σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4898-->
 
 ## open
 

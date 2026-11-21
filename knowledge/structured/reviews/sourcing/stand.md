@@ -1,6 +1,6 @@
 # stand
 
-What members have reported about collecting reviews in person: tables, venues, timing, drinks, pitch and QR codes.
+Collecting reviews in person: tables, venues from campus dining halls to flea markets, timing, drinks and raffles, pitch, and the QR codes or NFC cards that take people to the review, spread over several profiles.
 
 ## results
 
@@ -28,10 +28,20 @@ What members have reported about collecting reviews in person: tables, venues, t
 - (?) some universities have free tabling space for non-affiliated organisations — check the policy first
   > worst case is being asked to move. two people report just leaving when security showed up
   <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2678-->
+  - (?) Connor paid $100 to reserve a campus table to be safe; he has been kicked off campuses before ("you can't promote here"). campuses beat gyms
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6354-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6377-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6399-->
 - (?) stand goes outside the campus, near the entrance; a bus stop next to the college is the best spot
   <!--2026-09-18 Ryan D ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1675-->
 - (?) a small college went far better than a big one — `Glenn` got 23 in ~2 hours there
   <!--2026-10-23 Glenn ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4563-->
+- (?) (!) a campus dining hall: ask literally everyone; groups at a table go along through "near peer pressure"
+  - (?) Everett, two hours a day for three days: about 200 reviews, nearly all of his, and none he knows of has come down
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7308-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=7352-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=8767-->
+  > how fast they can go on: [rate limits](../rate_limits.md#per-day)
 
 ## high schools
 
@@ -110,6 +120,20 @@ What members have reported about collecting reviews in person: tables, venues, t
 - (?) people holding a free drink will wait while they write: `PP` has them ask chatgpt for the text, prompted differently each time so no two match
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4913-->
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4940-->
+- (?) on a campus, many guys are suspicious of a drink stand while women are fine; go at prime time, around 1 pm, as everyone walks to class
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=5995-->
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6022-->
+  > at a high school it went the other way: [high schools](#high-schools)
+
+## raffles
+
+- (?) a raffle draws like free drinks: a big sign, "fill out a quick survey to be entered for a raffle to win $200". actually pay a first winner partway through, so the hall hears of it
+  - (?) Connor: at 60 reviews the $200 is about $3.50 a review; after about 40, pay the first winner $100, so they tell their hall
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6070-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6116-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6148-->
+  > a "$500 giveaway!" Connor posted on Facebook Marketplace got no inquiries: it "looked sus"
+  <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6294-->
 
 ## pitch
 
@@ -120,6 +144,9 @@ What members have reported about collecting reviews in person: tables, venues, t
   The Little Volcano walked a college campus with it; there is no brother
   <!--2026-10-16 Kit Volcano ran 2σ https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1863-->
   <!--2026-10-16 Kit Volcano ran 2σ https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=1891-->
+- (?) the plain truth works too: Everett tells students "I'm an HVAC contractor, I get jobs for people in that industry, outsource them and take a bit"
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4108-->
+  <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=4132-->
 
 ## QR codes
 
@@ -128,5 +155,16 @@ What members have reported about collecting reviews in person: tables, venues, t
   <!--2026-10-23 Glenn ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5837-->
   <!--2026-10-23 Glenn ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5666-->
   <!--2026-10-23 Glenn ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5784-->
+- (?) NFC Google cards open the review screen at a tap, which people trust more than a QR code. point them at the Google review page, not the survey site
   > `PP`: people distrust QR codes, NFC cards do better
   <!--2026-10-23 PP says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=5756-->
+  - (?) Connor: they reprogram in about 30 seconds; the price is unclear in the transcript
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13548-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13635-->
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13684-->
+- (?) spread a stand's reviews over several profiles: one profile's QR code for about 20, by feel, then the next person gets another's. with several people collecting at once, spread over more profiles
+  - (?) Everett
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=8937-->
+    <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=8971-->
+  - (?) Connor
+    <!--2026-11-20 Connor ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=13517-->

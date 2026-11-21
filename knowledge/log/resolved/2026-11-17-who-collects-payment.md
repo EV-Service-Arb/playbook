@@ -13,6 +13,7 @@ Eric collecting himself early, and `staff/va.md` having VAs take payments.
 | member, 2026-09-25 | the contract: he handles the fee, we never invoice or handle the customer | [1:41:25](https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=6085) |
 | Eric, 2026-09-18 | VAs take payments and talk to customers | [31:15](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1875) |
 | Marcus Milan, 2026-10-20 | at the ~$30k a month profit he says he runs at, the customer pays the contractor, who pays him his cut: $1,750 by Zelle six days after a job | [0:34](https://www.youtube.com/watch?v=a7fC901L5ss&t=34), [1:38](https://www.youtube.com/watch?v=a7fC901L5ss&t=98) |
+| Everett, 2026-11-19 | HVAC, a month in: always take the payment yourself. his first contractor took it at the job and passed on only the service fee, $750 charged on a job he had down for $150; no agreement. his liability is covered by an AI-written agreement putting the blame on the contractor, and his fee on top of the contractor's price needs him to hold the money | [1:50:49](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6649), [1:51:18](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6678), [1:51:41](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6701), [1:55:18](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=6918) |
 
 ## Conclusion
 
@@ -27,3 +28,10 @@ exists. Past it the two ways coexist. The contractor collecting keeps the liabil
 incentive, and our cut comes after, on his word, checked by calling his customers; collecting ourselves
 holds the money and puts the job under our brand. What would decide between them: how often a cut comes
 in short or late against what a claim on a job under our name costs. Nobody has given either.
+
+On the 2026-11-19 call Everett collects from the start, as Eric did, and says always. It is the same
+rule's riskier side, not a third position: he puts the liability back on the contractor with an
+agreement, and his skimmed job is the price of the other side run without one, his contractor collecting
+and nobody calling the customer after. So the bullet names both ways with what each buys, and keeps
+Eric's threshold as the safe way in rather than the point where collecting ourselves begins. What would
+decide it is unchanged.
