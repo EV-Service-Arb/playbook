@@ -68,7 +68,7 @@ this list does not.
   - [2026-09-18](https://chatgpt.com/share/6aacb045-ac9c-83eb-a97d-8624c616a763)
 
 ### What pulling has cost
-- what the recordings show, as `playbook watch` read it: 43 recordings, $7.96 in all
+- what the recordings show, as `playbook watch` read it: 46 recordings, $9.67 in all
 
 ### No puller reaches these
 Said in the classroom, listed so `playbook pull skool` stops asking.
