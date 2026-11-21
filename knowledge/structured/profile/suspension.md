@@ -61,23 +61,33 @@ profile is appealed at once, on its own, with documents that match it, which win
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1472-->
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2864-->
     <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1472-->
-- only US IPs work on the profile: no offshore SEO, no `Fiverr`
-  - Matt Gazda: do it yourself
-    <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=98-->
+- (?) whoever works on the profile logs in from the US or Canada, VPN or not, and from any state; an offshore login, a Philippine VA's or a `Fiverr` seller's, does more harm than good
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-us-ip-only.md)
+  - only US IPs work on the profile: no offshore SEO, no `Fiverr`
+    - Matt Gazda: do it yourself
+      <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=98-->
+  - (?) Eric, 2026-11: a VPN to manage a U.S. profile from Canada makes no difference, and logging in from another state is no concern; a Filipino VA logging in from a Philippine IP does more harm than good
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2797-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2895-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=418-->
 
 ## changes
 
-- (!) leave a young profile's NAP and website domain alone; photos, posts, products, chat and citations change freely
-  > a name change that cannot wait touches a small part of the name: `landscaping of Arizona` → `flourish landscaping of Arizona`
-  - Matt Gazda: NAP and domain are the highest trust signals google reads. the first 6 months, the first year to be careful; his slide says 4 months
-    <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=268-->
-    <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=301-->
-  - (?) Eric, 2026-11: opening hours changed with reviews coming in make no difference
-    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=948-->
-  - (?) Eric, 2026-11: never rename a profile, it typically triggers re-verification; Chris's two, two to three months old, renamed to the city and "Plumber", vanished and brought no lead
-    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1829-->
-    <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1743-->
-    <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1802-->
+- (?) on a young profile the name, the address and the domain stay alone; its phone number changes without trouble on a video-verified one, untried on an instant one. photos, posts, products, chat, citations and opening hours change freely
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-young-profile-phone.md)
+  - (!) leave a young profile's NAP and website domain alone; photos, posts, products, chat and citations change freely
+    > a name change that cannot wait touches a small part of the name: `landscaping of Arizona` → `flourish landscaping of Arizona`
+    - Matt Gazda: NAP and domain are the highest trust signals google reads. the first 6 months, the first year to be careful; his slide says 4 months
+      <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=268-->
+      <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=301-->
+    - (?) Eric, 2026-11: opening hours changed with reviews coming in make no difference
+      <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=948-->
+    - (?) Eric, 2026-11: never rename a profile, it typically triggers re-verification; Chris's two, two to three months old, renamed to the city and "Plumber", vanished and brought no lead
+      <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1829-->
+      <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1743-->
+      <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1802-->
+    - (?) Eric, 2026-11, asked by Alan, who put the wrong number on his video-verified *plumbing* profile: the phone number is not a big deal
+      <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=572-->
 
 ## citations
 
@@ -90,9 +100,14 @@ profile is appealed at once, on its own, with documents that match it, which win
 
 ## the address and the rating
 
-- a second profile on the same address can trip google's automatic suspension
-  - Matt Gazda: seen it, unsure how it works
-    <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=369-->
+- (?) a second profile on one address in the same niche can trip suspension; one in a different niche, or on its own suite, ranks for other categories and searches
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-one-address.md)
+  - a second profile on the same address can trip google's automatic suspension
+    - Matt Gazda: seen it, unsure how it works
+      <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=369-->
+  - (?) Eric, 2026-11: different niches on one address do have a point, ranking for different categories and searches
+    <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2697-->
+  > three videos at one address, as suites or as insurance: [video](verification/video.md#attempts)
 - a flood of negative reviews suspends a profile
   - Matt Gazda: his energy-drink table's QR code showed in a viral instagram clip; ~1.4 stars, then suspended
     <!--2026-11-17 ran 2σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=403-->

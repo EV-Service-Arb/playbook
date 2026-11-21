@@ -9,11 +9,11 @@ which are instant shifts month to month. HVAC verifies instantly for now and is 
 city's numbers favour it, with fewer lead-gen operators in it, though most of its calls are small and
 its big jobs are bid slowly. locksmith and garage door repair are as urgent and rank
 beside them, though locksmith is the hardest to verify and a city's incumbents can already hold garage door repair. a low-ticket trade such as detailing pays
-soonest and steadiest and verifies easier, but takes many more jobs for the same money; a high-ticket one such as roofing, landscaping,
+soonest and steadiest and verifies easier, but takes many more jobs for the same money; a high-ticket one such as roofing,
 asphalt, deck and fence, stucco or masonry pays most per job, but late, on fewer leads and with a
-crew, and our share is thin where material is most of the job; the untapped trades are mostly these. recurring work sits between: customers add up rather
-than being replaced, for more calls, in pool cleaning, pest control, commercial cleaning and fleet washing. a trade busy year round beats a seasonal one; a trade
-that dries up in a cold winter is run in a warm city, or beside a second trade busy then, and detailing is skipped where roads are salted. always a local home service, never one whose
+crew, and our share is thin where material is most of the job; the untapped trades are mostly these. landscaping mixes the two, most of its jobs small. recurring work sits between: customers add up rather
+than being replaced, for more calls, in pool cleaning, pest control, commercial cleaning and fleet washing. the season weighs as much as the ticket: a trade busy year round beats a seasonal one; a trade
+that dries up in a cold winter, as landscaping does, is run in a warm city, or beside a second trade busy then, and detailing is skipped where roads are salted. landscaping and detailing are US trades. always a local home service, never one whose
 small job comes back once in years. an untapped trade is found by searching a sub-service by its own
 name, in a city where that name still has volume, and is easiest where the top profiles are owners carrying no keyword; run from outside the area, a trade whose top ranks on few reviews spares the reviews hardest to get from afar. one trade is mastered, and its region widened, before a second is added, unless the first has a dead season or a slow close to cover, and none is given up before it is known whether its ranked profiles get leads. each trade's own page is under [niches/](niches/).
 
@@ -190,7 +190,7 @@ name, in a city where that name still has volume, and is easiest where the top p
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=164-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=197-->
   > fencing, a $4,000 job: [fencing](niches/fencing.md#the-job)
-- (?) (!) high ticket — construction, roofing, remodels, landscaping, pools — pays the most per job, though our share of it is thin where material is most of the job, but late, seldom and slowly: a contract and a materials deposit come before the work, a big quote gets shopped around, so we send the quotes and follow up through a slow close, and a crew and more liability come with it. its markets are often thin on competition, so a profile takes leads easily, though fewer and patchier ones than an emergency trade's. the untapped trades are mostly high ticket, so the hard part is a contractor who closes, leaves margin and doesn't scam you
+- (?) (!) high ticket — construction, roofing, remodels, landscape construction, pools — pays the most per job, though our share of it is thin where material is most of the job, but late, seldom and slowly: a contract and a materials deposit come before the work, a big quote gets shopped around, so we send the quotes and follow up through a slow close, and a crew and more liability come with it. its markets are often thin on competition, so a profile takes leads easily, though fewer and patchier ones than an emergency trade's. the untapped trades are mostly high ticket, so the hard part is a contractor who closes, leaves margin and doesn't scam you
   - (!) the untapped niches are mostly high ticket, and a $20–100k job gets quoted around, unlike a clogged toilet: the hard part is a contractor who closes, leaves you margin and doesn't scam you — Eric
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=719-->
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=750-->
@@ -345,8 +345,6 @@ name, in a city where that name still has volume, and is easiest where the top p
     <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=10431-->
 - (?) calls dip around holidays and spike where a holiday breaks something, and a trade can have a season of its own: keep more profiles than you need, as a buffer
   > HVAC's quieter mild weather: [hvac](niches/hvac.md#the-season)
-  - (?) *landscaping* goes slow in winter: Zach Peterson's five profiles — [landscaping](niches/landscaping.md#the-season)
-    <!--2026-11-06 Zach Peterson ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3770-->
   - (?) calls dip the week before and after holidays — halloween, easter — and rise around others: thanksgiving is big for *appliance repair*, ovens break last-minute and people pay anything — John Osayi, 7 years in the trade
     > so keep more profiles than you need, as a buffer
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=514-->
@@ -365,7 +363,15 @@ name, in a city where that name still has volume, and is easiest where the top p
   - (?) *detailing*: nobody calls a detailer where winters are cold and roads salted, the car dirty again two days later; he wouldn't run it in Bellevue, WA — Marcus Milan, 2026-09
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=798-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=829-->
+  > *landscaping* is a summer trade: [landscaping](niches/landscaping.md#the-season)
   > *commercial cleaning* has no season: [commercial cleaning](niches/commercial_cleaning.md#the-season). each one's own: [pool cleaning](niches/pool_cleaning.md#the-season), [pest control](niches/pest_control.md#the-season), [detailing](niches/detailing.md#the-city)
+
+## the country
+
+- (?) (!) landscaping and car detailing sell as they do in the US: outside it, they are not picked on what they make there
+  - landscaping is US-specific, same as car detailing
+    <!--2026-11-21 Valera says 1σ-->
+  > Brad's roof cleaning in Australia: [finding an untapped trade](#finding-an-untapped-trade)
 
 ## switching trade
 

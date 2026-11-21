@@ -8,7 +8,7 @@ rooted phone; a residential proxy or none. a model that refuses the work takes i
 
 - (?) (!) about five profiles per managing gmail, spread over several gmails: there is no hard limit, the count is how much one ban may take with it
   > up to 5–6 when we are added as manager, opsec is clean, and the managing email is high-trust and on an org (workspace)
-  > 2–3 at most when we sit on the profiles as owner, or the account is already tainted
+  > 2–3 at most when we sit on the profiles as owner, or the account is already tainted. against it as owner: Eric's 20 in one personal gmail, Everett's five to an account a month unsuspended — [access](profile/creation.md#access)
   reason: one banned gmail takes every profile on it at once
   resolved: [2026-10-23](../log/resolved/2026-10-23-profiles-per-gmail.md)
   resolved: [2026-11-21](../log/resolved/2026-11-21-eric-2026-11-12-revisions.md)

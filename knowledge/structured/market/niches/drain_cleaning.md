@@ -39,9 +39,11 @@ it verifies like plumbing, by video. why it is the starting trade:
 ## verification
 
 - (?) it verifies like plumbing, by video
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-drain-verification.md)
   - (?) Eric, 2026-11: drainage service verifies like plumber
     <!--2026-11-20 Eric says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=3311-->
   > plumbing's: [plumbing](plumbing.md#verification)
+  > that it may verify easier is our guess, untested: [running it](#running-it)
 
 ## running it
 

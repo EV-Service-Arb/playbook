@@ -17,7 +17,7 @@ up its reviews. the missing-place route: [missing_place](verification/missing_pl
     <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14187-->
     <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9765-->
     <!--2026-11-20 gmbpp member says 1σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=14323-->
-  > primary owner against Eric's manager, never owner: [access](#access)
+  > owner or manager: [access](#access)
 - (?) people paid off facebook or craigslist create the profile on their own account and hand it over, for a small payment
   - facebook marketplace listing, $25 for a "small job", walk them through it — takes them two minutes, and a happy one brings friends and family for four or five more
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1913-->
@@ -28,10 +28,19 @@ up its reviews. the missing-place route: [missing_place](verification/missing_pl
 
 - (?) a friend instant-verifies the profile on his main gmail at his address, then adds your new gmail as primary owner: nothing to warm
   <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6511-->
-  > Eric's rule is manager, never owner: [access](#access)
+  > owner or manager: [access](#access)
 
 ## access
 
+- (?) a profile someone else made is held two ways, each in use: as manager while it stays on their account, or as primary owner on our own gmail once they hand it over. Eric now moves a bought profile to his personal gmail at once; manager access is the first step on a bought gmail, before its password changes. what decides between them: suspensions of owner-held against manager-held profiles over half a year
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-owner-or-manager.md)
+  - (?) Eric, 2026-11: transfer a bought profile to your personal gmail right away, he doesn't wait; 20 bought profiles into one personal gmail, "nothing sketchy"
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1683-->
+    <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1746-->
+    <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1784-->
+  - (?) Eric, 2026-11: a bought gmail is unpredictable on a password change: first give manager access to a gmail you won't be logged out of
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1476-->
+  > Everett's 16 owner-held, a month unsuspended: [who creates it](#who-creates-it)
 - Eric says to send yourself access as manager, never owner — it comes up a lot for them, "because we do a lot on other people's phones with instant approvals"
   <!--2025-12-15 says 1σ https://www.loom.com/share/088937bc44854962b7145d022e98184a?t=237-->
 - reason: google is less bitchy about one admin across many accounts than one owner

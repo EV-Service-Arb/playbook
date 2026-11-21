@@ -1,12 +1,25 @@
 # landscaping
 
-high ticket, usually high search volume, verified by video, where a printed logo passes and the profile stays up, and competition far below plumbing's: in the same city its
-top 3 carry far fewer reviews, and in Los Angeles none has a keyword in its name, so the searches feed
-many profiles. a couple of big contracts can make a month, and Eric's best student makes hundreds of
-thousands a month on it, but on construction, where material is most of the job, our take is a thin
-share of it, and grass cutting pays only on volume. a commercial job takes a whole crew, and the trade
-goes slow in winter: [niche](../niche.md#a-second-trade). how high ticket weighs against the rest:
-[niche](../niche.md#the-ticket).
+mostly low-ticket jobs, mowing and upkeep, with a high-ticket construction or commercial contract
+now and then: a couple of big contracts can make a month, and Eric's best student makes hundreds of
+thousands a month on them, but on construction, where material is most of the job, our take is a thin
+share of it, and the small jobs pay only on volume. a summer trade, slow in winter, and a US one, as
+detailing is. usually high search volume, verified by video, where a printed logo passes and the
+profile stays up, and competition far below plumbing's: in the same city its top 3 carry far fewer
+reviews, and in Los Angeles none has a keyword in its name, so the searches feed many profiles. a
+commercial job takes a whole crew. how its ticket, season and country weigh against the rest:
+[niche](../niche.md#the-ticket), [niche](../niche.md#seasonality), [niche](../niche.md#the-country).
+
+## the ticket
+
+- (?) (!) most jobs are low ticket, mowing and upkeep; the high-ticket ones are construction and commercial contracts, fewer and slower to close
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-landscaping-ticket.md)
+  - landscaping is not high ticket: it's both low and high, and most jobs will be low
+    <!--2026-11-21 Valera says 1σ-->
+  - (?) grass cutting pays only on a ton of volume
+    - (?) Zach Peterson
+      <!--2026-11-06 Zach Peterson says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3850-->
+  > Eric's "very high ticket" is the construction jobs: [what it makes](#what-it-makes)
 
 ## the market
 
@@ -61,13 +74,12 @@ goes slow in winter: [niche](../niche.md#a-second-trade). how high ticket weighs
 - (?) (!) our take is thin where material is most of the job
   - (?) Zach Peterson takes 20% of the profit margin on $50–100k landscape construction projects, about 5% of the job
     <!--2026-11-06 Zach Peterson ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3819-->
-- (?) grass cutting pays only on a ton of volume
-  - (?) Zach Peterson
-    <!--2026-11-06 Zach Peterson says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3850-->
 
 ## the season
 
-- (?) slow in winter
+- (?) (!) a summer trade, slow in winter: run in a warm city, or beside a second trade busy in winter
+  - landscaping is summer-specific
+    <!--2026-11-21 Valera says 1σ-->
   - (?) Zach Peterson's five profiles; he started three water softener ones this month to cover them
     <!--2026-11-06 Zach Peterson ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3706-->
     <!--2026-11-06 Zach Peterson ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3770-->

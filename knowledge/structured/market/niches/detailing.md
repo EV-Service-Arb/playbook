@@ -8,7 +8,7 @@ profiles spread over every part of a city. its competition sits in the middle, o
 house cleaning it can be the bigger search and the easier rank; a detailer is easy to find. a poor job
 still gets paid, and customers come back on a subscription, for small upsells, but they shop on price.
 no city is too big for it, but one with cold winters and salted roads is skipped, and in some it is
-weak. it is named *mobile* detailing, so a client who turns up at the address should have known, and
+weak. a US trade: [niche](../niche.md#the-country). it is named *mobile* detailing, so a client who turns up at the address should have known, and
 for detailing rather than car wash: it ranks for car wash all the same, and detailing brings the better
 leads. not where we start: past ~$10k a month a higher ticket pays more for the same setup, and a broad
 keyword brings the $20 car wash: [niche](../niche.md#the-ticket); beside a slow-closing high-ticket
@@ -107,6 +107,7 @@ trade, it carries the cash: [niche](../niche.md#a-second-trade).
     <!--2026-11-20 gmbpp member ran 2σ https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=2472-->
 - (?) no city is too big for it: everyone has a car
   <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=34-->
+  > a US trade, as landscaping is: [niche](../niche.md#the-country)
   > Marcus Milan's bound for other trades: [city](../city.md#size-and-people)
 - (?) (!) skip a city with cold winters and salted roads: nobody calls a detailer when the car is dirty again two days later
   - (?) Marcus Milan, 2026-09: he definitely wouldn't run it in Bellevue, WA
