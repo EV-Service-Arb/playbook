@@ -2,9 +2,9 @@
 <!--half-life 1y-->
 
 Calls come from the map pack's top 3, so that is the target, read off a heat-map scan rather than one
-search. What weighs on it: an address, every section filled, the [name](profile/naming.md) and
-[categories](profile/categories.md), [reviews](reviews.md), what searchers do on and after the profile,
-and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches are not worth our time.
+search. The keywords in the [name](profile/naming.md) and the [reviews](reviews.md) weigh most; past
+them, an address, every [field](profile/fields.md) filled, the [categories](profile/categories.md),
+what searchers do on and after the profile, and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches are not worth our time.
 
 ## measuring
 
@@ -33,6 +33,14 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
   - (?) Artheme Chaykin: one profile out of several carries ~60% of his calls
     <!--2026-09-18 Artheme Chaykin ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=711-->
 
+## what weighs most
+
+- (?) the name's keywords and the review count weigh most; past them, mostly the site and its SEO
+  - (?) Eric, 2026-11: two ranking factors, keywords and reviews; past them, mostly only the website and its SEO
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=721-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=754-->
+  > the name: [naming](profile/naming.md). the count: [reviews](reviews.md#count)
+
 ## address
 
 - (?) an address profile ranks far easier than a service-area one, and shows for "near me" searches
@@ -50,9 +58,8 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
 
 ## filling the profile
 
-- (?) once verified, every section is filled: each service with an SEO description, every photo, hours, and service areas over the zip codes around the profile
-  - (?) Marcus Milan, 2026-10: service areas of ~10–15 zip codes around the profile, and the website built around it
-    <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=359-->
+- (?) once verified, every section is filled, on the top keyword: worked in [fields](profile/fields.md)
+  <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=786-->
   > keeping it active after: [profile activity](#profile-activity)
 
 ## reviews

@@ -71,6 +71,10 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=199-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=492-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=527-->
+  - (?) Eric, 2026-11: 1K+ relevant searches a month, with one or two of the top three under 100 reviews: an area hitting both, "you will be golden"
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=426-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=493-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=527-->
 - (?) every phrasing of the service is researched and summed, and one polluted by other intent or another place's searches is dropped: a broad term pulls in searches for something else, a city name shared across states its namesakes'
   - Phoenix: ~1.3k searches/mo for "fence company" phrasings, ~600 more for "contractor", a few hundred for "fencing" — research every phrasing, a broad "fencing" pulls in unrelated terms
     <!--2026-10-11 says 1σ https://www.youtube.com/watch?v=0Sldsg6TW1c&t=553-->
@@ -89,6 +93,10 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=163-->
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=190-->
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=196-->
+  - (?) *plumbing*, Thunder Bay: company searches, `Craig's plumbing` at 210, `roberts plumbing thunder bay` at 110, and searches for plumbing supplies come out before counting — Eric, 2026-11
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=360-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=394-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=426-->
 - (?) a trade with several names gives each city several keywords: target the one with the best volume against its competition
   - (?) *HVAC*, Phoenix, over all variations: `HVAC` 24.9K, `AC repair` 10.2K, `heating and cooling` 3.7K; heads `hvac phoenix` 2.4K at KD 37, `ac repair phoenix` 3.6K at KD 31, `heating and cooling phoenix` 590 at KD 68. AC repair at 10,000 with five times less competition than the 25,000 term may be the one — Eric, 2026-07
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=332-->
@@ -129,6 +137,14 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
   - (?) Eric, 2026-07: aim for the lowest count in the top three — at 100, 50 and 40, aim for 40; with the rest optimized, fewer can rank. third on 40 under a second on 2,000: move on to the next profile; a second on 60: more into this one can pay
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=400-->
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=433-->
+  - (?) Eric, 2026-11: at least one or two of the top three under 100 reviews, then how well they use keywords and whether their rating is bad; aim for the lowest count among them, relative to how well the others use keywords, played by eye, never an exact number: Thunder Bay's #2 on ~38–40 with horrible ratings, so 40 ranks #1 "guaranteed"
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=228-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=327-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=493-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=559-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=689-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=721-->
+    > a keyworded name outranking 2,033 on 27: [naming](../profile/naming.md#keywords-in-the-name)
   - (?) Eric, 2026-05, *electrician* in Peterborough: `Lancer Electric` leads at 4.6 on 107 reviews without a keyword in its name; a five-star profile with 30 reviews and a keyworded name would rank first
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=292-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=324-->

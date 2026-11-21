@@ -4,7 +4,7 @@ the starting trade: a mid ticket, paid within a day, whose big jobs come often e
 average. there is demand everywhere, more searches than HVAC, but lead-gen operators crowd it: in a major US city the broad term is held, so
 the work is finding a smaller city or a sub-service such as [drain cleaning](drain_cleaning.md). in the States it mostly verifies only by video, and one who
 can't get through buys the verification. a plumber is easy to find in most cities, but not where plumbers have more work than they take, as in
-Montreal; a customer seldom comes back. eleven profiles in one city have cleared ~$10k profit the first month, and one
+Montreal; a customer seldom comes back. one profile first in a good area has carried most of a $30k month for Eric, eleven profiles in one city have cleared ~$10k profit the first month, and one
 brand topping many cities clears Eric $20–25k a month; a dozen profiles at a few jobs a week each, ~$30k for Marcus Milan. the plumber keeps most of the profit, the more the bigger the job, so he
 keeps answering; a set fee gets him in, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
 [cleaning](cleaning.md#economics).
@@ -22,6 +22,8 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
   - (?) Muhammad is said to be "averaging $3,000 plumbing jobs", his profiles put up without knowing citations or rankings
     <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2675-->
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2709-->
+  - (?) Eric, 2026-11: a water heater replacement probably $8–10k, and at 40% commission less materials "a ton of money"
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=164-->
   - (?) Eric, 2026-08: a $1,000 job keeps $300 profit, a $3,000 one $1,000
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=297-->
   - (?) Marcus Milan, 2026-09, scoring 1–3: job value 3, above pest control's 2 and detailing's 1
@@ -45,6 +47,8 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
   - (?) Eric, 2026-08: a keyword tool shows enough volume for plumber in pretty much any city
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=166-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=199-->
+  - (?) Eric, 2026-11: for plumbing and HVAC there is pretty much always demand, so competition is read first: a low-competition area is much harder to find than a high-demand one
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=228-->
 - (?) (!) its competition leaves fewer great cities: in a major US city the broad term is held, so more of the work is up front, finding a city or a sub-service where a few dozen reviews reach the top 3
   resolved: [2026-11-21](../../../log/resolved/2026-11-21-plumbing-saturation.md)
   - (?) a member, 2026-11: plumbing "almost across the whole United States is done", since everybody promotes it; pockets here and there, but in any major city it is off the map
@@ -61,6 +65,14 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=487-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=543-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=857-->
+  - (?) Eric, 2026-11, `plumber thunder bay`: the top three on 77, 38 and 120 reviews, rated 3.8–4.5, and nobody uses plumber and Thunder Bay in the name; ~3,000 searches, 2,710 over 71 keywords at KD 22% before brand and supply searches come out: an area that qualifies
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=260-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=274-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=293-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=327-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=360-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=394-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=426-->
   - (?) Marcus Milan, 2026-09, Bellevue, WA: competition 1, "pretty brutal": 2.4K, 1.5K and 2K reviews at the top, then 443 and 327. he still ranks plumbing first there
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=134-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=151-->
@@ -73,6 +85,8 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
   - (?) Eric, 2026-07: a lot of people, maybe from his videos, list plumbing profiles to run the same model
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=99-->
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=133-->
+  - (?) Eric, 2026-11: Newmarket, where his own profile ranks first, is saturated by now, because he posts videos about it
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=260-->
   > HVAC: [hvac](hvac.md#the-market)
 
 ## verification
@@ -100,6 +114,20 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=525-->
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=558-->
   > pool cleaning: [pool cleaning](pool_cleaning.md#the-job)
+- (?) (!) one profile first in a good area can carry most of a month: of ~1,000 relevant searches a few percent become leads, and an emergency trade books most of them
+  - (?) Eric, 2026-11: `Plumber Real Way Newmarket`, 4.9 on 122 reviews, made most of a $30,000+ month, at 1–3 leads a day; ranking and at those numbers within about a week of its reviews. `Square`, holding only the higher-ticket jobs: 9 transactions, $84,617.49 collected in January 2026
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=0-->
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=33-->
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=99-->
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=120-->
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=460-->
+    > how long it held untouched: [reviews](../../reviews.md#pace)
+  - (?) Eric, 2026-05: his own profile, ranked for `plumbing Newmarket` on 116 reviews, brings ~80 leads a month — 46 calls and 124 website clicks in April
+    <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=164-->
+    <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=197-->
+  - (?) Eric, 2026-11: on 1,000 relevant searches a month, realistically ~3% convert, 30 leads; at an 80% close, which emergency trades should get, or 50%, ~15 jobs a month at ~$300 profit each, from one profile
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=426-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=460-->
 - (?) (!) eleven young profiles in one city, at 50–70 reviews each, have cleared ~$10k profit the first month on 6–8 calls a day
   - Dante made 10k profit his first month in plumbing
     <!--2026-10-23 Eric heard 0.5σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1907-->
@@ -120,9 +148,6 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
   - (?) his franchise `Plumber Done Right` had a location in a bunch of cities, topped each, and brought tons of leads a day
     <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=197-->
     <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=236-->
-  - (?) Eric, 2026-05: his own profile, ranked for `plumbing Newmarket` on 116 reviews, brings ~80 leads a month — 46 calls and 124 website clicks in April
-    <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=164-->
-    <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=197-->
   - (?) Eric, 2026-06: plumbing is what he made most of his money on, multiple six figures
     <!--2026-06-11 ran 2σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
     <!--2026-06-11 ran 2σ https://www.youtube.com/watch?v=URV4VakPOKo&t=760-->

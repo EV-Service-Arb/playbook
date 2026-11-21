@@ -21,10 +21,7 @@ no material cost, and the incumbents rank for it as plumbers. a name exact-match
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=258-->
   - to take #1 in Dallas: exact-match the name to `drain cleaning <city>`, primary category drainage service, ~20 reviews — Eric
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=258-->
-- (?) a trade of the same ticket and urgency can be closed off: garage door repair's top 3 hold the keyword, the category and hundreds of reviews
-  - garage door repair in Fort Worth, for contrast: 4.2k searches/mo against Dallas drain cleaning's 3.8k, similar ticket and urgency, but the top 3 exact-match the keyword, hold the right category and have 300–2,000 reviews
-    <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=422-->
-    <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=455-->
+  > garage door repair, of about its ticket and urgency, is closed off in Fort Worth: [garage door](garage_door.md#the-market)
 
 ## running it
 

@@ -44,6 +44,8 @@ What members have reported about paying other people to collect reviews: finding
 - (?) a gift card offer in a facebook post got pulled. post on marketplace, `misc`, instead
   <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6154-->
   <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6243-->
+  - (?) Eric, 2026-11: a Facebook Marketplace post offering free gift cards for reviews, $5 to each who messages and $5 more for every friend or family member they bring
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1214-->
 - (?) facebook marketplace, "miscellaneous" category, $20–30/hr, photo, "it's for students" — one canadian member got ~30 replies
   <!--2026-09-18 gmbpp member heard 0.5σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6347-->
 - Artheme Chaykin has amazing point on automating job description on FBMarketplace for review getters
@@ -75,6 +77,8 @@ What members have reported about paying other people to collect reviews: finding
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4124-->
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4166-->
     <!--2026-11-06 Derick Parsons says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4196-->
+  - (?) Eric, 2026-11: a kid hired at the local mall or college campus, a couple of dollars a review
+    <!--2026-11-13 ran 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1247-->
   - (?) Chris, Sydney: a ~$40 Gumtree ad found university students at $5 a review; ~$8,000 spent with them over three to four months
     <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1311-->
     <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1343-->

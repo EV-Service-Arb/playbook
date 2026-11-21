@@ -17,6 +17,8 @@ offer a plumber a 60/40 split of the job's profit: 60% to him, 40% to us. solo p
   - (?) Eric, 2026-08, of his own model: a contractor in the area takes the jobs and gives him a 40% commission; almost 40 people coached on it to 10k a month in 8 months
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=0-->
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=889-->
+  - (?) Eric, 2026-11, of his own *plumbing*: a plumber partner does the work, he takes 40% commission
+    <!--2026-11-13 ran 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=33-->
   - (?) pitching "60 40", plumbers take the 60 to be ours until told "I take 40%, and just off the profit"
     <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=5703-->
   - (?) one member runs 70/30 instead: many consistent contractors over one squeezed for 60/40

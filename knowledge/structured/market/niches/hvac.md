@@ -5,7 +5,7 @@ the owners', carrying no keyword, so a keyworded address profile ranks quickly, 
 already held on review counts. small repairs are done and paid the same day, system replacements run
 to thousands. there is work in winter and in summer, less in the mild weather between. it always goes
 on an address; the codes google offers it are not a route we take. it has made a student ~$10k a month
-within three months. where it is weighed: [niche](../niche.md#the-starting-trade); its several names
+within three months, and a keyworded Toronto profile of Eric's 45 leads its first month. where it is weighed: [niche](../niche.md#the-starting-trade); its several names
 are several keywords per city: [city](../city.md#search-demand).
 
 ## the ticket
@@ -18,6 +18,8 @@ are several keywords per city: [city](../city.md#search-demand).
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=199-->
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=298-->
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=332-->
+  - (?) Eric, 2026-11: an AC replacement probably $8–10k
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=164-->
 
 ## the market
 
@@ -32,6 +34,8 @@ are several keywords per city: [city](../city.md#search-demand).
   - (?) Eric, 2026-05, Los Angeles: the top 3 at 2,832, 4,765 and 350 reviews — maybe great elsewhere, not there
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=389-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=415-->
+  - (?) Eric, 2026-11: for HVAC and plumbing there is pretty much always demand, so competition is read first: a low-competition area is much harder to find than a high-demand one
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=228-->
 
 ### other
 
@@ -87,6 +91,12 @@ are several keywords per city: [city](../city.md#search-demand).
   - (?) Eric, 2026-07: untapped, and working very well for the couple of his students running it: "I give you the green light"
     <!--2026-07-31 heard 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=695-->
     <!--2026-07-31 heard 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=728-->
+- (?) a keyworded profile in Toronto, whose top profiles carry no keyword, took leads from its first month
+  - (?) Eric's `SunCool HVAC of Toronto - Midtown`: 5.0 on 91 reviews done within about a week, 45 leads in its first month after verification
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1314-->
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1342-->
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1346-->
+  > Toronto's top profiles: [the market](#the-market)
 
 ## open
 

@@ -20,6 +20,10 @@ What members have reported about reviews disappearing: star mix, repeat reviewer
   > his September word, since loosened: never send the same person to review two of your profiles
   > one park stand lost 20 reviews in a day; Eric's first guess was repeat reviewers, which the reporter denied
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2917-->
+- (?) one person, one review on a profile: a second from another gmail gets deleted
+  - (?) Eric, 2026-11: one person leaving a second review from another gmail, all deleted; the job is 40 unique local people
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1148-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1180-->
 
 ## reading it early
 

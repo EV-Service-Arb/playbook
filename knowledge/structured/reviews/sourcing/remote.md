@@ -6,6 +6,8 @@ reviews stick when they come from near the profile, Eric's 40 miles being conser
 
 - (?) reviews stick when they come from near the profile, bar a couple of methods: Eric's rule, whose 40 miles he calls conservative
   resolved: [2026-11-21](../../../log/resolved/2026-11-21-eric-2026-11-revisions.md)
+  - (?) Eric, 2026-11-13: reviews need to be local or google deletes them: "some random guy in India", all deleted
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1148-->
   - (?) Eric, 2026-11: an airport 15–20 miles off is close enough; his 40 miles is conservative, reviews stick from farther
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=583-->
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=616-->

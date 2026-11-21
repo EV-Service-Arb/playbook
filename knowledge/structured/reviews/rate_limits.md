@@ -12,7 +12,14 @@ What members have reported about how many reviews a profile takes, how fast, and
 - (?) review volume does not suspend a profile, up to 300 a day at least; what it risks is review gating, new reviews silently not showing
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2361-->
   <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2381-->
-- (?) (!) one review a day per profile, at most — Eric, repeatedly
+- (?) (!) local reviews from unique, real people can go on fast: ~40 in a day, a profile's whole count over a few days, ranking within a week. the one-a-day cap is on reviews that don't come from local people
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-local-review-pace.md)
+  - (?) Eric, 2026-11: `Plumber Real Way Newmarket`'s 122 reviews went on over a few days, November 5, 8 and 9, and it was ranking at its numbers within about a week; 40 unique local reviews "can get done within a day, if you actually try a little bit"
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=460-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1247-->
+  - (?) no suspension risk from too many *local* reviews at any rate
+    <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3082-->
+- (?) (!) reviews not from local people, as off bought aged gmails: one a day per profile, at most — Eric, repeatedly
   reason: above that they get deleted *and* the profile becomes more sensitive for everything else
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3026-->
   > `Glenn` put 53 on a new profile inside a week and one has dropped so far — only a week in
@@ -29,8 +36,6 @@ What members have reported about how many reviews a profile takes, how fast, and
   <!--2026-09-18 gmbpp member ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5738-->
 - (?) too many fake reviews also gets *real* customers' reviews flagged
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3018-->
-- (?) no suspension risk from too many *local* reviews at any rate
-  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3082-->
 
 ## suspension
 
@@ -50,6 +55,7 @@ What members have reported about how many reviews a profile takes, how fast, and
 - (?) (!) review gating: after ~20–30 reviews in a short window google silently stops publishing new ones — `Ilya`
   > not deletion. the reviewer submits and nothing appears
   <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2381-->
+  > against it: 122 local reviews over a few days, all showing on Eric's Newmarket profile: [per day](#per-day)
 
 ## delay
 

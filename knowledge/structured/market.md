@@ -44,6 +44,9 @@ under [niches/](market/niches/). the city: [city](market/city.md).
 - (?) the city can outweigh the trade: a strong trade in a city of thin demand and heavy competition does worse than a weaker one in a very good spot
   - (?) Eric, 2026-06: plumbing in a city with very low demand and high competition does worse than house cleaning in a very good spot
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=394-->
+  - (?) Eric, 2026-11: the area is the biggest differentiating factor: one profile on 100 reviews makes $10,000 a month, another on 100 literally zero, the odd call here and there
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=196-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=852-->
 
 ## technical or volume
 

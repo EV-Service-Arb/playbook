@@ -4,7 +4,8 @@ we start on plumbing, or on drain cleaning under it: urgent, year round, a mid t
 day, and any plumber fulfils it in a city whose plumbers want the work. in a major US city the broad
 plumbing term is held, so it is taken in a smaller city or on the sub-service. a trade whose profiles
 get up easier, as pest control's or the instant-verifying ones do, is weighed against that ticket. HVAC is its equal where a city's numbers
-favour it, and fewer lead-gen operators run it. a low-ticket trade such as detailing pays
+favour it, and fewer lead-gen operators run it. locksmith and garage door repair are as urgent and rank
+beside them, though a city's incumbents can already hold garage door repair. a low-ticket trade such as detailing pays
 soonest and steadiest and verifies easier, but takes many more jobs for the same money; a high-ticket one such as roofing, landscaping,
 asphalt, deck and fence, stucco or masonry pays most per job, but late, on fewer leads and with a
 crew, and our share is thin where material is most of the job; the untapped trades are mostly these. recurring work sits between: customers add up rather
@@ -86,7 +87,7 @@ name, in a city where that name still has volume, and is easiest where the top p
 
 ## trades that work
 
-- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping, asphalt and paving, deck and fence, pool cleaning, pest control and commercial cleaning are run and called workable. the best are plumbing and the high-ticket trades with low competition; the low-ticket ones are easier to get into and make less; the recurring ones pay on customers adding up; HVAC, which few lead-gen operators run, is plumbing's equal
+- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping, asphalt and paving, deck and fence, pool cleaning, pest control, commercial cleaning, locksmith and garage door repair are run or called workable. the best are the urgent trades in demand everywhere, where most callers book — plumbing, HVAC, locksmith, garage door repair — and the high-ticket trades with low competition; the low-ticket ones are easier to get into and make less; the recurring ones pay on customers adding up; HVAC, which few lead-gen operators run, is plumbing's equal
   resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-hvac.md)
   - discussing niches
     - David: concrete, plumbing, landscape, roofing (mb, not sure)
@@ -108,8 +109,12 @@ name, in a city where that name still has volume, and is easiest where the top p
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=0-->
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=64-->
     <!--2026-08-08 says 0.5σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=389-->
+  - (?) Eric, 2026-11: the best niches are the high-urgency services in high demand — *plumbing*, *HVAC* (furnace and AC repair), *locksmith*, *garage door repair* — urgent enough that a caller is an ~80% chance of a booked job; they bring higher-ticket jobs too, a water heater or AC replacement at probably $8–10k
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=131-->
+    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=164-->
+    > garage door repair's top 3 already hold Fort Worth: [garage door](niches/garage_door.md#the-market)
   > James McBride's five trades, and his rural state: [city](city.md#competition)
-  > each one's own page: [plumbing](niches/plumbing.md), [electrician](niches/electrician.md), [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [fencing](niches/fencing.md), [detailing](niches/detailing.md), [pool cleaning](niches/pool_cleaning.md), [pest control](niches/pest_control.md), [commercial cleaning](niches/commercial_cleaning.md), [hvac](niches/hvac.md), [cleaning](niches/cleaning.md)
+  > each one's own page: [plumbing](niches/plumbing.md), [electrician](niches/electrician.md), [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [fencing](niches/fencing.md), [detailing](niches/detailing.md), [pool cleaning](niches/pool_cleaning.md), [pest control](niches/pest_control.md), [commercial cleaning](niches/commercial_cleaning.md), [hvac](niches/hvac.md), [cleaning](niches/cleaning.md), [locksmith](niches/locksmith.md), [garage door](niches/garage_door.md), [roofing](niches/roofing.md)
 - (?) a local service, never an online one: online is far more saturated, and local leads come easier for the same pay
   - (?) Eric: online is "20 million times more saturated"; local is easier to get leads for and pays as much
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=497-->

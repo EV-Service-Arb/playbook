@@ -16,14 +16,20 @@ What members have reported about review count, pace and text. The rest is filed 
 
 ## pace
 
-- (?) (!) velocity counts on top of count: reviews every week. 500 reviews with the last one six months ago does little for you
-  > keep them coming with tap cards, or an automation after each job
-  > Derick Parsons: profiles making money consistently hold their rankings on one or two reviews a week, with posts
-  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5307-->
-  <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=191-->
-  > John Osayi: 2–5 reviews a week per profile, plus fresh photos, is the biggest lever
-  <!--2026-10-23 John Osayi says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=659-->
-  <!--2026-10-23 John Osayi says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=932-->
+- (?) (!) velocity counts on top of count: keep reviews coming every week. a profile whose reviews all went on at once can keep bringing leads for most of a year untouched, then fade, and google has weighed recent activity more since its October 2026 re-ranking
+  resolved: [2026-11-21](../log/resolved/2026-11-21-untouched-profile.md)
+  - (?) Zach Peterson: active reviews each week, from tap cards or an automation after each job; 500 reviews with the last one six months ago does little for you
+    <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=191-->
+  - (?) Derick Parsons: profiles making money consistently hold their rankings on one or two reviews a week, with posts
+    <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5307-->
+  - (?) John Osayi: 2–5 reviews a week per profile, plus fresh photos, is the biggest lever
+    <!--2026-10-23 John Osayi says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=659-->
+    <!--2026-10-23 John Osayi says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=932-->
+  - (?) Eric, 2026-11: `Plumber Real Way Newmarket`'s 122 reviews all went on over a few days in November 2025; it was taking 1–3 leads a day, and untouched for over half a year it still brought 187 interactions in August, then 132 in October: "it's died down pretty bad"
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=99-->
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=120-->
+    <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=754-->
+    > the October fall comes with the mid-October 2026 drop across many members' profiles: [ranking](ranking.md#when-calls-drop), [profile activity](ranking.md#profile-activity)
 
 ## customers
 

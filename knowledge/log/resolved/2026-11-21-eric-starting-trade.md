@@ -21,6 +21,7 @@ word: a revision.
 | Eric, 2026-09-18 | a beginner on plumbing, plus one or two cleaning profiles in their own city to work out reviews and pricing | [1:47:14](https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6434) |
 | Eric, 2026-10-16 | the fast trades, the best: plumbing, HVAC, electrical, cleaning and detailing | [7:16](https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=436) |
 | Eric, 2026-10-23 | cleaning clears ~$150–200 a call against plumbing's $300–400, steering a plumbing member off it | [24:05](https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1445) |
+| Eric, 2026-11-13 | the best niches are the urgent ones in high demand: plumbing, HVAC, locksmith, garage door repair, ~80% of callers booked; his own profiles mostly plumbing | [2:11](https://www.youtube.com/watch?v=WJkcTccFHjc&t=131), [2:44](https://www.youtube.com/watch?v=WJkcTccFHjc&t=164) |
 | Eric, 2026-11-16 | drain cleaning is the best niche to start on right now: urgent, year round, any plumber does it | [1:04](https://www.youtube.com/watch?v=SOUF1oObJYk&t=64) |
 
 ## Conclusion
@@ -47,6 +48,12 @@ runs. Its commercial cleaning is not the house cleaning the start is kept off: u
 has contracts that recur and jobs that pay, so it stands on its own page,
 `market/niches/commercial_cleaning.md`, and `market/niches/cleaning.md` is scoped to house cleaning. The
 three stand on `market/niche.md` under recurring work, each with its own page.
+
+His November 13 video, three days before the drain cleaning one, does not move the start either: it
+ranks the urgent trades best without naming a start, and plumbing, which he runs, heads them. Locksmith
+and garage door repair join the trades that work on `market/niche.md`, each with its own page; his
+November 16 video already finds garage door repair closed off in Fort Worth, kept on
+`market/niches/garage_door.md`.
 
 What would reopen it: Eric still lists detailing among the fast trades in October, so if the owner
 wants the quickest first money over the best trade to build on, detailing-first is that case; and an operator who already
