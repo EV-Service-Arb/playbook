@@ -25,6 +25,14 @@ What members have reported about a reviewer account's local guide level, raising
 - (?) // international students carry the local guide badge more often than actual residents do
   <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4229-->
 
+## the account
+
+- (?) a levelled account can be locked out for suspicious activity when its recovery email is changed; nobody knows a safer route
+  - (?) John: a level 5 local guide account, locked out after he changed its recovery email; Eric knows no reason, and no route he'd call better
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1869-->
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1904-->
+    <!--2026-11-13 Eric says 0.5σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1936-->
+
 ## raising it
 
 - (?) fastest way to raise a gmail's local guide level: shoot 360 videos at every location you visit, logged into that account
@@ -36,4 +44,5 @@ What members have reported about a reviewer account's local guide level, raising
 
 - (?) warming a gmail for maps is not the same as warming it for email — `Instantly` and friends do nothing here
   reason: the signals google reads are maps activity, a purchased domain, upgraded cloud storage, likes and saves
+  > warming a gmail to create a GMB takes email activity among the rest: [infra](../infra.md#gmails)
   <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4556-->

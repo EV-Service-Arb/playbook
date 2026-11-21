@@ -18,6 +18,8 @@ What members have reported about reviews disappearing: star mix, repeat reviewer
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=984-->
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1014-->
   > his September word, since loosened: never send the same person to review two of your profiles
+  - (?) Sunny lost over half of 150+ reviews having the same people review two of his profiles held on two different accounts
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=110-->
   > one park stand lost 20 reviews in a day; Eric's first guess was repeat reviewers, which the reporter denied
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2917-->
 - (?) one person, one review on a profile: a second from another gmail gets deleted
@@ -50,6 +52,8 @@ What members have reported about reviews disappearing: star mix, repeat reviewer
 
 ## evidence
 
+- (?) escalating for a review's reinstatement carries a very small risk to the same business's profiles in other cities on the account: Eric never had anything suspended over it
+  <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2653-->
 - (?) so screenshot every review as it lands; the screenshot is what you submit to get it reinstated — `Ilya`, has a VA do it
   <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5655-->
   > a member pastes each review, the reviewer's name and the link to their google profile into one chatgpt thread, which also drafts his replies — the link is the evidence

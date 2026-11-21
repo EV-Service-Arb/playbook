@@ -68,6 +68,8 @@ profile is appealed at once, on its own, with documents that match it, which win
   - Matt Gazda: NAP and domain are the highest trust signals google reads. the first 6 months, the first year to be careful; his slide says 4 months
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=268-->
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=301-->
+  - (?) Eric, 2026-11: opening hours changed with reviews coming in make no difference
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=948-->
   - (?) Eric, 2026-11: never rename a profile, it typically triggers re-verification; Chris's two, two to three months old, renamed to the city and "Plumber", vanished and brought no lead
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1829-->
     <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1743-->

@@ -11,6 +11,8 @@ reviews stick when they come from near the profile, Eric's 40 miles being conser
   - (?) Eric, 2026-11: an airport 15–20 miles off is close enough; his 40 miles is conservative, reviews stick from farther
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=583-->
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=616-->
+  - (?) Eric, 2026-11: a stand covers profiles within maybe a 50-mile radius
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1869-->
   - (?) Eric, 2026-08: reviews stick only if they are local, aside from a couple of methods
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=559-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=591-->

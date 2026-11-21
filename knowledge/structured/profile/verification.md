@@ -29,10 +29,12 @@ bought: [plumbing](../market/niches/plumbing.md#verification). the address on it
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2041-->
   > his September answer, since revised, to "SAB-then-convert after a few weeks, or storage-unit video straight away?": no reason to wait, fail a video deliberately, then take the live call immediately. everything he has video-verified has stuck unless the whole account went down
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3107-->
-- (?) a failed video is not the end of the listing. the next attempt is live verification, not a second identical video // inferred
+- (?) a failed video is not the end of the listing. the next attempt is live verification, not a second identical video; failing live, verification as a service area, converted to the address after // inferred
   <!--2026-10-30 agent says 1σ-->
   - (?) Eric, 2026-11: a deleted or botched video — submit a garbage one, fail it, and open a ticket for a live video
     <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2934-->
+  - (?) a member, 2026-11: if nothing else gets up, live; failing that, a service-area verification converted to an address — [SAB to PAB](verification/sab_to_pab.md)
+    <!--2026-11-13 gmbpp member says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=4286-->
   > the ticket: [live](verification/live.md#the-ticket)
 
 ## the address
@@ -44,9 +46,14 @@ bought: [plumbing](../market/niches/plumbing.md#verification). the address on it
 
 ## codes
 
-- (?) don't take the SMS-code route: code-verified profiles get suspended a lot more, and `CallRail` or `Quo` numbers never receive the code — it needs a real registered number — Eric
-  <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3382-->
-  > Matt Gazda: never by phone code
+- (?) a text code is taken only when it comes on a real person's personal number, done on their device: `CallRail` or `Quo` numbers never receive it. a profile meant to last takes none
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-2026-11-12-revisions.md)
+  - (?) Eric, 2026-11: take the text verification if it's on their personal phone numbers, and do it on their device too, since his own have been having trouble
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1574-->
+  - (?) Eric, 2026-10: code-verified profiles get suspended a lot more, and `CallRail` or `Quo` numbers never receive the code — it needs a real registered number
+    <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3382-->
+    > his "don't take the SMS-code route" then, loosened three weeks on
+  > Matt Gazda, for a profile meant to last: never by phone code
   <!--2026-11-17 ran 2σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=234-->
   > Eric, three weeks on: a missing-place profile does verify by text code, once warmed up with 10–12 reviews — `profile/verification/missing_place`
   <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=g2goSCTF18I&t=359-->

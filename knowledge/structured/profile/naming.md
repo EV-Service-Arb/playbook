@@ -33,6 +33,10 @@ not renamed: [suspension](suspension.md#changes).
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=232-->
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=265-->
 
+- (?) a profile ranks for the near-synonyms of its name without targeting them
+  - (?) Eric, 2026-11: listed as heating and cooling, you still rank for HVAC; a detailing profile ranks for car wash — [detailing](../market/niches/detailing.md#the-name)
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=204-->
+
 ## backing the name
 
 - (?) a keyworded name is backed by a DBA registered to the exact string, and the string is carried the same on the site, quotes, invoices, vehicles, signage, phone identity and registration: google wants the name to match real-world use and prohibits extra information in it

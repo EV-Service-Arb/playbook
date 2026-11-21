@@ -97,6 +97,8 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=360-->
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=394-->
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=426-->
+  - (?) *detailing*: car wash searches count toward a detailing profile's demand, since it ranks for them untargeted, though only part of them want a detail — Eric, 2026-11
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=204-->
 - (?) a trade with several names gives each city several keywords: target the one with the best volume against its competition
   - (?) *HVAC*, Phoenix, over all variations: `HVAC` 24.9K, `AC repair` 10.2K, `heating and cooling` 3.7K; heads `hvac phoenix` 2.4K at KD 37, `ac repair phoenix` 3.6K at KD 31, `heating and cooling phoenix` 590 at KD 68. AC repair at 10,000 with five times less competition than the 25,000 term may be the one — Eric, 2026-07
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=332-->

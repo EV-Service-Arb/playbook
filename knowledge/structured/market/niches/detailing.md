@@ -3,18 +3,28 @@
 low ticket, a job paying about the same every time, and the easiest trade to start and scale on profiles alone: Eric started on it, made
 $15k his second month and took it to ~$80k a month in revenue. a profile verifies instantly on a solid
 gmail, and on an address ranks almost whatever the competition, so it is run on volume: profiles spread over every part of a city. its competition sits in the
-middle, and a detailer is easy to find. a poor job still gets paid, and
+middle, often weak, and beside house cleaning it can be the bigger search and the easier rank; a detailer is easy to find. a poor job still gets paid, and
 customers come back on a subscription, for small upsells, but they shop on price. no city is too big
-for it, but one with cold winters and salted roads is skipped. it is named *mobile* detailing, or
-booked clients turn up at the address. not where we start: past ~$10k a month a higher ticket
+for it, but one with cold winters and salted roads is skipped. it is named *mobile* detailing, so a
+client who turns up at the address should have known, and for detailing rather than car wash: it ranks
+for car wash all the same, and detailing brings the better leads. not where we start: past ~$10k a month a higher ticket
 pays more for the same setup, and a broad keyword brings the $20 car wash: [niche](../niche.md#the-ticket).
 
 ## the name
 
-- (?) name it *mobile* car detailing: a profile named just "car detailing" has booked clients turn up at the location
+- (?) name it *mobile* car detailing: few clients turn up at the address, but a profile named just "car detailing" has had booked ones do it, and "mobile" is the excuse that they should have known
   - (?) Eric's and Prabh's profiles named just car detailing
     <!--2026-11-06 Eric ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2738-->
     <!--2026-11-06 Prabh ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2738-->
+  - (?) Eric, 2026-11: nobody really comes, it's pretty rare; with mobile in the name you have the excuse — `A plus mobile car detailing Garland`
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=271-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=297-->
+- (?) name it for detailing, not car wash: it still ranks for car wash, which many search not knowing the word detailing, and detailing brings the better leads
+  - (?) Eric, 2026-11: car wash and detailing are basically the same search; not targeting a keyword doesn't mean not ranking for it; some of the car wash searchers still need detailing
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=204-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=297-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=331-->
+  > a broad keyword brings the $20 car wash: [niche](../niche.md#the-ticket)
 
 ## what it makes
 
@@ -49,6 +59,9 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
   - (?) Eric, 2026-08: detailing is super easy to verify on an address, so there he usually opts for the volume model
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=758-->
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=791-->
+  - (?) Eric, 2026-11: Garland, at 2,000 searches, takes more than one profile; a member's area has ~2,000 a month for detailing, ~4,000 for car washes
+    <!--2026-11-13 gmbpp member says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=948-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1035-->
   > the volume model against the technical one: [market](../../market.md#technical-or-volume)
 
 ## the market
@@ -58,6 +71,9 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=236-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=251-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=270-->
+  - (?) a friend of a member's, looking at the east coast: profiles on 10–15 reviews, their SEO super weak
+    <!--2026-11-13 gmbpp member heard 0.5σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=139-->
+  > against house cleaning: [cleaning](cleaning.md#the-market)
 - (?) searched about as much as plumbing, but each search is worth far less: an ad click costs a small part of plumbing's
   - (?) Marcus Milan, 2026-09, Bellevue, WA: ~1,900 searches a month against plumbing's 2,300, at a CPC of $1–2 against plumbing's $96.41
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=291-->

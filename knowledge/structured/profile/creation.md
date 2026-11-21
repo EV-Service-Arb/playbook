@@ -9,8 +9,11 @@ missing-place route: [missing_place](verification/missing_place.md).
 - (!) the mall method: walk up to strangers and ask them to create the GMB on their own account, then add you as owner — `Ryan` got 100+ detailing profiles this way
   > only works for categories that verify instantly. ~30/hr of profiles, per two people who have run it
   <!--2026-09-18 Ryan D ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1967-->
-- facebook marketplace listing, $25 for a "small job", walk them through it — takes them two minutes, and a happy one brings friends and family for four or five more
-  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1913-->
+- (?) people paid off facebook create the profile on their own account and hand it over, for a small payment
+  - facebook marketplace listing, $25 for a "small job", walk them through it — takes them two minutes, and a happy one brings friends and family for four or five more
+    <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1913-->
+  - (?) Eric, 2026-11: the quickest way to more profiles; he has it down to $10
+    <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=466-->
 
 - (?) a friend instant-verifies the profile on his main gmail at his address, then adds your new gmail as primary owner: nothing to warm
   <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6511-->
@@ -27,6 +30,15 @@ missing-place route: [missing_place](verification/missing_place.md).
 - their owner email gets every notification from the profile; they untick it under `Business Profile -> Settings -> Notifications -> emails`
   > per-user setting, we can't set it for them
   <!--2026-10-21 Valera says 1σ-->
+
+## the first days
+
+- (?) edits wait a day after creation; reviews and optimization go in either order
+  - (?) Eric, 2026-11: he waits a day after creating a GMB and makes changes the next
+    <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=913-->
+  - (?) `Lamarious Thomas` put 20 reviews on a new profile the day after creating it, before the SEO, and its ranking hasn't gone up; Eric: it doesn't really matter what order you go in
+    <!--2026-11-13 Lamarious Thomas ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=538-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=581-->
 
 ## the site
 

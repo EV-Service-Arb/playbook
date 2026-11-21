@@ -89,6 +89,11 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=260-->
   > HVAC: [hvac](hvac.md#the-market)
 
+### other
+
+- (?) *commercial plumbing*: a member in Florida, his residential plumbing profile earning but with no good relationship with its contractor, is moving to it, and to car detailing. no result yet
+  <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1374-->
+
 ## verification
 
 - (?) in the States it mostly offers no route but the video

@@ -12,7 +12,7 @@ crew, and our share is thin where material is most of the job; the untapped trad
 than being replaced, for more calls, in pool cleaning, pest control and commercial cleaning; a trade
 that dries up in a cold winter is run in a warm city, or beside a second trade busy then, and detailing is skipped where roads are salted. always a local home service, never one whose
 small job comes back once in years. an untapped trade is found by searching a sub-service by its own
-name, in a city where that name still has volume, and is easiest where the top profiles are owners carrying no keyword; run from outside the area, a trade whose top ranks on few reviews spares the reviews hardest to get from afar. one trade is mastered before a second is added, unless the first has a dead season to cover. each trade's own page is under [niches/](niches/).
+name, in a city where that name still has volume, and is easiest where the top profiles are owners carrying no keyword; run from outside the area, a trade whose top ranks on few reviews spares the reviews hardest to get from afar. one trade is mastered before a second is added, unless the first has a dead season to cover, and none is given up before it is known whether its ranked profiles get leads. each trade's own page is under [niches/](niches/).
 
 ## the starting trade
 
@@ -87,13 +87,11 @@ name, in a city where that name still has volume, and is easiest where the top p
 
 ## trades that work
 
-- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping, asphalt and paving, deck and fence, pool cleaning, pest control, commercial cleaning, locksmith and garage door repair are run or called workable. the best are the urgent trades in demand everywhere, where most callers book — plumbing, HVAC, locksmith, garage door repair — and the high-ticket trades with low competition; the low-ticket ones are easier to get into and make less; the recurring ones pay on customers adding up; HVAC, which few lead-gen operators run, is plumbing's equal
+- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping, asphalt and paving, deck and fence, pool cleaning, pest control, commercial cleaning, locksmith, garage door repair, detailing and parking lot striping are run or called workable. the best are the urgent trades in demand everywhere, where most callers book — plumbing, HVAC, locksmith, garage door repair — and the high-ticket trades with low competition; the low-ticket ones are easier to get into and make less; the recurring ones pay on customers adding up; HVAC, which few lead-gen operators run, is plumbing's equal
   resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-hvac.md)
   - discussing niches
     - David: concrete, plumbing, landscape, roofing (mb, not sure)
       <!--2026-09-18 David says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6377-->
-  - another confirmation on HVAC being good niche
-    <!--2026-10-16 Raphael D'Angelo ran 2σ https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=3112-->
   - (?) Eric: roofing, plumbing and pest control all good high-ticket trades, about equal
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=597-->
   - (?) Eric, 2026-06, ranking trades on how easily the profile verifies, search volume against competition, ticket, urgency, recurrence and how easy a contractor is to find: plumbing, landscaping, asphalt and paving, deck and fence at the top; electrician just under them; detailing, pool cleaning and HVAC below; house cleaning under those. the top makes the most, the middle is easier to get into
@@ -113,8 +111,13 @@ name, in a city where that name still has volume, and is easiest where the top p
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=131-->
     <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=164-->
     > garage door repair's top 3 already hold Fort Worth: [garage door](niches/garage_door.md#the-market)
+  - (?) members, 2026-11: Sunny weighing *detailing* after three weeks on *cleaning*; `Lamarious Thomas`'s new *parking lot striping* profile #1 in Shreveport; a member earning on residential *plumbing* in Florida moving into *commercial plumbing* and *car detailing*
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=43-->
+    <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=613-->
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1374-->
+  > *moving*, low competition in the Bay by one member's look, run by nobody we know: [moving](niches/moving.md)
   > James McBride's five trades, and his rural state: [city](city.md#competition)
-  > each one's own page: [plumbing](niches/plumbing.md), [electrician](niches/electrician.md), [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [fencing](niches/fencing.md), [detailing](niches/detailing.md), [pool cleaning](niches/pool_cleaning.md), [pest control](niches/pest_control.md), [commercial cleaning](niches/commercial_cleaning.md), [hvac](niches/hvac.md), [cleaning](niches/cleaning.md), [locksmith](niches/locksmith.md), [garage door](niches/garage_door.md), [roofing](niches/roofing.md)
+  > each one's own page: [plumbing](niches/plumbing.md), [electrician](niches/electrician.md), [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [fencing](niches/fencing.md), [detailing](niches/detailing.md), [pool cleaning](niches/pool_cleaning.md), [pest control](niches/pest_control.md), [commercial cleaning](niches/commercial_cleaning.md), [hvac](niches/hvac.md), [cleaning](niches/cleaning.md), [locksmith](niches/locksmith.md), [garage door](niches/garage_door.md), [roofing](niches/roofing.md), [parking lot striping](niches/parking_lot_striping.md)
 - (?) a local service, never an online one: online is far more saturated, and local leads come easier for the same pay
   - (?) Eric: online is "20 million times more saturated"; local is easier to get leads for and pays as much
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=497-->
@@ -236,6 +239,7 @@ name, in a city where that name still has volume, and is easiest where the top p
   - (?) *pressure washing*: "hits zero markers" — a couple of years before the next job, pretty low search volume, pretty high competition, no instant verification — Eric, 2026-06
     > worth running only for someone who already owns a pressure washing business
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=462-->
+    > a member who runs it: [pressure washing](niches/pressure_washing.md)
   - (?) *junk removal*: rarely more than a couple hundred dollars a job, never recurring, not easy to verify — cleaning's or detailing's ticket for more headache — Eric, 2026-06
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=593-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=627-->
@@ -247,7 +251,7 @@ name, in a city where that name still has volume, and is easiest where the top p
 ## finding an untapped trade
 
 - (?) (!) an untapped trade hides under a known one: in a city with the volume, search the sub-service by its own name and see whether the top profiles carry its keyword or its category; it can rank first where the broad term would not
-  > its own volume can be too thin to pay
+  > its own volume can be too thin to pay: [parking lot striping](niches/parking_lot_striping.md)
   - (!) an untapped niche hides under a trade: search a sub-service by its own name — `drain cleaning` rather than `plumbing` — and see whether the top profiles carry its keyword or its category. in Dallas none did; five minutes of looking — Eric
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=486-->
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=520-->
@@ -264,8 +268,6 @@ name, in a city where that name still has volume, and is easiest where the top p
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=519-->
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=550-->
     > [commercial cleaning](niches/commercial_cleaning.md#the-market)
-  - in a big city could rank for 80 searches / month line striping (Dallas), and mb rank 1
-    <!--2026-10-02 gmbpp member ran 2σ https://www.loom.com/share/38671d68746a4a74b1f2648df47b15c0?t=4744-->
 - (?) (!) a trade few lead-gen operators run is the easiest to rank in: its top profiles are owners who don't market and carry no keyword
   - (?) Eric, 2026-07: *plumbing* is crowded with people running the same model, maybe from his videos; *HVAC*'s top profiles are mostly the owners', without keywords; in *cleaning* every top-three profile keyword-stuffs
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=99-->
@@ -306,6 +308,17 @@ name, in a city where that name still has volume, and is easiest where the top p
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=798-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=829-->
   > *commercial cleaning* has no season: [commercial cleaning](niches/commercial_cleaning.md#the-season). each one's own: [pool cleaning](niches/pool_cleaning.md#the-season), [pest control](niches/pest_control.md#the-season), [detailing](niches/detailing.md#the-city)
+
+## switching trade
+
+- (?) a trade is given up only once its profiles rank and still get no leads: profiles that don't rank yet say nothing about the trade
+  - (?) Eric, 2026-11, asked by Sunny whether to move from *cleaning* to *detailing*: not without knowing how the cleaning profiles do
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=43-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=80-->
+  - (?) Sunny's seven *cleaning* profiles, three weeks in: 150+ reviews, over half washed for having the same people review two of them, none ranked high enough for leads, one lead — [deletion](../reviews/deletion.md#repeat-reviewers)
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=110-->
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=139-->
+  > what he weighs it against: [detailing](niches/detailing.md#the-market)
 
 ## a second trade
 

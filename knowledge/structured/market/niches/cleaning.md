@@ -1,19 +1,23 @@
 # cleaning
 
 house cleaning: not a trade to start on: ~$150–200 a call against plumbing's $300–400, ~$30 a lead when sold, and the
-most operations of any trade we know, though its calls come more often and steadier and its profiles
-verify instantly: [instant](../../profile/verification/instant.md#categories). it pays on profile count, one operator taking a month toward
+most operations of any trade we know, though its calls come more often and steadier, and a beginner's
+profile takes jobs within weeks. its profiles verified instantly until November, when new ones began to be
+asked to verify: [verification](cleaning/profile/verification.md). it pays on profile count, one operator taking a month toward
 $20k off 19 of them with every call his own, or as a recurring base with payroll held at 40–45%, which
-takes an operation already built, as Ilya's is. it gets about detailing's searches and competition,
+takes an operation already built, as Ilya's is. it gets about detailing's searches and competition or less,
 for a ticket a little above it, but a big city's top profiles carry hundreds of reviews, so the area is
-picked by its keywords, away from the leader. its calls come in waves with the rankings. commercial cleaning, whose contracts recur and whose big jobs pay, is
+picked by its keywords, away from the leader. its calls come in waves with the rankings. insurance is for
+a cleaning company with its own cleaners; one passing the jobs to a contractor goes without it at first. commercial cleaning, whose contracts recur and whose big jobs pay, is
 a trade of its own: [commercial cleaning](commercial_cleaning.md).
 
 ## the market
 
-- (?) *house cleaning* gets about detailing's search volume and competition, for a ticket a little above it
+- (?) *house cleaning* gets about detailing's search volume and competition, or less of both, for a ticket a little above it: area by area, detailing can be the bigger search and the easier rank
   - (?) Eric, 2026-06: about the same search volume as detailing, maybe a little more, similar competition, the ticket a little higher
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=130-->
+  - (?) Sunny, Texas, three weeks into seven cleaning profiles: detailing so much easier to rank, at almost triple the searches
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=43-->
 - (?) (!) a big city's top profiles carry hundreds of reviews: put a profile where the keywords are easier, not beside the leader
   - (?) Derick Parsons: Houston is extremely competitive; 25 reviews won't make the first page, and in some areas competitors at over 150 are the lowest bar
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4742-->
@@ -34,10 +38,15 @@ a trade of its own: [commercial cleaning](commercial_cleaning.md).
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3601-->
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3642-->
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4470-->
-- (?) a cleaning profile brings money in from its first week
+- (?) a cleaning profile brings jobs in within weeks, a beginner's too
   - (?) Eric's residential cleaning, mixed in with his detailing: $1k the first week
     <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=33-->
     <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=52-->
+  - (?) Reece, UK, a month to a month and a half in: ~15 jobs in the last two weeks
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1603-->
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1627-->
+  - (?) `Lamarious Thomas`'s cleaning profile: five or six jobs done, maybe more, and still getting leads
+    <!--2026-11-13 Lamarious Thomas ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=613-->
 - (?) more calls on a steadier month, each clearing about half a plumbing call's profit, and never the six-figure job
   - (?) *cleaning* clears ~$150–200 profit a call, against $300–400 for *plumbing* — Eric, steering a plumbing member off it
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1445-->
@@ -92,6 +101,9 @@ a trade of its own: [commercial cleaning](commercial_cleaning.md).
     <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6480-->
     > Eric: no skill barrier means flaky cleaners, and customers particular about their homes complain — "wipe the word cleaning out of your brain"
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1743-->
+  > insurance is for a company with its own cleaners, as Ilya's: Eric, asked by Reece, who passes his jobs to a contractor, would not buy it yet, though maybe it is the right thing; the UK may have a cheaper one
+  <!--2026-11-13 Eric says 0.5σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1627-->
+  <!--2026-11-13 Eric says 0.5σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1660-->
 - (?) one operator can take every call and payment himself at 19 profiles; once the week is too full to hold by memory, booking goes on a calendar, `Calendly` for Derick Parsons
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5545-->
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5599-->
@@ -99,6 +111,8 @@ a trade of its own: [commercial cleaning](commercial_cleaning.md).
   - (?) Derick Parsons
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5631-->
     <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5669-->
+  - (?) a member's profile stopped getting leads, then got them again without his posting anything; he puts it down to demand
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1299-->
   > across many profiles at once, google re-ranking: [ranking](../../ranking.md#when-calls-drop)
 - (?) hispanic cleaners are said to be the best for the job
   - Lamarious Thomas says hispanic guys are apparently best for cleaning jobs

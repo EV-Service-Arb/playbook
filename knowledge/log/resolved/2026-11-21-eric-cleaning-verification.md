@@ -23,3 +23,20 @@ cleaning's ticket and volume are against detailing's stays, on `market/niches/cl
 
 What would reopen it: a cleaning profile asked for a video on a solid gmail. Verification moves
 fast, so a fresh report outweighs all three of Eric's.
+
+## Reopened: the 2026-11-13 call
+
+| who, when | says | link |
+|---|---|---|
+| Reece (`gmbpp member`), 2026-11-13 | his new cleaning profiles now get asked to verify, which they weren't before; Eric had sent him to friends' and family's gmails | [25:39](https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1539) |
+| Connor, 2026-11-13 | his phone and numbers don't instant-verify anymore, so he video-verifies; on his house cleaning videos the storefront step keeps failing | [10:47](https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=647), [11:19](https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=679) |
+
+What would reopen it came: new cleaning profiles asked to verify, on the personal gmails Eric points
+everyone to. Reece is one member, but verification moves fast and his report is the newest; Eric's word
+through September, `PP`'s October passes, are what held until then. The claim moves to
+`market/niches/cleaning/profile/verification.md` and now says new profiles are asked to verify: plan
+for the video, and try instant first on a real person's personal gmail. `instant.md` keeps a link to
+it among the trades that verify instantly.
+
+What would settle it: a cleaning profile created after November 12 instant-verifying on a personal
+gmail, or several more members sent to video.

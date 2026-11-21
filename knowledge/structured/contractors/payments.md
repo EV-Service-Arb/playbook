@@ -15,6 +15,9 @@ the contractor collects under his own name and pays us our cut after: the job's 
     <!--2026-09-25 Eric says 1σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=141-->
   - if it's contractors who are taking payments, they actually have more incentive to upsell while they're in the house
     <!--2026-09-25 gmbpp member says 1σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=5462-->
+  - (?) Reece, UK *cleaning*, a month or so in: a deposit before the job, then the full payment, passed on to the contractor
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1603-->
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1627-->
   - Eric very quickly transitioned to taking payments himself
     <!--2026-09-25 Eric ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=172-->
     Q: interesting, wonder if it matters

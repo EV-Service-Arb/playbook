@@ -4,11 +4,12 @@ what members have reported about the accounts, devices, proxies, numbers and car
 
 ## gmails
 
-- (?) (!) 2–6* profiles per managing gmail
+- (?) (!) about five profiles per managing gmail, spread over several gmails: there is no hard limit, the count is how much one ban may take with it
   > up to 5–6 when we are added as manager, opsec is clean, and the managing email is high-trust and on an org (workspace)
   > 2–3 at most when we sit on the profiles as owner, or the account is already tainted
   reason: one banned gmail takes every profile on it at once
   resolved: [2026-10-23](../log/resolved/2026-10-23-profiles-per-gmail.md)
+  resolved: [2026-11-21](../log/resolved/2026-11-21-eric-2026-11-12-revisions.md)
   <!--2026-08-20 says 1σ https://www.loom.com/share/35e5f66432cc47e284303e545af0c0aa?t=194-->
   <!--2026-10-09 Eric says 1σ https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=341-->
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2643-->
@@ -20,6 +21,27 @@ what members have reported about the accounts, devices, proxies, numbers and car
   <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6314-->
   <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6386-->
   <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6417-->
+  - (?) Eric, 2026-11: no hard limit, he typically says keep around five per gmail; an SEO agency holds 100–200 profiles under one, and spreading them out only diversifies the risk; 15 on three gmails, five each, is fine
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1511-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1746-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1784-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2692-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2751-->
+  - (?) `Walker`'s three HVAC profiles on his housemate's personal gmail, a month stable; Eric: leave them all there
+    <!--2026-11-13 Walker ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2042-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2042-->
+- (?) a bought aged gmail warms at least a week before it creates a GMB: try one after five days, and if it fails warm it a couple more
+  - (?) Eric, 2026-11: most need some warm-up to get approved, maybe not a couple of weeks
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2581-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2609-->
+- (?) a fresh gmail is warmed two or three weeks before it creates a GMB: leave some reviews, watch youtube, sign up to an email list, send a couple of emails
+  > cold-email software such as `Instantly` automates the email part, which Eric hasn't done himself; for a reviewer's standing on maps it does nothing: [local guide](reviews/local_guide.md#warming)
+  - (?) Eric, 2026-11, as the slower way to more profiles than paying people to open them
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=466-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=504-->
+- (?) a bought gmail is unpredictable on a password change: first give manager access to a gmail you know you won't be logged out of
+  - (?) Eric, 2026-11: no right answer to how soon
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1476-->
 - (?) buy gmails off real people: facebook marketplace and groups, craigslist — pay them, facebook gift cards work — Eric
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3409-->
 - `accsmarket` for buying gmail accounts with their actual cookies
@@ -42,6 +64,8 @@ what members have reported about the accounts, devices, proxies, numbers and car
   > `Jordan` says buying business managers is routine and has a dedicated supplier
   > post from a bought account, never your personal one
   <!--2026-09-18 gmbpp member ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6203-->
+  > Eric, 2026-11: for the facebook review method, the aged, marketplace-enabled ones: [paid](reviews/sourcing/paid.md#facebook)
+  <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1816-->
 
 ## devices
 
@@ -58,6 +82,9 @@ what members have reported about the accounts, devices, proxies, numbers and car
   > rooting is the hard part; youtube it and have chatgpt walk you through
   > if you skip rooting you can still spoof by tethering the phone to a computer — slower, works
   <!--2026-09-18 Gabe Jacobs ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=273-->
+  > `Devin Grandt` shoots address videos for others on a bought `Google Pixel`, rooted, its location spoofed, with some AI; the rest he won't share
+  <!--2026-11-13 Devin Grandt ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=4446-->
+  <!--2026-11-13 Devin Grandt ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=4066-->
 - (?) location spoofers work, if you use a solid one — Eric links one in the course's video modules
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2251-->
   > a member recommends `3uTools`, free // heard as "Three Tools"
@@ -71,6 +98,8 @@ what members have reported about the accounts, devices, proxies, numbers and car
 - (?) no hard limit on profiles per device: without `Multilogin` Eric would stop at ~30, a number with nothing behind it; five is no worry
   <!--2026-11-06 Eric says 0.5σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3276-->
   <!--2026-11-06 Eric says 0.5σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3318-->
+  > Eric, a week later: 20 a device is a safety precaution, with nothing behind it but how much you'd lose
+  <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2692-->
 - (?) `Multilogin` runs 20–40 gmails off one phone, unlinked from device, IP and Wi-Fi; a member at 22 profiles moved to it when incognito browsers stopped working. its gain is aged emails warmed inside it for his own reviews, which stick where bought reviews and bought aged accounts fall off
   <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7017-->
   <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7098-->
@@ -93,6 +122,9 @@ what members have reported about the accounts, devices, proxies, numbers and car
   reason: there are many innocent reasons to be on a VPN and exactly one to be on a burnt shared proxy
   > buy residential, from a small seller, and check it hasn't been circulating
   <!--2026-09-18 Valera says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5887-->
+  > Eric, 2026-11, for a multi-login browser: rotating residential over ISP proxies, by his guess; no need to stress while nothing is banned
+  <!--2026-11-13 Eric says 0.5σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2085-->
+  <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2125-->
 
 ## numbers
 

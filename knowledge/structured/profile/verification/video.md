@@ -10,14 +10,30 @@ what members and sources have reported about verifying a profile by recorded vid
 - (?) same phone number across profiles is fine; the business *name* has to differ at least slightly — Eric
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1603-->
 
+## gmails
+
+- (?) a bought US gmail two or three years old carries a recorded video verification
+  - (?) `Alan`: three or four profiles verified on recorded videos, *pest control* and *HVAC* off bought US gmails at least two or three years old, *plumbing* off an old gmail of his own
+    <!--2026-11-13 Alan ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1439-->
+    <!--2026-11-13 Alan ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1476-->
+
 ## what it shows
 
 - (?) the course's own videos are the baseline for what to show: signage, the vehicle, a business card. a member's failure story qualifies them, it does not replace them // inferred
   <!--2026-10-30 agent says 1σ-->
+  - (?) `Devin Grandt`, who shoots address videos in person for others, for pay, shows what google asks for, literally: the street sign, the address on the wall, the office, the dashboard, business cards, the brand on the computer screen, on the front door he unlocks and on the truck he opens
+    <!--2026-11-13 Devin Grandt ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=4239-->
+    <!--2026-11-13 Devin Grandt ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=3982-->
 - (?) (!) most failures are signage — Eric
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1500-->
-- (?) before recording, photograph the sign and ask chatgpt "is this a permanent sign?" // credited to `Donovan`, reported to have helped a lot of people
-  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1500-->
+- (?) (!) a framed picture of the logo usually passes as signage: before recording, photograph it and ask `ChatGPT` or `Gemini` whether it passes as permanent signage for GBP verification, and fix it if not
+  > by trade: a printed logo on the door passed for `Connor`'s landscaping, and keeps failing the storefront step for his house cleaning and pressure washing: [landscaping](../../market/niches/landscaping.md#verification), [cleaning](../../market/niches/cleaning/profile/verification.md#video), [pressure washing](../../market/niches/pressure_washing.md#verification)
+  > on a live call, a rep can reject a frame as paper: [live](live.md#signage)
+  - (?) Eric, 2026-11: a framed picture works pretty well across the board and usually passes; photograph it and ask `Gemini` or `ChatGPT` whether it will pass as permanent signage for GBP verification
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=729-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=758-->
+  - (?) Eric, 2026-09: photograph the sign and ask chatgpt "is this a permanent sign?" // credited to `Donovan`, reported to have helped a lot of people
+    <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1500-->
 - (?) the rest of the video is low-risk: show yourself at the location, unlock the door, show the CRM for management access, a staff-only sticker may help slightly
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1543-->
 
@@ -59,8 +75,13 @@ what members and sources have reported about verifying a profile by recorded vid
 
 ## service-area video
 
-- (?) a SAB video is harder to record than an address one, unless you actually live in the area you are claiming
-  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3516-->
+- (?) a service-area video needs no storefront, but is shot inside the area it claims: easier than an address one for whoever is there, harder from outside
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-sab-video.md)
+  - (?) a SAB video is harder to record than an address one, unless you actually live in the area you are claiming
+    <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3516-->
+  - (?) a member, 2026-11: videos for a service-area business are easier to shoot
+    <!--2026-11-13 gmbpp member says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=4348-->
+  > converting it to the address after: [SAB to PAB](sab_to_pab.md)
 
 ## recorded and edited video
 

@@ -1,21 +1,21 @@
 # hired
 
-What members have reported about paying other people to collect reviews: finding them, facebook marketplace, vetting, pay and how their reviews stuck.
+What members have reported about paying other people to collect reviews: finding them, facebook marketplace, vetting, pay and how their reviews stuck. hiring them is a numbers game; strangers paid to leave one review each off an ad: [paid](paid.md).
 
 ## finding
 
 - everybody has trouble finding good review-getters
   <!--2026-09-25 Artheme Chaykin says 1σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=596-->
   <!--2026-09-25 David ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=806-->
+  - (?) John, who used hired people campaigning for him in public, on Luca's method: hiring is a numbers game, and the paid ad works better; Eric: hiring is a little hard, you have to try, John has done it more than anybody
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=3023-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2999-->
+  > the paid ad: [paid](paid.md)
+- (?) `Indeed` reaches local applicants: almost 40 put in resumes for one member, after some trouble getting approved there; Eric: to hire someone, go on Indeed
+  <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1299-->
+  <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=3155-->
 - (?) craigslist for a reviewer in a city you don't live in: 10 people said yes, all 10 bailed
   <!--2026-09-18 gmbpp member ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4242-->
-  > two more members' craigslist reviewers turned out mostly kenyan: one batch was all deleted, the other burnt $100+ and many dropped
-  <!--2026-10-23 gmbpp member ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2905-->
-  <!--2026-10-23 Erwin ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6199-->
-  > Prabh: Kenyan scammers offering local guide reviews, one left 15, all stuck; a Craigslist responder's 14 on a $20 trial came off a `TextNow` number
-  <!--2026-11-06 Prabh ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3984-->
-  <!--2026-11-06 Prabh ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4931-->
-  <!--2026-11-06 Prabh ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5003-->
 - (?) (!) aim the Craigslist ad at college students, not older people, and have each leave one review first: Derick Parsons went through ~15 to find his, most of the trouble from older ones
   <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4024-->
   <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4056-->
@@ -36,16 +36,6 @@ What members have reported about paying other people to collect reviews: finding
 
 ## facebook marketplace
 
-- facebook didn't like Ilya's 25$ gift card for GMB post
-  <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6154-->
-
-  > potential solution is to post on the Marketplace there, in `misc` category
-  <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6243-->
-- (?) a gift card offer in a facebook post got pulled. post on marketplace, `misc`, instead
-  <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6154-->
-  <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6243-->
-  - (?) Eric, 2026-11: a Facebook Marketplace post offering free gift cards for reviews, $5 to each who messages and $5 more for every friend or family member they bring
-    <!--2026-11-13 says 1σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1214-->
 - (?) facebook marketplace, "miscellaneous" category, $20–30/hr, photo, "it's for students" — one canadian member got ~30 replies
   <!--2026-09-18 gmbpp member heard 0.5σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6347-->
 - Artheme Chaykin has amazing point on automating job description on FBMarketplace for review getters
@@ -58,18 +48,8 @@ What members have reported about paying other people to collect reviews: finding
 
 ## vetting
 
-- Gabe Jacobs: massive advice on automating checking people coming from ads
-  has a form on a site that checks device fingerprint, geolocation, IP location, tz, etc. Then score them. Lol, actual bookie tactics
-  <!--2026-10-09 Gabe Jacobs ran 2σ https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1916-->
-  <!--2026-10-09 Gabe Jacobs ran 2σ https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1665-->
-  > the ads are his $5-a-review posts on Craigslist gigs and Facebook. a vetted person goes onto his message board, and his tool sends them the profile's review link
-  <!--2026-10-09 Gabe Jacobs ran 2σ https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1707-->
-  <!--2026-10-09 Gabe Jacobs ran 2σ https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=1961-->
 - (?) vet a remote reviewer by the accounts the reviews come from: no profile picture and no other reviews means fake. let a new one leave 4–5, then pause until those stick — Eric
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2967-->
-- (?) craigslist ad framed as a quick survey for up to a $100 amazon gift card, then screening questions — still gets bypassed // next: a selfie at the park as proof, untried
-  <!--2026-10-23 Erwin ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6232-->
-
 ## pay
 
 - (?) a collector is paid a few dollars a review; students come cheapest

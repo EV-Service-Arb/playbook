@@ -52,9 +52,13 @@ What members have reported about collecting reviews in person: tables, venues, t
   <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=616-->
   > Eric: the airport is close enough: [remote](remote.md#proximity)
 - (?) parks and playgrounds in the evening — 300–500 people at a big park. approach under-30s; older people refuse — `PP`
+  > Eric: teenagers and high schoolers are the most willing; older people never want to give one
+  <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1138-->
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4648-->
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4697-->
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4731-->
+- (?) the DMV when it's busy, people sitting around — a member will try it
+  <!--2026-11-13 gmbpp member says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1241-->
 - (?) state fair was tried twice, cold approach only, people were noticeably more hesitant there
   <!--2026-09-18 gmbpp member ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2839-->
 
@@ -75,8 +79,18 @@ What members have reported about collecting reviews in person: tables, venues, t
 
 ## timing
 
-- (?) tuesday–thursday, 12–5pm // when classes are densest
-  <!--2026-09-18 Ryan D ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1683-->
+- (?) (!) catch people idle, strolling between classes, not rushing to them or at work: "can you leave a quick 30-second review?"
+  - (?) Eric, 2026-11: at a college, the most success; a member, the same, approaching kindly as they walk; people busy at work are reluctant
+    <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1180-->
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1214-->
+  - (?) `Kit Volcano`: a college on a Monday, everyone locked into work, headphones in; at the same hour on a Friday, hanging out
+    <!--2026-11-13 Kit Volcano ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1061-->
+    <!--2026-11-13 Kit Volcano ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1103-->
+  - (?) tuesday–thursday, 12–5pm // when classes are densest
+    <!--2026-09-18 Ryan D ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1683-->
+- (?) a venue's crowded hours: malls right after school, weekends all day. Eric sees no better or worse time beyond that
+  <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1103-->
+  <!--2026-11-13 Eric ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1138-->
 
 ## staffing
 

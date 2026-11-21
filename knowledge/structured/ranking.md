@@ -119,14 +119,21 @@ what searchers do on and after the profile, and a [site](site/seo.md) that match
 
 ## reach
 
-- (?) a profile ranks around its pin and fades with distance: where its rank map is green in the middle and red at the edges, open a second one ~10 miles out, in the red
-  - (?) Zach Peterson: they compete a little, but the second takes a whole new area's searches
+- (?) a profile ranks around its pin and fades with distance, so a city takes several profiles spread over it, more the bigger it is, rather than a couple of strong ones: where a rank map is green in the middle and red at the edges, the next goes in the red
+  - (?) Zach Peterson: a second ~10 miles out; they compete a little, but the second takes a whole new area's searches
     <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=159-->
   - (?) Eric, 2026-08: proximity to the searcher is big. `plumber austin` gives a different top in each pocket of the city — Pflugerville 458, 57 and 112 reviews; Wells Branch 1,214, 50 and 759 — and a profile on an address in Bushy Creek is found by people in Bushy Creek, not Windsor Park
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=691-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=701-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=705-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=723-->
+  - (?) Eric, 2026-11: more profiles beat a couple of really good ones: spaced three to five miles apart, at maybe 25 reviews each, more where it's competitive; how many depends on how big the city is, since a profile ranks only so far out
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=977-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1011-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=1035-->
+  - (?) Eric, 2026-11: one service-area profile over a massive area on ~500 reviews will get some leads, but he doesn't know it's the most efficient use of them; a member: a competitor on ~1,000 reviews ranks in only two or three cities
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=795-->
+    <!--2026-11-13 gmbpp member says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=795-->
 
 - (?) geotagged photos and videos naming another city push the profile into it
   <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7300-->
@@ -163,6 +170,7 @@ what searchers do on and after the profile, and a [site](site/seo.md) that match
 
 ## open
 
+- Q: whether `Connor`'s one service-area profile over a massive area ranks across its regions on ~500 reviews
 - TODO: compile ranking of all the relevant things we can be doing to improve [#35](https://github.com/EV-Service-Arb/playbook/issues/35)
 - TODO: check if image reviews and video reviews would get it higher [#36](https://github.com/EV-Service-Arb/playbook/issues/36)
 - (?) TODO: a directions bot that has local people request directions — Zach Peterson floated building one; companies sell it already, at a high price — Eric

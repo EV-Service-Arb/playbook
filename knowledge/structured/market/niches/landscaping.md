@@ -1,6 +1,6 @@
 # landscaping
 
-high ticket, usually high search volume, a little easier to verify than plumbing, and competition far below plumbing's: in the same city its
+high ticket, usually high search volume, a little easier to verify than plumbing, a printed logo passing its video, and competition far below plumbing's: in the same city its
 top 3 carry far fewer reviews, and in Los Angeles none has a keyword in its name, so the searches feed
 many profiles. a couple of big contracts can make a month, and Eric's best student makes hundreds of
 thousands a month on it, but on construction, where material is most of the job, our take is a thin
@@ -32,6 +32,11 @@ goes slow in winter: [niche](../niche.md#a-second-trade). how high ticket weighs
   - (?) Eric, 2026-08: *plumbing* and *HVAC* are a little harder to verify than *landscaping*; a lot of the higher-ticket niches are a little easier to verify on Google
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=232-->
   > plumbing's: [plumbing](plumbing.md#verification)
+- (?) a printed logo on the door passes as the video's signage
+  - (?) `Connor`, who owns no store: a printed picture of the logo on the door passed for a bunch of his landscaping pages, where the same failed for his house cleaning and pressure washing
+    <!--2026-11-13 Connor ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=647-->
+    <!--2026-11-13 Connor ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=679-->
+  > the other trades': [cleaning](cleaning/profile/verification.md#video), [pressure washing](pressure_washing.md#verification)
 
 ## what it makes
 

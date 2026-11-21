@@ -4,7 +4,8 @@ plumbing's equal on ticket, with few lead-gen operators in it: its top profiles 
 the owners', carrying no keyword, so a keyworded address profile ranks quickly, wherever a city is not
 already held on review counts. small repairs are done and paid the same day, system replacements run
 to thousands. there is work in winter and in summer, less in the mild weather between. it always goes
-on an address; the codes google offers it are not a route we take. it has made a student ~$10k a month
+on an address, and instant-verifies on a real person's personal gmail; a code google offers it is taken
+only on a real person's own number. it has made a student ~$10k a month
 within three months, and a keyworded Toronto profile of Eric's 45 leads its first month. where it is weighed: [niche](../niche.md#the-starting-trade); its several names
 are several keywords per city: [city](../city.md#search-demand).
 
@@ -61,12 +62,17 @@ are several keywords per city: [city](../city.md#search-demand).
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=367-->
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=400-->
   > address profiles in general: [ranking](../../ranking.md#address)
-- (?) google offers it a code by text, by call or by email, where plumbing in the States mostly gets only the video; the codes are a route we don't take
+- (?) google offers it a code by text, by call or by email, where plumbing in the States mostly gets only the video; a code is taken only when it comes on a real person's own number
   resolved: [2026-11-21](../../../log/resolved/2026-11-21-eric-hvac.md)
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-eric-2026-11-12-revisions.md)
   - (?) Eric, 2026-07: HVAC profiles verify easier than plumbing, by a text code, a phone call code or email
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=166-->
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=265-->
-  > why not the codes: [verification](../../profile/verification.md#codes)
+  > when a code is taken: [verification](../../profile/verification.md#codes)
+- (?) it instant-verifies on a real person's personal gmail
+  - (?) `Walker`'s three, on his housemate's personal gmail a month ago, optimized and stable
+    <!--2026-11-13 Walker ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=2042-->
+  > a member's gmails held 10–15 years instant-verified two: [instant](../../profile/verification/instant.md#the-gmail). `Alan`'s went up on recorded video off bought US gmails: [video](../../profile/verification/video.md#gmails)
 
 ## the price
 
@@ -80,7 +86,7 @@ are several keywords per city: [city](../city.md#search-demand).
 
 ## what it makes
 
-- (?) (!) two keyworded address profiles, 4th in the pack on 11 and 17 reviews, made ~$10k a month within three months
+- (?) (!) it pays those who run it: two keyworded address profiles, 4th in the pack on 11 and 17 reviews, made one student ~$10k a month within three months
   - (?) Eric's student Jeremiah, Ontario and Richmond Hill, `HVAC contractor`: $10,000 a month within 3 months, "honestly not that much work"; best day over $2,000 profit; 123 calls over a minute long in a month, `CallRail` showing 380 in the same window
     <!--2026-07-31 heard 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=0-->
     <!--2026-07-31 heard 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=32-->
@@ -91,6 +97,8 @@ are several keywords per city: [city](../city.md#search-demand).
   - (?) Eric, 2026-07: untapped, and working very well for the couple of his students running it: "I give you the green light"
     <!--2026-07-31 heard 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=695-->
     <!--2026-07-31 heard 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=728-->
+  - another confirmation on HVAC being good niche
+    <!--2026-10-16 Raphael D'Angelo ran 2σ https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=3112-->
 - (?) a keyworded profile in Toronto, whose top profiles carry no keyword, took leads from its first month
   - (?) Eric's `SunCool HVAC of Toronto - Midtown`: 5.0 on 91 reviews done within about a week, 45 leads in its first month after verification
     <!--2026-11-13 ran 2σ https://www.youtube.com/watch?v=WJkcTccFHjc&t=1314-->

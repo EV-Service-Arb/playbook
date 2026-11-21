@@ -56,6 +56,10 @@ What members have reported about how many reviews a profile takes, how fast, and
   > not deletion. the reviewer submits and nothing appears
   <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2381-->
   > against it: 122 local reviews over a few days, all showing on Eric's Newmarket profile: [per day](#per-day)
+  - (?) Ladeon, *plumbing*: the reviews given 48 hours still show on none of his accounts a week later, though the gmails aren't linked; how many he left is not said. Eric: try different ones
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=362-->
+    <!--2026-11-13 gmbpp member ran 2σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=386-->
+    <!--2026-11-13 Eric says 1σ https://www.loom.com/share/28f60c76396841d39b9afc506a4bf805?t=418-->
 
 ## delay
 
