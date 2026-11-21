@@ -2,7 +2,7 @@
 <!--half-life 1y-->
 
 google suspends a profile it does not trust: a fresh gmail, a NAP shared with another profile, content that does not fit the trade, a young profile changing what identifies it. a suspended
-profile is appealed at once, on its own. registering the business: [registration](suspension/registration.md).
+profile is appealed at once, on its own, with documents that match it, which win back a video-verified profile far more often than an instant one. registering the business: [registration](suspension/registration.md).
 
 ## the gmail
 
@@ -52,6 +52,11 @@ profile is appealed at once, on its own. registering the business: [registration
 - everything on the profile fits its trade: no AI photos that look fake, no other trade's content, no site unrelated to it
   - Matt Gazda: locksmithing on a plumbing profile, "a random website for your website"
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=98-->
+- (?) one brand's photos and descriptions can be shared across its profiles, but a profile in another city gets its own description; the risk is someone who dislikes you seeing every profile is yours, so vary the branding
+  - (?) Eric, 2026-11: a member had 10 under one brand until someone figured out what he was doing
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1472-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2864-->
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1472-->
 - only US IPs work on the profile: no offshore SEO, no `Fiverr`
   - Matt Gazda: do it yourself
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=98-->
@@ -63,6 +68,10 @@ profile is appealed at once, on its own. registering the business: [registration
   - Matt Gazda: NAP and domain are the highest trust signals google reads. the first 6 months, the first year to be careful; his slide says 4 months
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=268-->
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=301-->
+  - (?) Eric, 2026-11: never rename a profile, it typically triggers re-verification; Chris's two, two to three months old, renamed to the city and "Plumber", vanished and brought no lead
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1829-->
+    <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1743-->
+    <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1802-->
 
 ## citations
 
@@ -70,6 +79,8 @@ profile is appealed at once, on its own. registering the business: [registration
   - Matt Gazda: `Yelp`, `Facebook`, `X`, `Nextdoor`. "a huge sleeper", the best way never to be suspended again
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=336-->
     <!--2026-11-17 says 1σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=369-->
+  - (?) Eric, 2026-11: for a suspended instant-verified profile, citations aren't worth the effort
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2507-->
 
 ## the address and the rating
 
@@ -97,6 +108,10 @@ profile is appealed at once, on its own. registering the business: [registration
   <!--2026-09-18 Eric ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3191-->
 - (?) official business registration, business licence, tax certificates, utility bills (electricity/phone/water/internet) are the reinstatement evidence google asks for
   <!--2026-09-18 says 1σ https://chatgpt.com/share/6aacb045-ac9c-83eb-a97d-8624c616a763-->
+  - (?) Derick Parsons, 2026-11: a Fiverr seller Henry A put him on to made the documents he lacked; he skipped the request for additional information, and the profile stayed up and brought two leads the day it came back
+    <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3520-->
+    <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3561-->
+  > they work on a video-verified profile far better than on an instant one: [verification](verification.md#routes)
 - (?) name and address on those documents must match the profile being appealed
   <!--2026-09-18 says 1σ https://chatgpt.com/share/6aacb045-ac9c-83eb-a97d-8624c616a763-->
 - (?) appeal each profile on its own, with documents whose name and address match it. a won gmail appeal does not bring its profiles back // inferred

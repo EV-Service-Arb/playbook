@@ -20,6 +20,7 @@ before his first job we agree with him how jobs get quoted and what our cut is. 
     And then say he handles the fee, and we never invoice or handle the customer.
     And he's responsible for all the work he carries out.
     <!--2026-09-25 gmbpp member says 1σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=6085-->
+  > a trade that legally takes a licensed contractor: [market](../market.md#how-a-market-is-judged)
   - (?) have every contractor sign an independent contractor agreement — `Ilya`
     A: for the text, search "standard independent contractor agreement for <industry>"
     <!--2026-09-18 Ilya says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5172-->

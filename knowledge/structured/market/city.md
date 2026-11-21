@@ -104,6 +104,11 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
 - (?) the question is what a place in the top 3 costs here, in reviews: read off the top 3 profiles' counts and how well they do SEO, not off a review cutoff. past that, whether p2 or p1 is worth the reviews it would take
   - we more so care about what we need to get into top 3. Everything else is means to an end. Beyond that it's the question of how many reviews would going up to p2 or p1 would cost, and whether that number of reviews is worth it. And while looking at a new market, we reason about how many reviews we would need for p3 (and it will obviously also include how good the existing guys are at SEO, and not blunt review-based comparison)
     <!--2026-11-17 Valera says 1σ-->
+  - (?) Eric, 2026-11: go up in increments: at 50, 70 and 100 in the top three, get 25 and see where you rank; against weak keywords fewer reviews do it
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1194-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1224-->
+  - (?) Eric, 2026-11: ten reviews on each of five profiles in competitive areas are useless, 50 on a profile that needed 10 are wasted; typically spread them over more profiles
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1403-->
   - not wise to compete with people with 200+ reviews
     <!--2026-09-17 Valera says 1σ-->
   - (?) competition by the top-3 profiles' review counts: ≤50–100 easy, top 3 within the month on 40–60 reviews; 100–200 medium, 1–2 months but more calls once ranked; 300+ skip, spread the reviews over more profiles instead

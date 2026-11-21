@@ -18,6 +18,8 @@ What members have reported about review count, pace and text. The rest is filed 
 
 - (?) (!) velocity counts on top of count: reviews every week. 500 reviews with the last one six months ago does little for you
   > keep them coming with tap cards, or an automation after each job
+  > Derick Parsons: profiles making money consistently hold their rankings on one or two reviews a week, with posts
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5307-->
   <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=191-->
   > John Osayi: 2–5 reviews a week per profile, plus fresh photos, is the biggest lever
   <!--2026-10-23 John Osayi says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=659-->
@@ -33,6 +35,12 @@ What members have reported about review count, pace and text. The rest is filed 
   <!--2026-10-23 John Osayi says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2667-->
   - (?) Marcus Milan, 2026-10: customers, friends and family, or otherwise incentivised, "it's all the same to Google"; the big companies get theirs the same way
     <!--2026-10-20 says 1σ https://www.youtube.com/watch?v=a7fC901L5ss&t=393-->
+
+- (?) review software emails or texts customers three or four times and keeps anything under four stars off Google: cheaper than $6 a review as a recurring flow
+  - (?) a member, its name forgotten
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5250-->
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5284-->
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5307-->
 
 ## members
 

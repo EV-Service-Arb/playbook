@@ -27,6 +27,9 @@ what members and sources have reported about verifying a profile by recorded vid
   <!--2026-09-25 Eric heard 0.5σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1413-->
   > he did spoof the location too
   <!--2026-09-25 Eric heard 0.5σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=1452-->
+- (?) with a spoofer, the signage is numbers on the mailbox or the door, looking decent; usually no street is asked for, so keep an invoice with the address in case — Eric, 2026-11
+  <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2982-->
+  <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3276-->
 - apparently showing wrong street signs is fine
   <!--2026-09-25 Grisha G ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=4490-->
 - Eric: a guy is showing a street sign how it would look on the correct location — AI-generated, laid out with Google Earth, on his computer screen — then shows an invoice next to it like it was real, and smoothly gets over to the invoice so the AI reviewing doesn't notice it was opened on a pc
@@ -49,6 +52,10 @@ what members and sources have reported about verifying a profile by recorded vid
 - (?) (!) while you are set up at the location anyway, create three profiles and record three videos
   reason: the identical video passes on one submission and fails on another, so buy yourself two more draws
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1573-->
+  > a member filmed three at one address as suite A, B and C; all three passed, days later
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6582-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6606-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6635-->
 
 ## service-area video
 
@@ -77,3 +84,5 @@ what members and sources have reported about verifying a profile by recorded vid
   <!--2026-09-18 David ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6048-->
 - (?) anything that injects or edits video has a shelf life of weeks. check the newest capture before relying on it // inferred
   <!--2026-10-30 agent says 1σ-->
+  - (?) a team shooting verification videos for others, 2026-11: a week before, google denied all three checks on every video
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3167-->

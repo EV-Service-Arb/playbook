@@ -45,6 +45,12 @@ What members have reported about collecting reviews in person: tables, venues, t
   <!--2026-09-18 Grisha G ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2765-->
   > `Glenn`: the courtyard outside a big mall, at night past security, worked too
   <!--2026-10-23 Glenn ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4678-->
+- (?) an airport: a member got 40 in two hours there for a friend 15–20 miles away, and plans DFW for McKinney and Plano, sleeping there
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=441-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=660-->
+  <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=553-->
+  <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=616-->
+  > Eric: the airport is close enough: [remote](remote.md#proximity)
 - (?) parks and playgrounds in the evening — 300–500 people at a big park. approach under-30s; older people refuse — `PP`
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4648-->
   <!--2026-10-23 PP ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=4697-->

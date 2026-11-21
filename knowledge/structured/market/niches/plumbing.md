@@ -1,8 +1,10 @@
 # plumbing
 
 the starting trade: a mid ticket, paid within a day, whose big jobs come often enough to set the
-average. there is demand everywhere, more searches than HVAC, but lead-gen operators crowd it and the competition leaves fewer great cities to find; in
-the States it mostly verifies only by video. a plumber is easy to find in any city, and a customer seldom comes back. eleven profiles in one city have cleared ~$10k profit the first month, and one
+average. there is demand everywhere, more searches than HVAC, but lead-gen operators crowd it: in a major US city the broad term is held, so
+the work is finding a smaller city or a sub-service such as [drain cleaning](drain_cleaning.md). in the States it mostly verifies only by video, and one who
+can't get through buys the verification. a plumber is easy to find in most cities, but not where plumbers have more work than they take, as in
+Montreal; a customer seldom comes back. eleven profiles in one city have cleared ~$10k profit the first month, and one
 brand topping many cities clears Eric $20–25k a month; a dozen profiles at a few jobs a week each, ~$30k for Marcus Milan. the plumber keeps most of the profit, the more the bigger the job, so he
 keeps answering; a set fee gets him in, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
 [cleaning](cleaning.md#economics).
@@ -17,6 +19,9 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=328-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=425-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=723-->
+  - (?) Muhammad is said to be "averaging $3,000 plumbing jobs", his profiles put up without knowing citations or rankings
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2675-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2709-->
   - (?) Eric, 2026-08: a $1,000 job keeps $300 profit, a $3,000 one $1,000
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=297-->
   - (?) Marcus Milan, 2026-09, scoring 1–3: job value 3, above pest control's 2 and detailing's 1
@@ -40,7 +45,14 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
   - (?) Eric, 2026-08: a keyword tool shows enough volume for plumber in pretty much any city
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=166-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=199-->
-- (?) (!) its competition leaves fewer great cities: more of the work is up front, finding one where a few dozen reviews reach the top 3
+- (?) (!) its competition leaves fewer great cities: in a major US city the broad term is held, so more of the work is up front, finding a city or a sub-service where a few dozen reviews reach the top 3
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-plumbing-saturation.md)
+  - (?) a member, 2026-11: plumbing "almost across the whole United States is done", since everybody promotes it; pockets here and there, but in any major city it is off the map
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5498-->
+  - (?) Eric, 2026-11: Sydney is competitive for plumbing; Chris's two renamed profiles on few reviews bring nothing there, where one profile ranks first for "plumber"
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1902-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1936-->
+    <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1829-->
   - (?) Eric, 2026-08: `plumber vaughan`, ~4.9K searches a month over 200 variations, top three on 47, 59 and 100 reviews: he would rank first on about 50; Mississauga has more volume and 2,588, 465 and 443; living in College Station, low volume and high competition: reconsider
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=199-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=232-->
@@ -55,7 +67,7 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=157-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=551-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=572-->
-  > what a top-3 place costs, read off those counts: [city](../city.md#competition)
+  > what a top-3 place costs, read off those counts: [city](../city.md#competition). the sub-service whose incumbents rank as plumbers: [drain cleaning](drain_cleaning.md#the-market)
 - (?) (!) crowded with lead-gen operators running the same model, where HVAC's top profiles are mostly the owners'
   resolved: [2026-11-21](../../../log/resolved/2026-11-21-eric-hvac.md)
   - (?) Eric, 2026-07: a lot of people, maybe from his videos, list plumbing profiles to run the same model
@@ -68,8 +80,15 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
 - (?) in the States it mostly offers no route but the video
   - (?) Eric, 2026-07: plumbing, most of the time and in the States especially, offers only the video, where HVAC gets codes
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=265-->
+  - (?) a member, 2026-11: harder to verify in the US
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6916-->
   > pest control gets up much easier: [pest control](pest_control.md#verification)
   > `PP` had two plumbing profiles auto-verify, his country not said: [instant](../../profile/verification/instant.md#categories)
+- (?) one who can't get through buys the verification: a verified profile with an address, up in about a week
+  - (?) a member bought one for $250 from `ASKAP` on Discord (`ASKCAP` as spelled out; said first as "$2.50")
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6916-->
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6947-->
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7427-->
 
 ## what it makes
 
@@ -112,7 +131,9 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
 
 ## the contractor
 
-- (?) (!) a plumber is easy to find in any city: a ton of people do plumbing, and they answer every request in the contractor groups
+- (?) (!) a plumber is easy to find in most cities: a ton of people do plumbing, and they answer every request in the contractor groups. where plumbers have more work than they take, the leads find no one
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-plumber-scarcity.md)
+  > Montreal, where plumbers say they have too much work: [canada](../../regions/canada.md#quebec)
   - (?) Eric, 2026-06
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
   - (?) Marcus Milan, 2026-09: fulfilment "always a three... every city has a ton of plumbers". in the Seattle contractor groups, 7 plumbers commented on a hose bib, 11 on a same-day water heater, 25 on "looking for a reliable, licensed and insured plumber"

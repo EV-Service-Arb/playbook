@@ -33,6 +33,9 @@ google rep. the french-speaking centre: [regions/france](../../regions/france/pr
   <!--2026-09-18 Juan Palacios ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3312-->
 - (?) the live agent may ask for an invoice, a business card, a dashboard (Stripe or similar) and signage, and may ask you to tug the sign, so mount it firmly. none of it is checked closely
   <!--2026-02-28 says 1σ https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=215-->
+  - (?) a member, 2026-11: the rep interrogates — the sign, employees only, a dashboard with profits; a tough one pulls your location and asks for the street sign and address
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6820-->
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6855-->
 
 ## signage
 
@@ -53,6 +56,13 @@ google rep. the french-speaking centre: [regions/france](../../regions/france/pr
   <!--2026-09-18 Juan Palacios ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3332-->
 
 ## location
+
+- (?) a house passes with a decent office setup and a decent rep, but reps can balk at one: an office building is the safer place
+  - (?) Eric, 2026-11: storage units are quicker; with a decent office setup and a decent rep you pass from home, though some have had more trouble
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2934-->
+  - (?) a member: live reps don't like his house, so he is moving to a friend's office building, several locations there
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=0-->
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=41-->
 
 - (?) for location the agent may ask you to screen-share Google Maps directions to the address; a spoofed location passes that
   <!--2026-02-28 says 1σ https://www.loom.com/share/622cc9f153ef4cf2b023ec6e8a21aa8d?t=159-->

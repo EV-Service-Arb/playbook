@@ -3,7 +3,9 @@
 high ticket, usually high search volume, a little easier to verify than plumbing, and competition far below plumbing's: in the same city its
 top 3 carry far fewer reviews, and in Los Angeles none has a keyword in its name, so the searches feed
 many profiles. a couple of big contracts can make a month, and Eric's best student makes hundreds of
-thousands a month on it; a commercial job takes a whole crew. how high ticket weighs against the rest:
+thousands a month on it, but on construction, where material is most of the job, our take is a thin
+share of it, and grass cutting pays only on volume. a commercial job takes a whole crew, and the trade
+goes slow in winter: [niche](../niche.md#a-second-trade). how high ticket weighs against the rest:
 [niche](../niche.md#the-ticket).
 
 ## the market
@@ -43,6 +45,23 @@ thousands a month on it; a commercial job takes a whole crew. how high ticket we
   - (?) Eric, 2026-06: his best coaching student, Cole, makes multiple six figures, "hundreds of thousands of dollars a month"
     <!--2026-06-11 heard 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=428-->
     <!--2026-06-11 heard 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=760-->
+
+## our take
+
+- (?) (!) our take is thin where material is most of the job
+  - (?) Zach Peterson takes 20% of the profit margin on $50–100k landscape construction projects, about 5% of the job
+    <!--2026-11-06 Zach Peterson ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3819-->
+- (?) grass cutting pays only on a ton of volume
+  - (?) Zach Peterson
+    <!--2026-11-06 Zach Peterson says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3850-->
+
+## the season
+
+- (?) slow in winter
+  - (?) Zach Peterson's five profiles; he started three water softener ones this month to cover them
+    <!--2026-11-06 Zach Peterson ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3706-->
+    <!--2026-11-06 Zach Peterson ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3770-->
+  > a second trade for the off-season: [niche](../niche.md#a-second-trade)
 
 ## fulfilling it
 

@@ -36,6 +36,11 @@ under [niches/](market/niches/). the city: [city](market/city.md).
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=372-->
     <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=584-->
   > each trade's: [plumbing](market/niches/plumbing.md#the-contractor), [detailing](market/niches/detailing.md#the-contractor), [pest control](market/niches/pest_control.md#the-contractor). the groups as a source: [sourcing](contractors/sourcing.md#where)
+- (?) a trade whose work legally takes a licensed contractor is fulfilled only through licence holders: the rarer the licence, the fewer contractors to send it to
+  - (?) a member: pool enclosures take a state-licensed contractor, or you are fined, and some counties run stings; most people can get a plumbing licence, an electrician's is harder
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7326-->
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7354-->
+    > he runs franchises and rank-and-rent, not arbitrage
 - (?) the city can outweigh the trade: a strong trade in a city of thin demand and heavy competition does worse than a weaker one in a very good spot
   - (?) Eric, 2026-06: plumbing in a city with very low demand and high competition does worse than house cleaning in a very good spot
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=394-->
@@ -64,3 +69,7 @@ under [niches/](market/niches/). the city: [city](market/city.md).
   - (?) Eric, 2026-08: strictly Google Business listings, in low-competition, high-demand areas, nothing paid for ads; two months after setting up profiles he had made 100k in revenue
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=130-->
     <!--2026-08-08 ran 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=648-->
+  - (?) *cleaning*: the TikTok remote cleaning businesses claiming $300k a month run on Google Ads, Derick Parsons feels; what he has seen comes to $50–70 of ad spend per lead converted, about the cost of a GMB, which once made only needs maintenance
+    <!--2026-11-06 Derick Parsons says 0.5σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4508-->
+    <!--2026-11-06 Derick Parsons says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4549-->
+    <!--2026-11-06 Derick Parsons says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4578-->

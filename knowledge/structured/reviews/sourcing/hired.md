@@ -12,6 +12,23 @@ What members have reported about paying other people to collect reviews: finding
   > two more members' craigslist reviewers turned out mostly kenyan: one batch was all deleted, the other burnt $100+ and many dropped
   <!--2026-10-23 gmbpp member ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2905-->
   <!--2026-10-23 Erwin ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6199-->
+  > Prabh: Kenyan scammers offering local guide reviews, one left 15, all stuck; a Craigslist responder's 14 on a $20 trial came off a `TextNow` number
+  <!--2026-11-06 Prabh ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3984-->
+  <!--2026-11-06 Prabh ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4931-->
+  <!--2026-11-06 Prabh ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5003-->
+- (?) (!) aim the Craigslist ad at college students, not older people, and have each leave one review first: Derick Parsons went through ~15 to find his, most of the trouble from older ones
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4024-->
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4056-->
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4091-->
+- (?) the Craigslist ad, Derick Parsons': broad (flyers, business promotion, sign flipping); when they call, that job is filled, reviews at $5 instead. the gigs section is free for college kids, business categories $75. look like a business and ask why they want the job: one who floats over it is likely abroad, aggression about onboarding a red flag. onboard on one sacrificial profile
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4236-->
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4272-->
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4308-->
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4349-->
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5137-->
+  <!--2026-11-06 Derick Parsons says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4931-->
+  <!--2026-11-06 Derick Parsons says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5065-->
+  <!--2026-11-06 Derick Parsons says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5105-->
 - (?) gig platforms: `TaskRabbit` and `Airtasker` terms forbid it; `GigSmart` doesn't, but takes 35% ($25 minimum), 45% in california where its workers count as W-2
   <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6322-->
 - follow a school on instagram, befriend most connected people
@@ -53,6 +70,14 @@ What members have reported about paying other people to collect reviews: finding
 
 ## pay
 
+- (?) a collector is paid a few dollars a review; students come cheapest
+  - (?) Derick Parsons, 2026-11: $6 a review and ~$30 at a marker; $4–7.5 doable, $10 ridiculous
+    <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4124-->
+    <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4166-->
+    <!--2026-11-06 Derick Parsons says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4196-->
+  - (?) Chris, Sydney: a ~$40 Gumtree ad found university students at $5 a review; ~$8,000 spent with them over three to four months
+    <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1311-->
+    <!--2026-11-06 Chris ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1343-->
 - Derick Parsons with a bonus for review-getter
   basically 50$ bonus for getting a good review volume&quality in a week.
   Says works same way as giving out a gold star to kindergarteners.

@@ -20,6 +20,11 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
   - (?) Eric; John Osayi, checking for over a year: top 3 in the morning, 4th or 5th in the afternoon
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1508-->
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=635-->
+  - (?) Eric, 2026-11: reviews and no calls — Muhammad's 100+ in "top three", a member's five or six at 50–90, a day-old profile — scan in `Local Falcon`; all green means something else is broken. outside the top 3, fourth or 80th is the same
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2109-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2647-->
+    <!--2026-11-06 Zach Peterson says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3923-->
+    <!--2026-11-06 Zach Peterson says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3950-->
 - (?) keep scans on record: a scan from before a call drop tells a ranking drop from a demand drop
   > `Local Falcon`, or `GMB Radar` at ~$20–30/mo for 10–20 businesses; nothing free short of building your own
   <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2725-->
@@ -77,6 +82,10 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
   <!--2026-10-23 Dante ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=877-->
 - need to make it look like amazing client interactions with them all the time
   <!--2026-10-23 Valera says 1σ-->
+  - (?) posts written by ChatGPT from the company name, holiday specials: a year of them scheduled in 30 minutes, where an SEO charged $499 for four posts and a couple of pictures; Eric has said real photos work better
+    <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5349-->
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4700-->
+    <!--2026-11-06 Derick Parsons heard 0.5σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5423-->
 - James McBride also says there are hacks to increase this: engage with the profile, products and everything else it lets you add
   <!--2026-10-23 James McBride says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=961-->
   <!--2026-10-23 James McBride says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=991-->
@@ -111,6 +120,9 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=701-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=705-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=723-->
+
+- (?) geotagged photos and videos naming another city push the profile into it
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7300-->
 
 ## what does not move it
 

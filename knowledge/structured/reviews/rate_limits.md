@@ -20,6 +20,9 @@ What members have reported about how many reviews a profile takes, how fast, and
   <!--2026-10-23 Glenn ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=6544-->
 - (?) at one a day from aged gmails ~80% stick indefinitely — Eric
   <!--2026-09-18 Eric ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1824-->
+- (?) get a hundred on every profile, as 30% will be deleted — Eric, 2026-11
+  <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=791-->
+  <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=836-->
 - (?) 4–7/day is already too fast — `William` lost ~30 reviews in 4–5 days at that rate
   <!--2026-09-18 William ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3001-->
 - (?) one member currently leaves only 2–3/week on his own new profiles, by hand

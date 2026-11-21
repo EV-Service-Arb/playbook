@@ -2,24 +2,38 @@
 <!--half-life 1y-->
 
 instant verification has a profile live soonest; video, a live call or the address is for one meant
-to last. the address on it is a commercial one. what members and sources have reported, across its routes:
+to last; it starts as a service area and moves to the address later, and one that can't get through is
+bought: [plumbing](../market/niches/plumbing.md#verification). the address on it is a commercial one. what members and sources have reported, across its routes:
 [instant](verification/instant.md), [video](verification/video.md), [live](verification/live.md),
 [SAB to PAB](verification/sab_to_pab.md), [missing place](verification/missing_place.md).
 
 ## routes
 
-- (?) instant, where google offers it, has the profile live today; what it costs in suspensions later nobody has counted
+- (?) instant, where google offers it, has the profile live today, but once suspended it is hard to get back: documents reinstate a video-verified profile far better. how often it is suspended nobody has counted
+  - (?) Eric, 2026-11: instant-verified profiles are hard to get back once suspended; the documents go to an AI and work very well on video-verified profiles, not on instant ones
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2396-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2426-->
   - (?) Eric pushes everyone toward instant right now — [instant](verification/instant.md)
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3323-->
 - a profile meant to last verifies by video, live call or its business address
   - Matt Gazda: slower, harder, safer; the easy way out is a profile suspended months later. learned from experience
     <!--2026-11-17 ran 2σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=234-->
     <!--2026-11-17 ran 2σ https://www.youtube.com/watch?v=0IRfNgq_4zY&t=268-->
-- (?) Q: SAB-then-convert after a few weeks, or storage-unit video straight away?
-  A: Eric — no reason to wait. fail a video deliberately, then take the live call immediately. everything he has video-verified has stuck unless the whole account went down
+  - (?) a member, 2026-11: video, once cracked, is stronger: the profile lasts longer, is suspended less, and takes many edits, though not to the name or address
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6788-->
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6887-->
+- (?) start as a service area and move to the address later: an address straight away is hit or miss — [SAB to PAB](verification/sab_to_pab.md)
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-2026-11-revisions.md)
+  - (?) Eric, 2026-11: a location is hit or miss; starting as a service area and upgrading to an address is far easier, and works
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1990-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2041-->
+  > his September answer, since revised, to "SAB-then-convert after a few weeks, or storage-unit video straight away?": no reason to wait, fail a video deliberately, then take the live call immediately. everything he has video-verified has stuck unless the whole account went down
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=3107-->
 - (?) a failed video is not the end of the listing. the next attempt is live verification, not a second identical video // inferred
   <!--2026-10-30 agent says 1σ-->
+  - (?) Eric, 2026-11: a deleted or botched video — submit a garbage one, fail it, and open a ticket for a live video
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2934-->
+  > the ticket: [live](verification/live.md#the-ticket)
 
 ## the address
 

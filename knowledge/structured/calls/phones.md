@@ -27,6 +27,9 @@ each profile's calls land on a `CallRail` tracking number routed to a `Quo` numb
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3120-->
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3158-->
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3197-->
+  - (?) a "to connect with a representative, press 1" greeting blocks the auto-callers, about half the spam; real marketers still press one, five to twenty a day
+    <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6194-->
+    <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6225-->
 - (?) (!) a spam filter can block real calls outright: when calls stop, check `CallRail`'s spam prevention and the phone's own filter first
   - a few people had their phone / CallRail spam-prevention setup fully blocking calls
     one missed ~10 plumbing calls in a week to it
@@ -34,3 +37,12 @@ each profile's calls land on a `CallRail` tracking number routed to a `Quo` numb
     <!--2026-10-16 gmbpp member ran 2σ https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=2619-->
     > the other suspect is the iPhone's silence-unknown-callers filter
     <!--2026-10-16 gmbpp member says 1σ https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=2593-->
+  - (?) Eric, 2026-11: a phone that doesn't ring on leads is a phone setting, not the GMB or `CallRail`
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3520-->
+
+## texts
+
+- (?) without A2P approval, a texter is called and texted back from another number, and jobs close that way. a line that works: "Google hides our number for privacy reasons", then a text with his name and the business name
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5992-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6089-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6108-->

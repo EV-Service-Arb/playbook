@@ -21,6 +21,9 @@ offer a plumber a 60/40 split of the job's profit: 60% to him, 40% to us. solo p
     <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=5703-->
   - (?) one member runs 70/30 instead: many consistent contractors over one squeezed for 60/40
     <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=5484-->
+  - (?) Artheme Chaykin found a contractor willing to do 30%, instead of going pay per lead; whose 30%, the call does not say
+    <!--2026-11-06 Artheme Chaykin ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=41-->
+    <!--2026-11-06 Artheme Chaykin ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=78-->
   - (?) a solo plumber short of work is glad of 40% for the extra jobs; a weakly marketed one pays 40% gladly: [sourcing](sourcing.md)
     <!--2026-10-23 gmbpp member ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3580-->
     <!--2026-10-23 gmbpp member ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3653-->

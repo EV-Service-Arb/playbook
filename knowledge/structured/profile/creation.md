@@ -12,6 +12,10 @@ missing-place route: [missing_place](verification/missing_place.md).
 - facebook marketplace listing, $25 for a "small job", walk them through it — takes them two minutes, and a happy one brings friends and family for four or five more
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1913-->
 
+- (?) a friend instant-verifies the profile on his main gmail at his address, then adds your new gmail as primary owner: nothing to warm
+  <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6511-->
+  > Eric's rule is manager, never owner: [access](#access)
+
 ## access
 
 - Eric says to send yourself access as manager, never owner — it comes up a lot for them, "because we do a lot on other people's phones with instant approvals"

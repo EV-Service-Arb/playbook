@@ -12,9 +12,24 @@ What members have reported about reviews disappearing: star mix, repeat reviewer
 
 ## repeat reviewers
 
-- (?) never send the same person to review two of your profiles — Eric
+- (?) completely different people on each of your profiles; the same accounts on a second only after five days to a week, in mixed patterns — Eric
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-2026-11-revisions.md)
+  - (?) Eric, 2026-11
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=984-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1014-->
+  > his September word, since loosened: never send the same person to review two of your profiles
   > one park stand lost 20 reviews in a day; Eric's first guess was repeat reviewers, which the reporter denied
   <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=2917-->
+
+## reading it early
+
+- (?) a review that shows on the reviewer's phone but not on yours after ~3 hours is gone: google updates in ~60 minutes, and a count of 15 with 7 visible goes down to 7
+  - (?) Devin Grandt
+    <!--2026-11-06 Devin Grandt says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1596-->
+  > others saw one take a day, or two to three days
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1622-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1645-->
+  > deletions in general land later: [rate limits](rate_limits.md#delay)
 
 ## sweeps
 

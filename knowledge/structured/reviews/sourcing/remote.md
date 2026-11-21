@@ -1,14 +1,18 @@
 # remote
 
-What members have reported about reviews left from outside the profile's area: the proximity rule, the philippines, profile age.
+reviews stick when they come from near the profile, Eric's 40 miles being conservative, bar a couple of methods; reviews from the philippines have ranked aged profiles; on a new one nobody recommends it.
 
 ## proximity
 
-- (?) reviews stick only when they are local, bar a couple of methods: Eric's rule
+- (?) reviews stick when they come from near the profile, bar a couple of methods: Eric's rule, whose 40 miles he calls conservative
+  resolved: [2026-11-21](../../../log/resolved/2026-11-21-eric-2026-11-revisions.md)
+  - (?) Eric, 2026-11: an airport 15–20 miles off is close enough; his 40 miles is conservative, reviews stick from farther
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=583-->
+    <!--2026-11-06 Eric says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=616-->
   - (?) Eric, 2026-08: reviews stick only if they are local, aside from a couple of methods
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=559-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=591-->
-  - (?) Eric's rule as `Ilya` restates it: reviews must come from within ~1h proximity of the GMB
+  - (?) Eric's rule as `Ilya` restated it in September: reviews must come from within ~1h proximity of the GMB
     <!--2026-09-18 Ilya heard 0.5σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4271-->
 - (?) on a new GMB google watches harder; wait ~6–12 months before trying anything non-local — a member, after Eric had left
   <!--2026-09-18 gmbpp member says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5712-->

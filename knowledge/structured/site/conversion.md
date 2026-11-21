@@ -22,3 +22,5 @@ actually message on ahead of the phone number, and a form that books.
   - (?) (!) 5 of 7 jobs booked in two weeks came through the website form, not the phone — "I don't even have to talk to people"
     > *plumbing*, one operator, small sample
     <!--2026-09-18 Sam Hart ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=207-->
+  > most of Derick Parsons' leads are calls, with a form on every site
+  <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=5992-->

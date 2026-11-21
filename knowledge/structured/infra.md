@@ -16,6 +16,10 @@ what members have reported about the accounts, devices, proxies, numbers and car
   <!--2026-07-03 Ryan D ran 2σ https://www.loom.com/share/8aa800d5f10848339d6ecc5839b53ada?t=2244-->
   <!--2026-10-09 gmbpp member says 1σ https://www.loom.com/share/6c13eda9c6dd41ff901b5a1e8d2a8b1d?t=796-->
   <!--2026-07-17 gmbpp member says 1σ https://www.loom.com/share/92f78b7b1c0e483792e88f68b5c04277?t=3302-->
+  > a member, 2026-11: a gmail holds unlimited profiles, each with its own address and phone, but one hit takes them all, so five plumbing businesses in one county go on five gmails
+  <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6314-->
+  <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6386-->
+  <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=6417-->
 - (?) buy gmails off real people: facebook marketplace and groups, craigslist — pay them, facebook gift cards work — Eric
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=3409-->
 - `accsmarket` for buying gmail accounts with their actual cookies
@@ -59,6 +63,20 @@ what members have reported about the accounts, devices, proxies, numbers and car
   > a member recommends `3uTools`, free // heard as "Three Tools"
   <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2251-->
   <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2281-->
+  > `GhostMe` got Zach cooked; Devin Grandt has 30+ verified on `Vanish` (`getvanish.app`, $12/mo, the phone unplugged after one setup); Eric, 2026-11, thinks they all work the same
+  <!--2026-11-06 Zach ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3038-->
+  <!--2026-11-06 Devin Grandt ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3073-->
+  <!--2026-11-06 Devin Grandt ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3144-->
+  <!--2026-11-06 Eric says 0.5σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3111-->
+- (?) no hard limit on profiles per device: without `Multilogin` Eric would stop at ~30, a number with nothing behind it; five is no worry
+  <!--2026-11-06 Eric says 0.5σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3276-->
+  <!--2026-11-06 Eric says 0.5σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3318-->
+- (?) `Multilogin` runs 20–40 gmails off one phone, unlinked from device, IP and Wi-Fi; a member at 22 profiles moved to it when incognito browsers stopped working. its gain is aged emails warmed inside it for his own reviews, which stick where bought reviews and bought aged accounts fall off
+  <!--2026-11-06 gmbpp member says 1σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7017-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7098-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7131-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7169-->
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=7205-->
 - (?) (!) mock-location apps are visibly spoofed — they all go through the android mock API, so the phone has to be rooted first — `Valera`
   <!--2026-09-18 Valera says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=254-->
 - another plus on Octo

@@ -45,6 +45,8 @@ the call books a visit, usually the same day, at a call-out fee we name and waiv
 - (?) book a same-day visit at a set call-out fee, said to be waived on the job: it closes very well as long as the prices are reasonable
   - (?) *plumbing*: ~$250 minimum call-out, nothing quoted under it
     <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=63-->
+  - (?) a member at 200–300 calls a month, mostly "broke jobs", now sells emergency jobs at $750 minimum; the trade is not said
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=78-->
   - (?) Eric, 2026-07: a technician's diagnostic at $100–180, your choice, usually the same day; a $180 one you say you will waive gets a really high closing rate. his *plumbing* charges $60 for the inspection; *HVAC* can charge more: [hvac](../market/niches/hvac.md#the-price)
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=466-->
     <!--2026-07-31 ran 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=497-->

@@ -5,8 +5,16 @@ $15k his second month and took it to ~$80k a month in revenue. a profile verifie
 gmail, and on an address ranks almost whatever the competition, so it is run on volume: profiles spread over every part of a city. its competition sits in the
 middle, and a detailer is easy to find. a poor job still gets paid, and
 customers come back on a subscription, for small upsells, but they shop on price. no city is too big
-for it, but one with cold winters and salted roads is skipped. not where we start: past ~$10k a month a higher ticket
+for it, but one with cold winters and salted roads is skipped. it is named *mobile* detailing, or
+booked clients turn up at the address. not where we start: past ~$10k a month a higher ticket
 pays more for the same setup, and a broad keyword brings the $20 car wash: [niche](../niche.md#the-ticket).
+
+## the name
+
+- (?) name it *mobile* car detailing: a profile named just "car detailing" has booked clients turn up at the location
+  - (?) Eric's and Prabh's profiles named just car detailing
+    <!--2026-11-06 Eric ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2738-->
+    <!--2026-11-06 Prabh ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=2738-->
 
 ## what it makes
 

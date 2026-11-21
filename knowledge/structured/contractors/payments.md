@@ -19,6 +19,11 @@ the contractor collects under his own name and pays us our cut after: the job's 
     <!--2026-09-25 Eric ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=172-->
     Q: interesting, wonder if it matters
 
+- (?) a big job is paid in instalments agreed after meeting the customer: one before, two after
+  - (?) *handyman*: a member's big job, split into three payments
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1678-->
+    <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1701-->
+
 ## checking what he charged
 
 - (?) a contractor who collects is audited by calling his customers afterwards and asking what they were charged; after a few clean ones, trust him

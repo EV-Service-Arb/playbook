@@ -1,6 +1,7 @@
 # SAB to PAB
 
-what members have reported about converting a service-area profile into one at an address.
+a profile starts as a service area and is converted to its address later: Eric calls it far easier
+than an address straight away, which is hit or miss: [verification](../verification.md#routes).
 
 ## conversion
 

@@ -28,5 +28,7 @@ What members have reported about asking strangers online for reviews: groups, re
 - (?) dating-app method: a bought account chats local men into leaving a review // "converted too quickly and it just broke" — the account was banned immediately
   > `Valera` offered to automate the messaging side
   <!--2026-09-18 gmbpp member ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=4701-->
+- (?) a $10/day Facebook ad brings 3–4 local reviews a day after four days; each reviewer is asked for friends and family
+  <!--2026-11-06 gmbpp member ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=1263-->
 - try to trade naked pics with cold traffic on facebook
   <!--2026-09-25 gmbpp member heard 0.5σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=6925-->

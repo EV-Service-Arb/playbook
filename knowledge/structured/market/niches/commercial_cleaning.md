@@ -3,7 +3,7 @@
 unlike house cleaning, recurring contracts and high-ticket jobs both: an office cleaned weekly, a gym
 daily, a construction cleanout worth a couple thousand. it has no season, and a client whose whole
 office we clean rarely leaves. profiles verify instantly as a janitorial service. a big job closes
-slowly, bid against other companies. its sub-services carry volume of their own: Chicago's restaurant
+slowly, bid against other companies, and a client can be slow to pay. its sub-services carry volume of their own: Chicago's restaurant
 cleaning is held by one operator on 14–23 reviews. where it is weighed: [niche](../niche.md#recurring-work);
 house cleaning, a different trade: [cleaning](cleaning.md).
 
@@ -24,6 +24,10 @@ house cleaning, a different trade: [cleaning](cleaning.md).
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=486-->
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=519-->
   > high-ticket jobs in general: [niche](../niche.md#the-ticket)
+- (?) a client can be slow to pay
+  - (?) Derick Parsons: a commercial job whose manager was in Canada took three weeks to pay
+    <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4470-->
+    <!--2026-11-06 Derick Parsons ran 2σ https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=4508-->
 
 ## the market
 
