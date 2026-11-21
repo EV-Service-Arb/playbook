@@ -30,6 +30,9 @@ and a [site](site/seo.md) that matches it. Backlinks, BBB and botted searches ar
 - (?) an address profile ranks far easier than a service-area one, and shows for "near me" searches
   - a physical-address profile ranks way easier than one without — Eric
     <!--2026-11-16 says 1σ https://www.youtube.com/watch?v=SOUF1oObJYk&t=226-->
+  - (?) Eric, 2026-06: on an address a *detailing* profile gets such a boost that search volume and competition hardly matter; *HVAC*, held back by its competition, would move up a tier on address profiles
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=66-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=262-->
   - (?) Zach Peterson: the more so in a competitive area; he gets the address via video verification at an office
     <!--2026-10-06 says 1σ https://www.youtube.com/watch?v=1ok0Rwr8MwE&t=224-->
   - (?) Eric: address over service area, and keep pushing for it even when the live reviewer asks whether you're really a service area

@@ -1,7 +1,8 @@
 # plumbing
 
 the starting trade: a mid ticket, paid within a day, whose big jobs come often enough to set the
-average. eleven profiles in one city have cleared ~$10k profit the first month, and one
+average. there is demand everywhere, more searches than HVAC for a little less competition, though
+still competitive, and a plumber is easy to find. eleven profiles in one city have cleared ~$10k profit the first month, and one
 brand topping many cities clears Eric $20–25k a month. the plumber takes 70% of the profit, so he
 keeps answering; nothing is charged under $250, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
 [cleaning](cleaning.md#economics).
@@ -16,6 +17,13 @@ keeps answering; nothing is charged under $250, and his upsells are where the ti
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=328-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=425-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=723-->
+
+## the market
+
+- (?) demand everywhere: more searches than HVAC for about its ticket, and competition usually a little lower, though still competitive
+  - (?) Eric, 2026-06: about HVAC's ticket, typically higher search volume, competition usually a little lower than HVAC's though still pretty competitive; the demand is there everywhere
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=295-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
 
 ## what it makes
 
@@ -42,8 +50,17 @@ keeps answering; nothing is charged under $250, and his upsells are where the ti
   - (?) Eric, 2026-05: his own profile, ranked for `plumbing Newmarket` on 116 reviews, brings ~80 leads a month — 46 calls and 124 website clicks in April
     <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=164-->
     <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=197-->
+  - (?) Eric, 2026-06: plumbing is what he made most of his money on, multiple six figures
+    <!--2026-06-11 ran 2σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
+    <!--2026-06-11 ran 2σ https://www.youtube.com/watch?v=URV4VakPOKo&t=760-->
   - (?) Eric scaled his remote plumbing business from zero to $100,000 a month in revenue within 2 months
     <!--2026-05-28 ran 2σ https://www.youtube.com/watch?v=UspII6rXhzY&t=1090-->
+
+## the contractor
+
+- (?) a plumber is easy to find: a ton of people do plumbing
+  - (?) Eric, 2026-06
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
 
 ## the split
 

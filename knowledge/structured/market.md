@@ -1,7 +1,8 @@
 # market
 <!--half-life 3y-->
 
-we pick the trade on what the job is, then the city to run it in on what the market there is, and
+we pick the trade on what the job is, then the city to run it in on what the market there is — a good
+city can outweigh a better trade — and
 rank organic profiles rather than buy ads. the trade: [niche](market/niche.md), each trade's own page
 under [niches/](market/niches/). the city: [city](market/city.md).
 
@@ -18,6 +19,13 @@ under [niches/](market/niches/). the city: [city](market/city.md).
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=198-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=362-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=497-->
+  - (?) Eric, 2026-06: the barrier to entry — how easily the profile verifies, search volume against competition — then ticket, urgency, whether it recurs, and how easy a contractor is to find
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=0-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=196-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=462-->
+- (?) the city can outweigh the trade: a strong trade in a city of thin demand and heavy competition does worse than a weaker one in a very good spot
+  - (?) Eric, 2026-06: plumbing in a city with very low demand and high competition does worse than house cleaning in a very good spot
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=394-->
 
 ## paid or organic
 

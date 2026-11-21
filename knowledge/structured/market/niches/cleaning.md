@@ -2,7 +2,14 @@
 
 not a trade to start on: ~$150–200 a call against plumbing's $300–400, ~$30 a lead when sold, and the
 most operations of any trade we know. it pays as a recurring base with payroll held at 40–45%, which
-takes an operation already built, as Ilya's is.
+takes an operation already built, as Ilya's is. it gets about detailing's searches and competition,
+for a ticket a little above it.
+
+## the market
+
+- (?) *house cleaning* gets about detailing's search volume and competition, for a ticket a little above it
+  - (?) Eric, 2026-06: about the same search volume as detailing, maybe a little more, similar competition, the ticket a little higher
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=130-->
 
 ## economics
 

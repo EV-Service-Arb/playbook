@@ -3,8 +3,8 @@
 we start on plumbing, or on drain cleaning under it: urgent, year round, a mid ticket paid within a
 day for the same setup cost, and any plumber fulfils it. a low-ticket trade such as detailing pays
 soonest but takes many more jobs for the same money; a high-ticket one such as roofing, landscaping,
-asphalt, stucco or masonry pays most per job, but late, on fewer leads and with a crew, and the untapped
-trades are mostly these; recurring work sits between. always a local home service, never one whose
+asphalt, deck and fence, stucco or masonry pays most per job, but late, on fewer leads and with a
+crew, and the untapped trades are mostly these; recurring work sits between. always a local home service, never one whose
 small job comes back once in years. an untapped trade is found by searching a sub-service by its own
 name. one trade is mastered before a second is added. each trade's own page is under [niches/](niches/).
 
@@ -17,6 +17,10 @@ name. one trade is mastered before a second is added. each trade's own page is u
   - (?) Eric puts a beginner on *plumbing*, plus one or two *cleaning* profiles in their own city to work out remote reviews and pricing
     <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6434-->
     > for a beginner. a member already on plumbing gets nothing from adding it: [cleaning](niches/cleaning.md)
+  - (?) Eric, 2026-06: plumbing is his favourite: urgent, most jobs done the same or next day and paid the same day, and an emergency doesn't shop on price
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=361-->
+    <!--2026-06-11 ran 2σ https://www.youtube.com/watch?v=URV4VakPOKo&t=727-->
   - (?) Eric, 2026-04: mid ticket — plumbing, HVAC, electrical; pest control decent — is his favourite, what he runs, and what he recommends to most starting: paid within a day, as a caller about to flood doesn't shop around and most are booked; one man does the job; room to upsell; setup medium
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=296-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=328-->
@@ -40,6 +44,8 @@ name. one trade is mastered before a second is added. each trade's own page is u
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=624-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=658-->
     <!--2026-04-21 ran 2σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=690-->
+  - (?) Eric, 2026-06: detailing is the easiest trade to start, top tier for making a first bit of money
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=727-->
 - (?) a high-ticket untapped trade first — landscaping, asphalt and paving, stucco, masonry — where one or two ranked profiles make a full income. beaten on Eric's later word by drain cleaning and plumbing: paid within a day, on more leads, without a quote shopped around
   resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-starting-trade.md)
   - (?) Eric, 2026-05: these four, each with a city, are what he would restart on
@@ -49,7 +55,7 @@ name. one trade is mastered before a second is added. each trade's own page is u
 
 ## trades that work
 
-- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping and pest control are run and called workable
+- (?) plumbing, HVAC, electrician, handyman, roofing, concrete, landscaping, asphalt and paving, deck and fence, pool cleaning and pest control are run and called workable. the best are plumbing and the high-ticket trades with low competition; the low-ticket ones are easier to get into and make less; HVAC is held back by its competition
   - discussing niches
     - David: concrete, plumbing, landscape, roofing (mb, not sure)
       <!--2026-09-18 David says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6377-->
@@ -57,8 +63,16 @@ name. one trade is mastered before a second is added. each trade's own page is u
     <!--2026-10-16 Raphael D'Angelo ran 2σ https://www.loom.com/share/f053d311cd7c472fb903873a25608bf9?t=3112-->
   - (?) Eric: roofing, plumbing and pest control all good high-ticket trades, about equal
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=597-->
+  - (?) Eric, 2026-06, ranking trades on how easily the profile verifies, search volume against competition, ticket, urgency, recurrence and how easy a contractor is to find: plumbing, landscaping, asphalt and paving, deck and fence at the top; electrician just under them; detailing, pool cleaning and HVAC below; house cleaning under those. the top makes the most, the middle is easier to get into
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=0-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=32-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=694-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=727-->
+    > he picked trades he thought good for the list, from his own experience
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=561-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=760-->
   > James McBride's five trades, and his rural state: [city](city.md#competition)
-  > HVAC, where a big city is already held: [hvac](niches/hvac.md)
+  > each one's own page: [plumbing](niches/plumbing.md), [electrician](niches/electrician.md), [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [fencing](niches/fencing.md), [detailing](niches/detailing.md), [pool cleaning](niches/pool_cleaning.md), [hvac](niches/hvac.md), [cleaning](niches/cleaning.md)
 - (?) a local service, never an online one: online is far more saturated, and local leads come easier for the same pay
   - (?) Eric: online is "20 million times more saturated"; local is easier to get leads for and pays as much
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=497-->
@@ -88,6 +102,8 @@ name. one trade is mastered before a second is added. each trade's own page is u
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=559-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=591-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=624-->
+  - (?) *detailing*: ~$100 profit a detail, against $3,000 off one call on a $5–10k job at a 40% cut — 30 details to match it — Eric, 2026-06
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=98-->
   - (?) Eric, 2026-05: $50k a month in profit takes high ticket — ~$7,500 average at ~20% margin is 30 jobs, 120 leads a month at a 25% close rate, about four leads a day: one or two ranked profiles
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=63-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=131-->
@@ -116,8 +132,6 @@ name. one trade is mastered before a second is added. each trade's own page is u
   - (?) Eric, 2026-04: low and high ticket come out about equal, quick results against "risk it for the biscuit"; mid ticket is what he recommends
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=723-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=756-->
-  - asphalt close cycle is really long
-    <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=4619-->
   > concrete, the same: [concrete](niches/concrete.md). the other untapped ones: [landscaping](niches/landscaping.md), [asphalt](niches/asphalt.md), [stucco](niches/stucco.md), [masonry](niches/masonry.md)
 - (?) a narrow keyword brings callers who want exactly that job; a broad one brings tire-kickers
   - a narrow keyword brings callers who want exactly that job; a broad one brings tire-kickers — a detailing profile gets the $20 car wash
@@ -129,7 +143,7 @@ name. one trade is mastered before a second is added. each trade's own page is u
   - (?) Eric: cleaning, pest control, lawn services on a subscription; a year's contract for lawn service or snow removal puts a customer's lifetime value up to thousands
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=464-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=497-->
-  > what holding a recurring base takes, in cleaning: [cleaning](niches/cleaning.md#economics)
+  > what holding a recurring base takes, in cleaning: [cleaning](niches/cleaning.md#economics). a trade whose work has to recur: [pool cleaning](niches/pool_cleaning.md)
 
 ## trades to avoid
 
@@ -141,6 +155,16 @@ name. one trade is mastered before a second is added. each trade's own page is u
     > the same video counts it among the low-ticket trades that work
   - (?) *pressure washing*: a deck washed is good for five years; no callback, little per job — Eric, 2026-04
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=821-->
+  - (?) *pressure washing*: "hits zero markers" — a couple of years before the next job, pretty low search volume, pretty high competition, no instant verification — Eric, 2026-06
+    > worth running only for someone who already owns a pressure washing business
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=462-->
+  - (?) *junk removal*: rarely more than a couple hundred dollars a job, never recurring, not easy to verify — cleaning's or detailing's ticket for more headache — Eric, 2026-06
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=593-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=627-->
+    > his April video counts it among the low-ticket trades
+  - (?) *dog walking*, his bottom tier: it charges very little and its customers are broke — a dog walker answering a friend's ringless voicemail had a $50 budget; low competition on Google doesn't save it — Eric, 2026-06
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=627-->
+    <!--2026-06-11 heard 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=660-->
 
 ## finding an untapped trade
 
@@ -155,6 +179,7 @@ name. one trade is mastered before a second is added. each trade's own page is u
 ## seasonality
 
 - (?) calls dip around holidays and in mild weather, and spike where a holiday breaks something: keep more profiles than you need, as a buffer
+  > a trade's own season: [pool cleaning](niches/pool_cleaning.md#the-job), by area
   - (?) calls dip the week before and after holidays — halloween, easter — and rise around others: thanksgiving is big for *appliance repair*, ovens break last-minute and people pay anything — John Osayi, 7 years in the trade
     > so keep more profiles than you need, as a buffer
     <!--2026-10-23 John Osayi ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=514-->

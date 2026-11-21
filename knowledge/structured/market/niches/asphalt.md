@@ -1,17 +1,26 @@
 # asphalt
 
-asphalt and paving: very high ticket and slow to close, and some cities rank a profile on a handful of
-reviews. how high ticket weighs against the rest: [niche](../niche.md#the-ticket).
+asphalt and paving: very high ticket and slow to close, and competition is low almost everywhere, with
+cities that rank a profile on a handful of reviews. its leads sell for a lot. how high ticket weighs
+against the rest: [niche](../niche.md#the-ticket).
 
 ## the job
 
 - (?) very high ticket
+  - (?) Eric, 2026-06: $20k jobs, very consistently
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=527-->
   - (?) Eric, 2026-05: $100,000 jobs possible
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=651-->
+- (?) slow to close
+  - asphalt close cycle is really long
+    <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=4619-->
 
 ## the market
 
-- (?) (!) some cities rank a profile on a handful of reviews
+- (?) (!) competition is low almost everywhere: an area where a couple of reviews and the right keywords rank first is easy to find, and many of those cities have the searches
+  - (?) Eric, 2026-06: super low competition wherever you look; very good search volume in many of the low-competition cities
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=527-->
+    <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=561-->
   - (?) Eric, 2026-05, Atlanta: the top 3 at 55, 10 and 22 reviews; the 10-review one, a service-area profile, ranks second and takes multiple leads a day; 20 reviews would bring leads every day. Atlanta was picked quickly; other cities rank three-review profiles first
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=553-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=617-->
@@ -20,3 +29,9 @@ reviews. how high ticket weighs against the rest: [niche](../niche.md#the-ticket
     <!--2026-05-28 heard 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=99-->
     <!--2026-05-28 heard 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=617-->
   > the phrasing to rank for: [city](../city.md#search-demand)
+
+## selling the leads
+
+- (?) its leads sell for a lot
+  - (?) Eric, 2026-06: people he knows run agencies selling asphalt and paving leads, and the buyers pay a lot for them
+    <!--2026-06-11 heard 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=760-->
