@@ -12,8 +12,11 @@ what members have reported about profiles that verify instantly, with no code, v
 
 ## categories
 
-- (?) *cleaning*: profiles instantly verify with no video at all — "just get a good gmail" — Eric
-  <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1893-->
+- (?) *cleaning*: profiles verify instantly, with no video at all
+  - (?) Eric, 2026-09: cleaning profiles instantly verify with no video at all — "just get a good gmail"
+    <!--2026-09-18 Eric says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=1893-->
+  - (?) Eric, 2026-04: low-ticket trades are the easiest setup: Google isn't strict on *detailing* or *cleaning*, where *plumbing* and *HVAC* need more licensing
+    <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=591-->
 - (?) *tree trimming*: profiles instantly verify right now — Eric
   <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1322-->
 - (?) auto-verified with no live call: two *plumbing*, one *cleaning* and one *commercial cleaning* profile — `PP`, only his first needed a live

@@ -31,6 +31,8 @@ takes an operation already built, as Ilya's is.
     <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5133-->
     > a member: recurring is rare outside office and hospital cleaning — most jobs are one-off deep, move-in, move-out or regular cleans, and biweekly or airbnb work is an upsell
     <!--2026-10-23 gmbpp member says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1364-->
+  - (?) Eric, 2026-04: cleaning recurs every other week
+    <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=525-->
   - (?) payroll should land at 40–45%, 50% at worst; industry standard is 55%, and owners paying their cleaners 80–90% are common and are massively overpaying
     <!--2026-09-18 Ilya ran 2σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=5133-->
 

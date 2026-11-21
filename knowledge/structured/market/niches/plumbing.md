@@ -1,9 +1,21 @@
 # plumbing
 
-the starting trade: eleven profiles in one city have cleared ~$10k profit the first month, and one
+the starting trade: a mid ticket, paid within a day, whose big jobs come often enough to set the
+average. eleven profiles in one city have cleared ~$10k profit the first month, and one
 brand topping many cities clears Eric $20–25k a month. the plumber takes 70% of the profit, so he
 keeps answering; nothing is charged under $250, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
 [cleaning](cleaning.md#economics).
+
+## the ticket
+
+- (?) (!) a mid ticket with a long tail: most calls are a few hundred dollars, and the big jobs, which come fairly often, make the average
+  - (?) Eric's own plumbing: ~$2,000 average ticket, some at $8,000, some a couple hundred
+    <!--2026-04-21 ran 2σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=33-->
+  - (?) Eric, 2026-04: jobs from $300 to $20,000, the big ones fairly often, ~$1,500–2,000 on average; a whole house's pipes redone ~$20k; $100k jobs rare, but a member booked a $36,000 job in his first week
+    <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=296-->
+    <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=328-->
+    <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=425-->
+    <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=723-->
 
 ## what it makes
 
@@ -39,6 +51,9 @@ keeps answering; nothing is charged under $250, and his upsells are where the ti
 ## pricing
 
 - (?) nothing under $250, emergency callouts included, and a contractor who upsells: the callout gets him in, the upsell makes the job
+  - (?) Eric, 2026-04: plumbing runs through the whole house, so one known issue leads to others
+    <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=393-->
+    <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=425-->
   - charge £250 for emergency callouts
     <!--2026-09-25 gmbpp member ran 2σ https://www.loom.com/share/8e7db736690348a3a708702e99ee92ab?t=9212-->
   - upsells matter
