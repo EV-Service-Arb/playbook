@@ -13,6 +13,7 @@ Eric's word. Valera, 2026-11-21: not high ticket, both low and high, most jobs l
 | Zach Peterson, 2026-11-05 | 20% of the margin on $50–100k construction projects; grass cutting pays only on a ton of volume | [1:03:39](https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3819), [1:04:10](https://www.loom.com/share/83a2bc8ce49142a8aec1ce5b3976b98e?t=3850) |
 | Connor, 2026-11-19 | a $40k landscaping customer, long comparing quotes | [2:41:20](https://www.loom.com/share/41b6d61558844002ab0ad40951b56546?t=9680) |
 | Valera, 2026-11-21 | not high ticket: both low and high, most jobs low; summer-specific; US-specific, as car detailing | — |
+| Valera, 2026-11-21 | outside the US nobody cares how their grass looks, living arrangements differ, no HOA forces the spending: the numbers there are abysmal, known, not guessed. detailing likewise where people don't worship their cars | — |
 
 ## Conclusion
 
@@ -22,5 +23,6 @@ mowing and upkeep, small and paid on volume, as Zach Peterson says of grass cutt
 filed as mostly low ticket with high-ticket contracts in it, and `niche.md` moves it out of the
 high-ticket list, keeping landscape construction there. Valera's summer and US points enter as his: the
 season under the page's `## the season` and `niche.md`'s seasonality, the country as a new
-`niche.md` `## the country`. What would sharpen it: a landscaping profile's calls counted by job size
+`niche.md` `## the country`: the demand behind both is American (lawns kept for neighbours and HOAs,
+cars worshipped), so outside the US their numbers are abysmal, and detailing holds only where cars are. What would sharpen it: a landscaping profile's calls counted by job size
 over a season.

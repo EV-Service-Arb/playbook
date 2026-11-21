@@ -13,7 +13,7 @@ soonest and steadiest and verifies easier, but takes many more jobs for the same
 asphalt, deck and fence, stucco or masonry pays most per job, but late, on fewer leads and with a
 crew, and our share is thin where material is most of the job; the untapped trades are mostly these. landscaping mixes the two, most of its jobs small. recurring work sits between: customers add up rather
 than being replaced, for more calls, in pool cleaning, pest control, commercial cleaning and fleet washing. the season weighs as much as the ticket: a trade busy year round beats a seasonal one; a trade
-that dries up in a cold winter, as landscaping does, is run in a warm city, or beside a second trade busy then, and detailing is skipped where roads are salted. landscaping and detailing are US trades. always a local home service, never one whose
+that dries up in a cold winter, as landscaping does, is run in a warm city, or beside a second trade busy then, and detailing is skipped where roads are salted. landscaping and detailing are US trades: elsewhere nobody pays to keep a lawn, and only car-worshipping countries pay to keep a car. always a local home service, never one whose
 small job comes back once in years. an untapped trade is found by searching a sub-service by its own
 name, in a city where that name still has volume, and is easiest where the top profiles are owners carrying no keyword; run from outside the area, a trade whose top ranks on few reviews spares the reviews hardest to get from afar. one trade is mastered, and its region widened, before a second is added, unless the first has a dead season or a slow close to cover, and none is given up before it is known whether its ranked profiles get leads. each trade's own page is under [niches/](niches/).
 
@@ -368,8 +368,10 @@ name, in a city where that name still has volume, and is easiest where the top p
 
 ## the country
 
-- (?) (!) landscaping and car detailing sell as they do in the US: outside it, they are not picked on what they make there
+- (?) (!) landscaping and car detailing are US trades: outside the US their numbers are abysmal in comparison, as the spending behind them is American — lawns kept for the neighbours and the HOA, cars worshipped. detailing holds only in a country that worships its cars
   - landscaping is US-specific, same as car detailing
+    <!--2026-11-21 Valera says 1σ-->
+  - outside the US people dgaf how their grass looks, nor have similar living arrangements, and no HOAs breathing down their neck force the spending. not a guess: the numbers in other countries will be abysmal in comparison. same for detailing in countries where people don't worship their cars
     <!--2026-11-21 Valera says 1σ-->
   > Brad's roof cleaning in Australia: [finding an untapped trade](#finding-an-untapped-trade)
 
