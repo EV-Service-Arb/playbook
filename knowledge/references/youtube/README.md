@@ -3,11 +3,11 @@
 - checked: 2026-11-18
 - written by: `playbook pull yt sync`, which lists every video; `transcribe` ticks each it captures
 
-- spent: $0.79 over 41 watched, as their `shown.md` `cost:` lines state
+- spent: $7.01 over 51 watched, as their `shown.md` `cost:` lines state
 
-A directory per person, named by the text of their channel's link in `../README.md`. In it,
-`<id>.md` is a video's capture — its description, then the captions in citable blocks — and
-`<id>/` its readings: `shown.md` what is shown, off the frames in `frames/`, and `content.md`.
+A directory per person, named by the text of their channel's link in `../README.md`. In it, a
+folder per video: `src.md` its capture — its description, then the captions in citable blocks —
+and beside it `shown.md` what is shown, off the frames in `frames/`, and `content.md`.
 
 A line per video, newest first: the day youtube says it was uploaded, linked to the video, then
 its title — linked to the capture once there is one. `playbook pull yt transcribe` captures
@@ -18,7 +18,7 @@ every unticked line.
 - [ ] [2026-11-18](https://www.youtube.com/watch?v=w8rJrmdLkYs) after 5 years of being broke, I cracked the code to “f*ck you money”
 - [x] [2026-11-16](https://www.youtube.com/watch?v=SOUF1oObJYk) [I Found The Most Profitable Drop-servicing Niche and NO ONE is Doing it](eric/SOUF1oObJYk/src.md)
 - [ ] [2026-11-15](https://www.youtube.com/watch?v=M8dvZUDt2P4) Speed-running $0 to $10k/mo with a "fake" plumbing company (just copy me and hit it next month)
-- [ ] [2026-11-13](https://www.youtube.com/watch?v=WJkcTccFHjc) how I build lead gen profiles that print me $30k/mo
+- [x] [2026-11-13](https://www.youtube.com/watch?v=WJkcTccFHjc) [how I build lead gen profiles that print me $30k/mo](eric/WJkcTccFHjc/src.md)
 - [x] [2026-11-13](https://www.youtube.com/watch?v=g2goSCTF18I) [How I Verified 100+ Google Business Profiles (with physical locations)](eric/g2goSCTF18I/src.md)
 - [ ] [2026-11-13](https://www.youtube.com/watch?v=tDb70E4JmWE) i documented my journey from dying in a hospital bed to millionaire at 20
 - [ ] [2026-11-12](https://www.youtube.com/watch?v=YkCaqtl2dnw) the more I hate myself, the richer i get. $254k/mo at 20
@@ -78,7 +78,7 @@ every unticked line.
 - [x] [2026-08-25](https://www.youtube.com/watch?v=VGaLCraVY00) [How I get ANY Suspended Google Business Profile Re-instated](eric/VGaLCraVY00/src.md)
 - [x] [2026-08-24](https://www.youtube.com/watch?v=KjGLHQ4HlJA) [How to make ur first $ online if ur tired of course sellers and scams](eric/KjGLHQ4HlJA/src.md)
 - [ ] [2026-08-24](https://www.youtube.com/watch?v=nHJVmR7jdIs) after hitting $100k/mo at 20, I admit its all luck
-- [ ] [2026-08-23](https://www.youtube.com/watch?v=8ck24yhvMMo) Complete Market Research Guide to Hit $10k/mo with Remote Service Arbitrage
+- [x] [2026-08-23](https://www.youtube.com/watch?v=8ck24yhvMMo) [Complete Market Research Guide to Hit $10k/mo with Remote Service Arbitrage](eric/8ck24yhvMMo/src.md)
 - [ ] [2026-08-23](https://www.youtube.com/watch?v=98zTzKQiZL4) How I Consistently Close $5k+ jobs (High Ticket Drop-Servicing)
 - [ ] [2026-08-19](https://www.youtube.com/watch?v=ueSHOxE3m4Q) what it actually took to hit $100k/mo at 20 (except im brutally honest and not tryna sell a course)
 - [ ] [2026-08-18](https://www.youtube.com/watch?v=RE8L-5GwnPg) How I get DIRT CHEAP Contractors for my Drop-Serivcing Business (SMS Blast)
@@ -93,14 +93,14 @@ every unticked line.
 - [ ] [2026-08-10](https://www.youtube.com/watch?v=0D4Jo7QrVNw) How Joseph Sold his Service Arbitrage Business for $100k 2 Months After Starting
 - [ ] [2026-08-10](https://www.youtube.com/watch?v=5k0sEi4QGUs) making millions at 20 has destroyed my mental health
 - [ ] [2026-08-08](https://www.youtube.com/watch?v=h0pzi_z9UR4) no matter how stupid or lazy you are, do this and you'll make $10k/mo online
-- [ ] [2026-08-08](https://www.youtube.com/watch?v=r_6NXlQzHJ0) The Most Underrated MRR Drop-servicing Niches to hit $20k/mo
+- [x] [2026-08-08](https://www.youtube.com/watch?v=r_6NXlQzHJ0) [The Most Underrated MRR Drop-servicing Niches to hit $20k/mo](eric/r_6NXlQzHJ0/src.md)
 - [ ] [2026-08-05](https://www.youtube.com/watch?v=UIbHiYW51ec) I turned myself into a machine that works 24/7 on autopilot (and went $0-100k/mo in 6 months)
 - [ ] [2026-08-04](https://www.youtube.com/watch?v=sEKh3cal05o) How I Handle Customer Complaints in my $1m/yr Drop-servicing Business
 - [ ] [2026-08-03](https://www.youtube.com/watch?v=Sf5zWxAc2cU) How Conor Makes $9k/mo Working 15 Hours a Week (Remote Service Arbitrage)
 - [ ] [2026-08-02](https://www.youtube.com/watch?v=JBaxEeIO9lY) Watch Me Build a $10k/mo Remote Cleaning Business with $0 (live)
 - [ ] [2026-08-01](https://www.youtube.com/watch?v=DqtUrBVISTw) How to Manage Unlimited Google Business Profiles Without Ever Getting Suspended
 - [ ] [2026-08-01](https://www.youtube.com/watch?v=gK59WdGx_yc) getting rich young will destroy you.
-- [ ] [2026-07-31](https://www.youtube.com/watch?v=E4hBo4JVy_o) this niche is slept on, but might be the easiest path to $10k/mo (remote service arbitrage)
+- [x] [2026-07-31](https://www.youtube.com/watch?v=E4hBo4JVy_o) [this niche is slept on, but might be the easiest path to $10k/mo (remote service arbitrage)](eric/E4hBo4JVy_o/src.md)
 - [ ] [2026-07-30](https://www.youtube.com/watch?v=W_fn6f7NKcc) How Kareem Hit $11k/mo 60 days After Starting his Drop-servicing Business
 - [ ] [2026-07-30](https://www.youtube.com/watch?v=ja9XqNH9JZ4) POV: you quit your miserable ass 60hr/week job and hit $10k/mo 2.5 months later
 - [ ] [2026-07-27](https://www.youtube.com/watch?v=aJNai1--rt8) How we Built a $10k/mo Remote Service Business in 60 days (Case Study)
@@ -160,7 +160,7 @@ every unticked line.
 - [ ] [2026-06-13](https://www.youtube.com/watch?v=Tq_5UNfUGo8) How I Price Jobs and Send Quotes for my $80k/mo Drop-servicing Business
 - [ ] [2026-06-13](https://www.youtube.com/watch?v=n2BMfVYYtpA) How I Automated my $50k/mo Drop-servicing Business to Work 10 mins a Day
 - [ ] [2026-06-12](https://www.youtube.com/watch?v=JmC_xp5tt7I) How to get ANY Google Business Profile Verified in any Category or Location
-- [ ] [2026-06-11](https://www.youtube.com/watch?v=URV4VakPOKo) The BEST and WORST niches to hit $20k/mo with Remote Service Arbitrage
+- [x] [2026-06-11](https://www.youtube.com/watch?v=URV4VakPOKo) [The BEST and WORST niches to hit $20k/mo with Remote Service Arbitrage](eric/URV4VakPOKo/src.md)
 - [ ] [2026-06-10](https://www.youtube.com/watch?v=5_BeIbXZEuk) how i made $1,000,000 at 20 after being a failure my whole life.
 - [ ] [2026-06-10](https://www.youtube.com/watch?v=wgnGNSKm8ew) Answering The Most Asked Questions About my 80k/mo Service Arbitrage Business...
 - [ ] [2026-06-08](https://www.youtube.com/watch?v=vAwUAP02iqY) everyone thinks im lying but i make 30k/mo doing this lol (steal my biz model)
@@ -171,7 +171,7 @@ every unticked line.
 - [ ] [2026-05-31](https://www.youtube.com/watch?v=nCbSD0FXpB4) I tried this “get rich quick scheme” and it actually somehow worked ($30k my 2nd month)
 - [ ] [2026-05-30](https://www.youtube.com/watch?v=srDCNnWWmcI) How to Find a Contractor Within 10 Mins for your Drop-Servicing Business
 - [ ] [2026-05-28](https://www.youtube.com/watch?v=8P-nQCLREUQ) I made him quit his job and now he makes $250/day doing remote service arbitrage
-- [ ] [2026-05-28](https://www.youtube.com/watch?v=UspII6rXhzY) 4 UNTAPPED Drop-serivcing Niches Guaranteed to Make you $50k/mo
+- [x] [2026-05-28](https://www.youtube.com/watch?v=UspII6rXhzY) [4 UNTAPPED Drop-serivcing Niches Guaranteed to Make you $50k/mo](eric/UspII6rXhzY/src.md)
 - [ ] [2026-05-27](https://www.youtube.com/watch?v=KQRjx4-Dc6o) I went from nothing to $100k/mo as soon as I ditched "self improvement"
 - [ ] [2026-05-26](https://www.youtube.com/watch?v=srdTk-KiwYM) I made my best friend quit his job and now he makes $300/day doing this (literally 3 weeks later)
 - [ ] [2026-05-25](https://www.youtube.com/watch?v=Iu1nkDkN58Q) i went from $0 to millionaire in 6 months by abusing stimulants and destroying my body
@@ -206,7 +206,7 @@ every unticked line.
 - [ ] [2026-04-26](https://www.youtube.com/watch?v=AY0n9MLBNrU) How to get Instant Verification on Your Google Business Profile
 - [ ] [2026-04-24](https://www.youtube.com/watch?v=JLZg2cWGQiw) reality check if you’ve been trying to make money online for 2+ years (and aren't at 50k+/mo)
 - [ ] [2026-04-23](https://www.youtube.com/watch?v=w2f6AXf4gNQ) no one believes that i became a millionaire at 20 doing this (literally just copy me)
-- [ ] [2026-04-21](https://www.youtube.com/watch?v=1i1dHWzlIUE) The Most Profitable Drop-Servicing Niches in 2026 ($300k at 19/yo)
+- [x] [2026-04-21](https://www.youtube.com/watch?v=1i1dHWzlIUE) [The Most Profitable Drop-Servicing Niches in 2026 ($300k at 19/yo)](eric/1i1dHWzlIUE/src.md)
 - [ ] [2026-04-20](https://www.youtube.com/watch?v=Gr9JH9GZEws) how I made $133k in the last 30 days at 20 years old
 - [ ] [2026-04-16](https://www.youtube.com/watch?v=JFnPqd2hAXk) How I make $15k/mo doing 10 Mins of Work Using Virtual Assistants
 - [ ] [2026-04-15](https://www.youtube.com/watch?v=A0GPcDwSTgQ) How Cole Hit $30k His First Month While in High-school Doing Organic Drop-Servicing
@@ -237,7 +237,7 @@ every unticked line.
 - [ ] [2026-02-11](https://www.youtube.com/watch?v=e9im51qkyO8) I somehow made 15k my second month doing this business model
 - [ ] [2026-02-06](https://www.youtube.com/watch?v=Yxfz4cpsDes) This Website Made Me Over $100,000 (Drop-servicing)
 - [ ] [2026-02-06](https://www.youtube.com/watch?v=zjkeh8xZ6BY) Trick Google Maps Into Showing Your Business #1 (Blackhat SEO)
-- [ ] [2026-02-05](https://www.youtube.com/watch?v=ytTzli_aJsg) The Best Drop-servicing Niches to hit 10k/mo
+- [x] [2026-02-05](https://www.youtube.com/watch?v=ytTzli_aJsg) [The Best Drop-servicing Niches to hit 10k/mo](eric/ytTzli_aJsg/src.md)
 - [ ] [2026-02-04](https://www.youtube.com/watch?v=lNWEvh7BGck) the quickest way to make $100/day online (literally by next week)
 - [ ] [2026-02-03](https://www.youtube.com/watch?v=eE5zVVAiEnE) How I Make $53,908/Month at 19
 - [ ] [2026-02-01](https://www.youtube.com/watch?v=gSmrD0W-pgw) Verify ANY Google Business Profile GUARANTEED Using This Method
@@ -288,9 +288,9 @@ every unticked line.
 - [ ] [2026-10-29](https://www.youtube.com/watch?v=2fuWKtN9HSU) i built a “fake” plumbing business that makes $30k/mo
 - [ ] [2026-10-27](https://www.youtube.com/watch?v=fOkLfMtCpbM) How to Get So Many Home Service Leads It Feels Illegal
 - [ ] [2026-10-23](https://www.youtube.com/watch?v=O3FZjVIk4v0) if i started a home service business in 2026,this is how i’d rank #1 on google
-- [ ] [2026-10-20](https://www.youtube.com/watch?v=a7fC901L5ss) How I Would Build a $30k/mo Service Business With No Trade Experience
+- [x] [2026-10-20](https://www.youtube.com/watch?v=a7fC901L5ss) [How I Would Build a $30k/mo Service Business With No Trade Experience](marcus/a7fC901L5ss/src.md)
 - [ ] [2026-09-29](https://www.youtube.com/watch?v=o-7MWN2uLYs) my business Is boring, but makes me $30,000/mo
-- [ ] [2026-09-23](https://www.youtube.com/watch?v=IHEnUzGW9BY) Picking a service arbitrage niche used to be hard (until now)
+- [x] [2026-09-23](https://www.youtube.com/watch?v=IHEnUzGW9BY) [Picking a service arbitrage niche used to be hard (until now)](marcus/IHEnUzGW9BY/src.md)
 - [ ] [2026-09-15](https://www.youtube.com/watch?v=Nl1TWlzVBO4) how i’m scaling my $30k/mo plumbing company to $60k/mo
 - [ ] [2026-09-05](https://www.youtube.com/watch?v=4PeNJVVS_UY) i got 100+ calls in 7 days from ONE google profile
 - [ ] [2026-09-03](https://www.youtube.com/watch?v=7Q8h-2QKIxo) Unethical?? #onlinebusiness #wifimoney #googlebusinessprofile #entrepreneur
