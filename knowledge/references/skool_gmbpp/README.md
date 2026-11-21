@@ -1,10 +1,10 @@
 # The classroom, as skool serves it
 
 - source: <https://www.skool.com/gmp-passive-profits-5347/classroom>
-- checked: 2026-10-23
-- written by: `scripts/skool-pull.rs`, every run
+- checked: 2026-11-21
+- written by: `playbook pull skool`, every run
 
-A lesson skool has touched since we captured it is marked `stale` — delete its file and run
+A lesson skool has touched since we captured it is marked `stale` — delete its folder and run
 this again to re-pull it.
 
 ## Module 1 - Introduction
