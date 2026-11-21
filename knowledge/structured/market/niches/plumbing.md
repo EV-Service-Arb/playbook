@@ -1,8 +1,8 @@
 # plumbing
 
-the starting trade: eleven profiles in one city have cleared ~$10k profit the first month. the
-plumber takes 70% of the profit, so he keeps answering; nothing is charged under $250, and his
-upsells are where the ticket is. what a plumbing call clears against cleaning:
+the starting trade: eleven profiles in one city have cleared ~$10k profit the first month, and one
+brand topping many cities clears Eric $20–25k a month. the plumber takes 70% of the profit, so he
+keeps answering; nothing is charged under $250, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
 [cleaning](cleaning.md#economics).
 
 ## what it makes
@@ -20,6 +20,13 @@ upsells are where the ticket is. what a plumbing call clears against cleaning:
     <!--2026-10-23 Dante ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2319-->
     <!--2026-10-23 Dante ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2390-->
     <!--2026-10-23 Dante ran 2σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=2432-->
+
+- (?) (!) one brand across many cities, a location topping each, is a full business on its own
+  - (?) Eric's plumbing: ~$25k profit out of ~$80k revenue last month; $20–25k profit a month is where he sits
+    <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=66-->
+  - (?) his franchise `Plumber Done Right` had a location in a bunch of cities, topped each, and brought tons of leads a day
+    <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=197-->
+    <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=236-->
 
 ## the split
 

@@ -6,6 +6,10 @@ takes an operation already built, as Ilya's is.
 
 ## economics
 
+- (?) a cleaning profile brings money in from its first week
+  - (?) Eric's residential cleaning, mixed in with his detailing: $1k the first week
+    <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=33-->
+    <!--2026-02-05 ran 2σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=52-->
 - (?) ~$150–200 profit a call, half of plumbing's
   - (?) *cleaning* clears ~$150–200 profit a call, against $300–400 for *plumbing* — Eric, steering a plumbing member off it
     <!--2026-10-23 Eric says 1σ https://www.loom.com/share/ebbbd994c4a04b8089375226cb930b24?t=1445-->

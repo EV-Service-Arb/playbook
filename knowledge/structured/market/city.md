@@ -31,6 +31,11 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
   - (?) at least 400 relevant searches/mo, summed over the niche's queries, minus searches for business names — some owners bot their own name
     > SEMrush's per-query breakdown shows which is which
     <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=233-->
+  - (?) Eric: search volume off SEMrush Keyword Overview for the service in the city, never ChatGPT: over 400 a month is good to go, over 1,000 a good area
+    <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=328-->
+    <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=362-->
+  - (?) Eric: competition and searches move together — a Miami plumber faces many heavily reviewed profiles, but far more searches than a tiny village's; the two have to add up
+    <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=263-->
 
 ## competition
 
@@ -41,6 +46,9 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-09-17 Valera says 1σ-->
   - (?) competition by the top-3 profiles' review counts: ≤50–100 easy, top 3 within the month on 40–60 reviews; 100–200 medium, 1–2 months but more calls once ranked; 300+ skip, spread the reviews over more profiles instead
     <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=167-->
+  - (?) Eric: when two of the top three for the service in the city have under 100 reviews, competition is low and you can outrank them
+    <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=295-->
+    <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=328-->
 - (?) where nobody competes, a bare profile takes calls before it has photos, a description or reviews
   - James McBride is stupid good at selecting niches or locations wtf
     plumbing, electrician, HVAC, handyman, roofing. Has a contracting background, so he has better understanding of what niches work where

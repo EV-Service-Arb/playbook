@@ -1,8 +1,15 @@
 # fencing
 
-fence and deck: more competitive than retaining walls, but some cities are wide open to a name that
-exact-matches the top search, made distinct. any handyman can do the job, so it contracts out or sells
-easily.
+fence and deck: high ticket, more competitive than retaining walls, but some cities are wide open to
+a name that exact-matches the top search, made distinct. any handyman can do the job, so it contracts
+out or sells easily.
+
+## the job
+
+- (?) high ticket: one job pays what many small ones do
+  - (?) Eric: a $4,000 fencing job at 40% is "over $1,000", at 25% still ~$1,000
+    <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=397-->
+    <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=430-->
 
 ## the market
 
