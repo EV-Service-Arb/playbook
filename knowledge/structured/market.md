@@ -23,6 +23,19 @@ under [niches/](market/niches/). the city: [city](market/city.md).
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=0-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=196-->
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=462-->
+  - (?) Marcus Milan, 2026-09: score each trade for the city 1–3 on demand (`SEMrush` volume), competition (the map pack's review counts), job value, repeat and referral, and fulfilment (contractors in the local facebook contractor groups), then total them; past the total, the winter, and how easily a profile gets up: "it's not just strictly about the metrics"
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=0-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=31-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=50-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=798-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=829-->
+- (?) fulfilment is checked before the trade is chosen: in the area's facebook contractor groups, search the trade, sort by most recent, and count the `looking for` posts and the tradesmen who answer them
+  - (?) Marcus Milan, 2026-09: in the Seattle groups plumbers answered every request, two detailers posted within the hour, and no pest control contractor advertised
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=169-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=203-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=372-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=584-->
+  > each trade's: [plumbing](market/niches/plumbing.md#the-contractor), [detailing](market/niches/detailing.md#the-contractor), [pest control](market/niches/pest_control.md#the-contractor). the groups as a source: [sourcing](contractors/sourcing.md#where)
 - (?) the city can outweigh the trade: a strong trade in a city of thin demand and heavy competition does worse than a weaker one in a very good spot
   - (?) Eric, 2026-06: plumbing in a city with very low demand and high competition does worse than house cleaning in a very good spot
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=394-->

@@ -1,13 +1,14 @@
 # niche
 
 we start on plumbing, or on drain cleaning under it: urgent, year round, a mid ticket paid within a
-day for the same setup cost, and any plumber fulfils it. HVAC is its equal where a city's numbers
+day, and any plumber fulfils it; a trade whose profiles get up easier, as pest control's do, is
+weighed against that ticket. HVAC is its equal where a city's numbers
 favour it, and fewer lead-gen operators run it. a low-ticket trade such as detailing pays
 soonest but takes many more jobs for the same money; a high-ticket one such as roofing, landscaping,
 asphalt, deck and fence, stucco or masonry pays most per job, but late, on fewer leads and with a
 crew, and the untapped trades are mostly these. recurring work sits between: customers add up rather
 than being replaced, for more calls, in pool cleaning, pest control and commercial cleaning; a trade
-that dries up in a cold winter is run in a warm city. always a local home service, never one whose
+that dries up in a cold winter is run in a warm city, and detailing is skipped where roads are salted. always a local home service, never one whose
 small job comes back once in years. an untapped trade is found by searching a sub-service by its own
 name, in a city where that name still has volume, and is easiest where the top profiles are owners carrying no keyword; run from outside the area, a trade whose top ranks on few reviews spares the reviews hardest to get from afar. one trade is mastered before a second is added. each trade's own page is under [niches/](niches/).
 
@@ -40,6 +41,10 @@ name, in a city where that name still has volume, and is easiest where the top p
   - (?) Eric, of the high-ticket trades: without wanting to think about it, plumbing
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=597-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=630-->
+  - (?) Marcus Milan, 2026-09, scoring Bellevue, WA on five counts: plumbing first, pest control second, detailing third, "honestly kind of consistent with every location". plumbing wins on job value and fulfilment, not on demand or competition
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=764-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=798-->
+    > how he scores: [market](../market.md#how-a-market-is-judged)
 - (?) HVAC starts as well as plumbing where a city's numbers favour it: the two are very similar, and few lead-gen operators run HVAC
   resolved: [2026-11-21](../../log/resolved/2026-11-21-eric-starting-trade.md)
   - (?) Eric, 2026-07: HVAC is "up there with one of the best niches" to start on; not inherently better than plumbing or the reverse, the two are very similar and it depends on the numbers
@@ -113,10 +118,14 @@ name, in a city where that name still has volume, and is easiest where the top p
 
 ## the ticket
 
-- (?) (!) a low ticket pays soonest but takes many more jobs for the same money, and a profile costs the same to set up whatever the trade: past the first months, a higher ticket outweighs the ops load
+- (?) (!) a low ticket pays soonest but takes many more jobs for the same money: past the first months, a higher ticket outweighs the ops load. what it takes to get a profile up differs by trade, and is weighed beside the ticket: a trade whose profiles get up easier can stand level with a higher-ticket one
+  resolved: [2026-11-21](../../log/resolved/2026-11-21-setup-cost-by-trade.md)
   - (?) (!) `Ilya`, 13 years in remote *house cleaning*, would start on plumbing or HVAC today
     reason: the same GMB setup cost buys a much higher ticket, and cleaning only pays off once the operations are already built
     <!--2026-09-18 Ilya says 1σ https://www.loom.com/share/c197556c940b4d01b53376dab70d32e5?t=6540-->
+  - (?) Marcus Milan, 2026-09: plumbing scores above pest control, but "it's not just strictly about the metrics... it's also how easy you can fool Google and get your profiles up", and on that pest control beats plumbing "for sure"; he would be open to either in Bellevue, WA
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=829-->
+  > each trade's verification: [plumbing](niches/plumbing.md#verification), [pest control](niches/pest_control.md#verification), [detailing](niches/detailing.md#verification)
   - (?) Eric: aim for an average ticket over $500 — at 50% margin, sometimes 40%, at least $200 a booking
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=397-->
   - (?) *window cleaning*: $200 charged, $100 kept — ten of them to match one high-ticket job; low ticket is Eric's "not the best" column
@@ -265,7 +274,10 @@ name, in a city where that name still has volume, and is easiest where the top p
   - (?) *pest control*: makes less in winter than summer, in some cases — Eric, 2026-08
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=357-->
     <!--2026-08-08 says 1σ https://www.youtube.com/watch?v=r_6NXlQzHJ0&t=389-->
-  > *commercial cleaning* has no season: [commercial cleaning](niches/commercial_cleaning.md#the-season). each one's own: [pool cleaning](niches/pool_cleaning.md#the-season), [pest control](niches/pest_control.md#the-season)
+  - (?) *detailing*: nobody calls a detailer where winters are cold and roads salted, the car dirty again two days later; he wouldn't run it in Bellevue, WA — Marcus Milan, 2026-09
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=798-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=829-->
+  > *commercial cleaning* has no season: [commercial cleaning](niches/commercial_cleaning.md#the-season). each one's own: [pool cleaning](niches/pool_cleaning.md#the-season), [pest control](niches/pest_control.md#the-season), [detailing](niches/detailing.md#the-city)
 
 ## a second trade
 

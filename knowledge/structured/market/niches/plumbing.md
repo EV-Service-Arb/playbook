@@ -2,7 +2,7 @@
 
 the starting trade: a mid ticket, paid within a day, whose big jobs come often enough to set the
 average. there is demand everywhere, more searches than HVAC, but lead-gen operators crowd it and the competition leaves fewer great cities to find; in
-the States it mostly verifies only by video. a plumber is easy to find. eleven profiles in one city have cleared ~$10k profit the first month, and one
+the States it mostly verifies only by video. a plumber is easy to find in any city, and a customer seldom comes back. eleven profiles in one city have cleared ~$10k profit the first month, and one
 brand topping many cities clears Eric $20–25k a month. the plumber takes 70% of the profit, so he
 keeps answering; a set fee gets him in, and his upsells are where the ticket is. what a plumbing call clears against cleaning:
 [cleaning](cleaning.md#economics).
@@ -19,6 +19,11 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=723-->
   - (?) Eric, 2026-08: a $1,000 job keeps $300 profit, a $3,000 one $1,000
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=297-->
+  - (?) Marcus Milan, 2026-09, scoring 1–3: job value 3, above pest control's 2 and detailing's 1
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=31-->
+- (?) a one-off job: a customer seldom calls back or refers
+  - (?) Marcus Milan, 2026-09: repeat and referral 1.5, "it happens, but it's not very common"
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=31-->
 
 ## the market
 
@@ -38,6 +43,12 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=487-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=543-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=857-->
+  - (?) Marcus Milan, 2026-09, Bellevue, WA: competition 1, "pretty brutal": 2.4K, 1.5K and 2K reviews at the top, then 443 and 327. he still ranks plumbing first there
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=134-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=151-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=157-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=551-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=572-->
   > what a top-3 place costs, read off those counts: [city](../city.md#competition)
 - (?) (!) crowded with lead-gen operators running the same model, where HVAC's top profiles are mostly the owners'
   resolved: [2026-11-21](../../../log/resolved/2026-11-21-eric-hvac.md)
@@ -51,6 +62,7 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
 - (?) in the States it mostly offers no route but the video
   - (?) Eric, 2026-07: plumbing, most of the time and in the States especially, offers only the video, where HVAC gets codes
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=265-->
+  > pest control gets up much easier: [pest control](pest_control.md#verification)
   > `PP` had two plumbing profiles auto-verify, his country not said: [instant](../../profile/verification/instant.md#categories)
 
 ## what it makes
@@ -90,9 +102,15 @@ keeps answering; a set fee gets him in, and his upsells are where the ticket is.
 
 ## the contractor
 
-- (?) a plumber is easy to find: a ton of people do plumbing
+- (?) (!) a plumber is easy to find in any city: a ton of people do plumbing, and they answer every request in the contractor groups
   - (?) Eric, 2026-06
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=328-->
+  - (?) Marcus Milan, 2026-09: fulfilment "always a three... every city has a ton of plumbers". in the Seattle contractor groups, 7 plumbers commented on a hose bib, 11 on a same-day water heater, 25 on "looking for a reliable, licensed and insured plumber"
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=169-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=203-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=225-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=236-->
+  > the groups: [sourcing](../../contractors/sourcing.md#where)
 
 ## the split
 

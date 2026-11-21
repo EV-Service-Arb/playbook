@@ -2,9 +2,10 @@
 
 low ticket, a job paying about the same every time, and the easiest trade to start and scale on profiles alone: Eric started on it, made
 $15k his second month and took it to ~$80k a month in revenue. a profile verifies instantly on a solid
-gmail, and on an address ranks almost whatever the competition, so it is run on volume: profiles spread over every part of a city. a poor job still gets paid, and
+gmail, and on an address ranks almost whatever the competition, so it is run on volume: profiles spread over every part of a city. its competition sits in the
+middle, and a detailer is easy to find. a poor job still gets paid, and
 customers come back on a subscription, for small upsells, but they shop on price. no city is too big
-for it: [city](../city.md#size-and-people). not where we start: past ~$10k a month a higher ticket
+for it, but one with cold winters and salted roads is skipped. not where we start: past ~$10k a month a higher ticket
 pays more for the same setup, and a broad keyword brings the $20 car wash: [niche](../niche.md#the-ticket).
 
 ## what it makes
@@ -40,11 +41,47 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=791-->
   > the volume model against the technical one: [market](../../market.md#technical-or-volume)
 
+## the market
+
+- (?) competition in the middle: an optimised profile can rank on far fewer reviews than plumbing's or pest control's top carry
+  - (?) Marcus Milan, 2026-09, Bellevue, WA: "medium", the top three on 72, 131 and 195 reviews, so ~100 on an optimised profile might rank first
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=236-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=251-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=270-->
+- (?) searched about as much as plumbing, but each search is worth far less: an ad click costs a small part of plumbing's
+  - (?) Marcus Milan, 2026-09, Bellevue, WA: ~1,900 searches a month against plumbing's 2,300, at a CPC of $1–2 against plumbing's $96.41
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=291-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=304-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=426-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=517-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=546-->
+
+## the contractor
+
+- (?) a detailer is easy to find, a little less so than a plumber
+  - (?) Marcus Milan, 2026-09: two detailers posted in Seattle Contractors within the hour, enough for him; fulfilment 2, against plumbing's 3
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=372-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=376-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=404-->
+
+## the city
+
+- (?) no city is too big for it: everyone has a car
+  <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=34-->
+  > Marcus Milan's bound for other trades: [city](../city.md#size-and-people)
+- (?) (!) skip a city with cold winters and salted roads: nobody calls a detailer when the car is dirty again two days later
+  - (?) Marcus Milan, 2026-09: he definitely wouldn't run it in Bellevue, WA
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=798-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=829-->
+  > a trade's winter weighed across trades: [niche](../niche.md#seasonality)
+
 ## the job
 
 - (?) a low ticket that hardly varies: a job pays about the same every time
   - (?) Eric, 2026-08: detailing is always 100 bucks, 150 bucks
     <!--2026-08-23 ran 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=297-->
+  - (?) Marcus Milan, 2026-09, scoring 1–3: job value 1, the lowest beside plumbing and pest control
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=31-->
 - (?) easy to fulfil: a poor job still gets paid
   - (?) Eric: his detailers did horrible jobs and he still got paid
     <!--2026-04-21 ran 2σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=525-->
@@ -52,6 +89,9 @@ pays more for the same setup, and a broad keyword brings the $20 car wash: [nich
   - (?) Eric: detailing on a subscription plan; upsells easy but small, $50 here and there
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=525-->
     <!--2026-04-21 says 1σ https://www.youtube.com/watch?v=1i1dHWzlIUE&t=559-->
+  - (?) Marcus Milan, 2026-09: repeat and referral 3, on a subscription
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=31-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=50-->
 - (?) a commodity nobody really needs: its customers shop on price and are hard to please
   - (?) Eric, 2026-06: price shoppers, bad and annoying customers
     <!--2026-06-11 says 1σ https://www.youtube.com/watch?v=URV4VakPOKo&t=98-->

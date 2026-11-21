@@ -14,6 +14,8 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=551-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=559-->
     <!--2026-08-23 says 1σ https://www.youtube.com/watch?v=8ck24yhvMMo&t=591-->
+  - (?) Marcus Milan, 2026-09: it can be run remotely, but it is much easier local: "if you can, always set it up locally"
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=0-->
   > which reviews stick: [remote](../reviews/sourcing/remote.md#proximity). from outside, a trade whose top ranks on few reviews: [niche](niche.md#finding-an-untapped-trade)
 
 ## size and people
@@ -21,10 +23,13 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
 - (?) city size: at least 30k people, 50k–300k best — Marcus Milan
   <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=0-->
   > above 300k it's high-rises: contractors can't meet their insurance requirements, and the buildings already have their trades locked in
-  > *detailing*: no upper bound, everyone has a car
+  > *detailing* has no upper bound: [detailing](niches/detailing.md#the-city)
   <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=34-->
 - (?) density at least ~6,000 people/sq mi, below that searches and calls are too thin
   <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=67-->
+  > Marcus Milan, 2026-09, scores trades on Bellevue, WA, ~150k people at ~4,500 per square mile, as his control city
+  <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=0-->
+  <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=20-->
 - (?) median income at least $70k/yr, $90–130k best — above 130k people live spread out
   reason: lead quality — low-income customers haggle, can't pay for big jobs, pick a handyman
   <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=98-->
@@ -63,6 +68,11 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=585-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=617-->
     <!--2026-05-28 says 1σ https://www.youtube.com/watch?v=UspII6rXhzY&t=707-->
+  - (?) Marcus Milan, 2026-09: in `SEMrush` Keyword Magic Tool, select every keyword for `<trade> <city> <state>`, then deselect any naming a company or the city government (`city of bellevue drainage`). *plumbing*, Bellevue, WA: 2,300 a month, "very good"
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=64-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=82-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=103-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=112-->
 - (?) a trade with several names gives each city several keywords: target the one with the best volume against its competition
   - (?) *HVAC*, Phoenix, over all variations: `HVAC` 24.9K, `AC repair` 10.2K, `heating and cooling` 3.7K; heads `hvac phoenix` 2.4K at KD 37, `ac repair phoenix` 3.6K at KD 31, `heating and cooling phoenix` 590 at KD 68. AC repair at 10,000 with five times less competition than the 25,000 term may be the one — Eric, 2026-07
     <!--2026-07-31 says 1σ https://www.youtube.com/watch?v=E4hBo4JVy_o&t=332-->
@@ -82,6 +92,11 @@ a place in the top 3 that costs fewer reviews than it returns, and a contractor 
     <!--2026-09-17 Valera says 1σ-->
   - (?) competition by the top-3 profiles' review counts: ≤50–100 easy, top 3 within the month on 40–60 reviews; 100–200 medium, 1–2 months but more calls once ranked; 300+ skip, spread the reviews over more profiles instead
     <!--2026-07-24 says 1σ https://www.youtube.com/watch?v=5Taappne53c&t=167-->
+    > Marcus Milan, 2026-09: Bellevue, WA plumbing, its top on 2.4K, 1.5K and 2K, scores lowest on competition, one count of five, and he still ranks plumbing first there and would be open to it: [plumbing](niches/plumbing.md#the-market)
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=134-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=551-->
+    <!--2026-09-23 says 1σ https://www.youtube.com/watch?v=IHEnUzGW9BY&t=829-->
+    resolved: [2026-11-21](../../log/resolved/2026-11-21-marcus-city-thresholds.md)
   - (?) Eric: when two of the top three for the service in the city have under 100 reviews, competition is low and you can outrank them
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=295-->
     <!--2026-02-05 says 1σ https://www.youtube.com/watch?v=ytTzli_aJsg&t=328-->
