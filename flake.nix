@@ -38,9 +38,7 @@
           runtimeEnv = cliEnv;
           text = "cargo r -q -p playbook -- check --digested";
         };
-        oldestSupportedVersion = "nightly-2026-06-29";
         github = v_flakes.github {
-          inherit oldestSupportedVersion;
           inherit pkgs rs;
           pname = "playbook";
           enable = true;
@@ -54,7 +52,6 @@
           inherit pkgs;
           pname = "playbook";
           defaults = true;
-          inherit oldestSupportedVersion;
           rootDir = ./.;
           badges = [ "ci" ];
         };
